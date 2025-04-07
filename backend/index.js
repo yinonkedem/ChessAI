@@ -9,7 +9,7 @@ app.use(express.json());
 
 // Simple test endpoint
 app.get('/', (req, res) => {
-  res.send('Hello from Node backend!');
+  res.send('Hello from Node backend! This is a test for the commit!'); 
 });
 
 app.listen(PORT, () => {
