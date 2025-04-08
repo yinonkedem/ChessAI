@@ -1,0 +1,7 @@
+.pieces{
+    position: absolute;
+    top: 0;
+    left: calc(.25*var(--tile-size));
+    right: 0;
+    bottom: calc(.25*var(--tile-size));
+}
