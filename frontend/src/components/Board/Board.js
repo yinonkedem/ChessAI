@@ -17,7 +17,7 @@ const Board = () => {
     
     return <div className="board">
 
-        <Ranks ranks={ranks} />
+        <Ranks ranks={ranks}/>
 
         <div className="tiles">
             {ranks.map((rank,i) => 
@@ -32,6 +32,7 @@ const Board = () => {
         <Pieces />
 
         <Files files={files} />
+
     </div>
 
 }
