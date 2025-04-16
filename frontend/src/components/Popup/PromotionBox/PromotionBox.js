@@ -3,7 +3,7 @@ import {useAppContext} from "../../../contexts/Context";
 import {clearCandidates, makeNewMove} from "../../../reducer/actions/move";
 import {copyPosition} from "../../../helpers";
 
-const PromotionBox = (onClosePopup) => {
+const PromotionBox = ({onClosePopup}) => {
     const options = ['q', 'r', 'b', 'n']
 
     const { appState, dispatch } = useAppContext();
