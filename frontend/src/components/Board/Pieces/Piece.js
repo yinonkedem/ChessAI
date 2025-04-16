@@ -1,4 +1,6 @@
 import {useAppContext} from "../../../contexts/Context";
+import arbiter from "../../../arbiter/arbiter";
+import {generateCandidateMoves} from "../../../reducer/actions/move";
 
 const Piece = ({
     rank,
@@ -9,6 +11,7 @@ const Piece = ({
     const {appState, dispatch} = useAppContext() // get the app state from the context
     const {turn, position} = appState // get the turn and position from the state
     const currentPosition = position[position.length-1] // get the current position from the state
+    const previousPosition = position[position.length-2] // get the previous position from the state
 
     const getMoves = () => {
         const moves = []
@@ -50,8 +53,14 @@ const Piece = ({
             e.target.style.display = 'none';
         }, 0);
         if (turn === piece[0]) {
-            const candidateMoves = arbiter.getRegularMoves({position: currentPosition, piece, rank, file})
-            console.log('candidateMoves', candidateMoves)
+            const candidateMoves = arbiter.getValidMoves({
+                position: currentPosition,
+                previousPosition: previousPosition,
+                piece,
+                rank,
+                file
+            })
+            dispatch(generateCandidateMoves({candidateMoves}))
         }
     }
 

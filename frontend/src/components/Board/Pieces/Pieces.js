@@ -3,7 +3,7 @@ import Piece from './Piece';
 import {useRef} from 'react';
 import { copyPosition } from '../../../helpers';
 import { useAppContext } from '../../../contexts/Context';
-import { makeNewMove } from '../../../reducer/actions/move';
+import {clearCandidates, makeNewMove} from '../../../reducer/actions/move';
 
 const Pieces =  () => {
     
@@ -25,9 +25,18 @@ const Pieces =  () => {
         const newPosition = copyPosition(currentPosition) // copy the position
         const {x, y} = calculateCoords(e) // get the coords of the drop
         const [piece, rank, file] = e.dataTransfer.getData('text').split(','); // get the data from the drag
-        newPosition[rank][file] = '' // remove the piece from the old position
-        newPosition[x][y] = piece // add the piece to the new position
-        dispatch(makeNewMove({newPosition})) // dispatch the new position to the reducer
+
+        if (appState.candidateMoves?.find(m => m[0] === x && m[1] === y)) {
+            // En-passant move
+            if (piece.endsWith('p') && !newPosition[x][y] && x !== rank && y !== file) {
+                newPosition[rank][y] = '' // remove the piece from the old position
+            }
+
+            newPosition[rank][file] = '' // remove the piece from the old position
+            newPosition[x][y] = piece // add the piece to the new position
+            dispatch(makeNewMove({newPosition})) // dispatch the new position to the reducer
+        }
+        dispatch(clearCandidates()) // clear the candidates
     }
 
     const onDragOver = e => e.preventDefault();
