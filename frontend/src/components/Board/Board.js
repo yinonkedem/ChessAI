@@ -2,8 +2,9 @@ import { getCharacter } from '../../helpers';
 import './Board.css';
 import Ranks from './bits/Ranks';
 import Files from './bits/Files';
-import Pieces from './Pieces/Pieces';
+import Pieces from '../Pieces/Pieces';
 import {useAppContext} from "../../contexts/Context";
+import Popup from "../Popup/Popup";
 
 const Board = () => {
 
@@ -44,6 +45,8 @@ const Board = () => {
         </div>
 
         <Pieces />
+
+        <Popup />
 
         <Files files={files} />
 

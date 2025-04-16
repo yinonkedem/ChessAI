@@ -1,12 +1,13 @@
 import './Pieces.css';
 import Piece from './Piece';
 import {useRef} from 'react';
-import { copyPosition } from '../../../helpers';
-import { useAppContext } from '../../../contexts/Context';
-import {clearCandidates, makeNewMove} from '../../../reducer/actions/move';
+import { useAppContext } from '../../contexts/Context';
+import {clearCandidates, makeNewMove} from '../../reducer/actions/move';
+import arbiter from "../../arbiter/arbiter";
+import {openPromotion} from "../../reducer/actions/popup";
 
 const Pieces =  () => {
-    
+
     const ref = useRef();
 
     const {appState,dispatch} = useAppContext() // get the app state from the context
@@ -21,43 +22,59 @@ const Pieces =  () => {
             return {x, y}
     }
 
-    const onDrop = e => {
-        const newPosition = copyPosition(currentPosition) // copy the position
+    const openPromotionBox = ({rank, file, x, y}) =>
+        dispatch(openPromotion({
+            rank : Number(rank),
+            file : Number(file),
+            x, y
+        }))
+
+    const move = e => {
         const {x, y} = calculateCoords(e) // get the coords of the drop
         const [piece, rank, file] = e.dataTransfer.getData('text').split(','); // get the data from the drag
-
         if (appState.candidateMoves?.find(m => m[0] === x && m[1] === y)) {
-            // En-passant move
-            if (piece.endsWith('p') && !newPosition[x][y] && x !== rank && y !== file) {
-                newPosition[rank][y] = '' // remove the piece from the old position
+            if ((piece === 'wp' && x === 7 ) || (piece === 'bp' && x === 0)){
+                openPromotionBox({rank, file, x, y})
+                return
             }
-
-            newPosition[rank][file] = '' // remove the piece from the old position
-            newPosition[x][y] = piece // add the piece to the new position
+            const newPosition = arbiter.performMove({
+                position: currentPosition,
+                // previousPosition: currentPosition,
+                piece,
+                rank,
+                file,
+                x,
+                y
+            })
             dispatch(makeNewMove({newPosition})) // dispatch the new position to the reducer
         }
         dispatch(clearCandidates()) // clear the candidates
     }
 
+    const onDrop = e => {
+        e.preventDefault();
+        move (e) // move the piece
+    }
+
     const onDragOver = e => e.preventDefault();
 
-    return <div 
+    return <div
         ref={ref}
         onDrop = {onDrop}
         onDragOver = {onDragOver}
         className="pieces">
         {currentPosition.map((r,rank ) =>
-            r.map((f,file) => 
+            r.map((f,file) =>
                 currentPosition[rank][file] ? <Piece
                     key={rank+'-'+file}
                     rank={rank}
                     file={file}
                     piece={currentPosition[rank][file]}
                 /> : null
-            ))} 
-        
-        
-        </div> 
+            ))}
+
+
+        </div>
 }
 
 export default Pieces;
