@@ -9,42 +9,10 @@ const Piece = ({
 }) => {
 
     const {appState, dispatch} = useAppContext() // get the app state from the context
-    const {turn, position} = appState // get the turn and position from the state
+    const {turn, castleDirection, position} = appState // get the turn and position from the state
+
     const currentPosition = position[position.length-1] // get the current position from the state
     const previousPosition = position[position.length-2] // get the previous position from the state
-
-    const getMoves = () => {
-        const moves = []
-        const us = piece[0]
-        const enemy = us === 'w' ? 'b' : 'w'
-
-        const direction = [
-            [-1,0],
-            [1,0],
-            [0,-1],
-            [0,1],
-        ]
-        direction.forEach(direction => {
-            for (let i = 1; i < 8; i++) {
-                const x = rank + (direction[0] * i)
-                const y = file + (direction[1] * i)
-                if (currentPosition?.[x]?.[y] === undefined) {
-                    break
-                }
-                if (currentPosition[x][y].startsWith(enemy)) {
-                    moves.push([x, y])
-                    break
-                }
-                if (currentPosition[x][y].startsWith(us)) {
-                    break
-                }
-                moves.push([x,y])
-            }
-
-        })
-
-        return moves
-    }
 
     const onDragStart = e => {
         e.dataTransfer.effectAllowed = 'move';
@@ -56,6 +24,7 @@ const Piece = ({
             const candidateMoves = arbiter.getValidMoves({
                 position: currentPosition,
                 previousPosition: previousPosition,
+                castleDirection: castleDirection[turn],
                 piece,
                 rank,
                 file
