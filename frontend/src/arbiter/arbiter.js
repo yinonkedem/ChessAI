@@ -37,6 +37,9 @@ const arbiter = {
 
     getValidMoves : function ({position, castleDirection, previousPosition, piece, rank, file}) {
         let moves = this.getRegularMoves({position, piece, rank, file})
+        const notInCheckMoves = []
+
+
         if (piece.endsWith('p')) {
             moves = [
                 ...moves,
@@ -49,6 +52,13 @@ const arbiter = {
                 ...getCastingMoves({position, castleDirection, piece, rank, file})
             ]
         }
+        moves.forEach(({x, y}) => {
+            const positionAfterMove = this.performMove({position, piece, rank, file, x, y})
+
+            if (!this.isPlayerInCheck({positionAfterMove, position, player: piece[0]})) {
+                notInCheckMoves.push([x, y])
+            }
+        })
         return moves
     },
 
@@ -59,9 +69,11 @@ const arbiter = {
         else{
             return movePiece({position, piece, rank, file, x, y})
         }
+    },
+
+    isPlayerInCheck: function ({position, piece, rank, file, x, y}) {
+        
     }
-
-
 }
 
 export default arbiter;
