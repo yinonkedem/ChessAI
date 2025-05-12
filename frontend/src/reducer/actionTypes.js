@@ -4,6 +4,7 @@ const actionTypes = {
     "CLEAR_CANDIDATE_MOVES": "CLEAR_CANDIDATE_MOVES",
     "OPEN_PROMOTION": "OPEN_PROMOTION",
     "PROMOTION_CLOSE": "PROMOTION_CLOSE",
+    "CAN_CASTLE": "CAN_CASTLE",
 }
 
 export default actionTypes;

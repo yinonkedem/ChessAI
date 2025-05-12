@@ -5,6 +5,8 @@ import { useAppContext } from '../../contexts/Context';
 import {clearCandidates, makeNewMove} from '../../reducer/actions/move';
 import arbiter from "../../arbiter/arbiter";
 import {openPromotion} from "../../reducer/actions/popup";
+import {updateCastling} from "../../reducer/actions/game";
+import {getCastleDirection} from "../../arbiter/getMoves";
 
 const Pieces =  () => {
 
@@ -29,6 +31,16 @@ const Pieces =  () => {
             x, y
         }))
 
+    const updateCastlingState = ({piece, rank, file}) => {
+        const direction = getCastleDirection({
+            castleDirection: appState.castleDirection,
+            piece, rank, file
+        })
+        if (direction) {
+            dispatch(updateCastling(direction))
+        }
+    }
+
     const move = e => {
         const {x, y} = calculateCoords(e) // get the coords of the drop
         const [piece, rank, file] = e.dataTransfer.getData('text').split(','); // get the data from the drag
@@ -37,9 +49,11 @@ const Pieces =  () => {
                 openPromotionBox({rank, file, x, y})
                 return
             }
+            if (piece.endsWith('r') || piece.endsWith('k')) {
+                updateCastlingState({piece, rank, file})
+            }
             const newPosition = arbiter.performMove({
                 position: currentPosition,
-                // previousPosition: currentPosition,
                 piece,
                 rank,
                 file,
