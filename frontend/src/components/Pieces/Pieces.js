@@ -5,7 +5,7 @@ import { useAppContext } from '../../contexts/Context';
 import {clearCandidates, makeNewMove} from '../../reducer/actions/move';
 import arbiter from "../../arbiter/arbiter";
 import {openPromotion} from "../../reducer/actions/popup";
-import {updateCastling} from "../../reducer/actions/game";
+import {detectStalemate, updateCastling} from "../../reducer/actions/game";
 import {getCastleDirection} from "../../arbiter/getMoves";
 
 const Pieces =  () => {
@@ -65,7 +65,7 @@ const Pieces =  () => {
             })
             dispatch(makeNewMove({newPosition})) // dispatch the new position to the reducer
 
-            if (arbiter.inStalemate(newPosition, opponent, castleDirection))
+            if (arbiter.isStalemate(newPosition, opponent, castleDirection))
                 dispatch(detectStalemate())
         }
         dispatch(clearCandidates()) // clear the candidates

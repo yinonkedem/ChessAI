@@ -59,11 +59,10 @@ export const reducer = (state, action) => {
             }
         }
 
-        case actionTypes.PROMOTION_CLOSE : {
+        case actionTypes.STALEMATE : {
             return {
                 ...state,
-                status : Status.ongoing,
-                promotionSquare: null
+                status : Status.stalemate,
             }
         }
 
