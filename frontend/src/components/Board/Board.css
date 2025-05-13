@@ -38,7 +38,18 @@
     width: calc(var(--tile-size) - 12px);
     height: calc(var(--tile-size) - 12px);
     border-radius: 50%;
-    left: 0%;
-    top: 0%;
+    left: 0;
+    top: 0;
     border: 6px solid var(--highlight);
+}
+.checked:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: var(--tile-size);
+    height: var(--tile-size);
+    background: var(--check);
+    border-radius: 20%;
+    left: 0;
+    top: 0;
 }

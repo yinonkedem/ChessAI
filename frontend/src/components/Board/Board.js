@@ -5,6 +5,8 @@ import Files from './bits/Files';
 import Pieces from '../Pieces/Pieces';
 import {useAppContext} from "../../contexts/Context";
 import Popup from "../Popup/Popup";
+import arbiter from "../../arbiter/arbiter";
+import {getKingPosition} from "../../arbiter/getMoves";
 
 const Board = () => {
 
@@ -13,6 +15,17 @@ const Board = () => {
 
     const {appState} = useAppContext() // get the app state from the context
     const position = appState.position[appState.position.length-1] // get the current position from the state
+
+    const isChecked = (() => {
+        const isInCheck = arbiter.isPlayerInCheck({
+            positionAfterMove: position,
+            player: appState.turn,
+        })
+        if (isInCheck) {
+            return getKingPosition(position, appState.turn)
+        }
+        return null
+    })()
 
     const getClassName = (i,j) => {
         let c = 'tile'
@@ -27,6 +40,9 @@ const Board = () => {
             }
         }
 
+        if (isChecked && isChecked[0] === i && isChecked[1] === j) {
+            c += ' checked'
+        }
         return c
     }
     

@@ -44,7 +44,10 @@ const Pieces =  () => {
     const move = e => {
         const {x, y} = calculateCoords(e) // get the coords of the drop
         const [piece, rank, file] = e.dataTransfer.getData('text').split(','); // get the data from the drag
+
         if (appState.candidateMoves?.find(m => m[0] === x && m[1] === y)) {
+            const opponent = piece.startsWith('b') ? 'w' : 'b' // get the opponent
+            const castleDirection = appState.castleDirection[`${piece.startsWith('b') ? 'w' : 'b'}`] // get the castle direction
             if ((piece === 'wp' && x === 7 ) || (piece === 'bp' && x === 0)){
                 openPromotionBox({rank, file, x, y})
                 return
@@ -61,6 +64,9 @@ const Pieces =  () => {
                 y
             })
             dispatch(makeNewMove({newPosition})) // dispatch the new position to the reducer
+
+            if (arbiter.inStalemate(newPosition, opponent, castleDirection))
+                dispatch(detectStalemate())
         }
         dispatch(clearCandidates()) // clear the candidates
     }
