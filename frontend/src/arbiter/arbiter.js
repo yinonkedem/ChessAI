@@ -138,6 +138,7 @@ const arbiter = {
                 findPieceCoords(position,'wb')[0],
                 findPieceCoords(position,'bb')[0]
             )
+
         ){
             return true
         }
