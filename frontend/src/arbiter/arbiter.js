@@ -6,6 +6,7 @@ import {
     getCastingMoves, getKingPosition, getEnemyPieces, getPieces
 } from "./getMoves";
 import {movePawn, movePiece} from "./move";
+import {areSameColorTiles, findPieceCoords} from "../helpers";
 
 const arbiter = {
     getRegularMoves: function ({position, piece, rank, file}) {
