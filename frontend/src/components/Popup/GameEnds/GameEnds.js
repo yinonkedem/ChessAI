@@ -2,58 +2,28 @@ import './GameEnds.css'
 import {useAppContext} from "../../../contexts/Context";
 import {clearCandidates, makeNewMove} from "../../../reducer/actions/move";
 import {copyPosition} from "../../../helpers";
+import {Status} from "../../../constant";
+import {setupNewGame} from "../../../reducer/actions/game";
 
 const GameEnds = ({onClosePopup}) => {
     const options = ['q', 'r', 'b', 'n']
 
-    const { appState, dispatch } = useAppContext();
-    const { promotionSquare } = appState;
+    const { appState : {status}, dispatch } = useAppContext();
 
-    if (!promotionSquare) return null;
-
-    const color = promotionSquare.x === 7 ? 'w' : 'b';
-
-    const getPromotionBoxPosition = () => {
-        let style = {};
-
-        if (promotionSquare.x === 7) {
-            style.top = "-12.5%";
-        } else {
-            style.top = "97.5%";
-        }
-
-        if (promotionSquare.y <= 1) {
-            style.left = "0%";
-        } else if (promotionSquare.y >= 5) {
-            style.right = "0%";
-        } else {
-            style.left = `${12.5 * promotionSquare.y - 20}%`;
-        }
-
-        return style;
-    };
-
-    const onClick = (option) => {
-        onClosePopup();
-        const newPosition = copyPosition(appState.position[appState.position.length - 1]);
-
-        newPosition[promotionSquare.rank][promotionSquare.file] = '';
-        newPosition[promotionSquare.x][promotionSquare.y] = color + option;
-
-        dispatch(clearCandidates())
-        dispatch(makeNewMove({ newPosition })); // dispatch the new position to the reducer
+    if (status === Status.ongoing || status === Status.promoting) {
+        return null
     }
 
+    const isWin = status.endsWith('wins')
+    const newGame = () => {
+        dispatch(setupNewGame())
+    }
 
-    return <div className='popup-inner promotion-choices' style={getPromotionBoxPosition()}>
-        {options.map(option => <div
-                key={option}
-                className={`piece ${color}${option}`}
-                onClick={() => onClick(option)}>
-            </div>
-            )
-        }
-
+    return <div className='popup-inner popup-inner__center'>
+        <h1>{isWin ? status : 'Draw'}</h1>
+        <p>{!isWin && status}</p>
+        <div className={status}></div>
+        <button onClick={newGame}>New Game</button>
     </div>
 }
 
