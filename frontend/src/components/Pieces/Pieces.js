@@ -12,6 +12,7 @@ import {
     updateCastling
 } from "../../reducer/actions/game";
 import {getCastleDirection} from "../../arbiter/getMoves";
+import {getNewMoveNotation} from "../../helpers";
 
 const Pieces =  () => {
 
@@ -68,7 +69,16 @@ const Pieces =  () => {
                 x,
                 y
             })
-            dispatch(makeNewMove({newPosition})) // dispatch the new position to the reducer
+            const newMove = getNewMoveNotation({
+                piece,
+                rank,
+                file,
+                x,
+                y,
+                position: currentPosition
+            })
+
+            dispatch(makeNewMove({newPosition, newMove})) // dispatch the new position to the reducer
 
             if (arbiter.insufficientMaterial(newPosition))
                 dispatch(detectInsufficientMaterial())

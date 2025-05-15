@@ -14,10 +14,11 @@ const GameEnds = ({onClosePopup}) => {
         return null
     }
 
-    const isWin = status.endsWith('wins')
     const newGame = () => {
         dispatch(setupNewGame())
     }
+    console.log("GameEnds - status:", status);
+    const isWin = status.endsWith('wins')
 
     return <div className='popup-inner popup-inner__center'>
         <h1>{isWin ? status : 'Draw'}</h1>

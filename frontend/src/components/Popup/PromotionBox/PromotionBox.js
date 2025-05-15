@@ -1,7 +1,7 @@
 import './PromotionBox.css'
 import {useAppContext} from "../../../contexts/Context";
 import {clearCandidates, makeNewMove} from "../../../reducer/actions/move";
-import {copyPosition} from "../../../helpers";
+import {copyPosition, getNewMoveNotation} from "../../../helpers";
 
 const PromotionBox = ({onClosePopup}) => {
     const options = ['q', 'r', 'b', 'n']
@@ -41,7 +41,16 @@ const PromotionBox = ({onClosePopup}) => {
         newPosition[promotionSquare.x][promotionSquare.y] = color + option;
 
         dispatch(clearCandidates())
-        dispatch(makeNewMove({ newPosition })); // dispatch the new position to the reducer
+
+        const newMove = getNewMoveNotation({
+            ...promotionSquare,
+            position: appState.position[appState.position.length - 1],
+            promotesTo: option,
+            piece: promotionSquare.x === 7 ? "wp" : "bp",
+        });
+        dispatch(clearCandidates());
+
+        dispatch(makeNewMove({ newPosition, newMove })); // dispatch the new position to the reducer
     }
 
 

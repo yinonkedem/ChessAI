@@ -9,6 +9,7 @@ const actionTypes = {
     "NEW_GAME": "NEW_GAME",
     "INSUFFICIENT_MATERIAL": "INSUFFICIENT_MATERIAL",
     "WIN" : "WIN",
+    "TAKE_BACK" : "TAKE_BACK",
 }
 
 export default actionTypes;

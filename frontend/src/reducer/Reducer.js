@@ -4,7 +4,7 @@ import actionTypes from "./actionTypes";
 export const reducer = (state, action) => {
     switch (action.type) {
         case actionTypes.NEW_MOVE : {
-            let {turn, position} = state;
+            let {turn, position, movesList} = state;
 
             turn = turn === 'w' ? 'b' : 'w';
 
@@ -12,11 +12,16 @@ export const reducer = (state, action) => {
                 ...position,
                 action.payload.newPosition
             ]
+            movesList = [
+                ...movesList,
+                action.payload.newMove
+            ]
 
             return {
                 ...state,
                 turn,
                 position,
+                movesList,
             }
         }
 
@@ -83,6 +88,22 @@ export const reducer = (state, action) => {
             return {
                 ...state,
                 status : action.payload === 'w' ? Status.whites : Status.blacks,
+            }
+        }
+
+        case actionTypes.TAKE_BACK : {
+            let {position,movesList,turn} = state
+            if (position.length > 1){
+                position = position.slice(0,position.length-1)
+                movesList = movesList.slice(0,movesList.length-1)
+                turn = turn === 'w' ? 'b' : 'w'
+            }
+
+            return {
+                ...state,
+                position,
+                movesList,
+                turn,
             }
         }
 
