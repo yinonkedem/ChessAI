@@ -1,13 +1,10 @@
-import { Status } from "../constant";
+import { Status } from "../constants";
 import actionTypes from "./actionTypes";
-
 export const reducer = (state, action) => {
+
     switch (action.type) {
         case actionTypes.NEW_MOVE : {
-            let {turn, position, movesList} = state;
-
-            turn = turn === 'w' ? 'b' : 'w';
-
+            let {position,movesList,turn} = state 
             position = [
                 ...position,
                 action.payload.newPosition
@@ -16,21 +13,23 @@ export const reducer = (state, action) => {
                 ...movesList,
                 action.payload.newMove
             ]
+            turn = turn === 'w' ? 'b' : 'w'
 
             return {
                 ...state,
-                turn,
                 position,
                 movesList,
+                turn,
             }
         }
 
         case actionTypes.GENERATE_CANDIDATE_MOVES : {
+            const {candidateMoves} = action.payload
             return {
                 ...state,
-                candidateMoves : action.payload.candidateMoves
+                candidateMoves
             }
-        }
+        } 
 
         case actionTypes.CLEAR_CANDIDATE_MOVES : {
             return {
@@ -38,12 +37,12 @@ export const reducer = (state, action) => {
                 candidateMoves : []
             }
         }
-
-        case actionTypes.OPEN_PROMOTION : {
+    
+        case actionTypes.PROMOTION_OPEN : {
             return {
                 ...state,
-                status : Status.PROMOTION,
-                promotionSquare: {...action.payload}
+                status : Status.promoting,
+                promotionSquare : {...action.payload},
             }
         }
 
@@ -51,29 +50,25 @@ export const reducer = (state, action) => {
             return {
                 ...state,
                 status : Status.ongoing,
-                promotionSquare: null
+                promotionSquare : null,
             }
         }
 
         case actionTypes.CAN_CASTLE : {
-            let {turn, castleDirection} = state;
-            castleDirection[turn] = action.payload;
+            let {turn,castleDirection} = state 
+        
+            castleDirection[turn] = action.payload
+            
             return {
                 ...state,
-                castleDirection
+                castleDirection,
             }
         }
-
+        
         case actionTypes.STALEMATE : {
             return {
                 ...state,
-                status : Status.stalemate,
-            }
-        }
-
-        case actionTypes.NEW_GAME : {
-            return {
-                ...action.payload,
+                status : Status.stalemate
             }
         }
 
@@ -87,12 +82,18 @@ export const reducer = (state, action) => {
         case actionTypes.WIN : {
             return {
                 ...state,
-                status : action.payload === 'w' ? Status.whites : Status.blacks,
+                status : action.payload === 'w' ? Status.white : Status.black
+            }
+        }
+         
+        case actionTypes.NEW_GAME : {
+            return {
+                ...action.payload,
             }
         }
 
         case actionTypes.TAKE_BACK : {
-            let {position,movesList,turn} = state
+            let {position,movesList,turn} = state 
             if (position.length > 1){
                 position = position.slice(0,position.length-1)
                 movesList = movesList.slice(0,movesList.length-1)
@@ -107,9 +108,7 @@ export const reducer = (state, action) => {
             }
         }
 
-
-        default:
+        default : 
             return state
     }
-
-}
+};

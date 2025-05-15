@@ -13,6 +13,7 @@ html,body {
   background: var(--bg-color);
   font-family: 'Sofia Sans', sans-serif;
   grid-template-columns: auto 220px;
+
 }
 button {
   background: var(--dark-tile);
@@ -21,4 +22,4 @@ button {
   padding: 10px 30px;
   margin: 10px 0;
   font-size: 1.1em;
-}
+} 

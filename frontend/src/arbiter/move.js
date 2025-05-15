@@ -1,32 +1,34 @@
-import {copyPosition} from "../helpers";
+import { copyPosition } from "../helper"
 
-// Move a piece
-export const movePiece = ({position, piece, rank, file, x, y}) => {
+export const movePiece = ({position,piece,rank,file,x,y}) => {
+
     const newPosition = copyPosition(position)
 
-    if (piece.endsWith('k') && Math.abs(file - y) > 1) {
-        if (y === 2){
+    if(piece.endsWith('k') && Math.abs(y - file) > 1){ // Castles
+        if (y === 2){ // Castles Long
             newPosition[rank][0] = ''
             newPosition[rank][3] = piece.startsWith('w') ? 'wr' : 'br'
         }
-        if (y === 6){
+        if (y === 6){ // Castles Short
             newPosition[rank][7] = ''
             newPosition[rank][5] = piece.startsWith('w') ? 'wr' : 'br'
         }
     }
+    
     newPosition[rank][file] = ''
     newPosition[x][y] = piece
     return newPosition
 }
 
-// Move a pawn
-export const movePawn = ({position, piece, rank, file, x, y}) => {
+export const movePawn = ({position,piece,rank,file,x,y}) => {
     const newPosition = copyPosition(position)
-    if (!newPosition[x][y] && x !== rank && y !== file) {
+
+    // EnPassant, looks like capturing an empty cell
+    // Detect and delete the pawn to be removed
+    if (!newPosition[x][y] && x !== rank && y !== file) 
         newPosition[rank][y] = ''
-    }
+
     newPosition[rank][file] = ''
     newPosition[x][y] = piece
-
     return newPosition
 }

@@ -1,22 +1,16 @@
-import actionTypes from "../actionTypes";
-import {initGameState} from "../../constant";
+import actionTypes from '../actionTypes';
+import { initGameState } from '../../constants';
 
 export const updateCastling = (direction) => {
     return {
         type: actionTypes.CAN_CASTLE,
-        payload: direction
-    }
-}
-export const detectStalemate = () => {
-    return {
-        type: actionTypes.STALEMATE,
+        payload: direction,
     }
 }
 
-export const setupNewGame = () => {
+export const detectStalemate = () => {
     return {
-        type: actionTypes.NEW_GAME,
-        payload: initGameState
+        type: actionTypes.STALEMATE,
     }
 }
 
@@ -26,9 +20,16 @@ export const detectInsufficientMaterial = () => {
     }
 }
 
-export const detectCheckmate = (winner) => {
+export const detectCheckmate = winner => {
     return {
         type: actionTypes.WIN,
-        payload: winner
+        payload : winner
+    }
+}
+
+export const setupNewGame = () => {
+    return {
+        type: actionTypes.NEW_GAME,
+        payload : initGameState
     }
 }

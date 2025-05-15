@@ -10,46 +10,45 @@
     grid-template-rows: repeat(8,var(--tile-size));
     width: calc(8*var(--tile-size));
 }
-.tile {
+.tile{
     position: relative;
 }
-.tile--light{
-    background: var(--light-tile);
+.tile--light {
+    background-color: var(--light-tile);
 }
-.tile--dark{
-    background: var(--dark-tile);
+.tile--dark {
+    background-color: var(--dark-tile);
 }
-
 .highlight:after {
-    content: '';
     display: block;
     position: absolute;
-    width: calc(.5 * var(--tile-size));
-    height: calc(.5 * var(--tile-size));
+    content: '';
+    width : calc(.5*var(--tile-size));
+    height : calc(.5*var(--tile-size));
     background: var(--highlight);
     border-radius: 50%;
     left: 25%;
     top: 25%;
 }
 .attacking:after {
-    content: '';
     display: block;
     position: absolute;
-    width: calc(var(--tile-size) - 12px);
-    height: calc(var(--tile-size) - 12px);
-    border-radius: 50%;
-    left: 0%;
-    top: 0%;
+    content: '';
     border: 6px solid var(--highlight);
+    width : calc(var(--tile-size) - 12px);
+    height : calc(var(--tile-size) - 12px);
+    border-radius: 50%;
+    left: 0;
+    top: 0;
 }
 .checked:after {
-    content: '';
     display: block;
     position: absolute;
-    width: var(--tile-size);
-    height: var(--tile-size);
+    content: '';
+    width :  var(--tile-size);
+    height :  var(--tile-size);
     background: var(--check);
-    border-radius: 20%;
+    border-radius: 20px;
     left: 0;
     top: 0;
 }

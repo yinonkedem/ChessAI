@@ -1,16 +1,16 @@
-import React, {useReducer} from 'react';
-import Board from './components/Board/Board';
 import './App.css';
-import AppContext from './contexts/Context';
-import {reducer} from './reducer/Reducer';
-import {initGameState} from './constant';
-import Control from "./components/Control/Control";
-import TakeBack from "./components/Control/bits/TakeBack";
-import MovesList from "./components/Control/bits/MovesList";
+import Board from './components/Board/Board';
+import { reducer } from './reducer/reducer'
+import { useReducer } from 'react'
+import { initGameState } from './constants';
+import AppContext from './contexts/Context'
+import Control from './components/Control/Control';
+import TakeBack from './components/Control/bits/TakeBack';
+import MovesList from './components/Control/bits/MovesList';
 
 function App() {
 
-    const [appState, dispatch] = useReducer(reducer, initGameState);
+    const [appState, dispatch ] = useReducer(reducer,initGameState);
 
     const providerState = {
         appState,
@@ -18,8 +18,8 @@ function App() {
     }
 
     return (
-        <AppContext.Provider value={providerState}>
-            <div className="Yinon's Chess App">
+        <AppContext.Provider value={providerState} >
+            <div className="App">
                 <Board/>
                 <Control>
                     <MovesList/>
@@ -27,7 +27,7 @@ function App() {
                 </Control>
             </div>
         </AppContext.Provider>
-    );
+    ); 
 }
 
 export default App;
