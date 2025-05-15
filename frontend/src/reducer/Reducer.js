@@ -79,6 +79,14 @@ export const reducer = (state, action) => {
             }
         }
 
+        case actionTypes.WIN : {
+            return {
+                ...state,
+                status : action.payload === 'w' ? Status.whites : Status.blacks,
+            }
+        }
+
+
         default:
             return state
     }

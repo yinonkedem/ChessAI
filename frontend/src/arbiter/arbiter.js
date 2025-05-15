@@ -3,7 +3,7 @@ import {
     getKnightMoves, getPawnCaptures, getPawnMoves,
     getQueenMoves,
     getRookMoves,
-    getCastingMoves, getKingPosition, getEnemyPieces, getPieces
+    getCastingMoves, getKingPosition, getPieces
 } from "./getMoves";
 import {movePawn, movePiece} from "./move";
 import {areSameColorTiles, findPieceCoords} from "../helpers";
@@ -145,7 +145,28 @@ const arbiter = {
         else {
             return false
         }
-    }
+    },
+
+    isCheckMate : function(position,player,castleDirection) {
+        const isInCheck = this.isPlayerInCheck({positionAfterMove: position, player})
+
+        if (!isInCheck)
+            return false
+
+        const pieces = getPieces(position,player)
+        const moves = pieces.reduce((acc,p) => acc = [
+            ...acc,
+            ...(this.getValidMoves({
+                    position,
+                    castleDirection,
+                    ...p
+                })
+            )
+        ], [])
+
+        return (isInCheck && moves.length === 0)
+    },
+
 }
 
 export default arbiter;

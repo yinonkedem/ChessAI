@@ -6,6 +6,7 @@ import {clearCandidates, makeNewMove} from '../../reducer/actions/move';
 import arbiter from "../../arbiter/arbiter";
 import {openPromotion} from "../../reducer/actions/popup";
 import {
+    detectCheckmate,
     detectInsufficientMaterial,
     detectStalemate,
     updateCastling
@@ -74,9 +75,9 @@ const Pieces =  () => {
             else if (arbiter.isStalemate(newPosition,opponent,castleDirection)){
                 dispatch(detectStalemate())
             }
-            // else if (arbiter.isCheckMate(newPosition,opponent,castleDirection)){
-            //     dispatch(detectCheckmate(piece[0]))
-            // }
+            else if (arbiter.isCheckMate(newPosition,opponent,castleDirection)){
+                dispatch(detectCheckmate(piece[0]))
+            }
         }
         dispatch(clearCandidates()) // clear the candidates
     }
