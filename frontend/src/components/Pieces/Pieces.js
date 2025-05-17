@@ -9,10 +9,12 @@ import { updateCastling, detectStalemate, detectInsufficientMaterial, detectChec
 import { makeNewMove, clearCandidates } from '../../reducer/actions/move'
 import arbiter from '../../arbiter/arbiter'
 import { getNewMoveNotation } from '../../helper'
+import { Status } from "../../constants";
 
 const Pieces = () => {
 
     const { appState , dispatch } = useAppContext();
+    const { status } = appState
     const currentPosition = appState.position[appState.position.length-1]
 
     const ref = useRef()
@@ -50,6 +52,10 @@ const Pieces = () => {
     const move = e => {
         const {x,y} = calculateCoords(e)
         const [piece,rank,file] = e.dataTransfer.getData("text").split(',')
+
+        if (status === Status.PROMOTION){
+            return;
+        }
 
         if(appState.candidateMoves.find(m => m[0] === x && m[1] === y)){
             const opponent = piece.startsWith('b') ? 'w' : 'b'
@@ -91,8 +97,9 @@ const Pieces = () => {
 
     const onDrop = e => {
         e.preventDefault()
-        
-        move (e)
+
+        if (status !== Status.promoting)
+            move(e)
     }
     
     const onDragOver = e => {e.preventDefault()}
