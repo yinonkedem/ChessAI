@@ -1,12 +1,16 @@
 import './Pieces.css'
 import Piece from './Piece'
-import { useRef  } from 'react'
+import { useRef, useState } from 'react';
 import { useAppContext }from '../../contexts/Context'
 import { openPromotion } from '../../reducer/actions/popup'
 import { getCastlingDirections } from '../../arbiter/getMoves'
 import { updateCastling, detectStalemate, detectInsufficientMaterial, detectCheckmate} from '../../reducer/actions/game'
 
-import { makeNewMove, clearCandidates } from '../../reducer/actions/move'
+import {
+    makeNewMove,
+    clearCandidates,
+    generateCandidates
+} from '../../reducer/actions/move'
 import arbiter from '../../arbiter/arbiter'
 import { getNewMoveNotation } from '../../helper'
 import { Status } from "../../constants";
@@ -14,10 +18,14 @@ import { Status } from "../../constants";
 const Pieces = () => {
 
     const { appState , dispatch } = useAppContext();
-    const { status } = appState
+    const { status, turn, castleDirection  } = appState
     const currentPosition = appState.position[appState.position.length-1]
 
     const ref = useRef()
+
+    /* 🆕  tap-to-move state */
+    const [selected, setSelected] = useState(null);    // {piece,rank,file}
+    const [legal, setLegal]       = useState([]);      // [[x,y], …]
 
     const updateCastlingState = ({piece,file,rank}) => {
         const direction = getCastlingDirections({
@@ -104,11 +112,60 @@ const Pieces = () => {
     
     const onDragOver = e => {e.preventDefault()}
 
+    /* 🆕  handle every board click (also touch on mobile) */
+    const onBoardClick = e => {
+        if (status === Status.promoting) return;             // modal up → ignore
+
+        const { x, y } = calculateCoords(e);                 // coords of click
+        const squarePiece = currentPosition[x][y];           // '' if empty
+
+        /* 1️⃣  nothing selected yet → try selecting your own piece */
+        if (!selected) {
+            if (squarePiece && squarePiece[0] === turn) {
+                const candidateMoves = arbiter.getValidMoves({
+                    position        : currentPosition,
+                    prevPosition    : currentPosition,             // ok for your setup
+                    castleDirection : castleDirection[turn],
+                    piece           : squarePiece,
+                    file            : y,
+                    rank            : x
+                });
+                setSelected({ piece: squarePiece, rank: x, file: y });
+                setLegal(candidateMoves);
+                dispatch(generateCandidates({ candidateMoves })); // green dots
+            }
+            return;
+        }
+
+        /* 2️⃣  we HAVE a piece selected → is this click a legal target? */
+        const isLegal = legal.find(m => m[0] === x && m[1] === y);
+        if (isLegal) {
+            /* reuse the SAME logic the drag path uses */
+            move({
+                dataTransfer: {
+                    getData: () => `${selected.piece},${selected.rank},${selected.file}`
+                },               // fake a dataTransfer for move()
+                clientX: e.clientX,
+                clientY: e.clientY
+            });
+            setSelected(null);
+            setLegal([]);
+            return;
+        }
+
+        /* 3️⃣  click elsewhere → clear selection & green dots */
+        setSelected(null);
+        setLegal([]);
+        dispatch(clearCandidates());
+    };
+
+
     return <div 
         className='pieces' 
         ref={ref} 
         onDrop={onDrop} 
-        onDragOver={onDragOver} > 
+        onDragOver={onDragOver}
+        onClick={onBoardClick}>
         {currentPosition.map((r,rank) => 
             r.map((f,file) => 
                 currentPosition[rank][file]
