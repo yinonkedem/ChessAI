@@ -92,6 +92,15 @@ export const reducer = (state, action) => {
             }
         }
 
+        case actionTypes.SETUP_GAME : {
+            return {
+                ...state,
+                userColor: action.payload,     // 'white' or 'black'
+                isGameSetup: true,
+                turn: 'w'                      // ensure white always moves first
+            };
+        }
+
         case actionTypes.TAKE_BACK : {
             let {position,movesList,turn} = state 
             if (position.length > 1){

@@ -1,0 +1,61 @@
+/* components/StartScreen/StartScreen.css */
+.start-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #1b1b2f, #16213e);
+    color: #fff;
+    text-align: center;
+}
+
+.start-screen__title {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.start-screen__subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.85;
+}
+
+.start-screen__buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.btn--white {
+    background: #ffffff;
+    color: #16213e;
+}
+
+.btn--white:hover {
+    background: #f0f0f0;
+}
+
+.btn--black {
+    background: #16213e;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn--black:hover {
+    background: #0f3460;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
