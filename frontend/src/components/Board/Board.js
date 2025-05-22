@@ -12,10 +12,14 @@ import arbiter from '../../arbiter/arbiter'
 import { getKingPosition } from '../../arbiter/getMoves'
 
 const Board = () => {
-    const ranks = Array(8).fill().map((x,i) => 8-i)
-    const files = Array(8).fill().map((x,i) => i+1)
-
+    // const ranks = Array(8).fill().map((x,i) => 8-i)
+    // const files = Array(8).fill().map((x,i) => i+1)
+    const base  = [1,2,3,4,5,6,7,8];
     const { appState } = useAppContext();
+    const orientation = appState.userColor || 'white';
+
+    const ranks = orientation === 'white' ? [...base].reverse() : base;   // 8→1  or 1→8
+    const files = orientation === 'white' ? base : [...base].reverse();   // a→h or h→a
     const position = appState.position[appState.position.length - 1]
 
     const checkTile = (() => {
@@ -49,28 +53,25 @@ const Board = () => {
 
     return <div className='board'>
 
-        <Ranks ranks={ranks}/>
+        <Ranks ranks={ranks} orientation={orientation}/>
 
         <div className='tiles'>
             {ranks.map((rank,i) => 
-                files.map((file,j) => 
-                    <div 
-                        key={file+''+rank} 
-                        i={i}
-                        j={j}
-                        className={`${getClassName(7-i,j)}`}>
+                files.map((file,j) =>
+                    <div key={file+''+rank}
+                         className={getClassName(rank-1, file-1)}>
                     </div>
                 ))}
         </div>
 
-        <Pieces/>
+        <Pieces orientation={appState.userColor} />
 
-        <Popup>
-            <PromotionBox />
+        <Popup orientation={appState.userColor} >
+            <PromotionBox orientation={appState.userColor} />
             <GameEnds />
         </Popup>
 
-        <Files files={files}/>
+        <Files files={files} orientation={orientation}/>
 
     </div>
     

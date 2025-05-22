@@ -5,6 +5,8 @@ import { generateCandidates } from '../../reducer/actions/move';
 const Piece = ({
     rank,
     file,
+    displayRank,
+    displayFile,
     piece,
 }) => {
 
@@ -38,7 +40,7 @@ const Piece = ({
  
     return (
         <div 
-            className={`piece ${piece} p-${file}${rank}`}
+            className={`piece ${piece} p-${displayFile}${displayRank}`}
             draggable={true}   
             onDragStart={onDragStart} 
             onDragEnd={onDragEnd}

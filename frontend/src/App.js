@@ -23,14 +23,12 @@ function App() {
         <AppContext.Provider value={providerState}>
             <div className="App">
                 {!appState.isGameSetup ? (
-                    <StartScreen
-                        onChooseColor={(color) =>
+                    <StartScreen onChooseColor={(color) =>
                             dispatch({ type: actionTypes.SETUP_GAME, payload: color })
-                        }
-                    />
+                        }/>
                 ) : (
                     <>
-                        <Board />
+                        <Board orientation={appState.userColor} />
                         <Control>
                             <MovesList />
                             <TakeBack />

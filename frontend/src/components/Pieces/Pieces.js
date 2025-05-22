@@ -17,10 +17,14 @@ import {
     generateCandidates
 } from '../../reducer/actions/move'
 import arbiter from '../../arbiter/arbiter'
-import {getNewMoveNotation} from '../../helper'
+import {
+    displayToLogical,
+    getNewMoveNotation,
+    logicalToDisplay
+} from '../../helper'
 import {Status} from "../../constants";
 
-const Pieces = () => {
+const Pieces = ({orientation}) => {
 
     const {appState, dispatch} = useAppContext();
     const {status, turn, castleDirection} = appState
@@ -53,14 +57,20 @@ const Pieces = () => {
         }))
     }
 
+    /* convert a click position to LOGICAL (rank,file) using displayToLogical */
     const calculateCoords = e => {
-        const {top, left, width} = ref.current.getBoundingClientRect()
-        const size = width / 8
-        const y = Math.floor((e.clientX - left) / size)
-        const x = 7 - Math.floor((e.clientY - top) / size)
+        const {top, left, width} = ref.current.getBoundingClientRect();
+        const size = width / 8;
+        const rawFile = Math.floor((e.clientX - left) / size);
+        const rawRank = Math.floor((e.clientY - top) / size);
 
-        return {x, y}
-    }
+        const {file: y, rank: x} = displayToLogical({
+            file: rawFile,
+            rank: rawRank,
+            orientation
+        });
+        return {x, y};   // x = logical rank, y = logical file
+    };
 
     const move = e => {
         const {x, y} = calculateCoords(e)
@@ -172,17 +182,29 @@ const Pieces = () => {
         onDrop={onDrop}
         onDragOver={onDragOver}
         onClick={onBoardClick}>
-        {currentPosition.map((r, rank) =>
-            r.map((f, file) =>
-                currentPosition[rank][file]
-                    ? <Piece
+        {currentPosition.map((row, rank) =>
+            row.map((_, file) => {
+                const piece = currentPosition[rank][file];
+                if (!piece) return null;
+
+                /* 🆕 get display coords for the CSS class */
+                const {file: dFile, rank: dRank} = logicalToDisplay({
+                    file,
+                    rank,
+                    orientation
+                });
+
+                return (
+                    <Piece
                         key={rank + '-' + file}
-                        rank={rank}
-                        file={file}
-                        piece={currentPosition[rank][file]}
+                        rank={rank}               /* logical */
+                        file={file}               /* logical */
+                        displayRank={dRank}       /* 🆕 for CSS */
+                        displayFile={dFile}       /* 🆕 for CSS */
+                        piece={piece}
                     />
-                    : null
-            )
+                );
+            })
         )}
     </div>
 }
