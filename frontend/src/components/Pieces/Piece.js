@@ -1,29 +1,33 @@
 import arbiter from '../../arbiter/arbiter';
-import { useAppContext }from '../../contexts/Context'
-import { generateCandidates } from '../../reducer/actions/move';
+import {useAppContext} from '../../contexts/Context'
+import {generateCandidates} from '../../reducer/actions/move';
 
 const Piece = ({
-    rank,
-    file,
-    piece,
-}) => {
+                   rank,
+                   file,
+                   piece,
+               }) => {
 
-    const { appState, dispatch } = useAppContext();
-    const { turn, castleDirection, position : currentPosition } = appState
+    const {appState, dispatch} = useAppContext();
+    const {turn, castleDirection, position: currentPosition} = appState
+    const isBlack = appState.userColor === 'black';
+
+    // screen slot for CSS (p-xy)
+
 
     const onDragStart = e => {
         e.dataTransfer.effectAllowed = "move";
-        e.dataTransfer.setData("text/plain",`${piece},${rank},${file}`)
+        e.dataTransfer.setData("text/plain", `${piece},${rank},${file}`)
         setTimeout(() => {
             e.target.style.display = 'none'
-        },0)
+        }, 0)
 
-        if (turn === piece[0]){
-            const candidateMoves = 
+        if (turn === piece[0]) {
+            const candidateMoves =
                 arbiter.getValidMoves({
-                    position : currentPosition[currentPosition.length - 1],
-                    prevPosition : currentPosition[currentPosition.length - 2],
-                    castleDirection : castleDirection[turn],
+                    position: currentPosition[currentPosition.length - 1],
+                    prevPosition: currentPosition[currentPosition.length - 2],
+                    castleDirection: castleDirection[turn],
                     piece,
                     file,
                     rank
@@ -33,16 +37,17 @@ const Piece = ({
 
     }
     const onDragEnd = e => {
-       e.target.style.display = 'block'
-     }
- 
-    return (
-        <div 
-            className={`piece ${piece} p-${file}${rank}`}
-            draggable={true}   
-            onDragStart={onDragStart} 
-            onDragEnd={onDragEnd}
+        e.target.style.display = 'block'
+    }
 
+    // const cssRank = isBlack ? rank : 7 - rank;
+    // const cssFile = isBlack ? 7 - file : file;
+    return (
+        <div
+            className={`piece ${piece} p-${file}${rank}`}
+            draggable={true}
+            onDragStart={onDragStart}
+            onDragEnd={onDragEnd}
         />)
 }
 

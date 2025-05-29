@@ -52,3 +52,30 @@
     left: 0;
     top: 0;
 }
+
+/* --------------  FLIP THE WHOLE PLAYING AREA -------------- */
+.board--black {                /* rotate the entire board   */
+    transform: rotate(180deg);
+}
+
+/* keep the rank/file labels upright after the flip */
+/*.board--black .ranks,*/
+/*.board--black .files,*/
+.board--black .ranks,
+.board--black .files {
+    transform: rotate(180deg);
+}
+
+/*!*  Add at the very bottom of Board.css  *!*/
+/*!* ──────────────────────────────────────────────────────────── *!*/
+/*.board--black .tiles {*/
+/*    !* flip the 8×8 grid *!*/
+/*    transform: rotate(180deg);*/
+/*}*/
+
+/*!* …and immediately un-flip every individual square*/
+/*   so their “light / dark” orientation stays unchanged   *!*/
+/*.board--black .tile {*/
+/*    transform: rotate(180deg);*/
+/*}*/
+/*!* ──────────────────────────────────────────────────────────── *!*/

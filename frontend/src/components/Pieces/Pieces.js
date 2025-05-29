@@ -25,6 +25,7 @@ const Pieces = () => {
     const {appState, dispatch} = useAppContext();
     const {status, turn, castleDirection} = appState
     const currentPosition = appState.position[appState.position.length - 1]
+    const isBlack = appState.userColor === 'black';
 
     const ref = useRef()
 
@@ -56,10 +57,13 @@ const Pieces = () => {
     const calculateCoords = e => {
         const {top, left, width} = ref.current.getBoundingClientRect()
         const size = width / 8
-        const y = Math.floor((e.clientX - left) / size)
-        const x = 7 - Math.floor((e.clientY - top) / size)
+        const colScreen = Math.floor((e.clientX - left) / size);   // 0 .. 7 L→R on screen
+        const rowScreen = Math.floor((e.clientY - top) / size);    // 0 .. 7 T→B
 
-        return {x, y}
+        const x = isBlack ? rowScreen : 7 - rowScreen;    // rank in position[][]
+        const y = isBlack ? 7 - colScreen : colScreen;        // file in position[][]
+
+        return {x, y};
     }
 
     const move = e => {
@@ -123,7 +127,9 @@ const Pieces = () => {
         if (status === Status.promoting) return;             // modal up → ignore
 
         const {x, y} = calculateCoords(e);                 // coords of click
+        console.log(`onBoardClick: x=${x}, y=${y}`)
         const squarePiece = currentPosition[x][y];           // '' if empty
+        console.log(`onBoardClick: squarePiece=${squarePiece}`)
 
         /* 1️⃣  nothing selected yet → try selecting your own piece */
         if (!selected) {
@@ -136,6 +142,7 @@ const Pieces = () => {
                     file: y,
                     rank: x
                 });
+                console.log(`onBoardClick: candidateMoves=${JSON.stringify(candidateMoves)}`)
                 setSelected({piece: squarePiece, rank: x, file: y});
                 setLegal(candidateMoves);
                 dispatch(generateCandidates({candidateMoves})); // green dots
