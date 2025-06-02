@@ -1,8 +1,6 @@
 // App.js
 import React, {useReducer} from 'react';
 import './App.css';
-
-
 import {reducer} from './reducer/Reducer';
 import {initGameState} from './constants';
 import AppContext from './contexts/Context';
