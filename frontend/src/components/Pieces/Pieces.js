@@ -1,6 +1,6 @@
 import './Pieces.css'
 import Piece from './Piece'
-import {useRef, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import {useAppContext} from '../../contexts/Context'
 import {openPromotion} from '../../reducer/actions/popup'
 import {getCastlingDirections} from '../../arbiter/getMoves'
@@ -25,6 +25,13 @@ const Pieces = () => {
     const {appState, dispatch} = useAppContext();
     const {status, turn, castleDirection} = appState
     const currentPosition = appState.position[appState.position.length - 1]
+    /*  🔄  Whenever the board position changes (move *or* undo),
+    clear the local click-to-move state and the green dots   */
+    useEffect(() => {
+        setSelected(null);
+        setLegal([]);
+        dispatch(clearCandidates());           // wipes the store & CSS highlights
+        }, [currentPosition, dispatch]);                      // runs after every move / take-back
     const isBlack = appState.userColor === 'black';
 
     const ref = useRef()
