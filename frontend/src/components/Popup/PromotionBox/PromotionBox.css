@@ -28,7 +28,7 @@
 .board--black .promotion-choices {
     transform: rotate(180deg);
 }
-.board--black .promotion-choices .piece:hover{
-    /* keep the existing hover zoom */
-    transform: scale(1.05);
-}
+/*.board--black .promotion-choices .piece:hover{*/
+/*    !* keep the existing hover zoom *!*/
+/*    transform: scale(1.05);*/
+/*}*/

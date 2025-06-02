@@ -126,23 +126,26 @@ const Pieces = () => {
     const onBoardClick = e => {
         if (status === Status.promoting) return;             // modal up → ignore
 
+        // previous board = one move before the current one (needed for en-passant, castling, etc.)
+        const prevPosition =
+            appState.position.length > 1
+                ? appState.position[appState.position.length - 2]   // last board in history
+                : currentPosition;                                   // opening position
+
         const {x, y} = calculateCoords(e);                 // coords of click
-        console.log(`onBoardClick: x=${x}, y=${y}`)
         const squarePiece = currentPosition[x][y];           // '' if empty
-        console.log(`onBoardClick: squarePiece=${squarePiece}`)
 
         /* 1️⃣  nothing selected yet → try selecting your own piece */
         if (!selected) {
             if (squarePiece && squarePiece[0] === turn) {
                 const candidateMoves = arbiter.getValidMoves({
                     position: currentPosition,
-                    prevPosition: currentPosition,             // ok for your setup
+                    prevPosition,                           // ✅ real previous board
                     castleDirection: castleDirection[turn],
                     piece: squarePiece,
                     file: y,
                     rank: x
                 });
-                console.log(`onBoardClick: candidateMoves=${JSON.stringify(candidateMoves)}`)
                 setSelected({piece: squarePiece, rank: x, file: y});
                 setLegal(candidateMoves);
                 dispatch(generateCandidates({candidateMoves})); // green dots

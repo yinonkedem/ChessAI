@@ -10,10 +10,6 @@ const Piece = ({
 
     const {appState, dispatch} = useAppContext();
     const {turn, castleDirection, position: currentPosition} = appState
-    const isBlack = appState.userColor === 'black';
-
-    // screen slot for CSS (p-xy)
-
 
     const onDragStart = e => {
         e.dataTransfer.effectAllowed = "move";
@@ -36,12 +32,11 @@ const Piece = ({
         }
 
     }
+
     const onDragEnd = e => {
         e.target.style.display = 'block'
     }
 
-    // const cssRank = isBlack ? rank : 7 - rank;
-    // const cssFile = isBlack ? 7 - file : file;
     return (
         <div
             className={`piece ${piece} p-${file}${rank}`}
