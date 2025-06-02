@@ -1,10 +1,11 @@
-import { Status } from "../constants";
+import {Status} from "../constants";
 import actionTypes from "./actionTypes";
+
 export const reducer = (state, action) => {
 
     switch (action.type) {
         case actionTypes.NEW_MOVE : {
-            let {position,movesList,turn} = state 
+            let {position, movesList, turn} = state
             position = [
                 ...position,
                 action.payload.newPosition
@@ -29,63 +30,63 @@ export const reducer = (state, action) => {
                 ...state,
                 candidateMoves
             }
-        } 
+        }
 
         case actionTypes.CLEAR_CANDIDATE_MOVES : {
             return {
                 ...state,
-                candidateMoves : []
+                candidateMoves: []
             }
         }
-    
+
         case actionTypes.PROMOTION_OPEN : {
             return {
                 ...state,
-                status : Status.promoting,
-                promotionSquare : {...action.payload},
+                status: Status.promoting,
+                promotionSquare: {...action.payload},
             }
         }
 
         case actionTypes.PROMOTION_CLOSE : {
             return {
                 ...state,
-                status : Status.ongoing,
-                promotionSquare : null,
+                status: Status.ongoing,
+                promotionSquare: null,
             }
         }
 
         case actionTypes.CAN_CASTLE : {
-            let {turn,castleDirection} = state 
-        
+            let {turn, castleDirection} = state
+
             castleDirection[turn] = action.payload
-            
+
             return {
                 ...state,
                 castleDirection,
             }
         }
-        
+
         case actionTypes.STALEMATE : {
             return {
                 ...state,
-                status : Status.stalemate
+                status: Status.stalemate
             }
         }
 
         case actionTypes.INSUFFICIENT_MATERIAL : {
             return {
                 ...state,
-                status : Status.insufficient
+                status: Status.insufficient
             }
         }
 
         case actionTypes.WIN : {
             return {
                 ...state,
-                status : action.payload === 'w' ? Status.white : Status.black
+                status: action.payload === 'w' ? Status.white : Status.black
             }
         }
-         
+
         case actionTypes.NEW_GAME : {
             return {
                 ...action.payload,
@@ -93,19 +94,24 @@ export const reducer = (state, action) => {
         }
 
         case actionTypes.SETUP_GAME : {
+            const {colour, opponent} = action.payload;
             return {
                 ...state,
-                userColor: action.payload,     // 'white' or 'black'
+                userColor: colour === 'rand'
+                    ? (Math.random() < 0.5 ? 'white' : 'black')
+                    : colour,
+                opponentType: opponent === 'rand'
+                    ? (Math.random() < 0.5 ? 'human' : 'ai') : opponent,
                 isGameSetup: true,
                 turn: 'w'                      // ensure white always moves first
             };
         }
 
         case actionTypes.TAKE_BACK : {
-            let {position,movesList,turn} = state 
-            if (position.length > 1){
-                position = position.slice(0,position.length-1)
-                movesList = movesList.slice(0,movesList.length-1)
+            let {position, movesList, turn} = state
+            if (position.length > 1) {
+                position = position.slice(0, position.length - 1)
+                movesList = movesList.slice(0, movesList.length - 1)
                 turn = turn === 'w' ? 'b' : 'w'
             }
 
@@ -117,7 +123,7 @@ export const reducer = (state, action) => {
             }
         }
 
-        default : 
+        default :
             return state
     }
 };

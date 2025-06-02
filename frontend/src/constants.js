@@ -14,8 +14,9 @@ export const initGameState = {
     turn : 'w',
     candidateMoves : [],
     movesList : [],
-    userColor       : null,      // 'w' or 'b'
-    isGameSetup     : false,     // becomes true after SETUP_GAME
+    userColor : null,      // 'w' or 'b'
+    isGameSetup : false,     // becomes true after SETUP_GAME
+    opponentType : null,
     promotionSquare : null,
     status : Status.ongoing,
     castleDirection : {

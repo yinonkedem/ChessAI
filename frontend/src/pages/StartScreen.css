@@ -106,3 +106,64 @@
     border: 1px solid #ffffff30;
 }
 .btn--glass:hover { --btn-bg:#ffffff20; }
+
+/* ------------- layout for the two option blocks -------------------------- */
+.setup-grid {
+    display: grid;
+    gap: 2.5rem;
+    margin-bottom: 2.75rem;
+    width: min(90%, 600px);
+}
+
+@media (min-width: 720px) {           /* two columns on larger screens */
+    .setup-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+}
+
+.setup-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.setup-heading {
+    font-size: 1.2rem;
+    margin-bottom: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+/* ------------- button groups --------------------------------------------- */
+.btn-group {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn.active {                         /* highlight selected option */
+    box-shadow: 0 0 0 3px #ffd700 inset;
+}
+
+/* play button – stands out */
+.btn--primary {
+    --btn-bg: #ffd700;
+    --btn-fg: #000000;
+}
+
+.play-btn {
+    padding: 1rem 3rem;
+    font-size: 1.15rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.play-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
