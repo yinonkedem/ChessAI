@@ -16,12 +16,6 @@
     letter-spacing: 2px;
 }
 
-.start-screen__subtitle {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    opacity: 0.85;
-}
-
 .start-screen__buttons {
     display: flex;
     gap: 1rem;

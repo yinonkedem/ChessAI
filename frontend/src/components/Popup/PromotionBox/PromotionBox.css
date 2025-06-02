@@ -28,7 +28,13 @@
 .board--black .promotion-choices {
     transform: rotate(180deg);
 }
-/*.board--black .promotion-choices .piece:hover{*/
-/*    !* keep the existing hover zoom *!*/
-/*    transform: scale(1.05);*/
-/*}*/
+.board--black .promotion-choices .piece:hover{
+    /* keep the existing hover zoom */
+    transform: scale(1.05);
+}
+/* take the box out of the flex layout and keep existing size rules */
+.promotion-choices {
+    position: absolute;      /* already guaranteed by the inline style,
+                                but adding it here lets DevTools show it */
+    align-self: flex-start;  /* ignore .popup’s centring */
+}

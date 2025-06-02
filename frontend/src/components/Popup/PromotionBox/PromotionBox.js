@@ -14,22 +14,19 @@ const PromotionBox = ({onClosePopup, orientation}) => {
 
     const getPromotionBoxPosition = () => {
         const style = {};
-        const flipped = (orientation === 'black');      /* board is rotated 180° */
 
         /*  vertical – above the pawn for White, below for Black */
-        if (promotionSquare.x === 7 ^ flipped)   // XOR keeps the logic symmetric
+        if (color === 'w')
             style.top = '-12.5%';
         else
             style.bottom = '-12.5%';
 
-        /*  horizontal – stay inside the 8×8 grid */
-        const place = () => `${12.5 * promotionSquare.y - 20}%`;
-        if (promotionSquare.y <= 1) {
-            flipped ? (style.right = '0%') : (style.left = '0%');
-        } else if (promotionSquare.y >= 5) {
-            flipped ? (style.left = '0%') : (style.right = '0%');
-        } else {
-            flipped ? (style.right = place()) : (style.left = place());
+        if (promotionSquare.y <= 1) {        // a- or b-file (near left edge)
+            style.left = '0%';
+        } else if (promotionSquare.y >= 5) { // g- or h-file (near right edge)
+            style.right = '0%';
+        } else {                        // c-, d-, e- or f-file
+            style.left = `${12.5 * promotionSquare.y - 20}%`;
         }
         return style;
     };
@@ -57,7 +54,10 @@ const PromotionBox = ({onClosePopup, orientation}) => {
     return (
         <div
             className="popup--inner promotion-choices"
-            style={getPromotionBoxPosition()}
+            style={{
+                position: 'absolute',
+                alignSelf: 'flex-start', ...getPromotionBoxPosition()
+            }}
         >
             {options.map((option) => (
                 <div
