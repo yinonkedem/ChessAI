@@ -85,7 +85,7 @@ const Board = () => {
 
             <Pieces/>
 
-            <Popup>
+            <Popup orientation={appState.userColor}>
                 <PromotionBox/>
                 <GameEnds/>
             </Popup>

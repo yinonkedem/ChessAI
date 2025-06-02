@@ -3,7 +3,7 @@ import {copyPosition, getNewMoveNotation} from "../../../helper";
 import {makeNewMove, clearCandidates} from "../../../reducer/actions/move";
 import "./PromotionBox.css";
 
-const PromotionBox = ({onClosePopup}) => {
+const PromotionBox = ({onClosePopup, orientation}) => {
     const {appState, dispatch} = useAppContext();
     const {promotionSquare} = appState;
 
@@ -13,22 +13,24 @@ const PromotionBox = ({onClosePopup}) => {
     const options = ["q", "r", "b", "n"];
 
     const getPromotionBoxPosition = () => {
-        let style = {};
+        const style = {};
+        const flipped = (orientation === 'black');      /* board is rotated 180° */
 
-        if (promotionSquare.x === 7) {
-            style.top = "-12.5%";
-        } else {
-            style.top = "97.5%";
-        }
+        /*  vertical – above the pawn for White, below for Black */
+        if (promotionSquare.x === 7 ^ flipped)   // XOR keeps the logic symmetric
+            style.top = '-12.5%';
+        else
+            style.bottom = '-12.5%';
 
+        /*  horizontal – stay inside the 8×8 grid */
+        const place = () => `${12.5 * promotionSquare.y - 20}%`;
         if (promotionSquare.y <= 1) {
-            style.left = "0%";
+            flipped ? (style.right = '0%') : (style.left = '0%');
         } else if (promotionSquare.y >= 5) {
-            style.right = "0%";
+            flipped ? (style.left = '0%') : (style.right = '0%');
         } else {
-            style.left = `${12.5 * promotionSquare.y - 20}%`;
+            flipped ? (style.right = place()) : (style.left = place());
         }
-
         return style;
     };
 

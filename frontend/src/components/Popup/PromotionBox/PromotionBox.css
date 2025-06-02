@@ -24,3 +24,11 @@
 .promotion-choices :is(.wn,.bn) {
     left: 75%;
 }
+.board--black .popup--inner,
+.board--black .promotion-choices {
+    transform: rotate(180deg);
+}
+.board--black .promotion-choices .piece:hover{
+    /* keep the existing hover zoom */
+    transform: scale(1.05);
+}

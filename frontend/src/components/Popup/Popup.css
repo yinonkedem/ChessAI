@@ -1,23 +1,25 @@
 .popup {
-    right: 0;
+    right: calc(.25*var(--tile-size));
     top: 0;
     position: absolute;
     left: calc(.25*var(--tile-size));
     bottom: calc(.25*var(--tile-size));
     background: var(--highlight);
+    z-index: 1000;               /* always on top of tiles & pieces   */
+    display: flex;               /* centres the inner panel           */
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;        /* clicks fall through the backdrop  */
 }
 .popup--inner {
     width: 50%;
     min-height: 12.5%;
     background: var(--light-tile);
-    position: absolute;
+    position: relative;
     border: 8px solid var(--light-tile);
     box-shadow: 0 0 0 8px var(--dark-tile)
 }
 .popup--inner__center {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
     padding: 1em 0;
 }
@@ -29,4 +31,7 @@
 .popup--inner__center p {
     font-size: 1.2em;
     margin: 0 0 1em 0;
+}
+.popup--inner{
+    pointer-events: auto;        /* ...but **do** capture clicks inside the box */
 }
