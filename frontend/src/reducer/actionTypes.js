@@ -11,6 +11,7 @@ const actionTypes = {
     "WIN" : "WIN",
     "TAKE_BACK" : "TAKE_BACK",
     "SETUP_GAME" : "SETUP_GAME",
+    "APPLY_HINT" : "APPLY_HINT",
 }
 
 export default actionTypes

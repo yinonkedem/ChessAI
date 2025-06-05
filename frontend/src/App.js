@@ -11,6 +11,7 @@ import Control from './components/Control/Control';
 import MovesList from './components/Control/bits/MovesList';
 import TakeBack from './components/Control/bits/TakeBack';
 import actionTypes from "./reducer/actionTypes";
+import HintButton from "./components/Control/bits/HintButton";
 
 function App() {
     const [appState, dispatch] = useReducer(reducer, initGameState);
@@ -54,6 +55,7 @@ function App() {
                         <Control>
                             <MovesList/>
                             <TakeBack/>
+                            <HintButton/>
                         </Control>
                     </>
                 )}

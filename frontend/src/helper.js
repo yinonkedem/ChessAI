@@ -86,16 +86,3 @@ export const getNewMoveNotation = ({
 
     return note;
 };
-
-export function logicalToDisplay({ file, rank, orientation }) {
-    // flip file & rank when orientation is black
-    const dispFile = orientation === 'white' ? file : 7 - file;
-    const dispRank = orientation === 'white' ? 7 - rank : rank;
-    return { file: dispFile, rank: dispRank };
-}
-
-export function displayToLogical({ file: rawFile, rank: rawRank, orientation }) {
-    const file = orientation === 'white' ? rawFile : 7 - rawFile;
-    const rank = orientation === 'white' ? 7 - rawRank : rawRank;
-    return { file, rank };
-}
