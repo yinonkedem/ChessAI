@@ -1,5 +1,5 @@
 // App.js
-import React, {useReducer} from 'react';
+import React, {useEffect, useReducer} from 'react';
 import './App.css';
 import {reducer} from './reducer/Reducer';
 import {initGameState} from './constants';
@@ -14,6 +14,27 @@ import actionTypes from "./reducer/actionTypes";
 
 function App() {
     const [appState, dispatch] = useReducer(reducer, initGameState);
+
+    // Temporary smoke test: ask the backend for legal moves
+    useEffect(() => {
+        async function pingBackend() {
+            const fen =
+                "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
+            try {
+                const res = await fetch("http://127.0.0.1:8000/legal-moves", {
+                    method: "POST",
+                    headers: {"Content-Type": "application/json"},
+                    body: JSON.stringify({fen}),
+                });
+                const data = await res.json();
+                console.log("✅ backend responded with", data.moves.length, "moves:", data.moves);
+            } catch (err) {
+                console.error("❌ backend call failed:", err);
+            }
+        }
+
+        pingBackend();
+    }, []); // ← empty deps ⇒ run once
 
     const providerState = {appState, dispatch};
 
