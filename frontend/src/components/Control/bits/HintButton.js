@@ -2,6 +2,7 @@
 import { useAppContext } from "../../../contexts/Context";
 import { positionToFen } from "../../../utils/positionToFen";
 import { getBestMove } from "../../../api/chessBackend";
+import {uciToCoords} from "../../../utils/uciToCoords";
 
 export default function HintButton() {
     const { appState, dispatch } = useAppContext();
@@ -13,7 +14,8 @@ export default function HintButton() {
             const { best_move } = await getBestMove({ fen, depth: 10 });
 
             // send to reducer – you already highlight candidateMoves
-            dispatch({ type: "APPLY_HINT", payload: best_move });
+            const moves = uciToCoords(best_move);
+            dispatch({ type: "APPLY_HINT", payload: moves });
         } catch (err) {
             console.error(err);
             alert("Backend error: " + err.message);

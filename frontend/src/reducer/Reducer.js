@@ -123,8 +123,8 @@ export const reducer = (state, action) => {
             }
         }
 
-        case "APPLY_HINT":
-            return { ...state, candidateMoves: [action.payload] };
+        case actionTypes.APPLY_HINT :
+            return { ...state, candidateMoves: action.payload };
 
         default :
             return state
