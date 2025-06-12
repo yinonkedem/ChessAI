@@ -56,8 +56,9 @@ const AIAgent = () => {
                     turn:     appState.turn,
                     castleDirection: appState.castleDirection,
                 });
+                console.log(appState.engineDepth, "depth");
 
-                const { best_move } = await getBestMove({ fen, depth: 10 });
+                const { best_move } = await getBestMove({ fen, depth: appState.engineDepth });
                 if (!best_move) throw new Error("Engine returned no move 🤷‍♂️");
 
                 // -----------------------------------------------------------------

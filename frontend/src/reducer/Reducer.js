@@ -139,6 +139,11 @@ export const reducer = (state, action) => {
         case actionTypes.APPLY_HINT :
             return {...state, candidateMoves: action.payload};
 
+
+        case actionTypes.SET_ENGINE_DEPTH:
+            return { ...state, engineDepth: action.payload };
+
+
         default :
             return state
     }

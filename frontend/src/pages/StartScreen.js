@@ -1,11 +1,16 @@
-import { useState } from "react";
+import {useState} from "react";
 import "./StartScreen.css";
+import {setEngineDepth} from "../reducer/actions/game";
+import {useAppContext} from "../contexts/Context";
 
-export default function StartScreen({ onStart }) {
+export default function StartScreen({onStart}) {
     const [colour, setColour] = useState(null);     // "w" | "b" | "rand"
     const [opponent, setOpponent] = useState(null); // "human" | "ai" | "rand"
 
     const ready = colour && opponent;               // both picks made
+
+    const {appState, dispatch} = useAppContext();
+    const depth = appState.engineDepth;
 
     /* helper – adds the css class "active" when selected */
     const cls = (base, active) => (active ? `${base} active` : base);
@@ -67,11 +72,29 @@ export default function StartScreen({ onStart }) {
                 </div>
             </div>
 
+            {/* depth slider – only show when playing vs AI -------------------------- */}
+            {opponent === "ai" && (
+                <div className="setup-block">
+                    <h2 className="setup-heading">
+                        Computer strength: depth&nbsp;<strong>{depth}</strong>
+                    </h2>
+                    <input
+                        type="range"
+                        min="1"
+                        max="20"
+                        value={depth}
+                        onChange={e =>
+                            dispatch(setEngineDepth(+e.target.value))
+                        }
+                    />
+                </div>
+            )}
+
             {/* play --------------------------------------------------------------- */}
             <button
                 className="btn btn--primary play-btn"
                 disabled={!ready}
-                onClick={() => ready && onStart({ colour, opponent })}
+                onClick={() => ready && onStart({colour, opponent})}
             >
                 Play
             </button>

@@ -16,6 +16,7 @@ export const initGameState = {
     movesList : [],
     userColor : null,      // 'w' or 'b'
     isGameSetup : false,     // becomes true after SETUP_GAME
+    engineDepth : 10,
     opponentType : null,
     promotionSquare : null,
     status : Status.ongoing,

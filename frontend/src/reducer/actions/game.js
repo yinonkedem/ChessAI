@@ -33,3 +33,8 @@ export const setupNewGame = () => {
         payload : initGameState
     }
 }
+
+export const setEngineDepth = value => ({
+    type   : actionTypes.SET_ENGINE_DEPTH,
+    payload: value
+});
