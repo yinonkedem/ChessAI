@@ -13,6 +13,8 @@ import TakeBack from './components/Control/bits/TakeBack';
 import actionTypes from "./reducer/actionTypes";
 import HintButton from "./components/Control/bits/HintButton";
 
+import AIAgent   from "./ai/AIAgent";
+
 function App() {
     const [appState, dispatch] = useReducer(reducer, initGameState);
 
@@ -41,6 +43,7 @@ function App() {
 
     return (
         <AppContext.Provider value={providerState}>
+            <AIAgent />
             <div className="App">
                 {!appState.isGameSetup ? (
                     <StartScreen onStart={(setup) =>
