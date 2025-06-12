@@ -107,24 +107,37 @@ export const reducer = (state, action) => {
             };
         }
 
-        case actionTypes.TAKE_BACK : {
-            let {position, movesList, turn} = state
-            if (position.length > 1) {
-                position = position.slice(0, position.length - 1)
-                movesList = movesList.slice(0, movesList.length - 1)
-                turn = turn === 'w' ? 'b' : 'w'
-            }
+        case actionTypes.TAKE_BACK: {
+            // How many half-moves to revert?
+            const wantSteps = state.opponentType === "ai" ? 2 : 1;
+            const steps = Math.min(wantSteps, state.movesList.length);
+
+            // Nothing to do?
+            if (steps === 0) return state;
+
+            const position = state.position.slice(0, -steps);
+            const movesList = state.movesList.slice(0, -steps);
+
+            // Turn flips every half-move → flip only when steps is odd
+            const turn =
+                steps % 2 === 0 ? state.turn
+                    : state.turn === "w" ? "b" : "w";
 
             return {
                 ...state,
                 position,
                 movesList,
                 turn,
-            }
+                lastMove: movesList.at(-1) ?? null,
+                candidateMoves: [],
+                promotionSquare: null,
+                status: "Ongoing"
+            };
         }
 
+
         case actionTypes.APPLY_HINT :
-            return { ...state, candidateMoves: action.payload };
+            return {...state, candidateMoves: action.payload};
 
         default :
             return state
