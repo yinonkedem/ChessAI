@@ -7,6 +7,7 @@ export function uciToCoords(uci) {
 
     const from = [rank(uci[1]), file(uci[0])];   // [row, col]
     const to   = [rank(uci[3]), file(uci[2])];
-
-    return [from, to];        // exactly your desired structure
+    const result = [from, to];        // original shape
+    if (uci.length === 5) result.promotion = uci[4]; // add property
+    return result;
 }
