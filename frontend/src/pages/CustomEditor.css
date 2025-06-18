@@ -79,3 +79,10 @@
     opacity:0.4;
     cursor:not-allowed;
 }
+
+/* grey-out disabled tray pieces */
+.tray .disabled { opacity:0.35; cursor:not-allowed; }
+
+/* highlight active buttons */
+.sidebar button.active,
+.sidebar .start-btn:not(:disabled):hover { background:#ffd700; color:#000; }

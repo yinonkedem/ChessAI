@@ -1,112 +1,134 @@
-import { useRef, useState }  from "react";
-import { useAppContext }     from "../contexts/Context";
-import { copyPosition }      from "../helper";
-import { makeNewMove }       from "../reducer/actions/move";
-import  actionTypes          from "../reducer/actionTypes";
+import { useRef, useState } from "react";
+import { useAppContext } from "../contexts/Context";
+import { copyPosition }  from "../helper";
+import { makeNewMove }   from "../reducer/actions/move";
+import actionTypes     from "../reducer/actionTypes";
 
-import Board                 from "../components/Board/Board";
+import Board             from "../components/Board/Board";
 import "./CustomEditor.css";
 
-/**
- * A lightweight FEN‑builder that lets the player set up any legal start‑position
- * and then jump straight into a regular game (human vs human **or** Stockfish).
- */
+/* ──────────────────────────────────────────────────────────
+   Utility helpers
+   ────────────────────────────────────────────────────────── */
 
-/* 🏷   Validation – ensure **exactly one** king per side before enabling Start */
-const validatePosition = board => {
-    let wk = 0, bk = 0;
-    board.forEach(r => r.forEach(p => {
-        if (p === "wk") wk++;
-        if (p === "bk") bk++;
-    }));
-    return { ok: wk === 1 && bk === 1, reason: "Both sides need exactly one king" };
+// king‑presence validator
+const validateKings = board => {
+    let wk=0, bk=0;
+    board.forEach(r=>r.forEach(p=>{ if(p==="wk") wk++; if(p==="bk") bk++; }));
+    return { ok: wk===1 && bk===1, reason: "Both sides need exactly one king" };
 };
 
-/* 16 tray pieces: two columns × six rows */
-const SEED_PIECES = [
+// piece count limits (per side)
+const LIMIT = { k:1, q:1, r:2, b:2, n:2, p:8 };
+
+const withinLimit = (board, code) => {
+    const colour = code[0];           // "w" or "b"
+    const type   = code[1];
+    const count  = board.flat().filter(p=>p===code).length;
+    return count < LIMIT[type];
+};
+
+/* tray inventory */
+const TRAY = [
     "wk","wq","wr","wb","wn","wp",
-    "bk","bq","br","bb","bn","bp"
+    "bk","bq","br","bb","bn","bp",
 ];
 
-export default function CustomEditor() {
+/* ──────────────────────────────────────────────────────────
+   Component
+   ────────────────────────────────────────────────────────── */
+export default function CustomEditor(){
     const { appState, dispatch } = useAppContext();
-    const latest  = appState.position[appState.position.length - 1];
-    const { ok: legalSetup, reason: errorMsg } = validatePosition(latest);
+    const latest = appState.position[appState.position.length-1];
+    const { ok:kingOK, reason:errorMsg } = validateKings(latest);
 
-    /* local UI state */
-    const [selected,  setSelected ] = useState(null);   // piece code armed for placement
-    const [opponent,  setOpponent ] = useState(null);   // "human" | "ai"
+    // local UI state
+    const [armed,  setArmed ] = useState(null);      // piece to place
+    const [erase,  setErase ] = useState(false);     // erase‑mode toggle
+    const [opp,    setOpp   ] = useState(null);      // "ai" | "human"
     const boardRef = useRef(null);
 
-    /* helpers ------------------------------------------------------------ */
-    const writeSquare = (rank,file,code) => {
+    /* ------------------------------------------------------ */
+    const write = (r,f,code) => {
         const next = copyPosition(latest);
-        next[rank][file] = code;
-        dispatch(makeNewMove({ newPosition: next, newMove: "" }));
+        next[r][f] = code;
+        dispatch(makeNewMove({ newPosition:next, newMove:"" }));
     };
 
-    const handleBoardClick = e => {
-        if (!boardRef.current) return;
+    const handleClick = e => {
+        if(!boardRef.current) return;
         const rect = boardRef.current.getBoundingClientRect();
-        const tile = rect.width / 8;
-        const col  = Math.floor((e.clientX - rect.left) / tile);
-        const row  = Math.floor((e.clientY - rect.top ) / tile);
-        if (col < 0 || row < 0 || col > 7 || row > 7) return;
+        const s    = rect.width/8;
+        const c    = Math.floor((e.clientX-rect.left)/s);
+        const row  = Math.floor((e.clientY-rect.top )/s);
+        if(c<0||row<0||c>7||row>7) return;
+        const r = 7-row, f = c;           // board coords
+        const target = latest[r][f];
 
-        const rank = 7 - row; // board coords (0 = 8th rank on screen)
-        const file = col;
+        if(erase){
+            if(target) write(r,f,"");
+            return;                         // skip add logic
+        }
 
-        if (selected)      writeSquare(rank,file,selected);
-        else if (latest[rank][file]) writeSquare(rank,file,""); // erase
+        if(armed){
+            if(!withinLimit(latest, armed) && !target) return; // cannot add more
+            write(r,f,armed);
+        }
     };
 
-    const startGame = () => {
-        dispatch({
-            type   : actionTypes.START_FROM_CUSTOM,
-            payload: {
-                position       : [latest],     // collapse history to single start node
-                movesList      : [],
-                opponentType   : opponent,     // key used by AIAgent / Hint
-                opponent       : opponent,     // legacy field
-                isCustomEditor : false
-            }
-        });
-    };
+    const startGame = () => dispatch({
+        type: actionTypes.START_FROM_CUSTOM,
+        payload:{
+            position       : [latest],
+            movesList      : [],
+            opponentType   : opp,
+            opponent       : opp,
+            isCustomEditor : false
+        }
+    });
 
-    /* render ------------------------------------------------------------- */
+    /* ------------------------------------------------------ */
     return (
         <section className="custom-editor">
             {/* tray */}
             <aside className="tray">
-                {SEED_PIECES.map(code => (
-                    <div key={code}
-                         className={`piece ${code} ${selected===code?"selected":""}`}
-                         title={code}
-                         onClick={()=> setSelected(code)}
-                    />
-                ))}
+                {TRAY.map(code=>{
+                    const disabled = !withinLimit(latest,code);
+                    return (
+                        <div key={code}
+                             className={`piece ${code} ${armed===code?"selected":""} ${disabled?"disabled":""}`}
+                             onClick={()=> !disabled && (setArmed(code), setErase(false))}
+                             title={disabled?`Limit reached (${LIMIT[code[1]]})`:code}
+                        />);
+                })}
             </aside>
 
-            {/* board wrapper */}
-            <div className="board-wrapper"
-                 ref={boardRef}
-                 onClick={handleBoardClick}>
+            {/* board */}
+            <div className="board-wrapper" ref={boardRef} onClick={handleClick}>
                 <Board orientation={appState.userColor}/>
+                {/* disable drag events from Piece components */}
+                <style>{`.custom-editor .board-wrapper .piece{pointer-events:none;}`}</style>
             </div>
 
             {/* sidebar */}
             <div className="sidebar">
-                <h3>Choose opponent</h3>
-                <button className={opponent==="human"?"active":""}
-                        onClick={()=>setOpponent("human")}>Human</button>
-                <button className={opponent==="ai"?"active":""}
-                        onClick={()=>setOpponent("ai")}>Stockfish AI</button>
+                <h3>Tools</h3>
+                <button className={erase?"active":""}
+                        onClick={()=>{ setErase(!erase); setArmed(null); }}>
+                    {erase?"❌  Cancel erase":"🗑️  Erase pieces"}
+                </button>
+
+                <h3>Opponent</h3>
+                <button className={opp==="human"?"active":""}
+                        onClick={()=>setOpp("human")}>Human</button>
+                <button className={opp==="ai"?"active":""}
+                        onClick={()=>setOpp("ai")}>Stockfish AI</button>
 
                 <button className="start-btn"
-                        disabled={!opponent || !legalSetup}
-                        title={legalSetup?"":errorMsg}
+                        disabled={!opp||!kingOK}
+                        title={kingOK?"":errorMsg}
                         onClick={startGame}>Start game</button>
-                {!legalSetup && <small className="warning">{errorMsg}</small>}
+                {!kingOK && <small className="warning">{errorMsg}</small>}
             </div>
         </section>
     );
