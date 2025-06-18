@@ -1,0 +1,81 @@
+/* container – tray | board | sidebar */
+.custom-editor{
+    display:flex;
+    gap:clamp(8px, 2vw, 24px);
+    padding:clamp(8px,2vw,24px);
+}
+
+/* -------------- tray ---------------------------------------------------- */
+.tray{
+    display:grid;
+    grid-template-columns: repeat(2, var(--tile-size));
+    grid-auto-rows: var(--tile-size);      /* 8×8 board → tile-size is known */
+    background: var(--highlight);
+    border: 2px solid var(--dark-tile);
+    border-radius:4px;
+    box-shadow: 0 0 0 4px var(--dark-tile) inset;
+}
+
+.tray .piece{
+    /* override values coming from Pieces.css */
+    position: static !important;
+    width:  var(--tile-size) !important;
+    height: var(--tile-size) !important;
+    transform:none !important;
+    border: 1px solid var(--dark-tile);
+    cursor:pointer;
+}
+
+.tray .piece:hover,
+.tray .piece.selected{
+    box-shadow: 0 0 0 5px var(--dark-tile) inset;
+    transform:scale(1.05);
+    z-index:2;
+}
+
+/* -------------- board wrapper ------------------------------------------ */
+.board-wrapper{
+    position:relative;      /* just sits next to tray */
+}
+
+/* -------------- sidebar ------------------------------------------------- */
+.sidebar{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    align-items:flex-start;
+}
+
+.sidebar h3{
+    margin:0 0 4px;
+    font-size:1rem;
+    text-transform:uppercase;
+    opacity:0.8;
+}
+
+.sidebar button{
+    min-width:140px;
+    padding:0.6rem 1rem;
+    border-radius:0.6rem;
+    font-weight:600;
+    cursor:pointer;
+    background:#ffffff20;
+    color:#fff;
+    border:1px solid #ffffff40;
+}
+
+.sidebar button.active{
+    background:#ffd700;
+    color:#000;
+}
+
+.start-btn{
+    margin-top:0.5rem;
+    background:#ffd700;
+    color:#000;
+}
+
+.start-btn:disabled{
+    opacity:0.4;
+    cursor:not-allowed;
+}

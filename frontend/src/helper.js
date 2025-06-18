@@ -86,3 +86,60 @@ export const getNewMoveNotation = ({
 
     return note;
 };
+
+export const createEmptyPosition = () =>
+    Array.from({ length: 8 }, () => Array(8).fill(""));
+
+/* ────────────────────────────────────────────────────────── */
+/*  Simple utilities used only when we leave Custom-Editor    */
+/* ────────────────────────────────────────────────────────── */
+
+/**
+ * Return castling rights in the same shape used by initGameState:
+ * { w : "both"|"k"|"q"|"-",  b : "both"|"k"|"q"|"-" }
+ *
+ * We only check whether the king / rooks are still on their home squares.
+ * No “has the king moved already” bookkeeping is done here because the
+ * editor always starts a *brand-new* game.
+ */
+export const getCastleRights = board => {
+    const rights = { w: "-", b: "-" };
+
+    // White pieces on rank 1
+    if (board[0][4] === "wk") {
+        if (board[0][0] === "wr") rights.w = rights.w === "-" ? "q"   : "both";
+        if (board[0][7] === "wr") rights.w = rights.w === "-" ? "k"   : "both";
+    }
+
+    // Black pieces on rank 8
+    if (board[7][4] === "bk") {
+        if (board[7][0] === "br") rights.b = rights.b === "-" ? "q"   : "both";
+        if (board[7][7] === "br") rights.b = rights.b === "-" ? "k"   : "both";
+    }
+    return rights;
+};
+
+/**
+ * Extremely lightweight “insufficient material” test:
+ * returns true iff **both** sides have
+ *   – just a king, or
+ *   – king + single bishop, or
+ *   – king + single knight
+ *
+ * Good enough for detecting K-vs-K positions created in the editor.
+ */
+export const isInsufficientMaterial = board => {
+    const pieces = { w: [], b: [] };
+
+    board.forEach(r =>
+        r.forEach(p => {
+            if (p) pieces[p[0]].push(p[1]);      // 'wk' → push('k')
+        })
+    );
+
+    const okSide = arr =>
+        arr.length === 1 ||                       // just king
+        (arr.length === 2 && ["b", "n"].includes(arr[1])); // king + minor
+
+    return okSide(pieces.w) && okSide(pieces.b);
+};

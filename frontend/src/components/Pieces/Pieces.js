@@ -17,8 +17,9 @@ import {
     generateCandidates
 } from '../../reducer/actions/move'
 import arbiter from '../../arbiter/arbiter'
-import {getNewMoveNotation} from '../../helper'
+import {copyPosition, getNewMoveNotation} from '../../helper'
 import {Status} from "../../constants";
+import actionTypes from "../../reducer/actionTypes";
 
 const Pieces = () => {
 
@@ -31,7 +32,7 @@ const Pieces = () => {
         setSelected(null);
         setLegal([]);
         dispatch(clearCandidates());           // wipes the store & CSS highlights
-        }, [currentPosition, dispatch]);                      // runs after every move / take-back
+    }, [currentPosition, dispatch]);                      // runs after every move / take-back
     const isBlack = appState.userColor === 'black';
 
     const ref = useRef()
@@ -77,7 +78,21 @@ const Pieces = () => {
         const {x, y} = calculateCoords(e)
         const [piece, rank, file] = e.dataTransfer.getData("text").split(',')
 
-        if (status === Status.PROMOTION) {
+        /* 🆕  In editor mode we just drop the piece – no legality checks */
+        if (appState.isCustomEditor) {
+            const newBoard = copyPosition(currentPosition);
+            newBoard[x][y] = piece;        // put or replace
+            dispatch({                      // a tiny custom action you already added
+                type: actionTypes.ENTER_CUSTOM_MODE,
+                payload: {newPosition: newBoard}
+            });
+            return;
+        }
+
+        if (rank === "-1") {               // add-new-piece path
+            const newPosition = copyPosition(currentPosition);
+            newPosition[x][y] = piece;
+            dispatch(makeNewMove({newPosition, newMove: ""}));
             return;
         }
 

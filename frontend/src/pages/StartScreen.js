@@ -2,12 +2,14 @@ import {useState} from "react";
 import "./StartScreen.css";
 import {setEngineDepth} from "../reducer/actions/game";
 import {useAppContext} from "../contexts/Context";
+import {GameMode} from "../constants";
 
 export default function StartScreen({onStart}) {
     const [colour, setColour] = useState(null);     // "w" | "b" | "rand"
     const [opponent, setOpponent] = useState(null); // "human" | "ai" | "rand"
+    const [mode,     setMode]     = useState(GameMode.standard);
 
-    const ready = colour && opponent;               // both picks made
+    const ready = mode === GameMode.custom ? colour : colour && opponent;
 
     const {appState, dispatch} = useAppContext();
     const depth = appState.engineDepth;
@@ -21,6 +23,23 @@ export default function StartScreen({onStart}) {
             <p className="start-screen__subtitle">Set up your match</p>
 
             <div className="setup-grid">
+                {/* game mode block ------------------------------------------------- */}
+                <div className="setup-block">
+                    <h2 className="setup-heading">Game mode</h2>
+                    <div className="btn-group">
+                        <button
+                            className={cls("btn btn--glass", mode === GameMode.standard)}
+                            onClick={() => setMode(GameMode.standard)}>
+                            Standard
+                        </button>
+                        <button
+                            className={cls("btn btn--glass", mode === GameMode.custom)}
+                            onClick={() => setMode(GameMode.custom)}>
+                            Custom
+                        </button>
+                    </div>
+                </div>
+
                 {/* piece colour block ------------------------------------------------ */}
                 <div className="setup-block">
                     <h2 className="setup-heading">Your colour</h2>
@@ -94,9 +113,9 @@ export default function StartScreen({onStart}) {
             <button
                 className="btn btn--primary play-btn"
                 disabled={!ready}
-                onClick={() => ready && onStart({colour, opponent})}
+                onClick={() => ready && onStart({colour, opponent, mode})}
             >
-                Play
+                {mode === GameMode.custom ? "Next →" : "Play"}
             </button>
         </section>
     );

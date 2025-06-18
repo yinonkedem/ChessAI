@@ -9,8 +9,12 @@ export const Status = {
     'insufficient' : 'Game draws due to insufficient material',
 }
 
+export const GameMode = { standard: "standard", custom: "custom" };
+
 export const initGameState = {
     position : [createPosition()],
+    gameMode       : GameMode.standard,
+    isCustomEditor : false, // ↙ true while the user is still laying pieces
     turn : 'w',
     candidateMoves : [],
     movesList : [],

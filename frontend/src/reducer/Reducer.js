@@ -1,5 +1,7 @@
-import {Status} from "../constants";
+import {GameMode, Status} from "../constants";
 import actionTypes from "./actionTypes";
+import {createEmptyPosition} from "../helper";
+import * as helper from "../helper";
 
 export const reducer = (state, action) => {
 
@@ -107,6 +109,49 @@ export const reducer = (state, action) => {
             };
         }
 
+        case actionTypes.ENTER_CUSTOM_MODE: {
+            return {
+                ...state,
+                gameMode: GameMode.custom,
+                isCustomEditor: true,
+                position: [createEmptyPosition()], // blank board
+                colour: action.payload.colour,
+                turn: "w",
+                opponent: null,                     // not chosen yet
+            };
+        }
+
+        case actionTypes.START_FROM_CUSTOM: {
+            const finalBoard = action.payload.position[0];   // sent by CustomEditor
+
+            const castleDirection = helper.getCastleRights(finalBoard);
+            const status = helper.isInsufficientMaterial(finalBoard)
+                ? Status.insufficient
+                : Status.ongoing;
+
+            return {
+                ...state,
+
+                /* leave the editor */
+                isCustomEditor : false,
+                isGameSetup    : true,
+
+                /* orientation & opponent info */
+                userColor      : state.colour,                    // side you chose
+                opponentType   : action.payload.opponentType,     // "ai" | "human"
+                opponent       : action.payload.opponentType,     // legacy field
+                turn           : "w",
+
+                /* brand-new history & metadata */
+                position       : [finalBoard],
+                movesList      : [],
+                candidateMoves : [],
+                castleDirection,
+                status,
+            };
+        }
+
+
         case actionTypes.TAKE_BACK: {
             // How many half-moves to revert?
             const wantSteps = state.opponentType === "ai" ? 2 : 1;
@@ -141,7 +186,7 @@ export const reducer = (state, action) => {
 
 
         case actionTypes.SET_ENGINE_DEPTH:
-            return { ...state, engineDepth: action.payload };
+            return {...state, engineDepth: action.payload};
 
 
         default :

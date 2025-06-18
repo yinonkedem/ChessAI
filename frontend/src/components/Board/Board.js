@@ -30,6 +30,7 @@ const Board = () => {
         : Array.from({length: 8}, (_, i) => i + 1);    // 1,2,…,8  →  a,b,…,h
 
     const checkTile = (() => {
+        if (appState.isCustomEditor) return null;
         const isInCheck = (arbiter.isPlayerInCheck({
             positionAfterMove: position,
             player: appState.turn

@@ -1,21 +1,26 @@
-import { useAppContext }from '../../../contexts/Context'
-import { takeBack } from '../../../reducer/actions/move';
-import { Status } from '../../../constants'
+import { useAppContext } from "../../../contexts/Context";
+import { takeBack }      from "../../../reducer/actions/move";
+import { Status }        from "../../../constants";
 
 const TakeBack = () => {
+    /* pull `position` so we can tell if there’s anything to undo */
+    const {
+        appState: { status, position },
+        dispatch
+    } = useAppContext();
 
-    const { appState: { status }, dispatch } = useAppContext();
-    const disabled = status === Status.promoting;
+    /* disable while promoting **or** when history has just one entry */
+    const disabled = status === Status.promoting || position.length <= 1;
 
-    return <div>
-                 <button
-                     onClick={() => dispatch(takeBack())}
-                     disabled={disabled}
-                     className={disabled ? 'btn--disabled' : ''}
-                 >
-                     Take Back
-                 </button>
-    </div>
-}
+    return (
+        <button
+            onClick={() => !disabled && dispatch(takeBack())}
+            disabled={disabled}
+            className={disabled ? "btn--disabled" : ""}
+        >
+            Take&nbsp;Back
+        </button>
+    );
+};
 
-export default TakeBack
+export default TakeBack;
