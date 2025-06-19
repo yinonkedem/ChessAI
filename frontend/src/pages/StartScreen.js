@@ -3,6 +3,7 @@ import "./StartScreen.css";
 import {setEngineDepth} from "../reducer/actions/game";
 import {useAppContext} from "../contexts/Context";
 import {GameMode} from "../constants";
+import {useGlitch}  from "react-powerglitch";
 
 export default function StartScreen({onStart}) {
     const [colour, setColour] = useState(null);     // "w" | "b" | "rand"
@@ -17,12 +18,21 @@ export default function StartScreen({onStart}) {
     /* helper – adds the css class "active" when selected */
     const cls = (base, active) => (active ? `${base} active` : base);
 
+    const glitch = useGlitch({
+        playMode: "always",              // continuous
+        slice:    { count:4, velocity:10 },
+        shake:    { velocity:5 },
+    });
+
     return (
         <section className="start-screen">
-            <h1 className="start-screen__title">Yinon&nbsp;Chess</h1>
+            {/* glitch-animated title */}
+            <h1 ref={glitch.ref} className="start-screen__title glitch">
+                Yinon&nbsp;Chess
+            </h1>
             <p className="start-screen__subtitle">Set up your match</p>
 
-            <div className="setup-grid">
+            <div className="setup-grid card">
                 {/* game mode block ------------------------------------------------- */}
                 <div className="setup-block">
                     <h2 className="setup-heading">Game mode</h2>
@@ -95,7 +105,8 @@ export default function StartScreen({onStart}) {
             {opponent === "ai" && (
                 <div className="setup-block">
                     <h2 className="setup-heading">
-                        Computer strength: depth&nbsp;<strong>{depth}</strong>
+                        Computer strength: depth&nbsp;
+                        <strong>{depth}</strong>
                     </h2>
                     <input
                         type="range"
@@ -110,13 +121,21 @@ export default function StartScreen({onStart}) {
             )}
 
             {/* play --------------------------------------------------------------- */}
-            <button
-                className="btn btn--primary play-btn"
-                disabled={!ready}
-                onClick={() => ready && onStart({colour, opponent, mode})}
-            >
-                {mode === GameMode.custom ? "Next →" : "Play"}
-            </button>
+            <footer className="footer">
+                <button
+                    type="button"
+                    className="btn btn--primary play-btn"
+                    disabled={!ready}
+                    onClick={() => ready && onStart({
+                        colour,
+                        opponent,
+                        mode,
+                        depth
+                    })}
+                >
+                    {mode === GameMode.custom ? "Next →" : "Play"}
+                </button>
+            </footer>
         </section>
     );
 }
