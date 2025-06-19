@@ -115,7 +115,8 @@ export const reducer = (state, action) => {
                 gameMode: GameMode.custom,
                 isCustomEditor: true,
                 position: [createEmptyPosition()], // blank board
-                colour: action.payload.colour,
+                colour        : action.payload.colour,
+                userColor: action.payload.colour,
                 turn: "w",
                 opponent: null,                     // not chosen yet
             };
