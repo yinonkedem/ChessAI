@@ -6,6 +6,7 @@ import actionTypes      from "../reducer/actionTypes";
 
 import Board             from "../components/Board/Board";
 import "./CustomEditor.css";
+import { useNavigate } from "react-router-dom";
 
 /* ──────────────────────────────────────────────────────────
    Helper utilities
@@ -66,6 +67,7 @@ const TRAY = [
    ────────────────────────────────────────────────────────── */
 export default function CustomEditor(){
     const { appState, dispatch } = useAppContext();
+    const navigate = useNavigate();
     const latest  = appState.position[appState.position.length-1];
     const { ok:kingOK, reason:errorMsg } = validateKings(latest);
 
@@ -109,16 +111,19 @@ export default function CustomEditor(){
     };
 
     /* — finalise setup — */
-    const startGame = () => dispatch({
-        type: actionTypes.START_FROM_CUSTOM,
-        payload:{
-            position       : [latest],
-            movesList      : [],
-            opponentType   : opp,
-            opponent       : opp,
-            isCustomEditor : false,
-        }
-    });
+    const startGame = () => {
+        dispatch({
+            type: actionTypes.START_FROM_CUSTOM,
+            payload: {
+                position: [latest],
+                movesList: [],
+                opponentType: opp,
+                opponent: opp,
+                isCustomEditor: false,
+            }
+        });
+        navigate("/game");  // go to game page
+    }
 
     /* ────────────────────────────────────────────────────────── */
     return (

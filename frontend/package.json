@@ -11,13 +11,15 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-powerglitch": "^1.1.0",
+    "react-router-dom": "^7.6.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --max-warnings 0"
   },
   "eslintConfig": {
     "extends": [
@@ -38,6 +40,11 @@
     ]
   },
   "devDependencies": {
+    "@eslint/js": "^9.29.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.2.0",
     "react-scripts": "^5.0.1"
   }
 }

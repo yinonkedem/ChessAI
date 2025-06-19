@@ -145,12 +145,7 @@ const AIAgent = () => {
                 isBusy.current = false;           // allow the next trigger
             }
         })();
-    }, [
-        appState.turn,
-        appState.position,      // fires right after *every* move
-        appState.opponentType,  // in case user restarts the game
-        appState.status,
-    ]);
+    }, [appState.turn, appState.position, appState.opponentType, appState.status, appState.userColor, appState.castleDirection, appState.engineDepth, dispatch]);
 
     return null;   // invisible
 };

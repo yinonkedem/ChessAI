@@ -115,10 +115,7 @@ const RandomAgent = () => {
                 isBusy.current = false;
             }
         })();
-    }, [appState.turn,
-        appState.position,
-        appState.opponentType,
-        appState.status,]);
+    }, [appState.turn, appState.position, appState.opponentType, appState.status, appState.userColor, appState.castleDirection, dispatch]);
 
     return null;
 };

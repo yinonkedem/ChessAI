@@ -1,0 +1,7 @@
+{
+  "extends": [
+    "react-app",                  // CRA’s base rules
+    "plugin:react-hooks/recommended",
+    "prettier"                    // turn off stylistic rules Prettier handles
+  ]
+}
