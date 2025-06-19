@@ -14,6 +14,7 @@ import actionTypes from "./reducer/actionTypes";
 import HintButton from "./components/Control/bits/HintButton";
 
 import AIAgent   from "./ai/AIAgent";
+import RandomAgent from "./ai/RandomAgent";
 
 import { createEmptyPosition } from "./helper";
 import CustomEditor from "./pages/CustomEditor";
@@ -21,27 +22,6 @@ import CustomEditor from "./pages/CustomEditor";
 
 function App() {
     const [appState, dispatch] = useReducer(reducer, initGameState);
-
-    // Temporary smoke test: ask the backend for legal moves
-    useEffect(() => {
-        async function pingBackend() {
-            const fen =
-                "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
-            try {
-                const res = await fetch("http://127.0.0.1:8000/legal-moves", {
-                    method: "POST",
-                    headers: {"Content-Type": "application/json"},
-                    body: JSON.stringify({fen}),
-                });
-                const data = await res.json();
-                console.log("✅ backend responded with", data.moves.length, "moves:", data.moves);
-            } catch (err) {
-                console.error("❌ backend call failed:", err);
-            }
-        }
-
-        pingBackend();
-    }, []); // ← empty deps ⇒ run once
 
     const providerState = {appState, dispatch};
 
@@ -64,6 +44,7 @@ function App() {
     return (
         <AppContext.Provider value={providerState}>
             <AIAgent />
+            <RandomAgent />
 
             <div className="App">
                 {appState.isCustomEditor ? (

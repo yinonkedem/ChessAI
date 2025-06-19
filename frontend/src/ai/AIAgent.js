@@ -21,6 +21,9 @@ import {
     detectCheckmate
 } from "../reducer/actions/game";
 
+import {Status} from "../constants";    // adjust relative path
+
+
 /**
  * Invisible helper that sits in the tree and fires
  * exactly once whenever it's the computer's turn.
@@ -37,6 +40,7 @@ const AIAgent = () => {
         //     • and it *is* the computer’s turn
         // ---------------------------------------------------------------------
         if (
+            appState.status !== Status.ongoing ||
             appState.opponentType !== "ai" ||
             isBusy.current
         ) return;
@@ -67,9 +71,9 @@ const AIAgent = () => {
                 // -----------------------------------------------------------------
                 // 3.  Convert UCI → board coords we already work with
                 // -----------------------------------------------------------------
-                const coords     = uciToCoords(best_move);
-                const [ [fromRank,fromFile], [toRank,toFile] ] = coords;
-                const promotion  = coords.promotion || null;
+                const coords = uciToCoords(best_move);
+                const [[fromRank, fromFile], [toRank, toFile]] = coords;
+                const promotion = coords.promotion || null;
                 const piece = board[fromRank][fromFile];
                 if (!piece) throw new Error("No piece on the 'from' square – mismatch!");
 
@@ -145,6 +149,7 @@ const AIAgent = () => {
         appState.turn,
         appState.position,      // fires right after *every* move
         appState.opponentType,  // in case user restarts the game
+        appState.status,
     ]);
 
     return null;   // invisible

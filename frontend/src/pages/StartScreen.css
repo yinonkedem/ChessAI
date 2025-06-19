@@ -24,29 +24,6 @@
     z-index: 999;      /* stays on top of everything else           */
 }
 
-/*!* -- Faint animated chess-board in the background -------------------------- *!*/
-/*.start-screen::before {*/
-/*    content: "";*/
-/*    position: absolute;*/
-/*    inset: -25%;                       !* spill outside so rotation has room *!*/
-/*    background-image:*/
-/*            linear-gradient(135deg, #ffffff0e 25%, transparent 25%,*/
-/*            transparent 50%, #ffffff0e 50%,*/
-/*            #ffffff0e 75%, transparent 75%, transparent),*/
-/*            linear-gradient(135deg, #ffffff0e 25%, transparent 25%,*/
-/*            transparent 50%, #ffffff0e 50%,*/
-/*            #ffffff0e 75%, transparent 75%, transparent);*/
-/*    background-size: 8rem 8rem;*/
-/*    background-position: 0 0, 4rem 4rem;*/
-/*    animation: slowRotate 40s linear infinite;*/
-/*    pointer-events: none;              !* lets clicks through                *!*/
-/*}*/
-
-/*@keyframes slowRotate {*/
-/*    from { transform: rotate(0deg)    scale(1.1); }*/
-/*    to   { transform: rotate(360deg)  scale(1.1); }*/
-/*}*/
-
 /* -- Content ----------------------------------------------------------------*/
 .start-screen__title {
     font-size: clamp(2.5rem, 6vw + 1rem, 6rem); /* fluid typography */

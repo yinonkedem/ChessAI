@@ -102,8 +102,7 @@ export const reducer = (state, action) => {
                 userColor: colour === 'rand'
                     ? (Math.random() < 0.5 ? 'white' : 'black')
                     : colour,
-                opponentType: opponent === 'rand'
-                    ? (Math.random() < 0.5 ? 'human' : 'ai') : opponent,
+                opponentType: opponent, // "ai" | "human" | "rand"
                 isGameSetup: true,
                 turn: 'w'                      // ensure white always moves first
             };
@@ -155,7 +154,7 @@ export const reducer = (state, action) => {
 
         case actionTypes.TAKE_BACK: {
             // How many half-moves to revert?
-            const wantSteps = state.opponentType === "ai" ? 2 : 1;
+            const wantSteps = state.opponentType === "human" ? 1 : 2;
             const steps = Math.min(wantSteps, state.movesList.length);
 
             // Nothing to do?
