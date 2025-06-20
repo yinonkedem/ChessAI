@@ -1,9 +1,10 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import "./StartScreen.css";
 import {setEngineDepth} from "../reducer/actions/game";
 import {useAppContext} from "../contexts/Context";
 import {GameMode} from "../constants";
 import {useGlitch}  from "react-powerglitch";
+import actionTypes from "../reducer/actionTypes";
 
 export default function StartScreen({onStart}) {
     const [colour, setColour] = useState(null);     // "w" | "b" | "rand"
@@ -13,6 +14,9 @@ export default function StartScreen({onStart}) {
     const ready = mode === GameMode.custom ? colour : colour && opponent;
 
     const {appState, dispatch} = useAppContext();
+    useEffect(() => {
+        dispatch({ type: actionTypes.RESET_ALL });
+        }, [dispatch]);
     const depth = appState.engineDepth;
 
     /* helper – adds the css class "active" when selected */

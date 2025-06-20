@@ -15,6 +15,7 @@ const actionTypes = {
     "SET_ENGINE_DEPTH": "SET_ENGINE_DEPTH",
     "ENTER_CUSTOM_MODE" : "ENTER_CUSTOM_MODE",
     "START_FROM_CUSTOM" : "START_FROM_CUSTOM",
+    "RESET_ALL" : "RESET_ALL",
 }
 
 export default actionTypes

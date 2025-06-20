@@ -1,4 +1,4 @@
-import {GameMode, Status} from "../constants";
+import {GameMode, initGameState, Status} from "../constants";
 import actionTypes from "./actionTypes";
 import {createEmptyPosition} from "../helper";
 import * as helper from "../helper";
@@ -188,6 +188,8 @@ export const reducer = (state, action) => {
         case actionTypes.SET_ENGINE_DEPTH:
             return {...state, engineDepth: action.payload};
 
+        case actionTypes.RESET_ALL:
+            return { ...initGameState };
 
         default :
             return state

@@ -18,10 +18,10 @@ export const initGameState = {
     turn : 'w',
     candidateMoves : [],
     movesList : [],
-    userColor : null,      // 'w' or 'b'
+    userColor : "white",      // 'w' or 'b'
     isGameSetup : false,     // becomes true after SETUP_GAME
     engineDepth : 10,
-    opponentType : null,
+    opponentType : "human", // "ai" | "human" | "rand"
     promotionSquare : null,
     status : Status.ongoing,
     castleDirection : {
