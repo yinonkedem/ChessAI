@@ -20,6 +20,8 @@ import HintButton from "./components/Control/bits/HintButton";
 import AIAgent from "./ai/AIAgent";
 import RandomAgent from "./ai/RandomAgent";
 
+import usePersistedReducer from "./hooks/usePersistedReducer";
+
 function GamePage() {
     const {appState} = React.useContext(AppContext);
     return (
@@ -43,13 +45,16 @@ function EditorPage() {
 }
 
 export default function App() {
-    const [appState, dispatch] = useReducer(reducer, initGameState);
+    const [appState, dispatch] = usePersistedReducer(
+                reducer, initGameState, "chess-state"
+            );
     const navigate = useNavigate();
 
     const providerState = {appState, dispatch};
 
     /** called by StartScreen */
     function handleStart(setup) {
+        localStorage.removeItem("chess-state");
         if (setup.mode === GameMode.custom) {
             dispatch({
                 type: actionTypes.ENTER_CUSTOM_MODE,
