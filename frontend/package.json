@@ -2,39 +2,51 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^6.23.0",
-    "react-powerglitch": "^1.1.0"
+    "react-powerglitch": "^1.1.0",
+    "react-router": "^6.30.1",
+    "react-router-dom": "^6.30.1"
   },
-
   "devDependencies": {
-    "@testing-library/react": "^16.2.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/user-event": "^13.5.0",
     "@testing-library/dom": "^10.4.0",
-
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^13.5.0",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-react": "^7.37.5",
     "react-scripts": "5.0.1"
   },
-
+  "overrides": {
+    "nth-check": ">=2.0.1",
+    "postcss": ">=8.4.31"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test":  "react-scripts test",
-    "lint":  "eslint \"src/**/*.{js,jsx,ts,tsx}\" --max-warnings 0"
+    "test": "react-scripts test",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --max-warnings 0"
   },
-
   "eslintConfig": {
-    "extends": ["react-app", "react-app/jest", "plugin:react/recommended", "prettier"]
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:react/recommended",
+      "prettier"
+    ]
   },
-
   "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
-    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

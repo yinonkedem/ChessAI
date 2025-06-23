@@ -1,10 +1,65 @@
-export async function getBestMove({ fen, depth = 8, engine = "stockfish" }) {
-    const res = await fetch(`http://127.0.0.1:8000/engine/best-move?engine=${engine}`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ fen, depth }),
-        }
+// src/chessBackend.js
+
+// ① Derive the API base URL from your app’s current host & protocol.
+//    Falls back to REACT_APP_API_HOST if you’d rather configure it via .env.
+const API_HOST =
+    process.env.REACT_APP_API_HOST ||
+    (() => {
+        const { protocol, hostname } = window.location;
+        return `${protocol}//${hostname}:8000`;
+    })();
+
+/**
+ * Generic helper to call any /engine/* endpoint on the backend.
+ *
+ * @param {string} path     - The sub-path under /engine (e.g. "best-move").
+ * @param {object} params   - Query parameters to append to the URL.
+ * @param {object} body     - JSON body to send in the POST request.
+ * @returns {Promise<any>}   - Parsed JSON response from the server.
+ * @throws {Error}           - If the response status is not OK.
+ */
+async function callEngine(path, params = {}, body = {}) {
+    const url = new URL(`${API_HOST}/engine/${path}`);
+    Object.entries(params).forEach(([key, value]) =>
+        url.searchParams.set(key, value)
     );
-    if (!res.ok) throw new Error(await res.text());
-    return res.json();  // { fen, depth, best_move, engine }
+
+    const response = await fetch(url.toString(), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+        // credentials: 'include',        // if you later add cookies/auth
+        // signal: abortController.signal  // if you want timeout / cancellation
+    });
+
+    if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Engine error (${response.status}): ${errorText}`);
+    }
+
+    return response.json();
+}
+
+/**
+ * Request the best move from the specified engine.
+ *
+ * @param {object} options
+ * @param {string} options.fen      - FEN string of the current position.
+ * @param {number} options.depth    - Search depth (default: 8).
+ * @param {string} options.engine   - Engine key (e.g. "stockfish" or "random").
+ * @returns {Promise<{best_move: string, info: object}>}
+ */
+export function getBestMove({ fen, depth = 8, engine = "stockfish" }) {
+    return callEngine("best-move", { engine }, { fen, depth });
+}
+
+/**
+ * Request all legal moves for the given position.
+ *
+ * @param {object} options
+ * @param {string} options.fen      - FEN string of the current position.
+ * @returns {Promise<{ moves: string[] }>}
+ */
+export function getLegalMoves({ fen }) {
+    return callEngine("legal-moves", {}, { fen });
 }
