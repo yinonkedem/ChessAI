@@ -43,15 +43,19 @@
     display:flex;
     flex-direction:column;
     gap:12px;
-    align-items:flex-start;
-}
+    align-items: center;}
 
-.sidebar h3{
-    margin:0 0 4px;
-    font-size:1rem;
-    text-transform:uppercase;
-    opacity:0.8;
-}
+.sidebar h3 {
+    margin: 1rem 0 0.4rem;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #ffd700;
+    border-bottom: 1px solid #ffffff30;
+    padding-bottom: 0.25rem;
+    width: 100%;
+    text-align: center;}
 
 .sidebar button{
     min-width:140px;
@@ -86,3 +90,29 @@
 /* highlight active buttons */
 .sidebar button.active,
 .sidebar .start-btn:not(:disabled):hover { background:#ffd700; color:#000; }
+
+/* === Shiny Text Effect ================================================= */
+.shiny-text {
+    display: inline-block;
+    /* use a light-to-bright-to-light white gradient */
+    background: linear-gradient(
+            120deg,
+            rgba(255,255,255,0.25) 0%,
+            rgba(255,255,255,0.85) 50%,
+            rgba(255,255,255,0.25) 100%
+    );
+    background-size: 200% 100%;
+    /* clip the gradient to the text shape */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* animate the gradient across */
+    animation: shine 2.5s ease-in-out infinite;
+}
+
+@keyframes shine {
+    0%   { background-position: -150% 0; }
+    50%  { background-position: 150% 0; }
+    100% { background-position: -150% 0; }
+}

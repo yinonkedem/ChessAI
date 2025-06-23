@@ -151,22 +151,28 @@ export default function CustomEditor(){
 
             {/* sidebar */}
             <div className="sidebar">
-                <h3>Tools</h3>
-                <button className={erase?"active":""}
-                        onClick={()=>{ setErase(!erase); setArmed(null); }}>
+                <h3><span className="shiny-text">Tools</span></h3>
+                <button className={erase ? "active" : ""}
+                        onClick={() => {
+                            setErase(!erase);
+                            setArmed(null);
+                        }}>
                     {erase ? "❌ Cancel erase" : "🗑️ Erase pieces"}
                 </button>
 
-                <h3>Opponent</h3>
-                <button className={opp==="human"?"active":""}
-                        onClick={()=>setOpp("human")}>Human</button>
-                <button className={opp==="ai"?"active":""}
-                        onClick={()=>setOpp("ai")}>Stockfish AI</button>
+                <h3><span className="shiny-text">Opponent</span></h3>
+                <button className={opp === "human" ? "active" : ""}
+                        onClick={() => setOpp("human")}>Human
+                </button>
+                <button className={opp === "ai" ? "active" : ""}
+                        onClick={() => setOpp("ai")}>Stockfish AI
+                </button>
 
                 <button className="start-btn"
                         disabled={!opp || !kingOK}
-                        title={kingOK?"":errorMsg}
-                        onClick={startGame}>Start game</button>
+                        title={kingOK ? "" : errorMsg}
+                        onClick={startGame}>Start game
+                </button>
                 {!kingOK && <small className="warning">{errorMsg}</small>}
             </div>
         </section>
