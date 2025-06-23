@@ -14,7 +14,7 @@ import {
 import {
     makeNewMove,
     clearCandidates,
-    generateCandidates
+    generateCandidates, setLastMove
 } from '../../reducer/actions/move'
 import arbiter from '../../arbiter/arbiter'
 import {copyPosition, getNewMoveNotation} from '../../helper'
@@ -121,6 +121,7 @@ const Pieces = () => {
                 position: currentPosition,
             })
             dispatch(makeNewMove({newPosition, newMove}))
+            dispatch(setLastMove({ from:[rank, file], to:[x, y] }));
 
             if (arbiter.insufficientMaterial(newPosition))
                 dispatch(detectInsufficientMaterial())

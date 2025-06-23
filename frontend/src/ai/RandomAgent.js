@@ -10,7 +10,11 @@ import arbiter from "../arbiter/arbiter";
 import {copyPosition, getNewMoveNotation} from "../helper";
 import {getCastlingDirections} from "../arbiter/getMoves";
 
-import {makeNewMove, clearCandidates} from "../reducer/actions/move";
+import {
+    makeNewMove,
+    clearCandidates,
+    setLastMove
+} from "../reducer/actions/move";
 import {
     updateCastling,
     detectStalemate,
@@ -96,6 +100,7 @@ const RandomAgent = () => {
 
                 dispatch(makeNewMove({newPosition, newMove}));
                 dispatch(clearCandidates());
+                dispatch(setLastMove({ from:[fr, ff], to:[tr, tf] }));
 
                 // 6️⃣ End-game checks
                 const opp = botColor === "w" ? "b" : "w";

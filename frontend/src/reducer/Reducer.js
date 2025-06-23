@@ -176,7 +176,7 @@ export const reducer = (state, action) => {
                 lastMove: movesList.at(-1) ?? null,
                 candidateMoves: [],
                 promotionSquare: null,
-                status: "Ongoing"
+                status: "Ongoing",
             };
         }
 
@@ -190,6 +190,12 @@ export const reducer = (state, action) => {
 
         case actionTypes.RESET_ALL:
             return { ...initGameState };
+
+        case actionTypes.SET_LAST_MOVE:
+            return {
+                ...state,
+                lastMove: action.payload
+            };
 
         default :
             return state

@@ -16,6 +16,7 @@ const actionTypes = {
     "ENTER_CUSTOM_MODE" : "ENTER_CUSTOM_MODE",
     "START_FROM_CUSTOM" : "START_FROM_CUSTOM",
     "RESET_ALL" : "RESET_ALL",
+    "SET_LAST_MOVE" : "SET_LAST_MOVE",
 }
 
 export default actionTypes

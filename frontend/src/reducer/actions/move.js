@@ -7,6 +7,13 @@ export const makeNewMove = ({newPosition,newMove}) => {
     }
 }
 
+export const setLastMove = ({from,to}) => {
+    return {
+        type: actionTypes.SET_LAST_MOVE,
+        payload: {from, to},
+    }
+}
+
 export const clearCandidates = () => {
     return {
         type: actionTypes.CLEAR_CANDIDATE_MOVES,

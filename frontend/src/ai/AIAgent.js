@@ -11,7 +11,7 @@ import {getCastlingDirections} from "../arbiter/getMoves";
 
 import {
     makeNewMove,
-    clearCandidates          // wipes any hint dots that might still be up
+    clearCandidates, setLastMove          // wipes any hint dots that might still be up
 } from "../reducer/actions/move";
 
 import {
@@ -121,6 +121,7 @@ const AIAgent = () => {
 
                 dispatch(makeNewMove({newPosition, newMove}));
                 dispatch(clearCandidates());         // just housekeeping
+                dispatch(setLastMove({ from:[fromRank, fromFile], to:[toRank, toFile] }));
 
                 // -----------------------------------------------------------------
                 // 6.  End-game detection (same rules you used in Pieces.js)

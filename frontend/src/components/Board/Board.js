@@ -51,6 +51,15 @@ const Board = () => {
             else
                 c += ' highlight'
         }
+        if (appState.lastMove) {
+            const { from, to } = appState.lastMove;
+
+            if (Array.isArray(from) && from[0] === i && from[1] === j)
+                c += " last-from";
+
+            if (Array.isArray(to) && to[0] === i && to[1] === j)
+                c += " last-to";
+        }
 
         if (checkTile && checkTile[0] === i && checkTile[1] === j) {
             c += ' checked'
@@ -84,17 +93,17 @@ const Board = () => {
             )}
         </div>
 
-            <Pieces/>
+        <Pieces/>
 
-            <Popup orientation={appState.userColor}>
-                <PromotionBox/>
-                <GameEnds/>
-            </Popup>
+        <Popup orientation={appState.userColor}>
+            <PromotionBox/>
+            <GameEnds/>
+        </Popup>
 
-            <Files files={files}/>
+        <Files files={files}/>
 
-        </div>
+    </div>
 
-        }
+}
 
-        export default Board
+export default Board
