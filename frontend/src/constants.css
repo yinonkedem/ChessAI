@@ -1,5 +1,5 @@
 :root {
-    --tile-size : 85px;
+    --tile-size : 64px;
     --light-tile : #F0D8B6;
     --dark-tile : #B48764;
     --bg-color : #202020;
@@ -7,8 +7,11 @@
     --check : #FEEC48;
 }
 
-@media all and (max-width: 450px) {
+@media (max-width: 450px) {
     :root {
-        --tile-size : 50px;
+        --tile-size: 44px;   /* or 40 px if you prefer */
     }
+}
+@media (min-width: 1600px) {
+    :root { --tile-size: 64px; }   /* gentle upscale on 2 K/4 K screens */
 }

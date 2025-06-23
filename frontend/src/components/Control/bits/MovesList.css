@@ -21,3 +21,6 @@
     left: 0;
     opacity: 0.5;
 }
+@media (min-width: 601px) {
+    .moves-list { font-size: 0.95em; }   /* was 1.1 em :contentReference[oaicite:3]{index=3} */
+}

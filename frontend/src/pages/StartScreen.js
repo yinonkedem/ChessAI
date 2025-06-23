@@ -36,7 +36,7 @@ export default function StartScreen({onStart}) {
             </h1>
             <p className="start-screen__subtitle">Set up your match</p>
 
-            <div className="setup-grid card">
+            <div className="setup-grid panel--neo">
                 {/* game mode block ------------------------------------------------- */}
                 <div className="setup-block">
                     <h2 className="setup-heading">Game mode</h2>
