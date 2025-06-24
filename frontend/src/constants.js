@@ -19,6 +19,7 @@ export const initGameState = {
     candidateMoves : [],
     movesList : [],
     lastMove : null,
+    lastMoveStack   : [],
     userColor : "white",      // 'w' or 'b'
     isGameSetup : false,     // becomes true after SETUP_GAME
     engineDepth : 10,

@@ -1,75 +1,96 @@
+/* ------------------------------------------------------------------
+   BASE TILE STYLES (unchanged)
+------------------------------------------------------------------ */
 .board {
     display: grid;
     position: relative;
     grid-template-columns: calc(.25*var(--tile-size)) calc(8*var(--tile-size));
 }
-
 .tiles {
     display: grid;
-    grid-template-columns: repeat(8,var(--tile-size));
-    grid-template-rows: repeat(8,var(--tile-size));
+    grid-template-columns: repeat(8, var(--tile-size));
+    grid-template-rows: repeat(8, var(--tile-size));
     width: calc(8*var(--tile-size));
 }
-.tile{
-    position: relative;
-}
-.tile--light {
-    background-color: var(--light-tile);
-}
-.tile--dark {
-    background-color: var(--dark-tile);
-}
-.highlight:after {
-    display: block;
+.tile { position: relative; }
+.tile--light { background-color: var(--light-tile); }
+.tile--dark  { background-color: var(--dark-tile); }
+
+/* ------------------------------------------------------------------
+   LAST-MOVE OVERLAY  (gold/orange border + soft tint)
+------------------------------------------------------------------ */
+.last-from::after,
+.last-to::after {
+    content: "";
     position: absolute;
-    content: '';
+    inset: 0;
+    background: rgba(255,215,0,0.35);   /* amber tint */
+    box-shadow: inset 0 0 0 4px gold;   /* border */
+    pointer-events: none;
+}
+
+/* ------------------------------------------------------------------
+   CANDIDATE HIGHLIGHTS
+   - quiet moves  : dot   (.highlight)
+   - capture moves: ring  (.attacking)
+   We draw them in ::before so they can coexist with ::after above.
+------------------------------------------------------------------ */
+.highlight::before {
+    content: "";
+    position: absolute;
     width : calc(.5*var(--tile-size));
-    height : calc(.5*var(--tile-size));
+    height: calc(.5*var(--tile-size));
+    left  : 50%;
+    top   : 50%;
+    transform: translate(-50%, -50%);
     background: var(--highlight);
     border-radius: 50%;
-    left: 25%;
-    top: 25%;
+    pointer-events: none;
 }
-.attacking:after {
-    display: block;
+
+.attacking::before {
+    content: "";
     position: absolute;
-    content: '';
-    border: 6px solid var(--highlight);
     width : calc(var(--tile-size) - 12px);
-    height : calc(var(--tile-size) - 12px);
+    height: calc(var(--tile-size) - 12px);
+    left  : 50%;
+    top   : 50%;
+    transform: translate(-50%, -50%);
+    border: 6px solid var(--highlight);
     border-radius: 50%;
-    left: 0;
-    top: 0;
+    pointer-events: none;
 }
-.checked:after {
-    display: block;
+
+/* ------------------------------------------------------------------
+   WHEN A SQUARE IS *BOTH* last-move AND candidate
+   (make the dot / ring slightly darker so it remains visible)
+------------------------------------------------------------------ */
+.last-from.highlight::before,
+.last-to.highlight::before,
+.last-from.attacking::before,
+.last-to.attacking::before {
+    background: rgba(0,0,0,0.65);              /* darker dot */
+    border-color: rgba(0,0,0,0.65);            /* darker ring */
+}
+
+/* ------------------------------------------------------------------
+   CHECKED KING (unchanged; still uses ::after)
+------------------------------------------------------------------ */
+.checked::after {
+    content: "";
     position: absolute;
-    content: '';
-    width :  var(--tile-size);
-    height :  var(--tile-size);
+    width : var(--tile-size);
+    height: var(--tile-size);
     background: var(--check);
     border-radius: 20px;
     left: 0;
     top: 0;
+    pointer-events: none;
 }
 
-/* --------------  FLIP THE WHOLE PLAYING AREA -------------- */
-.board--black {                /* rotate the entire board   */
-    transform: rotate(180deg);
-}
-
-
+/* ------------------------------------------------------------------
+   BOARD FLIP (unchanged)
+------------------------------------------------------------------ */
+.board--black { transform: rotate(180deg); }
 .board--black .ranks,
-.board--black .files {
-    transform: rotate(180deg);
-}
-
-.last-from::after,
-.last-to::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(255,215,0,0.35);  /* amber overlay */
-}
-.last-from::after { box-shadow: inset 0 0 0 4px gold; }
-.last-to::after   { box-shadow: inset 0 0 0 4px gold; }
+.board--black .files { transform: rotate(180deg); }

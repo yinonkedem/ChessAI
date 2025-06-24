@@ -8,10 +8,14 @@ export const makeNewMove = ({newPosition,newMove}) => {
 }
 
 export const setLastMove = ({from,to}) => {
+    const toNum = arr => Array.isArray(arr) ? arr.map(n => +n) : null;
     return {
         type: actionTypes.SET_LAST_MOVE,
-        payload: {from, to},
-    }
+        payload: {
+            from: toNum(from),
+            to: toNum(to),
+        },
+    };
 }
 
 export const clearCandidates = () => {

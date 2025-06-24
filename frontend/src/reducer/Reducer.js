@@ -168,12 +168,15 @@ export const reducer = (state, action) => {
                 steps % 2 === 0 ? state.turn
                     : state.turn === "w" ? "b" : "w";
 
+            const stack = state.lastMoveStack.slice(0, -1);
+
             return {
                 ...state,
                 position,
                 movesList,
                 turn,
-                lastMove: movesList.at(-1) ?? null,
+                lastMoveStack: stack,
+                lastMove     : stack.at(-steps) ?? null,
                 candidateMoves: [],
                 promotionSquare: null,
                 status: "Ongoing",
@@ -192,10 +195,8 @@ export const reducer = (state, action) => {
             return { ...initGameState };
 
         case actionTypes.SET_LAST_MOVE:
-            return {
-                ...state,
-                lastMove: action.payload
-            };
+            const stack = [...state.lastMoveStack, action.payload];
+            return { ...state, lastMove: action.payload, lastMoveStack: stack };
 
         default :
             return state
