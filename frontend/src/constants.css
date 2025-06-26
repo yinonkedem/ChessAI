@@ -1,17 +1,11 @@
-:root {
-    --tile-size : 64px;
-    --light-tile : #F0D8B6;
-    --dark-tile : #B48764;
-    --bg-color : #202020;
-    --highlight : rgba(0,0,0,.1);
-    --check : #FEEC48;
-}
+:root{
+    /* 8 tiles must fit the viewport width ⇒ 12.5 vw each.
+       clamp keeps them in a comfortable range on tablets / desktops. */
+    --tile-size: clamp(38px, 12.5vw, 64px);
 
-@media (max-width: 450px) {
-    :root {
-        --tile-size: 44px;   /* or 40 px if you prefer */
-    }
-}
-@media (min-width: 1600px) {
-    :root { --tile-size: 64px; }   /* gentle upscale on 2 K/4 K screens */
+    --light-tile : #F0D8B6;
+    --dark-tile  : #B48764;
+    --bg-color   : #202020;
+    --highlight  : rgba(0,0,0,.1);
+    --check      : #FEEC48;
 }

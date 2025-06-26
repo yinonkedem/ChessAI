@@ -5,3 +5,12 @@
     text-align: center;
     height: calc(8*var(--tile-size));
 }
+
+/* Control.css — add near the bottom */
+@media (max-width: 600px) {
+    .control {
+        height: auto;                /* let the panel size itself   */
+        max-height: 38vh;            /* but never exceed the view   */
+        overflow-y: auto;            /* scroll if it does           */
+    }
+}

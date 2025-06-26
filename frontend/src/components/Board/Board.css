@@ -94,3 +94,16 @@
 .board--black { transform: rotate(180deg); }
 .board--black .ranks,
 .board--black .files { transform: rotate(180deg); }
+
+@media (max-width:600px){
+    /* hide the rank/file labels but keep the math consistent */
+    .board{
+        grid-template-columns: 0 calc(8*var(--tile-size));
+    }
+
+    .tiles{
+        /* square that follows the new --tile-size */
+        width : calc(8*var(--tile-size));
+        height: calc(8*var(--tile-size));
+    }
+}

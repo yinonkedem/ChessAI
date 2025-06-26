@@ -8,7 +8,6 @@
     justify-content: center;
 
     /* full-page hero */
-    min-height: 100vh;
     overflow: hidden;
 
     /* deep-blue space */
@@ -17,11 +16,10 @@
     text-align: center;
     font-family: "Bebas Neue", sans-serif;
     letter-spacing: 2px;
-    position: fixed;   /* pulls it out of the normal flow          */
+    position: absolute;   /* pulls it out of the normal flow          */
     inset: 0;          /* = top:0; right:0; bottom:0; left:0        */
-    width: 100vw;      /* guaranteed full width—even inside a column*/
-    height: 100vh;     /* guaranteed full height                    */
-    z-index: 999;      /* stays on top of everything else           */
+    min-height: 100svh;
+    overflow-y: auto;
 }
 
 /* -- Content ----------------------------------------------------------------*/
@@ -159,8 +157,7 @@
     max-width: 1200px;
     margin: auto;
     margin-inline: auto;
-    max-height: 55vh;
-    overflow-y: auto;
+    max-height: none;
 }
 
 @media (min-width: 1400px) {
@@ -231,3 +228,41 @@
     text-shadow:none;                       /* cleaner look */
     font-family:inherit;                    /* keep Bebas Neue */
 }
+
+/* ---------- MOBILE TUNING ---------- */
+@media (max-width: 600px) {
+    /* shrink fonts & paddings so content fits small screens */
+    .start-screen__title    { font-size: clamp(1.6rem, 5.5vw, 2.2rem); }
+    .start-screen__subtitle { font-size: clamp(0.85rem, 3vw, 1rem); }
+
+    .btn      { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
+    .play-btn { padding: 0.75rem 2rem;  font-size: 1rem; }
+
+    /* let the panel scroll when the on-screen keyboard opens (mobile Safari/Chrome) */
+    .start-screen {
+        position: absolute;   /* not fixed → respects viewport resize           */
+        min-height: 100svh;   /* ‘small viewport height’ = safe-area aware      */
+    }
+}
+/* ---------- MOBILE FIX ---------- */
+@media (max-width: 600px) {
+
+    /* ① Free the hero from the rigid 100 vh box */
+    .start-screen{
+        position: absolute;        /* already in file – keep it          */
+        height: auto;              /* ← overrides height:100vh           */
+        min-height: 100svh;        /* safe-area aware full-screen feel   */
+        overflow-y: auto;          /* page may scroll if content grows   */
+        padding-block: clamp(1rem,4vh,2rem);
+    }
+
+    /* ② Let the options card grow naturally */
+    .panel--neo{ max-height:none; }
+
+    /* ③ Sticky footer becomes part of normal flow */
+    .footer{
+        position: static;
+        margin-top: 1.75rem;       /* keeps the play button spaced       */
+    }
+}
+

@@ -1,0 +1,49 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: pg-secret
+type: Opaque
+stringData:
+  POSTGRES_DB: chess
+  POSTGRES_USER: chess
+  POSTGRES_PASSWORD: chess123
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pg-data
+spec:
+  accessModes: [ReadWriteOnce]
+  resources: { requests: { storage: 5Gi } }
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata: { name: postgres }
+spec:
+  serviceName: postgres
+  replicas: 1
+  selector: { matchLabels: { app: postgres } }
+  template:
+    metadata: { labels: { app: postgres } }
+    spec:
+      securityContext:               # let postgres UID write to the volume
+        fsGroup: 999
+      containers:
+        - name: postgres
+          image: postgres:16
+          envFrom: [ { secretRef: { name: pg-secret } } ]
+          env: [ { name: PGDATA, value: /var/lib/postgresql/data/pgdata } ]
+          ports: [ { containerPort: 5432 } ]
+          volumeMounts:
+            - { name: data, mountPath: /var/lib/postgresql/data }
+      volumes:
+        - name: data
+          persistentVolumeClaim: { claimName: pg-data }
+---
+apiVersion: v1
+kind: Service
+metadata: { name: postgres }
+spec:
+  clusterIP: None      # headless → DNS "postgres-0.postgres.svc.cluster.local"
+  selector: { app: postgres }
+  ports: [ { port: 5432 } ]

@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: chess-ingress
+  annotations:
+    kubernetes.io/ingress.class: "gce"     # GKE’s built-in HTTP(S) LB
+spec:
+  rules:
+    - http:
+        paths:
+          # backend – FastAPI
+          - path: /engine/
+            pathType: Prefix
+            backend:
+              service:
+                name: backend
+                port:
+                  number: 8000
+          # everything else → React static files
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend
+                port:
+                  number: 80

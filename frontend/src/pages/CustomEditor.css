@@ -1,9 +1,36 @@
 /* container – tray | board | sidebar */
 .custom-editor{
     display:flex;
-    gap:clamp(8px, 2vw, 24px);
+    gap:clamp(8px,2vw,24px);
     padding:clamp(8px,2vw,24px);
 }
+
+/* ===== MOBILE ===== */
+@media (max-width:600px){
+    .custom-editor{
+        flex-direction:column;       /* board, then tray, then sidebar */
+        align-items:center;          /* centre everything              */
+    }
+
+    /* Board wrapper stays as-is (width = 8×tile) */
+
+    /* Put the tray under the board, 4 columns so it wraps nicely */
+    .tray{
+        order:2;
+        grid-template-columns:repeat(4,var(--tile-size));
+        margin-top:0.75rem;
+    }
+
+    /* Sidebar becomes a compact button bar */
+    .sidebar{
+        order:3;
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:0.5rem;
+    }
+}
+
 
 /* -------------- tray ---------------------------------------------------- */
 .tray{
