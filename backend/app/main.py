@@ -15,6 +15,7 @@ origins = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
     "http://192.168.86.1:3000",
+    "https://yinon-chess-ai.vercel.app",
 ]
 app.add_middleware(
     CORSMiddleware,
