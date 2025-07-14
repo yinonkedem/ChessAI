@@ -1,10 +1,20 @@
 .pieces {
     position: absolute;
     top: 0;
-    left: 0;
-    width: calc(8 * var(--tile-size));
-    height: calc(8 * var(--tile-size));
-    pointer-events: auto;
+    right: 0;
+    bottom: calc(0.25 * var(--tile-size));
+    left: calc(0.25 * var(--tile-size));
+}
+
+@media (max-width: 600px) {
+    .pieces {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(8 * var(--tile-size));
+        height: calc(8 * var(--tile-size));
+        pointer-events: none;
+    }
 }
 
 .piece {
