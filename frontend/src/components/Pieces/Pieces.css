@@ -4,7 +4,7 @@
     left: 0;
     width: calc(8 * var(--tile-size));
     height: calc(8 * var(--tile-size));
-    pointer-events: none;
+    pointer-events: auto;
 }
 
 .piece {
