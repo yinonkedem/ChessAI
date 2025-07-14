@@ -1,15 +1,18 @@
 .pieces {
-    right: 0;
-    top: 0;
     position: absolute;
-    left: calc(.25*var(--tile-size));
-    bottom: calc(.25*var(--tile-size));
+    top: 0;
+    left: 0;
+    width: calc(8 * var(--tile-size));
+    height: calc(8 * var(--tile-size));
+    pointer-events: none;
 }
 
 .piece {
     width: 12.5%;
     height: 12.5%;
-    background-size: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     position: absolute;
 }
 :root      { --piece-rot: 0deg; }   /* normal view */
