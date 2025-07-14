@@ -91,7 +91,8 @@
     display:flex;
     flex-direction:column;
     gap:12px;
-    align-items: center;}
+    align-items: center;
+}
 
 .sidebar h3 {
     margin: 1rem 0 0.4rem;
@@ -163,4 +164,12 @@
     0%   { background-position: -150% 0; }
     50%  { background-position: 150% 0; }
     100% { background-position: -150% 0; }
+}
+
+.warning {
+    margin-top: 0.5rem;
+    color: #ffd700;
+    font-size: 0.9rem;
+    text-align: center;
+    max-width: 200px;
 }

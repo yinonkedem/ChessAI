@@ -17,7 +17,7 @@ const validateKings = board => {
     let wk = 0, bk = 0;
     board.forEach(r => r.forEach(p => {
         if (p === "wk") wk++; if (p === "bk") bk++; }));
-    return { ok: wk===1 && bk===1, reason: "Both sides need exactly one king" };
+    return { ok: wk===1 && bk===1, reason: "⚠️ Please place exactly one king for each side to begin." };
 };
 
 // Classical starting counts (anything above comes from promoted pawns)
