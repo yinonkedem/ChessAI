@@ -143,6 +143,11 @@
     box-shadow: none;
 }
 
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 /* === Variant 2: Soft-Neumorphism ======================================== */
 .panel--neo {
     padding: clamp(1rem, 3vw, 2rem);

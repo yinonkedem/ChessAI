@@ -86,18 +86,21 @@ export default function StartScreen({onStart}) {
                         <button
                             className={cls("btn btn--glass", opponent === "human")}
                             onClick={() => setOpponent("human")}
+                            disabled={mode === GameMode.custom}
                         >
                             Human
                         </button>
                         <button
                             className={cls("btn btn--glass", opponent === "ai")}
                             onClick={() => setOpponent("ai")}
+                            disabled={mode === GameMode.custom}
                         >
                             Computer
                         </button>
                         <button
                             className={cls("btn btn--glass", opponent === "rand")}
                             onClick={() => setOpponent("rand")}
+                            disabled={mode === GameMode.custom}
                         >
                             Random
                         </button>
