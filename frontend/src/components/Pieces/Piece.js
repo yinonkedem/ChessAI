@@ -18,7 +18,7 @@ const Piece = ({
             e.target.style.display = 'none'
         }, 0)
 
-        if (turn === piece[0]) {
+        if (!appState.isCustomEditor && turn === piece[0]) {
             const candidateMoves =
                 arbiter.getValidMoves({
                     position: currentPosition[currentPosition.length - 1],
