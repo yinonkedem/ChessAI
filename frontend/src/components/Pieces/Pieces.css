@@ -113,3 +113,11 @@
 .piece.p-50 {transform: translate(500%,700%) rotate(var(--piece-rot));}
 .piece.p-60 {transform: translate(600%,700%) rotate(var(--piece-rot));}
 .piece.p-70 {transform: translate(700%,700%) rotate(var(--piece-rot));}
+
+/* Fix pieces alignment in custom editor */
+.custom-editor .pieces {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
