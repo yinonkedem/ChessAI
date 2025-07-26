@@ -173,3 +173,18 @@
     text-align: center;
     max-width: 200px;
 }
+
+.custom-editor .board-wrapper{
+    position: relative;
+    width : calc(var(--tile-size) * 8.25);   /* 8 tiles + ¼-tile gutter */
+    height: calc(var(--tile-size) * 8.25);   /* same vertically        */
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width:600px){
+    .custom-editor .board-wrapper{
+        width : calc(var(--tile-size) * 8);  /* gutter hidden in Board.css */
+        height: calc(var(--tile-size) * 8);
+    }
+}
