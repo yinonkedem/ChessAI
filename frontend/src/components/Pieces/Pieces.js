@@ -147,7 +147,7 @@ const Pieces = () => {
 
     /* 🆕  handle every board click (also touch on mobile) */
     const onBoardClick = e => {
-        if (status === Status.promoting) return;             // modal up → ignore
+        if (appState.isCustomEditor || status === Status.promoting) return;             // modal up → ignore
 
         // previous board = one move before the current one (needed for en-passant, castling, etc.)
         const prevPosition =

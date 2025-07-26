@@ -2,8 +2,8 @@
     position: absolute;
     top: 0;
     right: 0;
-    bottom: 0; /*calc(0.25 * var(--tile-size));*/
-    left: 0; /*calc(0.25 * var(--tile-size));*/
+    bottom: calc(0.25 * var(--tile-size));
+    left: calc(0.25 * var(--tile-size));
 }
 
 @media (max-width: 600px) {
@@ -11,8 +11,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: calc(8 * var(--tile-size));
-        height: calc(8 * var(--tile-size));
+        right: 0;
+        bottom: 0;
         pointer-events: auto;
     }
 }
