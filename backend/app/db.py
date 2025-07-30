@@ -8,3 +8,6 @@ engine = create_engine(url, echo=False, pool_pre_ping=True, connect_args=connect
 def init_db() -> None:
     from .models import SQLModel
     SQLModel.metadata.create_all(engine)
+def get_session():
+         with Session(engine) as session:
+             yield session
