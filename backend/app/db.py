@@ -4,7 +4,9 @@ from sqlmodel import create_engine, Session
 
 from .core.config import settings
 
-engine = create_engine(settings.db_url, echo=False, pool_pre_ping=True)
+url = settings.db_url
+connect_args = {"check_same_thread": False} if url.startswith("sqlite") else {}
+engine = create_engine(url, echo=False, pool_pre_ping=True, connect_args=connect_args)
 
 def init_db() -> None:
     """Call once to create all tables."""
