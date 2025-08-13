@@ -8,7 +8,7 @@ app = FastAPI(title="Chess-AI backend")
 
 # Routers
 app.include_router(auth_router)
-app.include_router(engine.router, prefix="/engine", tags=["engine"])
+app.include_router(engine.router)
 
 # CORS (unchanged)
 origins = [
