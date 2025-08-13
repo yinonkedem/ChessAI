@@ -1,16 +1,16 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from .routers import auth, engine, data
-from .db import init_db
+from app.routers import engine
+from app.auth.router import router as auth_router
 
-# ---------- App ----------
 app = FastAPI(title="Chess-AI backend")
-app.include_router(auth.router)
-app.include_router(engine.router)
-app.include_router(data.router)
 
-# ---------- CORS ----------
+# Routers
+app.include_router(auth_router)
+app.include_router(engine.router, prefix="/engine", tags=["engine"])
+
+# CORS (unchanged)
 origins = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
@@ -25,11 +25,6 @@ app.add_middleware(
     allow_credentials=True,
 )
 
-# ---------- Startup ----------
-@app.on_event("startup")
-def _startup():
-    init_db()
-
 @app.get("/")
-def root():
+def health():
     return {"status": "ok"}
