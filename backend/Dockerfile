@@ -16,7 +16,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 # ---- runtime ---
 ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1
-#ENV STOCKFISH_BIN=/usr/bin/stockfish
+ENV STOCKFISH_BIN=/usr/bin/stockfish
 
 
 CMD uvicorn app.main:app --host 0.0.0.0 --port $PORT
