@@ -174,3 +174,54 @@
 @media (max-height:720px){
     .setup-grid{ max-height:55vh; overflow-y:auto; }
 }
+/* --- Mobile polish ------------------------------------------------------ */
+
+/* Respect iOS safe-areas and add breathable padding on phones */
+.start-screen{
+    padding:
+            max(12px, env(safe-area-inset-top))
+            max(12px, env(safe-area-inset-right))
+            max(16px, env(safe-area-inset-bottom))
+            max(12px, env(safe-area-inset-left));
+}
+
+/* Let option buttons wrap and avoid overflow */
+.btn-group { display:flex; flex-wrap:wrap; gap:.6rem; justify-content:center; }
+.btn-group .btn { flex: 1 1 auto; min-width: 112px; }
+
+/* Depth slider spans the viewport width nicely */
+.setup-block input[type="range"]{
+    width: min(92vw, 700px);
+}
+
+/* Make the sticky footer non-sticky on phones so the CTA never overlaps content */
+@media (max-width: 600px){
+    .footer{ position:static; margin-top:1.25rem; }
+}
+
+/* Tiny phones: reduce padding & font-size to prevent line wrapping */
+@media (max-width: 360px){
+    .btn{ padding:.55rem 1rem; font-size:.85rem; }
+    .play-btn{ padding:.65rem 1.4rem; font-size:.95rem; }
+    .setup-grid{ gap:1rem; }
+}
+
+/* Short-height devices (or keyboard open): allow the grid to scroll */
+@media (max-height: 640px){
+    .setup-grid{ max-height: 50vh; overflow-y:auto; }
+    .start-screen__title{ margin-top:.25rem; }
+}
+
+/* Landscape phones: compress spacing; keep everything on one view */
+@media (orientation: landscape) and (max-height: 500px){
+    .btn{ padding:.5rem 1rem; }
+    .setup-grid{ gap:1rem; }
+    .footer{ position:static; margin-top:1rem; }
+    .auth-layer{ align-items: start; padding-top: 8px; }
+}
+
+/* Auth dialog: ensure it fits when the keyboard is up */
+.auth-layer{ align-items:center; }
+@media (max-width: 600px){
+    .auth-dialog{ width: min(460px, 96vw); }
+}
