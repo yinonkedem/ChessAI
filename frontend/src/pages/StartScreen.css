@@ -1,273 +1,176 @@
-/* ===  Star-lit chess hero  ================================================ */
+/* ==========================================================================
+   Start Screen – Star-lit chess hero
+   ========================================================================== */
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
-.start-screen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    /* full-page hero */
-    overflow: hidden;
-
-    /* deep-blue space */
-    background: radial-gradient(circle at 30% 30%, #243b55 0%, #141e30 60%, #0a0f1f 100%);
-    color: #ffffff;
-    text-align: center;
-    font-family: "Bebas Neue", sans-serif;
-    letter-spacing: 2px;
-    position: absolute;   /* pulls it out of the normal flow          */
-    inset: 0;          /* = top:0; right:0; bottom:0; left:0        */
+/* === Page shell ========================================================== */
+.start-screen{
+    position: absolute;           /* fills the viewport safely on mobile */
+    inset: 0;
     min-height: 100svh;
-    overflow-y: auto;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+
+    color:#fff; text-align:center; letter-spacing:2px;
+    font-family:"Bebas Neue", sans-serif;
+
+    background: radial-gradient(circle at 30% 30%, #243b55 0%, #141e30 60%, #0a0f1f 100%);
+    overflow-y:auto;
 }
 
-/* -- Content ----------------------------------------------------------------*/
-.start-screen__title {
-    font-size: clamp(2.2rem, 3vw + 1rem, 4.2rem); /* smaller max size */
-    margin-bottom: 1rem;
+/* === Headings ============================================================ */
+.start-screen__title{
+    font-size: clamp(2.2rem, 3vw + 1rem, 4.2rem);
+    margin: 0 0 1rem;
     text-shadow: 0 0 10px #00000080;
 }
-
-.start-screen__subtitle {
-    font-size: clamp(1rem, 1vw + 0.3rem, 1.4rem); /* subtitle less dominant */
-    margin-bottom: 2.5rem;
-    opacity: 0.8;
+.start-screen__subtitle{
+    font-size: clamp(1rem, 1vw + .3rem, 1.4rem);
+    margin: 0 0 2.5rem;
+    opacity:.8;
 }
 
-
-/* -- Buttons ----------------------------------------------------------------*/
-.start-screen__buttons {
-    display: flex;
-    gap: 1.25rem;
-    flex-wrap: wrap;
-    justify-content: center;
+/* === Buttons (base + variants) ========================================== */
+.btn{
+    --btn-bg:#fff; --btn-fg:#16213e;
+    padding:.9rem 2.2rem;
+    font-size:1.05rem; font-weight:600;
+    border:none; border-radius:.75rem;
+    background:var(--btn-bg); color:var(--btn-fg);
+    cursor:pointer;
+    box-shadow:0 4px 12px #00000040;
+    transition:transform .15s ease, box-shadow .25s ease, background .2s;
 }
+.btn:hover{ transform:translateY(-3px); box-shadow:0 8px 18px #00000060; }
+.btn:active{ transform:translateY(0);   box-shadow:0 4px 10px #00000050; }
+.btn:disabled{ opacity:.5; cursor:not-allowed; box-shadow:none; }
 
-.btn {
-    --btn-bg: #ffffff;
-    --btn-fg: #16213e;
-
-    padding: 0.9rem 2.2rem;
-    font-size: 1.05rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 0.75rem;
-    cursor: pointer;
-
-    background: var(--btn-bg);
-    color:      var(--btn-fg);
-
-    transition: transform 0.15s ease, box-shadow 0.25s ease;
-    box-shadow: 0 4px 12px #00000040;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 18px #00000060;
-}
-
-.btn:active {
-    transform: translateY(0);
-    box-shadow: 0 4px 10px #00000050;
-}
-
-/* variants */
-.btn--black { --btn-bg:#16213e; --btn-fg:#ffffff; border:2px solid #ffffff; }
-.btn--black:hover { --btn-bg:#0f3460; }
-.btn--glass {
-    --btn-bg: #ffffff10;
-    --btn-fg: #ffffff;
+.btn--primary{ --btn-bg:#ffd700; --btn-fg:#000; }
+.btn--black  { --btn-bg:#16213e; --btn-fg:#fff; border:2px solid #fff; }
+.btn--black:hover{ --btn-bg:#0f3460; }
+.btn--white  { --btn-bg:#fff; --btn-fg:#16213e; border:2px solid #ffffff60; }
+.btn--glass  {
+    --btn-bg:#ffffff10; --btn-fg:#fff;
     backdrop-filter: blur(4px);
-    border: 1px solid #ffffff30;
+    border:1px solid #ffffff30;
 }
-.btn--glass:hover { --btn-bg:#ffffff20; }
+.btn--glass:hover{ --btn-bg:#ffffff20; }
 
-/* ------------- layout for the two option blocks -------------------------- */
-.setup-grid {
-    display: grid;
-    gap: 2.5rem;
-    margin-bottom: 2.75rem;
-    width: min(95%, 1000px);
+.btn.active{ box-shadow: 0 0 0 3px #ffd700 inset; }
+
+.play-btn{ padding:1rem 3rem; font-size:1.15rem; border-radius:1rem; }
+
+/* === Option blocks grid ================================================== */
+.setup-grid{
+    width:min(95%,1000px);
+    display:grid; gap:2.5rem;
+    margin-bottom:2.75rem;
 }
-
-@media (min-width: 960px) {
-    .setup-grid {
-        grid-template-columns: repeat(3, 1fr); /* now 3 blocks per row */
-        gap: 2.5rem;
-    }
+@media (min-width:960px){
+    .setup-grid{ grid-template-columns: repeat(3, 1fr); }
 }
-
-.setup-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.setup-block{ display:flex; flex-direction:column; align-items:center; }
+.setup-heading{
+    font-size:1.2rem; margin-bottom:1.15rem;
+    text-transform:uppercase; letter-spacing:1px; opacity:.9;
 }
+.btn-group{ display:flex; gap:.75rem; flex-wrap:wrap; justify-content:center; }
 
-.setup-heading {
-    font-size: 1.2rem;
-    margin-bottom: 1.15rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    opacity: 0.9;
-}
-
-/* ------------- button groups --------------------------------------------- */
-.btn-group {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.btn.active {                         /* highlight selected option */
-    box-shadow: 0 0 0 3px #ffd700 inset;
-}
-
-/* play button – stands out */
-.btn--primary {
-    --btn-bg: #ffd700;
-    --btn-fg: #000000;
-}
-
-.play-btn {
-    padding: 1rem 3rem;
-    font-size: 1.15rem;
-    border-radius: 1rem;
-    cursor: pointer;
-}
-
-.play-btn:disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-    box-shadow: none;
-}
-
-.btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-/* === Variant 2: Soft-Neumorphism ======================================== */
-.panel--neo {
+/* === Panel (soft-neumorphism wrapper) =================================== */
+.panel--neo{
+    width:100%; max-width:1200px; margin-inline:auto;
     padding: clamp(1rem, 3vw, 2rem);
-    border-radius: 1.4rem;
-    background: #1e2a47;
+    border-radius:1.4rem;
+    background:#1e2a47;
     box-shadow:
             8px  8px 18px #00000060,
             -8px -8px 16px #334b6c40;
-
-    /* Same layout behavior as original card */
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    margin-inline: auto;
-    max-height: none;
 }
 
-@media (min-width: 1400px) {
-    .setup-grid {
-        transform: scale(0.9);
-    }
-}
+/* Scrollbars (panel & cards) */
+.panel--neo::-webkit-scrollbar{ width:6px; }
+.panel--neo::-webkit-scrollbar-thumb{ background:#ffffff40; border-radius:1rem; }
 
-
-/* Scrollbar styling */
-.panel--neo::-webkit-scrollbar {
-    width: 6px;
-}
-.panel--neo::-webkit-scrollbar-thumb {
-    background: #ffffff40;
-    border-radius: 1rem;
-}
-
-/* Optional button styling to match panel */
-.panel--neo .btn {
-    --btn-bg: #1e2a47;
-    --btn-fg: #ffffff;
-    border: 2px solid #334b6c;
-}
-.panel--neo .btn.active {
-    box-shadow: inset 0 0 0 3px #ffd700;
-}
-
-
-/* ═══ Sticky footer (React Bits: Sticky action bar) ═══ */
-.footer{
-    position: sticky;
-    bottom: clamp(1rem,4vw,2rem);
-    display: flex;
-    justify-content: center;
-    margin-top: 2.5rem;
-    pointer-events: none;              /* let the button handle clicks */
-}
-
-.footer .play-btn{
-    pointer-events: auto;              /* restore clickability          */
-    padding: 1rem 3rem;
-    font-size: 1.2rem;
-    border-radius: 1rem;
-}
-
-/* ensure the range slider never pushes content below the fold */
-@media (max-height: 720px){
-    .setup-grid{ max-height: 55vh; overflow-y: auto; }
-}
-
-/* card now holds four (sometimes five) blocks → allow it to scroll on laptops */
-.card{
-    max-height: 75vh;          /* leaves room for the sticky footer */
-    overflow-y: auto;
-}
-
-/* nice thin scrollbar */
+.card{ max-height:75vh; overflow-y:auto; }
 .card::-webkit-scrollbar{ width:6px; }
-.card::-webkit-scrollbar-thumb{
-    background:#ffffff40; border-radius:3px;
+.card::-webkit-scrollbar-thumb{ background:#ffffff40; border-radius:3px; }
+
+/* === Footer (sticky action area) ======================================== */
+.footer{
+    position:sticky; bottom:clamp(1rem,4vw,2rem);
+    display:flex; justify-content:center;
+    margin-top:2.5rem;
+    pointer-events:none;         /* only the button receives clicks */
+    z-index:10;
+}
+.footer .play-btn{ pointer-events:auto; }
+
+/* === Effects / utilities ================================================ */
+.glitch{ text-shadow:none; font-family:inherit; }  /* cleaner title */
+
+/* === Auth: top-right bar ================================================= */
+.auth-bar{
+    position:absolute; top:16px; right:16px;
+    display:flex; gap:.5rem; align-items:center;
+}
+.user-chip{
+    background:#ffffff20; border:1px solid #ffffff40;
+    padding:.4rem .6rem; border-radius:999px;
 }
 
-.footer{ z-index:10; }         /* be on top of scrolling content */
+/* === Auth Modal (popup) ================================================== */
+/* freeze background when open */
+.start-screen.modal-open{ overflow:hidden; }
+/* backdrop */
+.auth-backdrop{
+    position:fixed; inset:0; z-index:30;
+    background:rgba(8,12,24,.55); backdrop-filter: blur(2px);
+}
+/* centering layer */
+.auth-layer{
+    position:fixed; inset:0; z-index:31;
+    display:grid; place-items:center; padding:16px;
+}
+/* dialog */
+.auth-dialog{
+    width:min(420px, 92vw);
+    padding:16px 16px 12px;
+    border-radius:12px;
+    background:#0d1528;
+    border:1px solid #2a3a5a;
+    box-shadow:0 12px 40px rgba(0,0,0,.45);
+}
+.auth-dialog h3{ margin:0 0 10px; font-size:1.05rem; letter-spacing:.3px; }
+.auth-dialog form{ display:grid; gap:10px; }
+.auth-dialog input{
+    width:100%; box-sizing:border-box;
+    padding:10px 12px;
+    border-radius:10px;
+    border:1px solid #3a4a6a;
+    background:#0b1222; color:#fff; font-size:.95rem;
+}
+.auth-actions{ display:flex; gap:8px; justify-content:flex-end; margin-top:2px; }
+.auth-error{ color:#ff9a9a; font-size:.9rem; }
 
-/* after your other title rules */
-.glitch{
-    text-shadow:none;                       /* cleaner look */
-    font-family:inherit;                    /* keep Bebas Neue */
+/* Dim & disable main UI while modal open */
+.modal-open .setup-grid,
+.modal-open .footer{
+    filter: blur(2px) saturate(.9) opacity(.9);
+    pointer-events:none; user-select:none;
 }
 
-/* ---------- MOBILE TUNING ---------- */
-@media (max-width: 600px) {
-    /* shrink fonts & paddings so content fits small screens */
-    .start-screen__title    { font-size: clamp(1.6rem, 5.5vw, 2.2rem); }
-    .start-screen__subtitle { font-size: clamp(0.85rem, 3vw, 1rem); }
+/* === Responsive tweaks =================================================== */
+@media (max-width:600px){
+    .start-screen__title   { font-size: clamp(1.6rem, 5.5vw, 2.2rem); }
+    .start-screen__subtitle{ font-size: clamp(.85rem, 3vw, 1rem); }
+    .btn{ padding:.6rem 1.2rem; font-size:.9rem; }
+    .play-btn{ padding:.75rem 2rem; font-size:1rem; }
 
-    .btn      { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
-    .play-btn { padding: 0.75rem 2rem;  font-size: 1rem; }
-
-    /* let the panel scroll when the on-screen keyboard opens (mobile Safari/Chrome) */
-    .start-screen {
-        position: absolute;   /* not fixed → respects viewport resize           */
-        min-height: 100svh;   /* ‘small viewport height’ = safe-area aware      */
-    }
-}
-/* ---------- MOBILE FIX ---------- */
-@media (max-width: 600px) {
-
-    /* ① Free the hero from the rigid 100 vh box */
-    .start-screen{
-        position: absolute;        /* already in file – keep it          */
-        height: auto;              /* ← overrides height:100vh           */
-        min-height: 100svh;        /* safe-area aware full-screen feel   */
-        overflow-y: auto;          /* page may scroll if content grows   */
-        padding-block: clamp(1rem,4vh,2rem);
-    }
-
-    /* ② Let the options card grow naturally */
+    /* let the panel grow and footer sit normally on tiny screens */
     .panel--neo{ max-height:none; }
-
-    /* ③ Sticky footer becomes part of normal flow */
-    .footer{
-        position: static;
-        margin-top: 1.75rem;       /* keeps the play button spaced       */
-    }
+    .footer{ position:static; margin-top:1.75rem; }
 }
 
+/* Avoid overflow on short-height laptops */
+@media (max-height:720px){
+    .setup-grid{ max-height:55vh; overflow-y:auto; }
+}

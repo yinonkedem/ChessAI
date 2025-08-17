@@ -1,34 +1,60 @@
+# app/auth/router.py
 from fastapi import APIRouter, Depends, HTTPException, status
+from pydantic import BaseModel, EmailStr
 from fastapi.security import OAuth2PasswordRequestForm
-from typing import List
+from sqlmodel import Session, select   # ✅ import select
 
-from .config import USERS_DB
-from .schemas import Token, User, Item
-from .utils import authenticate_user, create_access_token, init_dummy_user
+from app.db import get_session
+from .models import User
+from .utils import authenticate_user, create_access_token, get_password_hash
 from .dependencies import get_current_active_user
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 
-init_dummy_user()  # seed demo user once 🤫
+class SignupBody(BaseModel):
+    username: str
+    email: EmailStr
+    password: str
 
-@router.post("/token", response_model=Token)
-async def login(form_data: OAuth2PasswordRequestForm = Depends()):
-    user = authenticate_user(USERS_DB, form_data.username, form_data.password)
+class TokenOut(BaseModel):
+    access_token: str
+    token_type: str = "bearer"
+
+class UserOut(BaseModel):
+    id: int
+    username: str
+    email: EmailStr
+    disabled: bool
+
+@router.post("/signup", response_model=UserOut, status_code=201)
+def signup(body: SignupBody, session: Session = Depends(get_session)):
+    # ✅ SQLModel/SA 2.0 style
+    if session.exec(select(User).where(User.username == body.username)).first():
+        raise HTTPException(status_code=409, detail="Username already exists")
+    if session.exec(select(User).where(User.email == body.email)).first():
+        raise HTTPException(status_code=409, detail="Email already exists")
+
+    user = User(
+        username=body.username,
+        email=body.email,
+        password_hash=get_password_hash(body.password),
+    )
+    session.add(user)
+    session.commit()
+    session.refresh(user)
+    return UserOut(id=user.id, username=user.username, email=user.email, disabled=user.disabled)
+
+@router.post("/login", response_model=TokenOut)
+def login(form: OAuth2PasswordRequestForm = Depends(), session: Session = Depends(get_session)):
+    user = authenticate_user(session, form.username, form.password)
     if not user:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Incorrect username or password",
-            headers={"WWW-Authenticate": "Bearer"},
-        )
-    access_token = create_access_token(data={"sub": user.username})
-    return {"access_token": access_token, "token_type": "bearer"}
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,
+                            detail="Incorrect username or password",
+                            headers={"WWW-Authenticate": "Bearer"})
+    token = create_access_token({"sub": user.username})
+    return TokenOut(access_token=token)
 
-@router.get("/me", response_model=User)
-async def read_me(current_user: User = Depends(get_current_active_user)):
-    return current_user
-
-@router.get("/me/items", response_model=list[Item])
-async def read_my_items(
-        current_user: User = Depends(get_current_active_user),
-):
-    return [Item(item_id=1, owner=current_user)]
+@router.get("/me", response_model=UserOut)
+def me(current_user: User = Depends(get_current_active_user)):
+    return UserOut(id=current_user.id, username=current_user.username,
+                   email=current_user.email, disabled=current_user.disabled)

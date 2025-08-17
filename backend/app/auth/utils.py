@@ -1,39 +1,33 @@
-from datetime import datetime
+from datetime import datetime, timedelta
+from typing import Optional
+
 from jose import jwt
 from passlib.context import CryptContext
-from typing import Dict
+from sqlmodel import select, Session
 
-from .config import SECRET_KEY, ALGORITHM, TOKEN_EXPIRE, USERS_DB
-from .schemas import UserInDB
+from app.settings import SECRET_KEY, ALGORITHM, ACCESS_TOKEN_EXPIRE_MINUTES
+from app.db import get_session
+from .models import User
 
-_pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-
-# ---------- password helpers ----------
-def verify_password(plain: str, hashed: str) -> bool:
-    return _pwd_context.verify(plain, hashed)
+_pwd = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 def get_password_hash(password: str) -> str:
-    return _pwd_context.hash(password)
+    return _pwd.hash(password)
 
-# ---------- user helpers ----------
-def get_user(db: Dict[str, dict], username: str) -> UserInDB | None:
-    if username in db:
-        return UserInDB(**db[username])
+def verify_password(plain: str, hashed: str) -> bool:
+    return _pwd.verify(plain, hashed)
 
-def authenticate_user(db, username: str, password: str) -> UserInDB | bool:
-    user = get_user(db, username)
-    if not user or not verify_password(password, user.hashed_password):
-        return False
+def get_user_by_username(session: Session, username: str) -> Optional[User]:
+    return session.exec(select(User).where(User.username == username)).first()
+
+def authenticate_user(session: Session, username: str, password: str) -> Optional[User]:
+    user = get_user_by_username(session, username)
+    if not user or not verify_password(password, user.password_hash):
+        return None
     return user
 
-# ---------- JWT helpers ----------
-def create_access_token(data: dict) -> str:
+def create_access_token(data: dict, minutes: int = ACCESS_TOKEN_EXPIRE_MINUTES) -> str:
     to_encode = data.copy()
-    expire = datetime.utcnow() + TOKEN_EXPIRE
+    expire = datetime.utcnow() + timedelta(minutes=minutes)
     to_encode.update({"exp": expire})
     return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
-
-# ---------- demo only: seed initial pwd ----------
-def init_dummy_user():
-    if not USERS_DB["yinon"]["hashed_password"]:
-        USERS_DB["yinon"]["hashed_password"] = get_password_hash("secret123")
