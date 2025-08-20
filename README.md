@@ -27,12 +27,3 @@ Play a strong engine, analyze custom positions, get hints, and explore modern AI
 | Extras       | “Random” engine (dev/demo)        | Picks a random legal move (useful for testing) |
 
 ---
-
-## 🚀 Run locally (no Docker)
-
-### Prerequisites
-- **Python** 3.10+  
-- **Node.js** 18+ and **npm**
-- **Stockfish binary** installed on your machine  
-  - On Windows: download an official build and note its path (e.g. `C:\Tools\stockfish\stockfish.exe`)  
-  - On macOS/Linux: install via package manager or download a release
