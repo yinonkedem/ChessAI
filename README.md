@@ -53,3 +53,15 @@ export STOCKFISH_BIN="/usr/local/bin/stockfish"   # adjust to your path
 
 # run API (http://127.0.0.1:8000)
 uvicorn app.main:app --reload --port 8000
+
+**windows**
+# from repo root
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+
+# set Stockfish path (example)
+$env:STOCKFISH_BIN="C:\Tools\stockfish\stockfish.exe"
+
+# run API (http://127.0.0.1:8000)
+uvicorn app.main:app --reload --port 8000
