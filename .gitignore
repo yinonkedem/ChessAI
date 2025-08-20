@@ -1,0 +1,19 @@
+# dependencies / build
+node_modules/
+dist/
+build/
+
+# python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# ML artifacts / data
+data/
+checkpoints/
+*.pt
+*.pth
+*.onnx
+*.pkl
+*.ckpt
