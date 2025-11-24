@@ -1,9 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from sqlmodel import SQLModel
-from .db import engine
-
 from app.routers import engine
 from app.auth.router import router as auth_router
 
@@ -31,7 +28,3 @@ app.add_middleware(
 @app.get("/")
 def health():
     return {"status": "ok"}
-
-@app.on_event("startup")
-def on_startup():
-    SQLModel.metadata.create_all(engine)
