@@ -1,16 +1,23 @@
 .control {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    align-items: stretch;
+    gap: 0.5rem;
+    padding: 0.75rem;
     text-align: center;
-    height: calc(8*var(--tile-size));
+    width: min(100%, calc(8 * var(--tile-size)));
+    max-height: 40vh;
+    overflow-y: auto;
 }
 
-/* Control.css — add near the bottom */
-@media (max-width: 600px) {
+.control button {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
     .control {
-        height: auto;                /* let the panel size itself   */
-        max-height: 38vh;            /* but never exceed the view   */
-        overflow-y: auto;            /* scroll if it does           */
+        width: 200px;
+        max-height: calc(8 * var(--tile-size));
+        height: calc(8 * var(--tile-size));
     }
 }

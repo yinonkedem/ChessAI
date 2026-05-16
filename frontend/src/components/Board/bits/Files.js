@@ -1,9 +1,10 @@
-import './Files.css'
-import {getCharacter} from '../../../helper'
+import './Files.css';
+import { getCharacter } from '../../../helper';
 
-const Files = ({files, orientation}) =>
+const Files = ({ files }) => (
     <div className="files">
-        {files.map(file => <span key={file}>{getCharacter(file)}</span>)}
+        {files.map((file) => <span key={file}>{getCharacter(file)}</span>)}
     </div>
+);
 
-export default Files
+export default Files;

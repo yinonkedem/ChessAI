@@ -1,0 +1,83 @@
+.page--login {
+    display: grid;
+    place-items: center;
+    padding: 1.5rem;
+    min-height: calc(100svh - var(--toolbar-height) - 2rem);
+}
+
+.login-card {
+    width: min(420px, 100%);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+}
+
+.login-title {
+    margin: 0 0 0.25rem;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.login-sub {
+    margin: 0 0 1rem;
+    text-align: center;
+    opacity: 0.8;
+    font-size: 0.95rem;
+}
+
+.login-card .auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.login-card .auth-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.login-card .auth-tabs button {
+    flex: 1;
+    padding: 0.55rem 0.75rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+.login-card .auth-tabs button.active {
+    background: rgba(255, 215, 0, 0.18);
+    border-color: rgba(255, 215, 0, 0.4);
+}
+
+.login-card .auth-form input {
+    padding: 0.7rem 0.8rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(0, 0, 0, 0.25);
+    color: inherit;
+    font: inherit;
+    min-height: 44px;
+}
+
+.login-card .auth-error {
+    color: #ff8a8a;
+    font-size: 0.9rem;
+}
+
+.login-card .auth-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .login-card { transition: none; }
+}

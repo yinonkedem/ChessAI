@@ -1,6 +1,7 @@
 export const getCharacter = (file) => String.fromCharCode(file + 96);
+
 export const createPosition = () => {
-    const position = new Array(8).fill("").map((x) => new Array(8).fill(""));
+    const position = Array.from({ length: 8 }, () => Array(8).fill(""));
 
     for (let i = 0; i < 8; i++) {
         position[6][i] = "bp";
@@ -28,118 +29,93 @@ export const createPosition = () => {
     return position;
 };
 
-export const copyPosition = (position) => {
-    const newPosition = new Array(8).fill("").map((x) => new Array(8).fill(""));
-
-    for (let rank = 0; rank < position.length; rank++) {
-        for (let file = 0; file < position[0].length; file++) {
-            newPosition[rank][file] = position[rank][file];
-        }
-    }
-
-    return newPosition;
-};
+export const copyPosition = (position) =>
+    position.map((row) => row.slice());
 
 export const areSameColorTiles = (coords1, coords2) =>
-    (coords1.x + coords1.y) % 2 === coords2.x + coords2.y;
+    (coords1.x + coords1.y) % 2 === (coords2.x + coords2.y) % 2;
 
 export const findPieceCoords = (position, type) => {
-    let results = [];
+    const results = [];
     position.forEach((rank, i) => {
         rank.forEach((pos, j) => {
-            if (pos === type) results.push({x: i, y: j});
+            if (pos === type) results.push({ x: i, y: j });
         });
     });
     return results;
 };
 
-export const getNewMoveNotation = ({
-                                       piece,
-                                       rank,
-                                       file,
-                                       x,
-                                       y,
-                                       position,
-                                       promotesTo,
-                                   }) => {
-    let note = "";
+export const createEmptyPosition = () =>
+    Array.from({ length: 8 }, () => Array(8).fill(""));
 
+const fileChar = (y) => String.fromCharCode("a".charCodeAt(0) + y);
+
+export const getNewMoveNotation = ({
+    piece,
+    rank,
+    file,
+    x,
+    y,
+    position,
+    promotesTo,
+    disambiguation = "",
+}) => {
     rank = Number(rank);
     file = Number(file);
+
     if (piece[1] === "k" && Math.abs(file - y) === 2) {
-        if (file < y) return "O-O";
-        else return "O-O-O";
+        return file < y ? "O-O" : "O-O-O";
     }
 
-    if (piece[1] !== "p") {
+    let note = "";
+    const isPawn = piece[1] === "p";
+    const isCapture = !!position[x][y] || (isPawn && file !== y);
+
+    if (!isPawn) {
         note += piece[1].toUpperCase();
-        if (position[x][y]) {
-            note += "x";
-        }
-    } else if (rank !== x && file !== y) {
-        note += getCharacter(file + 1) + "x";
+        note += disambiguation;
+        if (isCapture) note += "x";
+    } else if (isCapture) {
+        note += fileChar(file) + "x";
     }
 
-    note += getCharacter(y + 1) + (x + 1);
+    note += fileChar(y) + (x + 1);
 
     if (promotesTo) note += "=" + promotesTo.toUpperCase();
 
     return note;
 };
 
-export const createEmptyPosition = () =>
-    Array.from({ length: 8 }, () => Array(8).fill(""));
-
-/* ────────────────────────────────────────────────────────── */
-/*  Simple utilities used only when we leave Custom-Editor    */
-/* ────────────────────────────────────────────────────────── */
-
-/**
- * Return castling rights in the same shape used by initGameState:
- * { w : "both"|"k"|"q"|"-",  b : "both"|"k"|"q"|"-" }
- *
- * We only check whether the king / rooks are still on their home squares.
- * No “has the king moved already” bookkeeping is done here because the
- * editor always starts a *brand-new* game.
- */
-export const getCastleRights = board => {
+export const getCastleRights = (board) => {
     const rights = { w: "-", b: "-" };
 
-    // White pieces on rank 1
     if (board[0][4] === "wk") {
-        if (board[0][0] === "wr") rights.w = rights.w === "-" ? "q"   : "both";
-        if (board[0][7] === "wr") rights.w = rights.w === "-" ? "k"   : "both";
+        if (board[0][0] === "wr") rights.w = rights.w === "-" ? "left" : "both";
+        if (board[0][7] === "wr") rights.w = rights.w === "-" ? "right" : "both";
     }
 
-    // Black pieces on rank 8
     if (board[7][4] === "bk") {
-        if (board[7][0] === "br") rights.b = rights.b === "-" ? "q"   : "both";
-        if (board[7][7] === "br") rights.b = rights.b === "-" ? "k"   : "both";
+        if (board[7][0] === "br") rights.b = rights.b === "-" ? "left" : "both";
+        if (board[7][7] === "br") rights.b = rights.b === "-" ? "right" : "both";
     }
+
+    if (rights.w === "-") rights.w = "none";
+    if (rights.b === "-") rights.b = "none";
     return rights;
 };
 
-/**
- * Extremely lightweight “insufficient material” test:
- * returns true iff **both** sides have
- *   – just a king, or
- *   – king + single bishop, or
- *   – king + single knight
- *
- * Good enough for detecting K-vs-K positions created in the editor.
- */
-export const isInsufficientMaterial = board => {
+export const isInsufficientMaterial = (board) => {
     const pieces = { w: [], b: [] };
 
-    board.forEach(r =>
-        r.forEach(p => {
-            if (p) pieces[p[0]].push(p[1]);      // 'wk' → push('k')
+    board.forEach((r) =>
+        r.forEach((p) => {
+            if (p) pieces[p[0]].push(p[1]);
         })
     );
 
-    const okSide = arr =>
-        arr.length === 1 ||                       // just king
-        (arr.length === 2 && ["b", "n"].includes(arr[1])); // king + minor
+    const okSide = (arr) =>
+        arr.length === 1 ||
+        (arr.length === 2 && ["b", "n"].includes(arr.find((c) => c !== "k")));
 
     return okSide(pieces.w) && okSide(pieces.b);
 };

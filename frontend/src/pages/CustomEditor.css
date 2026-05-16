@@ -1,168 +1,130 @@
-/* container – tray | board | sidebar */
-.custom-editor{
-    display:flex;
-    gap:clamp(8px,2vw,24px);
-    padding:clamp(8px,2vw,24px);
-    max-width: 100vw;
+.custom-editor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
     box-sizing: border-box;
-    overflow-x: hidden;
+    color: #fff;
 }
 
-/* ===== MOBILE ===== */
-@media (max-width:600px){
-    .custom-editor{
-        flex-direction:column;       /* board, then tray, then sidebar */
-        align-items:center;          /* centre everything              */
-    }
-
-    /* Board wrapper stays as-is (width = 8×tile) */
-    .board-wrapper {
-        width: 100%;                  /* ✅ ADDED */
-        display: flex;                /* ✅ ADDED */
-        justify-content: center;      /* ✅ ADDED */
-    }
-
-    /* Put the tray under the board, 4 columns so it wraps nicely */
-    .tray{
-        order:2;
-        grid-template-columns:repeat(4,var(--tile-size));
-        margin-top:0.75rem;
-        width: fit-content;           /* ✅ ADDED */
-        max-width: 100%;              /* ✅ ADDED */
-        justify-content: center;      /* ✅ ADDED */
-    }
-
-    /* Sidebar becomes a compact button bar */
-    .sidebar{
-        order:3;
-        flex-direction:row;
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:0.5rem;
-        width: 100%;                  /* ✅ ADDED */
-        padding: 0 1rem;              /* ✅ ADDED */
-    }
-    .sidebar button {
-        font-size: 0.9rem;            /* ✅ ADDED */
-        padding: 0.4rem 0.8rem;       /* ✅ ADDED */
-        min-width: 120px;             /* ✅ ADDED */
-    }
-}
-
-
-/* -------------- tray ---------------------------------------------------- */
-.tray{
-    display:grid;
-    grid-template-columns: repeat(2, var(--tile-size));
-    grid-auto-rows: var(--tile-size);      /* 8×8 board → tile-size is known */
+.tray {
+    display: grid;
+    grid-template-columns: repeat(6, var(--tile-size));
+    grid-auto-rows: var(--tile-size);
+    gap: 0;
     background: var(--highlight);
     border: 2px solid var(--dark-tile);
-    border-radius:4px;
+    border-radius: 4px;
     box-shadow: 0 0 0 4px var(--dark-tile) inset;
+    width: fit-content;
+    max-width: 100%;
 }
 
-.tray .piece{
-    /* override values coming from Pieces.css */
+.tray .piece {
     position: static !important;
-    width:  var(--tile-size) !important;
+    width: var(--tile-size) !important;
     height: var(--tile-size) !important;
-    transform:none !important;
+    transform: none !important;
     border: 1px solid var(--dark-tile);
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .tray .piece:hover,
-.tray .piece.selected{
+.tray .piece.selected {
     box-shadow: 0 0 0 5px var(--dark-tile) inset;
-    transform:scale(1.05);
-    z-index:2;
+    transform: scale(1.05) !important;
+    z-index: 2;
 }
 
-/* -------------- board wrapper ------------------------------------------ */
-.board-wrapper{
+.tray .disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.board-wrapper {
     position: relative;
-    width: calc(var(--tile-size) * 8);   /* ✅ CHANGED: enforce width on board */
-    max-width: 100%;                     /* ✅ ADDED */
-    box-sizing: border-box;              /* ✅ ADDED */
+    width: calc(var(--tile-size) * 8.25);
+    height: calc(var(--tile-size) * 8.25);
+    flex: 0 0 auto;
+    box-sizing: border-box;
 }
 
-/* -------------- sidebar ------------------------------------------------- */
-.sidebar{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
+.custom-editor .board-wrapper .piece {
+    pointer-events: none;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 480px;
 }
 
 .sidebar h3 {
-    margin: 1rem 0 0.4rem;
-    font-size: 1.05rem;
+    width: 100%;
+    margin: 0.5rem 0 0.25rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 700;
     color: #ffd700;
     border-bottom: 1px solid #ffffff30;
     padding-bottom: 0.25rem;
-    width: 100%;
-    text-align: center;}
-
-.sidebar button{
-    min-width:140px;
-    padding:0.6rem 1rem;
-    border-radius:0.6rem;
-    font-weight:600;
-    cursor:pointer;
-    background:#ffffff20;
-    color:#fff;
-    border:1px solid #ffffff40;
+    text-align: center;
 }
 
-.sidebar button.active{
-    background:#ffd700;
-    color:#000;
+.sidebar button {
+    min-width: 120px;
+    min-height: 44px;
+    padding: 0.6rem 1rem;
+    border-radius: 0.6rem;
+    font-weight: 600;
+    background: #ffffff20;
+    color: #fff;
+    border: 1px solid #ffffff40;
 }
 
-.start-btn{
-    margin-top:0.5rem;
-    background:#ffd700;
-    color:#000;
-}
-
-.start-btn:disabled{
-    opacity:0.4;
-    cursor:not-allowed;
-}
-
-/* grey-out disabled tray pieces */
-.tray .disabled { opacity:0.35; cursor:not-allowed; }
-
-/* highlight active buttons */
 .sidebar button.active,
-.sidebar .start-btn:not(:disabled):hover { background:#ffd700; color:#000; }
+.sidebar .start-btn:not(:disabled):hover {
+    background: #ffd700;
+    color: #000;
+}
 
-/* === Shiny Text Effect ================================================= */
+.start-btn {
+    margin-top: 0.5rem;
+    background: #ffd700;
+    color: #000;
+}
+
+.start-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
 .shiny-text {
     display: inline-block;
-    /* use a light-to-bright-to-light white gradient */
     background: linear-gradient(
-            120deg,
-            rgba(255,255,255,0.25) 0%,
-            rgba(255,255,255,0.85) 50%,
-            rgba(255,255,255,0.25) 100%
+        120deg,
+        rgba(255, 255, 255, 0.25) 0%,
+        rgba(255, 255, 255, 0.85) 50%,
+        rgba(255, 255, 255, 0.25) 100%
     );
     background-size: 200% 100%;
-    /* clip the gradient to the text shape */
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    /* animate the gradient across */
     animation: shine 2.5s ease-in-out infinite;
 }
 
 @keyframes shine {
-    0%   { background-position: -150% 0; }
-    50%  { background-position: 150% 0; }
+    0% { background-position: -150% 0; }
+    50% { background-position: 150% 0; }
     100% { background-position: -150% 0; }
 }
 
@@ -171,20 +133,26 @@
     color: #ffd700;
     font-size: 0.9rem;
     text-align: center;
-    max-width: 200px;
+    max-width: 240px;
 }
 
-.custom-editor .board-wrapper{
-    position: relative;
-    width : calc(var(--tile-size) * 8.25);   /* 8 tiles + ¼-tile gutter */
-    height: calc(var(--tile-size) * 8.25);   /* same vertically        */
-    max-width: 100%;
-    box-sizing: border-box;
-}
-
-@media (max-width:600px){
-    .custom-editor .board-wrapper{
-        width : calc(var(--tile-size) * 8);  /* gutter hidden in Board.css */
-        height: calc(var(--tile-size) * 8);
+@media (min-width: 768px) {
+    .custom-editor {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    .tray {
+        grid-template-columns: repeat(2, var(--tile-size));
+    }
+    .sidebar {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 200px;
+    }
+    .sidebar button {
+        width: 100%;
     }
 }

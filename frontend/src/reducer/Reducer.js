@@ -1,110 +1,82 @@
-import {GameMode, initGameState, Status} from "../constants";
+import { GameMode, Status, createInitGameState } from "../constants";
 import actionTypes from "./actionTypes";
-import {createEmptyPosition} from "../helper";
-import * as helper from "../helper";
+import { createEmptyPosition, getCastleRights, isInsufficientMaterial } from "../helper";
 
 export const reducer = (state, action) => {
 
     switch (action.type) {
-        case actionTypes.NEW_MOVE : {
-            let {position, movesList, turn} = state
-            position = [
-                ...position,
-                action.payload.newPosition
-            ]
-            movesList = [
-                ...movesList,
-                action.payload.newMove
-            ]
-            turn = turn === 'w' ? 'b' : 'w'
-
+        case actionTypes.NEW_MOVE: {
             return {
                 ...state,
-                position,
-                movesList,
-                turn,
-            }
+                position: [...state.position, action.payload.newPosition],
+                movesList: [...state.movesList, action.payload.newMove],
+                turn: state.turn === 'w' ? 'b' : 'w',
+            };
         }
 
-        case actionTypes.GENERATE_CANDIDATE_MOVES : {
-            const {candidateMoves} = action.payload
-            return {
-                ...state,
-                candidateMoves
-            }
+        case actionTypes.GENERATE_CANDIDATE_MOVES: {
+            return { ...state, candidateMoves: action.payload.candidateMoves };
         }
 
-        case actionTypes.CLEAR_CANDIDATE_MOVES : {
-            return {
-                ...state,
-                candidateMoves: []
-            }
+        case actionTypes.CLEAR_CANDIDATE_MOVES: {
+            return { ...state, candidateMoves: [] };
         }
 
-        case actionTypes.PROMOTION_OPEN : {
+        case actionTypes.PROMOTION_OPEN: {
             return {
                 ...state,
                 status: Status.promoting,
-                promotionSquare: {...action.payload},
-            }
+                promotionSquare: { ...action.payload },
+            };
         }
 
-        case actionTypes.PROMOTION_CLOSE : {
+        case actionTypes.PROMOTION_CLOSE: {
             return {
                 ...state,
                 status: Status.ongoing,
                 promotionSquare: null,
-            }
+            };
         }
 
-        case actionTypes.CAN_CASTLE : {
-            let {turn, castleDirection} = state
-
-            castleDirection[turn] = action.payload
-
+        case actionTypes.CAN_CASTLE: {
             return {
                 ...state,
-                castleDirection,
-            }
+                castleDirection: {
+                    ...state.castleDirection,
+                    [state.turn]: action.payload,
+                },
+            };
         }
 
-        case actionTypes.STALEMATE : {
+        case actionTypes.STALEMATE: {
+            return { ...state, status: Status.stalemate };
+        }
+
+        case actionTypes.INSUFFICIENT_MATERIAL: {
+            return { ...state, status: Status.insufficient };
+        }
+
+        case actionTypes.WIN: {
             return {
                 ...state,
-                status: Status.stalemate
-            }
+                status: action.payload === 'w' ? Status.white : Status.black,
+            };
         }
 
-        case actionTypes.INSUFFICIENT_MATERIAL : {
-            return {
-                ...state,
-                status: Status.insufficient
-            }
+        case actionTypes.NEW_GAME: {
+            return createInitGameState();
         }
 
-        case actionTypes.WIN : {
-            return {
-                ...state,
-                status: action.payload === 'w' ? Status.white : Status.black
-            }
-        }
-
-        case actionTypes.NEW_GAME : {
-            return {
-                ...action.payload,
-            }
-        }
-
-        case actionTypes.SETUP_GAME : {
-            const {colour, opponent} = action.payload;
+        case actionTypes.SETUP_GAME: {
+            const { colour, opponent } = action.payload;
             return {
                 ...state,
                 userColor: colour === 'rand'
                     ? (Math.random() < 0.5 ? 'white' : 'black')
                     : colour,
-                opponentType: opponent, // "ai" | "human" | "rand"
+                opponentType: opponent,
                 isGameSetup: true,
-                turn: 'w'                      // ensure white always moves first
+                turn: 'w',
             };
         }
 
@@ -113,92 +85,80 @@ export const reducer = (state, action) => {
                 ...state,
                 gameMode: GameMode.custom,
                 isCustomEditor: true,
-                position: [createEmptyPosition()], // blank board
-                colour        : action.payload.colour,
+                position: [createEmptyPosition()],
                 userColor: action.payload.colour,
                 turn: "w",
-                opponent: null,                     // not chosen yet
             };
         }
 
         case actionTypes.START_FROM_CUSTOM: {
-            const finalBoard = action.payload.position[0];   // sent by CustomEditor
+            const finalBoard = action.payload.position[0];
 
-            const castleDirection = helper.getCastleRights(finalBoard);
-            const status = helper.isInsufficientMaterial(finalBoard)
+            const castleDirection = getCastleRights(finalBoard);
+            const status = isInsufficientMaterial(finalBoard)
                 ? Status.insufficient
                 : Status.ongoing;
 
             return {
                 ...state,
-
-                /* leave the editor */
-                isCustomEditor : false,
-                isGameSetup    : true,
-
-                /* orientation & opponent info */
-                userColor      : state.colour,                    // side you chose
-                opponentType   : action.payload.opponentType,     // "ai" | "human"
-                opponent       : action.payload.opponentType,     // legacy field
-                turn           : "w",
-
-                /* brand-new history & metadata */
-                position       : [finalBoard],
-                movesList      : [],
-                candidateMoves : [],
+                isCustomEditor: false,
+                isGameSetup: true,
+                userColor: state.userColor,
+                opponentType: action.payload.opponentType,
+                turn: "w",
+                position: [finalBoard],
+                movesList: [],
+                lastMove: null,
+                lastMoveStack: [],
+                candidateMoves: [],
                 castleDirection,
                 status,
             };
         }
 
-
         case actionTypes.TAKE_BACK: {
-            // How many half-moves to revert?
             const wantSteps = state.opponentType === "human" ? 1 : 2;
             const steps = Math.min(wantSteps, state.movesList.length);
 
-            // Nothing to do?
             if (steps === 0) return state;
 
             const position = state.position.slice(0, -steps);
             const movesList = state.movesList.slice(0, -steps);
+            const lastMoveStack = state.lastMoveStack.slice(0, -steps);
 
-            // Turn flips every half-move → flip only when steps is odd
             const turn =
-                steps % 2 === 0 ? state.turn
+                steps % 2 === 0
+                    ? state.turn
                     : state.turn === "w" ? "b" : "w";
-
-            const stack = state.lastMoveStack.slice(0, -1);
 
             return {
                 ...state,
                 position,
                 movesList,
                 turn,
-                lastMoveStack: stack,
-                lastMove     : stack.at(-steps) ?? null,
+                lastMoveStack,
+                lastMove: lastMoveStack.at(-1) ?? null,
                 candidateMoves: [],
                 promotionSquare: null,
-                status: "Ongoing",
+                status: Status.ongoing,
             };
         }
 
-
-        case actionTypes.APPLY_HINT :
-            return {...state, candidateMoves: action.payload};
-
+        case actionTypes.APPLY_HINT:
+            return { ...state, candidateMoves: action.payload };
 
         case actionTypes.SET_ENGINE_DEPTH:
-            return {...state, engineDepth: action.payload};
+            return { ...state, engineDepth: action.payload };
 
         case actionTypes.RESET_ALL:
-            return { ...initGameState };
+            return createInitGameState();
 
-        case actionTypes.SET_LAST_MOVE:
-            const stack = [...state.lastMoveStack, action.payload];
-            return { ...state, lastMove: action.payload, lastMoveStack: stack };
+        case actionTypes.SET_LAST_MOVE: {
+            const lastMoveStack = [...state.lastMoveStack, action.payload];
+            return { ...state, lastMove: action.payload, lastMoveStack };
+        }
 
-        default :
-            return state
+        default:
+            return state;
     }
 };

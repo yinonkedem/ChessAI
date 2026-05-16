@@ -1,36 +1,35 @@
-// src/api/auth.js
-const API_HOST =
-    process.env.REACT_APP_API_HOST ||
-    (() => {
-        const { protocol, hostname } = window.location;
-        return `${protocol}//${hostname}:8000`;
-    })();
+import { apiUrl } from "./apiBase";
 
-export const getToken = () => localStorage.getItem("auth_token");
-export const setToken = (t) =>
-    t ? localStorage.setItem("auth_token", t) : localStorage.removeItem("auth_token");
+const TOKEN_KEY = "auth_token";
+const USER_KEY = "auth_user";
+
+export const getToken = () => localStorage.getItem(TOKEN_KEY);
+
+const setToken = (t) =>
+    t ? localStorage.setItem(TOKEN_KEY, t) : localStorage.removeItem(TOKEN_KEY);
 
 export const getUser = () => {
-    const s = localStorage.getItem("auth_user");
+    const s = localStorage.getItem(USER_KEY);
     try { return s ? JSON.parse(s) : null; } catch { return null; }
 };
-export const setUser = (u) =>
-    u ? localStorage.setItem("auth_user", JSON.stringify(u)) : localStorage.removeItem("auth_user");
+
+const cacheUser = (u) =>
+    u ? localStorage.setItem(USER_KEY, JSON.stringify(u)) : localStorage.removeItem(USER_KEY);
 
 export async function signup({ username, email, password }) {
-    const res = await fetch(`${API_HOST}/auth/signup`, {
+    const res = await fetch(apiUrl("/auth/signup").toString(), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, email, password }),
     });
     const data = await res.json().catch(() => ({}));
     if (!res.ok) throw new Error(data.detail || "Signup failed");
-    return data; // { id, username, email, disabled }
+    return data;
 }
 
 export async function login({ username, password }) {
     const body = new URLSearchParams({ username, password });
-    const res = await fetch(`${API_HOST}/auth/login`, {
+    const res = await fetch(apiUrl("/auth/login").toString(), {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body,
@@ -38,22 +37,22 @@ export async function login({ username, password }) {
     const data = await res.json().catch(() => ({}));
     if (!res.ok) throw new Error(data.detail || "Login failed");
     setToken(data.access_token);
-    return data; // { access_token, token_type }
+    return data;
 }
 
 export async function me() {
     const token = getToken();
     if (!token) return null;
-    const res = await fetch(`${API_HOST}/auth/me`, {
+    const res = await fetch(apiUrl("/auth/me").toString(), {
         headers: { Authorization: `Bearer ${token}` },
     });
     if (!res.ok) return null;
     const user = await res.json();
-    setUser(user);
-    return user; // { id, username, email, disabled }
+    cacheUser(user);
+    return user;
 }
 
 export function logout() {
     setToken(null);
-    setUser(null);
+    cacheUser(null);
 }

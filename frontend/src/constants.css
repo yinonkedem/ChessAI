@@ -1,11 +1,31 @@
-:root{
-    /* 8 tiles must fit the viewport width ⇒ 12.5 vw each.
-       clamp keeps them in a comfortable range on tablets / desktops. */
-    --tile-size: clamp(38px, 12.5vw, 64px);
+:root {
+    --light-tile: #F0D8B6;
+    --dark-tile: #B48764;
+    --bg-color: #202020;
+    --highlight: rgba(0, 0, 0, .1);
+    --check: #FEEC48;
 
-    --light-tile : #F0D8B6;
-    --dark-tile  : #B48764;
-    --bg-color   : #202020;
-    --highlight  : rgba(0,0,0,.1);
-    --check      : #FEEC48;
+    --toolbar-height: 64px;
+    --board-max: 640px;
+    --board-pad: 0.5rem;
+    --board-units: 8.25;
+
+    --tile-size: min(
+        calc((100vw - 2 * var(--board-pad)) / var(--board-units)),
+        calc((100svh - var(--toolbar-height) - 4rem) / var(--board-units)),
+        calc(var(--board-max) / var(--board-units))
+    );
+}
+
+@media (min-width: 768px) {
+    :root {
+        --toolbar-height: 76px;
+        --board-pad: 1rem;
+
+        --tile-size: min(
+            calc((100vw - 240px) / var(--board-units)),
+            calc((100svh - var(--toolbar-height) - 4rem) / var(--board-units)),
+            calc(var(--board-max) / var(--board-units))
+        );
+    }
 }

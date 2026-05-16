@@ -1,0 +1,77 @@
+.auth-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+    background: rgba(8, 12, 24, 0.55);
+    backdrop-filter: blur(2px);
+}
+
+.auth-layer {
+    position: fixed;
+    inset: 0;
+    z-index: 1101;
+    display: grid;
+    place-items: center;
+    padding: 16px;
+}
+
+.auth-dialog {
+    width: min(420px, calc(100vw - 2rem));
+    padding: 1rem;
+    border-radius: 12px;
+    background: #0d1528;
+    border: 1px solid #2a3a5a;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+    color: #fff;
+}
+
+.auth-tabs {
+    display: flex;
+    gap: 0.25rem;
+    margin-bottom: 0.75rem;
+    background: #0b1222;
+    border-radius: 8px;
+    padding: 0.25rem;
+}
+
+.auth-tabs button {
+    flex: 1;
+    background: transparent;
+    color: #fff;
+    border: 0;
+    padding: 0.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    min-height: 40px;
+}
+
+.auth-tabs button.active {
+    background: #2a3a5a;
+}
+
+.auth-dialog form {
+    display: grid;
+    gap: 0.6rem;
+}
+
+.auth-dialog input {
+    width: 100%;
+    padding: 0.65rem 0.75rem;
+    border-radius: 10px;
+    border: 1px solid #3a4a6a;
+    background: #0b1222;
+    color: #fff;
+    font-size: 16px;
+}
+
+.auth-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    margin-top: 0.25rem;
+}
+
+.auth-error {
+    color: #ff9a9a;
+    font-size: 0.9rem;
+}

@@ -17,3 +17,11 @@ checkpoints/
 *.onnx
 *.pkl
 *.ckpt
+
+# secrets / credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+aws-keys.txt

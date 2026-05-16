@@ -1,37 +1,57 @@
 .popup {
-    right: calc(.25*var(--tile-size));
+    right: calc(.25 * var(--tile-size));
     top: 0;
     position: absolute;
-    left: calc(.25*var(--tile-size));
-    bottom: calc(.25*var(--tile-size));
+    left: calc(.25 * var(--tile-size));
+    bottom: calc(.25 * var(--tile-size));
     background: var(--highlight);
-    z-index: 1000;               /* always on top of tiles & pieces   */
-    display: flex;               /* centres the inner panel           */
+    z-index: 1500;
+    display: flex;
     align-items: center;
     justify-content: center;
-    pointer-events: none;        /* clicks fall through the backdrop  */
+    pointer-events: none;
+    animation: popup-backdrop-in 180ms ease both;
 }
+
+@keyframes popup-backdrop-in {
+    from { background-color: rgba(0, 0, 0, 0); }
+    to   { background-color: var(--highlight); }
+}
+
 .popup--inner {
     width: 50%;
     min-height: 12.5%;
     background: var(--light-tile);
     position: relative;
     border: 8px solid var(--light-tile);
-    box-shadow: 0 0 0 8px var(--dark-tile)
+    box-shadow: 0 0 0 8px var(--dark-tile), 0 18px 40px rgba(0, 0, 0, 0.45);
+    pointer-events: auto;
+    animation: popup-fade-in 220ms ease-out both;
 }
+
+@keyframes popup-fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 .popup--inner__center {
     text-align: center;
     padding: 1em 0;
 }
 
 .popup--inner__center h1 {
-    font-size: 2.5em;
+    font-size: 2em;
     margin: 0 0 .5em 0;
 }
+
 .popup--inner__center p {
-    font-size: 1.2em;
+    font-size: 1.05em;
     margin: 0 0 1em 0;
 }
-.popup--inner{
-    pointer-events: auto;        /* ...but **do** capture clicks inside the box */
+
+@media (prefers-reduced-motion: reduce) {
+    .popup,
+    .popup--inner {
+        animation: none;
+    }
 }

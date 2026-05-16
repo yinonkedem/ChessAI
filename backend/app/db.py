@@ -1,15 +1,28 @@
-# app/db.py
-from typing import Generator
-from sqlmodel import create_engine, Session
-from .settings import DATABASE_URL
-
 import logging
+
+from beanie import init_beanie
+from motor.motor_asyncio import AsyncIOMotorClient
+
+from .models import Game, User
+from .settings import MONGODB_DB_NAME, MONGODB_URI
+
 logger = logging.getLogger(__name__)
-logger.info(f"*** USING DATABASE_URL = {DATABASE_URL}")
 
-engine = create_engine(DATABASE_URL, echo=False, pool_pre_ping=True)
+_client: AsyncIOMotorClient | None = None
 
-# ✅ FastAPI dependency that YIELDS a real Session
-def get_session() -> Generator[Session, None, None]:
-    with Session(engine) as session:
-        yield session
+
+async def init_db() -> None:
+    global _client
+    _client = AsyncIOMotorClient(MONGODB_URI)
+    await init_beanie(
+        database=_client[MONGODB_DB_NAME],
+        document_models=[User, Game],
+    )
+    logger.info("Mongo connected: db=%s", MONGODB_DB_NAME)
+
+
+async def close_db() -> None:
+    global _client
+    if _client is not None:
+        _client.close()
+        _client = None

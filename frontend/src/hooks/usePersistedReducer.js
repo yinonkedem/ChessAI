@@ -1,16 +1,18 @@
-// src/hooks/usePersistedReducer.js
-import { useReducer, useCallback, useEffect } from "react";
+import { useReducer, useEffect } from "react";
 
-export default function usePersistedReducer(reducer, initialState, key) {
-    // ①  Hydrate from localStorage once
-    const initializer = useCallback(() => {
+const isFn = (v) => typeof v === "function";
+
+export default function usePersistedReducer(reducer, initial, key) {
+    const initializer = () => {
         const cached = localStorage.getItem(key);
-        return cached ? JSON.parse(cached) : initialState;
-    }, [initialState, key]);
+        if (cached) {
+            try { return JSON.parse(cached); } catch { /* fall through */ }
+        }
+        return isFn(initial) ? initial() : initial;
+    };
 
     const [state, dispatch] = useReducer(reducer, undefined, initializer);
 
-    // ②  Save on every state change
     useEffect(() => {
         localStorage.setItem(key, JSON.stringify(state));
     }, [state, key]);
