@@ -147,8 +147,11 @@ export const reducer = (state, action) => {
         case actionTypes.APPLY_HINT:
             return { ...state, candidateMoves: action.payload };
 
-        case actionTypes.SET_ENGINE_THINK_MS:
-            return { ...state, engineThinkMs: action.payload };
+        case actionTypes.SET_ENGINE_DEPTH:
+            return { ...state, engineDepth: action.payload };
+
+        case actionTypes.SET_HINT_DEPTH:
+            return { ...state, hintDepth: action.payload };
 
         case actionTypes.RESET_ALL:
             return createInitGameState();

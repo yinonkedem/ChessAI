@@ -14,6 +14,28 @@
     width: 100%;
 }
 
+.hint-button {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.hint-depth-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.hint-depth-control label {
+    flex-shrink: 0;
+}
+
+.hint-depth-control input[type="range"] {
+    flex: 1;
+    min-width: 0;
+}
+
 @media (min-width: 768px) {
     .control {
         width: 200px;

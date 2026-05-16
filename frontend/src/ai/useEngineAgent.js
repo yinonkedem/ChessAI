@@ -55,7 +55,7 @@ export default function useEngineAgent({ engine, opponentType }) {
 
                 const { best_move } = await getBestMove({
                     fen,
-                    movetime_ms: appState.engineThinkMs,
+                    depth: appState.engineDepth,
                     engine,
                 });
                 if (!best_move) throw new Error("Engine returned no move");
@@ -140,7 +140,7 @@ export default function useEngineAgent({ engine, opponentType }) {
         appState.status,
         appState.userColor,
         appState.castleDirection,
-        appState.engineThinkMs,
+        appState.engineDepth,
         appState.isCustomEditor,
         appState.isGameSetup,
         dispatch,

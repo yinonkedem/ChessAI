@@ -50,7 +50,7 @@ export default function App() {
     const [appState, dispatch] = usePersistedReducer(
         reducer,
         createInitGameState,
-        "chess-state-v2"
+        "chess-state-v3"
     );
     const navigate = useNavigate();
 

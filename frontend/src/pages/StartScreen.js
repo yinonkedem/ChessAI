@@ -3,7 +3,7 @@ import { useGlitch } from "react-powerglitch";
 import { useAppContext } from "../contexts/Context";
 import { GameMode } from "../constants";
 import actionTypes from "../reducer/actionTypes";
-import { setEngineThinkMs } from "../reducer/actions/game";
+import { setEngineDepth } from "../reducer/actions/game";
 import "./StartScreen.css";
 
 export default function StartScreen({ onStart }) {
@@ -15,8 +15,7 @@ export default function StartScreen({ onStart }) {
 
     const { appState, dispatch } = useAppContext();
     useEffect(() => { dispatch({ type: actionTypes.RESET_ALL }); }, [dispatch]);
-    const thinkMs = appState.engineThinkMs;
-    const thinkSeconds = (thinkMs / 1000).toFixed(1);
+    const depth = appState.engineDepth;
 
     const cls = (base, active) => (active ? `${base} active` : base);
 
@@ -99,15 +98,14 @@ export default function StartScreen({ onStart }) {
             {opponent === "ai" && (
                 <div className="setup-block">
                     <h2 className="setup-heading">
-                        Thinking time:&nbsp;<strong>{thinkSeconds}s</strong>
+                        Engine depth:&nbsp;<strong>{depth}</strong>
                     </h2>
                     <input
                         type="range"
-                        min="200"
-                        max="3000"
-                        step="100"
-                        value={thinkMs}
-                        onChange={(e) => dispatch(setEngineThinkMs(+e.target.value))}
+                        min="1"
+                        max="20"
+                        value={depth}
+                        onChange={(e) => dispatch(setEngineDepth(+e.target.value))}
                     />
                 </div>
             )}

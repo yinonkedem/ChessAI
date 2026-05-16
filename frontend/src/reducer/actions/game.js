@@ -22,8 +22,13 @@ export const setupNewGame = () => ({
     type: actionTypes.NEW_GAME,
 });
 
-export const setEngineThinkMs = (value) => ({
-    type: actionTypes.SET_ENGINE_THINK_MS,
+export const setEngineDepth = (value) => ({
+    type: actionTypes.SET_ENGINE_DEPTH,
+    payload: value,
+});
+
+export const setHintDepth = (value) => ({
+    type: actionTypes.SET_HINT_DEPTH,
     payload: value,
 });
 
