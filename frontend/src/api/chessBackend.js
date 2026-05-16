@@ -18,6 +18,9 @@ async function callEngine(path, params = {}, body = {}) {
     return response.json();
 }
 
-export function getBestMove({ fen, depth = 8, engine = "stockfish" }) {
-    return callEngine("best-move", { engine }, { fen, depth });
+export function getBestMove({ fen, movetime_ms, depth, engine = "stockfish" }) {
+    const body = { fen };
+    if (movetime_ms != null) body.movetime_ms = movetime_ms;
+    if (depth != null) body.depth = depth;
+    return callEngine("best-move", { engine }, body);
 }

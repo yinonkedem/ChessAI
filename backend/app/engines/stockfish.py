@@ -39,15 +39,21 @@ def _resolve_stockfish_path() -> str:
 def _stockfish() -> Stockfish:
     return Stockfish(
         path=_resolve_stockfish_path(),
-        parameters={"Threads": 2, "Skill Level": 20},
+        parameters={"Threads": 2, "Skill Level": 20, "Hash": 256},
     )
 
 
-def best_move(fen: str, depth: int = 15):
+def best_move(fen: str, depth: int = 15, movetime_ms: int | None = None):
     sf = _stockfish()
     sf.set_fen_position(fen)
-    sf.set_depth(depth)
+
+    if movetime_ms is not None:
+        move = sf.get_best_move_time(movetime_ms)
+    else:
+        sf.set_depth(depth)
+        move = sf.get_best_move()
+
     return {
-        "best_move": sf.get_best_move(),
+        "best_move": move,
         "info": sf.get_evaluation(),
     }

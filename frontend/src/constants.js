@@ -22,7 +22,7 @@ export const createInitGameState = () => ({
     lastMoveStack: [],
     userColor: "white",
     isGameSetup: false,
-    engineDepth: 10,
+    engineThinkMs: 1500,
     opponentType: "human",
     promotionSquare: null,
     status: Status.ongoing,
