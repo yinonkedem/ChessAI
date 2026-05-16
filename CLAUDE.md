@@ -125,7 +125,7 @@ All state transitions go through `frontend/src/reducer/Reducer.js`. Action types
 
 **API layer:**
 - `api/apiBase.js` — single source of `API_HOST` and the `apiUrl(path)` helper used by every API module.
-- `api/chessBackend.js` — `getBestMove({fen, depth, engine})`.
+- `api/chessBackend.js` — `getBestMove({fen, depth?, movetime_ms?, engine})`. Either `depth` (fixed search depth) or `movetime_ms` (time-based search) is accepted by the backend; today the frontend always sends `depth`.
 - `api/auth.js` — `signup`, `login`, `me`, `logout`, `getToken`, `getUser`. Caches user JSON in `localStorage` under `auth_user`. Used by `AuthContext`; UI components should call `useAuth()` rather than these directly.
 - `api/games.js` — `saveGame({user_color, opponent_type, result, reason, moves, final_fen})` and `listGames({limit, skip})`. Both pass the JWT via `Authorization: Bearer`.
 
@@ -178,6 +178,29 @@ Self-play + MCTS training loop in `AlphaZero/alphaZero.py`. The ResNet model is 
 ---
 
 ## Audit & refactor — session log
+
+### Render deploy + Stockfish tuning (2026-05-16)
+
+**Render bring-up fixes** (in order they hit):
+- `email-validator` 1.3.1 → 2.2.0 in `backend/requirements.txt`. Pydantic v2 (pulled in by Beanie) requires `>=2.0`.
+- Added `certifi` to `requirements.txt`; pass `tlsCAFile=certifi.where()` to the `AsyncIOMotorClient` in `backend/app/db.py`. Standard fix for Motor + Atlas on Linux containers; harmless even if not strictly required.
+- Pinned `bcrypt==4.0.1` alongside `passlib[bcrypt]==1.7.4`. `bcrypt` 4.1+ strictly rejects strings >72 bytes; `passlib` 1.7.4's `detect_wrap_bug` self-test hits that path on first hash and 500s every signup. Lock to 4.0.1.
+- **Manual config (not code):** Atlas Network Access → `0.0.0.0/0` allowlist (Render's outbound IPs are dynamic). Atlas's `TLSV1_ALERT_INTERNAL_ERROR` actually means "IP not allowed", not a real TLS failure.
+- **Manual config (not code):** Atlas Database Access → created DB user with `readWrite` on `chessai`; Render `MONGODB_URI` uses that user's password.
+
+**Stockfish quick-tuning** (`backend/app/engines/stockfish.py`):
+- Added `Hash: 256` (MB) to the Stockfish parameters dict (was using the ~16 MB default — huge speedup at any depth).
+- `best_move(fen, depth, movetime_ms=None)` now accepts an optional `movetime_ms`. If provided, calls `sf.get_best_move_time(ms)` (time-based search, reaches deeper on simple positions); otherwise the old `set_depth(N) + get_best_move()` path. `random_engine.best_random_move` signature updated to match.
+- `backend/app/routers/engine.py` `BestMoveIn` schema gained `movetime_ms: int | None` (range 50–10000).
+
+**Frontend strength controls**:
+- Two independent depth settings in app state: `engineDepth` (default 15, for the AI opponent) and `hintDepth` (default 10, for the Hint button). Both range 1–20.
+- `StartScreen.js` has the "Engine depth" slider (only visible when opponent=ai).
+- `HintButton.js` has its own inline "Depth" slider rendered below the button so the user can tune hint strength mid-game without going back to setup.
+- `localStorage` key bumped twice: `chess-state` → `chess-state-v2` (during the brief `engineThinkMs` experiment) → `chess-state-v3` (after restoring `engineDepth`). Bumping the key cleanly discards stale persisted state.
+- Reducer action types: `SET_ENGINE_DEPTH` + new `SET_HINT_DEPTH`. Action creators: `setEngineDepth`, `setHintDepth` (in `reducer/actions/game.js`).
+
+**Engine choice decision:** Stockfish is the right engine for this app — strongest available, free, CPU-friendly, mature. Possible future additions: ship a newer Stockfish binary in the Dockerfile (Debian's apt package is older), add Maia as a "human-like opponent" alternative (registry in `app/engines/__init__.py` is ready), expose Stockfish `Skill Level 0–20` instead of just depth for true difficulty scaling.
 
 ### Mongo migration + auth gate (this session)
 - **Database swap (PostgreSQL → MongoDB Atlas).** Removed `sqlmodel`, `sqlalchemy`, `alembic`, `psycopg2-binary` from `requirements.txt`; added `motor` + `beanie`. Deleted `backend/alembic/`, `alembic.ini`, `dev.db`, the old `backend/app/auth/models.py`. New `backend/app/models.py` defines Beanie `User` (with embedded `UserStats`) and `Game` documents. New `backend/app/db.py` initialises Beanie in a FastAPI `lifespan` handler. `auth/router.py`, `auth/dependencies.py`, `auth/utils.py` all rewritten async against Beanie. JWT subject changed from `username` → user `ObjectId` string.
@@ -270,6 +293,19 @@ Self-play + MCTS training loop in `AlphaZero/alphaZero.py`. The ResNet model is 
 - `frontend/src/frontend_src-tree.txt` still references the deleted `AIAgent.js` / `RandomAgent.js` filenames. Stale, harmless — regenerate or delete it.
 - `frontend/.env.development.local` is git-ignored (created locally). New devs need to create it manually with `REACT_APP_API_HOST=http://127.0.0.1:8000`.
 - `backend/.env` is now git-ignored. Use `backend/.env.example` as the template for new local setups.
+
+### Next-session bug list
+
+User flagged some bugs to fix in a future session. **Capture them here as you discover them so we don't lose context between sessions.** Add bullets below; include exact reproduction steps + observed-vs-expected.
+
+- _(none captured yet — add when user describes them)_
+
+### Possible improvements parked for later
+
+These were discussed but deferred. Not bugs, just options:
+- **Tech-currency updates** — bump TypeScript 4→5, `@testing-library/user-event` 13→14, optionally migrate `react-scripts` (CRA, deprecated by React team Feb 2025) → Vite, optionally `react-router-dom` v6 → v7.
+- **Component-hierarchy cleanup** — `frontend/src/routes.js` is a redundant catch-all wrapper. Could be flattened. Provider stack itself is fine (only `AuthProvider` + `AppContext.Provider`; DevTools duplicates are `StrictMode`'s dev-only double-render, not a bug).
+- **Stockfish enhancements** — ship newer Stockfish binary in Dockerfile, add Maia engine option, expose Stockfish `Skill Level 0–20` for difficulty scaling, switch to `python-chess`'s `chess.engine.SimpleEngine` for multipv / streaming.
 
 ---
 
