@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { useAuth } from "./AuthContext";
 
+const ADMIN_EMAIL = "yinonked@gmail.com";
+
 export default function AuthForm({ initialMode = "login", onSuccess, onCancel, autoFocus = true }) {
     const { login, signup } = useAuth();
     const [mode, setMode] = useState(initialMode);
     const [form, setForm] = useState({ username: "", email: "", password: "" });
     const [submitting, setSubmitting] = useState(false);
     const [error, setError] = useState("");
+    const [forgotOpen, setForgotOpen] = useState(false);
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -67,6 +70,27 @@ export default function AuthForm({ initialMode = "login", onSuccess, onCancel, a
             />
 
             {error && <div className="auth-error">{error}</div>}
+
+            {mode === "login" && (
+                <div className="auth-forgot">
+                    <button
+                        type="button"
+                        className="auth-forgot-link"
+                        onClick={() => setForgotOpen((v) => !v)}
+                    >
+                        Forgot password?
+                    </button>
+                    {forgotOpen && (
+                        <div className="auth-forgot-panel" role="note">
+                            Password reset isn’t self-serve yet. Email{" "}
+                            <a href={`mailto:${ADMIN_EMAIL}?subject=Password%20reset`}>
+                                {ADMIN_EMAIL}
+                            </a>{" "}
+                            from the address you signed up with and we’ll reset it for you.
+                        </div>
+                    )}
+                </div>
+            )}
 
             <div className="auth-actions">
                 {onCancel && (

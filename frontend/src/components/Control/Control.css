@@ -36,6 +36,22 @@
     min-width: 0;
 }
 
+.engine-depth-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.engine-depth-control label {
+    flex-shrink: 0;
+}
+
+.engine-depth-control input[type="range"] {
+    flex: 1;
+    min-width: 0;
+}
+
 @media (min-width: 768px) {
     .control {
         width: 200px;

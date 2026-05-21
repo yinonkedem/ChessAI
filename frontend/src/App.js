@@ -15,6 +15,7 @@ import Control from "./components/Control/Control";
 import MovesList from "./components/Control/bits/MovesList";
 import TakeBack from "./components/Control/bits/TakeBack";
 import HintButton from "./components/Control/bits/HintButton";
+import EngineDepth from "./components/Control/bits/EngineDepth";
 
 import EngineAgents from "./ai/EngineAgents";
 import Toolbar from "./components/Toolbar/Toolbar";
@@ -32,6 +33,7 @@ function GamePage() {
             <Control>
                 <MovesList />
                 <TakeBack />
+                <EngineDepth />
                 <HintButton />
             </Control>
         </main>
