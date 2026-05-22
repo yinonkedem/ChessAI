@@ -178,27 +178,32 @@
     white-space: nowrap;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
     .toolbar {
-        gap: 0.35rem;
+        gap: 0.3rem;
+        padding-left: max(0.5rem, env(safe-area-inset-left));
+        padding-right: max(0.5rem, env(safe-area-inset-right));
     }
     .toolbar__btn {
-        padding: 0.6rem 0.85rem;
-        font-size: 0.95rem;
-        letter-spacing: 1px;
+        padding: 0.55rem 0.7rem;
+        font-size: 0.85rem;
+        letter-spacing: 0.4px;
+        min-width: 0;
     }
     .toolbar__brand {
-        padding: 0.5rem 0.6rem;
-        gap: 0.4rem;
+        padding: 0.4rem 0.5rem;
+        gap: 0.3rem;
     }
-    .toolbar__brand-mark { font-size: 1.4rem; }
-    .toolbar__brand-text { font-size: 1rem; letter-spacing: 1.2px; }
-    .toolbar__user-name { max-width: 5rem; font-size: 0.85rem; }
-    .toolbar__user { padding: 0.4rem 0.6rem; }
-}
-
-@media (max-width: 340px) {
+    .toolbar__brand-mark { font-size: 1.5rem; }
     .toolbar__brand-text { display: none; }
+    .toolbar__user-name { display: none; }
+    .toolbar__user {
+        padding: 0 0.5rem;
+        min-width: 0;
+        font-size: 1.1rem;
+    }
+    .toolbar__nav { gap: 0.3rem; }
+    .toolbar__auth { gap: 0.3rem; }
 }
 
 @media (min-width: 768px) {
