@@ -20,8 +20,8 @@
     border-bottom: 1px solid #ffffff20;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
     color: #fff;
-    font-family: 'Bebas Neue', 'Sofia Sans', sans-serif;
-    letter-spacing: 1px;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.5px;
 }
 
 .toolbar__brand {
@@ -57,9 +57,10 @@
 }
 
 .toolbar__brand-text {
-    font-size: 1.15rem;
+    font-family: 'Cinzel', serif;
+    font-size: 1.05rem;
     font-weight: 600;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
 }
 
 .toolbar__nav {
@@ -85,9 +86,10 @@
     padding: 0.7rem 1.2rem;
     border-radius: 0.6rem;
     font: inherit;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
     line-height: 1;
-    letter-spacing: 1.2px;
+    letter-spacing: 0.8px;
     min-height: 48px;
     min-width: 48px;
     cursor: pointer;

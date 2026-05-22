@@ -1,5 +1,4 @@
 @import './constants.css';
-@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap');
 
 .page {
     flex: 1;
@@ -14,7 +13,7 @@
         max(1rem, env(safe-area-inset-bottom))
         max(var(--board-pad), env(safe-area-inset-left));
     background: var(--bg-color);
-    font-family: 'Sofia Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
     width: 100%;
     box-sizing: border-box;
     animation: page-in 220ms ease both;
