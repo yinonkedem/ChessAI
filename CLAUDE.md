@@ -179,6 +179,12 @@ Self-play + MCTS training loop in `AlphaZero/alphaZero.py`. The ResNet model is 
 
 ## Audit & refactor — session log
 
+### Concurrent-engine deadlock fix (2026-05-27)
+
+- **Bug:** On the live site, after starting a game the AI would stop moving once the user touched the Hint controls. Root cause was **not** in the frontend hook — it was backend concurrency. `/engine/best-move` is a sync FastAPI endpoint, so Starlette runs it in a threadpool and serves overlapping requests on separate threads. The Stockfish engine is a single `@lru_cache` singleton wrapping one subprocess over stdin/stdout (not thread-safe). When an AI-move request and a Hint request overlap (easy on the slow free-tier backend), their UCI commands interleave on the same pipe — replies get crossed (reproduced: a black-to-move request returned the white move `e2e4`) and the pipe then **deadlocks permanently**, so the AI never moves again until the backend restarts.
+- **Fix:** Added a module-level `threading.Lock` in `backend/app/engines/stockfish.py` guarding the whole `set_fen_position → set_depth/get_best_move → get_evaluation` sequence so each request is atomic. Reproduced the deadlock and verified the fix with a concurrent two-thread script (sequential calls always worked; concurrent calls hung pre-fix, pass post-fix with correct per-position moves). `random_engine.py` needs no lock (fresh `chess.Board` per call, no shared engine state).
+- **Note:** kept the endpoint sync (CPU-bound blocking call belongs in the threadpool, not the event loop); the lock just serializes engine access.
+
 ### Render deploy + Stockfish tuning (2026-05-16)
 
 **Render bring-up fixes** (in order they hit):

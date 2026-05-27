@@ -1,4 +1,5 @@
 import os
+import threading
 from functools import lru_cache
 from pathlib import Path
 from shutil import which
@@ -43,17 +44,29 @@ def _stockfish() -> Stockfish:
     )
 
 
+# The Stockfish singleton wraps one subprocess driven over stdin/stdout, so it
+# is NOT thread-safe. FastAPI runs sync endpoints in a threadpool, so an AI move
+# and a Hint request can arrive at once; without this lock their UCI commands
+# interleave on the same pipe, crossing replies and eventually deadlocking the
+# engine. Serialize every engine interaction to keep each request atomic.
+_engine_lock = threading.Lock()
+
+
 def best_move(fen: str, depth: int = 15, movetime_ms: int | None = None):
     sf = _stockfish()
-    sf.set_fen_position(fen)
 
-    if movetime_ms is not None:
-        move = sf.get_best_move_time(movetime_ms)
-    else:
-        sf.set_depth(depth)
-        move = sf.get_best_move()
+    with _engine_lock:
+        sf.set_fen_position(fen)
+
+        if movetime_ms is not None:
+            move = sf.get_best_move_time(movetime_ms)
+        else:
+            sf.set_depth(depth)
+            move = sf.get_best_move()
+
+        evaluation = sf.get_evaluation()
 
     return {
         "best_move": move,
-        "info": sf.get_evaluation(),
+        "info": evaluation,
     }
