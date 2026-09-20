@@ -11,32 +11,40 @@
    "label": "Giuoco Piano",
    "eco": "C54",
    "name": "Italian Game: Classical Variation, Greco Gambit, Traditional Line",
-   "path": "e2e4e7e5g1f3b8c6f1c4f8c5c2c3g8f6d2d4e5d4c3d4c5b4c1d2",
-   "plies": 13
+   "path": "e2e4e7e5g1f3b8c6f1c4f8c5c2c3g8f6d2d4e5d4c3d4c5b4c1d2b4d2b1d2d7d5e4d5f6d5d1b3c6e7e1g1e8g8",
+   "plies": 22
   },
   {
    "id": "italian-giuoco-pianissimo",
    "label": "Giuoco Pianissimo",
    "eco": "C54",
    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
-   "path": "e2e4e7e5g1f3b8c6f1c4f8c5d2d3g8f6c2c3d7d6e1g1",
-   "plies": 11
+   "path": "e2e4e7e5g1f3b8c6f1c4f8c5d2d3g8f6c2c3d7d6e1g1a7a6f1e1c5a7b1d2e8g8h2h3c6e7d2f1e7g6f1g3",
+   "plies": 21
   },
   {
    "id": "italian-two-knights",
    "label": "Two Knights Defense",
-   "eco": "C58",
-   "name": "Italian Game: Two Knights Defense, Polerio Defense, Bishop Check Line",
-   "path": "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6",
-   "plies": 14
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense",
+   "path": "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5f8d6d2d4e4d3e5d3",
+   "plies": 23
   },
   {
    "id": "italian-evans-gambit",
    "label": "Evans Gambit",
    "eco": "C52",
-   "name": "Italian Game: Evans Gambit, Pierce Defense",
-   "path": "e2e4e7e5g1f3b8c6f1c4f8c5b2b4c5b4c2c3b4a5d2d4e5d4e1g1",
-   "plies": 13
+   "name": "Italian Game: Evans Gambit, Mieses Defense",
+   "path": "e2e4e7e5g1f3b8c6f1c4f8c5b2b4c5b4c2c3b4a5d2d4e5d4e1g1g8e7c3d4d7d5e4d5e7d5c1a3c8e6c4b5",
+   "plies": 21
+  },
+  {
+   "id": "italian-scotch-gambit-transposition",
+   "label": "Giuoco Pianissimo via 3...Nf6",
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+   "path": "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1a7a6c4b3c5a7b1d2e8g8h2h3c6e7f1e1",
+   "plies": 19
   }
  ],
  "nodes": {
@@ -117,7 +125,8 @@
     },
     {
      "uci": "g8f6",
-     "san": "Nf6"
+     "san": "Nf6",
+     "idea": "The quiet alternative to 4.Ng5 — far less theory and a rich middlegame."
     }
    ],
    "eco": "C50",
@@ -232,6 +241,127 @@
    "ply": 13,
    "turn": "b",
    "mine": false,
+   "replies": [
+    {
+     "uci": "b4d2",
+     "san": "Bxd2+"
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Greco Gambit, Traditional Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5c2c3g8f6d2d4e5d4c3d4c5b4c1d2b4d2": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1d2",
+     "san": "Nbxd2",
+     "idea": "Recapture with the knight so the other one keeps guarding the centre."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Greco Gambit, Traditional Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5c2c3g8f6d2d4e5d4c3d4c5b4c1d2b4d2b1d2": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d5",
+     "san": "d5"
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Greco Gambit, Traditional Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5c2c3g8f6d2d4e5d4c3d4c5b4c1d2b4d2b1d2d7d5": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e4d5",
+     "san": "exd5",
+     "idea": "Take — an isolated queen's pawn for Black is a long-term target."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Greco Gambit, Traditional Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5c2c3g8f6d2d4e5d4c3d4c5b4c1d2b4d2b1d2d7d5e4d5": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f6d5",
+     "san": "Nxd5"
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Greco Gambit, Traditional Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5c2c3g8f6d2d4e5d4c3d4c5b4c1d2b4d2b1d2d7d5e4d5f6d5": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1b3",
+     "san": "Qb3",
+     "idea": "Hit d5 and b7 at once. The queen is superb here."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Greco Gambit, Traditional Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5c2c3g8f6d2d4e5d4c3d4c5b4c1d2b4d2b1d2d7d5e4d5f6d5d1b3": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c6e7",
+     "san": "Nce7"
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Greco Gambit, Traditional Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5c2c3g8f6d2d4e5d4c3d4c5b4c1d2b4d2b1d2d7d5e4d5f6d5d1b3c6e7": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle. You are better developed with the freer game."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Greco Gambit, Traditional Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5c2c3g8f6d2d4e5d4c3d4c5b4c1d2b4d2b1d2d7d5e4d5f6d5d1b3c6e7e1g1": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Greco Gambit, Traditional Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5c2c3g8f6d2d4e5d4c3d4c5b4c1d2b4d2b1d2d7d5e4d5f6d5d1b3c6e7e1g1e8g8": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "C54",
@@ -295,6 +425,141 @@
    "ply": 11,
    "turn": "b",
    "mine": false,
+   "replies": [
+    {
+     "uci": "a7a6",
+     "san": "a6"
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5d2d3g8f6c2c3d7d6e1g1a7a6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1e1",
+     "san": "Re1",
+     "idea": "Support e4 and put the rook where the file will open."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5d2d3g8f6c2c3d7d6e1g1a7a6f1e1": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c5a7",
+     "san": "Ba7"
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5d2d3g8f6c2c3d7d6e1g1a7a6f1e1c5a7": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1d2",
+     "san": "Nbd2",
+     "idea": "The knight heads for f1 and then g3 — the classic Italian regrouping."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5d2d3g8f6c2c3d7d6e1g1a7a6f1e1c5a7b1d2": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5d2d3g8f6c2c3d7d6e1g1a7a6f1e1c5a7b1d2e8g8": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h2h3",
+     "san": "h3",
+     "idea": "Stop ...Bg4 before starting anything on the kingside."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5d2d3g8f6c2c3d7d6e1g1a7a6f1e1c5a7b1d2e8g8h2h3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c6e7",
+     "san": "Ne7"
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5d2d3g8f6c2c3d7d6e1g1a7a6f1e1c5a7b1d2e8g8h2h3c6e7": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2f1",
+     "san": "Nf1",
+     "idea": "Off to g3, joining the attack."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5d2d3g8f6c2c3d7d6e1g1a7a6f1e1c5a7b1d2e8g8h2h3c6e7d2f1": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7g6",
+     "san": "Ng6"
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5d2d3g8f6c2c3d7d6e1g1a7a6f1e1c5a7b1d2e8g8h2h3c6e7d2f1e7g6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1g3",
+     "san": "Ng3",
+     "idea": "The knight lands, eyeing f5 and h5."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5d2d3g8f6c2c3d7d6e1g1a7a6f1e1c5a7b1d2e8g8h2h3c6e7d2f1e7g6f1g3": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "C54",
@@ -309,6 +574,11 @@
      "uci": "f3g5",
      "san": "Ng5",
      "idea": "Crude but strong: two pieces now hit f7 and Black must react."
+    },
+    {
+     "uci": "d2d3",
+     "san": "d3",
+     "idea": "The quiet alternative to 4.Ng5 — far less theory and a much richer middlegame."
     }
    ],
    "eco": "C55",
@@ -412,10 +682,132 @@
    "ply": 14,
    "turn": "w",
    "mine": true,
-   "replies": [],
-   "end": true,
+   "replies": [
+    {
+     "uci": "b5e2",
+     "san": "Be2",
+     "idea": "Retreat and hold the extra pawn. Black has real play for it."
+    }
+   ],
    "eco": "C58",
    "name": "Italian Game: Two Knights Defense, Polerio Defense, Bishop Check Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h7h6",
+     "san": "h6"
+    }
+   ],
+   "eco": "C58",
+   "name": "Italian Game: Two Knights Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g5f3",
+     "san": "Nf3",
+     "idea": "Back to safety — the knight has done its job on g5."
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e5e4",
+     "san": "e4"
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f3e5",
+     "san": "Ne5",
+     "idea": "The best square: it blocks the diagonal and holds the extra pawn."
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8d6",
+     "san": "Bd6"
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5f8d6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4",
+     "idea": "Challenge the centre and offer to give the pawn back for development."
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5f8d6d2d4": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4d3",
+     "san": "exd3"
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5f8d6d2d4e4d3": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e5d3",
+     "san": "Nxd3",
+     "idea": "Recapture. Material is level and your structure is the sounder one."
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5f8d6d2d4e4d3e5d3": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
   },
   "e2e4e7e5g1f3b8c6f1c4f8c5b2b4": {
    "ply": 7,
@@ -502,10 +894,295 @@
    "ply": 13,
    "turn": "b",
    "mine": false,
+   "replies": [
+    {
+     "uci": "g8e7",
+     "san": "Nge7"
+    }
+   ],
+   "eco": "C52",
+   "name": "Italian Game: Evans Gambit, Pierce Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5b2b4c5b4c2c3b4a5d2d4e5d4e1g1g8e7": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c3d4",
+     "san": "cxd4",
+     "idea": "Rebuild the big centre with the extra tempo the gambit bought."
+    }
+   ],
+   "eco": "C52",
+   "name": "Italian Game: Evans Gambit, Mieses Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5b2b4c5b4c2c3b4a5d2d4e5d4e1g1g8e7c3d4": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d5",
+     "san": "d5"
+    }
+   ],
+   "eco": "C52",
+   "name": "Italian Game: Evans Gambit, Mieses Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5b2b4c5b4c2c3b4a5d2d4e5d4e1g1g8e7c3d4d7d5": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e4d5",
+     "san": "exd5",
+     "idea": "Open the position while you are the better developed side."
+    }
+   ],
+   "eco": "C52",
+   "name": "Italian Game: Evans Gambit, Mieses Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5b2b4c5b4c2c3b4a5d2d4e5d4e1g1g8e7c3d4d7d5e4d5": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7d5",
+     "san": "Nxd5"
+    }
+   ],
+   "eco": "C52",
+   "name": "Italian Game: Evans Gambit, Mieses Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5b2b4c5b4c2c3b4a5d2d4e5d4e1g1g8e7c3d4d7d5e4d5e7d5": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1a3",
+     "san": "Ba3",
+     "idea": "The bishop cuts the board in half and stops Black castling."
+    }
+   ],
+   "eco": "C52",
+   "name": "Italian Game: Evans Gambit, Mieses Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5b2b4c5b4c2c3b4a5d2d4e5d4e1g1g8e7c3d4d7d5e4d5e7d5c1a3": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8e6",
+     "san": "Be6"
+    }
+   ],
+   "eco": "C52",
+   "name": "Italian Game: Evans Gambit, Mieses Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5b2b4c5b4c2c3b4a5d2d4e5d4e1g1g8e7c3d4d7d5e4d5e7d5c1a3c8e6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c4b5",
+     "san": "Bb5",
+     "idea": "Pin the knight and keep Black's king stuck in the middle."
+    }
+   ],
+   "eco": "C52",
+   "name": "Italian Game: Evans Gambit, Mieses Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5b2b4c5b4c2c3b4a5d2d4e5d4e1g1g8e7c3d4d7d5e4d5e7d5c1a3c8e6c4b5": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "C52",
-   "name": "Italian Game: Evans Gambit, Pierce Defense"
+   "name": "Italian Game: Evans Gambit, Mieses Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8c5",
+     "san": "Bc5",
+     "idea": "Prepare d4 in your own time."
+    }
+   ],
+   "eco": "C55",
+   "name": "Italian Game: Two Knights Defense, Modern Bishop's Opening"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c2c3",
+     "san": "c3",
+     "idea": "Prepare d4 in your own time. Nothing is forced here."
+    }
+   ],
+   "eco": "C50",
+   "name": "Italian Game: Giuoco Pianissimo, Normal"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6",
+     "idea": "Castle."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle first, choose a plan second."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a7a6",
+     "san": "a6",
+     "idea": "Tuck the bishop away before ...Na5 can hit it."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1a7a6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c4b3",
+     "san": "Bb3",
+     "idea": "Tuck the bishop away before ...Na5 can chase it."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1a7a6c4b3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c5a7",
+     "san": "Ba7",
+     "idea": "Rerouting to f1 and g3, the Italian plan."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1a7a6c4b3c5a7": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1d2",
+     "san": "Nbd2",
+     "idea": "Heading for f1 and then g3 — the classic Italian regrouping."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1a7a6c4b3c5a7b1d2": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Stop ...Bg4."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1a7a6c4b3c5a7b1d2e8g8": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h2h3",
+     "san": "h3",
+     "idea": "Stop ...Bg4 before committing to anything."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1a7a6c4b3c5a7b1d2e8g8h2h3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c6e7",
+     "san": "Ne7",
+     "idea": "Support the coming d4."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1a7a6c4b3c5a7b1d2e8g8h2h3c6e7": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1e1",
+     "san": "Re1",
+     "idea": "Support the d4 break that is finally coming."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1a7a6c4b3c5a7b1d2e8g8h2h3c6e7f1e1": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
   }
  }
 }

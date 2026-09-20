@@ -1,0 +1,785 @@
+{
+ "id": "kings-indian-black",
+ "title": "King's Indian Defence",
+ "family": "vs 1. d4",
+ "blurb": "Hand White the centre, then blow it up. The sharpest way to play for a win with Black against 1.d4.",
+ "side": "b",
+ "difficulty": 4,
+ "lines": [
+  {
+   "id": "kid-mar-del-plata",
+   "label": "Classical, Mar del Plata",
+   "eco": "E98",
+   "name": "King's Indian Defense: Orthodox Variation, Classical System, Neo-Classical Line",
+   "path": "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7f3e1f6d7c1e3f7f5",
+   "plies": 20
+  },
+  {
+   "id": "kid-petrosian",
+   "label": "Classical, Petrosian",
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation, Stein Defense",
+   "path": "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6g5h4b8a6f3d2d8e8",
+   "plies": 20
+  },
+  {
+   "id": "kid-samisch",
+   "label": "Sämisch Variation",
+   "eco": "E87",
+   "name": "King's Indian Defense: Sämisch Variation, Closed Variation",
+   "path": "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6f2f3e8g8c1e3e7e5d4d5f6h5d1d2f7f5e1c1b8d7f1d3d7c5",
+   "plies": 20
+  },
+  {
+   "id": "kid-fianchetto",
+   "label": "Fianchetto Variation",
+   "eco": "E69",
+   "name": "King's Indian Defense: Fianchetto Variation, Classical Main Line",
+   "path": "d2d4g8f6c2c4g7g6b1c3f8g7g1f3d7d6g2g3e8g8f1g2b8d7e1g1e7e5e2e4c7c6h2h3d8b6f1e1e5d4",
+   "plies": 20
+  }
+ ],
+ "nodes": {
+  "": {
+   "ply": 0,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4"
+    }
+   ]
+  },
+  "d2d4": {
+   "ply": 1,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6",
+     "idea": "Control e4 and keep every option open — the move order matters less than the setup."
+    }
+   ],
+   "eco": "A40",
+   "name": "Queen's Pawn Game"
+  },
+  "d2d4g8f6": {
+   "ply": 2,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c2c4",
+     "san": "c4"
+    }
+   ],
+   "eco": "A45",
+   "name": "Indian Defense"
+  },
+  "d2d4g8f6c2c4": {
+   "ply": 3,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g7g6",
+     "san": "g6",
+     "idea": "Prepare the fianchetto. The bishop on g7 is the soul of the King's Indian."
+    }
+   ],
+   "eco": "A50",
+   "name": "Indian Defense: Normal Variation"
+  },
+  "d2d4g8f6c2c4g7g6": {
+   "ply": 4,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3"
+    }
+   ],
+   "eco": "E60",
+   "name": "Indian Defense: West Indian Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3": {
+   "ply": 5,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8g7",
+     "san": "Bg7",
+     "idea": "There it is. It stares down the long diagonal at White's queenside."
+    }
+   ],
+   "eco": "E61",
+   "name": "King's Indian Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7": {
+   "ply": 6,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e2e4",
+     "san": "e4"
+    },
+    {
+     "uci": "g1f3",
+     "san": "Nf3"
+    }
+   ],
+   "eco": "E61",
+   "name": "King's Indian Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4": {
+   "ply": 7,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6",
+     "idea": "Modest, but it stops e5 and prepares the real break later."
+    }
+   ],
+   "eco": "E70",
+   "name": "King's Indian Defense: Normal Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3"
+    },
+    {
+     "uci": "f2f3",
+     "san": "f3"
+    }
+   ],
+   "eco": "E70",
+   "name": "King's Indian Defense: Normal Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle first. You are going to need the king safe before the storm."
+    }
+   ],
+   "eco": "E90",
+   "name": "King's Indian Defense: Normal Variation, Rare Defenses"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1e2",
+     "san": "Be2"
+    }
+   ],
+   "eco": "E90",
+   "name": "King's Indian Defense: Normal Variation, Rare Defenses"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e7e5",
+     "san": "e5",
+     "idea": "The thematic strike. You invite White to close the centre, which is exactly what you want."
+    }
+   ],
+   "eco": "E91",
+   "name": "King's Indian Defense: Orthodox Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O"
+    },
+    {
+     "uci": "d4d5",
+     "san": "d5"
+    }
+   ],
+   "eco": "E92",
+   "name": "King's Indian Defense: Orthodox Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6",
+     "idea": "Add a third attacker to d4 and provoke the advance."
+    }
+   ],
+   "eco": "E94",
+   "name": "King's Indian Defense: Orthodox Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4d5",
+     "san": "d5"
+    }
+   ],
+   "eco": "E97",
+   "name": "King's Indian Defense: Orthodox Variation, Aronin-Taimanov Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c6e7",
+     "san": "Ne7",
+     "idea": "Retreat to the kingside. The knight is heading for g6 or c8, not staying put."
+    }
+   ],
+   "eco": "E97",
+   "name": "King's Indian Defense: Orthodox Variation, Aronin-Taimanov Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3e1",
+     "san": "Ne1"
+    }
+   ],
+   "eco": "E97",
+   "name": "King's Indian Defense: Orthodox Variation, Aronin-Taimanov Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7f3e1": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6d7",
+     "san": "Nd7",
+     "idea": "White plays on the queenside, you play on the kingside — and you get there first."
+    }
+   ],
+   "eco": "E98",
+   "name": "King's Indian Defense: Orthodox Variation, Classical System"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7f3e1f6d7": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1e3",
+     "san": "Be3"
+    }
+   ],
+   "eco": "E98",
+   "name": "King's Indian Defense: Orthodox Variation, Classical System"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7f3e1f6d7c1e3": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f7f5",
+     "san": "f5",
+     "idea": "The break the whole opening was built around. Everything now aims at White's king."
+    }
+   ],
+   "eco": "E98",
+   "name": "King's Indian Defense: Orthodox Variation, Classical System, Neo-Classical Line"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7f3e1f6d7c1e3f7f5": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "E98",
+   "name": "King's Indian Defense: Orthodox Variation, Classical System, Neo-Classical Line"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a7a5",
+     "san": "a5",
+     "idea": "The knight is going to c5, where it is a monster."
+    }
+   ],
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1g5",
+     "san": "Bg5"
+    }
+   ],
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation, Stein Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h7h6",
+     "san": "h6",
+     "idea": "Unpin and prepare ...Nh7 and ...f5, the standard regrouping."
+    }
+   ],
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation, Stein Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g5h4",
+     "san": "Bh4"
+    }
+   ],
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation, Stein Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6g5h4": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8a6",
+     "san": "Na6",
+     "idea": "The knight is heading for c5, the best square on the board."
+    }
+   ],
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation, Stein Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6g5h4b8a6": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3d2",
+     "san": "Nd2"
+    }
+   ],
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation, Stein Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6g5h4b8a6f3d2": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8e8",
+     "san": "Qe8",
+     "idea": "Unpin, and prepare ...Nh7 and ...f5 — the standard King's Indian regrouping."
+    }
+   ],
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation, Stein Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6g5h4b8a6f3d2d8e8": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation, Stein Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6f2f3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Against the Sämisch, strike immediately before White finishes castling long."
+    }
+   ],
+   "eco": "E80",
+   "name": "King's Indian Defense: Sämisch Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6f2f3e8g8": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1e3",
+     "san": "Be3"
+    }
+   ],
+   "eco": "E81",
+   "name": "King's Indian Defense: Sämisch Variation, Normal Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6f2f3e8g8c1e3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e7e5",
+     "san": "e5",
+     "idea": "Sidestep and clear the f-pawn's path — the knight is fine on the rim here."
+    }
+   ],
+   "eco": "E81",
+   "name": "King's Indian Defense: Sämisch Variation, Normal Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6f2f3e8g8c1e3e7e5": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4d5",
+     "san": "d5"
+    }
+   ],
+   "eco": "E85",
+   "name": "King's Indian Defense: Sämisch Variation, Orthodox Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6f2f3e8g8c1e3e7e5d4d5": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6h5",
+     "san": "Nh5",
+     "idea": "The break. With White's king heading queenside, every tempo counts."
+    }
+   ],
+   "eco": "E87",
+   "name": "King's Indian Defense: Sämisch Variation, Closed Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6f2f3e8g8c1e3e7e5d4d5f6h5": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1d2",
+     "san": "Qd2"
+    }
+   ],
+   "eco": "E87",
+   "name": "King's Indian Defense: Sämisch Variation, Closed Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6f2f3e8g8c1e3e7e5d4d5f6h5d1d2": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f7f5",
+     "san": "f5",
+     "idea": "Bring the last piece out, heading for c5."
+    }
+   ],
+   "eco": "E87",
+   "name": "King's Indian Defense: Sämisch Variation, Closed Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6f2f3e8g8c1e3e7e5d4d5f6h5d1d2f7f5": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1c1",
+     "san": "O-O-O"
+    }
+   ],
+   "eco": "E87",
+   "name": "King's Indian Defense: Sämisch Variation, Closed Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6f2f3e8g8c1e3e7e5d4d5f6h5d1d2f7f5e1c1": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8d7",
+     "san": "Nd7",
+     "idea": "The best square on the board: it hits e4 and eyes White's king."
+    }
+   ],
+   "eco": "E87",
+   "name": "King's Indian Defense: Sämisch Variation, Closed Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6f2f3e8g8c1e3e7e5d4d5f6h5d1d2f7f5e1c1b8d7": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1d3",
+     "san": "Bd3"
+    }
+   ],
+   "eco": "E87",
+   "name": "King's Indian Defense: Sämisch Variation, Closed Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6f2f3e8g8c1e3e7e5d4d5f6h5d1d2f7f5e1c1b8d7f1d3": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7c5",
+     "san": "Nc5",
+     "idea": "The best square on the board: it hits e4 and d3 and stares at White's king."
+    }
+   ],
+   "eco": "E87",
+   "name": "King's Indian Defense: Sämisch Variation, Closed Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6f2f3e8g8c1e3e7e5d4d5f6h5d1d2f7f5e1c1b8d7f1d3d7c5": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "E87",
+   "name": "King's Indian Defense: Sämisch Variation, Closed Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7g1f3": {
+   "ply": 7,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6",
+     "idea": "Support the coming ...e5 and keep the King's Indian shape whatever White does."
+    }
+   ],
+   "eco": "E61",
+   "name": "King's Indian Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7g1f3d7d6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g2g3",
+     "san": "g3",
+     "idea": "Develop toward the centre and support the coming ...e5."
+    }
+   ],
+   "eco": "E61",
+   "name": "King's Indian Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7g1f3d7d6g2g3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle. Against the fianchetto there is no storm coming, so take your time."
+    }
+   ],
+   "eco": "E62",
+   "name": "King's Indian Defense: Fianchetto Variation, Delayed Fianchetto"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7g1f3d7d6g2g3e8g8": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1g2",
+     "san": "Bg2",
+     "idea": "The break, now properly prepared."
+    }
+   ],
+   "eco": "E62",
+   "name": "King's Indian Defense: Fianchetto Variation, Delayed Fianchetto"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7g1f3d7d6g2g3e8g8f1g2": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8d7",
+     "san": "Nbd7",
+     "idea": "The knight supports ...e5 from here without blocking the c-pawn."
+    }
+   ],
+   "eco": "E62",
+   "name": "King's Indian Defense: Fianchetto Variation, Delayed Fianchetto"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7g1f3d7d6g2g3e8g8f1g2b8d7": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Solid. Against the fianchetto you play for ...Qb6 and queenside pressure, not a kingside attack."
+    }
+   ],
+   "eco": "E67",
+   "name": "King's Indian Defense: Fianchetto Variation, Debrecen Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7g1f3d7d6g2g3e8g8f1g2b8d7e1g1": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e7e5",
+     "san": "e5",
+     "idea": "The central break, now properly prepared."
+    }
+   ],
+   "eco": "E67",
+   "name": "King's Indian Defense: Fianchetto Variation, Debrecen Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7g1f3d7d6g2g3e8g8f1g2b8d7e1g1e7e5": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e2e4",
+     "san": "e4",
+     "idea": "Hit b2 and d4 while White's bishop is committed to g2."
+    }
+   ],
+   "eco": "E67",
+   "name": "King's Indian Defense: Fianchetto Variation, Classical Fianchetto"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7g1f3d7d6g2g3e8g8f1g2b8d7e1g1e7e5e2e4": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c7c6",
+     "san": "c6",
+     "idea": "Against the fianchetto you play in the centre, not for mate on the kingside."
+    }
+   ],
+   "eco": "E68",
+   "name": "King's Indian Defense: Fianchetto Variation, Classical Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7g1f3d7d6g2g3e8g8f1g2b8d7e1g1e7e5e2e4c7c6": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h2h3",
+     "san": "h3",
+     "idea": "Release the tension on your terms and play against the isolated centre."
+    }
+   ],
+   "eco": "E68",
+   "name": "King's Indian Defense: Fianchetto Variation, Classical Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7g1f3d7d6g2g3e8g8f1g2b8d7e1g1e7e5e2e4c7c6h2h3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8b6",
+     "san": "Qb6",
+     "idea": "Hit b2 and d4 while White's bishop is committed to defending on g2."
+    }
+   ],
+   "eco": "E69",
+   "name": "King's Indian Defense: Fianchetto Variation, Classical Main Line"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7g1f3d7d6g2g3e8g8f1g2b8d7e1g1e7e5e2e4c7c6h2h3d8b6": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1e1",
+     "san": "Re1"
+    }
+   ],
+   "eco": "E69",
+   "name": "King's Indian Defense: Fianchetto Variation, Classical Main Line"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7g1f3d7d6g2g3e8g8f1g2b8d7e1g1e7e5e2e4c7c6h2h3d8b6f1e1": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e5d4",
+     "san": "exd4",
+     "idea": "Release the tension and play against the loose centre."
+    }
+   ],
+   "eco": "E69",
+   "name": "King's Indian Defense: Fianchetto Variation, Classical Main Line"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7g1f3d7d6g2g3e8g8f1g2b8d7e1g1e7e5e2e4c7c6h2h3d8b6f1e1e5d4": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "E69",
+   "name": "King's Indian Defense: Fianchetto Variation, Classical Main Line"
+  }
+ }
+}

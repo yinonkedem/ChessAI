@@ -9,10 +9,10 @@
   {
    "id": "caro-classical",
    "label": "Classical Variation",
-   "eco": "B18",
-   "name": "Caro-Kann Defense: Classical Variation, Main Line",
-   "path": "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6",
-   "plies": 12
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation",
+   "path": "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3d1d3e7e6c1f4g8f6",
+   "plies": 22
   },
   {
    "id": "caro-advance",
@@ -37,6 +37,14 @@
    "name": "Caro-Kann Defense: Panov Attack",
    "path": "e2e4c7c6d2d4d7d5e4d5c6d5c2c4g8f6b1c3e7e6",
    "plies": 10
+  },
+  {
+   "id": "caro-karpov",
+   "label": "Karpov Variation (4...Nd7)",
+   "eco": "B17",
+   "name": "Caro-Kann Defense: Karpov Variation, Modern Main Line",
+   "path": "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5g8f6f1d3e7e6g1f3f8d6d1e2h7h6g5e4f6e4e2e4d7f6",
+   "plies": 20
   }
  ],
  "nodes": {
@@ -149,6 +157,11 @@
      "uci": "c8f5",
      "san": "Bf5",
      "idea": "The whole point of the Caro-Kann: this bishop gets out before ...e6 locks it in."
+    },
+    {
+     "uci": "b8d7",
+     "san": "Nd7",
+     "idea": "Karpov's move. Prepare ...Ngf6 without allowing the structure to be wrecked."
     }
    ],
    "eco": "B15",
@@ -201,7 +214,8 @@
    "replies": [
     {
      "uci": "h7h6",
-     "san": "h6"
+     "san": "h6",
+     "idea": "Develop toward e5 and prepare ...Ngf6 without blocking the bishop."
     }
    ],
    "eco": "B18",
@@ -211,10 +225,145 @@
    "ply": 12,
    "turn": "w",
    "mine": false,
-   "replies": [],
-   "end": true,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3"
+    }
+   ],
    "eco": "B18",
    "name": "Caro-Kann Defense: Classical Variation, Main Line"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8d7",
+     "san": "Nd7",
+     "idea": "Retreat. The bishop has done its job getting outside the chain."
+    }
+   ],
+   "eco": "B18",
+   "name": "Caro-Kann Defense: Classical Variation, Main Line"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h4h5",
+     "san": "h5"
+    }
+   ],
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g6h7",
+     "san": "Bh7",
+     "idea": "Trade off White's best attacker."
+    }
+   ],
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1d3",
+     "san": "Bd3"
+    }
+   ],
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h7d3",
+     "san": "Bxd3",
+     "idea": "Now ...e6 costs nothing."
+    }
+   ],
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1d3",
+     "san": "Qxd3"
+    }
+   ],
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3d1d3": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e7e6",
+     "san": "e6",
+     "idea": "Complete development into a solid, slightly passive but very sound position."
+    }
+   ],
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3d1d3e7e6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1f4",
+     "san": "Bf4"
+    }
+   ],
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3d1d3e7e6c1f4": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Ngf6",
+     "idea": "Complete development. Solid, slightly passive, and very hard to break."
+    }
+   ],
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3d1d3e7e6c1f4g8f6": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation"
   },
   "e2e4c7c6d2d4d7d5e4e5": {
    "ply": 5,
@@ -423,6 +572,177 @@
    "end": true,
    "eco": "B14",
    "name": "Caro-Kann Defense: Panov Attack"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7": {
+   "ply": 8,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4g5",
+     "san": "Ng5"
+    }
+   ],
+   "eco": "B17",
+   "name": "Caro-Kann Defense: Karpov Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Ngf6",
+     "idea": "Develop, now that recapturing on f6 costs White the pair of knights."
+    }
+   ],
+   "eco": "B17",
+   "name": "Caro-Kann Defense: Karpov Variation, Modern Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5g8f6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1d3",
+     "san": "Bd3"
+    }
+   ],
+   "eco": "B17",
+   "name": "Caro-Kann Defense: Karpov Variation, Modern Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5g8f6f1d3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e7e6",
+     "san": "e6",
+     "idea": "Solid and flexible."
+    }
+   ],
+   "eco": "B17",
+   "name": "Caro-Kann Defense: Karpov Variation, Modern Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5g8f6f1d3e7e6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "N1f3"
+    }
+   ],
+   "eco": "B17",
+   "name": "Caro-Kann Defense: Karpov Variation, Modern Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5g8f6f1d3e7e6g1f3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8d6",
+     "san": "Bd6",
+     "idea": "Develop and contest the b8-h2 diagonal."
+    }
+   ],
+   "eco": "B17",
+   "name": "Caro-Kann Defense: Karpov Variation, Modern Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5g8f6f1d3e7e6g1f3f8d6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1e2",
+     "san": "Qe2"
+    }
+   ],
+   "eco": "B17",
+   "name": "Caro-Kann Defense: Karpov Variation, Modern Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5g8f6f1d3e7e6g1f3f8d6d1e2": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h7h6",
+     "san": "h6",
+     "idea": "Question the knight before castling."
+    }
+   ],
+   "eco": "B17",
+   "name": "Caro-Kann Defense: Karpov Variation, Modern Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5g8f6f1d3e7e6g1f3f8d6d1e2h7h6": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g5e4",
+     "san": "Ne4"
+    }
+   ],
+   "eco": "B17",
+   "name": "Caro-Kann Defense: Karpov Variation, Modern Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5g8f6f1d3e7e6g1f3f8d6d1e2h7h6g5e4": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6e4",
+     "san": "Nxe4",
+     "idea": "Trade off the active piece."
+    }
+   ],
+   "eco": "B17",
+   "name": "Caro-Kann Defense: Karpov Variation, Modern Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5g8f6f1d3e7e6g1f3f8d6d1e2h7h6g5e4f6e4": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e2e4",
+     "san": "Qxe4"
+    }
+   ],
+   "eco": "B17",
+   "name": "Caro-Kann Defense: Karpov Variation, Modern Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5g8f6f1d3e7e6g1f3f8d6d1e2h7h6g5e4f6e4e2e4": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7f6",
+     "san": "Nf6",
+     "idea": "Recapture and reach a sound, solid game."
+    }
+   ],
+   "eco": "B17",
+   "name": "Caro-Kann Defense: Karpov Variation, Modern Main Line"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5g8f6f1d3e7e6g1f3f8d6d1e2h7h6g5e4f6e4e2e4d7f6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "B17",
+   "name": "Caro-Kann Defense: Karpov Variation, Modern Main Line"
   }
  }
 }

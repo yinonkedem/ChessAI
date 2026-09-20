@@ -11,8 +11,8 @@
    "label": "Main Line",
    "eco": "D02",
    "name": "Queen's Pawn Game: London System",
-   "path": "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3",
-   "plies": 13
+   "path": "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7g3d6c7d6f1d3e8g8e1g1b7b6d1e2c8b7f3e5",
+   "plies": 23
   },
   {
    "id": "london-vs-kid",
@@ -216,6 +216,141 @@
   },
   "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3": {
    "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8c7",
+     "san": "Qc7"
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g3d6",
+     "san": "Bxd6",
+     "idea": "Trade on your terms rather than allowing ...Bxg3 and doubled pawns."
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7g3d6": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c7d6",
+     "san": "Qxd6"
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7g3d6c7d6": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1d3",
+     "san": "Bd3",
+     "idea": "Develop the bishop to its best diagonal."
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7g3d6c7d6f1d3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7g3d6c7d6f1d3e8g8": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle."
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7g3d6c7d6f1d3e8g8e1g1": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b7b6",
+     "san": "b6"
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7g3d6c7d6f1d3e8g8e1g1b7b6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1e2",
+     "san": "Qe2",
+     "idea": "Connect and prepare e4."
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7g3d6c7d6f1d3e8g8e1g1b7b6d1e2": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8b7",
+     "san": "Bb7"
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7g3d6c7d6f1d3e8g8e1g1b7b6d1e2c8b7": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f3e5",
+     "san": "Ne5",
+     "idea": "The London knight lands on e5, supported and dominant."
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7g3d6c7d6f1d3e8g8e1g1b7b6d1e2c8b7f3e5": {
+   "ply": 23,
    "turn": "b",
    "mine": false,
    "replies": [],

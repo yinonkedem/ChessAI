@@ -10,9 +10,9 @@
    "id": "french-winawer",
    "label": "Winawer Variation",
    "eco": "C18",
-   "name": "French Defense: Winawer Variation, Advance Variation",
-   "path": "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7",
-   "plies": 12
+   "name": "French Defense: Winawer Variation, Poisoned Pawn Variation, Main Line",
+   "path": "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4d8c7g4g7h8g8g7h7c5d4g1e2b8c6f2f4c8d7",
+   "plies": 22
   },
   {
    "id": "french-classical",
@@ -37,6 +37,14 @@
    "name": "French Defense: Advance Variation, Paulsen Attack",
    "path": "e2e4e7e6d2d4d7d5e4e5c7c5c2c3b8c6g1f3d8b6",
    "plies": 10
+  },
+  {
+   "id": "french-rubinstein",
+   "label": "Rubinstein Variation (3...dxe4)",
+   "eco": "C10",
+   "name": "French Defense: Rubinstein Variation, Blackburne Defense",
+   "path": "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7g1f3g8f6e4f6d7f6f1d3c7c5d4c5f8c5e1g1e8g8",
+   "plies": 18
   }
  ],
  "nodes": {
@@ -127,6 +135,11 @@
      "uci": "g8f6",
      "san": "Nf6",
      "idea": "Develop and add pressure to e4."
+    },
+    {
+     "uci": "d5e4",
+     "san": "dxe4",
+     "idea": "Prepare ...Ngf6 without letting the pawns be doubled."
     }
    ],
    "eco": "C10",
@@ -217,10 +230,145 @@
    "ply": 12,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "d1g4",
+     "san": "Qg4"
+    }
+   ],
+   "eco": "C18",
+   "name": "French Defense: Winawer Variation, Advance Variation"
+  },
+  "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8c7",
+     "san": "Qc7",
+     "idea": "Defend g7 indirectly — you are giving up the pawn on purpose."
+    }
+   ],
+   "eco": "C18",
+   "name": "French Defense: Winawer Variation, Advance Variation"
+  },
+  "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4d8c7": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g4g7",
+     "san": "Qxg7"
+    }
+   ],
+   "eco": "C18",
+   "name": "French Defense: Winawer Variation, Poisoned Pawn Variation"
+  },
+  "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4d8c7g4g7": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h8g8",
+     "san": "Rg8",
+     "idea": "Grab the open file. The h-pawns are gone and your rook is the active one."
+    }
+   ],
+   "eco": "C18",
+   "name": "French Defense: Winawer Variation, Poisoned Pawn Variation"
+  },
+  "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4d8c7g4g7h8g8": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g7h7",
+     "san": "Qxh7"
+    }
+   ],
+   "eco": "C18",
+   "name": "French Defense: Winawer Variation, Poisoned Pawn Variation"
+  },
+  "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4d8c7g4g7h8g8g7h7": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c5d4",
+     "san": "cxd4",
+     "idea": "Take the centre while White's queen is off collecting pawns."
+    }
+   ],
+   "eco": "C18",
+   "name": "French Defense: Winawer Variation, Poisoned Pawn Variation"
+  },
+  "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4d8c7g4g7h8g8g7h7c5d4": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1e2",
+     "san": "Ne2"
+    }
+   ],
+   "eco": "C18",
+   "name": "French Defense: Winawer Variation, Poisoned Pawn Variation"
+  },
+  "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4d8c7g4g7h8g8g7h7c5d4g1e2": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nbc6",
+     "idea": "Develop with tempo on d4."
+    }
+   ],
+   "eco": "C18",
+   "name": "French Defense: Winawer Variation, Poisoned Pawn Variation, Main Line"
+  },
+  "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4d8c7g4g7h8g8g7h7c5d4g1e2b8c6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f2f4",
+     "san": "f4"
+    }
+   ],
+   "eco": "C18",
+   "name": "French Defense: Winawer Variation, Poisoned Pawn Variation, Main Line"
+  },
+  "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4d8c7g4g7h8g8g7h7c5d4g1e2b8c6f2f4": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8d7",
+     "san": "Bd7",
+     "idea": "Finish development and prepare to castle long."
+    }
+   ],
+   "eco": "C18",
+   "name": "French Defense: Winawer Variation, Poisoned Pawn Variation, Main Line"
+  },
+  "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4d8c7g4g7h8g8g7h7c5d4g1e2b8c6f2f4c8d7": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "C18",
-   "name": "French Defense: Winawer Variation, Advance Variation"
+   "name": "French Defense: Winawer Variation, Poisoned Pawn Variation, Main Line"
   },
   "e2e4e7e6d2d4d7d5b1c3g8f6": {
    "ply": 6,
@@ -492,6 +640,177 @@
    "end": true,
    "eco": "C02",
    "name": "French Defense: Advance Variation, Paulsen Attack"
+  },
+  "e2e4e7e6d2d4d7d5b1c3d5e4": {
+   "ply": 6,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c3e4",
+     "san": "Nxe4"
+    }
+   ],
+   "eco": "C10",
+   "name": "French Defense: Rubinstein Variation"
+  },
+  "e2e4e7e6d2d4d7d5b1c3d5e4c3e4": {
+   "ply": 7,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8d7",
+     "san": "Nd7",
+     "idea": "Develop."
+    }
+   ],
+   "eco": "C10",
+   "name": "French Defense: Rubinstein Variation"
+  },
+  "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7": {
+   "ply": 8,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3"
+    }
+   ],
+   "eco": "C10",
+   "name": "French Defense: Rubinstein Variation, Blackburne Defense"
+  },
+  "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7g1f3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Ngf6",
+     "idea": "Recapture with the knight, keeping the structure clean."
+    }
+   ],
+   "eco": "C10",
+   "name": "French Defense: Rubinstein Variation, Blackburne Defense"
+  },
+  "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7g1f3g8f6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4f6",
+     "san": "Nxf6+"
+    }
+   ],
+   "eco": "C10",
+   "name": "French Defense: Rubinstein Variation, Blackburne Defense"
+  },
+  "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7g1f3g8f6e4f6": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7f6",
+     "san": "Nxf6",
+     "idea": "Strike at the centre and free the position."
+    }
+   ],
+   "eco": "C10",
+   "name": "French Defense: Rubinstein Variation, Blackburne Defense"
+  },
+  "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7g1f3g8f6e4f6d7f6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1d3",
+     "san": "Bd3"
+    }
+   ],
+   "eco": "C10",
+   "name": "French Defense: Rubinstein Variation, Blackburne Defense"
+  },
+  "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7g1f3g8f6e4f6d7f6f1d3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c7c5",
+     "san": "c5",
+     "idea": "Recapture with the bishop, fully developed and equal."
+    }
+   ],
+   "eco": "C10",
+   "name": "French Defense: Rubinstein Variation, Blackburne Defense"
+  },
+  "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7g1f3g8f6e4f6d7f6f1d3c7c5": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4c5",
+     "san": "dxc5"
+    }
+   ],
+   "eco": "C10",
+   "name": "French Defense: Rubinstein Variation, Blackburne Defense"
+  },
+  "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7g1f3g8f6e4f6d7f6f1d3c7c5d4c5": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8c5",
+     "san": "Bxc5",
+     "idea": "Castle into a comfortable game."
+    }
+   ],
+   "eco": "C10",
+   "name": "French Defense: Rubinstein Variation, Blackburne Defense"
+  },
+  "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7g1f3g8f6e4f6d7f6f1d3c7c5d4c5f8c5": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O"
+    }
+   ],
+   "eco": "C10",
+   "name": "French Defense: Rubinstein Variation, Blackburne Defense"
+  },
+  "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7g1f3g8f6e4f6d7f6f1d3c7c5d4c5f8c5e1g1": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle into a comfortable, fully equal game."
+    }
+   ],
+   "eco": "C10",
+   "name": "French Defense: Rubinstein Variation, Blackburne Defense"
+  },
+  "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7g1f3g8f6e4f6d7f6f1d3c7c5d4c5f8c5e1g1e8g8": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C10",
+   "name": "French Defense: Rubinstein Variation, Blackburne Defense"
   }
  }
 }

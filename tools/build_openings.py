@@ -268,6 +268,7 @@ def main() -> int:
         repertoires, catalog = [], []
         seen_ids: Counter = Counter()
         all_conflicts: list = []
+        label_checks: list = []
 
         for rep in curation["repertoires"]:
             side = rep["side"]
@@ -277,6 +278,12 @@ def main() -> int:
             lines = [build_line(spec, side, table) for spec in rep["lines"]]
             for ln in lines:
                 seen_ids[ln["id"]] += 1
+
+            # Gather label info here, while the full line dicts still exist —
+            # the emitted `lines` are trimmed and no longer carry _labelOk.
+            for ln in lines:
+                if not ln["_labelOk"]:
+                    label_checks.append((rep["id"], ln["label"], ln["name"]))
 
             nodes, conflicts = build_tree(lines, side, table)
             all_conflicts.extend(conflicts)
@@ -337,16 +344,13 @@ def main() -> int:
         # Teaching the wrong variation name is a real defect, so flag any label
         # whose words don't appear in the official name the position resolves to.
         suspicious = []
-        for doc in repertoires:
-            for ln in doc["lines"]:
-                if ln.pop("_labelOk", False):
-                    continue  # curation says the mismatch is intentional
-                official = ln["name"].lower()
-                words = [w for w in re.findall(r"[a-z]{4,}", ln["label"].lower())
-                         if w not in {"line", "main", "defense", "defence", "variation",
-                                      "system", "attack", "with", "setup", "early"}]
-                if words and not any(w in official for w in words):
-                    suspicious.append((doc["id"], ln["label"], ln["name"]))
+        for rep_id, label, name in label_checks:
+            official = name.lower()
+            words = [w for w in re.findall(r"[a-z]{4,}", label.lower())
+                     if w not in {"line", "main", "defense", "defence", "variation",
+                                  "system", "attack", "with", "setup", "early"}]
+            if words and not any(w in official for w in words):
+                suspicious.append((rep_id, label, name))
         if suspicious:
             print("\n  LABEL CHECK — these labels don't match the position's official name:")
             for rep_id, label, name in suspicious:

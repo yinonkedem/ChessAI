@@ -1,0 +1,777 @@
+{
+ "id": "semi-slav-black",
+ "title": "Semi-Slav Defence",
+ "family": "vs 1. d4",
+ "blurb": "Rock solid, and it hides some of the sharpest theory in chess. Support d5 twice, then unleash ...c5 or ...b5.",
+ "side": "b",
+ "difficulty": 4,
+ "lines": [
+  {
+   "id": "semislav-meran",
+   "label": "Meran Variation",
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation, Wade Variation",
+   "path": "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1a7a6e3e4c6c5",
+   "plies": 20
+  },
+  {
+   "id": "semislav-moscow",
+   "label": "Moscow Variation",
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Moscow Variation",
+   "path": "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5f6d8f6e2e3b8d7f1d3g7g6e1g1f8g7e3e4d5e4",
+   "plies": 20
+  },
+  {
+   "id": "semislav-anti-moscow",
+   "label": "Anti-Moscow Gambit",
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit",
+   "path": "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7e1g1b8d7",
+   "plies": 20
+  },
+  {
+   "id": "semislav-botvinnik",
+   "label": "Botvinnik Variation",
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation",
+   "path": "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5h6g5h4g5b8d7",
+   "plies": 20
+  }
+ ],
+ "nodes": {
+  "": {
+   "ply": 0,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4"
+    }
+   ]
+  },
+  "d2d4": {
+   "ply": 1,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7d5",
+     "san": "d5",
+     "idea": "Meet 1.d4 head on."
+    }
+   ],
+   "eco": "A40",
+   "name": "Queen's Pawn Game"
+  },
+  "d2d4d7d5": {
+   "ply": 2,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c2c4",
+     "san": "c4"
+    }
+   ],
+   "eco": "D00",
+   "name": "Queen's Pawn Game"
+  },
+  "d2d4d7d5c2c4": {
+   "ply": 3,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c7c6",
+     "san": "c6",
+     "idea": "Support d5 with the c-pawn and keep the e-pawn flexible."
+    }
+   ],
+   "eco": "D06",
+   "name": "Queen's Gambit"
+  },
+  "d2d4d7d5c2c4c7c6": {
+   "ply": 4,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3"
+    }
+   ],
+   "eco": "D10",
+   "name": "Slav Defense"
+  },
+  "d2d4d7d5c2c4c7c6g1f3": {
+   "ply": 5,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6",
+     "idea": "Develop and fight for e4."
+    }
+   ],
+   "eco": "D11",
+   "name": "Slav Defense: Modern Line"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6": {
+   "ply": 6,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3"
+    }
+   ],
+   "eco": "D11",
+   "name": "Slav Defense: Modern Line"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3": {
+   "ply": 7,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e7e6",
+     "san": "e6",
+     "idea": "The Semi-Slav. Now d5 has two defenders and the bishop is shut in — temporarily."
+    }
+   ],
+   "eco": "D15",
+   "name": "Slav Defense: Three Knights Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e2e3",
+     "san": "e3"
+    },
+    {
+     "uci": "c1g5",
+     "san": "Bg5",
+     "idea": "Put the question to the bishop at once."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8d7",
+     "san": "Nbd7",
+     "idea": "Develop toward the centre and prepare ...dxc4."
+    }
+   ],
+   "eco": "D45",
+   "name": "Semi-Slav Defense: Main Line"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1d3",
+     "san": "Bd3"
+    }
+   ],
+   "eco": "D45",
+   "name": "Semi-Slav Defense: Normal Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d5c4",
+     "san": "dxc4",
+     "idea": "Take, now that the bishop has committed to d3."
+    }
+   ],
+   "eco": "D46",
+   "name": "Semi-Slav Defense: Main Line"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d3c4",
+     "san": "Bxc4"
+    }
+   ],
+   "eco": "D46",
+   "name": "Semi-Slav Defense: Main Line"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b7b5",
+     "san": "b5",
+     "idea": "Gain queenside space with tempo — the Meran's signature move."
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Semi-Meran Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c4d3",
+     "san": "Bd3"
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8b7",
+     "san": "Bb7",
+     "idea": "Finally the bishop breathes, on the long diagonal."
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O"
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation, Wade Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a7a6",
+     "san": "a6",
+     "idea": "Shore up b5 before breaking in the centre."
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation, Wade Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1a7a6": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e3e4",
+     "san": "e4"
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation, Wade Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1a7a6e3e4": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c6c5",
+     "san": "c5",
+     "idea": "The freeing break the whole variation was built toward."
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation, Wade Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1a7a6e3e4c6c5": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation, Wade Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h7h6",
+     "san": "h6",
+     "idea": "Grab the pawn. White gets a huge centre and you have to prove the extra material."
+    },
+    {
+     "uci": "d5c4",
+     "san": "dxc4",
+     "idea": "Take the pawn and prepare to hold it. This is the sharpest line in the book."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g5f6",
+     "san": "Bxf6",
+     "idea": "Recapture with the queen. You have the bishop pair to show for the doubled-up development."
+    },
+    {
+     "uci": "g5h4",
+     "san": "Bh4"
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5f6": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8f6",
+     "san": "Qxf6",
+     "idea": "Recapture with the queen — the bishop pair is your compensation."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5f6d8f6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e2e3",
+     "san": "e3",
+     "idea": "Develop and prepare ...e5 or ...g6."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Moscow Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5f6d8f6e2e3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8d7",
+     "san": "Nd7",
+     "idea": "Develop, and prepare either ...e5 or ...g6."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Moscow Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5f6d8f6e2e3b8d7": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1d3",
+     "san": "Bd3",
+     "idea": "Fianchetto, so the dark-squared bishop compensates for the trade."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Moscow Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5f6d8f6e2e3b8d7f1d3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g7g6",
+     "san": "g6",
+     "idea": "Fianchetto, so the dark-squared bishop replaces the one you traded."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Moscow Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5f6d8f6e2e3b8d7f1d3g7g6": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Onto the long diagonal."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Moscow Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5f6d8f6e2e3b8d7f1d3g7g6e1g1": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8g7",
+     "san": "Bg7",
+     "idea": "Onto the long diagonal."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Moscow Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5f6d8f6e2e3b8d7f1d3g7g6e1g1f8g7": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e3e4",
+     "san": "e4",
+     "idea": "Take and open the position for the two bishops."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Moscow Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5f6d8f6e2e3b8d7f1d3g7g6e1g1f8g7e3e4": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d5e4",
+     "san": "dxe4",
+     "idea": "Take, and open the position for your two bishops."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Moscow Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5f6d8f6e2e3b8d7f1d3g7g6e1g1f8g7e3e4d5e4": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Moscow Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d5c4",
+     "san": "dxc4",
+     "idea": "Kick the bishop before it can join an attack. Committal, but necessary."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e2e4",
+     "san": "e4"
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g7g5",
+     "san": "g5",
+     "idea": "Hold the extra pawn and gain space."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h4g3",
+     "san": "Bg3"
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b7b5",
+     "san": "b5",
+     "idea": "Onto the long diagonal, hitting e4."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1e2",
+     "san": "Be2"
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8b7",
+     "san": "Bb7",
+     "idea": "Finish development and prepare to castle long or stay flexible."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O"
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7e1g1": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8d7",
+     "san": "Nbd7",
+     "idea": "Finish development. The king can stay in the centre for now."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7e1g1b8d7": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e2e4",
+     "san": "e4",
+     "idea": "Defend c4 and grab queenside space."
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense Accepted"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b7b5",
+     "san": "b5",
+     "idea": "Defend c4 and take queenside space while you are at it."
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4e5",
+     "san": "e5",
+     "idea": "Challenge the pin before White builds up."
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h7h6",
+     "san": "h6",
+     "idea": "Challenge the pin before White can build up against it."
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g5h4",
+     "san": "Bh4",
+     "idea": "The critical move. You invite the piece sacrifice because the compensation is manageable."
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g7g5",
+     "san": "g5",
+     "idea": "The critical move. You invite the piece sacrifice because the compensation is survivable."
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3g5",
+     "san": "Nxg5",
+     "idea": "Take. You are a piece up and must now survive the attack."
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h6g5",
+     "san": "hxg5",
+     "idea": "Take. You are a piece up, and now you have to survive the attack."
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5h6g5": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h4g5",
+     "san": "Bxg5"
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5h6g5h4g5": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8d7",
+     "san": "Nbd7",
+     "idea": "Develop, and hold the extra piece together."
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5h6g5h4g5b8d7": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation"
+  }
+ }
+}

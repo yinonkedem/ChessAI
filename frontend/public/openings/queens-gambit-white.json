@@ -11,8 +11,8 @@
    "label": "Exchange Variation",
    "eco": "D35",
    "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation",
-   "path": "d2d4d7d5c2c4e7e6b1c3g8f6c4d5e6d5c1g5f8e7e2e3e8g8",
-   "plies": 12
+   "path": "d2d4d7d5c2c4e7e6b1c3g8f6c4d5e6d5c1g5f8e7e2e3e8g8d1c2f8e8f1d3b8d7g1e2d7f8e1g1c7c6a1b1",
+   "plies": 21
   },
   {
    "id": "qgd-orthodox",
@@ -25,10 +25,10 @@
   {
    "id": "qgd-tarrasch",
    "label": "Tarrasch Defense",
-   "eco": "D33",
-   "name": "Tarrasch Defense: Rubinstein System",
-   "path": "d2d4d7d5c2c4e7e6b1c3c7c5c4d5e6d5g1f3b8c6g2g3",
-   "plies": 11
+   "eco": "D34",
+   "name": "Tarrasch Defense: Classical Variation, Carlsbad Variation",
+   "path": "d2d4d7d5c2c4e7e6b1c3c7c5c4d5e6d5g1f3b8c6g2g3g8f6f1g2f8e7e1g1e8g8c1g5c5d4f3d4h7h6g5e3",
+   "plies": 21
   }
  ],
  "nodes": {
@@ -205,6 +205,128 @@
    "ply": 12,
    "turn": "w",
    "mine": true,
+   "replies": [
+    {
+     "uci": "d1c2",
+     "san": "Qc2",
+     "idea": "The queen belongs here, lining up with the bishop on the b1-h7 diagonal."
+    }
+   ],
+   "eco": "D35",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c4d5e6d5c1g5f8e7e2e3e8g8d1c2": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8e8",
+     "san": "Re8"
+    }
+   ],
+   "eco": "D35",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c4d5e6d5c1g5f8e7e2e3e8g8d1c2f8e8": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1d3",
+     "san": "Bd3",
+     "idea": "Complete the battery."
+    }
+   ],
+   "eco": "D35",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c4d5e6d5c1g5f8e7e2e3e8g8d1c2f8e8f1d3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b8d7",
+     "san": "Nbd7"
+    }
+   ],
+   "eco": "D35",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c4d5e6d5c1g5f8e7e2e3e8g8d1c2f8e8f1d3b8d7": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1e2",
+     "san": "Nge2",
+     "idea": "Ne2 rather than f3, keeping the f-pawn free to advance."
+    }
+   ],
+   "eco": "D35",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c4d5e6d5c1g5f8e7e2e3e8g8d1c2f8e8f1d3b8d7g1e2": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7f8",
+     "san": "Nf8"
+    }
+   ],
+   "eco": "D35",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c4d5e6d5c1g5f8e7e2e3e8g8d1c2f8e8f1d3b8d7g1e2d7f8": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle."
+    }
+   ],
+   "eco": "D35",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c4d5e6d5c1g5f8e7e2e3e8g8d1c2f8e8f1d3b8d7g1e2d7f8e1g1": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c7c6",
+     "san": "c6"
+    }
+   ],
+   "eco": "D35",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c4d5e6d5c1g5f8e7e2e3e8g8d1c2f8e8f1d3b8d7g1e2d7f8e1g1c7c6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a1b1",
+     "san": "Rab1",
+     "idea": "The minority attack: b4-b5 will wreck Black's queenside."
+    }
+   ],
+   "eco": "D35",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c4d5e6d5c1g5f8e7e2e3e8g8d1c2f8e8f1d3b8d7g1e2d7f8e1g1c7c6a1b1": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "D35",
@@ -385,10 +507,145 @@
    "ply": 11,
    "turn": "b",
    "mine": false,
-   "replies": [],
-   "end": true,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
    "eco": "D33",
    "name": "Tarrasch Defense: Rubinstein System"
+  },
+  "d2d4d7d5c2c4e7e6b1c3c7c5c4d5e6d5g1f3b8c6g2g3g8f6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1g2",
+     "san": "Bg2",
+     "idea": "Fianchetto, aiming straight at the isolated d5 pawn."
+    }
+   ],
+   "eco": "D33",
+   "name": "Tarrasch Defense: Prague Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3c7c5c4d5e6d5g1f3b8c6g2g3g8f6f1g2": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8e7",
+     "san": "Be7"
+    }
+   ],
+   "eco": "D33",
+   "name": "Tarrasch Defense: Prague Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3c7c5c4d5e6d5g1f3b8c6g2g3g8f6f1g2f8e7": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle."
+    }
+   ],
+   "eco": "D34",
+   "name": "Tarrasch Defense: Prague Variation, Main Line"
+  },
+  "d2d4d7d5c2c4e7e6b1c3c7c5c4d5e6d5g1f3b8c6g2g3g8f6f1g2f8e7e1g1": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "D34",
+   "name": "Tarrasch Defense: Prague Variation, Main Line"
+  },
+  "d2d4d7d5c2c4e7e6b1c3c7c5c4d5e6d5g1f3b8c6g2g3g8f6f1g2f8e7e1g1e8g8": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1g5",
+     "san": "Bg5",
+     "idea": "Pin the defender of d5."
+    }
+   ],
+   "eco": "D34",
+   "name": "Tarrasch Defense: Classical Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3c7c5c4d5e6d5g1f3b8c6g2g3g8f6f1g2f8e7e1g1e8g8c1g5": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c5d4",
+     "san": "cxd4"
+    }
+   ],
+   "eco": "D34",
+   "name": "Tarrasch Defense: Classical Variation, Carlsbad Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3c7c5c4d5e6d5g1f3b8c6g2g3g8f6f1g2f8e7e1g1e8g8c1g5c5d4": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f3d4",
+     "san": "Nxd4",
+     "idea": "Recapture with the knight, blockading in front of the isolani."
+    }
+   ],
+   "eco": "D34",
+   "name": "Tarrasch Defense: Classical Variation, Carlsbad Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3c7c5c4d5e6d5g1f3b8c6g2g3g8f6f1g2f8e7e1g1e8g8c1g5c5d4f3d4": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h7h6",
+     "san": "h6"
+    }
+   ],
+   "eco": "D34",
+   "name": "Tarrasch Defense: Classical Variation, Carlsbad Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3c7c5c4d5e6d5g1f3b8c6g2g3g8f6f1g2f8e7e1g1e8g8c1g5c5d4f3d4h7h6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g5e3",
+     "san": "Be3",
+     "idea": "Retreat and keep the blockade."
+    }
+   ],
+   "eco": "D34",
+   "name": "Tarrasch Defense: Classical Variation, Carlsbad Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3c7c5c4d5e6d5g1f3b8c6g2g3g8f6f1g2f8e7e1g1e8g8c1g5c5d4f3d4h7h6g5e3": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "D34",
+   "name": "Tarrasch Defense: Classical Variation, Carlsbad Variation"
   }
  }
 }

@@ -1,0 +1,683 @@
+{
+ "id": "benoni-black",
+ "title": "Modern Benoni",
+ "family": "vs 1. d4",
+ "blurb": "Unbalanced from move three. A queenside pawn majority and the long diagonal, against White's big centre.",
+ "side": "b",
+ "difficulty": 4,
+ "lines": [
+  {
+   "id": "benoni-classical",
+   "label": "Classical Variation",
+   "eco": "A78",
+   "name": "Benoni Defense: Classical Variation, Czerniak Defense",
+   "path": "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3f8g7f1e2e8g8e1g1f8e8f3d2b8a6",
+   "plies": 20
+  },
+  {
+   "id": "benoni-taimanov",
+   "label": "Taimanov Attack",
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation",
+   "path": "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8g1f3b8a6",
+   "plies": 20
+  },
+  {
+   "id": "benoni-fianchetto",
+   "label": "Fianchetto Variation",
+   "eco": "A62",
+   "name": "Benoni Defense: Fianchetto Variation",
+   "path": "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1f8e8f3d2a7a6",
+   "plies": 20
+  },
+  {
+   "id": "benoni-modern-main",
+   "label": "Modern Main Line",
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line",
+   "path": "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8g1f3b7b5d3b5f6e4",
+   "plies": 20
+  }
+ ],
+ "nodes": {
+  "": {
+   "ply": 0,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4"
+    }
+   ]
+  },
+  "d2d4": {
+   "ply": 1,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6",
+     "idea": "Control e4."
+    }
+   ],
+   "eco": "A40",
+   "name": "Queen's Pawn Game"
+  },
+  "d2d4g8f6": {
+   "ply": 2,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c2c4",
+     "san": "c4"
+    }
+   ],
+   "eco": "A45",
+   "name": "Indian Defense"
+  },
+  "d2d4g8f6c2c4": {
+   "ply": 3,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c7c5",
+     "san": "c5",
+     "idea": "Strike at once and refuse a symmetrical game."
+    }
+   ],
+   "eco": "A50",
+   "name": "Indian Defense: Normal Variation"
+  },
+  "d2d4g8f6c2c4c7c5": {
+   "ply": 4,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4d5",
+     "san": "d5"
+    }
+   ],
+   "eco": "A56",
+   "name": "Benoni Defense"
+  },
+  "d2d4g8f6c2c4c7c5d4d5": {
+   "ply": 5,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e7e6",
+     "san": "e6",
+     "idea": "Challenge the wedge before it settles."
+    }
+   ],
+   "eco": "A56",
+   "name": "Benoni Defense"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6": {
+   "ply": 6,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3"
+    }
+   ],
+   "eco": "A60",
+   "name": "Benoni Defense: Modern Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3": {
+   "ply": 7,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e6d5",
+     "san": "exd5",
+     "idea": "Recapture, opening the e-file."
+    }
+   ],
+   "eco": "A60",
+   "name": "Benoni Defense: Modern Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5": {
+   "ply": 8,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c4d5",
+     "san": "cxd5"
+    }
+   ],
+   "eco": "A60",
+   "name": "Benoni Defense: Modern Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6",
+     "idea": "Now the structure is set: you have the queenside majority."
+    }
+   ],
+   "eco": "A60",
+   "name": "Benoni Defense: Modern Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e2e4",
+     "san": "e4",
+     "idea": "Fianchetto anyway — White's f4 is aggressive but loosening."
+    },
+    {
+     "uci": "g1f3",
+     "san": "Nf3",
+     "idea": "The same fianchetto, whatever White chooses."
+    }
+   ],
+   "eco": "A60",
+   "name": "Benoni Defense: Modern Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g7g6",
+     "san": "g6",
+     "idea": "Prepare the fianchetto — the bishop on g7 is your best piece."
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3"
+    },
+    {
+     "uci": "f2f4",
+     "san": "f4",
+     "idea": "Block with this knight, keeping the bishop and the structure intact."
+    },
+    {
+     "uci": "h2h3",
+     "san": "h3",
+     "idea": "Castle."
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8g7",
+     "san": "Bg7",
+     "idea": "There it is, pointing at the heart of White's position."
+    }
+   ],
+   "eco": "A70",
+   "name": "Benoni Defense: Classical Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3f8g7": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1e2",
+     "san": "Be2"
+    }
+   ],
+   "eco": "A70",
+   "name": "Benoni Defense: Classical Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3f8g7f1e2": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle."
+    }
+   ],
+   "eco": "A70",
+   "name": "Benoni Defense: Classical Variation, Traditional Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3f8g7f1e2e8g8": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O"
+    }
+   ],
+   "eco": "A72",
+   "name": "Benoni Defense: Classical Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3f8g7f1e2e8g8e1g1": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8e8",
+     "san": "Re8",
+     "idea": "The rook belongs on the half-open e-file, pressing e4."
+    }
+   ],
+   "eco": "A73",
+   "name": "Benoni Defense: Classical Variation, Main Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3f8g7f1e2e8g8e1g1f8e8": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3d2",
+     "san": "Nd2"
+    }
+   ],
+   "eco": "A76",
+   "name": "Benoni Defense: Classical Variation, Czerniak Defense"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3f8g7f1e2e8g8e1g1f8e8f3d2": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8a6",
+     "san": "Na6",
+     "idea": "Heading for c7 and b5, where the knight supports the queenside break."
+    }
+   ],
+   "eco": "A77",
+   "name": "Benoni Defense: Classical Variation, Czerniak Defense, Tal Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3f8g7f1e2e8g8e1g1f8e8f3d2b8a6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "A78",
+   "name": "Benoni Defense: Classical Variation, Czerniak Defense"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8g7",
+     "san": "Bg7",
+     "idea": "Fianchetto anyway. White's f4 is aggressive, but it loosens the king."
+    }
+   ],
+   "eco": "A66",
+   "name": "Benoni Defense: Pawn Storm Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1b5",
+     "san": "Bb5+",
+     "idea": "Castle out of the centre while White is still setting up."
+    }
+   ],
+   "eco": "A66",
+   "name": "Benoni Defense: Pawn Storm Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6d7",
+     "san": "Nfd7",
+     "idea": "Block with this knight, keeping the bishop and the structure intact."
+    }
+   ],
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a2a4",
+     "san": "a4",
+     "idea": "The knight heads for c7, then b5 or e8 depending on White's plan."
+    }
+   ],
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle out of the centre while White is still arranging pieces."
+    }
+   ],
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3"
+    }
+   ],
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8g1f3": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8a6",
+     "san": "Na6",
+     "idea": "The knight heads for c7, then b5 or e8 depending on what White does."
+    }
+   ],
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8g1f3b8a6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g7g6",
+     "san": "g6",
+     "idea": "Fianchetto — the same plan whatever White sets up."
+    }
+   ],
+   "eco": "A60",
+   "name": "Benoni Defense: Modern Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g2g3",
+     "san": "g3",
+     "idea": "Castle."
+    }
+   ],
+   "eco": "A61",
+   "name": "Benoni Defense"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8g7",
+     "san": "Bg7",
+     "idea": "The bishop belongs here in every Benoni."
+    }
+   ],
+   "eco": "A61",
+   "name": "Benoni Defense: Fianchetto Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1g2",
+     "san": "Bg2",
+     "idea": "Pressure the e-file."
+    }
+   ],
+   "eco": "A61",
+   "name": "Benoni Defense: Fianchetto Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle."
+    }
+   ],
+   "eco": "A61",
+   "name": "Benoni Defense: Fianchetto Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Prepare ...b5, the queenside break that justifies the whole opening."
+    }
+   ],
+   "eco": "A62",
+   "name": "Benoni Defense: Fianchetto Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8e8",
+     "san": "Re8",
+     "idea": "The rook belongs on the half-open e-file."
+    }
+   ],
+   "eco": "A62",
+   "name": "Benoni Defense: Fianchetto Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1f8e8": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3d2",
+     "san": "Nd2"
+    }
+   ],
+   "eco": "A62",
+   "name": "Benoni Defense: Fianchetto Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1f8e8f3d2": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a7a6",
+     "san": "a6",
+     "idea": "Prepare ...b5 — the queenside break the whole opening is built on."
+    }
+   ],
+   "eco": "A62",
+   "name": "Benoni Defense: Fianchetto Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1f8e8f3d2a7a6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "A62",
+   "name": "Benoni Defense: Fianchetto Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8g7",
+     "san": "Bg7",
+     "idea": "Onto the long diagonal."
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1d3",
+     "san": "Bd3",
+     "idea": "The Benoni gambit. Offer the pawn to rip open the queenside and the centre together."
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle."
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3",
+     "idea": "Take the centre pawn back. The position is wild but the activity is real."
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8g1f3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b7b5",
+     "san": "b5",
+     "idea": "The Benoni gambit: rip the queenside open before White consolidates."
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8g1f3b7b5": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d3b5",
+     "san": "Bxb5"
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8g1f3b7b5d3b5": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6e4",
+     "san": "Nxe4",
+     "idea": "Take the centre pawn back. The position is wild, but the activity is real."
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8g1f3b7b5d3b5f6e4": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  }
+ }
+}

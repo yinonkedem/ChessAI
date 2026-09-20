@@ -185,6 +185,44 @@ Self-play + MCTS training loop in `AlphaZero/alphaZero.py`. The ResNet model is 
 
 ## Audit & refactor — session log
 
+### Book content expansion (2026-09-20)
+
+Filled the tree with real material. **9 repertoires → 14, 30 lines → 55, 193 cards → 349**, and
+every single learner move is now explained.
+
+| | before | after |
+|---|---|---|
+| Repertoires | 9 | **14** |
+| Lines | 30 | **55** |
+| Cards (positions to answer) | 193 | **349** |
+| Median line depth | 13 plies | **20 plies** |
+| Learner-side branches | 5 | **10** |
+| Moves with an explanation | 192/193 | **361/361 (100%)** |
+
+**New: five hard 1.d4 defences** — King's Indian (Mar del Plata, Petrosian, Sämisch, Fianchetto),
+Nimzo-Indian (Rubinstein, Classical, Kasparov, Sämisch), Grünfeld (Exchange, Bc4, Russian System,
+Fianchetto), Semi-Slav (Meran, Moscow, Anti-Moscow, Botvinnik), Modern Benoni (Classical, Taimanov,
+Fianchetto, Modern Main). All 20 lines run 20 plies.
+
+**Deepened 14 existing lines** from ~13 plies to ~18-22, and added 5 new lines that give the learner
+a genuine *choice* rather than diverging on the opponent's move: a Najdorf Scheveningen setup
+(6...e6 alongside 6...e5), the Caro-Kann Karpov (4...Nd7), the French Rubinstein (3...dxe4), a quiet
+4.d3 Italian, and the Ruy delayed exchange.
+
+**The build's own checks earned their keep again** — three of my hand-written continuations were
+illegal and the build refused them: `ruy-exchange` repeated a move it had already played,
+`scotch-gambit` had White recapturing with a knight that had just been captured, and
+`scotch-classical` played `Nc3` onto a square its own pawn occupied. The label check then caught two
+lines whose labels didn't match the position they reached.
+
+**A bug in the label check itself:** trimming the emitted `lines` (to stop duplicating move data now
+in `nodes`) silently broke `labelOk` suppression, because the flag lived on the full line dict. The
+check now runs before the trim.
+
+**Verified:** 153 Jest assertions — including that every one of the 726 tree positions is legal
+according to the app's own arbiter, which is what validates 20 lines of hand-written theory. Plus a
+browser run drilling the full 20-ply Nimzo-Indian as Black: 10/10 first time, "Perfect line!".
+
 ### Tree-shaped opening book (2026-09-20)
 
 Replaces the linear book. **A position can now have several correct replies**, which is what makes

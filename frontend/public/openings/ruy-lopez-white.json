@@ -9,10 +9,10 @@
   {
    "id": "ruy-closed",
    "label": "Closed, Morphy Defense",
-   "eco": "C90",
-   "name": "Ruy Lopez: Closed",
-   "path": "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8",
-   "plies": 16
+   "eco": "C99",
+   "name": "Ruy Lopez: Closed, Chigorin Defense, Panov System",
+   "path": "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3c6a5b3c2c7c5d2d4d8c7b1d2c5d4c3d4a5c6",
+   "plies": 26
   },
   {
    "id": "ruy-berlin",
@@ -26,9 +26,9 @@
    "id": "ruy-exchange",
    "label": "Exchange Variation",
    "eco": "C69",
-   "name": "Ruy Lopez: Exchange Variation, Normal Variation",
-   "path": "e2e4e7e5g1f3b8c6f1b5a7a6b5c6d7c6e1g1",
-   "plies": 9
+   "name": "Ruy Lopez: Exchange Variation, Gligoric Variation",
+   "path": "e2e4e7e5g1f3b8c6f1b5a7a6b5c6d7c6e1g1f7f6d2d4e5d4f3d4c6c5d4b3d8d1f1d1f8d6",
+   "plies": 18
   },
   {
    "id": "ruy-open",
@@ -37,6 +37,14 @@
    "name": "Ruy Lopez: Open, Main Line",
    "path": "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6",
    "plies": 16
+  },
+  {
+   "id": "ruy-delayed-exchange",
+   "label": "Delayed Exchange (Bayreuth)",
+   "eco": "C77",
+   "name": "Ruy Lopez: Morphy Defense, Bayreuth Variation",
+   "path": "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6a4c6d7c6d2d3f8d6b1d2e8g8d2c4f6d7e1g1",
+   "plies": 17
   }
  ],
  "nodes": {
@@ -149,7 +157,8 @@
    "replies": [
     {
      "uci": "g8f6",
-     "san": "Nf6"
+     "san": "Nf6",
+     "idea": "Take now, after ...Nf6 has committed the knight. Black's doubled pawns are permanent."
     }
    ],
    "eco": "C70",
@@ -164,6 +173,11 @@
      "uci": "e1g1",
      "san": "O-O",
      "idea": "Castle. You can afford to ignore the e4 pawn for one move."
+    },
+    {
+     "uci": "a4c6",
+     "san": "Bxc6",
+     "idea": "Take now that ...Nf6 has committed the knight. The doubled pawns are permanent."
     }
    ],
    "eco": "C70",
@@ -271,10 +285,145 @@
    "ply": 16,
    "turn": "w",
    "mine": true,
-   "replies": [],
-   "end": true,
+   "replies": [
+    {
+     "uci": "h2h3",
+     "san": "h3",
+     "idea": "The Spanish luft. Stop ...Bg4 before committing to d4."
+    }
+   ],
    "eco": "C90",
    "name": "Ruy Lopez: Closed"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c6a5",
+     "san": "Na5"
+    }
+   ],
+   "eco": "C92",
+   "name": "Ruy Lopez: Closed"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3c6a5": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b3c2",
+     "san": "Bc2",
+     "idea": "Step aside and keep the bishop aimed at h7 — this is why you retreated twice."
+    }
+   ],
+   "eco": "C97",
+   "name": "Ruy Lopez: Closed, Chigorin Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3c6a5b3c2": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c7c5",
+     "san": "c5"
+    }
+   ],
+   "eco": "C96",
+   "name": "Ruy Lopez: Closed, Chigorin Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3c6a5b3c2c7c5": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4",
+     "idea": "Now the big centre, fully prepared."
+    }
+   ],
+   "eco": "C96",
+   "name": "Ruy Lopez: Closed, Chigorin Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3c6a5b3c2c7c5d2d4": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8c7",
+     "san": "Qc7"
+    }
+   ],
+   "eco": "C96",
+   "name": "Ruy Lopez: Closed, Chigorin Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3c6a5b3c2c7c5d2d4d8c7": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1d2",
+     "san": "Nbd2",
+     "idea": "Bring the last piece out; the knight is going to f1 and g3."
+    }
+   ],
+   "eco": "C97",
+   "name": "Ruy Lopez: Closed, Chigorin Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3c6a5b3c2c7c5d2d4d8c7b1d2": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c5d4",
+     "san": "cxd4"
+    }
+   ],
+   "eco": "C97",
+   "name": "Ruy Lopez: Closed, Chigorin Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3c6a5b3c2c7c5d2d4d8c7b1d2c5d4": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c3d4",
+     "san": "cxd4",
+     "idea": "Recapture and keep the broad centre."
+    }
+   ],
+   "eco": "C97",
+   "name": "Ruy Lopez: Closed, Chigorin Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3c6a5b3c2c7c5d2d4d8c7b1d2c5d4c3d4": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a5c6",
+     "san": "Nc6"
+    }
+   ],
+   "eco": "C99",
+   "name": "Ruy Lopez: Closed, Chigorin Defense, Panov System"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3c6a5b3c2c7c5d2d4d8c7b1d2c5d4c3d4a5c6": {
+   "ply": 26,
+   "turn": "w",
+   "mine": true,
+   "replies": [],
+   "end": true,
+   "eco": "C99",
+   "name": "Ruy Lopez: Closed, Chigorin Defense, Panov System"
   },
   "e2e4e7e5g1f3b8c6f1b5g8f6": {
    "ply": 6,
@@ -451,10 +600,131 @@
    "ply": 9,
    "turn": "b",
    "mine": false,
+   "replies": [
+    {
+     "uci": "f7f6",
+     "san": "f6"
+    }
+   ],
+   "eco": "C69",
+   "name": "Ruy Lopez: Exchange Variation, Normal Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5c6d7c6e1g1f7f6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4",
+     "idea": "Break at once — Black's doubled pawns show up fastest in an endgame."
+    }
+   ],
+   "eco": "C69",
+   "name": "Ruy Lopez: Exchange Variation, Gligoric Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5c6d7c6e1g1f7f6d2d4": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e5d4",
+     "san": "exd4"
+    }
+   ],
+   "eco": "C69",
+   "name": "Ruy Lopez: Exchange Variation, Gligoric Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5c6d7c6e1g1f7f6d2d4e5d4": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f3d4",
+     "san": "Nxd4",
+     "idea": "Recapture centrally."
+    }
+   ],
+   "eco": "C69",
+   "name": "Ruy Lopez: Exchange Variation, Gligoric Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5c6d7c6e1g1f7f6d2d4e5d4f3d4": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c6c5",
+     "san": "c5"
+    }
+   ],
+   "eco": "C69",
+   "name": "Ruy Lopez: Exchange Variation, Gligoric Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5c6d7c6e1g1f7f6d2d4e5d4f3d4c6c5": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d4b3",
+     "san": "Nb3",
+     "idea": "Retreat and invite the queen trade you have been angling for."
+    }
+   ],
+   "eco": "C69",
+   "name": "Ruy Lopez: Exchange Variation, Gligoric Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5c6d7c6e1g1f7f6d2d4e5d4f3d4c6c5d4b3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8d1",
+     "san": "Qxd1"
+    }
+   ],
+   "eco": "C69",
+   "name": "Ruy Lopez: Exchange Variation, Gligoric Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5c6d7c6e1g1f7f6d2d4e5d4f3d4c6c5d4b3d8d1": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1d1",
+     "san": "Rxd1",
+     "idea": "Take. This endgame is White's whole plan in the Exchange Variation."
+    }
+   ],
+   "eco": "C69",
+   "name": "Ruy Lopez: Exchange Variation, Gligoric Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5c6d7c6e1g1f7f6d2d4e5d4f3d4c6c5d4b3d8d1f1d1": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8d6",
+     "san": "Bd6"
+    }
+   ],
+   "eco": "C69",
+   "name": "Ruy Lopez: Exchange Variation, Gligoric Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5c6d7c6e1g1f7f6d2d4e5d4f3d4c6c5d4b3d8d1f1d1f8d6": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "C69",
-   "name": "Ruy Lopez: Exchange Variation, Normal Variation"
+   "name": "Ruy Lopez: Exchange Variation, Gligoric Variation"
   },
   "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4": {
    "ply": 10,
@@ -545,6 +815,127 @@
    "end": true,
    "eco": "C80",
    "name": "Ruy Lopez: Open, Main Line"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6a4c6": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7c6",
+     "san": "dxc6",
+     "idea": "Solid. You are playing a long positional game, not for a quick hit."
+    }
+   ],
+   "eco": "C77",
+   "name": "Ruy Lopez: Morphy Defense, Bayreuth Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6a4c6d7c6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2d3",
+     "san": "d3",
+     "idea": "Solid. This is a long positional game, not a quick knockout."
+    }
+   ],
+   "eco": "C77",
+   "name": "Ruy Lopez: Morphy Defense, Bayreuth Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6a4c6d7c6d2d3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8d6",
+     "san": "Bd6",
+     "idea": "Reroute the knight toward e3 and d5."
+    }
+   ],
+   "eco": "C77",
+   "name": "Ruy Lopez: Morphy Defense, Bayreuth Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6a4c6d7c6d2d3f8d6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1d2",
+     "san": "Nbd2",
+     "idea": "Reroute the knight toward c4 and e3."
+    }
+   ],
+   "eco": "C77",
+   "name": "Ruy Lopez: Morphy Defense, Bayreuth Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6a4c6d7c6d2d3f8d6b1d2": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "The knight eyes e3 and the weak light squares."
+    }
+   ],
+   "eco": "C77",
+   "name": "Ruy Lopez: Morphy Defense, Bayreuth Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6a4c6d7c6d2d3f8d6b1d2e8g8": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2c4",
+     "san": "Nc4",
+     "idea": "The knight eyes e3 and the light squares Black's structure concedes."
+    }
+   ],
+   "eco": "C77",
+   "name": "Ruy Lopez: Morphy Defense, Bayreuth Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6a4c6d7c6d2d3f8d6b1d2e8g8d2c4": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f6d7",
+     "san": "Nd7",
+     "idea": "Castle and start manoeuvring."
+    }
+   ],
+   "eco": "C77",
+   "name": "Ruy Lopez: Morphy Defense, Bayreuth Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6a4c6d7c6d2d3f8d6b1d2e8g8d2c4f6d7": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle, and settle in to manoeuvre."
+    }
+   ],
+   "eco": "C77",
+   "name": "Ruy Lopez: Morphy Defense, Bayreuth Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6a4c6d7c6d2d3f8d6b1d2e8g8d2c4f6d7e1g1": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C77",
+   "name": "Ruy Lopez: Morphy Defense, Bayreuth Variation"
   }
  }
 }

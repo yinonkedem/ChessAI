@@ -30,7 +30,7 @@
           "label": "Giuoco Piano",
           "labelOk": true,
           "labelOkWhy": "the dataset calls this the Italian Classical Variation",
-          "moves": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. cxd4 Bb4+ 7. Bd2",
+          "moves": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. cxd4 Bb4+ 7. Bd2 Bxd2+ 8. Nbxd2 d5 9. exd5 Nxd5 10. Qb3 Nce7 11. O-O O-O",
           "ideas": [
             "Claim the centre and open lines for the bishop and queen.",
             null,
@@ -44,13 +44,21 @@
             null,
             "Recapture toward the centre. You have pawns on d4 and e4 — the ideal pair.",
             null,
-            "Block the check and offer a trade. Your centre survives intact."
+            "Block the check and offer a trade. Your centre survives intact.",
+            null,
+            "Recapture with the knight so the other one keeps guarding the centre.",
+            null,
+            "Take — an isolated queen's pawn for Black is a long-term target.",
+            null,
+            "Hit d5 and b7 at once. The queen is superb here.",
+            null,
+            "Castle. You are better developed with the freer game."
           ]
         },
         {
           "id": "italian-giuoco-pianissimo",
           "label": "Giuoco Pianissimo",
-          "moves": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. d3 Nf6 5. c3 d6 6. O-O",
+          "moves": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. d3 Nf6 5. c3 d6 6. O-O a6 7. Re1 Ba7 8. Nbd2 O-O 9. h3 Ne7 10. Nf1 Ng6 11. Ng3",
           "ideas": [
             null,
             null,
@@ -62,13 +70,23 @@
             null,
             "Prepare d4 at leisure. There is no hurry in a closed position.",
             null,
-            "Castle first, decide on a plan second."
+            "Castle first, decide on a plan second.",
+            null,
+            "Support e4 and put the rook where the file will open.",
+            null,
+            "The knight heads for f1 and then g3 — the classic Italian regrouping.",
+            null,
+            "Stop ...Bg4 before starting anything on the kingside.",
+            null,
+            "Off to g3, joining the attack.",
+            null,
+            "The knight lands, eyeing f5 and h5."
           ]
         },
         {
           "id": "italian-two-knights",
           "label": "Two Knights Defense",
-          "moves": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Na5 6. Bb5+ c6 7. dxc6 bxc6",
+          "moves": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Na5 6. Bb5+ c6 7. dxc6 bxc6 8. Be2 h6 9. Nf3 e4 10. Ne5 Bd6 11. d4 exd3 12. Nxd3",
           "ideas": [
             null,
             null,
@@ -82,13 +100,23 @@
             null,
             "Check, and hang on to the pawn a little longer.",
             null,
-            "Grab it. Black gets fast development for the pawn — play carefully."
+            "Grab it. Black gets fast development for the pawn — play carefully.",
+            null,
+            "Retreat and hold the extra pawn. Black has real play for it.",
+            null,
+            "Back to safety — the knight has done its job on g5.",
+            null,
+            "The best square: it blocks the diagonal and holds the extra pawn.",
+            null,
+            "Challenge the centre and offer to give the pawn back for development.",
+            null,
+            "Recapture. Material is level and your structure is the sounder one."
           ]
         },
         {
           "id": "italian-evans-gambit",
           "label": "Evans Gambit",
-          "moves": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4 Bxb4 5. c3 Ba5 6. d4 exd4 7. O-O",
+          "moves": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4 Bxb4 5. c3 Ba5 6. d4 exd4 7. O-O Nge7 8. cxd4 d5 9. exd5 Nxd5 10. Ba3 Be6 11. Bb5",
           "ideas": [
             null,
             null,
@@ -102,7 +130,41 @@
             null,
             "Cash the gambit in: a huge centre while Black is still untangling.",
             null,
-            "Castle. Down a pawn, but far ahead in development and with open lines."
+            "Castle. Down a pawn, but far ahead in development and with open lines.",
+            null,
+            "Rebuild the big centre with the extra tempo the gambit bought.",
+            null,
+            "Open the position while you are the better developed side.",
+            null,
+            "The bishop cuts the board in half and stops Black castling.",
+            null,
+            "Pin the knight and keep Black's king stuck in the middle."
+          ]
+        },
+        {
+          "id": "italian-scotch-gambit-transposition",
+          "label": "Giuoco Pianissimo via 3...Nf6",
+          "moves": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. d3 Bc5 5. c3 d6 6. O-O a6 7. Bb3 Ba7 8. Nbd2 O-O 9. h3 Ne7 10. Re1",
+          "ideas": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            "The quiet alternative to 4.Ng5 — far less theory and a rich middlegame.",
+            "The quiet alternative to 4.Ng5 — far less theory and a much richer middlegame.",
+            "Prepare d4 in your own time.",
+            "Prepare d4 in your own time. Nothing is forced here.",
+            "Castle.",
+            "Castle first, choose a plan second.",
+            "Tuck the bishop away before ...Na5 can hit it.",
+            "Tuck the bishop away before ...Na5 can chase it.",
+            "Rerouting to f1 and g3, the Italian plan.",
+            "Heading for f1 and then g3 — the classic Italian regrouping.",
+            "Stop ...Bg4.",
+            "Stop ...Bg4 before committing to anything.",
+            "Support the coming d4.",
+            "Support the d4 break that is finally coming."
           ]
         }
       ]
@@ -118,7 +180,7 @@
         {
           "id": "ruy-closed",
           "label": "Closed, Morphy Defense",
-          "moves": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 O-O",
+          "moves": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 O-O 9. h3 Na5 10. Bc2 c5 11. d4 Qc7 12. Nbd2 cxd4 13. cxd4 Nc6",
           "ideas": [
             "Claim the centre.",
             null,
@@ -134,7 +196,17 @@
             null,
             "Retreat again — this bishop is your best piece, don't let it go.",
             null,
-            "The Spanish move. Build a retreat square on c2 and prepare d4."
+            "The Spanish move. Build a retreat square on c2 and prepare d4.",
+            null,
+            "The Spanish luft. Stop ...Bg4 before committing to d4.",
+            null,
+            "Step aside and keep the bishop aimed at h7 — this is why you retreated twice.",
+            null,
+            "Now the big centre, fully prepared.",
+            null,
+            "Bring the last piece out; the knight is going to f1 and g3.",
+            null,
+            "Recapture and keep the broad centre."
           ]
         },
         {
@@ -162,7 +234,7 @@
         {
           "id": "ruy-exchange",
           "label": "Exchange Variation",
-          "moves": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Bxc6 dxc6 5. O-O",
+          "moves": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Bxc6 dxc6 5. O-O f6 6. d4 exd4 7. Nxd4 c5 8. Nb3 Qxd1 9. Rxd1 Bd6",
           "ideas": [
             null,
             null,
@@ -172,7 +244,15 @@
             null,
             "Trade at once. Black's doubled c-pawns are a permanent weakness in an endgame.",
             null,
-            "Castle. Your long-term plan is simply to reach an endgame."
+            "Castle. Your long-term plan is simply to reach an endgame.",
+            null,
+            "Break at once — Black's doubled pawns show up fastest in an endgame.",
+            null,
+            "Recapture centrally.",
+            null,
+            "Retreat and invite the queen trade you have been angling for.",
+            null,
+            "Take. This endgame is White's whole plan in the Exchange Variation."
           ]
         },
         {
@@ -196,6 +276,30 @@
             null,
             "Take, and accept a sharp middlegame with chances for both sides."
           ]
+        },
+        {
+          "id": "ruy-delayed-exchange",
+          "label": "Delayed Exchange (Bayreuth)",
+          "moves": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. Bxc6 dxc6 6. d3 Bd6 7. Nbd2 O-O 8. Nc4 Nd7 9. O-O",
+          "ideas": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Take now, after ...Nf6 has committed the knight. Black's doubled pawns are permanent.",
+            "Take now that ...Nf6 has committed the knight. The doubled pawns are permanent.",
+            "Solid. You are playing a long positional game, not for a quick hit.",
+            "Solid. This is a long positional game, not a quick knockout.",
+            "Reroute the knight toward e3 and d5.",
+            "Reroute the knight toward c4 and e3.",
+            "The knight eyes e3 and the weak light squares.",
+            "The knight eyes e3 and the light squares Black's structure concedes.",
+            "Castle and start manoeuvring.",
+            "Castle, and settle in to manoeuvre."
+          ]
         }
       ]
     },
@@ -210,7 +314,7 @@
         {
           "id": "scotch-classical",
           "label": "Classical Variation",
-          "moves": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Bc5 5. Be3 Qf6 6. c3 Nge7",
+          "moves": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Bc5 5. Be3 Qf6 6. c3 Nge7 7. Bc4 Ne5 8. Be2 Qg6 9. O-O d6 10. Nd2 a6 11. Kh1",
           "ideas": [
             "Claim the centre.",
             null,
@@ -222,7 +326,17 @@
             null,
             "Defend the knight and blunt the bishop on the a7-g1 diagonal.",
             null,
-            "Shore up d4 and give the knight a home."
+            "Shore up d4 and give the knight a home.",
+            null,
+            "Develop with a hit on f7 before Black consolidates.",
+            null,
+            "Step back — you provoked ...Ne5 and gained time.",
+            null,
+            "Castle out of the pin on the e-file.",
+            null,
+            "Finish development.",
+            null,
+            "Sidestep the g1-a7 diagonal before opening the f-file."
           ]
         },
         {
@@ -248,7 +362,7 @@
         {
           "id": "scotch-gambit",
           "label": "Scotch Gambit",
-          "moves": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Bc4 Nf6 5. e5 d5 6. Bb5 Ne4 7. Nxd4",
+          "moves": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Bc4 Nf6 5. e5 d5 6. Bb5 Ne4 7. Nxd4 Bc5 8. Be3 Bd7 9. Bxc6 bxc6 10. O-O O-O 11. f3",
           "ideas": [
             null,
             null,
@@ -262,7 +376,15 @@
             null,
             "Pin the knight and hold the tension.",
             null,
-            "Finally regain the pawn, with a free game and the better structure."
+            "Finally regain the pawn, with a free game.",
+            null,
+            "Meet the pin by defending d4 and offering a trade.",
+            null,
+            "Trade off the defender of the knight on e4.",
+            null,
+            "Castle.",
+            null,
+            "Kick the knight and claim the centre."
           ]
         }
       ]
@@ -278,7 +400,7 @@
         {
           "id": "qgd-exchange",
           "label": "Exchange Variation",
-          "moves": "1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 Be7 6. e3 O-O",
+          "moves": "1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 Be7 6. e3 O-O 7. Qc2 Re8 8. Bd3 Nbd7 9. Nge2 Nf8 10. O-O c6 11. Rab1",
           "ideas": [
             "Take your share of the centre and open lines for the dark-squared bishop.",
             null,
@@ -290,7 +412,17 @@
             null,
             "Pin the knight, making d5 harder to hold.",
             null,
-            "Modest, but it frees the light-squared bishop and secures d4."
+            "Modest, but it frees the light-squared bishop and secures d4.",
+            null,
+            "The queen belongs here, lining up with the bishop on the b1-h7 diagonal.",
+            null,
+            "Complete the battery.",
+            null,
+            "Ne2 rather than f3, keeping the f-pawn free to advance.",
+            null,
+            "Castle.",
+            null,
+            "The minority attack: b4-b5 will wreck Black's queenside."
           ]
         },
         {
@@ -316,7 +448,7 @@
         {
           "id": "qgd-tarrasch",
           "label": "Tarrasch Defense",
-          "moves": "1. d4 d5 2. c4 e6 3. Nc3 c5 4. cxd5 exd5 5. Nf3 Nc6 6. g3",
+          "moves": "1. d4 d5 2. c4 e6 3. Nc3 c5 4. cxd5 exd5 5. Nf3 Nc6 6. g3 Nf6 7. Bg2 Be7 8. O-O O-O 9. Bg5 cxd4 10. Nxd4 h6 11. Be3",
           "ideas": [
             null,
             null,
@@ -328,7 +460,17 @@
             null,
             "Develop and put more pressure on d4 and d5.",
             null,
-            "The critical plan: fianchetto and blockade the isolated pawn on d5."
+            "The critical plan: fianchetto and blockade the isolated pawn on d5.",
+            null,
+            "Fianchetto, aiming straight at the isolated d5 pawn.",
+            null,
+            "Castle.",
+            null,
+            "Pin the defender of d5.",
+            null,
+            "Recapture with the knight, blockading in front of the isolani.",
+            null,
+            "Retreat and keep the blockade."
           ]
         }
       ]
@@ -344,7 +486,7 @@
         {
           "id": "london-main",
           "label": "Main Line",
-          "moves": "1. d4 d5 2. Bf4 Nf6 3. e3 e6 4. Nf3 c5 5. c3 Nc6 6. Nbd2 Bd6 7. Bg3",
+          "moves": "1. d4 d5 2. Bf4 Nf6 3. e3 e6 4. Nf3 c5 5. c3 Nc6 6. Nbd2 Bd6 7. Bg3 Qc7 8. Bxd6 Qxd6 9. Bd3 O-O 10. O-O b6 11. Qe2 Bb7 12. Ne5",
           "ideas": [
             "Take the centre.",
             null,
@@ -358,7 +500,17 @@
             null,
             "The knight belongs here, keeping the c-pawn's path clear.",
             null,
-            "Sidestep the trade and keep the bishop on its best diagonal."
+            "Sidestep the trade and keep the bishop on its best diagonal.",
+            null,
+            "Trade on your terms rather than allowing ...Bxg3 and doubled pawns.",
+            null,
+            "Develop the bishop to its best diagonal.",
+            null,
+            "Castle.",
+            null,
+            "Connect and prepare e4.",
+            null,
+            "The London knight lands on e5, supported and dominant."
           ]
         },
         {
@@ -410,7 +562,7 @@
         {
           "id": "najdorf-english-attack",
           "label": "English Attack (6. Be3)",
-          "moves": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Be3 e5 7. Nb3 Be6",
+          "moves": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Be3 e5 7. Nb3 Be6 8. f3 Be7 9. Qd2 O-O 10. O-O-O Nbd7 11. g4 b5",
           "ideas": [
             null,
             "Fight for the centre without symmetry — this is why the Sicilian wins games.",
@@ -425,7 +577,15 @@
             null,
             "Grab the centre now that White's knight has nowhere good to go.",
             null,
-            "Cover d5, the one square Black's structure genuinely concedes."
+            "Cover d5, the one square Black's structure genuinely concedes.",
+            null,
+            "Develop and prepare to castle out of the coming storm.",
+            null,
+            "Castle first — White is going long and you need to be ready.",
+            null,
+            "Bring the last piece out, heading for b6 or c5.",
+            null,
+            "Start your own attack. Opposite castling is a race, and you are not behind."
           ]
         },
         {
@@ -470,6 +630,33 @@
             "Against a quiet bishop move, take the centre at once.",
             null,
             "Develop and castle quickly — White has no fast attack here."
+          ]
+        },
+        {
+          "id": "najdorf-scheveningen",
+          "label": "Scheveningen setup (6...e6)",
+          "moves": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Be3 e6 7. f3 b5 8. Qd2 Nbd7 9. g4 Nb6 10. O-O-O Bb7",
+          "ideas": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "The other main move. A small centre instead of ...e5 — no d5 hole, but less space.",
+            null,
+            "Gain queenside space immediately; this is a race.",
+            null,
+            "Develop and prepare ...Nb6 or ...Ne5.",
+            null,
+            "Heading for c4, straight at White's king.",
+            null,
+            "The bishop joins on the long diagonal."
           ]
         }
       ]
@@ -539,7 +726,7 @@
         {
           "id": "french-winawer",
           "label": "Winawer Variation",
-          "moves": "1. e4 e6 2. d4 d5 3. Nc3 Bb4 4. e5 c5 5. a3 Bxc3+ 6. bxc3 Ne7",
+          "moves": "1. e4 e6 2. d4 d5 3. Nc3 Bb4 4. e5 c5 5. a3 Bxc3+ 6. bxc3 Ne7 7. Qg4 Qc7 8. Qxg7 Rg8 9. Qxh7 cxd4 10. Ne2 Nbc6 11. f4 Bd7",
           "ideas": [
             null,
             "Prepare to challenge e4 with ...d5 next move.",
@@ -552,7 +739,17 @@
             null,
             "Take. White's doubled c-pawns are a long-term target.",
             null,
-            "Route the knight to f5 where it hits the weak d4 pawn."
+            "Route the knight to f5 where it hits the weak d4 pawn.",
+            null,
+            "Defend g7 indirectly — you are giving up the pawn on purpose.",
+            null,
+            "Grab the open file. The h-pawns are gone and your rook is the active one.",
+            null,
+            "Take the centre while White's queen is off collecting pawns.",
+            null,
+            "Develop with tempo on d4.",
+            null,
+            "Finish development and prepare to castle long."
           ]
         },
         {
@@ -609,6 +806,31 @@
             null,
             "The standard plan: the queen hits d4 again and eyes the weak b2 pawn."
           ]
+        },
+        {
+          "id": "french-rubinstein",
+          "label": "Rubinstein Variation (3...dxe4)",
+          "moves": "1. e4 e6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nd7 5. Nf3 Ngf6 6. Nxf6+ Nxf6 7. Bd3 c5 8. dxc5 Bxc5 9. O-O O-O",
+          "ideas": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Prepare ...Ngf6 without letting the pawns be doubled.",
+            null,
+            "Develop.",
+            null,
+            "Recapture with the knight, keeping the structure clean.",
+            null,
+            "Strike at the centre and free the position.",
+            null,
+            "Recapture with the bishop, fully developed and equal.",
+            null,
+            "Castle into a comfortable game.",
+            null,
+            "Castle into a comfortable, fully equal game."
+          ]
         }
       ]
     },
@@ -623,7 +845,7 @@
         {
           "id": "caro-classical",
           "label": "Classical Variation",
-          "moves": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5 5. Ng3 Bg6 6. h4 h6",
+          "moves": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5 5. Ng3 Bg6 6. h4 h6 7. Nf3 Nd7 8. h5 Bh7 9. Bd3 Bxd3 10. Qxd3 e6 11. Bf4 Ngf6",
           "ideas": [
             null,
             "Prepare ...d5 — but with the c-pawn, so the bishop stays free.",
@@ -634,7 +856,19 @@
             null,
             "The whole point of the Caro-Kann: this bishop gets out before ...e6 locks it in.",
             null,
-            "Retreat and keep the good bishop."
+            "Retreat and keep the good bishop.",
+            null,
+            "Develop toward e5 and prepare ...Ngf6 without blocking the bishop.",
+            null,
+            "Retreat. The bishop has done its job getting outside the chain.",
+            null,
+            "Trade off White's best attacker.",
+            null,
+            "Now ...e6 costs nothing.",
+            null,
+            "Complete development into a solid, slightly passive but very sound position.",
+            null,
+            "Complete development. Solid, slightly passive, and very hard to break."
           ]
         },
         {
@@ -687,6 +921,631 @@
             null,
             "Solid. Hold d5 and accept a rich middlegame."
           ]
+        },
+        {
+          "id": "caro-karpov",
+          "label": "Karpov Variation (4...Nd7)",
+          "moves": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nd7 5. Ng5 Ngf6 6. Bd3 e6 7. N1f3 Bd6 8. Qe2 h6 9. Ne4 Nxe4 10. Qxe4 Nf6",
+          "ideas": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Karpov's move. Prepare ...Ngf6 without allowing the structure to be wrecked.",
+            null,
+            "Develop, now that recapturing on f6 costs White the pair of knights.",
+            null,
+            "Solid and flexible.",
+            null,
+            "Develop and contest the b8-h2 diagonal.",
+            null,
+            "Question the knight before castling.",
+            null,
+            "Trade off the active piece.",
+            null,
+            "Recapture and reach a sound, solid game."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kings-indian-black",
+      "side": "b",
+      "title": "King's Indian Defence",
+      "family": "vs 1. d4",
+      "blurb": "Hand White the centre, then blow it up. The sharpest way to play for a win with Black against 1.d4.",
+      "difficulty": 4,
+      "lines": [
+        {
+          "id": "kid-mar-del-plata",
+          "label": "Classical, Mar del Plata",
+          "moves": "1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. O-O Nc6 8. d5 Ne7 9. Ne1 Nd7 10. Be3 f5",
+          "ideas": [
+            null,
+            "Control e4 and keep every option open — the move order matters less than the setup.",
+            null,
+            "Prepare the fianchetto. The bishop on g7 is the soul of the King's Indian.",
+            null,
+            "There it is. It stares down the long diagonal at White's queenside.",
+            null,
+            "Modest, but it stops e5 and prepares the real break later.",
+            null,
+            "Castle first. You are going to need the king safe before the storm.",
+            null,
+            "The thematic strike. You invite White to close the centre, which is exactly what you want.",
+            null,
+            "Add a third attacker to d4 and provoke the advance.",
+            null,
+            "Retreat to the kingside. The knight is heading for g6 or c8, not staying put.",
+            null,
+            "White plays on the queenside, you play on the kingside — and you get there first.",
+            null,
+            "The break the whole opening was built around. Everything now aims at White's king."
+          ]
+        },
+        {
+          "id": "kid-petrosian",
+          "label": "Classical, Petrosian",
+          "moves": "1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. d5 a5 8. Bg5 h6 9. Bh4 Na6 10. Nd2 Qe8",
+          "ideas": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "The knight is going to c5, where it is a monster.",
+            null,
+            "Unpin and prepare ...Nh7 and ...f5, the standard regrouping.",
+            null,
+            "The knight is heading for c5, the best square on the board.",
+            null,
+            "Unpin, and prepare ...Nh7 and ...f5 — the standard King's Indian regrouping."
+          ]
+        },
+        {
+          "id": "kid-samisch",
+          "label": "Sämisch Variation",
+          "moves": "1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. f3 O-O 6. Be3 e5 7. d5 Nh5 8. Qd2 f5 9. O-O-O Nd7 10. Bd3 Nc5",
+          "ideas": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Against the Sämisch, strike immediately before White finishes castling long.",
+            null,
+            "Sidestep and clear the f-pawn's path — the knight is fine on the rim here.",
+            null,
+            "The break. With White's king heading queenside, every tempo counts.",
+            null,
+            "Bring the last piece out, heading for c5.",
+            null,
+            "The best square on the board: it hits e4 and eyes White's king.",
+            null,
+            "The best square on the board: it hits e4 and d3 and stares at White's king."
+          ]
+        },
+        {
+          "id": "kid-fianchetto",
+          "label": "Fianchetto Variation",
+          "moves": "1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. Nf3 d6 5. g3 O-O 6. Bg2 Nbd7 7. O-O e5 8. e4 c6 9. h3 Qb6 10. Re1 exd4",
+          "ideas": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Support the coming ...e5 and keep the King's Indian shape whatever White does.",
+            "Develop toward the centre and support the coming ...e5.",
+            "Castle. Against the fianchetto there is no storm coming, so take your time.",
+            "The break, now properly prepared.",
+            "The knight supports ...e5 from here without blocking the c-pawn.",
+            "Solid. Against the fianchetto you play for ...Qb6 and queenside pressure, not a kingside attack.",
+            "The central break, now properly prepared.",
+            "Hit b2 and d4 while White's bishop is committed to g2.",
+            "Against the fianchetto you play in the centre, not for mate on the kingside.",
+            "Release the tension on your terms and play against the isolated centre.",
+            "Hit b2 and d4 while White's bishop is committed to defending on g2.",
+            null,
+            "Release the tension and play against the loose centre."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nimzo-indian-black",
+      "side": "b",
+      "title": "Nimzo-Indian Defence",
+      "family": "vs 1. d4",
+      "blurb": "Pin the knight, trade it for the bishop, and play against the damaged pawns. The most respected answer to 1.d4.",
+      "difficulty": 3,
+      "lines": [
+        {
+          "id": "nimzo-rubinstein",
+          "label": "Rubinstein, 4.e3",
+          "moves": "1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. e3 O-O 5. Bd3 d5 6. Nf3 c5 7. O-O Nc6 8. a3 Bxc3 9. bxc3 dxc4 10. Bxc4 Qc7",
+          "ideas": [
+            null,
+            "Control e4 without committing a pawn.",
+            null,
+            "Support d5 and open a path for the bishop.",
+            null,
+            "The Nimzo. Pin the knight that guards e4 — this is the whole idea.",
+            null,
+            "Castle and let White declare their plan.",
+            null,
+            "Now challenge the centre directly.",
+            null,
+            "Hit d4 from the flank. You are attacking the centre, not occupying it.",
+            null,
+            "One more attacker on d4.",
+            null,
+            "Take. White gets the bishop pair, you get doubled c-pawns to work against.",
+            null,
+            "Release the tension and gain a tempo on the bishop.",
+            null,
+            "The queen eyes c3 and the half-open c-file. That pawn is the target for the rest of the game."
+          ],
+          "labelOk": true,
+          "labelOkWhy": "4.e3 is the Rubinstein; the dataset names the deep position Bernstein Defense"
+        },
+        {
+          "id": "nimzo-classical",
+          "label": "Classical, 4.Qc2",
+          "moves": "1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 O-O 5. a3 Bxc3+ 6. Qxc3 b6 7. Bg5 Bb7 8. f3 h6 9. Bh4 d5 10. e3 Nbd7",
+          "ideas": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Castle. White has spent a tempo avoiding doubled pawns; use it.",
+            "Castle. White spent a tempo avoiding doubled pawns — spend yours developing.",
+            "Trade on your terms — you were going to anyway.",
+            "Trade on your terms — you were going to anyway.",
+            "Fianchetto. Without the dark-squared bishop, the light squares are your territory.",
+            "Fianchetto. Without the dark-squared bishop, the light squares are your territory.",
+            "The bishop belongs on the long diagonal, staring at e4.",
+            "The bishop belongs on the long diagonal.",
+            "Ask the question before White is ready to answer it.",
+            "Ask the question now that f3 has loosened White's kingside.",
+            "Strike in the centre now that White's kingside is loosened.",
+            "Strike in the centre while White's kingside is committed.",
+            "Complete development and prepare ...c5.",
+            "Complete development and prepare ...c5."
+          ]
+        },
+        {
+          "id": "nimzo-kasparov",
+          "label": "Kasparov Variation, 4.Nf3",
+          "moves": "1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Nf3 b6 5. Bg5 Bb7 6. e3 h6 7. Bh4 Bxc3+ 8. bxc3 d6 9. Nd2 Nbd7 10. f3 Qe7",
+          "ideas": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Fianchetto immediately — the two bishops will cover both centre colours.",
+            "Fianchetto. The two bishops between them cover both colour complexes.",
+            "Onto the long diagonal.",
+            "Onto the long diagonal, staring straight at e4.",
+            "Put the question to the bishop before castling.",
+            "Put the question to the bishop before you commit the king.",
+            "Trade now, while it costs White a pawn structure.",
+            "Trade now, while it still costs White the pawn structure.",
+            "Solid. You are heading for ...e5 and a blockade on the dark squares.",
+            "Solid. You are heading for ...e5 and a blockade on the dark squares.",
+            "Support the coming ...e5.",
+            "Support ...e5, the freeing break.",
+            "Connect the rooks and prepare to castle either side.",
+            "Connect the rooks and keep both castling options open."
+          ],
+          "labelOk": true,
+          "labelOkWhy": "4.Nf3 is the Kasparov Variation; the dataset files it as Three Knights"
+        },
+        {
+          "id": "nimzo-samisch",
+          "label": "Sämisch Variation, 4.a3",
+          "moves": "1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. a3 Bxc3+ 5. bxc3 c5 6. e3 Nc6 7. Bd3 O-O 8. Ne2 b6 9. e4 Ne8 10. O-O Ba6",
+          "ideas": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Take. White has spent a whole tempo to inflict doubled pawns on themselves.",
+            "Take. White burned a whole tempo to inflict doubled pawns on themselves.",
+            "Hit the base of the pawn chain at once.",
+            "Hit the base of the pawn chain at once.",
+            "Pile onto d4 — White's centre looks big but it is brittle.",
+            "Pile onto d4. White's centre looks imposing but it is brittle.",
+            "Castle before the centre opens.",
+            "Castle before the centre opens.",
+            "Prepare ...Ba6, trading off the bishop that defends c4.",
+            "Prepare ...Ba6, trading off the one bishop that defends c4.",
+            "Sidestep so the f-pawn and the dark-squared squares stay flexible.",
+            "Sidestep, so the knight can reroute and the dark squares stay covered.",
+            "The point. Trade light-squared bishops and the c4 pawn has no defender.",
+            "The point of the whole plan: trade light-squared bishops and c4 has no defender left."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grunfeld-black",
+      "side": "b",
+      "title": "Grünfeld Defence",
+      "family": "vs 1. d4",
+      "blurb": "Let White build a huge centre, then take it apart. Hypermodern chess in its purest form.",
+      "difficulty": 4,
+      "lines": [
+        {
+          "id": "grunfeld-exchange",
+          "label": "Exchange Variation",
+          "moves": "1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7 7. Nf3 c5 8. Rb1 O-O 9. Be2 cxd4 10. cxd4 Qa5+",
+          "ideas": [
+            null,
+            "Control e4.",
+            null,
+            "Prepare the fianchetto.",
+            null,
+            "The Grünfeld move. Strike at the centre before White finishes building it.",
+            null,
+            "Recapture with the knight, ready to trade it off.",
+            null,
+            "Trade. White gets the big centre — that is the deal you are making.",
+            null,
+            "Now the bishop takes aim at that centre down the long diagonal.",
+            null,
+            "Hit d4. The centre is a target, not something to admire.",
+            null,
+            "Castle and let White's rook wander.",
+            null,
+            "Release the tension.",
+            null,
+            "Check, win a tempo, and target the loose pawns."
+          ]
+        },
+        {
+          "id": "grunfeld-bc4",
+          "label": "Exchange, Classical Bc4",
+          "moves": "1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7 7. Bc4 c5 8. Ne2 Nc6 9. Be3 O-O 10. O-O Bg4",
+          "ideas": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Castle.",
+            null,
+            "Pin the knight that holds d4 together.",
+            null,
+            "Castle before the position opens.",
+            null,
+            "Pin the knight that holds d4 together."
+          ]
+        },
+        {
+          "id": "grunfeld-russian",
+          "label": "Russian System",
+          "moves": "1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. Nf3 Bg7 5. Qb3 dxc4 6. Qxc4 O-O 7. e4 a6 8. Be2 b5 9. Qb3 c5 10. dxc5 Bb7",
+          "ideas": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Take. White regains it, but the queen ends up on an awkward square.",
+            null,
+            "Castle into safety before starting anything.",
+            null,
+            "Prepare ...b5, gaining space and hitting the queen.",
+            null,
+            "Gain a tempo on the queen and clamp the queenside.",
+            null,
+            "Strike at the centre.",
+            null,
+            "Onto the long diagonal, eyeing e4.",
+            null,
+            "Onto the long diagonal, eyeing e4 and the loose queenside."
+          ]
+        },
+        {
+          "id": "grunfeld-fianchetto",
+          "label": "Fianchetto Variation",
+          "moves": "1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. Nf3 Bg7 5. g3 O-O 6. Bg2 c6 7. O-O Bf5 8. Ne5 Nfd7 9. Nxd7 Nxd7 10. h3 Nb6",
+          "ideas": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Castle — against a quiet fianchetto there is no rush.",
+            null,
+            "Solid. Hold d5 rather than letting White dissolve it.",
+            "Castle — against a quiet fianchetto there is no need to hurry.",
+            "The bishop gets out before ...e6 would shut it in.",
+            "Solid. Hold d5 rather than letting White dissolve the centre on their terms.",
+            "Challenge the strong knight.",
+            "The bishop gets out before ...e6 would shut it in.",
+            "Recapture toward the centre.",
+            "Challenge the strong knight at once.",
+            "Head for c4 or d5, the squares White's setup concedes.",
+            "Recapture toward the centre.",
+            null,
+            "Head for c4 or d5 — the squares White's setup has conceded."
+          ],
+          "labelOk": true,
+          "labelOkWhy": "the dataset files 4.Nf3+g3 as the Three Knights Variation"
+        }
+      ]
+    },
+    {
+      "id": "semi-slav-black",
+      "side": "b",
+      "title": "Semi-Slav Defence",
+      "family": "vs 1. d4",
+      "blurb": "Rock solid, and it hides some of the sharpest theory in chess. Support d5 twice, then unleash ...c5 or ...b5.",
+      "difficulty": 4,
+      "lines": [
+        {
+          "id": "semislav-meran",
+          "label": "Meran Variation",
+          "moves": "1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. Nc3 e6 5. e3 Nbd7 6. Bd3 dxc4 7. Bxc4 b5 8. Bd3 Bb7 9. O-O a6 10. e4 c5",
+          "ideas": [
+            null,
+            "Meet 1.d4 head on.",
+            null,
+            "Support d5 with the c-pawn and keep the e-pawn flexible.",
+            null,
+            "Develop and fight for e4.",
+            null,
+            "The Semi-Slav. Now d5 has two defenders and the bishop is shut in — temporarily.",
+            null,
+            "Develop toward the centre and prepare ...dxc4.",
+            null,
+            "Take, now that the bishop has committed to d3.",
+            null,
+            "Gain queenside space with tempo — the Meran's signature move.",
+            null,
+            "Finally the bishop breathes, on the long diagonal.",
+            null,
+            "Shore up b5 before breaking in the centre.",
+            null,
+            "The freeing break the whole variation was built toward."
+          ]
+        },
+        {
+          "id": "semislav-moscow",
+          "label": "Moscow Variation",
+          "moves": "1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. Nc3 e6 5. Bg5 h6 6. Bxf6 Qxf6 7. e3 Nd7 8. Bd3 g6 9. O-O Bg7 10. e4 dxe4",
+          "ideas": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Put the question to the bishop at once.",
+            null,
+            "Recapture with the queen. You have the bishop pair to show for the doubled-up development.",
+            "Recapture with the queen — the bishop pair is your compensation.",
+            "Develop and prepare ...e5 or ...g6.",
+            "Develop, and prepare either ...e5 or ...g6.",
+            "Fianchetto, so the dark-squared bishop compensates for the trade.",
+            "Fianchetto, so the dark-squared bishop replaces the one you traded.",
+            "Onto the long diagonal.",
+            "Onto the long diagonal.",
+            "Take and open the position for the two bishops.",
+            "Take, and open the position for your two bishops."
+          ]
+        },
+        {
+          "id": "semislav-anti-moscow",
+          "label": "Anti-Moscow Gambit",
+          "moves": "1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. Nc3 e6 5. Bg5 h6 6. Bh4 dxc4 7. e4 g5 8. Bg3 b5 9. Be2 Bb7 10. O-O Nbd7",
+          "ideas": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Grab the pawn. White gets a huge centre and you have to prove the extra material.",
+            null,
+            "Kick the bishop before it can join an attack. Committal, but necessary.",
+            null,
+            "Hold the extra pawn and gain space.",
+            null,
+            "Onto the long diagonal, hitting e4.",
+            null,
+            "Finish development and prepare to castle long or stay flexible.",
+            null,
+            "Finish development. The king can stay in the centre for now."
+          ]
+        },
+        {
+          "id": "semislav-botvinnik",
+          "label": "Botvinnik Variation",
+          "moves": "1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. Nc3 e6 5. Bg5 dxc4 6. e4 b5 7. e5 h6 8. Bh4 g5 9. Nxg5 hxg5 10. Bxg5 Nbd7",
+          "ideas": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Take the pawn and prepare to hold it. This is the sharpest line in the book.",
+            "Defend c4 and grab queenside space.",
+            "Defend c4 and take queenside space while you are at it.",
+            "Challenge the pin before White builds up.",
+            "Challenge the pin before White can build up against it.",
+            "The critical move. You invite the piece sacrifice because the compensation is manageable.",
+            "The critical move. You invite the piece sacrifice because the compensation is survivable.",
+            "Take. You are a piece up and must now survive the attack.",
+            "Take. You are a piece up, and now you have to survive the attack.",
+            null,
+            "Develop, and hold the extra piece together."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "benoni-black",
+      "side": "b",
+      "title": "Modern Benoni",
+      "family": "vs 1. d4",
+      "blurb": "Unbalanced from move three. A queenside pawn majority and the long diagonal, against White's big centre.",
+      "difficulty": 4,
+      "lines": [
+        {
+          "id": "benoni-classical",
+          "label": "Classical Variation",
+          "moves": "1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Nf3 Bg7 8. Be2 O-O 9. O-O Re8 10. Nd2 Na6",
+          "ideas": [
+            null,
+            "Control e4.",
+            null,
+            "Strike at once and refuse a symmetrical game.",
+            null,
+            "Challenge the wedge before it settles.",
+            null,
+            "Recapture, opening the e-file.",
+            null,
+            "Now the structure is set: you have the queenside majority.",
+            null,
+            "Prepare the fianchetto — the bishop on g7 is your best piece.",
+            null,
+            "There it is, pointing at the heart of White's position.",
+            null,
+            "Castle.",
+            null,
+            "The rook belongs on the half-open e-file, pressing e4.",
+            null,
+            "Heading for c7 and b5, where the knight supports the queenside break."
+          ]
+        },
+        {
+          "id": "benoni-taimanov",
+          "label": "Taimanov Attack",
+          "moves": "1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. f4 Bg7 8. Bb5+ Nfd7 9. a4 O-O 10. Nf3 Na6",
+          "ideas": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Fianchetto anyway — White's f4 is aggressive but loosening.",
+            null,
+            "Block with this knight, keeping the bishop and the structure intact.",
+            "Fianchetto anyway. White's f4 is aggressive, but it loosens the king.",
+            "Castle out of the centre while White is still setting up.",
+            "Block with this knight, keeping the bishop and the structure intact.",
+            "The knight heads for c7, then b5 or e8 depending on White's plan.",
+            "Castle out of the centre while White is still arranging pieces.",
+            null,
+            "The knight heads for c7, then b5 or e8 depending on what White does."
+          ]
+        },
+        {
+          "id": "benoni-fianchetto",
+          "label": "Fianchetto Variation",
+          "moves": "1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. Nf3 g6 7. g3 Bg7 8. Bg2 O-O 9. O-O Re8 10. Nd2 a6",
+          "ideas": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "The same fianchetto, whatever White chooses.",
+            "Fianchetto — the same plan whatever White sets up.",
+            "Castle.",
+            "The bishop belongs here in every Benoni.",
+            "Pressure the e-file.",
+            "Castle.",
+            "Prepare ...b5, the queenside break that justifies the whole opening.",
+            "The rook belongs on the half-open e-file.",
+            null,
+            "Prepare ...b5 — the queenside break the whole opening is built on."
+          ]
+        },
+        {
+          "id": "benoni-modern-main",
+          "label": "Modern Main Line",
+          "moves": "1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. h3 Bg7 8. Bd3 O-O 9. Nf3 b5 10. Bxb5 Nxe4",
+          "ideas": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Castle.",
+            "Onto the long diagonal.",
+            "The Benoni gambit. Offer the pawn to rip open the queenside and the centre together.",
+            "Castle.",
+            "Take the centre pawn back. The position is wild but the activity is real.",
+            "The Benoni gambit: rip the queenside open before White consolidates.",
+            null,
+            "Take the centre pawn back. The position is wild, but the activity is real."
+          ],
+          "labelOk": true,
+          "labelOkWhy": "the dataset calls the 7.h3 main line the King's Pawn Line"
         }
       ]
     }

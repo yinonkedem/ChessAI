@@ -11,8 +11,8 @@
    "label": "Classical Variation",
    "eco": "C45",
    "name": "Scotch Game: Classical Variation",
-   "path": "e2e4e7e5g1f3b8c6d2d4e5d4f3d4f8c5c1e3d8f6c2c3g8e7",
-   "plies": 12
+   "path": "e2e4e7e5g1f3b8c6d2d4e5d4f3d4f8c5c1e3d8f6c2c3g8e7f1c4c6e5c4e2f6g6e1g1d7d6b1d2a7a6g1h1",
+   "plies": 21
   },
   {
    "id": "scotch-schmidt",
@@ -27,8 +27,8 @@
    "label": "Scotch Gambit",
    "eco": "C56",
    "name": "Italian Game: Scotch Gambit, Max Lange Attack",
-   "path": "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4f3d4",
-   "plies": 13
+   "path": "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4f3d4f8c5c1e3c8d7b5c6b7c6e1g1e8g8f2f3",
+   "plies": 21
   }
  ],
  "nodes": {
@@ -205,6 +205,128 @@
    "ply": 12,
    "turn": "w",
    "mine": true,
+   "replies": [
+    {
+     "uci": "f1c4",
+     "san": "Bc4",
+     "idea": "Develop with a hit on f7 before Black consolidates."
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Classical Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4f8c5c1e3d8f6c2c3g8e7f1c4": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c6e5",
+     "san": "Ne5"
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Classical Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4f8c5c1e3d8f6c2c3g8e7f1c4c6e5": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c4e2",
+     "san": "Be2",
+     "idea": "Step back — you provoked ...Ne5 and gained time."
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Classical Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4f8c5c1e3d8f6c2c3g8e7f1c4c6e5c4e2": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f6g6",
+     "san": "Qg6"
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Classical Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4f8c5c1e3d8f6c2c3g8e7f1c4c6e5c4e2f6g6": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle out of the pin on the e-file."
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Classical Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4f8c5c1e3d8f6c2c3g8e7f1c4c6e5c4e2f6g6e1g1": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6"
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Classical Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4f8c5c1e3d8f6c2c3g8e7f1c4c6e5c4e2f6g6e1g1d7d6": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1d2",
+     "san": "Nd2",
+     "idea": "Finish development."
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Classical Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4f8c5c1e3d8f6c2c3g8e7f1c4c6e5c4e2f6g6e1g1d7d6b1d2": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a7a6",
+     "san": "a6"
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Classical Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4f8c5c1e3d8f6c2c3g8e7f1c4c6e5c4e2f6g6e1g1d7d6b1d2a7a6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1h1",
+     "san": "Kh1",
+     "idea": "Sidestep the g1-a7 diagonal before opening the f-file."
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Classical Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4f8c5c1e3d8f6c2c3g8e7f1c4c6e5c4e2f6g6e1g1d7d6b1d2a7a6g1h1": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "C45",
@@ -375,7 +497,7 @@
     {
      "uci": "f3d4",
      "san": "Nxd4",
-     "idea": "Finally regain the pawn, with a free game and the better structure."
+     "idea": "Finally regain the pawn, with a free game."
     }
    ],
    "eco": "C56",
@@ -383,6 +505,114 @@
   },
   "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4f3d4": {
    "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8c5",
+     "san": "Bc5"
+    }
+   ],
+   "eco": "C56",
+   "name": "Italian Game: Scotch Gambit, Max Lange Attack"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4f3d4f8c5": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1e3",
+     "san": "Be3",
+     "idea": "Meet the pin by defending d4 and offering a trade."
+    }
+   ],
+   "eco": "C56",
+   "name": "Italian Game: Scotch Gambit, Max Lange Attack"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4f3d4f8c5c1e3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8d7",
+     "san": "Bd7"
+    }
+   ],
+   "eco": "C56",
+   "name": "Italian Game: Scotch Gambit, Max Lange Attack"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4f3d4f8c5c1e3c8d7": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b5c6",
+     "san": "Bxc6",
+     "idea": "Trade off the defender of the knight on e4."
+    }
+   ],
+   "eco": "C56",
+   "name": "Italian Game: Scotch Gambit, Max Lange Attack"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4f3d4f8c5c1e3c8d7b5c6": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b7c6",
+     "san": "bxc6"
+    }
+   ],
+   "eco": "C56",
+   "name": "Italian Game: Scotch Gambit, Max Lange Attack"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4f3d4f8c5c1e3c8d7b5c6b7c6": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle."
+    }
+   ],
+   "eco": "C56",
+   "name": "Italian Game: Scotch Gambit, Max Lange Attack"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4f3d4f8c5c1e3c8d7b5c6b7c6e1g1": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "C56",
+   "name": "Italian Game: Scotch Gambit, Max Lange Attack"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4f3d4f8c5c1e3c8d7b5c6b7c6e1g1e8g8": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f2f3",
+     "san": "f3",
+     "idea": "Kick the knight and claim the centre."
+    }
+   ],
+   "eco": "C56",
+   "name": "Italian Game: Scotch Gambit, Max Lange Attack"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4f3d4f8c5c1e3c8d7b5c6b7c6e1g1e8g8f2f3": {
+   "ply": 21,
    "turn": "b",
    "mine": false,
    "replies": [],

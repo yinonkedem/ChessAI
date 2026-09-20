@@ -11,8 +11,8 @@
    "label": "English Attack (6. Be3)",
    "eco": "B90",
    "name": "Sicilian Defense: Najdorf Variation, English Attack",
-   "path": "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1e3e7e5d4b3c8e6",
-   "plies": 14
+   "path": "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1e3e7e5d4b3c8e6f2f3f8e7d1d2e8g8e1c1b8d7g2g4b7b5",
+   "plies": 22
   },
   {
    "id": "najdorf-main-bg5",
@@ -29,6 +29,14 @@
    "name": "Sicilian Defense: Najdorf Variation, Opocensky Variation",
    "path": "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6f1e2e7e5d4b3f8e7",
    "plies": 14
+  },
+  {
+   "id": "najdorf-scheveningen",
+   "label": "Scheveningen setup (6...e6)",
+   "eco": "B90",
+   "name": "Sicilian Defense: Scheveningen Variation, English Attack, with f3",
+   "path": "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1e3e7e6f2f3b7b5d1d2b8d7g2g4d7b6e1c1c8b7",
+   "plies": 20
   }
  ],
  "nodes": {
@@ -195,6 +203,11 @@
      "uci": "e7e5",
      "san": "e5",
      "idea": "Grab the centre now that White's knight has nowhere good to go."
+    },
+    {
+     "uci": "e7e6",
+     "san": "e6",
+     "idea": "The other main move. A small centre instead of ...e5 — no d5 hole, but less space."
     }
    ],
    "eco": "B90",
@@ -229,6 +242,114 @@
   },
   "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1e3e7e5d4b3c8e6": {
    "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f2f3",
+     "san": "f3"
+    }
+   ],
+   "eco": "B90",
+   "name": "Sicilian Defense: Najdorf Variation, English Attack"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1e3e7e5d4b3c8e6f2f3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8e7",
+     "san": "Be7",
+     "idea": "Develop and prepare to castle out of the coming storm."
+    }
+   ],
+   "eco": "B90",
+   "name": "Sicilian Defense: Najdorf Variation, English Attack"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1e3e7e5d4b3c8e6f2f3f8e7": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1d2",
+     "san": "Qd2"
+    }
+   ],
+   "eco": "B90",
+   "name": "Sicilian Defense: Najdorf Variation, English Attack"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1e3e7e5d4b3c8e6f2f3f8e7d1d2": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle first — White is going long and you need to be ready."
+    }
+   ],
+   "eco": "B90",
+   "name": "Sicilian Defense: Najdorf Variation, English Attack"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1e3e7e5d4b3c8e6f2f3f8e7d1d2e8g8": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1c1",
+     "san": "O-O-O"
+    }
+   ],
+   "eco": "B90",
+   "name": "Sicilian Defense: Najdorf Variation, English Attack"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1e3e7e5d4b3c8e6f2f3f8e7d1d2e8g8e1c1": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8d7",
+     "san": "Nbd7",
+     "idea": "Bring the last piece out, heading for b6 or c5."
+    }
+   ],
+   "eco": "B90",
+   "name": "Sicilian Defense: Najdorf Variation, English Attack"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1e3e7e5d4b3c8e6f2f3f8e7d1d2e8g8e1c1b8d7": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g2g4",
+     "san": "g4"
+    }
+   ],
+   "eco": "B90",
+   "name": "Sicilian Defense: Najdorf Variation, English Attack"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1e3e7e5d4b3c8e6f2f3f8e7d1d2e8g8e1c1b8d7g2g4": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b7b5",
+     "san": "b5",
+     "idea": "Start your own attack. Opposite castling is a race, and you are not behind."
+    }
+   ],
+   "eco": "B90",
+   "name": "Sicilian Defense: Najdorf Variation, English Attack"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1e3e7e5d4b3c8e6f2f3f8e7d1d2e8g8e1c1b8d7g2g4b7b5": {
+   "ply": 22,
    "turn": "w",
    "mine": false,
    "replies": [],
@@ -335,6 +456,123 @@
    "end": true,
    "eco": "B92",
    "name": "Sicilian Defense: Najdorf Variation, Opocensky Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1e3e7e6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f2f3",
+     "san": "f3"
+    }
+   ],
+   "eco": "B90",
+   "name": "Sicilian Defense: Najdorf Variation, English Attack"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1e3e7e6f2f3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b7b5",
+     "san": "b5",
+     "idea": "Gain queenside space immediately; this is a race."
+    }
+   ],
+   "eco": "B90",
+   "name": "Sicilian Defense: Scheveningen Variation, English Attack, with f3"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1e3e7e6f2f3b7b5": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1d2",
+     "san": "Qd2"
+    }
+   ],
+   "eco": "B90",
+   "name": "Sicilian Defense: Scheveningen Variation, English Attack, with f3"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1e3e7e6f2f3b7b5d1d2": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8d7",
+     "san": "Nbd7",
+     "idea": "Develop and prepare ...Nb6 or ...Ne5."
+    }
+   ],
+   "eco": "B90",
+   "name": "Sicilian Defense: Scheveningen Variation, English Attack, with f3"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1e3e7e6f2f3b7b5d1d2b8d7": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g2g4",
+     "san": "g4"
+    }
+   ],
+   "eco": "B90",
+   "name": "Sicilian Defense: Scheveningen Variation, English Attack, with f3"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1e3e7e6f2f3b7b5d1d2b8d7g2g4": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7b6",
+     "san": "Nb6",
+     "idea": "Heading for c4, straight at White's king."
+    }
+   ],
+   "eco": "B90",
+   "name": "Sicilian Defense: Scheveningen Variation, English Attack, with f3"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1e3e7e6f2f3b7b5d1d2b8d7g2g4d7b6": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1c1",
+     "san": "O-O-O"
+    }
+   ],
+   "eco": "B90",
+   "name": "Sicilian Defense: Scheveningen Variation, English Attack, with f3"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1e3e7e6f2f3b7b5d1d2b8d7g2g4d7b6e1c1": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8b7",
+     "san": "Bb7",
+     "idea": "The bishop joins on the long diagonal."
+    }
+   ],
+   "eco": "B90",
+   "name": "Sicilian Defense: Scheveningen Variation, English Attack, with f3"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1e3e7e6f2f3b7b5d1d2b8d7g2g4d7b6e1c1c8b7": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "B90",
+   "name": "Sicilian Defense: Scheveningen Variation, English Attack, with f3"
   }
  }
 }
