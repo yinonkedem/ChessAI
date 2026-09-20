@@ -108,7 +108,7 @@ export default function LearnPage() {
 
                 <ul className="learn__grid">
                     {shown.map((r) => (
-                        <li key={r.id}>
+                        <li key={r.id} className="learn__cell">
                             <button
                                 type="button"
                                 className="card card--interactive learn-card"
@@ -153,6 +153,19 @@ export default function LearnPage() {
                                     )}
                                 </p>
                             </button>
+
+                            {/* Clearing due reviews is the returning-user path,
+                                so it gets its own button rather than hiding
+                                behind "open the repertoire". */}
+                            {(progress[r.id]?.due ?? 0) > 0 && (
+                                <button
+                                    type="button"
+                                    className="btn btn--primary btn--sm learn-card__review"
+                                    onClick={() => navigate(`/learn/${r.id}/review`)}
+                                >
+                                    Review {progress[r.id].due} due →
+                                </button>
+                            )}
                         </li>
                     ))}
                 </ul>

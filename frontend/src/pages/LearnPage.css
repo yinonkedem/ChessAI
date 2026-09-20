@@ -123,3 +123,18 @@
 .learn-card__due {
     margin-left: var(--sp-2);
 }
+
+.learn__cell {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2);
+    height: 100%;
+}
+
+.learn__cell .learn-card {
+    flex: 1;
+}
+
+.learn-card__review {
+    width: 100%;
+}

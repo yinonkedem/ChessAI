@@ -1,4 +1,12 @@
 import { chooseReply, describe, isEnd, isMine, pathMoves } from "./book";
+import {
+    answer as answerQueue,
+    createQueue,
+    currentCard,
+    isFinished as queueFinished,
+    remaining,
+    summarise,
+} from "./queue";
 
 /**
  * Drill-session state, keyed on the UCI path through the opening tree.
@@ -15,9 +23,23 @@ export const Phase = {
     answering: "answering",   // waiting for the learner's move
     reply: "reply",           // the book's reply is about to play
     lineComplete: "lineComplete",
+    reveal: "reveal",         // review mode: showing the result before the next card
+    sessionComplete: "sessionComplete",
 };
 
+/**
+ * Two ways to drill:
+ *   learn  — walk a line from the start, opponent answers from the book.
+ *   review — serve the positions that are DUE, one standalone card at a time.
+ * Review is what turns "I played through a line" into "I cleared today's
+ * reviews", and it is where the learning-step queue lives.
+ */
+export const Mode = { learn: "learn", review: "review" };
+
 export const initialTrainerState = {
+    mode: Mode.learn,
+    queue: null,        // review mode only
+    lastCorrect: null,  // review mode: how the card just shown went
     repertoire: null,
     path: "",
     phase: Phase.idle,
@@ -32,6 +54,8 @@ export const initialTrainerState = {
 
 export const T = {
     START: "START",
+    START_REVIEW: "START_REVIEW",
+    NEXT_CARD: "NEXT_CARD",
     ATTEMPT: "ATTEMPT",
     ADVANCE: "ADVANCE",
     HINT: "HINT",
@@ -52,6 +76,8 @@ export function trainerReducer(state, action) {
             const { repertoire } = action.payload;
             return {
                 ...state,
+                mode: Mode.learn,
+                queue: null,
                 repertoire,
                 path: "",
                 phase: phaseAt(repertoire, ""),
@@ -62,9 +88,75 @@ export function trainerReducer(state, action) {
             };
         }
 
+        case T.START_REVIEW: {
+            const { repertoire, paths } = action.payload;
+            const queue = createQueue(paths);
+            const first = currentCard(queue);
+            return {
+                ...state,
+                mode: Mode.review,
+                repertoire,
+                queue,
+                path: first ?? "",
+                phase: first == null ? Phase.sessionComplete : Phase.answering,
+                feedback: null,
+                hintLevel: 0,
+                attempts: 0,
+                results: {},
+                lastCorrect: null,
+            };
+        }
+
+        // Review mode: the reveal timer expired, move to the next due card.
+        case T.NEXT_CARD: {
+            if (state.phase !== Phase.reveal) return state;
+            const next = currentCard(state.queue);
+            if (next == null || queueFinished(state.queue)) {
+                return { ...state, phase: Phase.sessionComplete };
+            }
+            return {
+                ...state,
+                path: next,
+                phase: Phase.answering,
+                feedback: null,
+                hintLevel: 0,
+                attempts: 0,
+                lastCorrect: null,
+            };
+        }
+
         case T.ATTEMPT: {
             if (state.phase !== Phase.answering) return state;
             const { verdict, played, replies } = action.payload;
+
+            // --- review mode: one shot per card, then reveal and move on.
+            // A miss is reinserted a few cards later by the queue, so the
+            // learner meets it again this session rather than tomorrow.
+            if (state.mode === Mode.review) {
+                const correct = verdict === "correct";
+                const { queue } = answerQueue(state.queue, correct);
+                const shown = replies[0];
+                return {
+                    ...state,
+                    queue,
+                    phase: Phase.reveal,
+                    lastCorrect: correct,
+                    streak: correct ? state.streak + 1 : 0,
+                    bestStreak: Math.max(state.bestStreak, correct ? state.streak + 1 : 0),
+                    results: {
+                        ...state.results,
+                        [state.path]: { firstTry: correct, attempts: state.attempts },
+                    },
+                    feedback: {
+                        verdict: correct ? "correct" : "wrong",
+                        played: correct ? played.san : shown?.san ?? null,
+                        playedUci: correct ? played.uci : shown?.uci ?? null,
+                        idea: (correct ? played : shown)?.idea ?? null,
+                        expected: replies.map((r) => r.san),
+                        alternatives: correct ? replies.length - 1 : 0,
+                    },
+                };
+            }
 
             if (verdict !== "correct") {
                 return {
@@ -183,6 +275,13 @@ export const currentMoves = (state) =>
 /** Where the learner is, named by the deepest ECO match on this path. */
 export const currentOpening = (state) =>
     state.repertoire ? describe(state.repertoire, state.path) : { eco: null, name: null, depth: 0 };
+
+/** Review-session progress for the header. */
+export function reviewProgress(state) {
+    if (!state.queue) return null;
+    const s = summarise(state.queue);
+    return { ...s, left: remaining(state.queue) };
+}
 
 /** Progress through THIS run: positions answered, and how many first time. */
 export function runProgress(state) {

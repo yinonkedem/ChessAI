@@ -11,6 +11,7 @@ import {
 } from "./scheduler";
 import { GRADUATE_AT, LEARNING_GAP, answer, createQueue, currentCard, isFinished, summarise } from "./queue";
 import { cardKey, cardsFor, clearAll, load, recordReview } from "./localStore";
+import { catalogProgress, duePositions } from "./progress";
 
 const DAY = 24 * 60 * 60 * 1000;
 const T0 = new Date("2026-06-15T12:00:00Z").getTime();
@@ -264,5 +265,68 @@ describe("reviewing ahead of schedule", () => {
         expect(cardsFor("r")["p"].box).toBe(1);
         recordReview("r", "p", true, T0 + DAY);            // now due
         expect(cardsFor("r")["p"].box).toBe(2);
+    });
+});
+
+describe("what a review session serves", () => {
+    beforeEach(() => clearAll());
+
+    // A tiny two-position repertoire, shaped like the real tree.
+    const rep = {
+        id: "t",
+        nodes: {
+            "": { mine: true, replies: [{ uci: "e2e4", san: "e4" }] },
+            e2e4: { mine: false, replies: [{ uci: "e7e5", san: "e5" }] },
+            e2e4e7e5: { mine: true, replies: [{ uci: "g1f3", san: "Nf3" }] },
+            e2e4e7e5g1f3: { mine: false, replies: [], end: true },
+        },
+    };
+
+    it("serves nothing when nothing has been learned", () => {
+        // Unseen positions are "due" to the scheduler so new material is
+        // available, but a REVIEW session must not promise them.
+        expect(duePositions(rep, T0)).toEqual([]);
+    });
+
+    it("serves a learned position once its interval elapses", () => {
+        recordReview("t", "", true, T0);                 // box 1, due +1d
+        expect(duePositions(rep, T0)).toEqual([]);
+        expect(duePositions(rep, T0 + DAY)).toEqual([""]);
+    });
+
+    it("can include new material when asked", () => {
+        expect(duePositions(rep, T0, load(), true)).toEqual(["", "e2e4e7e5"]);
+    });
+
+    it("puts the most overdue card first", () => {
+        recordReview("t", "e2e4e7e5", true, T0);          // due T0+1d
+        recordReview("t", "", true, T0 + DAY);            // due T0+2d
+        expect(duePositions(rep, T0 + 10 * DAY)).toEqual(["e2e4e7e5", ""]);
+    });
+
+    it("agrees with the count the catalog shows", () => {
+        recordReview("t", "", true, T0);
+        const at = T0 + DAY;
+        expect(duePositions(rep, at).length).toBe(catalogProgress(at)["t"].due);
+    });
+});
+
+describe("lapsed cards", () => {
+    it("come back after a short delay, not instantly", () => {
+        // Otherwise the summary says "next review due now" the moment you
+        // finish a session, and the queue can never be emptied.
+        const c = review(newCard(T0), false, T0);
+        expect(isDue(c, T0)).toBe(false);
+        expect(isDue(c, T0 + 11 * 60 * 1000)).toBe(true);
+    });
+
+    it("describe a sub-day interval in minutes", () => {
+        expect(dueLabel(review(newCard(T0), false, T0), T0)).toMatch(/due in \d+ min/);
+    });
+
+    it("still reset the box on a miss", () => {
+        let c = newCard(T0);
+        for (let i = 0; i < 3; i++) c = review(c, true, T0 + i * 40 * DAY);
+        expect(review(c, false, T0).box).toBe(1);
     });
 });

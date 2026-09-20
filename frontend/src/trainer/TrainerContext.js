@@ -15,12 +15,15 @@ import { uciToCoords } from "../utils/uciToCoords";
 import { buildPosition } from "./buildPosition";
 import { bookSquares, judgeMove } from "./judgeMove";
 import { recordReview } from "./localStore";
+import { duePositions } from "./progress";
 import {
+    Mode,
     Phase,
     T,
     currentMoves,
     currentOpening,
     initialTrainerState,
+    reviewProgress,
     runProgress,
     trainerReducer,
 } from "./trainerReducer";
@@ -79,7 +82,14 @@ export function TrainerProvider({ children }) {
                 // The marker is `attempts`, NOT `results`: results is only
                 // written on a correct answer, so after a miss it is still
                 // empty and the retry would be graded a second time.
-                if (s.attempts === 0) {
+                //
+                // In review mode the queue owns re-asking, and it only reports
+                // a card's first encounter, so grade whenever this position
+                // has not been graded in this session.
+                const firstLook = s.mode === Mode.review
+                    ? !(s.path in s.results)
+                    : s.attempts === 0;
+                if (firstLook) {
                     recordReview(s.repertoire.id, s.path, judged.verdict === "correct");
                 }
 
@@ -98,6 +108,13 @@ export function TrainerProvider({ children }) {
     const annotations = useMemo(() => {
         if (!active || !session.repertoire) return [];
         const { hintLevel, feedback, phase, path, repertoire } = session;
+
+        // Review reveal: always show what the right move was, especially
+        // after a miss — that is the moment the learner is paying attention.
+        if (session.mode === Mode.review && phase === Phase.reveal && feedback?.playedUci) {
+            const [from, to] = uciToCoords(feedback.playedUci);
+            return [{ type: "arrow", from, to, tone: feedback.verdict === "correct" ? "good" : "bad" }];
+        }
 
         // After "Show me", draw the move the book actually played.
         if (feedback?.verdict === "skipped" && feedback.playedUci) {
@@ -132,6 +149,14 @@ export function TrainerProvider({ children }) {
         send({ type: T.START, payload: { repertoire } });
     }, []);
 
+    /** Begin a review session over everything currently due. */
+    const startReview = useCallback((repertoire) => {
+        send({
+            type: T.START_REVIEW,
+            payload: { repertoire, paths: duePositions(repertoire) },
+        });
+    }, []);
+
     const value = useMemo(
         () => ({
             session,
@@ -142,7 +167,10 @@ export function TrainerProvider({ children }) {
             opening: currentOpening(session),
             progress: runProgress(session),
             start,
+            startReview,
+            review: reviewProgress(session),
             advance: () => send({ type: T.ADVANCE }),
+            nextCard: () => send({ type: T.NEXT_CARD }),
             hint: () => send({ type: T.HINT }),
             skip: () => {
                 const s = sessionRef.current;
@@ -155,7 +183,7 @@ export function TrainerProvider({ children }) {
             restart: () => send({ type: T.RESTART }),
             reset: () => send({ type: T.RESET }),
         }),
-        [session, active, gate, annotations, start]
+        [session, active, gate, annotations, start, startReview]
     );
 
     return <TrainerContext.Provider value={value}>{children}</TrainerContext.Provider>;

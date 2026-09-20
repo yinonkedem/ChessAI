@@ -185,6 +185,42 @@ Self-play + MCTS training loop in `AlphaZero/alphaZero.py`. The ResNet model is 
 
 ## Audit & refactor — session log
 
+### Review mode — clearing what's due (2026-09-20)
+
+Turns "I played through a line" into "I cleared today's reviews". `queue.js`, written and tested in
+Phase 5 but unwired, now drives a real session.
+
+**Two modes**, discriminated by `Mode` in the trainer reducer:
+- **Learn** (`/learn/:id`) — walk a line from the start, opponent answers from the book, retry a
+  missed move as often as you like.
+- **Review** (`/learn/:id/review`) — serve the positions that are **due**, one standalone card at a
+  time. **One attempt per card.** A miss reveals the book move with a red arrow and the explanation,
+  then the queue reinserts it a few cards later; you must get it right twice to graduate it out of
+  the session. Only the first encounter is graded.
+
+The catalog grows a **"Review N due →"** button per repertoire when anything is due — the
+returning-user path deserves its own button rather than hiding behind "open the repertoire".
+
+**A real bug the browser test caught:** the catalog promised "6 due" and the session queued **40**.
+`duePositions` treated *never-seen* positions as due, because `isDue(undefined)` is true — which is
+correct for the scheduler (it makes new material available) but wrong for a review session.
+Reviewing means "what I already learned and owe"; new material belongs in Learn. `duePositions` now
+excludes unseen positions unless asked, and a test asserts the count it returns **equals** what the
+catalog displays.
+
+**A second fix, from reading the summary:** it said *"Next review due now"* immediately after
+telling you the session was cleared, so the queue could never actually be emptied. Box 0's interval
+is 0 days so brand-new material is available at once, but reusing that for a *lapse* is wrong. A
+miss now schedules a **10-minute relearn step** (`RELEARN_MS`) instead, and `dueLabel` grew sub-day
+wording. The summary now reads "Next review due in 10 min".
+
+**New files:** `pages/ReviewPage.{js,css}`, `trainer/useReviewAgent.js` (the reveal timer — 1.5s on
+a hit, 2.6s on a miss, because a miss is the moment worth reading).
+
+**Verified:** 196 Jest assertions (8 new, including that the due count and the served queue agree),
+12 browser assertions for a full review session, and re-run regressions for Learn mode (9) and the
+arrow overlay (10).
+
 ### Spaced repetition, local-first (2026-09-20) — Phase 5
 
 Progress now persists. Answers are scheduled, the catalog shows what's due, and a day streak

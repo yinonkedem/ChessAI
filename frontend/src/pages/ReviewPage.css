@@ -1,0 +1,46 @@
+/* Review sessions reuse DrillPage.css for the board + rail layout; this file
+   only adds what a queue-shaped session needs. */
+
+.review-bar {
+    height: 6px;
+    border-radius: var(--r-pill);
+    background: var(--c-surface-sunken);
+    overflow: hidden;
+    margin-top: var(--sp-1);
+}
+
+.review-bar > span {
+    display: block;
+    height: 100%;
+    background: var(--c-primary);
+    border-radius: inherit;
+    transition: width var(--dur-slow) var(--ease);
+}
+
+.review-done {
+    max-width: 30rem;
+    margin-inline: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--sp-3);
+}
+
+.review-done .card__title {
+    font-size: var(--fs-xl);
+}
+
+.review-done__next {
+    font-size: var(--fs-sm);
+    margin: 0;
+}
+
+.review-done .drill-actions {
+    justify-content: center;
+    width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .review-bar > span { transition: none; }
+}

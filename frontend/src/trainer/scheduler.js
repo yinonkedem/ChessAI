@@ -21,6 +21,18 @@ export const MASTERED_BOX = 4;
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 
+/**
+ * A lapsed card comes back after a short delay rather than instantly.
+ *
+ * Box 0's interval is 0 days so that BRAND NEW material is available right
+ * away. But reusing that for a miss means a card you just got wrong is "due
+ * now" the moment the session ends — you can never finish, and the summary
+ * says "next review due now" straight after telling you that you cleared it.
+ * The in-session learning queue has already re-taught it; this just keeps it
+ * out of the immediate next session.
+ */
+const RELEARN_MS = 10 * 60 * 1000;
+
 export function newCard(now = Date.now()) {
     return { box: 0, due: now, reps: 0, lapses: 0, last: null };
 }
@@ -40,7 +52,7 @@ export function review(card, correct, now = Date.now()) {
 
     return {
         box,
-        due: now + BOX_DAYS[box] * DAY_MS,
+        due: correct ? now + BOX_DAYS[box] * DAY_MS : now + RELEARN_MS,
         reps: c.reps + 1,
         lapses: c.lapses + (correct ? 0 : 1),
         last: now,
@@ -54,9 +66,13 @@ export const isMastered = (card) => !!card && card.box >= MASTERED_BOX;
 /** Human-readable interval, for the UI. */
 export function dueLabel(card, now = Date.now()) {
     if (isDue(card, now)) return "due now";
-    const days = Math.round((card.due - now) / DAY_MS);
-    if (days <= 0) return "due today";
-    if (days === 1) return "due tomorrow";
+    const ms = card.due - now;
+    if (ms < DAY_MS / 2) {
+        const mins = Math.max(1, Math.round(ms / 60000));
+        return mins < 60 ? `due in ${mins} min` : "due later today";
+    }
+    const days = Math.round(ms / DAY_MS);
+    if (days <= 1) return "due tomorrow";
     return `due in ${days} days`;
 }
 

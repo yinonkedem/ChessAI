@@ -53,19 +53,27 @@ export function catalogProgress(now = Date.now(), state = load()) {
     return out;
 }
 
-/** Positions in this repertoire that are due (or never seen), hardest first. */
-export function duePositions(repertoire, now = Date.now(), state = load()) {
+/**
+ * Positions due for review, most overdue first.
+ *
+ * Only positions the learner has actually met. An unseen position counts as
+ * "due" to the scheduler — that is what makes new material available — but a
+ * *review* session must not serve it: the catalog would promise "6 due" and
+ * then queue all 40, and reviewing is supposed to mean "what I already learned
+ * and owe". New material belongs in Learn mode.
+ *
+ * Pass `includeNew` for a combined session.
+ */
+export function duePositions(repertoire, now = Date.now(), state = load(), includeNew = false) {
     const cards = cardsFor(repertoire.id, state);
     return myPositions(repertoire)
-        .filter((p) => isDue(cards[p], now))
+        .filter((p) => (cards[p] ? isDue(cards[p], now) : includeNew))
         .sort((a, b) => {
             const ca = cards[a];
             const cb = cards[b];
-            // Unseen positions last: review what you know before meeting new
-            // material, or a session is all new and nothing sticks.
-            if (!ca && cb) return 1;
+            if (!ca && cb) return 1;          // unseen last
             if (ca && !cb) return -1;
-            if (!ca && !cb) return a.length - b.length;   // shallow first
-            return ca.due - cb.due;                        // most overdue first
+            if (!ca && !cb) return a.length - b.length;
+            return ca.due - cb.due;           // most overdue first
         });
 }
