@@ -11,334 +11,501 @@
    "label": "Giuoco Piano",
    "eco": "C54",
    "name": "Italian Game: Classical Variation, Greco Gambit, Traditional Line",
-   "side": "w",
-   "moves": [
-    {
-     "san": "e4",
-     "uci": "e2e4"
-    },
-    {
-     "san": "e5",
-     "uci": "e7e5"
-    },
-    {
-     "san": "Nf3",
-     "uci": "g1f3"
-    },
-    {
-     "san": "Nc6",
-     "uci": "b8c6"
-    },
-    {
-     "san": "Bc4",
-     "uci": "f1c4"
-    },
-    {
-     "san": "Bc5",
-     "uci": "f8c5"
-    },
-    {
-     "san": "c3",
-     "uci": "c2c3"
-    },
-    {
-     "san": "Nf6",
-     "uci": "g8f6"
-    },
-    {
-     "san": "d4",
-     "uci": "d2d4"
-    },
-    {
-     "san": "exd4",
-     "uci": "e5d4"
-    },
-    {
-     "san": "cxd4",
-     "uci": "c3d4"
-    },
-    {
-     "san": "Bb4+",
-     "uci": "c5b4"
-    },
-    {
-     "san": "Bd2",
-     "uci": "c1d2"
-    }
-   ],
-   "ideas": [
-    "Claim the centre and open lines for the bishop and queen.",
-    null,
-    "Develop with a threat — the knight already eyes e5.",
-    null,
-    "The Italian bishop. It stares at f7, the square only the king defends.",
-    null,
-    "Quiet but purposeful: c3 prepares to build the big centre with d4.",
-    null,
-    "Now the centre breaks open while you are the better developed side.",
-    null,
-    "Recapture toward the centre. You have pawns on d4 and e4 — the ideal pair.",
-    null,
-    "Block the check and offer a trade. Your centre survives intact."
-   ],
-   "answerPlies": [
-    0,
-    2,
-    4,
-    6,
-    8,
-    10,
-    12
-   ]
+   "path": "e2e4e7e5g1f3b8c6f1c4f8c5c2c3g8f6d2d4e5d4c3d4c5b4c1d2",
+   "plies": 13
   },
   {
    "id": "italian-giuoco-pianissimo",
    "label": "Giuoco Pianissimo",
    "eco": "C54",
    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
-   "side": "w",
-   "moves": [
-    {
-     "san": "e4",
-     "uci": "e2e4"
-    },
-    {
-     "san": "e5",
-     "uci": "e7e5"
-    },
-    {
-     "san": "Nf3",
-     "uci": "g1f3"
-    },
-    {
-     "san": "Nc6",
-     "uci": "b8c6"
-    },
-    {
-     "san": "Bc4",
-     "uci": "f1c4"
-    },
-    {
-     "san": "Bc5",
-     "uci": "f8c5"
-    },
-    {
-     "san": "d3",
-     "uci": "d2d3"
-    },
-    {
-     "san": "Nf6",
-     "uci": "g8f6"
-    },
-    {
-     "san": "c3",
-     "uci": "c2c3"
-    },
-    {
-     "san": "d6",
-     "uci": "d7d6"
-    },
-    {
-     "san": "O-O",
-     "uci": "e1g1"
-    }
-   ],
-   "ideas": [
-    "Claim the centre.",
-    null,
-    "Develop and attack e5.",
-    null,
-    "The Italian bishop takes aim at f7.",
-    null,
-    "The 'very quiet game'. Support e4 and keep every piece defended.",
-    null,
-    "Prepare d4 at leisure. There is no hurry in a closed position.",
-    null,
-    "Castle first, decide on a plan second."
-   ],
-   "answerPlies": [
-    0,
-    2,
-    4,
-    6,
-    8,
-    10
-   ]
+   "path": "e2e4e7e5g1f3b8c6f1c4f8c5d2d3g8f6c2c3d7d6e1g1",
+   "plies": 11
   },
   {
    "id": "italian-two-knights",
    "label": "Two Knights Defense",
    "eco": "C58",
    "name": "Italian Game: Two Knights Defense, Polerio Defense, Bishop Check Line",
-   "side": "w",
-   "moves": [
-    {
-     "san": "e4",
-     "uci": "e2e4"
-    },
-    {
-     "san": "e5",
-     "uci": "e7e5"
-    },
-    {
-     "san": "Nf3",
-     "uci": "g1f3"
-    },
-    {
-     "san": "Nc6",
-     "uci": "b8c6"
-    },
-    {
-     "san": "Bc4",
-     "uci": "f1c4"
-    },
-    {
-     "san": "Nf6",
-     "uci": "g8f6"
-    },
-    {
-     "san": "Ng5",
-     "uci": "f3g5"
-    },
-    {
-     "san": "d5",
-     "uci": "d7d5"
-    },
-    {
-     "san": "exd5",
-     "uci": "e4d5"
-    },
-    {
-     "san": "Na5",
-     "uci": "c6a5"
-    },
-    {
-     "san": "Bb5+",
-     "uci": "c4b5"
-    },
-    {
-     "san": "c6",
-     "uci": "c7c6"
-    },
-    {
-     "san": "dxc6",
-     "uci": "d5c6"
-    },
-    {
-     "san": "bxc6",
-     "uci": "b7c6"
-    }
-   ],
-   "ideas": [
-    "Claim the centre.",
-    null,
-    "Develop and attack e5.",
-    null,
-    "The bishop eyes f7.",
-    null,
-    "Crude but strong: two pieces now hit f7 and Black must react.",
-    null,
-    "Take the pawn and keep the extra material for now.",
-    null,
-    "Check, and hang on to the pawn a little longer.",
-    null,
-    "Grab it. Black gets fast development for the pawn — play carefully.",
-    null
-   ],
-   "answerPlies": [
-    0,
-    2,
-    4,
-    6,
-    8,
-    10,
-    12
-   ]
+   "path": "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6",
+   "plies": 14
   },
   {
    "id": "italian-evans-gambit",
    "label": "Evans Gambit",
    "eco": "C52",
    "name": "Italian Game: Evans Gambit, Pierce Defense",
-   "side": "w",
-   "moves": [
+   "path": "e2e4e7e5g1f3b8c6f1c4f8c5b2b4c5b4c2c3b4a5d2d4e5d4e1g1",
+   "plies": 13
+  }
+ ],
+ "nodes": {
+  "": {
+   "ply": 0,
+   "turn": "w",
+   "mine": true,
+   "replies": [
     {
+     "uci": "e2e4",
      "san": "e4",
-     "uci": "e2e4"
-    },
+     "idea": "Claim the centre and open lines for the bishop and queen."
+    }
+   ]
+  },
+  "e2e4": {
+   "ply": 1,
+   "turn": "b",
+   "mine": false,
+   "replies": [
     {
-     "san": "e5",
-     "uci": "e7e5"
-    },
-    {
-     "san": "Nf3",
-     "uci": "g1f3"
-    },
-    {
-     "san": "Nc6",
-     "uci": "b8c6"
-    },
-    {
-     "san": "Bc4",
-     "uci": "f1c4"
-    },
-    {
-     "san": "Bc5",
-     "uci": "f8c5"
-    },
-    {
-     "san": "b4",
-     "uci": "b2b4"
-    },
-    {
-     "san": "Bxb4",
-     "uci": "c5b4"
-    },
-    {
-     "san": "c3",
-     "uci": "c2c3"
-    },
-    {
-     "san": "Ba5",
-     "uci": "b4a5"
-    },
-    {
-     "san": "d4",
-     "uci": "d2d4"
-    },
-    {
-     "san": "exd4",
-     "uci": "e5d4"
-    },
-    {
-     "san": "O-O",
-     "uci": "e1g1"
+     "uci": "e7e5",
+     "san": "e5"
     }
    ],
-   "ideas": [
-    "Claim the centre.",
-    null,
-    "Develop and attack e5.",
-    null,
-    "The bishop eyes f7.",
-    null,
-    "A pawn for time. Deflect the bishop so you can build the centre with tempo.",
-    null,
-    "Hit the bishop again and prepare d4 — every move comes with a threat.",
-    null,
-    "Cash the gambit in: a huge centre while Black is still untangling.",
-    null,
-    "Castle. Down a pawn, but far ahead in development and with open lines."
+   "eco": "B00",
+   "name": "King's Pawn Game"
+  },
+  "e2e4e7e5": {
+   "ply": 2,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3",
+     "idea": "Develop with a threat — the knight already eyes e5."
+    }
    ],
-   "answerPlies": [
-    0,
-    2,
-    4,
-    6,
-    8,
-    10,
-    12
-   ]
+   "eco": "C20",
+   "name": "King's Pawn Game"
+  },
+  "e2e4e7e5g1f3": {
+   "ply": 3,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6"
+    }
+   ],
+   "eco": "C40",
+   "name": "King's Knight Opening"
+  },
+  "e2e4e7e5g1f3b8c6": {
+   "ply": 4,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1c4",
+     "san": "Bc4",
+     "idea": "The Italian bishop. It stares at f7, the square only the king defends."
+    }
+   ],
+   "eco": "C44",
+   "name": "King's Knight Opening: Normal Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1c4": {
+   "ply": 5,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8c5",
+     "san": "Bc5"
+    },
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "C50",
+   "name": "Italian Game"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5": {
+   "ply": 6,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c2c3",
+     "san": "c3",
+     "idea": "Quiet but purposeful: c3 prepares to build the big centre with d4."
+    },
+    {
+     "uci": "d2d3",
+     "san": "d3",
+     "idea": "The 'very quiet game'. Support e4 and keep every piece defended."
+    },
+    {
+     "uci": "b2b4",
+     "san": "b4",
+     "idea": "A pawn for time. Deflect the bishop so you can build the centre with tempo."
+    }
+   ],
+   "eco": "C50",
+   "name": "Italian Game: Giuoco Piano"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5c2c3": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "C53",
+   "name": "Italian Game: Classical Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5c2c3g8f6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4",
+     "idea": "Now the centre breaks open while you are the better developed side."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5c2c3g8f6d2d4": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e5d4",
+     "san": "exd4"
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Center Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5c2c3g8f6d2d4e5d4": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c3d4",
+     "san": "cxd4",
+     "idea": "Recapture toward the centre. You have pawns on d4 and e4 — the ideal pair."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Center Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5c2c3g8f6d2d4e5d4c3d4": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c5b4",
+     "san": "Bb4+"
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Greco Gambit, Traditional Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5c2c3g8f6d2d4e5d4c3d4c5b4": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1d2",
+     "san": "Bd2",
+     "idea": "Block the check and offer a trade. Your centre survives intact."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Greco Gambit, Traditional Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5c2c3g8f6d2d4e5d4c3d4c5b4c1d2": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Greco Gambit, Traditional Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5d2d3": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "C50",
+   "name": "Italian Game: Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5d2d3g8f6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c2c3",
+     "san": "c3",
+     "idea": "Prepare d4 at leisure. There is no hurry in a closed position."
+    }
+   ],
+   "eco": "C50",
+   "name": "Italian Game: Giuoco Pianissimo, Normal"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5d2d3g8f6c2c3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6"
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5d2d3g8f6c2c3d7d6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle first, decide on a plan second."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5d2d3g8f6c2c3d7d6e1g1": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6": {
+   "ply": 6,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f3g5",
+     "san": "Ng5",
+     "idea": "Crude but strong: two pieces now hit f7 and Black must react."
+    }
+   ],
+   "eco": "C55",
+   "name": "Italian Game: Two Knights Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d5",
+     "san": "d5"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Knight Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e4d5",
+     "san": "exd5",
+     "idea": "Take the pawn and keep the extra material for now."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Knight Attack, Normal Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c6a5",
+     "san": "Na5"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Knight Attack, Normal Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c4b5",
+     "san": "Bb5+",
+     "idea": "Check, and hang on to the pawn a little longer."
+    }
+   ],
+   "eco": "C58",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c7c6",
+     "san": "c6"
+    }
+   ],
+   "eco": "C58",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Bishop Check Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d5c6",
+     "san": "dxc6",
+     "idea": "Grab it. Black gets fast development for the pawn — play carefully."
+    }
+   ],
+   "eco": "C58",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Bishop Check Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b7c6",
+     "san": "bxc6"
+    }
+   ],
+   "eco": "C58",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Bishop Check Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [],
+   "end": true,
+   "eco": "C58",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Bishop Check Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5b2b4": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c5b4",
+     "san": "Bxb4"
+    }
+   ],
+   "eco": "C51",
+   "name": "Italian Game: Evans Gambit"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5b2b4c5b4": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c2c3",
+     "san": "c3",
+     "idea": "Hit the bishop again and prepare d4 — every move comes with a threat."
+    }
+   ],
+   "eco": "C51",
+   "name": "Italian Game: Evans Gambit Accepted"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5b2b4c5b4c2c3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b4a5",
+     "san": "Ba5"
+    }
+   ],
+   "eco": "C51",
+   "name": "Italian Game: Evans Gambit Accepted"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5b2b4c5b4c2c3b4a5": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4",
+     "idea": "Cash the gambit in: a huge centre while Black is still untangling."
+    }
+   ],
+   "eco": "C52",
+   "name": "Italian Game: Evans Gambit, Main Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5b2b4c5b4c2c3b4a5d2d4": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e5d4",
+     "san": "exd4"
+    }
+   ],
+   "eco": "C52",
+   "name": "Italian Game: Evans Gambit, Main Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5b2b4c5b4c2c3b4a5d2d4e5d4": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle. Down a pawn, but far ahead in development and with open lines."
+    }
+   ],
+   "eco": "C52",
+   "name": "Italian Game: Evans Gambit, Pierce Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5b2b4c5b4c2c3b4a5d2d4e5d4e1g1": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C52",
+   "name": "Italian Game: Evans Gambit, Pierce Defense"
   }
- ]
+ }
 }

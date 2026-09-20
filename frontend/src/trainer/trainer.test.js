@@ -1,13 +1,15 @@
 import fs from "fs";
 import path from "path";
 
-import { buildLinePrefix, legalMovesAt } from "./buildLinePrefix";
-import { judgeMove, hintSquares } from "./judgeMove";
+import { buildPosition, legalMovesAt } from "./buildPosition";
+import { bookSquares, coordsToUci, judgeMove } from "./judgeMove";
+import { isEnd, isMine, nodeAt, pathMoves, repliesAt } from "./book";
 import {
     Phase,
     T,
+    currentOpening,
     initialTrainerState,
-    lineProgress,
+    runProgress,
     trainerReducer,
 } from "./trainerReducer";
 
@@ -15,184 +17,243 @@ const BOOK = path.join(__dirname, "..", "..", "public", "openings");
 const load = (f) => JSON.parse(fs.readFileSync(path.join(BOOK, f), "utf8"));
 
 const italian = load("italian-white.json");
-const giuoco = italian.lines[0];          // White, 13 plies
 const caro = load("caro-kann-black.json");
-const caroClassical = caro.lines[0];      // Black
-const berlin = load("ruy-lopez-white.json").lines[1];  // has O-O and Qxd8+ Kxd8
+const ruy = load("ruy-lopez-white.json");
 
-describe("buildLinePrefix", () => {
-    it("returns the start position at ply 0", () => {
-        const { positions, movesList, turn } = buildLinePrefix(giuoco, 0);
+/** Walk a repertoire root-to-leaf, always taking the first book reply. */
+function mainPath(rep) {
+    let p = "";
+    while (!isEnd(rep, p)) p += repliesAt(rep, p)[0].uci;
+    return p;
+}
+
+describe("book tree", () => {
+    it("has a root position with book replies", () => {
+        expect(nodeAt(italian, "")).toBeTruthy();
+        expect(repliesAt(italian, "").length).toBeGreaterThan(0);
+    });
+
+    it("merges lines that share a prefix into one branching node", () => {
+        // All four Italian lines start 1.e4 e5 2.Nf3 Nc6 3.Bc4, then diverge.
+        const shared = "e2e4e7e5g1f3b8c6f1c4";
+        expect(repliesAt(italian, shared).length).toBeGreaterThan(1);
+    });
+
+    it("dedups shared prefixes into a single card", () => {
+        // 1.e4 appears in every Italian line but is one position, so one card.
+        expect(repliesAt(italian, "")).toHaveLength(1);
+    });
+
+    it("marks the learner's turn correctly for a White repertoire", () => {
+        expect(isMine(italian, "")).toBe(true);
+        expect(isMine(italian, "e2e4")).toBe(false);
+    });
+
+    it("marks the learner's turn correctly for a Black repertoire", () => {
+        expect(isMine(caro, "")).toBe(false);
+        expect(isMine(caro, "e2e4")).toBe(true);
+    });
+
+    it("names every node, inheriting from the nearest named ancestor", () => {
+        Object.entries(italian.nodes).forEach(([p, n]) => {
+            if (p.length >= 8) expect(typeof n.name).toBe("string");
+        });
+    });
+
+    it("recovers the book SAN for a path", () => {
+        const moves = pathMoves(italian, "e2e4e7e5g1f3");
+        expect(moves.map((m) => m.san)).toEqual(["e4", "e5", "Nf3"]);
+        expect(moves.map((m) => m.mine)).toEqual([true, false, true]);
+    });
+
+    it("reports the end of a line", () => {
+        expect(isEnd(italian, mainPath(italian))).toBe(true);
+    });
+});
+
+describe("buildPosition", () => {
+    it("returns the start position for an empty path", () => {
+        const { positions, movesList, turn } = buildPosition(italian, "");
         expect(positions).toHaveLength(1);
         expect(movesList).toEqual([]);
         expect(turn).toBe("w");
-        expect(positions[0][0][4]).toBe("wk");
-        expect(positions[0][7][4]).toBe("bk");
     });
 
     it("returns the whole history, not just the final board", () => {
-        // getPawnCaptures detects en passant by diffing against prevPosition,
-        // so the trainer needs every intermediate board, not one snapshot.
-        const { positions } = buildLinePrefix(giuoco, 5);
-        expect(positions).toHaveLength(6);
+        // getPawnCaptures detects en passant by diffing against prevPosition.
+        const { positions } = buildPosition(italian, "e2e4e7e5g1f3b8c6");
+        expect(positions).toHaveLength(5);
     });
 
-    it("alternates the side to move with ply parity", () => {
-        expect(buildLinePrefix(giuoco, 1).turn).toBe("b");
-        expect(buildLinePrefix(giuoco, 2).turn).toBe("w");
-        expect(buildLinePrefix(giuoco, 7).turn).toBe("b");
+    it("alternates the side to move with path length", () => {
+        expect(buildPosition(italian, "e2e4").turn).toBe("b");
+        expect(buildPosition(italian, "e2e4e7e5").turn).toBe("w");
     });
 
     it("moves the rook too when the king castles", () => {
-        const plies = berlin.moves.findIndex((m) => m.san === "O-O") + 1;
-        const { positions } = buildLinePrefix(berlin, plies);
-        const board = positions[positions.length - 1];
-        expect(board[0][6]).toBe("wk");   // king on g1
-        expect(board[0][5]).toBe("wr");   // rook hopped to f1
-        expect(board[0][7]).toBe("");     // h1 empty
-        expect(board[0][4]).toBe("");     // e1 empty
+        // find a path through the Ruy that contains O-O
+        let p = "";
+        while (!isEnd(ruy, p)) {
+            const r = repliesAt(ruy, p)[0];
+            p += r.uci;
+            if (r.san === "O-O" && r.uci === "e1g1") break;
+        }
+        const { positions } = buildPosition(ruy, p);
+        const b = positions[positions.length - 1];
+        expect(b[0][6]).toBe("wk");
+        expect(b[0][5]).toBe("wr");
+        expect(b[0][7]).toBe("");
+        expect(b[0][4]).toBe("");
     });
 
     it("revokes castling rights once the king has moved", () => {
-        const plies = berlin.moves.findIndex((m) => m.san === "O-O") + 1;
-        expect(buildLinePrefix(berlin, plies).castleDirection.w).toBe("none");
+        let p = "";
+        while (!isEnd(ruy, p)) {
+            const r = repliesAt(ruy, p)[0];
+            p += r.uci;
+            if (r.uci === "e1g1") break;
+        }
+        expect(buildPosition(ruy, p).castleDirection.w).toBe("none");
     });
 
-    it("keeps castling rights before anything has moved", () => {
-        expect(buildLinePrefix(giuoco, 2).castleDirection).toEqual({ w: "both", b: "both" });
-    });
-
-    it("is pure — same inputs, same board", () => {
-        const a = buildLinePrefix(giuoco, 6);
-        const b = buildLinePrefix(giuoco, 6);
-        expect(a.positions[a.positions.length - 1]).toEqual(b.positions[b.positions.length - 1]);
+    it("is pure — same path, same board", () => {
+        const a = buildPosition(italian, "e2e4e7e5g1f3");
+        const b = buildPosition(italian, "e2e4e7e5g1f3");
+        expect(a.positions.at(-1)).toEqual(b.positions.at(-1));
         expect(a.castleDirection).toEqual(b.castleDirection);
     });
 
-    it("clamps a ply beyond the end of the line", () => {
-        const { positions } = buildLinePrefix(giuoco, 999);
-        expect(positions).toHaveLength(giuoco.moves.length + 1);
-    });
-
-    it("uses the book's SAN rather than regenerating it", () => {
-        // getNewMoveNotation emits no + or #, so regenerating would diverge.
-        const { movesList } = buildLinePrefix(giuoco, 4);
-        expect(movesList).toEqual(giuoco.moves.slice(0, 4).map((m) => m.san));
-    });
-
-    it("offers castling as a legal move when rights are intact", () => {
-        const idx = berlin.moves.findIndex((m) => m.san === "O-O");
-        const prefix = buildLinePrefix(berlin, idx);
-        // white king on e1 = [0,4]; castling target g1 = [0,6]
-        expect(legalMovesAt(prefix, 0, 4)).toContainEqual([0, 6]);
+    it("uses the book SAN rather than regenerating it", () => {
+        expect(buildPosition(italian, "e2e4e7e5").movesList).toEqual(["e4", "e5"]);
     });
 });
 
 describe("judgeMove", () => {
+    it("round-trips coordinates to uci", () => {
+        expect(coordsToUci([1, 4], [3, 4])).toBe("e2e4");
+        expect(coordsToUci([0, 4], [0, 6])).toBe("e1g1");
+    });
+
     it("accepts the book move", () => {
-        const { from, to } = hintSquares(giuoco, 0);
-        expect(judgeMove(giuoco, 0, { from, to }).verdict).toBe("correct");
+        const { from, to } = bookSquares(italian, "")[0];
+        expect(judgeMove(italian, "", { from, to }).verdict).toBe("correct");
     });
 
     it("rejects a legal but non-book move", () => {
-        // a2a3 instead of e2e4
-        expect(judgeMove(giuoco, 0, { from: [1, 0], to: [2, 0] }).verdict).toBe("wrong");
+        expect(judgeMove(italian, "", { from: [1, 0], to: [2, 0] }).verdict).toBe("wrong");
     });
 
-    it("rejects the right destination from the wrong square", () => {
-        const { to } = hintSquares(giuoco, 0);
-        expect(judgeMove(giuoco, 0, { from: [1, 3], to }).verdict).toBe("wrong");
+    it("accepts ANY of several book moves at a branch", () => {
+        const branch = "e2e4e7e5g1f3b8c6f1c4";
+        const options = bookSquares(italian, branch);
+        expect(options.length).toBeGreaterThan(1);
+        options.forEach((o) => {
+            expect(judgeMove(italian, branch, { from: o.from, to: o.to }).verdict).toBe("correct");
+        });
     });
 
-    it("reports what the book expected", () => {
-        expect(judgeMove(giuoco, 0, { from: [1, 0], to: [2, 0] }).expected.san).toBe("e4");
+    it("reports which book move was played", () => {
+        const o = bookSquares(italian, "")[0];
+        expect(judgeMove(italian, "", { from: o.from, to: o.to }).played.san).toBe("e4");
     });
 
-    it("returns off-line past the end", () => {
-        expect(judgeMove(giuoco, 99, { from: [0, 0], to: [1, 1] }).verdict).toBe("off-line");
+    it("returns off-line past the end of the tree", () => {
+        expect(judgeMove(italian, mainPath(italian), { from: [1, 0], to: [2, 0] }).verdict)
+            .toBe("off-line");
     });
 });
 
 describe("trainerReducer", () => {
-    const start = (rep = italian, i = 0) =>
-        trainerReducer(initialTrainerState, {
-            type: T.START_LINE,
-            payload: { repertoire: rep, lineIndex: i },
-        });
+    const start = (rep = italian) =>
+        trainerReducer(initialTrainerState, { type: T.START, payload: { repertoire: rep } });
 
-    const correctAt = (state) => {
-        const { from, to } = hintSquares(state.line, state.ply);
-        const { verdict, expected } = judgeMove(state.line, state.ply, { from, to });
-        return trainerReducer(state, {
+    const playBook = (s, which = 0) => {
+        const o = bookSquares(s.repertoire, s.path)[which];
+        return trainerReducer(s, {
             type: T.ATTEMPT,
-            payload: { verdict, expected, attemptedSan: null },
+            payload: judgeMove(s.repertoire, s.path, { from: o.from, to: o.to }),
         });
     };
-    const wrongAt = (state) =>
-        trainerReducer(state, {
+    const playWrong = (s) =>
+        trainerReducer(s, {
             type: T.ATTEMPT,
-            payload: { verdict: "wrong", expected: state.line.moves[state.ply], attemptedSan: null },
+            payload: judgeMove(s.repertoire, s.path, { from: [1, 0], to: [2, 0] }),
         });
 
-    it("starts a White line waiting for the learner", () => {
+    it("starts a White repertoire waiting for the learner", () => {
         const s = start();
         expect(s.phase).toBe(Phase.answering);
-        expect(s.ply).toBe(0);
+        expect(s.path).toBe("");
     });
 
-    it("starts a Black line in reply phase, since White moves first", () => {
-        const s = start(caro, 0);
-        expect(s.line.side).toBe("b");
+    it("starts a Black repertoire in reply phase, since White moves first", () => {
+        const s = start(caro);
         expect(s.phase).toBe(Phase.reply);
-        expect(s.ply).toBe(0);
     });
 
-    it("a correct move advances to the opponent's reply", () => {
-        const s = correctAt(start());
+    it("a correct move extends the path", () => {
+        const s = playBook(start());
         expect(s.feedback.verdict).toBe("correct");
-        expect(s.ply).toBe(1);
+        expect(s.path).toBe("e2e4");
         expect(s.phase).toBe(Phase.reply);
     });
 
-    it("a wrong move does NOT advance the ply", () => {
-        const s = wrongAt(start());
+    it("a wrong move does NOT extend the path", () => {
+        const s = playWrong(start());
         expect(s.feedback.verdict).toBe("wrong");
-        expect(s.ply).toBe(0);
+        expect(s.path).toBe("");
         expect(s.phase).toBe(Phase.answering);
         expect(s.attempts).toBe(1);
     });
 
-    it("surfaces the expected move after a mistake", () => {
-        expect(wrongAt(start()).feedback.expectedSan).toBe("e4");
+    it("tells you how many book moves were available", () => {
+        expect(playWrong(start()).feedback.expected).toEqual(["e4"]);
     });
 
-    it("scores a first-time-correct move as firstTry", () => {
-        expect(correctAt(start()).results[0].firstTry).toBe(true);
+    it("counts alternatives when the LEARNER has a choice", () => {
+        // Find a position where the learner themselves has more than one book
+        // move — that is what the tree exists for. Discovered rather than
+        // hardcoded, so adding curation can't silently break this.
+        const branch = Object.entries(italian.nodes)
+            .find(([, n]) => n.mine && n.replies.length > 1);
+        expect(branch).toBeTruthy();
+
+        const [branchPath, node] = branch;
+        const s = { ...start(), path: branchPath, phase: Phase.answering };
+
+        // every one of them is accepted
+        bookSquares(italian, branchPath).forEach((o) => {
+            expect(judgeMove(italian, branchPath, { from: o.from, to: o.to }).verdict)
+                .toBe("correct");
+        });
+        // and the learner is told the others exist
+        expect(playBook(s).feedback.alternatives).toBe(node.replies.length - 1);
     });
 
-    it("does not score firstTry after a mistake on the same card", () => {
-        const s = correctAt(wrongAt(start()));
-        expect(s.results[0].firstTry).toBe(false);
+    it("scores first-time-correct as firstTry", () => {
+        expect(playBook(start()).results[""].firstTry).toBe(true);
+    });
+
+    it("does not score firstTry after a mistake", () => {
+        expect(playBook(playWrong(start())).results[""].firstTry).toBe(false);
     });
 
     it("does not score firstTry after a hint", () => {
         const hinted = trainerReducer(start(), { type: T.HINT });
-        expect(correctAt(hinted).results[0].firstTry).toBe(false);
+        expect(playBook(hinted).results[""].firstTry).toBe(false);
     });
 
     it("breaks the streak on a wrong move", () => {
-        let s = correctAt(start());
-        s = trainerReducer(s, { type: T.ADVANCE });
-        expect(s.phase).toBe(Phase.answering);
-        s = correctAt(s);
+        let s = playBook(start());
+        s = trainerReducer(s, { type: T.ADVANCE, payload: { reply: repliesAt(italian, s.path)[0] } });
+        s = playBook(s);
         expect(s.streak).toBe(2);
-        s = trainerReducer(s, { type: T.ADVANCE });
-        expect(wrongAt(s).streak).toBe(0);
+        s = trainerReducer(s, { type: T.ADVANCE, payload: { reply: repliesAt(italian, s.path)[0] } });
+        expect(playWrong(s).streak).toBe(0);
     });
 
     it("remembers the best streak across a reset", () => {
-        let s = correctAt(start());
-        expect(s.bestStreak).toBe(1);
+        const s = playBook(start());
         expect(trainerReducer(s, { type: T.RESET }).bestStreak).toBe(1);
     });
 
@@ -202,48 +263,65 @@ describe("trainerReducer", () => {
         expect(s.hintLevel).toBe(2);
     });
 
-    it("skip advances the line but scores a miss", () => {
+    it("skip advances but scores a miss", () => {
         const s = trainerReducer(start(), { type: T.SKIP });
-        expect(s.ply).toBe(1);
-        expect(s.results[0].firstTry).toBe(false);
-        expect(s.results[0].skipped).toBe(true);
-        expect(s.feedback.verdict).toBe("skipped");
+        expect(s.path).toBe("e2e4");
+        expect(s.results[""].firstTry).toBe(false);
+        expect(s.results[""].skipped).toBe(true);
     });
 
-    it("ignores an attempt while the opponent is replying", () => {
-        const s = correctAt(start());   // now in reply phase
-        expect(wrongAt(s)).toBe(s);
+    it("ignores an attempt while the book is replying", () => {
+        const s = playBook(start());
+        expect(playWrong(s)).toBe(s);
     });
 
-    it("reaches lineComplete after every answer ply", () => {
+    it("the opening name deepens as the line goes on", () => {
         let s = start();
-        // drive the whole line: answer, then let the reply land
-        for (let guard = 0; guard < 60 && s.phase !== Phase.lineComplete; guard++) {
-            s = s.phase === Phase.answering ? correctAt(s) : trainerReducer(s, { type: T.ADVANCE });
+        const first = currentOpening(s).name;
+        for (let i = 0; i < 6 && s.phase !== Phase.lineComplete; i++) {
+            s = s.phase === Phase.answering
+                ? playBook(s)
+                : trainerReducer(s, {
+                    type: T.ADVANCE,
+                    payload: { reply: repliesAt(s.repertoire, s.path)[0] },
+                });
+        }
+        expect(currentOpening(s).name).not.toBe(first);
+        expect(currentOpening(s).depth).toBeGreaterThan(0);
+    });
+
+    it("reaches lineComplete and reports the run", () => {
+        let s = start();
+        for (let g = 0; g < 80 && s.phase !== Phase.lineComplete; g++) {
+            s = s.phase === Phase.answering
+                ? playBook(s)
+                : trainerReducer(s, {
+                    type: T.ADVANCE,
+                    payload: { reply: repliesAt(s.repertoire, s.path)[0] },
+                });
         }
         expect(s.phase).toBe(Phase.lineComplete);
-        expect(lineProgress(s)).toEqual({
-            done: giuoco.answerPlies.length,
-            total: giuoco.answerPlies.length,
-        });
+        const p = runProgress(s);
+        expect(p.answered).toBeGreaterThan(0);
+        expect(p.firstTry).toBe(p.answered);
     });
 
-    it("next line wraps around the repertoire", () => {
-        let s = start(italian, italian.lines.length - 1);
-        s = trainerReducer(s, { type: T.NEXT_LINE });
-        expect(s.lineIndex).toBe(0);
-        expect(s.results).toEqual({});
+    it("restart goes back to the root", () => {
+        const s = trainerReducer(playBook(start()), { type: T.RESTART });
+        expect(s.path).toBe("");
+        expect(s.runs).toBe(1);
     });
 });
 
-describe("the drilled line stays playable on the real board", () => {
-    it("every learner answer is a legal move according to the arbiter", () => {
-        [giuoco, caroClassical, berlin].forEach((line) => {
-            line.answerPlies.forEach((ply) => {
-                const prefix = buildLinePrefix(line, ply);
-                const { from, to } = hintSquares(line, ply);
-                const legal = legalMovesAt(prefix, from[0], from[1]);
-                expect(legal).toContainEqual([to[0], to[1]]);
+describe("every book move is playable on the real board", () => {
+    it("holds for every position in every repertoire", () => {
+        [italian, caro, ruy].forEach((rep) => {
+            Object.keys(rep.nodes).forEach((p) => {
+                const prefix = buildPosition(rep, p);
+                bookSquares(rep, p).forEach((o) => {
+                    expect(legalMovesAt(prefix, o.from[0], o.from[1]))
+                        .toContainEqual([o.to[0], o.to[1]]);
+                });
             });
         });
     });

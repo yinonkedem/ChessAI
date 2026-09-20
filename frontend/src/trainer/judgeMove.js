@@ -1,40 +1,41 @@
 import { uciToCoords } from "../utils/uciToCoords";
+import { repliesAt } from "./book";
+
+/** [rank,file] pairs -> "e2e4", the shape the book is keyed on. */
+export function coordsToUci([fromRank, fromFile], [toRank, toFile]) {
+    const file = (f) => String.fromCharCode(97 + f);
+    return `${file(fromFile)}${fromRank + 1}${file(toFile)}${toRank + 1}`;
+}
 
 /**
- * Was this the book move?
+ * Was this a book move?
  *
- * Compares COORDINATES, never SAN. getNewMoveNotation (helper.js:53-87) does
- * not emit `+` or `#`, but the book's SAN comes from python-chess and does —
- * so a SAN comparison would call every checking move wrong.
+ * A position can have several book replies — the Najdorf allows both 6...e5
+ * and 6...e6 — so this checks membership, not equality against one move.
+ * That is the whole point of the tree.
+ *
+ * Compares COORDINATES, never SAN: getNewMoveNotation (helper.js:53-87) emits
+ * no `+` or `#` while the book's SAN comes from python-chess and does, so a
+ * SAN comparison would call every checking move wrong.
  */
-export function judgeMove(line, ply, attempt) {
-    const move = line.moves[ply];
-    if (!move) return { verdict: "off-line", expected: null };
+export function judgeMove(repertoire, path, attempt) {
+    const replies = repliesAt(repertoire, path);
+    if (replies.length === 0) return { verdict: "off-line", played: null, replies };
 
-    const [[eFromRank, eFromFile], [eToRank, eToFile]] = uciToCoords(move.uci);
-    const [fromRank, fromFile] = attempt.from;
-    const [toRank, toFile] = attempt.to;
+    const uci = coordsToUci(attempt.from, attempt.to);
+    const played = replies.find((r) => r.uci === uci) ?? null;
 
-    const correct =
-        fromRank === eFromRank &&
-        fromFile === eFromFile &&
-        toRank === eToRank &&
-        toFile === eToFile;
-
-    return { verdict: correct ? "correct" : "wrong", expected: move };
+    return {
+        verdict: played ? "correct" : "wrong",
+        played,
+        replies,
+    };
 }
 
-/** The square the learner should have moved FROM — used by the first hint. */
-export function hintFrom(line, ply) {
-    const move = line.moves[ply];
-    if (!move) return null;
-    return uciToCoords(move.uci)[0];
-}
-
-/** The full from/to for the book move — used by the second hint. */
-export function hintSquares(line, ply) {
-    const move = line.moves[ply];
-    if (!move) return null;
-    const [from, to] = uciToCoords(move.uci);
-    return { from, to };
+/** The squares of every book move here — used by the hint and by "show me". */
+export function bookSquares(repertoire, path) {
+    return repliesAt(repertoire, path).map((r) => {
+        const [from, to] = uciToCoords(r.uci);
+        return { ...r, from, to };
+    });
 }

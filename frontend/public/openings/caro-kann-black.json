@@ -11,283 +11,418 @@
    "label": "Classical Variation",
    "eco": "B18",
    "name": "Caro-Kann Defense: Classical Variation, Main Line",
-   "side": "b",
-   "moves": [
-    {
-     "san": "e4",
-     "uci": "e2e4"
-    },
-    {
-     "san": "c6",
-     "uci": "c7c6"
-    },
-    {
-     "san": "d4",
-     "uci": "d2d4"
-    },
-    {
-     "san": "d5",
-     "uci": "d7d5"
-    },
-    {
-     "san": "Nc3",
-     "uci": "b1c3"
-    },
-    {
-     "san": "dxe4",
-     "uci": "d5e4"
-    },
-    {
-     "san": "Nxe4",
-     "uci": "c3e4"
-    },
-    {
-     "san": "Bf5",
-     "uci": "c8f5"
-    },
-    {
-     "san": "Ng3",
-     "uci": "e4g3"
-    },
-    {
-     "san": "Bg6",
-     "uci": "f5g6"
-    },
-    {
-     "san": "h4",
-     "uci": "h2h4"
-    },
-    {
-     "san": "h6",
-     "uci": "h7h6"
-    }
-   ],
-   "ideas": [
-    null,
-    "Prepare ...d5 — but with the c-pawn, so the bishop stays free.",
-    null,
-    "Challenge the centre on equal terms.",
-    null,
-    "Release the tension and remove White's best pawn.",
-    null,
-    "The whole point of the Caro-Kann: this bishop gets out before ...e6 locks it in.",
-    null,
-    "Retreat and keep the good bishop.",
-    null,
-    null
-   ],
-   "answerPlies": [
-    1,
-    3,
-    5,
-    7,
-    9,
-    11
-   ]
+   "path": "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6",
+   "plies": 12
   },
   {
    "id": "caro-advance",
    "label": "Advance Variation",
    "eco": "B12",
    "name": "Caro-Kann Defense: Advance Variation, Short Variation",
-   "side": "b",
-   "moves": [
-    {
-     "san": "e4",
-     "uci": "e2e4"
-    },
-    {
-     "san": "c6",
-     "uci": "c7c6"
-    },
-    {
-     "san": "d4",
-     "uci": "d2d4"
-    },
-    {
-     "san": "d5",
-     "uci": "d7d5"
-    },
-    {
-     "san": "e5",
-     "uci": "e4e5"
-    },
-    {
-     "san": "Bf5",
-     "uci": "c8f5"
-    },
-    {
-     "san": "Nf3",
-     "uci": "g1f3"
-    },
-    {
-     "san": "e6",
-     "uci": "e7e6"
-    },
-    {
-     "san": "Be2",
-     "uci": "f1e2"
-    },
-    {
-     "san": "c5",
-     "uci": "c6c5"
-    }
-   ],
-   "ideas": [
-    null,
-    "Prepare ...d5.",
-    null,
-    "Challenge the centre.",
-    null,
-    "Develop the bishop outside the chain before playing ...e6.",
-    null,
-    "Now ...e6 costs nothing — the bishop is already out.",
-    null,
-    "Strike the base of the pawn chain."
-   ],
-   "answerPlies": [
-    1,
-    3,
-    5,
-    7,
-    9
-   ]
+   "path": "e2e4c7c6d2d4d7d5e4e5c8f5g1f3e7e6f1e2c6c5",
+   "plies": 10
   },
   {
    "id": "caro-exchange",
    "label": "Exchange Variation",
    "eco": "B13",
    "name": "Caro-Kann Defense: Exchange Variation",
-   "side": "b",
-   "moves": [
-    {
-     "san": "e4",
-     "uci": "e2e4"
-    },
-    {
-     "san": "c6",
-     "uci": "c7c6"
-    },
-    {
-     "san": "d4",
-     "uci": "d2d4"
-    },
-    {
-     "san": "d5",
-     "uci": "d7d5"
-    },
-    {
-     "san": "exd5",
-     "uci": "e4d5"
-    },
-    {
-     "san": "cxd5",
-     "uci": "c6d5"
-    },
-    {
-     "san": "Bd3",
-     "uci": "f1d3"
-    },
-    {
-     "san": "Nc6",
-     "uci": "b8c6"
-    },
-    {
-     "san": "c3",
-     "uci": "c2c3"
-    },
-    {
-     "san": "Nf6",
-     "uci": "g8f6"
-    }
-   ],
-   "ideas": [
-    null,
-    "Prepare ...d5.",
-    null,
-    "Challenge the centre.",
-    null,
-    "Recapture toward the centre and open the c-file.",
-    null,
-    "Develop and pressure d4.",
-    null,
-    "Develop and fight for control of e4."
-   ],
-   "answerPlies": [
-    1,
-    3,
-    5,
-    7,
-    9
-   ]
+   "path": "e2e4c7c6d2d4d7d5e4d5c6d5f1d3b8c6c2c3g8f6",
+   "plies": 10
   },
   {
    "id": "caro-panov",
    "label": "Panov Attack",
    "eco": "B14",
    "name": "Caro-Kann Defense: Panov Attack",
-   "side": "b",
-   "moves": [
+   "path": "e2e4c7c6d2d4d7d5e4d5c6d5c2c4g8f6b1c3e7e6",
+   "plies": 10
+  }
+ ],
+ "nodes": {
+  "": {
+   "ply": 0,
+   "turn": "w",
+   "mine": false,
+   "replies": [
     {
-     "san": "e4",
-     "uci": "e2e4"
-    },
+     "uci": "e2e4",
+     "san": "e4"
+    }
+   ]
+  },
+  "e2e4": {
+   "ply": 1,
+   "turn": "b",
+   "mine": true,
+   "replies": [
     {
+     "uci": "c7c6",
      "san": "c6",
-     "uci": "c7c6"
-    },
-    {
-     "san": "d4",
-     "uci": "d2d4"
-    },
-    {
-     "san": "d5",
-     "uci": "d7d5"
-    },
-    {
-     "san": "exd5",
-     "uci": "e4d5"
-    },
-    {
-     "san": "cxd5",
-     "uci": "c6d5"
-    },
-    {
-     "san": "c4",
-     "uci": "c2c4"
-    },
-    {
-     "san": "Nf6",
-     "uci": "g8f6"
-    },
-    {
-     "san": "Nc3",
-     "uci": "b1c3"
-    },
-    {
-     "san": "e6",
-     "uci": "e7e6"
+     "idea": "Prepare ...d5 — but with the c-pawn, so the bishop stays free."
     }
    ],
-   "ideas": [
-    null,
-    "Prepare ...d5.",
-    null,
-    "Challenge the centre.",
-    null,
-    "Recapture toward the centre.",
-    null,
-    "Develop and defend d5 — White is playing for an isolated pawn structure.",
-    null,
-    "Solid. Hold d5 and accept a rich middlegame."
+   "eco": "B00",
+   "name": "King's Pawn Game"
+  },
+  "e2e4c7c6": {
+   "ply": 2,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4"
+    }
    ],
-   "answerPlies": [
-    1,
-    3,
-    5,
-    7,
-    9
-   ]
+   "eco": "B10",
+   "name": "Caro-Kann Defense"
+  },
+  "e2e4c7c6d2d4": {
+   "ply": 3,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7d5",
+     "san": "d5",
+     "idea": "Challenge the centre on equal terms."
+    }
+   ],
+   "eco": "B12",
+   "name": "Caro-Kann Defense"
+  },
+  "e2e4c7c6d2d4d7d5": {
+   "ply": 4,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3"
+    },
+    {
+     "uci": "e4e5",
+     "san": "e5"
+    },
+    {
+     "uci": "e4d5",
+     "san": "exd5"
+    }
+   ],
+   "eco": "B12",
+   "name": "Caro-Kann Defense"
+  },
+  "e2e4c7c6d2d4d7d5b1c3": {
+   "ply": 5,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d5e4",
+     "san": "dxe4",
+     "idea": "Release the tension and remove White's best pawn."
+    }
+   ],
+   "eco": "B15",
+   "name": "Caro-Kann Defense"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4": {
+   "ply": 6,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c3e4",
+     "san": "Nxe4"
+    }
+   ],
+   "eco": "B15",
+   "name": "Caro-Kann Defense"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4": {
+   "ply": 7,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8f5",
+     "san": "Bf5",
+     "idea": "The whole point of the Caro-Kann: this bishop gets out before ...e6 locks it in."
+    }
+   ],
+   "eco": "B15",
+   "name": "Caro-Kann Defense: Main Line"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5": {
+   "ply": 8,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4g3",
+     "san": "Ng3"
+    }
+   ],
+   "eco": "B18",
+   "name": "Caro-Kann Defense: Classical Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f5g6",
+     "san": "Bg6",
+     "idea": "Retreat and keep the good bishop."
+    }
+   ],
+   "eco": "B18",
+   "name": "Caro-Kann Defense: Classical Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h2h4",
+     "san": "h4"
+    }
+   ],
+   "eco": "B18",
+   "name": "Caro-Kann Defense: Classical Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h7h6",
+     "san": "h6"
+    }
+   ],
+   "eco": "B18",
+   "name": "Caro-Kann Defense: Classical Variation, Main Line"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "B18",
+   "name": "Caro-Kann Defense: Classical Variation, Main Line"
+  },
+  "e2e4c7c6d2d4d7d5e4e5": {
+   "ply": 5,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8f5",
+     "san": "Bf5",
+     "idea": "Develop the bishop outside the chain before playing ...e6."
+    }
+   ],
+   "eco": "B12",
+   "name": "Caro-Kann Defense: Advance Variation"
+  },
+  "e2e4c7c6d2d4d7d5e4e5c8f5": {
+   "ply": 6,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3"
+    }
+   ],
+   "eco": "B12",
+   "name": "Caro-Kann Defense: Advance Variation"
+  },
+  "e2e4c7c6d2d4d7d5e4e5c8f5g1f3": {
+   "ply": 7,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e7e6",
+     "san": "e6",
+     "idea": "Now ...e6 costs nothing — the bishop is already out."
+    }
+   ],
+   "eco": "B12",
+   "name": "Caro-Kann Defense: Advance Variation, Short Variation"
+  },
+  "e2e4c7c6d2d4d7d5e4e5c8f5g1f3e7e6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1e2",
+     "san": "Be2"
+    }
+   ],
+   "eco": "B12",
+   "name": "Caro-Kann Defense: Advance Variation, Short Variation"
+  },
+  "e2e4c7c6d2d4d7d5e4e5c8f5g1f3e7e6f1e2": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c6c5",
+     "san": "c5",
+     "idea": "Strike the base of the pawn chain."
+    }
+   ],
+   "eco": "B12",
+   "name": "Caro-Kann Defense: Advance Variation, Short Variation"
+  },
+  "e2e4c7c6d2d4d7d5e4e5c8f5g1f3e7e6f1e2c6c5": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "B12",
+   "name": "Caro-Kann Defense: Advance Variation, Short Variation"
+  },
+  "e2e4c7c6d2d4d7d5e4d5": {
+   "ply": 5,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c6d5",
+     "san": "cxd5",
+     "idea": "Recapture toward the centre and open the c-file."
+    }
+   ],
+   "eco": "B13",
+   "name": "Caro-Kann Defense: Exchange Variation"
+  },
+  "e2e4c7c6d2d4d7d5e4d5c6d5": {
+   "ply": 6,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1d3",
+     "san": "Bd3"
+    },
+    {
+     "uci": "c2c4",
+     "san": "c4"
+    }
+   ],
+   "eco": "B13",
+   "name": "Caro-Kann Defense: Exchange Variation"
+  },
+  "e2e4c7c6d2d4d7d5e4d5c6d5f1d3": {
+   "ply": 7,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6",
+     "idea": "Develop and pressure d4."
+    }
+   ],
+   "eco": "B13",
+   "name": "Caro-Kann Defense: Exchange Variation"
+  },
+  "e2e4c7c6d2d4d7d5e4d5c6d5f1d3b8c6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c2c3",
+     "san": "c3"
+    }
+   ],
+   "eco": "B13",
+   "name": "Caro-Kann Defense: Exchange Variation"
+  },
+  "e2e4c7c6d2d4d7d5e4d5c6d5f1d3b8c6c2c3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6",
+     "idea": "Develop and fight for control of e4."
+    }
+   ],
+   "eco": "B13",
+   "name": "Caro-Kann Defense: Exchange Variation"
+  },
+  "e2e4c7c6d2d4d7d5e4d5c6d5f1d3b8c6c2c3g8f6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "B13",
+   "name": "Caro-Kann Defense: Exchange Variation"
+  },
+  "e2e4c7c6d2d4d7d5e4d5c6d5c2c4": {
+   "ply": 7,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6",
+     "idea": "Develop and defend d5 — White is playing for an isolated pawn structure."
+    }
+   ],
+   "eco": "B13",
+   "name": "Caro-Kann Defense: Panov Attack"
+  },
+  "e2e4c7c6d2d4d7d5e4d5c6d5c2c4g8f6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3"
+    }
+   ],
+   "eco": "B13",
+   "name": "Caro-Kann Defense: Panov Attack"
+  },
+  "e2e4c7c6d2d4d7d5e4d5c6d5c2c4g8f6b1c3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e7e6",
+     "san": "e6",
+     "idea": "Solid. Hold d5 and accept a rich middlegame."
+    }
+   ],
+   "eco": "B13",
+   "name": "Caro-Kann Defense: Panov Attack"
+  },
+  "e2e4c7c6d2d4d7d5e4d5c6d5c2c4g8f6b1c3e7e6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "B14",
+   "name": "Caro-Kann Defense: Panov Attack"
   }
- ]
+ }
 }

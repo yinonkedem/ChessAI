@@ -11,243 +11,384 @@
    "label": "Exchange Variation",
    "eco": "D35",
    "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation",
-   "side": "w",
-   "moves": [
-    {
-     "san": "d4",
-     "uci": "d2d4"
-    },
-    {
-     "san": "d5",
-     "uci": "d7d5"
-    },
-    {
-     "san": "c4",
-     "uci": "c2c4"
-    },
-    {
-     "san": "e6",
-     "uci": "e7e6"
-    },
-    {
-     "san": "Nc3",
-     "uci": "b1c3"
-    },
-    {
-     "san": "Nf6",
-     "uci": "g8f6"
-    },
-    {
-     "san": "cxd5",
-     "uci": "c4d5"
-    },
-    {
-     "san": "exd5",
-     "uci": "e6d5"
-    },
-    {
-     "san": "Bg5",
-     "uci": "c1g5"
-    },
-    {
-     "san": "Be7",
-     "uci": "f8e7"
-    },
-    {
-     "san": "e3",
-     "uci": "e2e3"
-    },
-    {
-     "san": "O-O",
-     "uci": "e8g8"
-    }
-   ],
-   "ideas": [
-    "Take your share of the centre and open lines for the dark-squared bishop.",
-    null,
-    "Challenge d5 from the side. This is the gambit — it is only a loan.",
-    null,
-    "Develop and add a third attacker to d5.",
-    null,
-    "Release the tension on your terms and fix Black's structure.",
-    null,
-    "Pin the knight, making d5 harder to hold.",
-    null,
-    "Modest, but it frees the light-squared bishop and secures d4.",
-    null
-   ],
-   "answerPlies": [
-    0,
-    2,
-    4,
-    6,
-    8,
-    10
-   ]
+   "path": "d2d4d7d5c2c4e7e6b1c3g8f6c4d5e6d5c1g5f8e7e2e3e8g8",
+   "plies": 12
   },
   {
    "id": "qgd-orthodox",
    "label": "Tartakower Defense",
    "eco": "D58",
    "name": "Queen's Gambit Declined: Tartakower Defense",
-   "side": "w",
-   "moves": [
-    {
-     "san": "d4",
-     "uci": "d2d4"
-    },
-    {
-     "san": "d5",
-     "uci": "d7d5"
-    },
-    {
-     "san": "c4",
-     "uci": "c2c4"
-    },
-    {
-     "san": "e6",
-     "uci": "e7e6"
-    },
-    {
-     "san": "Nc3",
-     "uci": "b1c3"
-    },
-    {
-     "san": "Nf6",
-     "uci": "g8f6"
-    },
-    {
-     "san": "Bg5",
-     "uci": "c1g5"
-    },
-    {
-     "san": "Be7",
-     "uci": "f8e7"
-    },
-    {
-     "san": "e3",
-     "uci": "e2e3"
-    },
-    {
-     "san": "O-O",
-     "uci": "e8g8"
-    },
-    {
-     "san": "Nf3",
-     "uci": "g1f3"
-    },
-    {
-     "san": "h6",
-     "uci": "h7h6"
-    },
-    {
-     "san": "Bh4",
-     "uci": "g5h4"
-    },
-    {
-     "san": "b6",
-     "uci": "b7b6"
-    }
-   ],
-   "ideas": [
-    "Take the centre.",
-    null,
-    "Challenge d5.",
-    null,
-    "Develop toward the centre.",
-    null,
-    "Pin the f6 knight before Black can castle out of it.",
-    null,
-    "Solid and flexible.",
-    null,
-    "Complete the kingside development.",
-    null,
-    "Keep the pin rather than conceding the bishop pair.",
-    null
-   ],
-   "answerPlies": [
-    0,
-    2,
-    4,
-    6,
-    8,
-    10,
-    12
-   ]
+   "path": "d2d4d7d5c2c4e7e6b1c3g8f6c1g5f8e7e2e3e8g8g1f3h7h6g5h4b7b6",
+   "plies": 14
   },
   {
    "id": "qgd-tarrasch",
    "label": "Tarrasch Defense",
    "eco": "D33",
    "name": "Tarrasch Defense: Rubinstein System",
-   "side": "w",
-   "moves": [
+   "path": "d2d4d7d5c2c4e7e6b1c3c7c5c4d5e6d5g1f3b8c6g2g3",
+   "plies": 11
+  }
+ ],
+ "nodes": {
+  "": {
+   "ply": 0,
+   "turn": "w",
+   "mine": true,
+   "replies": [
     {
+     "uci": "d2d4",
      "san": "d4",
-     "uci": "d2d4"
-    },
+     "idea": "Take your share of the centre and open lines for the dark-squared bishop."
+    }
+   ]
+  },
+  "d2d4": {
+   "ply": 1,
+   "turn": "b",
+   "mine": false,
+   "replies": [
     {
-     "san": "d5",
-     "uci": "d7d5"
-    },
-    {
-     "san": "c4",
-     "uci": "c2c4"
-    },
-    {
-     "san": "e6",
-     "uci": "e7e6"
-    },
-    {
-     "san": "Nc3",
-     "uci": "b1c3"
-    },
-    {
-     "san": "c5",
-     "uci": "c7c5"
-    },
-    {
-     "san": "cxd5",
-     "uci": "c4d5"
-    },
-    {
-     "san": "exd5",
-     "uci": "e6d5"
-    },
-    {
-     "san": "Nf3",
-     "uci": "g1f3"
-    },
-    {
-     "san": "Nc6",
-     "uci": "b8c6"
-    },
-    {
-     "san": "g3",
-     "uci": "g2g3"
+     "uci": "d7d5",
+     "san": "d5"
     }
    ],
-   "ideas": [
-    "Take the centre.",
-    null,
-    "Challenge d5.",
-    null,
-    "Develop.",
-    null,
-    "Take, giving Black an isolated d-pawn to look after.",
-    null,
-    "Develop and put more pressure on d4 and d5.",
-    null,
-    "The critical plan: fianchetto and blockade the isolated pawn on d5."
+   "eco": "A40",
+   "name": "Queen's Pawn Game"
+  },
+  "d2d4d7d5": {
+   "ply": 2,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c2c4",
+     "san": "c4",
+     "idea": "Challenge d5 from the side. This is the gambit — it is only a loan."
+    }
    ],
-   "answerPlies": [
-    0,
-    2,
-    4,
-    6,
-    8,
-    10
-   ]
+   "eco": "D00",
+   "name": "Queen's Pawn Game"
+  },
+  "d2d4d7d5c2c4": {
+   "ply": 3,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7e6",
+     "san": "e6"
+    }
+   ],
+   "eco": "D06",
+   "name": "Queen's Gambit"
+  },
+  "d2d4d7d5c2c4e7e6": {
+   "ply": 4,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "Develop and add a third attacker to d5."
+    }
+   ],
+   "eco": "D30",
+   "name": "Queen's Gambit Declined"
+  },
+  "d2d4d7d5c2c4e7e6b1c3": {
+   "ply": 5,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    },
+    {
+     "uci": "c7c5",
+     "san": "c5"
+    }
+   ],
+   "eco": "D31",
+   "name": "Queen's Gambit Declined: Queen's Knight Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6": {
+   "ply": 6,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c4d5",
+     "san": "cxd5",
+     "idea": "Release the tension on your terms and fix Black's structure."
+    },
+    {
+     "uci": "c1g5",
+     "san": "Bg5",
+     "idea": "Pin the f6 knight before Black can castle out of it."
+    }
+   ],
+   "eco": "D35",
+   "name": "Queen's Gambit Declined: Normal Defense"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c4d5": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e6d5",
+     "san": "exd5"
+    }
+   ],
+   "eco": "D35",
+   "name": "Queen's Gambit Declined: Exchange Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c4d5e6d5": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1g5",
+     "san": "Bg5",
+     "idea": "Pin the knight, making d5 harder to hold."
+    }
+   ],
+   "eco": "D35",
+   "name": "Queen's Gambit Declined: Exchange Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c4d5e6d5c1g5": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8e7",
+     "san": "Be7"
+    }
+   ],
+   "eco": "D35",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c4d5e6d5c1g5f8e7": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e2e3",
+     "san": "e3",
+     "idea": "Modest, but it frees the light-squared bishop and secures d4."
+    }
+   ],
+   "eco": "D35",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c4d5e6d5c1g5f8e7e2e3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "D35",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c4d5e6d5c1g5f8e7e2e3e8g8": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [],
+   "end": true,
+   "eco": "D35",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c1g5": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8e7",
+     "san": "Be7"
+    }
+   ],
+   "eco": "D50",
+   "name": "Queen's Gambit Declined: Modern Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c1g5f8e7": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e2e3",
+     "san": "e3",
+     "idea": "Solid and flexible."
+    }
+   ],
+   "eco": "D53",
+   "name": "Queen's Gambit Declined"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c1g5f8e7e2e3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "D53",
+   "name": "Queen's Gambit Declined"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c1g5f8e7e2e3e8g8": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3",
+     "idea": "Complete the kingside development."
+    }
+   ],
+   "eco": "D53",
+   "name": "Queen's Gambit Declined"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c1g5f8e7e2e3e8g8g1f3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h7h6",
+     "san": "h6"
+    }
+   ],
+   "eco": "D55",
+   "name": "Queen's Gambit Declined: Modern Variation, Normal Line"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c1g5f8e7e2e3e8g8g1f3h7h6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g5h4",
+     "san": "Bh4",
+     "idea": "Keep the pin rather than conceding the bishop pair."
+    }
+   ],
+   "eco": "D55",
+   "name": "Queen's Gambit Declined: Neo-Orthodox Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c1g5f8e7e2e3e8g8g1f3h7h6g5h4": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b7b6",
+     "san": "b6"
+    }
+   ],
+   "eco": "D55",
+   "name": "Queen's Gambit Declined: Neo-Orthodox Variation, Main Line"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c1g5f8e7e2e3e8g8g1f3h7h6g5h4b7b6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [],
+   "end": true,
+   "eco": "D58",
+   "name": "Queen's Gambit Declined: Tartakower Defense"
+  },
+  "d2d4d7d5c2c4e7e6b1c3c7c5": {
+   "ply": 6,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c4d5",
+     "san": "cxd5",
+     "idea": "Take, giving Black an isolated d-pawn to look after."
+    }
+   ],
+   "eco": "D32",
+   "name": "Tarrasch Defense"
+  },
+  "d2d4d7d5c2c4e7e6b1c3c7c5c4d5": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e6d5",
+     "san": "exd5"
+    }
+   ],
+   "eco": "D32",
+   "name": "Tarrasch Defense"
+  },
+  "d2d4d7d5c2c4e7e6b1c3c7c5c4d5e6d5": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3",
+     "idea": "Develop and put more pressure on d4 and d5."
+    }
+   ],
+   "eco": "D32",
+   "name": "Queen's Gambit Declined: Tarrasch Defense"
+  },
+  "d2d4d7d5c2c4e7e6b1c3c7c5c4d5e6d5g1f3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6"
+    }
+   ],
+   "eco": "D32",
+   "name": "Tarrasch Defense: Two Knights Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3c7c5c4d5e6d5g1f3b8c6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g2g3",
+     "san": "g3",
+     "idea": "The critical plan: fianchetto and blockade the isolated pawn on d5."
+    }
+   ],
+   "eco": "D32",
+   "name": "Tarrasch Defense: Two Knights Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3c7c5c4d5e6d5g1f3b8c6g2g3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "D33",
+   "name": "Tarrasch Defense: Rubinstein System"
   }
- ]
+ }
 }

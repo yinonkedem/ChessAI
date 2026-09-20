@@ -3,13 +3,14 @@ import { getCastlingDirections } from "../arbiter/getMoves";
 import { createPosition } from "../helper";
 import { uciToCoords } from "../utils/uciToCoords";
 
+import { pathMoves, pathSteps } from "./book";
+
 /**
- * Replays the first `ply` moves of a line and returns everything the game
- * reducer needs to render that exact point in the line.
+ * Replays a UCI path and returns everything the game reducer needs to render
+ * that position.
  *
- * Pure — no React, no dispatch. Given the same line and ply it always returns
- * the same board, which is what makes rewind, replay and jump-to-ply a single
- * operation in the trainer.
+ * Pure — same path, same board. That is what makes rewind, replay and
+ * jump-to-position a single operation in the trainer.
  *
  * Two things here are easy to get wrong:
  *
@@ -20,31 +21,26 @@ import { uciToCoords } from "../utils/uciToCoords";
  *
  * 2. Castling rights are tracked INCREMENTALLY with getCastlingDirections,
  *    not inferred from the final board with helper.js getCastleRights.
- *    Inference restores the right when a rook leaves h1 and comes back, which
- *    is wrong. This mirrors what Pieces.js:84-86 does during a live game.
- *
- * @returns {{positions, movesList, castleDirection, lastMove, turn}}
+ *    Inference restores the right when a rook leaves h1 and comes back.
+ *    This mirrors what Pieces.js:84-86 does during a live game.
  */
-export function buildLinePrefix(line, ply) {
-    const count = Math.max(0, Math.min(ply, line.moves.length));
-
+export function buildPosition(repertoire, path) {
     const positions = [createPosition()];
     const movesList = [];
     let castleDirection = { w: "both", b: "both" };
     let lastMove = null;
 
-    for (let i = 0; i < count; i++) {
+    const steps = pathSteps(path);
+    const named = pathMoves(repertoire, path);
+
+    steps.forEach((uci, i) => {
         const board = positions[positions.length - 1];
-        const [[fromRank, fromFile], [toRank, toFile]] = uciToCoords(line.moves[i].uci);
+        const [[fromRank, fromFile], [toRank, toFile]] = uciToCoords(uci);
         const piece = board[fromRank][fromFile];
 
         if (!piece) {
-            // Can't happen for validated book data (openings.test.js replays
-            // every line through this same arbiter), but failing loudly beats
-            // rendering a silently wrong board to someone trying to learn.
             throw new Error(
-                `buildLinePrefix: ${line.id} ply ${i} (${line.moves[i].san}) ` +
-                `has no piece on the from-square`
+                `buildPosition: ${repertoire.id} step ${i} (${uci}) has no piece on the from-square`
             );
         }
 
@@ -68,22 +64,20 @@ export function buildLinePrefix(line, ply) {
                 y: toFile,
             })
         );
-        // SAN comes from the book, which is canonical (with + and #).
-        // getNewMoveNotation emits neither, so never regenerate it here.
-        movesList.push(line.moves[i].san);
+        movesList.push(named[i]?.san ?? uci);
         lastMove = { from: [fromRank, fromFile], to: [toRank, toFile] };
-    }
+    });
 
     return {
         positions,
         movesList,
         castleDirection,
         lastMove,
-        turn: count % 2 === 0 ? "w" : "b",
+        turn: steps.length % 2 === 0 ? "w" : "b",
     };
 }
 
-/** Legal destination squares for a piece at this point in the line. */
+/** Legal destination squares for a piece at this position. */
 export function legalMovesAt(prefix, rank, file) {
     const board = prefix.positions[prefix.positions.length - 1];
     const prevBoard =
@@ -95,7 +89,7 @@ export function legalMovesAt(prefix, rank, file) {
 
     return arbiter.getValidMoves({
         position: board,
-        // The per-side STRING, not the {w,b} object — getCastlingMoves throws
+        // The per-side STRING, not the {w,b} object. getCastlingMoves throws
         // on the object now, but this is the shape to remember.
         castleDirection: prefix.castleDirection[piece[0]],
         prevPosition: prevBoard,

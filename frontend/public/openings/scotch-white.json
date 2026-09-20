@@ -11,254 +11,384 @@
    "label": "Classical Variation",
    "eco": "C45",
    "name": "Scotch Game: Classical Variation",
-   "side": "w",
-   "moves": [
-    {
-     "san": "e4",
-     "uci": "e2e4"
-    },
-    {
-     "san": "e5",
-     "uci": "e7e5"
-    },
-    {
-     "san": "Nf3",
-     "uci": "g1f3"
-    },
-    {
-     "san": "Nc6",
-     "uci": "b8c6"
-    },
-    {
-     "san": "d4",
-     "uci": "d2d4"
-    },
-    {
-     "san": "exd4",
-     "uci": "e5d4"
-    },
-    {
-     "san": "Nxd4",
-     "uci": "f3d4"
-    },
-    {
-     "san": "Bc5",
-     "uci": "f8c5"
-    },
-    {
-     "san": "Be3",
-     "uci": "c1e3"
-    },
-    {
-     "san": "Qf6",
-     "uci": "d8f6"
-    },
-    {
-     "san": "c3",
-     "uci": "c2c3"
-    },
-    {
-     "san": "Nge7",
-     "uci": "g8e7"
-    }
-   ],
-   "ideas": [
-    "Claim the centre.",
-    null,
-    "Develop and attack e5.",
-    null,
-    "Strike at once. No slow build-up here.",
-    null,
-    "Recapture with the knight into the centre.",
-    null,
-    "Defend the knight and blunt the bishop on the a7-g1 diagonal.",
-    null,
-    "Shore up d4 and give the knight a home.",
-    null
-   ],
-   "answerPlies": [
-    0,
-    2,
-    4,
-    6,
-    8,
-    10
-   ]
+   "path": "e2e4e7e5g1f3b8c6d2d4e5d4f3d4f8c5c1e3d8f6c2c3g8e7",
+   "plies": 12
   },
   {
    "id": "scotch-schmidt",
    "label": "Mieses Variation",
    "eco": "C45",
    "name": "Scotch Game: Mieses Variation",
-   "side": "w",
-   "moves": [
-    {
-     "san": "e4",
-     "uci": "e2e4"
-    },
-    {
-     "san": "e5",
-     "uci": "e7e5"
-    },
-    {
-     "san": "Nf3",
-     "uci": "g1f3"
-    },
-    {
-     "san": "Nc6",
-     "uci": "b8c6"
-    },
-    {
-     "san": "d4",
-     "uci": "d2d4"
-    },
-    {
-     "san": "exd4",
-     "uci": "e5d4"
-    },
-    {
-     "san": "Nxd4",
-     "uci": "f3d4"
-    },
-    {
-     "san": "Nf6",
-     "uci": "g8f6"
-    },
-    {
-     "san": "Nxc6",
-     "uci": "d4c6"
-    },
-    {
-     "san": "bxc6",
-     "uci": "b7c6"
-    },
-    {
-     "san": "e5",
-     "uci": "e4e5"
-    },
-    {
-     "san": "Qe7",
-     "uci": "d8e7"
-    },
-    {
-     "san": "Qe2",
-     "uci": "d1e2"
-    },
-    {
-     "san": "Nd5",
-     "uci": "f6d5"
-    }
-   ],
-   "ideas": [
-    "Claim the centre.",
-    null,
-    "Develop and attack e5.",
-    null,
-    "Break the centre open.",
-    null,
-    "Recapture centrally.",
-    null,
-    "Trade, saddling Black with doubled pawns.",
-    null,
-    "Gain space and kick the knight before Black is organised.",
-    null,
-    "Line the queen up on the e-file and hold the extra space.",
-    null
-   ],
-   "answerPlies": [
-    0,
-    2,
-    4,
-    6,
-    8,
-    10,
-    12
-   ]
+   "path": "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7d1e2f6d5",
+   "plies": 14
   },
   {
    "id": "scotch-gambit",
    "label": "Scotch Gambit",
    "eco": "C56",
    "name": "Italian Game: Scotch Gambit, Max Lange Attack",
-   "side": "w",
-   "moves": [
+   "path": "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4f3d4",
+   "plies": 13
+  }
+ ],
+ "nodes": {
+  "": {
+   "ply": 0,
+   "turn": "w",
+   "mine": true,
+   "replies": [
     {
+     "uci": "e2e4",
      "san": "e4",
-     "uci": "e2e4"
-    },
+     "idea": "Claim the centre."
+    }
+   ]
+  },
+  "e2e4": {
+   "ply": 1,
+   "turn": "b",
+   "mine": false,
+   "replies": [
     {
-     "san": "e5",
-     "uci": "e7e5"
-    },
-    {
-     "san": "Nf3",
-     "uci": "g1f3"
-    },
-    {
-     "san": "Nc6",
-     "uci": "b8c6"
-    },
-    {
-     "san": "d4",
-     "uci": "d2d4"
-    },
-    {
-     "san": "exd4",
-     "uci": "e5d4"
-    },
-    {
-     "san": "Bc4",
-     "uci": "f1c4"
-    },
-    {
-     "san": "Nf6",
-     "uci": "g8f6"
-    },
-    {
-     "san": "e5",
-     "uci": "e4e5"
-    },
-    {
-     "san": "d5",
-     "uci": "d7d5"
-    },
-    {
-     "san": "Bb5",
-     "uci": "c4b5"
-    },
-    {
-     "san": "Ne4",
-     "uci": "f6e4"
-    },
-    {
-     "san": "Nxd4",
-     "uci": "f3d4"
+     "uci": "e7e5",
+     "san": "e5"
     }
    ],
-   "ideas": [
-    "Claim the centre.",
-    null,
-    "Develop and attack e5.",
-    null,
-    "Break the centre open.",
-    null,
-    "Skip the recapture — develop, and aim at f7 instead.",
-    null,
-    "Gain space with tempo before Black is organised.",
-    null,
-    "Pin the knight and hold the tension.",
-    null,
-    "Finally regain the pawn, with a free game and the better structure."
+   "eco": "B00",
+   "name": "King's Pawn Game"
+  },
+  "e2e4e7e5": {
+   "ply": 2,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3",
+     "idea": "Develop and attack e5."
+    }
    ],
-   "answerPlies": [
-    0,
-    2,
-    4,
-    6,
-    8,
-    10,
-    12
-   ]
+   "eco": "C20",
+   "name": "King's Pawn Game"
+  },
+  "e2e4e7e5g1f3": {
+   "ply": 3,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6"
+    }
+   ],
+   "eco": "C40",
+   "name": "King's Knight Opening"
+  },
+  "e2e4e7e5g1f3b8c6": {
+   "ply": 4,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4",
+     "idea": "Strike at once. No slow build-up here."
+    }
+   ],
+   "eco": "C44",
+   "name": "King's Knight Opening: Normal Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4": {
+   "ply": 5,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e5d4",
+     "san": "exd4"
+    }
+   ],
+   "eco": "C44",
+   "name": "Scotch Game"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4": {
+   "ply": 6,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f3d4",
+     "san": "Nxd4",
+     "idea": "Recapture with the knight into the centre."
+    },
+    {
+     "uci": "f1c4",
+     "san": "Bc4",
+     "idea": "Skip the recapture — develop, and aim at f7 instead."
+    }
+   ],
+   "eco": "C44",
+   "name": "Scotch Game"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8c5",
+     "san": "Bc5"
+    },
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4f8c5": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1e3",
+     "san": "Be3",
+     "idea": "Defend the knight and blunt the bishop on the a7-g1 diagonal."
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Classical Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4f8c5c1e3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8f6",
+     "san": "Qf6"
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Classical Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4f8c5c1e3d8f6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c2c3",
+     "san": "c3",
+     "idea": "Shore up d4 and give the knight a home."
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Classical Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4f8c5c1e3d8f6c2c3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8e7",
+     "san": "Nge7"
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Classical Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4f8c5c1e3d8f6c2c3g8e7": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [],
+   "end": true,
+   "eco": "C45",
+   "name": "Scotch Game: Classical Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d4c6",
+     "san": "Nxc6",
+     "idea": "Trade, saddling Black with doubled pawns."
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Schmidt Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b7c6",
+     "san": "bxc6"
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Schmidt Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e4e5",
+     "san": "e5",
+     "idea": "Gain space and kick the knight before Black is organised."
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Schmidt Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8e7",
+     "san": "Qe7"
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Mieses Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1e2",
+     "san": "Qe2",
+     "idea": "Line the queen up on the e-file and hold the extra space."
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Mieses Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7d1e2": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f6d5",
+     "san": "Nd5"
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Mieses Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7d1e2f6d5": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [],
+   "end": true,
+   "eco": "C45",
+   "name": "Scotch Game: Mieses Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f1c4": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "C44",
+   "name": "Scotch Game: Scotch Gambit"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e4e5",
+     "san": "e5",
+     "idea": "Gain space with tempo before Black is organised."
+    }
+   ],
+   "eco": "C44",
+   "name": "Scotch Game: Scotch Gambit, Dubois Réti Defense"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d5",
+     "san": "d5"
+    }
+   ],
+   "eco": "C44",
+   "name": "Scotch Game: Scotch Gambit, Advance Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c4b5",
+     "san": "Bb5",
+     "idea": "Pin the knight and hold the tension."
+    }
+   ],
+   "eco": "C44",
+   "name": "Scotch Game: Scotch Gambit, Advance Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f6e4",
+     "san": "Ne4"
+    }
+   ],
+   "eco": "C44",
+   "name": "Scotch Game: Scotch Gambit, Advance Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f3d4",
+     "san": "Nxd4",
+     "idea": "Finally regain the pawn, with a free game and the better structure."
+    }
+   ],
+   "eco": "C56",
+   "name": "Italian Game: Scotch Gambit, Max Lange Attack"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4f3d4": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C56",
+   "name": "Italian Game: Scotch Gambit, Max Lange Attack"
   }
- ]
+ }
 }

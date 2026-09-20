@@ -185,6 +185,43 @@ Self-play + MCTS training loop in `AlphaZero/alphaZero.py`. The ResNet model is 
 
 ## Audit & refactor — session log
 
+### Tree-shaped opening book (2026-09-20)
+
+Replaces the linear book. **A position can now have several correct replies**, which is what makes
+serious openings teachable: a linear book told you `6...e6` was wrong in the Najdorf when it is main
+theory. The drill accepts any book move, follows the branch you chose, and tells you how many other
+moves were also theory there.
+
+**Authoring did not change.** You still write lines in `tools/repertoires.json`; the build script
+merges them on shared prefixes into a position tree. Adding an alternative at move 6 means authoring
+one more line, not hand-editing tree structures.
+
+**Format** — each repertoire is now `{ lines: [...lightweight index...], nodes: { "<uci path>": {...} } }`.
+The key is the concatenated UCI path (`""` is the start), which is *also* the spaced-repetition card
+key planned for Phase 5 — so shared prefixes dedupe automatically. Cards dropped 193 → 124 for the
+same content, because `1.e4` is now one card instead of one per line. Payload is 80.6 KB.
+
+**Runtime rewrite:** `book.js` (tree navigation), `buildPosition.js` (replaces `buildLinePrefix.js`,
+now path-based), `judgeMove.js` (membership test, not equality), `trainerReducer.js` (path-keyed
+state). `DrillPage` shows the variation name live as the line deepens, and flags branching positions.
+The opponent picks its reply at random among book moves, so repeated runs explore different lines.
+
+**Two bugs this surfaced:**
+- `build_tree` hardcoded `"mine": false` on leaf nodes instead of computing it, mislabelling every
+  leaf that lands on the learner's move. Caught by the book test, which checks turn parity.
+- The "N book moves here" notice only rendered on the first move of a run, because it lived in the
+  empty-feedback branch. Moved to the header.
+
+Also deduplicated 63 ideas that were authored twice on shared prefixes — the tree only needs each
+explained once, and the build now warns when two lines describe the same move differently.
+
+**Verified:** 113 Jest assertions, plus a browser run reaching a real branch and confirming the
+*alternative* move is accepted. Explanation coverage is 129/130 learner moves (99%).
+
+**Still linear in one sense:** there are only 5 learner-side branches in the current content, since
+the existing lines mostly diverge on the opponent's move. Getting real value from the tree needs
+curation that deliberately offers choices.
+
 ### Opening drill loop (2026-09-20) — Phase 3 of the opening-trainer plan
 
 The first playable part of the trainer. `/learn` lists the repertoires,

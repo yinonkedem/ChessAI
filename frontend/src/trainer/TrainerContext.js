@@ -11,13 +11,15 @@ import {
 import { useAppContext } from "../contexts/Context";
 import { loadPositionSequence } from "../reducer/actions/move";
 
-import { buildLinePrefix } from "./buildLinePrefix";
+import { buildPosition } from "./buildPosition";
 import { judgeMove } from "./judgeMove";
 import {
     Phase,
     T,
+    currentMoves,
+    currentOpening,
     initialTrainerState,
-    lineProgress,
+    runProgress,
     trainerReducer,
 } from "./trainerReducer";
 
@@ -27,7 +29,7 @@ export function TrainerProvider({ children }) {
     const { dispatch } = useAppContext();
     const [session, send] = useReducer(trainerReducer, initialTrainerState);
 
-    const active = session.phase !== Phase.idle && !!session.line;
+    const active = session.phase !== Phase.idle && !!session.repertoire;
 
     /**
      * The trainer is the SOLE board writer during a drill. Rather than applying
@@ -37,14 +39,14 @@ export function TrainerProvider({ children }) {
      */
     useEffect(() => {
         if (!active) return;
-        const prefix = buildLinePrefix(session.line, session.ply);
+        const prefix = buildPosition(session.repertoire, session.path);
         dispatch(
             loadPositionSequence({
                 ...prefix,
-                userColor: session.line.side === "w" ? "white" : "black",
+                userColor: session.repertoire.side === "w" ? "white" : "black",
             })
         );
-    }, [active, session.line, session.ply, dispatch]);
+    }, [active, session.repertoire, session.path, dispatch]);
 
     /**
      * Handed to Pieces.js. Returns null outside a drill, so /game behaves
@@ -64,24 +66,15 @@ export function TrainerProvider({ children }) {
             onAttempt({ from, to }) {
                 const s = sessionRef.current;
                 if (s.phase !== Phase.answering) return;
-                const { verdict, expected } = judgeMove(s.line, s.ply, { from, to });
-                send({
-                    type: T.ATTEMPT,
-                    payload: {
-                        verdict,
-                        expected,
-                        // Show what the book expected; we deliberately don't
-                        // regenerate SAN for the attempt, because
-                        // getNewMoveNotation omits + and #.
-                        attemptedSan: null,
-                    },
-                });
+                // A position can have several book replies; judgeMove checks
+                // membership, so any of them counts as correct.
+                send({ type: T.ATTEMPT, payload: judgeMove(s.repertoire, s.path, { from, to }) });
             },
         };
     }, [active]);
 
-    const startLine = useCallback((repertoire, lineIndex = 0) => {
-        send({ type: T.START_LINE, payload: { repertoire, lineIndex } });
+    const start = useCallback((repertoire) => {
+        send({ type: T.START, payload: { repertoire } });
     }, []);
 
     const value = useMemo(
@@ -89,15 +82,17 @@ export function TrainerProvider({ children }) {
             session,
             active,
             gate,
-            progress: lineProgress(session),
-            startLine,
+            moves: currentMoves(session),
+            opening: currentOpening(session),
+            progress: runProgress(session),
+            start,
             advance: () => send({ type: T.ADVANCE }),
             hint: () => send({ type: T.HINT }),
             skip: () => send({ type: T.SKIP }),
-            nextLine: () => send({ type: T.NEXT_LINE }),
+            restart: () => send({ type: T.RESTART }),
             reset: () => send({ type: T.RESET }),
         }),
-        [session, active, gate, startLine]
+        [session, active, gate, start]
     );
 
     return <TrainerContext.Provider value={value}>{children}</TrainerContext.Provider>;

@@ -17,11 +17,11 @@ const REPLY_DELAY_MS = 450;
  */
 export default function useBookAgent() {
     const { session, advance } = useTrainer();
-    const { phase, ply, line } = session;
+    const { phase, path } = session;
 
     useEffect(() => {
         if (phase !== Phase.reply) return;
         const t = setTimeout(advance, REPLY_DELAY_MS);
         return () => clearTimeout(t);
-    }, [phase, ply, line, advance]);
+    }, [phase, path, advance]);
 }

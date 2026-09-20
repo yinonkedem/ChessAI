@@ -16,7 +16,6 @@
     "",
     "Run: backend/venv/bin/python tools/build_openings.py"
   ],
-
   "repertoires": [
     {
       "id": "italian-white",
@@ -53,11 +52,11 @@
           "label": "Giuoco Pianissimo",
           "moves": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. d3 Nf6 5. c3 d6 6. O-O",
           "ideas": [
-            "Claim the centre.",
             null,
-            "Develop and attack e5.",
             null,
-            "The Italian bishop takes aim at f7.",
+            null,
+            null,
+            null,
             null,
             "The 'very quiet game'. Support e4 and keep every piece defended.",
             null,
@@ -71,12 +70,18 @@
           "label": "Two Knights Defense",
           "moves": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Na5 6. Bb5+ c6 7. dxc6 bxc6",
           "ideas": [
-            "Claim the centre.", null,
-            "Develop and attack e5.", null,
-            "The bishop eyes f7.", null,
-            "Crude but strong: two pieces now hit f7 and Black must react.", null,
-            "Take the pawn and keep the extra material for now.", null,
-            "Check, and hang on to the pawn a little longer.", null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Crude but strong: two pieces now hit f7 and Black must react.",
+            null,
+            "Take the pawn and keep the extra material for now.",
+            null,
+            "Check, and hang on to the pawn a little longer.",
+            null,
             "Grab it. Black gets fast development for the pawn — play carefully."
           ]
         },
@@ -85,18 +90,23 @@
           "label": "Evans Gambit",
           "moves": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4 Bxb4 5. c3 Ba5 6. d4 exd4 7. O-O",
           "ideas": [
-            "Claim the centre.", null,
-            "Develop and attack e5.", null,
-            "The bishop eyes f7.", null,
-            "A pawn for time. Deflect the bishop so you can build the centre with tempo.", null,
-            "Hit the bishop again and prepare d4 — every move comes with a threat.", null,
-            "Cash the gambit in: a huge centre while Black is still untangling.", null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "A pawn for time. Deflect the bishop so you can build the centre with tempo.",
+            null,
+            "Hit the bishop again and prepare d4 — every move comes with a threat.",
+            null,
+            "Cash the gambit in: a huge centre while Black is still untangling.",
+            null,
             "Castle. Down a pawn, but far ahead in development and with open lines."
           ]
         }
       ]
     },
-
     {
       "id": "ruy-lopez-white",
       "side": "w",
@@ -110,14 +120,21 @@
           "label": "Closed, Morphy Defense",
           "moves": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 O-O",
           "ideas": [
-            "Claim the centre.", null,
-            "Develop and attack e5.", null,
-            "Pressure the knight that defends e5 — the real point of the Ruy Lopez.", null,
-            "Keep the bishop on the a2-g8 diagonal rather than trading it off.", null,
-            "Castle. You can afford to ignore the e4 pawn for one move.", null,
-            "Defend e4 properly and put the rook on the file it belongs on.", null,
-            "Retreat again — this bishop is your best piece, don't let it go.", null,
-            "The Spanish move. Build a retreat square on c2 and prepare d4.", null
+            "Claim the centre.",
+            null,
+            "Develop and attack e5.",
+            null,
+            "Pressure the knight that defends e5 — the real point of the Ruy Lopez.",
+            null,
+            "Keep the bishop on the a2-g8 diagonal rather than trading it off.",
+            null,
+            "Castle. You can afford to ignore the e4 pawn for one move.",
+            null,
+            "Defend e4 properly and put the rook on the file it belongs on.",
+            null,
+            "Retreat again — this bishop is your best piece, don't let it go.",
+            null,
+            "The Spanish move. Build a retreat square on c2 and prepare d4."
           ]
         },
         {
@@ -125,13 +142,20 @@
           "label": "Berlin Defense",
           "moves": "1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. O-O Nxe4 5. d4 Nd6 6. Bxc6 dxc6 7. dxe5 Nf5 8. Qxd8+ Kxd8",
           "ideas": [
-            "Claim the centre.", null,
-            "Develop and attack e5.", null,
-            "The Spanish bishop.", null,
-            "Offer the e-pawn. Development matters more than the pawn here.", null,
-            "Strike in the centre while Black's knight is loose.", null,
-            "Trade to damage the pawn structure before Black consolidates.", null,
-            "Gain the pawn back and open the position.", null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Offer the e-pawn. Development matters more than the pawn here.",
+            null,
+            "Strike in the centre while Black's knight is loose.",
+            null,
+            "Trade to damage the pawn structure before Black consolidates.",
+            null,
+            "Gain the pawn back and open the position.",
+            null,
             "The famous Berlin endgame. Black loses castling rights; you have the better structure."
           ]
         },
@@ -140,10 +164,14 @@
           "label": "Exchange Variation",
           "moves": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Bxc6 dxc6 5. O-O",
           "ideas": [
-            "Claim the centre.", null,
-            "Develop and attack e5.", null,
-            "The Spanish bishop.", null,
-            "Trade at once. Black's doubled c-pawns are a permanent weakness in an endgame.", null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Trade at once. Black's doubled c-pawns are a permanent weakness in an endgame.",
+            null,
             "Castle. Your long-term plan is simply to reach an endgame."
           ]
         },
@@ -152,19 +180,25 @@
           "label": "Open Variation",
           "moves": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Nxe4 6. d4 b5 7. Bb3 d5 8. dxe5 Be6",
           "ideas": [
-            "Claim the centre.", null,
-            "Develop and attack e5.", null,
-            "The Spanish bishop.", null,
-            "Keep the bishop.", null,
-            "Castle and let Black take on e4.", null,
-            "Open the centre immediately to punish the wandering knight.", null,
-            "Retreat to safety on the strong diagonal.", null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Open the centre immediately to punish the wandering knight.",
+            null,
+            "Retreat to safety on the strong diagonal.",
+            null,
             "Take, and accept a sharp middlegame with chances for both sides."
           ]
         }
       ]
     },
-
     {
       "id": "scotch-white",
       "side": "w",
@@ -178,11 +212,16 @@
           "label": "Classical Variation",
           "moves": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Bc5 5. Be3 Qf6 6. c3 Nge7",
           "ideas": [
-            "Claim the centre.", null,
-            "Develop and attack e5.", null,
-            "Strike at once. No slow build-up here.", null,
-            "Recapture with the knight into the centre.", null,
-            "Defend the knight and blunt the bishop on the a7-g1 diagonal.", null,
+            "Claim the centre.",
+            null,
+            "Develop and attack e5.",
+            null,
+            "Strike at once. No slow build-up here.",
+            null,
+            "Recapture with the knight into the centre.",
+            null,
+            "Defend the knight and blunt the bishop on the a7-g1 diagonal.",
+            null,
             "Shore up d4 and give the knight a home."
           ]
         },
@@ -191,12 +230,18 @@
           "label": "Mieses Variation",
           "moves": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6 5. Nxc6 bxc6 6. e5 Qe7 7. Qe2 Nd5",
           "ideas": [
-            "Claim the centre.", null,
-            "Develop and attack e5.", null,
-            "Break the centre open.", null,
-            "Recapture centrally.", null,
-            "Trade, saddling Black with doubled pawns.", null,
-            "Gain space and kick the knight before Black is organised.", null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Trade, saddling Black with doubled pawns.",
+            null,
+            "Gain space and kick the knight before Black is organised.",
+            null,
             "Line the queen up on the e-file and hold the extra space."
           ]
         },
@@ -205,18 +250,23 @@
           "label": "Scotch Gambit",
           "moves": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Bc4 Nf6 5. e5 d5 6. Bb5 Ne4 7. Nxd4",
           "ideas": [
-            "Claim the centre.", null,
-            "Develop and attack e5.", null,
-            "Break the centre open.", null,
-            "Skip the recapture — develop, and aim at f7 instead.", null,
-            "Gain space with tempo before Black is organised.", null,
-            "Pin the knight and hold the tension.", null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Skip the recapture — develop, and aim at f7 instead.",
+            null,
+            "Gain space with tempo before Black is organised.",
+            null,
+            "Pin the knight and hold the tension.",
+            null,
             "Finally regain the pawn, with a free game and the better structure."
           ]
         }
       ]
     },
-
     {
       "id": "queens-gambit-white",
       "side": "w",
@@ -230,11 +280,16 @@
           "label": "Exchange Variation",
           "moves": "1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 Be7 6. e3 O-O",
           "ideas": [
-            "Take your share of the centre and open lines for the dark-squared bishop.", null,
-            "Challenge d5 from the side. This is the gambit — it is only a loan.", null,
-            "Develop and add a third attacker to d5.", null,
-            "Release the tension on your terms and fix Black's structure.", null,
-            "Pin the knight, making d5 harder to hold.", null,
+            "Take your share of the centre and open lines for the dark-squared bishop.",
+            null,
+            "Challenge d5 from the side. This is the gambit — it is only a loan.",
+            null,
+            "Develop and add a third attacker to d5.",
+            null,
+            "Release the tension on your terms and fix Black's structure.",
+            null,
+            "Pin the knight, making d5 harder to hold.",
+            null,
             "Modest, but it frees the light-squared bishop and secures d4."
           ]
         },
@@ -243,12 +298,18 @@
           "label": "Tartakower Defense",
           "moves": "1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 O-O 6. Nf3 h6 7. Bh4 b6",
           "ideas": [
-            "Take the centre.", null,
-            "Challenge d5.", null,
-            "Develop toward the centre.", null,
-            "Pin the f6 knight before Black can castle out of it.", null,
-            "Solid and flexible.", null,
-            "Complete the kingside development.", null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Pin the f6 knight before Black can castle out of it.",
+            null,
+            "Solid and flexible.",
+            null,
+            "Complete the kingside development.",
+            null,
             "Keep the pin rather than conceding the bishop pair."
           ]
         },
@@ -257,17 +318,21 @@
           "label": "Tarrasch Defense",
           "moves": "1. d4 d5 2. c4 e6 3. Nc3 c5 4. cxd5 exd5 5. Nf3 Nc6 6. g3",
           "ideas": [
-            "Take the centre.", null,
-            "Challenge d5.", null,
-            "Develop.", null,
-            "Take, giving Black an isolated d-pawn to look after.", null,
-            "Develop and put more pressure on d4 and d5.", null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Take, giving Black an isolated d-pawn to look after.",
+            null,
+            "Develop and put more pressure on d4 and d5.",
+            null,
             "The critical plan: fianchetto and blockade the isolated pawn on d5."
           ]
         }
       ]
     },
-
     {
       "id": "london-white",
       "side": "w",
@@ -281,12 +346,18 @@
           "label": "Main Line",
           "moves": "1. d4 d5 2. Bf4 Nf6 3. e3 e6 4. Nf3 c5 5. c3 Nc6 6. Nbd2 Bd6 7. Bg3",
           "ideas": [
-            "Take the centre.", null,
-            "The London move. Get the bishop outside the pawn chain before playing e3.", null,
-            "Now the pawn can come to e3 without burying the bishop.", null,
-            "Develop naturally. The setup is the same whatever Black does.", null,
-            "Support d4 so the centre never collapses.", null,
-            "The knight belongs here, keeping the c-pawn's path clear.", null,
+            "Take the centre.",
+            null,
+            "The London move. Get the bishop outside the pawn chain before playing e3.",
+            null,
+            "Now the pawn can come to e3 without burying the bishop.",
+            null,
+            "Develop naturally. The setup is the same whatever Black does.",
+            null,
+            "Support d4 so the centre never collapses.",
+            null,
+            "The knight belongs here, keeping the c-pawn's path clear.",
+            null,
             "Sidestep the trade and keep the bishop on its best diagonal."
           ]
         },
@@ -297,11 +368,16 @@
           "labelOkWhy": "label describes what Black set up, not the opening name",
           "moves": "1. d4 Nf6 2. Bf4 g6 3. e3 Bg7 4. Nf3 O-O 5. Be2 d6 6. h3",
           "ideas": [
-            "Take the centre.", null,
-            "The bishop comes out first, as always.", null,
-            "Complete the pawn triangle — same setup, whatever Black builds.", null,
-            "Develop naturally.", null,
-            "Modest square, but it keeps everything defended.", null,
+            null,
+            null,
+            "The bishop comes out first, as always.",
+            null,
+            "Complete the pawn triangle — same setup, whatever Black builds.",
+            null,
+            "Develop naturally.",
+            null,
+            "Modest square, but it keeps everything defended.",
+            null,
             "Give the bishop an escape square before Black plays ...Nh5 to trade it."
           ]
         },
@@ -310,16 +386,19 @@
           "label": "vs early ...c5",
           "moves": "1. d4 d5 2. Bf4 c5 3. e3 Nc6 4. c3 Nf6 5. Nd2",
           "ideas": [
-            "Take the centre.", null,
-            "The bishop comes out first.", null,
-            "Solidify.", null,
-            "Hold the centre together — c3 and e3 make d4 very hard to shift.", null,
+            null,
+            null,
+            null,
+            null,
+            "Solidify.",
+            null,
+            "Hold the centre together — c3 and e3 make d4 very hard to shift.",
+            null,
             "Develop flexibly and keep the option of Ngf3."
           ]
         }
       ]
     },
-
     {
       "id": "sicilian-najdorf-black",
       "side": "b",
@@ -333,13 +412,20 @@
           "label": "English Attack (6. Be3)",
           "moves": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Be3 e5 7. Nb3 Be6",
           "ideas": [
-            null, "Fight for the centre without symmetry — this is why the Sicilian wins games.",
-            null, "Control e5 and prepare to develop.",
-            null, "Take. You trade a wing pawn for a centre pawn, a small structural win.",
-            null, "Develop with a hit on e4.",
-            null, "The Najdorf move. Tiny, but it takes b5 away from White's pieces for good.",
-            null, "Grab the centre now that White's knight has nowhere good to go.",
-            null, "Cover d5, the one square Black's structure genuinely concedes."
+            null,
+            "Fight for the centre without symmetry — this is why the Sicilian wins games.",
+            null,
+            "Control e5 and prepare to develop.",
+            null,
+            "Take. You trade a wing pawn for a centre pawn, a small structural win.",
+            null,
+            "Develop with a hit on e4.",
+            null,
+            "The Najdorf move. Tiny, but it takes b5 away from White's pieces for good.",
+            null,
+            "Grab the centre now that White's knight has nowhere good to go.",
+            null,
+            "Cover d5, the one square Black's structure genuinely concedes."
           ]
         },
         {
@@ -347,13 +433,20 @@
           "label": "Main Line (6. Bg5)",
           "moves": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 Be7",
           "ideas": [
-            null, "Meet 1.e4 asymmetrically.",
-            null, "Control e5.",
-            null, "Trade a wing pawn for a centre pawn.",
-            null, "Develop with tempo on e4.",
-            null, "Take b5 away from White for good.",
-            null, "Solid. Break the pin's sting before grabbing space.",
-            null, "Unpin, and prepare to castle out of the coming attack."
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Solid. Break the pin's sting before grabbing space.",
+            null,
+            "Unpin, and prepare to castle out of the coming attack."
           ]
         },
         {
@@ -363,18 +456,24 @@
           "labelOkWhy": "Opocensky is the dataset name for the 6.Be2 Najdorf",
           "moves": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Be2 e5 7. Nb3 Be7",
           "ideas": [
-            null, "Meet 1.e4 asymmetrically.",
-            null, "Control e5.",
-            null, "Trade a wing pawn for a centre pawn.",
-            null, "Develop with tempo.",
-            null, "Take b5 away.",
-            null, "Against a quiet bishop move, take the centre at once.",
-            null, "Develop and castle quickly — White has no fast attack here."
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Against a quiet bishop move, take the centre at once.",
+            null,
+            "Develop and castle quickly — White has no fast attack here."
           ]
         }
       ]
     },
-
     {
       "id": "sicilian-dragon-black",
       "side": "b",
@@ -388,13 +487,20 @@
           "label": "Main Line",
           "moves": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 g6 5. Nc3 Bg7 6. Be3 Nf6 7. Bc4 O-O",
           "ideas": [
-            null, "The Sicilian. Unbalance the position from move one.",
-            null, "Develop and fight for d4.",
-            null, "Take — a wing pawn for a centre pawn.",
-            null, "Prepare the fianchetto. Saving a tempo over the normal Dragon is the whole point.",
-            null, "The bishop's diagonal is the soul of this opening.",
-            null, "Develop, and keep an eye on the d5 square.",
-            null, "Castle into safety before White organises an attack."
+            null,
+            "The Sicilian. Unbalance the position from move one.",
+            null,
+            "Develop and fight for d4.",
+            null,
+            "Take — a wing pawn for a centre pawn.",
+            null,
+            "Prepare the fianchetto. Saving a tempo over the normal Dragon is the whole point.",
+            null,
+            "The bishop's diagonal is the soul of this opening.",
+            null,
+            "Develop, and keep an eye on the d5 square.",
+            null,
+            "Castle into safety before White organises an attack."
           ]
         },
         {
@@ -402,19 +508,26 @@
           "label": "Maroczy Bind",
           "moves": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 g6 5. c4 Nf6 6. Nc3 d6 7. Be2 Nxd4 8. Qxd4 Bg7",
           "ideas": [
-            null, "The Sicilian.",
-            null, "Develop and fight for d4.",
-            null, "Take.",
-            null, "Prepare the fianchetto.",
-            null, "Develop with a hit on e4 before White finishes the bind.",
-            null, "Solid. Take d5 and e5 away from White's pieces.",
-            null, "Trade off a strong knight to relieve the cramp.",
-            null, "Finally the bishop comes to life on the long diagonal."
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Develop with a hit on e4 before White finishes the bind.",
+            null,
+            "Solid. Take d5 and e5 away from White's pieces.",
+            null,
+            "Trade off a strong knight to relieve the cramp.",
+            null,
+            "Finally the bishop comes to life on the long diagonal."
           ]
         }
       ]
     },
-
     {
       "id": "french-black",
       "side": "b",
@@ -428,12 +541,18 @@
           "label": "Winawer Variation",
           "moves": "1. e4 e6 2. d4 d5 3. Nc3 Bb4 4. e5 c5 5. a3 Bxc3+ 6. bxc3 Ne7",
           "ideas": [
-            null, "Prepare to challenge e4 with ...d5 next move.",
-            null, "Strike at the centre immediately.",
-            null, "Pin the knight that defends e4 — the sharpest reply.",
-            null, "Attack the base of the pawn chain. Always hit the bottom, not the top.",
-            null, "Take. White's doubled c-pawns are a long-term target.",
-            null, "Route the knight to f5 where it hits the weak d4 pawn."
+            null,
+            "Prepare to challenge e4 with ...d5 next move.",
+            null,
+            "Strike at the centre immediately.",
+            null,
+            "Pin the knight that defends e4 — the sharpest reply.",
+            null,
+            "Attack the base of the pawn chain. Always hit the bottom, not the top.",
+            null,
+            "Take. White's doubled c-pawns are a long-term target.",
+            null,
+            "Route the knight to f5 where it hits the weak d4 pawn."
           ]
         },
         {
@@ -441,12 +560,18 @@
           "label": "Classical Variation",
           "moves": "1. e4 e6 2. d4 d5 3. Nc3 Nf6 4. Bg5 Be7 5. e5 Nfd7 6. Bxe7 Qxe7",
           "ideas": [
-            null, "Prepare ...d5.",
-            null, "Challenge the centre.",
-            null, "Develop and add pressure to e4.",
-            null, "Break the pin calmly rather than weakening the kingside.",
-            null, "Retreat and keep the option of undermining with ...c5 and ...f6.",
-            null, "Recapture. The bishop trade has eased your cramped position."
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Develop and add pressure to e4.",
+            null,
+            "Break the pin calmly rather than weakening the kingside.",
+            null,
+            "Retreat and keep the option of undermining with ...c5 and ...f6.",
+            null,
+            "Recapture. The bishop trade has eased your cramped position."
           ]
         },
         {
@@ -454,12 +579,18 @@
           "label": "Tarrasch Variation",
           "moves": "1. e4 e6 2. d4 d5 3. Nd2 Nf6 4. e5 Nfd7 5. Bd3 c5 6. c3 Nc6",
           "ideas": [
-            null, "Prepare ...d5.",
-            null, "Challenge the centre.",
-            null, "Develop, provoking White to commit the centre.",
-            null, "Retreat and regroup — the knight is heading for c5 or f8.",
-            null, "Strike the base of the chain.",
-            null, "Pile another attacker onto d4."
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Develop, provoking White to commit the centre.",
+            null,
+            "Retreat and regroup — the knight is heading for c5 or f8.",
+            null,
+            "Strike the base of the chain.",
+            null,
+            "Pile another attacker onto d4."
           ]
         },
         {
@@ -467,16 +598,20 @@
           "label": "Advance Variation",
           "moves": "1. e4 e6 2. d4 d5 3. e5 c5 4. c3 Nc6 5. Nf3 Qb6",
           "ideas": [
-            null, "Prepare ...d5.",
-            null, "Challenge the centre.",
-            null, "Hit the base of the chain at once — d4 is the target, not e5.",
-            null, "Add a second attacker to d4.",
-            null, "The standard plan: the queen hits d4 again and eyes the weak b2 pawn."
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Hit the base of the chain at once — d4 is the target, not e5.",
+            null,
+            "Add a second attacker to d4.",
+            null,
+            "The standard plan: the queen hits d4 again and eyes the weak b2 pawn."
           ]
         }
       ]
     },
-
     {
       "id": "caro-kann-black",
       "side": "b",
@@ -490,11 +625,16 @@
           "label": "Classical Variation",
           "moves": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5 5. Ng3 Bg6 6. h4 h6",
           "ideas": [
-            null, "Prepare ...d5 — but with the c-pawn, so the bishop stays free.",
-            null, "Challenge the centre on equal terms.",
-            null, "Release the tension and remove White's best pawn.",
-            null, "The whole point of the Caro-Kann: this bishop gets out before ...e6 locks it in.",
-            null, "Retreat and keep the good bishop."
+            null,
+            "Prepare ...d5 — but with the c-pawn, so the bishop stays free.",
+            null,
+            "Challenge the centre on equal terms.",
+            null,
+            "Release the tension and remove White's best pawn.",
+            null,
+            "The whole point of the Caro-Kann: this bishop gets out before ...e6 locks it in.",
+            null,
+            "Retreat and keep the good bishop."
           ]
         },
         {
@@ -502,11 +642,16 @@
           "label": "Advance Variation",
           "moves": "1. e4 c6 2. d4 d5 3. e5 Bf5 4. Nf3 e6 5. Be2 c5",
           "ideas": [
-            null, "Prepare ...d5.",
-            null, "Challenge the centre.",
-            null, "Develop the bishop outside the chain before playing ...e6.",
-            null, "Now ...e6 costs nothing — the bishop is already out.",
-            null, "Strike the base of the pawn chain."
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Develop the bishop outside the chain before playing ...e6.",
+            null,
+            "Now ...e6 costs nothing — the bishop is already out.",
+            null,
+            "Strike the base of the pawn chain."
           ]
         },
         {
@@ -514,11 +659,16 @@
           "label": "Exchange Variation",
           "moves": "1. e4 c6 2. d4 d5 3. exd5 cxd5 4. Bd3 Nc6 5. c3 Nf6",
           "ideas": [
-            null, "Prepare ...d5.",
-            null, "Challenge the centre.",
-            null, "Recapture toward the centre and open the c-file.",
-            null, "Develop and pressure d4.",
-            null, "Develop and fight for control of e4."
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Recapture toward the centre and open the c-file.",
+            null,
+            "Develop and pressure d4.",
+            null,
+            "Develop and fight for control of e4."
           ]
         },
         {
@@ -526,11 +676,16 @@
           "label": "Panov Attack",
           "moves": "1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4 Nf6 5. Nc3 e6",
           "ideas": [
-            null, "Prepare ...d5.",
-            null, "Challenge the centre.",
-            null, "Recapture toward the centre.",
-            null, "Develop and defend d5 — White is playing for an isolated pawn structure.",
-            null, "Solid. Hold d5 and accept a rich middlegame."
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Develop and defend d5 — White is playing for an isolated pawn structure.",
+            null,
+            "Solid. Hold d5 and accept a rich middlegame."
           ]
         }
       ]

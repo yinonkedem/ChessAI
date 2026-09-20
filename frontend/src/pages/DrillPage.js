@@ -8,29 +8,29 @@ import useBookAgent from "../trainer/useBookAgent";
 import { Phase } from "../trainer/trainerReducer";
 import "./DrillPage.css";
 
-function MoveDots({ line, results, ply }) {
-    return (
-        <div className="drill-dots" aria-hidden="true">
-            {line.answerPlies.map((p) => {
-                const r = results[p];
-                const state = r
-                    ? r.firstTry
-                        ? "is-good"
-                        : "is-missed"
-                    : p === ply
-                        ? "is-current"
-                        : "is-todo";
-                return <i key={p} className={state} />;
-            })}
-        </div>
-    );
+/** One dot per move played on this run: green first-try, amber if it took help. */
+function RunDots({ moves, results }) {
+    let path = "";
+    const dots = [];
+    moves.forEach((m, i) => {
+        if (m.mine) {
+            const r = results[path];
+            dots.push(
+                <i key={i} className={r?.firstTry ? "is-good" : "is-missed"} />
+            );
+        }
+        path += m.uci;
+    });
+    dots.push(<i key="now" className="is-current" />);
+    return <div className="drill-dots" aria-hidden="true">{dots}</div>;
 }
 
 function Feedback({ feedback, phase }) {
     if (phase === Phase.lineComplete) return null;
+
     if (!feedback) {
         return (
-            <div className="card drill-feedback drill-feedback--neutral">
+            <div className="card drill-feedback">
                 <p className="drill-feedback__title">Your move</p>
                 <p className="drill-feedback__body muted">
                     Play the move the book recommends.
@@ -39,35 +39,44 @@ function Feedback({ feedback, phase }) {
         );
     }
 
-    const { verdict, expectedSan, idea } = feedback;
-    const kind =
-        verdict === "correct" ? "good" : verdict === "skipped" ? "neutral" : "bad";
-    const title =
-        verdict === "correct"
-            ? `Correct — ${expectedSan}`
-            : verdict === "skipped"
-                ? `The book plays ${expectedSan}`
-                : "Not the book move";
+    const { verdict, played, idea, expected, alternatives } = feedback;
+    const kind = verdict === "correct" ? "good" : verdict === "skipped" ? "neutral" : "bad";
 
     return (
         <div className={`card drill-feedback drill-feedback--${kind}`} role="status">
             <p className="drill-feedback__title">
                 <span aria-hidden="true">
-                    {verdict === "correct" ? "✓" : verdict === "skipped" ? "→" : "✗"}
+                    {verdict === "correct" ? "\u2713" : verdict === "skipped" ? "\u2192" : "\u2717"}
                 </span>{" "}
-                {title}
+                {verdict === "correct" && `Correct — ${played}`}
+                {verdict === "skipped" && `The book plays ${played}`}
+                {verdict === "wrong" && "Not a book move"}
             </p>
+
             {verdict === "wrong" && (
-                <p className="drill-feedback__body">Try again, or take a hint.</p>
+                <p className="drill-feedback__body">
+                    {expected.length === 1
+                        ? "Try again, or take a hint."
+                        : `There are ${expected.length} book moves here. Try again, or take a hint.`}
+                </p>
             )}
+
             {idea && <p className="drill-feedback__body">{idea}</p>}
+
+            {verdict === "correct" && alternatives > 0 && (
+                <p className="drill-feedback__body muted">
+                    {alternatives === 1
+                        ? "One other move is also theory here."
+                        : `${alternatives} other moves are also theory here.`}
+                </p>
+            )}
         </div>
     );
 }
 
 export default function DrillPage() {
     const { repertoireId } = useParams();
-    const { session, startLine, hint, skip, nextLine, progress } = useTrainer();
+    const { session, start, hint, skip, restart, moves, opening, progress } = useTrainer();
     const [error, setError] = useState(null);
 
     useBookAgent();
@@ -75,12 +84,12 @@ export default function DrillPage() {
     useEffect(() => {
         let cancelled = false;
         loadRepertoire(repertoireId)
-            .then((rep) => !cancelled && startLine(rep, 0))
+            .then((rep) => !cancelled && start(rep))
             .catch((err) => !cancelled && setError(err.message));
         return () => {
             cancelled = true;
         };
-    }, [repertoireId, startLine]);
+    }, [repertoireId, start]);
 
     if (error) {
         return (
@@ -93,8 +102,8 @@ export default function DrillPage() {
         );
     }
 
-    const { line, repertoire, phase, feedback, results, ply, streak } = session;
-    if (!line) {
+    const { repertoire, phase, feedback, results, streak, path } = session;
+    if (!repertoire) {
         return (
             <main className="page page--drill">
                 <p className="muted">Loading…</p>
@@ -103,7 +112,8 @@ export default function DrillPage() {
     }
 
     const complete = phase === Phase.lineComplete;
-    const perfect = complete && line.answerPlies.every((p) => results[p]?.firstTry);
+    const perfect = complete && progress.answered > 0 && progress.firstTry === progress.answered;
+    const choices = repertoire.nodes[path]?.replies.length ?? 0;
 
     return (
         <main className="page page--drill">
@@ -112,18 +122,24 @@ export default function DrillPage() {
             <aside className="drill-rail">
                 <header className="card drill-head">
                     <div className="drill-head__top">
-                        <span className="chip">{line.eco}</span>
-                        <span className={`chip chip--${line.side === "w" ? "accent" : "primary"}`}>
-                            {line.side === "w" ? "You play White" : "You play Black"}
+                        {opening.eco && <span className="chip">{opening.eco}</span>}
+                        <span className={`chip chip--${repertoire.side === "w" ? "accent" : "primary"}`}>
+                            {repertoire.side === "w" ? "You play White" : "You play Black"}
                         </span>
                     </div>
                     <h1 className="card__title">{repertoire.title}</h1>
-                    <p className="drill-head__line">{line.label}</p>
-                    <p className="card__subtitle">{line.name}</p>
+                    {/* Updates live as the line deepens — this is how the
+                        learner sees which variation they have steered into. */}
+                    <p className="drill-head__line">{opening.name || repertoire.family}</p>
 
-                    <MoveDots line={line} results={results} ply={ply} />
+                    <RunDots moves={moves} results={results} />
+                    {phase === Phase.answering && choices > 1 && (
+                        <p className="drill-head__choices">
+                            {choices} book moves here — any of them counts
+                        </p>
+                    )}
                     <p className="drill-head__count">
-                        {progress.done} / {progress.total} moves
+                        {opening.depth} moves deep · {progress.firstTry}/{progress.answered || 0} first time
                         {streak > 1 && <span className="drill-head__streak"> · {streak} in a row</span>}
                     </p>
                 </header>
@@ -131,13 +147,12 @@ export default function DrillPage() {
                 {complete ? (
                     <div className="card drill-feedback drill-feedback--good">
                         <p className="drill-feedback__title">
-                            <span aria-hidden="true">{perfect ? "★" : "✓"}</span>{" "}
-                            {perfect ? "Perfect line!" : "Line complete"}
+                            <span aria-hidden="true">{perfect ? "\u2605" : "\u2713"}</span>{" "}
+                            {perfect ? "Perfect line!" : "End of the line"}
                         </p>
                         <p className="drill-feedback__body">
-                            {perfect
-                                ? "Every move first time."
-                                : `${progress.done} of ${progress.total} first time.`}
+                            {opening.name && `You reached the ${opening.name}. `}
+                            {progress.firstTry} of {progress.answered} first time.
                         </p>
                     </div>
                 ) : (
@@ -148,8 +163,8 @@ export default function DrillPage() {
                     {complete ? (
                         <>
                             <Link className="btn btn--ghost" to="/learn">Back</Link>
-                            <button type="button" className="btn btn--primary" onClick={nextLine}>
-                                Next line →
+                            <button type="button" className="btn btn--primary" onClick={restart}>
+                                Go again →
                             </button>
                         </>
                     ) : (
@@ -176,8 +191,8 @@ export default function DrillPage() {
                 </div>
 
                 <ol className="drill-moves">
-                    {line.moves.slice(0, ply).map((m, i) => (
-                        <li key={i} className={line.answerPlies.includes(i) ? "is-yours" : undefined}>
+                    {moves.map((m, i) => (
+                        <li key={i} className={m.mine ? "is-yours" : undefined}>
                             {i % 2 === 0 && <b>{i / 2 + 1}.</b>} {m.san}
                         </li>
                     ))}

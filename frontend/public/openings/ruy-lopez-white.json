@@ -11,366 +11,540 @@
    "label": "Closed, Morphy Defense",
    "eco": "C90",
    "name": "Ruy Lopez: Closed",
-   "side": "w",
-   "moves": [
-    {
-     "san": "e4",
-     "uci": "e2e4"
-    },
-    {
-     "san": "e5",
-     "uci": "e7e5"
-    },
-    {
-     "san": "Nf3",
-     "uci": "g1f3"
-    },
-    {
-     "san": "Nc6",
-     "uci": "b8c6"
-    },
-    {
-     "san": "Bb5",
-     "uci": "f1b5"
-    },
-    {
-     "san": "a6",
-     "uci": "a7a6"
-    },
-    {
-     "san": "Ba4",
-     "uci": "b5a4"
-    },
-    {
-     "san": "Nf6",
-     "uci": "g8f6"
-    },
-    {
-     "san": "O-O",
-     "uci": "e1g1"
-    },
-    {
-     "san": "Be7",
-     "uci": "f8e7"
-    },
-    {
-     "san": "Re1",
-     "uci": "f1e1"
-    },
-    {
-     "san": "b5",
-     "uci": "b7b5"
-    },
-    {
-     "san": "Bb3",
-     "uci": "a4b3"
-    },
-    {
-     "san": "d6",
-     "uci": "d7d6"
-    },
-    {
-     "san": "c3",
-     "uci": "c2c3"
-    },
-    {
-     "san": "O-O",
-     "uci": "e8g8"
-    }
-   ],
-   "ideas": [
-    "Claim the centre.",
-    null,
-    "Develop and attack e5.",
-    null,
-    "Pressure the knight that defends e5 — the real point of the Ruy Lopez.",
-    null,
-    "Keep the bishop on the a2-g8 diagonal rather than trading it off.",
-    null,
-    "Castle. You can afford to ignore the e4 pawn for one move.",
-    null,
-    "Defend e4 properly and put the rook on the file it belongs on.",
-    null,
-    "Retreat again — this bishop is your best piece, don't let it go.",
-    null,
-    "The Spanish move. Build a retreat square on c2 and prepare d4.",
-    null
-   ],
-   "answerPlies": [
-    0,
-    2,
-    4,
-    6,
-    8,
-    10,
-    12,
-    14
-   ]
+   "path": "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8",
+   "plies": 16
   },
   {
    "id": "ruy-berlin",
    "label": "Berlin Defense",
    "eco": "C67",
    "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense",
-   "side": "w",
-   "moves": [
-    {
-     "san": "e4",
-     "uci": "e2e4"
-    },
-    {
-     "san": "e5",
-     "uci": "e7e5"
-    },
-    {
-     "san": "Nf3",
-     "uci": "g1f3"
-    },
-    {
-     "san": "Nc6",
-     "uci": "b8c6"
-    },
-    {
-     "san": "Bb5",
-     "uci": "f1b5"
-    },
-    {
-     "san": "Nf6",
-     "uci": "g8f6"
-    },
-    {
-     "san": "O-O",
-     "uci": "e1g1"
-    },
-    {
-     "san": "Nxe4",
-     "uci": "f6e4"
-    },
-    {
-     "san": "d4",
-     "uci": "d2d4"
-    },
-    {
-     "san": "Nd6",
-     "uci": "e4d6"
-    },
-    {
-     "san": "Bxc6",
-     "uci": "b5c6"
-    },
-    {
-     "san": "dxc6",
-     "uci": "d7c6"
-    },
-    {
-     "san": "dxe5",
-     "uci": "d4e5"
-    },
-    {
-     "san": "Nf5",
-     "uci": "d6f5"
-    },
-    {
-     "san": "Qxd8+",
-     "uci": "d1d8"
-    },
-    {
-     "san": "Kxd8",
-     "uci": "e8d8"
-    }
-   ],
-   "ideas": [
-    "Claim the centre.",
-    null,
-    "Develop and attack e5.",
-    null,
-    "The Spanish bishop.",
-    null,
-    "Offer the e-pawn. Development matters more than the pawn here.",
-    null,
-    "Strike in the centre while Black's knight is loose.",
-    null,
-    "Trade to damage the pawn structure before Black consolidates.",
-    null,
-    "Gain the pawn back and open the position.",
-    null,
-    "The famous Berlin endgame. Black loses castling rights; you have the better structure.",
-    null
-   ],
-   "answerPlies": [
-    0,
-    2,
-    4,
-    6,
-    8,
-    10,
-    12,
-    14
-   ]
+   "path": "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8",
+   "plies": 16
   },
   {
    "id": "ruy-exchange",
    "label": "Exchange Variation",
    "eco": "C69",
    "name": "Ruy Lopez: Exchange Variation, Normal Variation",
-   "side": "w",
-   "moves": [
-    {
-     "san": "e4",
-     "uci": "e2e4"
-    },
-    {
-     "san": "e5",
-     "uci": "e7e5"
-    },
-    {
-     "san": "Nf3",
-     "uci": "g1f3"
-    },
-    {
-     "san": "Nc6",
-     "uci": "b8c6"
-    },
-    {
-     "san": "Bb5",
-     "uci": "f1b5"
-    },
-    {
-     "san": "a6",
-     "uci": "a7a6"
-    },
-    {
-     "san": "Bxc6",
-     "uci": "b5c6"
-    },
-    {
-     "san": "dxc6",
-     "uci": "d7c6"
-    },
-    {
-     "san": "O-O",
-     "uci": "e1g1"
-    }
-   ],
-   "ideas": [
-    "Claim the centre.",
-    null,
-    "Develop and attack e5.",
-    null,
-    "The Spanish bishop.",
-    null,
-    "Trade at once. Black's doubled c-pawns are a permanent weakness in an endgame.",
-    null,
-    "Castle. Your long-term plan is simply to reach an endgame."
-   ],
-   "answerPlies": [
-    0,
-    2,
-    4,
-    6,
-    8
-   ]
+   "path": "e2e4e7e5g1f3b8c6f1b5a7a6b5c6d7c6e1g1",
+   "plies": 9
   },
   {
    "id": "ruy-open",
    "label": "Open Variation",
    "eco": "C80",
    "name": "Ruy Lopez: Open, Main Line",
-   "side": "w",
-   "moves": [
+   "path": "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6",
+   "plies": 16
+  }
+ ],
+ "nodes": {
+  "": {
+   "ply": 0,
+   "turn": "w",
+   "mine": true,
+   "replies": [
     {
+     "uci": "e2e4",
      "san": "e4",
-     "uci": "e2e4"
-    },
+     "idea": "Claim the centre."
+    }
+   ]
+  },
+  "e2e4": {
+   "ply": 1,
+   "turn": "b",
+   "mine": false,
+   "replies": [
     {
-     "san": "e5",
-     "uci": "e7e5"
-    },
-    {
-     "san": "Nf3",
-     "uci": "g1f3"
-    },
-    {
-     "san": "Nc6",
-     "uci": "b8c6"
-    },
-    {
-     "san": "Bb5",
-     "uci": "f1b5"
-    },
-    {
-     "san": "a6",
-     "uci": "a7a6"
-    },
-    {
-     "san": "Ba4",
-     "uci": "b5a4"
-    },
-    {
-     "san": "Nf6",
-     "uci": "g8f6"
-    },
-    {
-     "san": "O-O",
-     "uci": "e1g1"
-    },
-    {
-     "san": "Nxe4",
-     "uci": "f6e4"
-    },
-    {
-     "san": "d4",
-     "uci": "d2d4"
-    },
-    {
-     "san": "b5",
-     "uci": "b7b5"
-    },
-    {
-     "san": "Bb3",
-     "uci": "a4b3"
-    },
-    {
-     "san": "d5",
-     "uci": "d7d5"
-    },
-    {
-     "san": "dxe5",
-     "uci": "d4e5"
-    },
-    {
-     "san": "Be6",
-     "uci": "c8e6"
+     "uci": "e7e5",
+     "san": "e5"
     }
    ],
-   "ideas": [
-    "Claim the centre.",
-    null,
-    "Develop and attack e5.",
-    null,
-    "The Spanish bishop.",
-    null,
-    "Keep the bishop.",
-    null,
-    "Castle and let Black take on e4.",
-    null,
-    "Open the centre immediately to punish the wandering knight.",
-    null,
-    "Retreat to safety on the strong diagonal.",
-    null,
-    "Take, and accept a sharp middlegame with chances for both sides.",
-    null
+   "eco": "B00",
+   "name": "King's Pawn Game"
+  },
+  "e2e4e7e5": {
+   "ply": 2,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3",
+     "idea": "Develop and attack e5."
+    }
    ],
-   "answerPlies": [
-    0,
-    2,
-    4,
-    6,
-    8,
-    10,
-    12,
-    14
-   ]
+   "eco": "C20",
+   "name": "King's Pawn Game"
+  },
+  "e2e4e7e5g1f3": {
+   "ply": 3,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6"
+    }
+   ],
+   "eco": "C40",
+   "name": "King's Knight Opening"
+  },
+  "e2e4e7e5g1f3b8c6": {
+   "ply": 4,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1b5",
+     "san": "Bb5",
+     "idea": "Pressure the knight that defends e5 — the real point of the Ruy Lopez."
+    }
+   ],
+   "eco": "C44",
+   "name": "King's Knight Opening: Normal Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5": {
+   "ply": 5,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a7a6",
+     "san": "a6"
+    },
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "C60",
+   "name": "Ruy Lopez"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6": {
+   "ply": 6,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b5a4",
+     "san": "Ba4",
+     "idea": "Keep the bishop on the a2-g8 diagonal rather than trading it off."
+    },
+    {
+     "uci": "b5c6",
+     "san": "Bxc6",
+     "idea": "Trade at once. Black's doubled c-pawns are a permanent weakness in an endgame."
+    }
+   ],
+   "eco": "C70",
+   "name": "Ruy Lopez: Morphy Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "C70",
+   "name": "Ruy Lopez: Morphy Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle. You can afford to ignore the e4 pawn for one move."
+    }
+   ],
+   "eco": "C70",
+   "name": "Ruy Lopez: Morphy Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8e7",
+     "san": "Be7"
+    },
+    {
+     "uci": "f6e4",
+     "san": "Nxe4"
+    }
+   ],
+   "eco": "C78",
+   "name": "Ruy Lopez: Morphy Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1e1",
+     "san": "Re1",
+     "idea": "Defend e4 properly and put the rook on the file it belongs on."
+    }
+   ],
+   "eco": "C84",
+   "name": "Ruy Lopez: Closed"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b7b5",
+     "san": "b5"
+    }
+   ],
+   "eco": "C84",
+   "name": "Ruy Lopez: Closed"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a4b3",
+     "san": "Bb3",
+     "idea": "Retreat again — this bishop is your best piece, don't let it go."
+    }
+   ],
+   "eco": "C84",
+   "name": "Ruy Lopez: Closed"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6"
+    }
+   ],
+   "eco": "C88",
+   "name": "Ruy Lopez: Closed"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c2c3",
+     "san": "c3",
+     "idea": "The Spanish move. Build a retreat square on c2 and prepare d4."
+    }
+   ],
+   "eco": "C88",
+   "name": "Ruy Lopez: Closed"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "C88",
+   "name": "Ruy Lopez: Closed"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [],
+   "end": true,
+   "eco": "C90",
+   "name": "Ruy Lopez: Closed"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6": {
+   "ply": 6,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Offer the e-pawn. Development matters more than the pawn here."
+    }
+   ],
+   "eco": "C65",
+   "name": "Ruy Lopez: Berlin Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f6e4",
+     "san": "Nxe4"
+    }
+   ],
+   "eco": "C65",
+   "name": "Ruy Lopez: Berlin Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4",
+     "idea": "Strike in the centre while Black's knight is loose."
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, Rio Gambit Accepted"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4d6",
+     "san": "Nd6"
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, Rio Gambit Accepted"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b5c6",
+     "san": "Bxc6",
+     "idea": "Trade to damage the pawn structure before Black consolidates."
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7c6",
+     "san": "dxc6"
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d4e5",
+     "san": "dxe5",
+     "idea": "Gain the pawn back and open the position."
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d6f5",
+     "san": "Nf5"
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1d8",
+     "san": "Qxd8+",
+     "idea": "The famous Berlin endgame. Black loses castling rights; you have the better structure."
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8d8",
+     "san": "Kxd8"
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [],
+   "end": true,
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5c6": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7c6",
+     "san": "dxc6"
+    }
+   ],
+   "eco": "C68",
+   "name": "Ruy Lopez: Exchange Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5c6d7c6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle. Your long-term plan is simply to reach an endgame."
+    }
+   ],
+   "eco": "C68",
+   "name": "Ruy Lopez: Exchange Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5c6d7c6e1g1": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C69",
+   "name": "Ruy Lopez: Exchange Variation, Normal Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4",
+     "idea": "Open the centre immediately to punish the wandering knight."
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b7b5",
+     "san": "b5"
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a4b3",
+     "san": "Bb3",
+     "idea": "Retreat to safety on the strong diagonal."
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d5",
+     "san": "d5"
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d4e5",
+     "san": "dxe5",
+     "idea": "Take, and accept a sharp middlegame with chances for both sides."
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8e6",
+     "san": "Be6"
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [],
+   "end": true,
+   "eco": "C80",
+   "name": "Ruy Lopez: Open, Main Line"
   }
- ]
+ }
 }

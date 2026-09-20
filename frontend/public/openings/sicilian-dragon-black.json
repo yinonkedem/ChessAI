@@ -11,191 +11,322 @@
    "label": "Main Line",
    "eco": "B35",
    "name": "Sicilian Defense: Accelerated Dragon, Modern Bc4 Variation",
-   "side": "b",
-   "moves": [
-    {
-     "san": "e4",
-     "uci": "e2e4"
-    },
-    {
-     "san": "c5",
-     "uci": "c7c5"
-    },
-    {
-     "san": "Nf3",
-     "uci": "g1f3"
-    },
-    {
-     "san": "Nc6",
-     "uci": "b8c6"
-    },
-    {
-     "san": "d4",
-     "uci": "d2d4"
-    },
-    {
-     "san": "cxd4",
-     "uci": "c5d4"
-    },
-    {
-     "san": "Nxd4",
-     "uci": "f3d4"
-    },
-    {
-     "san": "g6",
-     "uci": "g7g6"
-    },
-    {
-     "san": "Nc3",
-     "uci": "b1c3"
-    },
-    {
-     "san": "Bg7",
-     "uci": "f8g7"
-    },
-    {
-     "san": "Be3",
-     "uci": "c1e3"
-    },
-    {
-     "san": "Nf6",
-     "uci": "g8f6"
-    },
-    {
-     "san": "Bc4",
-     "uci": "f1c4"
-    },
-    {
-     "san": "O-O",
-     "uci": "e8g8"
-    }
-   ],
-   "ideas": [
-    null,
-    "The Sicilian. Unbalance the position from move one.",
-    null,
-    "Develop and fight for d4.",
-    null,
-    "Take — a wing pawn for a centre pawn.",
-    null,
-    "Prepare the fianchetto. Saving a tempo over the normal Dragon is the whole point.",
-    null,
-    "The bishop's diagonal is the soul of this opening.",
-    null,
-    "Develop, and keep an eye on the d5 square.",
-    null,
-    "Castle into safety before White organises an attack."
-   ],
-   "answerPlies": [
-    1,
-    3,
-    5,
-    7,
-    9,
-    11,
-    13
-   ]
+   "path": "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4e8g8",
+   "plies": 14
   },
   {
    "id": "accelerated-dragon-maroczy",
    "label": "Maroczy Bind",
    "eco": "B36",
    "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind",
-   "side": "b",
-   "moves": [
+   "path": "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7",
+   "plies": 16
+  }
+ ],
+ "nodes": {
+  "": {
+   "ply": 0,
+   "turn": "w",
+   "mine": false,
+   "replies": [
     {
-     "san": "e4",
-     "uci": "e2e4"
-    },
+     "uci": "e2e4",
+     "san": "e4"
+    }
+   ]
+  },
+  "e2e4": {
+   "ply": 1,
+   "turn": "b",
+   "mine": true,
+   "replies": [
     {
+     "uci": "c7c5",
      "san": "c5",
-     "uci": "c7c5"
-    },
-    {
-     "san": "Nf3",
-     "uci": "g1f3"
-    },
-    {
-     "san": "Nc6",
-     "uci": "b8c6"
-    },
-    {
-     "san": "d4",
-     "uci": "d2d4"
-    },
-    {
-     "san": "cxd4",
-     "uci": "c5d4"
-    },
-    {
-     "san": "Nxd4",
-     "uci": "f3d4"
-    },
-    {
-     "san": "g6",
-     "uci": "g7g6"
-    },
-    {
-     "san": "c4",
-     "uci": "c2c4"
-    },
-    {
-     "san": "Nf6",
-     "uci": "g8f6"
-    },
-    {
-     "san": "Nc3",
-     "uci": "b1c3"
-    },
-    {
-     "san": "d6",
-     "uci": "d7d6"
-    },
-    {
-     "san": "Be2",
-     "uci": "f1e2"
-    },
-    {
-     "san": "Nxd4",
-     "uci": "c6d4"
-    },
-    {
-     "san": "Qxd4",
-     "uci": "d1d4"
-    },
-    {
-     "san": "Bg7",
-     "uci": "f8g7"
+     "idea": "The Sicilian. Unbalance the position from move one."
     }
    ],
-   "ideas": [
-    null,
-    "The Sicilian.",
-    null,
-    "Develop and fight for d4.",
-    null,
-    "Take.",
-    null,
-    "Prepare the fianchetto.",
-    null,
-    "Develop with a hit on e4 before White finishes the bind.",
-    null,
-    "Solid. Take d5 and e5 away from White's pieces.",
-    null,
-    "Trade off a strong knight to relieve the cramp.",
-    null,
-    "Finally the bishop comes to life on the long diagonal."
+   "eco": "B00",
+   "name": "King's Pawn Game"
+  },
+  "e2e4c7c5": {
+   "ply": 2,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3"
+    }
    ],
-   "answerPlies": [
-    1,
-    3,
-    5,
-    7,
-    9,
-    11,
-    13,
-    15
-   ]
+   "eco": "B20",
+   "name": "Sicilian Defense"
+  },
+  "e2e4c7c5g1f3": {
+   "ply": 3,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6",
+     "idea": "Develop and fight for d4."
+    }
+   ],
+   "eco": "B27",
+   "name": "Sicilian Defense"
+  },
+  "e2e4c7c5g1f3b8c6": {
+   "ply": 4,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4"
+    }
+   ],
+   "eco": "B30",
+   "name": "Sicilian Defense: Old Sicilian"
+  },
+  "e2e4c7c5g1f3b8c6d2d4": {
+   "ply": 5,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c5d4",
+     "san": "cxd4",
+     "idea": "Take — a wing pawn for a centre pawn."
+    }
+   ],
+   "eco": "B32",
+   "name": "Sicilian Defense: Open"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4": {
+   "ply": 6,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3d4",
+     "san": "Nxd4"
+    }
+   ],
+   "eco": "B32",
+   "name": "Sicilian Defense: Open"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4": {
+   "ply": 7,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g7g6",
+     "san": "g6",
+     "idea": "Prepare the fianchetto. Saving a tempo over the normal Dragon is the whole point."
+    }
+   ],
+   "eco": "B32",
+   "name": "Sicilian Defense: Open"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3"
+    },
+    {
+     "uci": "c2c4",
+     "san": "c4"
+    }
+   ],
+   "eco": "B32",
+   "name": "Sicilian Defense: Accelerated Dragon"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8g7",
+     "san": "Bg7",
+     "idea": "The bishop's diagonal is the soul of this opening."
+    }
+   ],
+   "eco": "B34",
+   "name": "Sicilian Defense: Accelerated Dragon, Modern Variation"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1e3",
+     "san": "Be3"
+    }
+   ],
+   "eco": "B34",
+   "name": "Sicilian Defense: Accelerated Dragon, Modern Variation"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6",
+     "idea": "Develop, and keep an eye on the d5 square."
+    }
+   ],
+   "eco": "B34",
+   "name": "Sicilian Defense: Accelerated Dragon, Modern Variation"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1c4",
+     "san": "Bc4"
+    }
+   ],
+   "eco": "B34",
+   "name": "Sicilian Defense: Accelerated Dragon, Modern Variation"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle into safety before White organises an attack."
+    }
+   ],
+   "eco": "B35",
+   "name": "Sicilian Defense: Accelerated Dragon, Modern Bc4 Variation"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4e8g8": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "B35",
+   "name": "Sicilian Defense: Accelerated Dragon, Modern Bc4 Variation"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6",
+     "idea": "Develop with a hit on e4 before White finishes the bind."
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3"
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6",
+     "idea": "Solid. Take d5 and e5 away from White's pieces."
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1e2",
+     "san": "Be2"
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c6d4",
+     "san": "Nxd4",
+     "idea": "Trade off a strong knight to relieve the cramp."
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1d4",
+     "san": "Qxd4"
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8g7",
+     "san": "Bg7",
+     "idea": "Finally the bishop comes to life on the long diagonal."
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
   }
- ]
+ }
 }

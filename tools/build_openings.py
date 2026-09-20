@@ -180,6 +180,85 @@ def build_line(spec: dict, side: str, table) -> dict:
     }
 
 
+def build_tree(lines, side, table):
+    """Merge authored lines into a position tree keyed by UCI path.
+
+    Authoring stays line-shaped — you write "1. e4 c5 2. Nf3 d6 ..." — but the
+    trainer needs to know every book reply to a position, not just the one on
+    the line you happened to be reading. Merging on shared prefixes gives that
+    for free: two Najdorf lines that diverge at move 6 produce a node with two
+    replies, and playing either is correct.
+
+    The key is the concatenated UCI path ("" is the start position), which is
+    also exactly the spaced-repetition card key — one card per position, so a
+    shared prefix like 1.e4 is drilled once rather than once per line.
+    """
+    nodes: dict[str, dict] = {}
+    idea_conflicts = []
+
+    for line in lines:
+        path = ""
+        for i, mv in enumerate(line["moves"]):
+            node = nodes.setdefault(path, {
+                "ply": i,
+                "turn": "w" if i % 2 == 0 else "b",
+                "mine": (i % 2 == 0) == (side == "w"),
+                "replies": [],
+            })
+
+            existing = next((r for r in node["replies"] if r["uci"] == mv["uci"]), None)
+            idea = line["ideas"][i]
+
+            if existing is None:
+                reply = {"uci": mv["uci"], "san": mv["san"]}
+                if idea:
+                    reply["idea"] = idea
+                node["replies"].append(reply)
+            elif idea and "idea" not in existing:
+                existing["idea"] = idea
+            elif idea and existing.get("idea") != idea:
+                # Same move from the same position described two different
+                # ways. Not fatal, but the learner would see whichever line
+                # happened to be authored first — worth knowing about.
+                idea_conflicts.append((line["id"], mv["san"], path or "start"))
+
+            path += mv["uci"]
+
+        # Leaf: the line ends here. Record it so the UI can say "line complete"
+        # and name the variation reached.
+        n = len(line["moves"])
+        leaf = nodes.setdefault(path, {
+            "ply": n,
+            "turn": "w" if n % 2 == 0 else "b",
+            # Whose turn it would be, computed the same way as any other node.
+            # Hardcoding False here silently mislabels every leaf that lands on
+            # the learner's move.
+            "mine": (n % 2 == 0) == (side == "w"),
+            "replies": [],
+        })
+        leaf["end"] = True
+
+    # Name every node by its position. Positions the dataset doesn't recognise
+    # (between two named ones) inherit from the nearest named ancestor, so the
+    # UI can always show where the learner currently is — shallow to deep, so
+    # a parent is always named before its children look at it.
+    for path in sorted(nodes, key=len):
+        node = nodes[path]
+        board = chess.Board()
+        for i in range(0, len(path), 4):
+            board.push(chess.Move.from_uci(path[i:i + 4]))
+
+        hit = table.get(board.epd())
+        if hit:
+            node["eco"], node["name"] = hit
+        elif path:
+            parent = nodes.get(path[:-4])
+            if parent and "name" in parent:
+                node["eco"], node["name"] = parent["eco"], parent["name"]
+
+    return nodes, idea_conflicts
+
+
 def main() -> int:
     try:
         table = load_eco_table()
@@ -188,6 +267,7 @@ def main() -> int:
         curation = json.loads(CURATION.read_text())
         repertoires, catalog = [], []
         seen_ids: Counter = Counter()
+        all_conflicts: list = []
 
         for rep in curation["repertoires"]:
             side = rep["side"]
@@ -198,7 +278,13 @@ def main() -> int:
             for ln in lines:
                 seen_ids[ln["id"]] += 1
 
-            cards = sum(len(ln["answerPlies"]) for ln in lines)
+            nodes, conflicts = build_tree(lines, side, table)
+            all_conflicts.extend(conflicts)
+
+            # One SRS card per position the learner must answer — shared
+            # prefixes collapse, so 1.e4 is one card however many lines use it.
+            cards = sum(1 for n in nodes.values() if n["mine"] and n["replies"])
+
             doc = {
                 "id": rep["id"],
                 "title": rep["title"],
@@ -206,7 +292,21 @@ def main() -> int:
                 "blurb": rep.get("blurb", ""),
                 "side": side,
                 "difficulty": rep.get("difficulty", 1),
-                "lines": lines,
+                # Lightweight variation index. The moves and ideas live in
+                # `nodes` — repeating them here would double the payload for
+                # no gain, since the drill navigates the tree, not the list.
+                "lines": [
+                    {
+                        "id": ln["id"],
+                        "label": ln["label"],
+                        "eco": ln["eco"],
+                        "name": ln["name"],
+                        "path": "".join(m["uci"] for m in ln["moves"]),
+                        "plies": len(ln["moves"]),
+                    }
+                    for ln in lines
+                ],
+                "nodes": nodes,
             }
             repertoires.append(doc)
             catalog.append({
@@ -218,8 +318,15 @@ def main() -> int:
                 "difficulty": doc["difficulty"],
                 "lineCount": len(lines),
                 "cardCount": cards,
+                "nodeCount": len(nodes),
                 "file": f"{rep['id']}.json",
             })
+
+        if all_conflicts:
+            print("\n  IDEA CONFLICTS — same move from the same position, described two ways:")
+            for line_id, san, path in all_conflicts[:10]:
+                print(f"    {line_id}: {san} after {path}")
+            print("    The first authored wording wins. Make them agree, or drop one.")
 
         dupes = [i for i, n in seen_ids.items() if n > 1]
         if dupes:
@@ -269,12 +376,14 @@ def main() -> int:
     total_cards = sum(c["cardCount"] for c in catalog)
     written = sum((OUT_DIR / f).stat().st_size for f in (p.name for p in OUT_DIR.glob("*.json")))
 
-    print(f"\n{'repertoire':<28} {'side':>4} {'lines':>6} {'cards':>6}")
-    print(f"{'-' * 28} {'-' * 4} {'-' * 6} {'-' * 6}")
+    total_nodes = sum(c["nodeCount"] for c in catalog)
+    print(f"\n{'repertoire':<28} {'side':>4} {'lines':>6} {'nodes':>6} {'cards':>6}")
+    print(f"{'-' * 28} {'-' * 4} {'-' * 6} {'-' * 6} {'-' * 6}")
     for c in catalog:
-        print(f"{c['id']:<28} {c['side']:>4} {c['lineCount']:>6} {c['cardCount']:>6}")
-    print(f"{'-' * 28} {'-' * 4} {'-' * 6} {'-' * 6}")
-    print(f"{'total':<28} {'':>4} {total_lines:>6} {total_cards:>6}")
+        print(f"{c['id']:<28} {c['side']:>4} {c['lineCount']:>6} "
+              f"{c['nodeCount']:>6} {c['cardCount']:>6}")
+    print(f"{'-' * 28} {'-' * 4} {'-' * 6} {'-' * 6} {'-' * 6}")
+    print(f"{'total':<28} {'':>4} {total_lines:>6} {total_nodes:>6} {total_cards:>6}")
     print(f"\nWrote {len(catalog) + 1} files ({written / 1024:.1f} KB) to "
           f"{OUT_DIR.relative_to(ROOT)}/")
     return 0

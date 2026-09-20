@@ -176,3 +176,16 @@
     .drill-feedback { animation: none; }
     .drill-dots i   { transition: none; }
 }
+
+/* Shown whenever the current position has more than one book move — the
+   thing the tree exists for, so it should be visible on every branch, not
+   only on the first move of a run. */
+.drill-head__choices {
+    margin: 0;
+    padding: var(--sp-1) var(--sp-2);
+    border-radius: var(--r-sm);
+    background: var(--c-info-soft);
+    color: var(--c-info);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+}
