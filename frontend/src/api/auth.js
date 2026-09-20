@@ -52,6 +52,43 @@ export async function me() {
     return user;
 }
 
+/** FastAPI validation errors come back as a list of objects, not a string. */
+function errorMessage(data, fallback) {
+    const d = data?.detail;
+    if (typeof d === "string") return d;
+    if (Array.isArray(d) && d[0]?.msg) return d[0].msg;
+    return fallback;
+}
+
+async function authed(path, { method, body }) {
+    const token = getToken();
+    if (!token) throw new Error("You are not signed in");
+    const res = await fetch(apiUrl(path).toString(), {
+        method,
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(body),
+    });
+    if (res.status === 204) return null;
+    const data = await res.json().catch(() => ({}));
+    throw new Error(errorMessage(data, `Request failed (${res.status})`));
+}
+
+export async function changePassword({ currentPassword, newPassword }) {
+    return authed("/auth/change-password", {
+        method: "POST",
+        body: { current_password: currentPassword, new_password: newPassword },
+    });
+}
+
+/** Permanently deletes the account and every game it owns. Signs out on success. */
+export async function deleteAccount({ password }) {
+    await authed("/auth/me", { method: "DELETE", body: { password } });
+    logout();
+}
+
 export function logout() {
     setToken(null);
     cacheUser(null);

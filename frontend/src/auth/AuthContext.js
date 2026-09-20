@@ -1,5 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useState } from "react";
 import {
+    deleteAccount as apiDeleteAccount,
     getToken,
     getUser,
     login as apiLogin,
@@ -52,7 +53,13 @@ export function AuthProvider({ children }) {
         setUser(null);
     }, []);
 
-    const value = { user, isLoading, login, signup, logout, refresh };
+    // Clears the token as a side effect, so drop the user here too.
+    const deleteAccount = useCallback(async (password) => {
+        await apiDeleteAccount({ password });
+        setUser(null);
+    }, []);
+
+    const value = { user, isLoading, login, signup, logout, refresh, deleteAccount };
     return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
 

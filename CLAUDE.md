@@ -81,6 +81,12 @@ python main.py     # Train from scratch
 
 **Routers:**
 - `POST /auth/signup`, `POST /auth/login`, `GET /auth/me` — JWT-based auth (`backend/app/auth/router.py`). JWT subject is the user's Mongo `_id` as a string (not the username), so a future username change wouldn't invalidate tokens.
+- `POST /auth/change-password` — `{current_password, new_password}`, requires auth. 403 if the current password is wrong, 400 if the new one is identical, 422 if it's outside 8–72 characters. Returns 204. **Existing tokens stay valid** — the JWT subject is the user id and there's no token blocklist, so changing a password does not sign other sessions out.
+- `DELETE /auth/me` — `{password}`, requires auth. Hard-deletes the user **and all their games** (games first, so a partial failure can't orphan rows). 403 on a wrong password, 204 on success. The username and email become reusable immediately — this is the supported "reset my password" path for a user who can still log in but wants to start over.
+
+**Password rules:** 8–72 characters, enforced by the shared `Password` annotated type in `auth/router.py` and applied to signup and change-password alike. The 72-byte ceiling is bcrypt's — it silently ignores anything beyond it, so a longer password would overstate its own strength.
+
+**Admin password reset:** `backend/tools/set_password.py` — the escape hatch for a genuinely forgotten password, since there is no email flow. Talks straight to Mongo via `backend/.env`, so it needs no running server. `./venv/bin/python tools/set_password.py --list` to see users, `... tools/set_password.py <username>` to set one. Reads the password from a hidden prompt (never an argument, so it stays out of shell history) and enforces the same 8–72 rule.
 - `POST /engine/best-move` — Chess engine query (`backend/app/routers/engine.py`)
   - Body: `{"fen": "...", "depth": 1-30}`
   - Query param: `?engine=stockfish` (default) or `?engine=random`
@@ -178,6 +184,39 @@ Self-play + MCTS training loop in `AlphaZero/alphaZero.py`. The ResNet model is 
 ---
 
 ## Audit & refactor — session log
+
+### Account management: change password + delete account (2026-09-20)
+
+Added so users can self-serve a password change, and so "reset my password" has an answer that
+needs no email provider: delete the account and sign up again with the same name.
+
+- **`POST /auth/change-password`** and **`DELETE /auth/me`** — see the Routers section above for
+  semantics. Delete cascades to the user's games.
+- **`backend/tools/set_password.py`** — admin CLI for the forgotten-password case.
+- **`frontend/src/pages/AccountPage.{js,css}`** — new `/account` route (protected): stats summary,
+  change-password form, and a red "danger zone" card. Delete requires **two** independent
+  confirmations — the password (proof of identity) and typing your own username (proof of intent).
+- `Toolbar.js` — the user chip is now a button linking to `/account`, with the same
+  `is-active`/`aria-current` treatment as the other nav items.
+- `api/auth.js` — `changePassword()`, `deleteAccount()`, plus an `errorMessage()` helper because
+  FastAPI 422s return `detail` as a *list of objects*, not a string; the old code would have
+  rendered "[object Object]".
+- `AuthContext` exposes `deleteAccount` so the in-memory user clears alongside the token.
+- `AuthForm.js` — "Forgot password?" copy now points at the Account page first, and only falls back
+  to emailing the admin.
+
+**Decision: no email-based reset.** Sending is free (Resend 3k/mo, SendGrid 100/day, Gmail SMTP),
+but sending from your own address needs a domain, and Render's free tier blocks outbound SMTP ports.
+Not worth the moving parts until the site has users who need 2am self-service. The admin script
+covers the case in the meantime.
+
+**Note:** deleting an account requires being logged in, so it does *not* help someone who has
+actually forgotten their password — that path is still the admin script.
+
+**Verified:** 16/16 API assertions via curl (wrong password → 403, identical password → 400, short
+password → 422, old token invalidated, username reusable), an orphan-games query confirming the
+cascade left 0 dangling rows, and 13/13 browser assertions via Playwright covering the full UI
+flow including both delete confirmations. `npm run lint` and `npm run build` clean.
 
 ### Design system + theming (2026-09-20) — Phase 1 of the opening-trainer plan
 

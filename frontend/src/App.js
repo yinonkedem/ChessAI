@@ -23,6 +23,7 @@ import Toolbar from "./components/Toolbar/Toolbar";
 import { AuthProvider } from "./auth/AuthContext";
 import ProtectedRoute from "./auth/ProtectedRoute";
 import LoginPage from "./pages/LoginPage";
+import AccountPage from "./pages/AccountPage";
 
 import usePersistedReducer from "./hooks/usePersistedReducer";
 
@@ -98,6 +99,14 @@ export default function App() {
                         element={
                             <ProtectedRoute>
                                 <EditorPage />
+                            </ProtectedRoute>
+                        }
+                    />
+                    <Route
+                        path="/account"
+                        element={
+                            <ProtectedRoute>
+                                <AccountPage />
                             </ProtectedRoute>
                         }
                     />

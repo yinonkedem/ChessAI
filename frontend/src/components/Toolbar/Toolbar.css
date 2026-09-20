@@ -180,11 +180,43 @@
     color: var(--c-ink-muted);
     padding: var(--sp-2) var(--sp-3);
     border-radius: var(--r-pill);
+    font-family: inherit;
     font-size: var(--fs-sm);
     font-weight: 700;
     line-height: 1;
     min-height: 48px;
     box-sizing: border-box;
+    cursor: pointer;
+    box-shadow: none;
+    transition:
+        background-color var(--dur-fast) var(--ease),
+        color var(--dur-fast) var(--ease),
+        transform var(--dur-fast) var(--ease);
+}
+
+@media (hover: hover) {
+    .toolbar__user:hover {
+        background: var(--c-surface);
+        color: var(--c-ink);
+        border-color: var(--c-border-strong);
+        transform: translateY(-1px);
+        box-shadow: none;
+    }
+}
+
+.toolbar__user:active {
+    transform: translateY(1px) scale(0.97);
+}
+
+.toolbar__user:focus-visible {
+    outline: none;
+    box-shadow: var(--sh-focus);
+}
+
+.toolbar__user.is-active {
+    background: var(--c-primary-soft);
+    color: var(--c-primary-strong);
+    border-color: var(--c-primary);
 }
 
 .toolbar__user-name {

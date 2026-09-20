@@ -94,10 +94,16 @@ export default function Toolbar({ onNewGame }) {
 
                 {user ? (
                     <>
-                        <span className="toolbar__user" title={user.username}>
+                        <button
+                            type="button"
+                            className={`toolbar__user${isOn("/account") ? " is-active" : ""}`}
+                            onClick={() => navigate("/account")}
+                            title={`${user.username} — account settings`}
+                            aria-current={isOn("/account") ? "page" : undefined}
+                        >
                             <span aria-hidden="true">👤</span>
                             <span className="toolbar__user-name">{user.username}</span>
-                        </span>
+                        </button>
                         <button
                             type="button"
                             className="toolbar__btn"

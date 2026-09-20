@@ -82,7 +82,8 @@ export default function AuthForm({ initialMode = "login", onSuccess, onCancel, a
                     </button>
                     {forgotOpen && (
                         <div className="auth-forgot-panel" role="note">
-                            Password reset isn’t self-serve yet. Email{" "}
+                            If you can still sign in, change it under{" "}
+                            <strong>your name → Account</strong>. If you can’t, email{" "}
                             <a href={`mailto:${ADMIN_EMAIL}?subject=Password%20reset`}>
                                 {ADMIN_EMAIL}
                             </a>{" "}

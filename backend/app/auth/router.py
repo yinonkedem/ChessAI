@@ -1,18 +1,40 @@
-from fastapi import APIRouter, Depends, HTTPException, status
-from fastapi.security import OAuth2PasswordRequestForm
-from pydantic import BaseModel, EmailStr
+from typing import Annotated
 
-from app.models import User, UserStats
+from fastapi import APIRouter, Depends, HTTPException, Response, status
+from fastapi.security import OAuth2PasswordRequestForm
+from pydantic import BaseModel, EmailStr, Field
+
+from app.models import Game, User, UserStats
 
 from .dependencies import get_current_active_user
-from .utils import authenticate_user, create_access_token, get_password_hash
+from .utils import (
+    authenticate_user,
+    create_access_token,
+    get_password_hash,
+    verify_password,
+)
 
 router = APIRouter(prefix="/auth", tags=["auth"])
+
+# bcrypt only reads the first 72 BYTES of a password and silently ignores the
+# rest, so anything longer is a lie about how strong the password is. Reject it
+# up front instead. (Also why requirements.txt pins bcrypt==4.0.1 — 4.1+ raises
+# instead of truncating, which breaks passlib 1.7.4's self-test.)
+Password = Annotated[str, Field(min_length=8, max_length=72)]
 
 
 class SignupBody(BaseModel):
     username: str
     email: EmailStr
+    password: Password
+
+
+class ChangePasswordBody(BaseModel):
+    current_password: str
+    new_password: Password
+
+
+class DeleteAccountBody(BaseModel):
     password: str
 
 
@@ -71,3 +93,40 @@ async def login(form: OAuth2PasswordRequestForm = Depends()):
 @router.get("/me", response_model=UserOut)
 async def me(current_user: User = Depends(get_current_active_user)):
     return _to_out(current_user)
+
+
+@router.post("/change-password", status_code=204, response_class=Response)
+async def change_password(
+    body: ChangePasswordBody,
+    current_user: User = Depends(get_current_active_user),
+):
+    if not verify_password(body.current_password, current_user.password_hash):
+        raise HTTPException(status_code=403, detail="Current password is incorrect")
+    if body.new_password == body.current_password:
+        raise HTTPException(
+            status_code=400, detail="New password must be different from the current one"
+        )
+
+    current_user.password_hash = get_password_hash(body.new_password)
+    await current_user.save()
+    # Existing tokens stay valid: the JWT subject is the user id, and we have no
+    # token blocklist. Changing the password does not sign other sessions out.
+    return Response(status_code=204)
+
+
+@router.delete("/me", status_code=204, response_class=Response)
+async def delete_account(
+    body: DeleteAccountBody,
+    current_user: User = Depends(get_current_active_user),
+):
+    """Permanently delete the signed-in user and everything owned by them.
+
+    Games are removed first so a partial failure can never leave game rows
+    pointing at a user id that no longer exists.
+    """
+    if not verify_password(body.password, current_user.password_hash):
+        raise HTTPException(status_code=403, detail="Password is incorrect")
+
+    await Game.find(Game.user_id == current_user.id).delete()
+    await current_user.delete()
+    return Response(status_code=204)

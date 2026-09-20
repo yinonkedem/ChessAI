@@ -1,0 +1,133 @@
+.page--account {
+    align-items: center;
+}
+
+.account {
+    width: 100%;
+    max-width: 620px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-5);
+}
+
+.account__header {
+    text-align: center;
+    margin-bottom: var(--sp-1);
+}
+
+.account__header h1 {
+    font-size: var(--fs-2xl);
+    margin: 0 0 var(--sp-1);
+}
+
+.account__header p {
+    margin: 0;
+    font-size: var(--fs-sm);
+    word-break: break-word;
+}
+
+.account__card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-3);
+}
+
+.account__card--danger {
+    border-color: var(--c-error);
+    background: var(--c-error-soft);
+}
+
+.account__card--danger .card__subtitle {
+    color: var(--c-ink);
+}
+
+/* ---- stats ---- */
+
+.account__stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-3);
+    margin: 0;
+}
+
+.account__stats > div {
+    background: var(--c-surface-sunken);
+    border-radius: var(--r-md);
+    padding: var(--sp-3);
+    text-align: center;
+}
+
+.account__stats dt {
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--c-ink-subtle);
+}
+
+.account__stats dd {
+    margin: var(--sp-1) 0 0;
+    font-family: var(--font-display);
+    font-size: var(--fs-xl);
+    font-weight: 800;
+    color: var(--c-ink);
+}
+
+/* ---- forms ---- */
+
+.account__fields {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2);
+}
+
+.account__fields input {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 var(--sp-4);
+    box-sizing: border-box;
+
+    font-family: var(--font-body);
+    font-size: var(--fs-md);
+    color: var(--c-ink);
+
+    background: var(--c-surface-raised);
+    border: 1px solid var(--c-border);
+    border-radius: var(--r-md);
+}
+
+.account__fields input::placeholder {
+    color: var(--c-ink-subtle);
+}
+
+.account__fields input[aria-invalid="true"] {
+    border-color: var(--c-error);
+}
+
+.account__hint {
+    margin: 0;
+    font-size: var(--fs-sm);
+    font-weight: 700;
+}
+
+.account__hint--error { color: var(--c-error); }
+.account__hint--ok    { color: var(--c-success); }
+
+.account__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-2);
+    justify-content: flex-end;
+}
+
+@media (max-width: 480px) {
+    .account__actions .btn {
+        flex: 1 1 auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .account__stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
