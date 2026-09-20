@@ -21,16 +21,16 @@
 
     --c-ink: #2C2318;
     --c-ink-muted: #6E6150;
-    --c-ink-subtle: #9E9080;
+    --c-ink-subtle: #7E7161;   /* 4.67:1 on --c-surface (was #9E9080, 3.06:1) */
 
     /* ---- brand ---- */
-    --c-primary: #5B8C51;
-    --c-primary-strong: #446B3D;
+    --c-primary: #4C7A43;      /* 5.03:1 vs white text (was #5B8C51, 3.95:1) */
+    --c-primary-strong: #3C6236;
     --c-primary-soft: #E6F0E2;
     --c-on-primary: #FFFFFF;
 
     --c-accent: #E8A33D;
-    --c-accent-strong: #C9862A;
+    --c-accent-strong: #96611A; /* 4.71:1 on --c-accent-soft, 5.14:1 on --c-surface */
     --c-accent-soft: #FDF2DE;
     --c-on-accent: #2C2318;
 
@@ -39,6 +39,9 @@
     --c-success-soft: #E6F3E8;
     --c-error: #D2544B;
     --c-error-soft: #FBEAE8;
+    --c-error-ink: #A3332C;    /* text on --c-error-soft: 5.88:1 */
+    --c-danger-bg: #C0392F;    /* filled button: 5.43:1 vs white */
+    --c-on-danger: #FFFFFF;
     --c-info: #4B7FA8;
     --c-info-soft: #E7F0F6;
 
@@ -113,7 +116,7 @@
 
     --c-ink: #F2EADC;
     --c-ink-muted: #B8AA97;
-    --c-ink-subtle: #8A7C6B;
+    --c-ink-subtle: #A89A87;   /* 5.94:1 on dark --c-surface (was #8A7C6B, 4.03:1) */
 
     --c-primary: #7FB073;
     --c-primary-strong: #9AC790;
@@ -129,6 +132,11 @@
     --c-success-soft: #24331F;
     --c-error: #E4776E;
     --c-error-soft: #3A211E;
+    --c-error-ink: #F0A29B;
+    /* Dark theme flips it: a light red with dark ink reads better
+       than white on red, and clears AA comfortably (6.42:1). */
+    --c-danger-bg: #E4776E;
+    --c-on-danger: #14110E;
     --c-info: #74A6C9;
     --c-info-soft: #1E2C36;
 
@@ -142,6 +150,11 @@
     --sh-3: 0 8px 24px rgba(0, 0, 0, .44), 0 2px 6px rgba(0, 0, 0, .28);
     --sh-press: inset 0 2px 4px rgba(0, 0, 0, .40);
 }
+
+/* Contrast note: the ink/brand pairs above are chosen to clear WCAG AA
+   (4.5:1) against the surfaces they are actually used on, verified with
+   axe-core in both themes. If you retune them, re-run the audit — several of
+   the original values looked fine and measured 2.7-4.0:1. */
 
 /* Zeroing the duration tokens means every component built on them gets
    reduced-motion support for free. Explicit `animation` overrides are

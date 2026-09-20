@@ -1,0 +1,163 @@
+.page--progress { align-items: center; }
+
+.progress {
+    width: 100%;
+    max-width: 860px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-4);
+}
+
+.progress__header { text-align: center; }
+.progress__header h1 { font-size: var(--fs-2xl); margin: 0; }
+
+/* ---- summary tiles ---- */
+
+.progress__tiles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-3);
+    margin: 0;
+}
+
+.progress__tile {
+    padding: var(--sp-4);
+    text-align: center;
+}
+
+.progress__tile dt {
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--c-ink-subtle);
+}
+
+.progress__tile dd {
+    margin: var(--sp-1) 0 0;
+    font-family: var(--font-display);
+    font-size: var(--fs-2xl);
+    font-weight: 800;
+    color: var(--c-ink);
+    line-height: 1;
+}
+
+.progress__tile p { margin: var(--sp-1) 0 0; font-size: var(--fs-xs); }
+
+.progress__panel { display: flex; flex-direction: column; gap: var(--sp-2); }
+
+/* ---- next-week chart ---- */
+
+.progress__week {
+    list-style: none;
+    margin: var(--sp-2) 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: var(--sp-2);
+    align-items: end;
+    height: 120px;
+}
+
+.progress__week li {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--sp-1);
+    height: 100%;
+}
+
+.progress__bar {
+    width: 100%;
+    min-height: 3px;
+    background: var(--c-primary-soft);
+    border: 1px solid var(--c-primary);
+    border-radius: var(--r-sm) var(--r-sm) 0 0;
+    order: 2;
+    transition: height var(--dur-slow) var(--ease);
+}
+
+.progress__bar.is-due {
+    background: var(--c-error-soft);
+    border-color: var(--c-error);
+}
+
+.progress__bar-n { order: 1; font-size: var(--fs-xs); font-weight: 800; color: var(--c-ink-muted); }
+.progress__bar-d { order: 3; font-size: var(--fs-xs); color: var(--c-ink-subtle); }
+
+/* ---- leitner spread ---- */
+
+.progress__boxes {
+    list-style: none;
+    margin: var(--sp-2) 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-2);
+}
+
+.progress__boxes li {
+    background: var(--c-surface-sunken);
+    border-radius: var(--r-md);
+    padding: var(--sp-3);
+    text-align: center;
+}
+
+.progress__boxes li.is-mastered {
+    background: var(--c-primary-soft);
+}
+
+.progress__boxes b {
+    display: block;
+    font-family: var(--font-display);
+    font-size: var(--fs-xl);
+    color: var(--c-ink);
+}
+
+.progress__boxes span {
+    font-size: var(--fs-xs);
+    /* --c-ink-subtle clears AA on --c-surface but not on the darker
+       --c-surface-sunken these tiles use. */
+    color: var(--c-ink-muted);
+    font-weight: 700;
+}
+
+/* No opacity here: it silently cuts the contrast ratio below AA. */
+.progress__boxes i { display: block; font-style: normal; }
+
+/* ---- per repertoire ---- */
+
+.progress__reps { display: flex; flex-direction: column; gap: var(--sp-3); }
+
+.progress__rep {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-4);
+    padding: var(--sp-4);
+}
+
+.progress__rep-body { flex: 1; min-width: 0; }
+.progress__rep-body .card__title { font-size: var(--fs-md); }
+
+.progress__danger { border-color: var(--c-border-strong); }
+.progress__danger .btn { align-self: flex-start; }
+
+@media (min-width: 620px) {
+    .progress__tiles { grid-template-columns: repeat(4, 1fr); }
+    .progress__boxes { grid-template-columns: repeat(6, 1fr); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .progress__bar { transition: none; }
+}
+
+/* The sub-line lives inside the <dd> so each <dl> group is a clean dt+dd
+   pair — a trailing <p> makes the list invalid. */
+.progress__tile dd .subtle {
+    display: block;
+    font-family: var(--font-body);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    margin-top: var(--sp-1);
+}

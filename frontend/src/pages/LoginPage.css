@@ -87,7 +87,8 @@
     background: transparent;
     border: 0;
     padding: 0.2rem 0;
-    color: var(--c-accent);
+    /* --c-accent is only 2.12:1 on the card; the strong variant is 5.14:1 */
+    color: var(--c-accent-strong);
     font-size: 0.9rem;
     cursor: pointer;
     text-decoration: underline;

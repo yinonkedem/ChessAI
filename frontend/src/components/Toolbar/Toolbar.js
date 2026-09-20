@@ -4,6 +4,7 @@ import { useAppContext } from "../../contexts/Context";
 import { Status } from "../../constants";
 import { useAuth } from "../../auth/AuthContext";
 import useTheme from "../../hooks/useTheme";
+import { load as loadTrainer } from "../../trainer/localStore";
 import AuthDialog from "./AuthDialog";
 import "./Toolbar.css";
 
@@ -15,6 +16,9 @@ export default function Toolbar({ onNewGame }) {
     const { theme, toggle: toggleTheme } = useTheme();
 
     const [showAuth, setShowAuth] = useState(false);
+    // Read on each render rather than subscribing: the toolbar re-renders on
+    // navigation, which is exactly when the streak can have changed.
+    const streak = loadTrainer().stats.dayStreak;
 
     const inProgress =
         appState.isGameSetup &&
@@ -90,7 +94,15 @@ export default function Toolbar({ onNewGame }) {
                 </button>
                 <button
                     type="button"
-                    className={`toolbar__btn${isOn("/custom") ? " is-active" : ""}`}
+                    className={`toolbar__btn toolbar__btn--secondary${isOn("/progress") ? " is-active" : ""}`}
+                    onClick={() => navigate("/progress")}
+                    aria-current={isOn("/progress") ? "page" : undefined}
+                >
+                    Progress
+                </button>
+                <button
+                    type="button"
+                    className={`toolbar__btn toolbar__btn--optional${isOn("/custom") ? " is-active" : ""}`}
                     onClick={onEditorClick}
                     aria-current={isOn("/custom") ? "page" : undefined}
                 >
@@ -99,6 +111,15 @@ export default function Toolbar({ onNewGame }) {
             </nav>
 
             <div className="toolbar__auth">
+                {streak > 0 && (
+                    <span
+                        className="toolbar__streak"
+                        title={`${streak}-day learning streak`}
+                        aria-label={`${streak} day learning streak`}
+                    >
+                        <span aria-hidden="true">🔥</span> {streak}
+                    </span>
+                )}
                 <button
                     type="button"
                     className="toolbar__btn toolbar__btn--icon"

@@ -27,6 +27,7 @@ import AccountPage from "./pages/AccountPage";
 import LearnPage from "./pages/LearnPage";
 import DrillPage from "./pages/DrillPage";
 import ReviewPage from "./pages/ReviewPage";
+import ProgressPage from "./pages/ProgressPage";
 import { TrainerProvider } from "./trainer/TrainerContext";
 
 import usePersistedReducer from "./hooks/usePersistedReducer";
@@ -123,6 +124,7 @@ export default function App() {
                         <Route path="/learn" element={<LearnPage />} />
                         <Route path="/learn/:repertoireId" element={<DrillPage />} />
                         <Route path="/learn/:repertoireId/review" element={<ReviewPage />} />
+                        <Route path="/progress" element={<ProgressPage />} />
                         <Route
                             path="/game"
                             element={

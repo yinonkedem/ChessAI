@@ -192,6 +192,54 @@ Self-play + MCTS training loop in `AlphaZero/alphaZero.py`. The ResNet model is 
 
 ## Audit & refactor — session log
 
+### Progress page + accessibility pass (2026-09-20) — Phase 7
+
+**New `/progress` page** (`pages/ProgressPage.{js,css}`): day streak, positions known, due now,
+first-time accuracy; a next-seven-days bar chart of upcoming reviews; the Leitner box spread (how
+well you know things, not just how much); per-repertoire rings with a Review/Learn action; and a
+local reset. Toolbar gains a **Progress** link and a 🔥 **streak chip**.
+
+**Accessibility: axe-core (WCAG 2.1 AA) across 5 routes × 2 themes — 11 violations → 0.**
+
+The contrast failures were the interesting part, because every one of them *looked* fine:
+
+| token | was | measured | now |
+|---|---|---|---|
+| `--c-ink-subtle` (light) | `#9E9080` | 3.06:1 | `#7E7161` (4.67:1) |
+| `--c-primary` vs white text | `#5B8C51` | 3.95:1 | `#4C7A43` (5.03:1) |
+| `--c-accent-strong` on soft | `#C9862A` | 2.73:1 | `#96611A` (4.71:1) |
+| `--c-ink-subtle` (dark) | `#8A7C6B` | 4.03:1 | `#A89A87` (5.94:1) |
+| `.btn--danger` white on `--c-error` | — | 4.11:1 light / 2.93:1 dark | new `--c-danger-bg` / `--c-on-danger` |
+
+Two new tokens exist because the base `--c-error` / `--c-accent` are tuned for *arrows and borders*,
+where 3:1 suffices; text on a tinted chip needs 4.5:1. Also removed an `opacity: .75` that was
+silently pushing text under AA. **If you retune the palette, re-run the audit** — the originals all
+looked plausible and measured badly.
+
+Also fixed a real markup bug: `<dt>`/`<dd>` were not inside a `<dl>`, and once wrapped, a trailing
+`<p>` inside each group still made the list invalid. The sub-text now lives inside the `<dd>`.
+
+**Keyboard/semantics verified separately** (axe can't test these): tab reaches all 14 interactive
+elements in a sensible order, each with a visible focus indicator; Review is activatable with Enter;
+one `<h1>`, one `<main>`, `lang` present; `prefers-reduced-motion` zeroes the duration tokens.
+
+**A CSS ordering trap worth remembering:** the responsive visibility rules at the bottom of
+`Toolbar.css` are marked MUST STAY LAST. They are single-class rules, so a later base declaration of
+the same property wins on source order — which is exactly what happened when the streak chip's base
+`display: inline-flex` got appended below its own hide rule, silently re-showing it.
+
+**Toolbar thresholds are measured, not guessed.** Adding Progress + the streak chip pushed the row
+past 320/375/768px. Measured `scrollWidth` at each breakpoint gave: full row needs ~774px once
+Editor is visible (so Editor waits for 820), ~387px without it (so Progress drops below 400), streak
+below 460. Everything hidden stays reachable — Editor from the start screen's Custom mode, Progress
+from the Learn cards. Swept 8 widths × 4 routes: **no horizontal overflow anywhere**.
+
+> **Known gap, not fixed:** the chessboard is **not keyboard-operable**. 32 pieces, none focusable,
+> no `role`, no `aria-label`. A keyboard-only or screen-reader user can navigate the whole app and
+> reach every button, but cannot play a move. Adding ARIA labels without keyboard input would make
+> an audit pass while leaving it unusable, so it is left explicit. Real support means keyboard
+> square selection in `Pieces.js` plus announcements — a feature, not polish.
+
 ### Backend sync for the trainer (2026-09-20) — Phase 6
 
 Trainer progress now follows a user across devices, while staying local-first: every review is

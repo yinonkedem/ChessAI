@@ -87,7 +87,7 @@
     background: transparent;
     border: 0;
     padding: 0.2rem 0;
-    color: var(--c-accent);
+    color: var(--c-accent-strong);
     font-size: 0.9rem;
     cursor: pointer;
     text-decoration: underline;
@@ -107,5 +107,5 @@
 }
 
 .auth-dialog .auth-forgot-panel a {
-    color: var(--c-accent);
+    color: var(--c-accent-strong);
 }

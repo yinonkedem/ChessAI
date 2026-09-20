@@ -270,3 +270,50 @@
         transition: none;
     }
 }
+
+.toolbar__streak {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-1);
+    padding: var(--sp-1) var(--sp-3);
+    border-radius: var(--r-pill);
+    background: var(--c-accent-soft);
+    color: var(--c-accent-strong);
+    font-size: var(--fs-sm);
+    font-weight: 800;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+@media (max-width: 560px) {
+    .toolbar__streak { padding: var(--sp-1) var(--sp-2); font-size: var(--fs-xs); }
+}
+
+/* ---------------------------------------------------------------------------
+   Responsive visibility — MUST STAY LAST IN THIS FILE.
+
+   These are single-class rules, so any later declaration of the same property
+   wins on source order. Putting them anywhere else means a base rule further
+   down silently re-shows the element (which is exactly what happened when the
+   streak chip's base `display: inline-flex` was appended below its hide rule).
+
+   Thresholds are measured, not guessed — the toolbar's scrollWidth against the
+   viewport at 320/375/390/430/560/620/768/1024:
+     - full row needs ~774px once Editor is visible, so Editor waits for 820
+     - without Editor it needs ~387px, so Progress drops below 400
+     - the streak chip is the least load-bearing, so it goes below 460
+   Everything hidden here is reachable elsewhere: the Editor from the start
+   screen's Custom mode, Progress from the Learn page's repertoire cards.
+   --------------------------------------------------------------------------- */
+
+@media (max-width: 819px) {
+    .toolbar__btn--optional { display: none; }
+}
+
+@media (max-width: 459px) {
+    .toolbar__streak { display: none; }
+}
+
+@media (max-width: 399px) {
+    .toolbar__btn--secondary { display: none; }
+}

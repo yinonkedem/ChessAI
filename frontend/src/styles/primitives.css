@@ -150,8 +150,8 @@
 }
 
 .btn--danger {
-    background: var(--c-error);
-    color: var(--c-always-light);
+    background: var(--c-danger-bg);
+    color: var(--c-on-danger);
     border-color: transparent;
 }
 
@@ -240,7 +240,7 @@
 
 .chip--error {
     background: var(--c-error-soft);
-    color: var(--c-error);
+    color: var(--c-error-ink);
     border-color: transparent;
 }
 
