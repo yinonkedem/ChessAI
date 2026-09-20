@@ -4,15 +4,18 @@ import { useAppContext } from '../../contexts/Context';
 import Ranks from './bits/Ranks';
 import Files from './bits/Files';
 import Pieces from '../Pieces/Pieces';
+import BoardOverlay from './BoardOverlay';
 import PromotionBox from '../Popup/PromotionBox/PromotionBox';
 import Popup from '../Popup/Popup';
 import GameEnds from '../Popup/GameEnds/GameEnds';
 
+import { useAnnotations } from '../../trainer/TrainerContext';
 import arbiter from '../../arbiter/arbiter';
 import { getKingPosition } from '../../arbiter/getMoves';
 
 const Board = () => {
     const { appState } = useAppContext();
+    const annotations = useAnnotations();
     const position = appState.position[appState.position.length - 1];
     const isBlack = appState.userColor === 'black';
 
@@ -70,6 +73,8 @@ const Board = () => {
             </div>
 
             <Pieces />
+
+            <BoardOverlay annotations={annotations} />
 
             <Popup>
                 <PromotionBox />

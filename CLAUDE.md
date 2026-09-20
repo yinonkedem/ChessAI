@@ -185,6 +185,40 @@ Self-play + MCTS training loop in `AlphaZero/alphaZero.py`. The ResNet model is 
 
 ## Audit & refactor — session log
 
+### Board annotation layer + hint ladder (2026-09-20) — Phase 4
+
+The Hint button finally does something. `components/Board/BoardOverlay.{js,css}` draws arrows and
+square markers over the board.
+
+**Two-stage hint**, because being nudged teaches more than being told:
+1. **Hint** — marks the square of the piece that should move (amber). Duplicate origins are deduped
+   when several book moves start from the same piece.
+2. **More** — draws the arrow for every book move here. At a branching position you see all of them.
+
+**"Show me"** draws the revealed move as a green arrow, so the reveal is visual rather than just a
+line of text.
+
+**Geometry:** `viewBox="0 0 8 8"` — one unit is exactly one square, so `[rank,file]` maps to
+`(file + 0.5, 7 - rank + 0.5)` with no pixel maths, no reading `--tile-size` in JS, and no resize
+listener. The layer mirrors `.pieces` positioning (`Pieces.css:1-9`) so the two align at every
+breakpoint.
+
+**The board flip needed no code at all.** `.board--black` rotates the whole board 180° and the
+overlay is a descendant, so an arrow authored in white coordinates lands on the right squares *and*
+points the right way. Verified by drilling the King's Indian as Black. (Only text would need the
+counter-rotation `.ranks`/`.files` use — there is deliberately none in the overlay.)
+
+**Placement:** sibling of `<Pieces/>` inside `.board`, never a child of `.pieces`, which owns the
+drag and click handlers. `z-index: 6` puts it above pieces (`.piece:hover` is 5) and below `.popup`
+(1500). `pointer-events: none` means it can never swallow an input.
+
+Annotations are **derived** from session state in `TrainerContext` via `useMemo`, not stored, so
+they cannot drift out of sync with the position. `useAnnotations()` returns `[]` outside a drill, so
+`/game` and `/custom` are untouched — asserted in the tests.
+
+**Verified:** 10 browser assertions covering the ladder, pointer-events, stacking order, the flipped
+board, and the absence of the overlay outside a drill. 153 Jest assertions still green.
+
 ### Book content expansion (2026-09-20)
 
 Filled the tree with real material. **9 repertoires → 14, 30 lines → 55, 193 cards → 349**, and

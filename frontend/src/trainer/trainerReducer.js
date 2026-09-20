@@ -144,6 +144,8 @@ export function trainerReducer(state, action) {
                 feedback: {
                     verdict: "skipped",
                     played: reply.san,
+                    // kept so the board can draw the move that was revealed
+                    playedUci: reply.uci,
                     idea: reply.idea ?? null,
                     alternatives: 0,
                 },

@@ -1,0 +1,62 @@
+/* Geometry mirrors .pieces exactly (Pieces.css:1-9) so the two layers line up.
+   z-index 6 puts arrows above pieces (.piece:hover is 5, .selected-square 2)
+   and below .popup (1500) — the same stacking Chess.com uses.
+   pointer-events:none guarantees it can never swallow a drag or a tap. */
+
+.board-overlay {
+    position: absolute;
+    top: 0;
+    left: calc(0.25 * var(--tile-size));
+    width: calc(8 * var(--tile-size));
+    height: calc(8 * var(--tile-size));
+    pointer-events: none;
+    z-index: 6;
+    overflow: visible;
+}
+
+/* ---- tones ---- */
+
+.bo-good   { --bo: var(--c-primary); }
+.bo-bad    { --bo: var(--c-error); }
+.bo-hint   { --bo: var(--c-accent); }
+.bo-info   { --bo: var(--c-info); }
+
+.bo-arrow line,
+.bo-arrow polygon {
+    stroke: var(--bo);
+    fill: var(--bo);
+    stroke-linejoin: round;
+    opacity: 0.9;
+}
+
+.bo-arrow polygon {
+    stroke: var(--bo);
+    stroke-width: 0.02;
+}
+
+.bo-square {
+    fill: var(--bo);
+    opacity: 0.3;
+    stroke: var(--bo);
+    stroke-width: 0.06;
+}
+
+.bo-dot {
+    fill: var(--bo);
+    opacity: 0.85;
+}
+
+/* ---- entry ---- */
+
+.board-overlay > * {
+    animation: bo-in var(--dur) var(--ease-pop) both;
+}
+
+@keyframes bo-in {
+    from { opacity: 0; transform: scale(0.94); transform-origin: center; }
+    to   { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .board-overlay > * { animation: none; }
+}

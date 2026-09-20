@@ -102,7 +102,7 @@ export default function DrillPage() {
         );
     }
 
-    const { repertoire, phase, feedback, results, streak, path } = session;
+    const { repertoire, phase, feedback, results, streak, path, hintLevel } = session;
     if (!repertoire) {
         return (
             <main className="page page--drill">
@@ -182,14 +182,17 @@ export default function DrillPage() {
                                 type="button"
                                 className="btn btn--accent btn--sm"
                                 onClick={hint}
-                                disabled={phase !== Phase.answering}
+                                disabled={phase !== Phase.answering || hintLevel >= 2}
                             >
-                                Hint
+                                {/* Two stages: which piece, then where it goes.
+                                    Being nudged teaches more than being told. */}
+                                {hintLevel === 0 ? "Hint" : hintLevel === 1 ? "More" : "Shown"}
                             </button>
                         </>
                     )}
                 </div>
 
+                {moves.length > 0 && (
                 <ol className="drill-moves">
                     {moves.map((m, i) => (
                         <li key={i} className={m.mine ? "is-yours" : undefined}>
@@ -197,6 +200,7 @@ export default function DrillPage() {
                         </li>
                     ))}
                 </ol>
+                )}
             </aside>
         </main>
     );
