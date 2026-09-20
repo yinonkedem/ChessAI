@@ -1,10 +1,12 @@
-:root {
-    --light-tile: #F0D8B6;
-    --dark-tile: #B48764;
-    --bg-color: #202020;
-    --highlight: rgba(0, 0, 0, .1);
-    --check: #FEEC48;
+/* Board GEOMETRY only. Colour, type and motion tokens live in
+   styles/tokens.css — including --light-tile / --dark-tile / --check /
+   --highlight, which moved there so the board can be re-skinned per theme.
 
+   --tile-size below is load-bearing: the three-way min() is what keeps the
+   8.25-unit board inside the viewport, verified at 320/375/390/430/768px.
+   Don't "simplify" it. */
+
+:root {
     --toolbar-height: 64px;
     --board-max: 640px;
     --board-pad: 0.5rem;

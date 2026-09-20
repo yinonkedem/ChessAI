@@ -21,10 +21,12 @@
 .popup--inner {
     width: 50%;
     min-height: 12.5%;
-    background: var(--light-tile);
+    background: var(--c-surface-raised);
+    color: var(--c-ink);
     position: relative;
-    border: 8px solid var(--light-tile);
-    box-shadow: 0 0 0 8px var(--dark-tile), 0 18px 40px rgba(0, 0, 0, 0.45);
+    border: 1px solid var(--c-border);
+    border-radius: var(--r-lg);
+    box-shadow: var(--sh-3);
     pointer-events: auto;
     animation: popup-fade-in 220ms ease-out both;
 }

@@ -2,9 +2,14 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 0.5rem;
-    padding: 0.75rem;
+    gap: var(--sp-2);
+    padding: var(--sp-4);
     text-align: center;
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    border-radius: var(--r-lg);
+    box-shadow: var(--sh-1);
+    box-sizing: border-box;
     width: min(100%, calc(8 * var(--tile-size)));
     max-height: 40vh;
     overflow-y: auto;
@@ -17,7 +22,7 @@
 .hint-button {
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
+    gap: var(--sp-2);
 }
 
 .hint-depth-control {
@@ -34,6 +39,7 @@
 .hint-depth-control input[type="range"] {
     flex: 1;
     min-width: 0;
+    accent-color: var(--c-primary);
 }
 
 .engine-depth-control {
@@ -50,11 +56,12 @@
 .engine-depth-control input[type="range"] {
     flex: 1;
     min-width: 0;
+    accent-color: var(--c-primary);
 }
 
 @media (min-width: 768px) {
     .control {
-        width: 200px;
+        width: 220px;
         max-height: calc(8 * var(--tile-size));
         height: calc(8 * var(--tile-size));
     }

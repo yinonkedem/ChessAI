@@ -179,6 +179,55 @@ Self-play + MCTS training loop in `AlphaZero/alphaZero.py`. The ResNet model is 
 
 ## Audit & refactor — session log
 
+### Design system + theming (2026-09-20) — Phase 1 of the opening-trainer plan
+
+Groundwork for a chess **opening trainer** (teach openings by the book, spaced-repetition drilling).
+Full plan at `~/.claude/plans/i-want-to-make-sparkling-wombat.md`. This session shipped Phase 1 only.
+
+**New files:**
+- `frontend/src/styles/tokens.css` — the single source of colour, radius, shadow, spacing, type and
+  motion. Light values on `:root`, dark overrides in one `[data-theme="dark"]` block, so token
+  *names* never change between themes and no component knows which is active.
+- `frontend/src/styles/primitives.css` — `.card`, `.btn` (+ `--primary/--accent/--ghost/--danger`),
+  `.chip`, `.stack`, `.row`. Replaces the **three** competing button definitions that used to live
+  in `App.css`, `Toolbar.css` and `StartScreen.css`.
+- `frontend/src/hooks/useTheme.js` — `light | dark | system`, persisted to `localStorage`
+  (`chess-theme`), stamps `data-theme` on `<html>`. Follows the OS while the user hasn't chosen.
+
+**Changes:**
+- **Zero hex literals outside `tokens.css`** — was 39 distinct values across 7 files.
+  `grep -rE '#[0-9a-fA-F]{3,8}' src --include='*.css'` should only ever hit `styles/tokens.css`.
+  Theme-independent piece colours are tokens too (`--c-piece-white`, `--c-piece-black`).
+- **Cinzel + Raleway → Nunito** (single family, 400/600/700/800). Cinzel read "medieval chess club",
+  which fought the warm/playful direction. One font request instead of two.
+- **Warm light palette** (cream `#F7F1E6`, green `#5B8C51`, amber `#E8A33D`) + a warm dark theme.
+  Theme toggle lives in the toolbar.
+- `react-powerglitch` **removed** as a dependency — the glitch title effect was its only use.
+- `constants.css` is now **board geometry only**. `--light-tile`/`--dark-tile`/`--check`/`--highlight`
+  moved into `tokens.css` so the board re-skins per theme. `--tile-size` is untouched.
+- **Bug found and fixed:** `.toolbar` sets `box-sizing: content-box` (deliberate — `--toolbar-height`
+  excludes the safe-area padding), but `index.css` does `* { box-sizing: inherit }`, so every
+  descendant inherited content-box and added padding *on top of* `min-height`. A 48px toolbar button
+  was rendering at 74px. Fixed with a `.toolbar *` border-box reset. Pre-existing, not new.
+- Focus rings moved onto the palette (`--sh-focus`) instead of the UA blue.
+
+**Verified** with Playwright driving the system Chrome (no browser download): `/`, `/game`,
+`/custom`, `/login` × light/dark × 390px/1280px — all 12 combinations, zero horizontal overflow,
+toolbar button measured back at 48px. `npm run lint` and `npm run build` both clean.
+
+**Facts established for the trainer work (verified, don't re-derive):**
+- `getNewMoveNotation` (`helper.js:53-87`) **never emits `+` or `#`** — book SAN does. Judging must
+  compare UCI coordinate tuples, never SAN.
+- `.gitignore:13` is a bare `data/`, which matches at *any* depth — `frontend/src/data/` would be
+  silently untracked. Generated book data must not live in a directory called `data`.
+- `StartScreen.js:17` dispatches `RESET_ALL` on mount, so trainer state cannot live in the global
+  reducer — a toolbar tap would wipe it.
+- `positionToFen` is lossy (en-passant `-`, clocks `0`/`1`), and `getPawnCaptures` detects en passant
+  by diffing against `prevPosition` — so the trainer replays the full position history and never
+  needs a FEN at all.
+- Setting `opponentType: "book"` mutes both engine agents with **zero** code change
+  (`useEngineAgent.js:35` already bails on a mismatch).
+
 ### Concurrent-engine deadlock fix (2026-05-27)
 
 - **Bug:** On the live site, after starting a game the AI would stop moving once the user touched the Hint controls. Root cause was **not** in the frontend hook — it was backend concurrency. `/engine/best-move` is a sync FastAPI endpoint, so Starlette runs it in a threadpool and serves overlapping requests on separate threads. The Stockfish engine is a single `@lru_cache` singleton wrapping one subprocess over stdin/stdout (not thread-safe). When an AI-move request and a Hint request overlap (easy on the slow free-tier backend), their UCI commands interleave on the same pipe — replies get crossed (reproduced: a black-to-move request returned the white move `e2e4`) and the pipe then **deadlocks permanently**, so the AI never moves again until the backend restarts.

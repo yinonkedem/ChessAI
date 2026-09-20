@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useAppContext } from "../../contexts/Context";
 import { Status } from "../../constants";
 import { useAuth } from "../../auth/AuthContext";
+import useTheme from "../../hooks/useTheme";
 import AuthDialog from "./AuthDialog";
 import "./Toolbar.css";
 
@@ -11,6 +12,7 @@ export default function Toolbar({ onNewGame }) {
     const location = useLocation();
     const navigate = useNavigate();
     const { user, logout } = useAuth();
+    const { theme, toggle: toggleTheme } = useTheme();
 
     const [showAuth, setShowAuth] = useState(false);
 
@@ -80,6 +82,16 @@ export default function Toolbar({ onNewGame }) {
             </nav>
 
             <div className="toolbar__auth">
+                <button
+                    type="button"
+                    className="toolbar__btn toolbar__btn--icon"
+                    onClick={toggleTheme}
+                    aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
+                    title={theme === "dark" ? "Light theme" : "Dark theme"}
+                >
+                    <span aria-hidden="true">{theme === "dark" ? "☀" : "☾"}</span>
+                </button>
+
                 {user ? (
                     <>
                         <span className="toolbar__user" title={user.username}>

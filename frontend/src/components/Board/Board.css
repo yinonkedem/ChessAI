@@ -28,7 +28,7 @@
 
 @media (hover: hover) {
     .tile:hover {
-        box-shadow: inset 0 0 0 9999px rgba(255, 255, 255, 0.06);
+        box-shadow: inset 0 0 0 9999px var(--highlight);
     }
 }
 
@@ -37,8 +37,8 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(255, 215, 0, 0.35);
-    box-shadow: inset 0 0 0 4px gold;
+    background: color-mix(in srgb, var(--c-accent) 35%, transparent);
+    box-shadow: inset 0 0 0 4px var(--c-accent);
     pointer-events: none;
     animation: last-move-in 220ms ease-out both;
 }
@@ -56,7 +56,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(20, 130, 60, 0.7);
+    background: color-mix(in srgb, var(--c-primary) 78%, transparent);
     border-radius: 50%;
     pointer-events: none;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
@@ -71,10 +71,10 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    border: 6px solid rgba(220, 60, 50, 0.85);
+    border: 6px solid color-mix(in srgb, var(--c-error) 88%, transparent);
     border-radius: 50%;
     pointer-events: none;
-    box-shadow: 0 0 8px rgba(220, 60, 50, 0.4);
+    box-shadow: 0 0 8px color-mix(in srgb, var(--c-error) 40%, transparent);
     animation: candidate-pulse 1.6s ease-in-out infinite;
 }
 

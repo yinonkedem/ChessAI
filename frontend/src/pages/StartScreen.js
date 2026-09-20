@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useGlitch } from "react-powerglitch";
 import { useAppContext } from "../contexts/Context";
 import { GameMode } from "../constants";
 import actionTypes from "../reducer/actionTypes";
@@ -19,17 +18,9 @@ export default function StartScreen({ onStart }) {
 
     const cls = (base, active) => (active ? `${base} active` : base);
 
-    const glitch = useGlitch({
-        playMode: "always",
-        slice: { count: 4, velocity: 10 },
-        shake: { velocity: 5 },
-    });
-
     return (
         <section className="start-screen">
-            <h1 ref={glitch.ref} className="start-screen__title glitch">
-                Yinon&nbsp;Chess
-            </h1>
+            <h1 className="start-screen__title">Yinon&nbsp;Chess</h1>
             <p className="start-screen__subtitle">Set up your match</p>
 
             <div className="setup-grid panel--neo">
@@ -38,12 +29,12 @@ export default function StartScreen({ onStart }) {
                     <div className="btn-group">
                         <button
                             type="button"
-                            className={cls("btn btn--glass", mode === GameMode.standard)}
+                            className={cls("btn btn--choice", mode === GameMode.standard)}
                             onClick={() => setMode(GameMode.standard)}
                         >Standard</button>
                         <button
                             type="button"
-                            className={cls("btn btn--glass", mode === GameMode.custom)}
+                            className={cls("btn btn--choice", mode === GameMode.custom)}
                             onClick={() => setMode(GameMode.custom)}
                         >Custom</button>
                     </div>
@@ -64,7 +55,7 @@ export default function StartScreen({ onStart }) {
                         >Black</button>
                         <button
                             type="button"
-                            className={cls("btn btn--glass", colour === "rand")}
+                            className={cls("btn btn--choice", colour === "rand")}
                             onClick={() => setColour("rand")}
                         >Random</button>
                     </div>
@@ -75,19 +66,19 @@ export default function StartScreen({ onStart }) {
                     <div className="btn-group">
                         <button
                             type="button"
-                            className={cls("btn btn--glass", opponent === "human")}
+                            className={cls("btn btn--choice", opponent === "human")}
                             onClick={() => setOpponent("human")}
                             disabled={mode === GameMode.custom}
                         >Human</button>
                         <button
                             type="button"
-                            className={cls("btn btn--glass", opponent === "ai")}
+                            className={cls("btn btn--choice", opponent === "ai")}
                             onClick={() => setOpponent("ai")}
                             disabled={mode === GameMode.custom}
                         >Computer</button>
                         <button
                             type="button"
-                            className={cls("btn btn--glass", opponent === "rand")}
+                            className={cls("btn btn--choice", opponent === "rand")}
                             onClick={() => setOpponent("rand")}
                             disabled={mode === GameMode.custom}
                         >Random</button>

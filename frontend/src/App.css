@@ -6,17 +6,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 1rem;
+    gap: var(--sp-4);
     padding:
-        1rem
+        var(--sp-4)
         max(var(--board-pad), env(safe-area-inset-right))
-        max(1rem, env(safe-area-inset-bottom))
+        max(var(--sp-4), env(safe-area-inset-bottom))
         max(var(--board-pad), env(safe-area-inset-left));
-    background: var(--bg-color);
-    font-family: 'Raleway', sans-serif;
+    background: var(--c-bg);
+    font-family: var(--font-body);
+    color: var(--c-ink);
     width: 100%;
     box-sizing: border-box;
-    animation: page-in 220ms ease both;
+    animation: page-in var(--dur-slow) var(--ease) both;
 }
 
 .page--game {
@@ -32,22 +33,26 @@
     to   { opacity: 1; }
 }
 
+/* Default look for bare <button> elements that haven't been migrated to
+   the .btn primitive yet (TakeBack, HintButton, PromotionBox, editor).
+   Anything that opts into .btn wins, because .btn sets the same
+   properties at equal specificity and is imported later. */
 button {
-    background: var(--dark-tile);
-    color: var(--light-tile);
-    border: 0;
-    padding: 0.65rem 1.4rem;
+    background: var(--c-surface-raised);
+    color: var(--c-ink);
+    border: 1px solid var(--c-border);
+    padding: 0 var(--sp-5);
     margin: 0;
-    font-size: 1rem;
-    border-radius: 0.5rem;
+    font-size: var(--fs-md);
+    font-weight: 700;
+    border-radius: var(--r-pill);
     min-height: 44px;
     cursor: pointer;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06) inset, 0 2px 6px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--sh-1);
     transition:
-        transform 120ms ease,
-        background 180ms ease,
-        box-shadow 180ms ease,
-        filter 180ms ease;
+        transform var(--dur-fast) var(--ease),
+        background-color var(--dur-fast) var(--ease),
+        box-shadow var(--dur-fast) var(--ease);
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
 }
@@ -55,14 +60,19 @@ button {
 @media (hover: hover) {
     button:hover:not(:disabled) {
         transform: translateY(-1px);
-        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08) inset, 0 6px 14px rgba(0, 0, 0, 0.3);
-        filter: brightness(1.06);
+        box-shadow: var(--sh-2);
+        background: var(--c-surface);
     }
 }
 
 button:active:not(:disabled) {
     transform: translateY(1px) scale(0.98);
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 1px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--sh-press);
+}
+
+button:focus-visible {
+    outline: none;
+    box-shadow: var(--sh-focus);
 }
 
 button:disabled,
@@ -71,18 +81,17 @@ button:disabled,
     cursor: not-allowed;
     box-shadow: none;
     transform: none;
-    filter: grayscale(0.3);
 }
 
 @media (min-width: 768px) {
     .page {
-        padding: 1.5rem;
+        padding: var(--sp-5);
     }
     .page--game {
         flex-direction: row;
         align-items: flex-start;
         justify-content: center;
-        gap: 1.5rem;
+        gap: var(--sp-5);
     }
 }
 

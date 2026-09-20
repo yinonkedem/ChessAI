@@ -2,7 +2,7 @@
     position: fixed;
     inset: 0;
     z-index: 1100;
-    background: rgba(8, 12, 24, 0.55);
+    background: color-mix(in srgb, var(--c-ink) 45%, transparent);
     backdrop-filter: blur(2px);
 }
 
@@ -19,17 +19,17 @@
     width: min(420px, calc(100vw - 2rem));
     padding: 1rem;
     border-radius: 12px;
-    background: #0d1528;
-    border: 1px solid #2a3a5a;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
-    color: #fff;
+    background: var(--c-surface-raised);
+    border: 1px solid var(--c-border);
+    box-shadow: var(--sh-3);
+    color: var(--c-ink);
 }
 
 .auth-tabs {
     display: flex;
     gap: 0.25rem;
     margin-bottom: 0.75rem;
-    background: #0b1222;
+    background: var(--c-surface-sunken);
     border-radius: 8px;
     padding: 0.25rem;
 }
@@ -37,7 +37,7 @@
 .auth-tabs button {
     flex: 1;
     background: transparent;
-    color: #fff;
+    color: var(--c-ink);
     border: 0;
     padding: 0.5rem;
     border-radius: 6px;
@@ -46,7 +46,7 @@
 }
 
 .auth-tabs button.active {
-    background: #2a3a5a;
+    background: var(--c-border);
 }
 
 .auth-dialog form {
@@ -58,9 +58,9 @@
     width: 100%;
     padding: 0.65rem 0.75rem;
     border-radius: 10px;
-    border: 1px solid #3a4a6a;
-    background: #0b1222;
-    color: #fff;
+    border: 1px solid var(--c-border-strong);
+    background: var(--c-surface-sunken);
+    color: var(--c-ink);
     font-size: 16px;
 }
 
@@ -72,7 +72,7 @@
 }
 
 .auth-error {
-    color: #ff9a9a;
+    color: var(--c-error);
     font-size: 0.9rem;
 }
 
@@ -87,7 +87,7 @@
     background: transparent;
     border: 0;
     padding: 0.2rem 0;
-    color: #ffd700;
+    color: var(--c-accent);
     font-size: 0.9rem;
     cursor: pointer;
     text-decoration: underline;
@@ -97,15 +97,15 @@
 
 .auth-dialog .auth-forgot-panel {
     width: 100%;
-    background: rgba(255, 215, 0, 0.08);
-    border: 1px solid rgba(255, 215, 0, 0.25);
+    background: var(--c-accent-soft);
+    border: 1px solid var(--c-accent);
     border-radius: 8px;
     padding: 0.6rem 0.75rem;
     font-size: 0.88rem;
     line-height: 1.4;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--c-ink-muted);
 }
 
 .auth-dialog .auth-forgot-panel a {
-    color: #ffd700;
+    color: var(--c-accent);
 }

@@ -11,11 +11,11 @@
 .login-card {
     width: min(420px, 100%);
     margin: auto;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
     border-radius: 14px;
     padding: 1.5rem;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+    box-shadow: var(--sh-3);
     backdrop-filter: blur(8px);
 }
 
@@ -48,7 +48,7 @@
     flex: 1;
     padding: 0.55rem 0.75rem;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.08);
+    background: var(--c-surface-sunken);
     border: 1px solid transparent;
     color: inherit;
     font: inherit;
@@ -56,22 +56,22 @@
 }
 
 .login-card .auth-tabs button.active {
-    background: rgba(255, 215, 0, 0.18);
-    border-color: rgba(255, 215, 0, 0.4);
+    background: var(--c-primary-soft);
+    border-color: var(--c-primary);
 }
 
 .login-card .auth-form input {
     padding: 0.7rem 0.8rem;
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--c-border);
+    background: var(--c-surface-sunken);
     color: inherit;
     font: inherit;
     min-height: 44px;
 }
 
 .login-card .auth-error {
-    color: #ff8a8a;
+    color: var(--c-error);
     font-size: 0.9rem;
 }
 
@@ -87,7 +87,7 @@
     background: transparent;
     border: 0;
     padding: 0.2rem 0;
-    color: #ffd700;
+    color: var(--c-accent);
     font-size: 0.9rem;
     cursor: pointer;
     text-decoration: underline;
@@ -101,17 +101,17 @@
 
 .login-card .auth-forgot-panel {
     width: 100%;
-    background: rgba(255, 215, 0, 0.08);
-    border: 1px solid rgba(255, 215, 0, 0.25);
+    background: var(--c-accent-soft);
+    border: 1px solid var(--c-accent);
     border-radius: 8px;
     padding: 0.6rem 0.75rem;
     font-size: 0.88rem;
     line-height: 1.4;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--c-ink-muted);
 }
 
 .login-card .auth-forgot-panel a {
-    color: #ffd700;
+    color: var(--c-accent);
 }
 
 .login-card .auth-actions {

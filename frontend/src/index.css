@@ -1,3 +1,6 @@
+@import './styles/tokens.css';
+@import './styles/primitives.css';
+
 html, body {
     margin: 0;
     padding: 0;
@@ -5,7 +8,7 @@ html, body {
 
 html {
     box-sizing: border-box;
-    background: #202020;
+    background: var(--c-bg);
 }
 
 *, *::before, *::after {
@@ -13,13 +16,16 @@ html {
 }
 
 body {
-    font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: var(--font-body);
+    font-size: var(--fs-md);
+    line-height: var(--lh-body);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
     min-height: 100svh;
-    background: var(--bg-color);
-    color: #fff;
+    background: var(--c-bg);
+    color: var(--c-ink);
+    transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease);
 }
 
 #root {
@@ -28,6 +34,23 @@ body {
     flex-direction: column;
 }
 
+h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    line-height: var(--lh-tight);
+    color: var(--c-ink);
+}
+
+/* Keep focus rings on-palette — the UA default is a blue that sits
+   outside the token set. */
+:where(input, select, textarea, a):focus-visible {
+    outline: none;
+    box-shadow: var(--sh-focus);
+    border-radius: var(--r-sm);
+}
+
+/* Bare-element reset only. The real button styling is `.btn` in
+   primitives.css — see that file for variants. */
 button {
     font-family: inherit;
     cursor: pointer;

@@ -6,166 +6,182 @@
     z-index: 1000;
     height: var(--toolbar-height);
     padding-top: env(safe-area-inset-top);
-    padding-left: max(0.75rem, env(safe-area-inset-left));
-    padding-right: max(0.75rem, env(safe-area-inset-right));
+    padding-left: max(var(--sp-3), env(safe-area-inset-left));
+    padding-right: max(var(--sp-3), env(safe-area-inset-right));
     box-sizing: content-box;
 
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--sp-2);
 
-    background: linear-gradient(180deg, rgba(20, 30, 48, 0.96), rgba(14, 22, 36, 0.96));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid #ffffff20;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-    color: #fff;
-    font-family: 'Raleway', sans-serif;
-    letter-spacing: 0.5px;
+    background: var(--c-surface-raised);
+    border-bottom: 1px solid var(--c-border);
+    box-shadow: var(--sh-1);
+    color: var(--c-ink);
+    font-family: var(--font-body);
+}
+
+/* .toolbar is deliberately content-box so --toolbar-height excludes the
+   safe-area padding. But index.css does `* { box-sizing: inherit }`, so
+   without this reset every descendant inherits content-box and adds its
+   padding on top of min-height (a 48px button rendering at 74px). */
+.toolbar *,
+.toolbar *::before,
+.toolbar *::after {
+    box-sizing: border-box;
 }
 
 .toolbar__brand {
     display: inline-flex;
     align-items: center;
-    gap: 0.55rem;
-    padding: 0.55rem 0.85rem;
+    gap: var(--sp-2);
+    padding: var(--sp-2) var(--sp-3);
     background: transparent;
     color: inherit;
     border: 0;
+    box-shadow: none;
     cursor: pointer;
     font: inherit;
     min-height: 48px;
-    border-radius: 0.6rem;
-    transition: background 180ms ease, transform 120ms ease;
+    border-radius: var(--r-md);
+    transition: background-color var(--dur) var(--ease), transform var(--dur-fast) var(--ease);
     touch-action: manipulation;
 }
 
-.toolbar__brand:hover {
-    background: #ffffff14;
+@media (hover: hover) {
+    .toolbar__brand:hover {
+        background: var(--c-surface-sunken);
+        transform: none;
+        box-shadow: none;
+    }
 }
 
 .toolbar__brand:active {
     transform: scale(0.97);
-    background: #ffffff22;
+    background: var(--c-surface-sunken);
+    box-shadow: none;
 }
 
 .toolbar__brand-mark {
     font-size: 1.6rem;
-    color: #ffd700;
+    color: var(--c-accent);
     line-height: 1;
-    text-shadow: 0 0 12px rgba(255, 215, 0, 0.45);
 }
 
 .toolbar__brand-text {
-    font-family: 'Cinzel', serif;
-    font-size: 1.05rem;
-    font-weight: 600;
-    letter-spacing: 2px;
+    font-family: var(--font-display);
+    font-size: var(--fs-lg);
+    font-weight: 800;
+    letter-spacing: -0.01em;
 }
 
 .toolbar__nav {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--sp-2);
     margin-left: auto;
 }
 
 .toolbar__auth {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--sp-2);
 }
 
 .toolbar__btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: #ffffff14;
-    color: #fff;
-    border: 1px solid #ffffff30;
-    padding: 0.7rem 1.2rem;
-    border-radius: 0.6rem;
+
+    background: transparent;
+    color: var(--c-ink-muted);
+    border: 1px solid transparent;
+    padding: var(--sp-3) var(--sp-4);
+    border-radius: var(--r-pill);
+
     font: inherit;
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: var(--fs-sm);
+    font-weight: 700;
     line-height: 1;
-    letter-spacing: 0.8px;
+
     min-height: 48px;
     min-width: 48px;
     cursor: pointer;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 2px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: none;
+
     transition:
-        transform 120ms ease,
-        background 180ms ease,
-        border-color 180ms ease,
-        box-shadow 180ms ease;
+        transform var(--dur-fast) var(--ease),
+        background-color var(--dur-fast) var(--ease),
+        color var(--dur-fast) var(--ease),
+        box-shadow var(--dur-fast) var(--ease);
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
 }
 
 @media (hover: hover) {
     .toolbar__btn:hover {
-        background: #ffffff24;
-        border-color: #ffffff55;
+        background: var(--c-surface-sunken);
+        color: var(--c-ink);
         transform: translateY(-1px);
-        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08) inset, 0 6px 14px rgba(0, 0, 0, 0.35);
+        box-shadow: none;
     }
 }
 
 .toolbar__btn:active {
     transform: translateY(1px) scale(0.97);
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 1px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--sh-press);
+}
+
+.toolbar__btn:focus-visible {
+    outline: none;
+    box-shadow: var(--sh-focus);
 }
 
 .toolbar__btn--primary {
-    background: #ffd700;
-    color: #1a1f2e;
-    border-color: #ffd700;
-    font-weight: 700;
-    box-shadow: 0 2px 0 #c9a700 inset, 0 4px 12px rgba(255, 215, 0, 0.25);
+    background: var(--c-primary);
+    color: var(--c-on-primary);
+    border-color: transparent;
+    box-shadow: var(--sh-1);
 }
 
 @media (hover: hover) {
     .toolbar__btn--primary:hover {
-        background: #ffe14a;
-        border-color: #ffe14a;
-        box-shadow: 0 2px 0 #c9a700 inset, 0 8px 20px rgba(255, 215, 0, 0.4);
+        background: var(--c-primary-strong);
+        color: var(--c-on-primary);
+        box-shadow: var(--sh-2);
     }
 }
 
-.toolbar__btn--primary:active {
-    box-shadow: 0 1px 0 #c9a700 inset, 0 1px 3px rgba(0, 0, 0, 0.2);
-}
-
 .toolbar__btn.is-active {
-    background: #ffffff28;
-    border-color: #ffd700;
-    color: #ffe97a;
-    box-shadow:
-        0 1px 0 rgba(255, 255, 255, 0.06) inset,
-        0 -3px 0 #ffd700 inset,
-        0 4px 10px rgba(0, 0, 0, 0.3);
+    background: var(--c-primary-soft);
+    color: var(--c-primary-strong);
+    box-shadow: 0 -3px 0 var(--c-primary) inset;
 }
 
 .toolbar__btn--primary.is-active {
-    color: #1a1f2e;
-    box-shadow:
-        0 2px 0 #c9a700 inset,
-        0 -3px 0 #8a7300 inset,
-        0 4px 12px rgba(255, 215, 0, 0.45);
+    background: var(--c-primary-strong);
+    color: var(--c-on-primary);
+    box-shadow: 0 -3px 0 var(--c-accent) inset;
+}
+
+/* icon-only button (theme toggle) */
+.toolbar__btn--icon {
+    padding: 0;
+    width: 48px;
+    font-size: 1.15rem;
 }
 
 .toolbar__user {
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
-    background: #ffffff20;
-    border: 1px solid #ffffff40;
-    padding: 0.45rem 0.85rem;
-    border-radius: 999px;
-    font-size: 0.95rem;
+    gap: var(--sp-2);
+    background: var(--c-surface-sunken);
+    border: 1px solid var(--c-border);
+    color: var(--c-ink-muted);
+    padding: var(--sp-2) var(--sp-3);
+    border-radius: var(--r-pill);
+    font-size: var(--fs-sm);
+    font-weight: 700;
     line-height: 1;
     min-height: 48px;
     box-sizing: border-box;
@@ -178,40 +194,47 @@
     white-space: nowrap;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 560px) {
     .toolbar {
-        gap: 0.3rem;
-        padding-left: max(0.5rem, env(safe-area-inset-left));
-        padding-right: max(0.5rem, env(safe-area-inset-right));
+        gap: var(--sp-1);
+        padding-left: max(var(--sp-2), env(safe-area-inset-left));
+        padding-right: max(var(--sp-2), env(safe-area-inset-right));
     }
     .toolbar__btn {
-        padding: 0.55rem 0.7rem;
-        font-size: 0.85rem;
-        letter-spacing: 0.4px;
+        padding: var(--sp-2) var(--sp-3);
+        font-size: var(--fs-xs);
         min-width: 0;
     }
+    .toolbar__btn--icon { width: 44px; padding: 0; }
     .toolbar__brand {
-        padding: 0.4rem 0.5rem;
-        gap: 0.3rem;
+        padding: var(--sp-1) var(--sp-2);
+        gap: var(--sp-1);
     }
     .toolbar__brand-mark { font-size: 1.5rem; }
     .toolbar__brand-text { display: none; }
     .toolbar__user-name { display: none; }
     .toolbar__user {
-        padding: 0 0.5rem;
+        padding: 0 var(--sp-2);
         min-width: 0;
         font-size: 1.1rem;
     }
-    .toolbar__nav { gap: 0.3rem; }
-    .toolbar__auth { gap: 0.3rem; }
+    .toolbar__nav { gap: var(--sp-1); }
+    .toolbar__auth { gap: var(--sp-1); }
 }
 
 @media (min-width: 768px) {
     .toolbar {
-        gap: 0.85rem;
-        padding-left: max(1.5rem, env(safe-area-inset-left));
-        padding-right: max(1.5rem, env(safe-area-inset-right));
+        gap: var(--sp-3);
+        padding-left: max(var(--sp-5), env(safe-area-inset-left));
+        padding-right: max(var(--sp-5), env(safe-area-inset-right));
     }
-    .toolbar__brand-text { font-size: 1.3rem; }
-    .toolbar__btn { padding: 0.75rem 1.4rem; font-size: 1.05rem; }
+    .toolbar__brand-text { font-size: var(--fs-xl); }
+    .toolbar__btn { padding: var(--sp-3) var(--sp-5); font-size: var(--fs-md); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .toolbar__brand,
+    .toolbar__btn {
+        transition: none;
+    }
 }

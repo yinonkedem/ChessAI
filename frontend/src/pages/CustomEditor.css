@@ -6,7 +6,7 @@
     padding: 1rem;
     width: 100%;
     box-sizing: border-box;
-    color: #fff;
+    color: var(--c-ink);
 }
 
 .tray {
@@ -73,8 +73,8 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 700;
-    color: #ffd700;
-    border-bottom: 1px solid #ffffff30;
+    color: var(--c-accent);
+    border-bottom: 1px solid var(--c-border);
     padding-bottom: 0.25rem;
     text-align: center;
 }
@@ -85,21 +85,21 @@
     padding: 0.6rem 1rem;
     border-radius: 0.6rem;
     font-weight: 600;
-    background: #ffffff20;
-    color: #fff;
-    border: 1px solid #ffffff40;
+    background: var(--c-surface-sunken);
+    color: var(--c-ink);
+    border: 1px solid var(--c-border-strong);
 }
 
 .sidebar button.active,
 .sidebar .start-btn:not(:disabled):hover {
-    background: #ffd700;
-    color: #000;
+    background: var(--c-accent);
+    color: var(--c-on-accent);
 }
 
 .start-btn {
     margin-top: 0.5rem;
-    background: #ffd700;
-    color: #000;
+    background: var(--c-accent);
+    color: var(--c-on-accent);
 }
 
 .start-btn:disabled {
@@ -111,9 +111,9 @@
     display: inline-block;
     background: linear-gradient(
         120deg,
-        rgba(255, 255, 255, 0.25) 0%,
-        rgba(255, 255, 255, 0.85) 50%,
-        rgba(255, 255, 255, 0.25) 100%
+        var(--c-border) 0%,
+        var(--c-border-strong) 50%,
+        var(--c-border) 100%
     );
     background-size: 200% 100%;
     -webkit-background-clip: text;
@@ -130,7 +130,7 @@
 
 .warning {
     margin-top: 0.5rem;
-    color: #ffd700;
+    color: var(--c-accent);
     font-size: 0.9rem;
     text-align: center;
     max-width: 240px;
