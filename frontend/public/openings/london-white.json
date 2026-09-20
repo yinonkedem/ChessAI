@@ -1,0 +1,232 @@
+{
+ "id": "london-white",
+ "title": "The London System",
+ "family": "1. d4",
+ "blurb": "The same setup against almost anything Black plays. The lowest-theory way to start a serious 1.d4 repertoire.",
+ "side": "w",
+ "difficulty": 1,
+ "lines": [
+  {
+   "id": "london-main",
+   "label": "Main Line",
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System",
+   "side": "w",
+   "moves": [
+    {
+     "san": "d4",
+     "uci": "d2d4"
+    },
+    {
+     "san": "d5",
+     "uci": "d7d5"
+    },
+    {
+     "san": "Bf4",
+     "uci": "c1f4"
+    },
+    {
+     "san": "Nf6",
+     "uci": "g8f6"
+    },
+    {
+     "san": "e3",
+     "uci": "e2e3"
+    },
+    {
+     "san": "e6",
+     "uci": "e7e6"
+    },
+    {
+     "san": "Nf3",
+     "uci": "g1f3"
+    },
+    {
+     "san": "c5",
+     "uci": "c7c5"
+    },
+    {
+     "san": "c3",
+     "uci": "c2c3"
+    },
+    {
+     "san": "Nc6",
+     "uci": "b8c6"
+    },
+    {
+     "san": "Nbd2",
+     "uci": "b1d2"
+    },
+    {
+     "san": "Bd6",
+     "uci": "f8d6"
+    },
+    {
+     "san": "Bg3",
+     "uci": "f4g3"
+    }
+   ],
+   "ideas": [
+    "Take the centre.",
+    null,
+    "The London move. Get the bishop outside the pawn chain before playing e3.",
+    null,
+    "Now the pawn can come to e3 without burying the bishop.",
+    null,
+    "Develop naturally. The setup is the same whatever Black does.",
+    null,
+    "Support d4 so the centre never collapses.",
+    null,
+    "The knight belongs here, keeping the c-pawn's path clear.",
+    null,
+    "Sidestep the trade and keep the bishop on its best diagonal."
+   ],
+   "answerPlies": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12
+   ]
+  },
+  {
+   "id": "london-vs-kid",
+   "label": "vs King's Indian setup",
+   "eco": "A48",
+   "name": "London System, with Be2",
+   "side": "w",
+   "moves": [
+    {
+     "san": "d4",
+     "uci": "d2d4"
+    },
+    {
+     "san": "Nf6",
+     "uci": "g8f6"
+    },
+    {
+     "san": "Bf4",
+     "uci": "c1f4"
+    },
+    {
+     "san": "g6",
+     "uci": "g7g6"
+    },
+    {
+     "san": "e3",
+     "uci": "e2e3"
+    },
+    {
+     "san": "Bg7",
+     "uci": "f8g7"
+    },
+    {
+     "san": "Nf3",
+     "uci": "g1f3"
+    },
+    {
+     "san": "O-O",
+     "uci": "e8g8"
+    },
+    {
+     "san": "Be2",
+     "uci": "f1e2"
+    },
+    {
+     "san": "d6",
+     "uci": "d7d6"
+    },
+    {
+     "san": "h3",
+     "uci": "h2h3"
+    }
+   ],
+   "ideas": [
+    "Take the centre.",
+    null,
+    "The bishop comes out first, as always.",
+    null,
+    "Complete the pawn triangle — same setup, whatever Black builds.",
+    null,
+    "Develop naturally.",
+    null,
+    "Modest square, but it keeps everything defended.",
+    null,
+    "Give the bishop an escape square before Black plays ...Nh5 to trade it."
+   ],
+   "answerPlies": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10
+   ]
+  },
+  {
+   "id": "london-early-c5",
+   "label": "vs early ...c5",
+   "eco": "D00",
+   "name": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit",
+   "side": "w",
+   "moves": [
+    {
+     "san": "d4",
+     "uci": "d2d4"
+    },
+    {
+     "san": "d5",
+     "uci": "d7d5"
+    },
+    {
+     "san": "Bf4",
+     "uci": "c1f4"
+    },
+    {
+     "san": "c5",
+     "uci": "c7c5"
+    },
+    {
+     "san": "e3",
+     "uci": "e2e3"
+    },
+    {
+     "san": "Nc6",
+     "uci": "b8c6"
+    },
+    {
+     "san": "c3",
+     "uci": "c2c3"
+    },
+    {
+     "san": "Nf6",
+     "uci": "g8f6"
+    },
+    {
+     "san": "Nd2",
+     "uci": "b1d2"
+    }
+   ],
+   "ideas": [
+    "Take the centre.",
+    null,
+    "The bishop comes out first.",
+    null,
+    "Solidify.",
+    null,
+    "Hold the centre together — c3 and e3 make d4 very hard to shift.",
+    null,
+    "Develop flexibly and keep the option of Ngf3."
+   ],
+   "answerPlies": [
+    0,
+    2,
+    4,
+    6,
+    8
+   ]
+  }
+ ]
+}

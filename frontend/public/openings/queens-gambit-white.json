@@ -1,0 +1,253 @@
+{
+ "id": "queens-gambit-white",
+ "title": "Queen's Gambit Declined",
+ "family": "1. d4 d5",
+ "blurb": "The classical way to play 1.d4. Not really a gambit — you almost always get the pawn back.",
+ "side": "w",
+ "difficulty": 2,
+ "lines": [
+  {
+   "id": "qgd-exchange",
+   "label": "Exchange Variation",
+   "eco": "D35",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation",
+   "side": "w",
+   "moves": [
+    {
+     "san": "d4",
+     "uci": "d2d4"
+    },
+    {
+     "san": "d5",
+     "uci": "d7d5"
+    },
+    {
+     "san": "c4",
+     "uci": "c2c4"
+    },
+    {
+     "san": "e6",
+     "uci": "e7e6"
+    },
+    {
+     "san": "Nc3",
+     "uci": "b1c3"
+    },
+    {
+     "san": "Nf6",
+     "uci": "g8f6"
+    },
+    {
+     "san": "cxd5",
+     "uci": "c4d5"
+    },
+    {
+     "san": "exd5",
+     "uci": "e6d5"
+    },
+    {
+     "san": "Bg5",
+     "uci": "c1g5"
+    },
+    {
+     "san": "Be7",
+     "uci": "f8e7"
+    },
+    {
+     "san": "e3",
+     "uci": "e2e3"
+    },
+    {
+     "san": "O-O",
+     "uci": "e8g8"
+    }
+   ],
+   "ideas": [
+    "Take your share of the centre and open lines for the dark-squared bishop.",
+    null,
+    "Challenge d5 from the side. This is the gambit — it is only a loan.",
+    null,
+    "Develop and add a third attacker to d5.",
+    null,
+    "Release the tension on your terms and fix Black's structure.",
+    null,
+    "Pin the knight, making d5 harder to hold.",
+    null,
+    "Modest, but it frees the light-squared bishop and secures d4.",
+    null
+   ],
+   "answerPlies": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10
+   ]
+  },
+  {
+   "id": "qgd-orthodox",
+   "label": "Tartakower Defense",
+   "eco": "D58",
+   "name": "Queen's Gambit Declined: Tartakower Defense",
+   "side": "w",
+   "moves": [
+    {
+     "san": "d4",
+     "uci": "d2d4"
+    },
+    {
+     "san": "d5",
+     "uci": "d7d5"
+    },
+    {
+     "san": "c4",
+     "uci": "c2c4"
+    },
+    {
+     "san": "e6",
+     "uci": "e7e6"
+    },
+    {
+     "san": "Nc3",
+     "uci": "b1c3"
+    },
+    {
+     "san": "Nf6",
+     "uci": "g8f6"
+    },
+    {
+     "san": "Bg5",
+     "uci": "c1g5"
+    },
+    {
+     "san": "Be7",
+     "uci": "f8e7"
+    },
+    {
+     "san": "e3",
+     "uci": "e2e3"
+    },
+    {
+     "san": "O-O",
+     "uci": "e8g8"
+    },
+    {
+     "san": "Nf3",
+     "uci": "g1f3"
+    },
+    {
+     "san": "h6",
+     "uci": "h7h6"
+    },
+    {
+     "san": "Bh4",
+     "uci": "g5h4"
+    },
+    {
+     "san": "b6",
+     "uci": "b7b6"
+    }
+   ],
+   "ideas": [
+    "Take the centre.",
+    null,
+    "Challenge d5.",
+    null,
+    "Develop toward the centre.",
+    null,
+    "Pin the f6 knight before Black can castle out of it.",
+    null,
+    "Solid and flexible.",
+    null,
+    "Complete the kingside development.",
+    null,
+    "Keep the pin rather than conceding the bishop pair.",
+    null
+   ],
+   "answerPlies": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12
+   ]
+  },
+  {
+   "id": "qgd-tarrasch",
+   "label": "Tarrasch Defense",
+   "eco": "D33",
+   "name": "Tarrasch Defense: Rubinstein System",
+   "side": "w",
+   "moves": [
+    {
+     "san": "d4",
+     "uci": "d2d4"
+    },
+    {
+     "san": "d5",
+     "uci": "d7d5"
+    },
+    {
+     "san": "c4",
+     "uci": "c2c4"
+    },
+    {
+     "san": "e6",
+     "uci": "e7e6"
+    },
+    {
+     "san": "Nc3",
+     "uci": "b1c3"
+    },
+    {
+     "san": "c5",
+     "uci": "c7c5"
+    },
+    {
+     "san": "cxd5",
+     "uci": "c4d5"
+    },
+    {
+     "san": "exd5",
+     "uci": "e6d5"
+    },
+    {
+     "san": "Nf3",
+     "uci": "g1f3"
+    },
+    {
+     "san": "Nc6",
+     "uci": "b8c6"
+    },
+    {
+     "san": "g3",
+     "uci": "g2g3"
+    }
+   ],
+   "ideas": [
+    "Take the centre.",
+    null,
+    "Challenge d5.",
+    null,
+    "Develop.",
+    null,
+    "Take, giving Black an isolated d-pawn to look after.",
+    null,
+    "Develop and put more pressure on d4 and d5.",
+    null,
+    "The critical plan: fianchetto and blockade the isolated pawn on d5."
+   ],
+   "answerPlies": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10
+   ]
+  }
+ ]
+}

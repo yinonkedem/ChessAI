@@ -1,0 +1,315 @@
+{
+ "id": "french-black",
+ "title": "The French Defense",
+ "family": "vs 1. e4",
+ "blurb": "Solid and strategic. You concede space early and spend the game undermining White's centre.",
+ "side": "b",
+ "difficulty": 2,
+ "lines": [
+  {
+   "id": "french-winawer",
+   "label": "Winawer Variation",
+   "eco": "C18",
+   "name": "French Defense: Winawer Variation, Advance Variation",
+   "side": "b",
+   "moves": [
+    {
+     "san": "e4",
+     "uci": "e2e4"
+    },
+    {
+     "san": "e6",
+     "uci": "e7e6"
+    },
+    {
+     "san": "d4",
+     "uci": "d2d4"
+    },
+    {
+     "san": "d5",
+     "uci": "d7d5"
+    },
+    {
+     "san": "Nc3",
+     "uci": "b1c3"
+    },
+    {
+     "san": "Bb4",
+     "uci": "f8b4"
+    },
+    {
+     "san": "e5",
+     "uci": "e4e5"
+    },
+    {
+     "san": "c5",
+     "uci": "c7c5"
+    },
+    {
+     "san": "a3",
+     "uci": "a2a3"
+    },
+    {
+     "san": "Bxc3+",
+     "uci": "b4c3"
+    },
+    {
+     "san": "bxc3",
+     "uci": "b2c3"
+    },
+    {
+     "san": "Ne7",
+     "uci": "g8e7"
+    }
+   ],
+   "ideas": [
+    null,
+    "Prepare to challenge e4 with ...d5 next move.",
+    null,
+    "Strike at the centre immediately.",
+    null,
+    "Pin the knight that defends e4 — the sharpest reply.",
+    null,
+    "Attack the base of the pawn chain. Always hit the bottom, not the top.",
+    null,
+    "Take. White's doubled c-pawns are a long-term target.",
+    null,
+    "Route the knight to f5 where it hits the weak d4 pawn."
+   ],
+   "answerPlies": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    11
+   ]
+  },
+  {
+   "id": "french-classical",
+   "label": "Classical Variation",
+   "eco": "C14",
+   "name": "French Defense: Classical Variation",
+   "side": "b",
+   "moves": [
+    {
+     "san": "e4",
+     "uci": "e2e4"
+    },
+    {
+     "san": "e6",
+     "uci": "e7e6"
+    },
+    {
+     "san": "d4",
+     "uci": "d2d4"
+    },
+    {
+     "san": "d5",
+     "uci": "d7d5"
+    },
+    {
+     "san": "Nc3",
+     "uci": "b1c3"
+    },
+    {
+     "san": "Nf6",
+     "uci": "g8f6"
+    },
+    {
+     "san": "Bg5",
+     "uci": "c1g5"
+    },
+    {
+     "san": "Be7",
+     "uci": "f8e7"
+    },
+    {
+     "san": "e5",
+     "uci": "e4e5"
+    },
+    {
+     "san": "Nfd7",
+     "uci": "f6d7"
+    },
+    {
+     "san": "Bxe7",
+     "uci": "g5e7"
+    },
+    {
+     "san": "Qxe7",
+     "uci": "d8e7"
+    }
+   ],
+   "ideas": [
+    null,
+    "Prepare ...d5.",
+    null,
+    "Challenge the centre.",
+    null,
+    "Develop and add pressure to e4.",
+    null,
+    "Break the pin calmly rather than weakening the kingside.",
+    null,
+    "Retreat and keep the option of undermining with ...c5 and ...f6.",
+    null,
+    "Recapture. The bishop trade has eased your cramped position."
+   ],
+   "answerPlies": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    11
+   ]
+  },
+  {
+   "id": "french-tarrasch",
+   "label": "Tarrasch Variation",
+   "eco": "C05",
+   "name": "French Defense: Tarrasch Variation, Closed Variation",
+   "side": "b",
+   "moves": [
+    {
+     "san": "e4",
+     "uci": "e2e4"
+    },
+    {
+     "san": "e6",
+     "uci": "e7e6"
+    },
+    {
+     "san": "d4",
+     "uci": "d2d4"
+    },
+    {
+     "san": "d5",
+     "uci": "d7d5"
+    },
+    {
+     "san": "Nd2",
+     "uci": "b1d2"
+    },
+    {
+     "san": "Nf6",
+     "uci": "g8f6"
+    },
+    {
+     "san": "e5",
+     "uci": "e4e5"
+    },
+    {
+     "san": "Nfd7",
+     "uci": "f6d7"
+    },
+    {
+     "san": "Bd3",
+     "uci": "f1d3"
+    },
+    {
+     "san": "c5",
+     "uci": "c7c5"
+    },
+    {
+     "san": "c3",
+     "uci": "c2c3"
+    },
+    {
+     "san": "Nc6",
+     "uci": "b8c6"
+    }
+   ],
+   "ideas": [
+    null,
+    "Prepare ...d5.",
+    null,
+    "Challenge the centre.",
+    null,
+    "Develop, provoking White to commit the centre.",
+    null,
+    "Retreat and regroup — the knight is heading for c5 or f8.",
+    null,
+    "Strike the base of the chain.",
+    null,
+    "Pile another attacker onto d4."
+   ],
+   "answerPlies": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    11
+   ]
+  },
+  {
+   "id": "french-advance",
+   "label": "Advance Variation",
+   "eco": "C02",
+   "name": "French Defense: Advance Variation, Paulsen Attack",
+   "side": "b",
+   "moves": [
+    {
+     "san": "e4",
+     "uci": "e2e4"
+    },
+    {
+     "san": "e6",
+     "uci": "e7e6"
+    },
+    {
+     "san": "d4",
+     "uci": "d2d4"
+    },
+    {
+     "san": "d5",
+     "uci": "d7d5"
+    },
+    {
+     "san": "e5",
+     "uci": "e4e5"
+    },
+    {
+     "san": "c5",
+     "uci": "c7c5"
+    },
+    {
+     "san": "c3",
+     "uci": "c2c3"
+    },
+    {
+     "san": "Nc6",
+     "uci": "b8c6"
+    },
+    {
+     "san": "Nf3",
+     "uci": "g1f3"
+    },
+    {
+     "san": "Qb6",
+     "uci": "d8b6"
+    }
+   ],
+   "ideas": [
+    null,
+    "Prepare ...d5.",
+    null,
+    "Challenge the centre.",
+    null,
+    "Hit the base of the chain at once — d4 is the target, not e5.",
+    null,
+    "Add a second attacker to d4.",
+    null,
+    "The standard plan: the queen hits d4 again and eyes the weak b2 pawn."
+   ],
+   "answerPlies": [
+    1,
+    3,
+    5,
+    7,
+    9
+   ]
+  }
+ ]
+}

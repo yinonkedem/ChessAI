@@ -185,6 +185,48 @@ Self-play + MCTS training loop in `AlphaZero/alphaZero.py`. The ResNet model is 
 
 ## Audit & refactor — session log
 
+### Opening book data pipeline (2026-09-20) — Phase 2 of the opening-trainer plan
+
+Generated book data for the trainer. **30 lines across 9 repertoires, 193 drill cards, 43 KB.**
+
+- **`tools/build_openings.py`** — offline generator. Run with
+  `backend/venv/bin/python tools/build_openings.py`. Uses the backend venv because
+  `python-chess` already lives there; the frontend still ships no chess library.
+- **`tools/repertoires.json`** — the only hand-edited file: which lines to teach, plus prose.
+- **`tools/eco-source/*.tsv`** — vendored lichess-org/chess-openings (CC0), 3,815 openings.
+- **`frontend/public/openings/`** — generated, committed, fetched at runtime.
+- **`tools/README.md`** — how to add a line, refresh the dataset, and read the label check.
+
+**Naming is position-based, not name- or sequence-based.** Two findings forced this:
+- Dataset names are **not unique** — "London System" appears 4× with different move orders, so
+  looking a line up by name is ambiguous.
+- Keying on the move *sequence* misses transpositions: the dataset reaches the Caro-Kann Classical
+  via `3.Nd2`, most players play `3.Nc3`. Same position, different path. Switching the key to EPD
+  fixed the Caro (generic `B15` → `B18 Classical Variation, Main Line`) and the QGD Exchange.
+
+**The label check earns its keep.** It warns when a curated `label` shares no words with the
+official name, because *a line can silently transpose into a different opening*. On the first build
+it caught two real errors: a "Scotch Gambit" line that actually reached an Italian Game (duplicating
+another repertoire), and a "Hungarian Defense" that became a Scotch. Also corrected: "Orthodox
+Defense" → Tartakower (the `...b6` makes it so), "Schmidt" → Mieses, and a London line that was
+really the Rapport-Jobava. Intentional mismatches are silenced per line with `"labelOk": true`.
+
+**Output location matters.** `frontend/public/openings/`, **not** `src/data/` — CRA inlines JSON
+imported from `src/` into the main bundle, and `.gitignore:13`'s bare `data/` matches at any depth,
+so `src/data/` would have been silently untracked. Verified: `git check-ignore` clean, book absent
+from `build/static/js/`, present in `build/openings/`.
+
+**`frontend/src/trainer/openings.test.js` is the load-bearing test** — it replays all 30 lines
+through the app's **own arbiter**, not python-chess, so a convention mismatch between the two
+engines can't ship. 132 assertions, all passing.
+
+> **Gotcha it caught, worth remembering:** `arbiter.getValidMoves` wants `castleDirection` as the
+> **string for the side to move** (`'both'|'left'|'right'|'none'`), not the `{w,b}` object. Passing
+> the object silently disables castling rather than throwing — `getCastlingMoves`
+> (`arbiter/getMoves.js:176`) just never matches. The app gets this right
+> (`Piece.js:32`, `Pieces.js:154`); my first test draft did not. Phase 3's `buildLinePrefix` must
+> pass the per-side string too.
+
 ### Account management: change password + delete account (2026-09-20)
 
 Added so users can self-serve a password change, and so "reset my password" has an answer that

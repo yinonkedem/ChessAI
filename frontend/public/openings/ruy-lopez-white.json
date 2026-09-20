@@ -1,0 +1,376 @@
+{
+ "id": "ruy-lopez-white",
+ "title": "The Ruy Lopez",
+ "family": "1. e4 e5",
+ "blurb": "The Spanish Game. World champions have leaned on it for 150 years — slow pressure rather than a quick punch.",
+ "side": "w",
+ "difficulty": 3,
+ "lines": [
+  {
+   "id": "ruy-closed",
+   "label": "Closed, Morphy Defense",
+   "eco": "C90",
+   "name": "Ruy Lopez: Closed",
+   "side": "w",
+   "moves": [
+    {
+     "san": "e4",
+     "uci": "e2e4"
+    },
+    {
+     "san": "e5",
+     "uci": "e7e5"
+    },
+    {
+     "san": "Nf3",
+     "uci": "g1f3"
+    },
+    {
+     "san": "Nc6",
+     "uci": "b8c6"
+    },
+    {
+     "san": "Bb5",
+     "uci": "f1b5"
+    },
+    {
+     "san": "a6",
+     "uci": "a7a6"
+    },
+    {
+     "san": "Ba4",
+     "uci": "b5a4"
+    },
+    {
+     "san": "Nf6",
+     "uci": "g8f6"
+    },
+    {
+     "san": "O-O",
+     "uci": "e1g1"
+    },
+    {
+     "san": "Be7",
+     "uci": "f8e7"
+    },
+    {
+     "san": "Re1",
+     "uci": "f1e1"
+    },
+    {
+     "san": "b5",
+     "uci": "b7b5"
+    },
+    {
+     "san": "Bb3",
+     "uci": "a4b3"
+    },
+    {
+     "san": "d6",
+     "uci": "d7d6"
+    },
+    {
+     "san": "c3",
+     "uci": "c2c3"
+    },
+    {
+     "san": "O-O",
+     "uci": "e8g8"
+    }
+   ],
+   "ideas": [
+    "Claim the centre.",
+    null,
+    "Develop and attack e5.",
+    null,
+    "Pressure the knight that defends e5 — the real point of the Ruy Lopez.",
+    null,
+    "Keep the bishop on the a2-g8 diagonal rather than trading it off.",
+    null,
+    "Castle. You can afford to ignore the e4 pawn for one move.",
+    null,
+    "Defend e4 properly and put the rook on the file it belongs on.",
+    null,
+    "Retreat again — this bishop is your best piece, don't let it go.",
+    null,
+    "The Spanish move. Build a retreat square on c2 and prepare d4.",
+    null
+   ],
+   "answerPlies": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14
+   ]
+  },
+  {
+   "id": "ruy-berlin",
+   "label": "Berlin Defense",
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense",
+   "side": "w",
+   "moves": [
+    {
+     "san": "e4",
+     "uci": "e2e4"
+    },
+    {
+     "san": "e5",
+     "uci": "e7e5"
+    },
+    {
+     "san": "Nf3",
+     "uci": "g1f3"
+    },
+    {
+     "san": "Nc6",
+     "uci": "b8c6"
+    },
+    {
+     "san": "Bb5",
+     "uci": "f1b5"
+    },
+    {
+     "san": "Nf6",
+     "uci": "g8f6"
+    },
+    {
+     "san": "O-O",
+     "uci": "e1g1"
+    },
+    {
+     "san": "Nxe4",
+     "uci": "f6e4"
+    },
+    {
+     "san": "d4",
+     "uci": "d2d4"
+    },
+    {
+     "san": "Nd6",
+     "uci": "e4d6"
+    },
+    {
+     "san": "Bxc6",
+     "uci": "b5c6"
+    },
+    {
+     "san": "dxc6",
+     "uci": "d7c6"
+    },
+    {
+     "san": "dxe5",
+     "uci": "d4e5"
+    },
+    {
+     "san": "Nf5",
+     "uci": "d6f5"
+    },
+    {
+     "san": "Qxd8+",
+     "uci": "d1d8"
+    },
+    {
+     "san": "Kxd8",
+     "uci": "e8d8"
+    }
+   ],
+   "ideas": [
+    "Claim the centre.",
+    null,
+    "Develop and attack e5.",
+    null,
+    "The Spanish bishop.",
+    null,
+    "Offer the e-pawn. Development matters more than the pawn here.",
+    null,
+    "Strike in the centre while Black's knight is loose.",
+    null,
+    "Trade to damage the pawn structure before Black consolidates.",
+    null,
+    "Gain the pawn back and open the position.",
+    null,
+    "The famous Berlin endgame. Black loses castling rights; you have the better structure.",
+    null
+   ],
+   "answerPlies": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14
+   ]
+  },
+  {
+   "id": "ruy-exchange",
+   "label": "Exchange Variation",
+   "eco": "C69",
+   "name": "Ruy Lopez: Exchange Variation, Normal Variation",
+   "side": "w",
+   "moves": [
+    {
+     "san": "e4",
+     "uci": "e2e4"
+    },
+    {
+     "san": "e5",
+     "uci": "e7e5"
+    },
+    {
+     "san": "Nf3",
+     "uci": "g1f3"
+    },
+    {
+     "san": "Nc6",
+     "uci": "b8c6"
+    },
+    {
+     "san": "Bb5",
+     "uci": "f1b5"
+    },
+    {
+     "san": "a6",
+     "uci": "a7a6"
+    },
+    {
+     "san": "Bxc6",
+     "uci": "b5c6"
+    },
+    {
+     "san": "dxc6",
+     "uci": "d7c6"
+    },
+    {
+     "san": "O-O",
+     "uci": "e1g1"
+    }
+   ],
+   "ideas": [
+    "Claim the centre.",
+    null,
+    "Develop and attack e5.",
+    null,
+    "The Spanish bishop.",
+    null,
+    "Trade at once. Black's doubled c-pawns are a permanent weakness in an endgame.",
+    null,
+    "Castle. Your long-term plan is simply to reach an endgame."
+   ],
+   "answerPlies": [
+    0,
+    2,
+    4,
+    6,
+    8
+   ]
+  },
+  {
+   "id": "ruy-open",
+   "label": "Open Variation",
+   "eco": "C80",
+   "name": "Ruy Lopez: Open, Main Line",
+   "side": "w",
+   "moves": [
+    {
+     "san": "e4",
+     "uci": "e2e4"
+    },
+    {
+     "san": "e5",
+     "uci": "e7e5"
+    },
+    {
+     "san": "Nf3",
+     "uci": "g1f3"
+    },
+    {
+     "san": "Nc6",
+     "uci": "b8c6"
+    },
+    {
+     "san": "Bb5",
+     "uci": "f1b5"
+    },
+    {
+     "san": "a6",
+     "uci": "a7a6"
+    },
+    {
+     "san": "Ba4",
+     "uci": "b5a4"
+    },
+    {
+     "san": "Nf6",
+     "uci": "g8f6"
+    },
+    {
+     "san": "O-O",
+     "uci": "e1g1"
+    },
+    {
+     "san": "Nxe4",
+     "uci": "f6e4"
+    },
+    {
+     "san": "d4",
+     "uci": "d2d4"
+    },
+    {
+     "san": "b5",
+     "uci": "b7b5"
+    },
+    {
+     "san": "Bb3",
+     "uci": "a4b3"
+    },
+    {
+     "san": "d5",
+     "uci": "d7d5"
+    },
+    {
+     "san": "dxe5",
+     "uci": "d4e5"
+    },
+    {
+     "san": "Be6",
+     "uci": "c8e6"
+    }
+   ],
+   "ideas": [
+    "Claim the centre.",
+    null,
+    "Develop and attack e5.",
+    null,
+    "The Spanish bishop.",
+    null,
+    "Keep the bishop.",
+    null,
+    "Castle and let Black take on e4.",
+    null,
+    "Open the centre immediately to punish the wandering knight.",
+    null,
+    "Retreat to safety on the strong diagonal.",
+    null,
+    "Take, and accept a sharp middlegame with chances for both sides.",
+    null
+   ],
+   "answerPlies": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14
+   ]
+  }
+ ]
+}

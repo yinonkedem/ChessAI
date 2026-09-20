@@ -1,0 +1,105 @@
+{
+ "version": 1,
+ "source": "lichess-org/chess-openings (CC0 public domain)",
+ "repertoires": [
+  {
+   "id": "italian-white",
+   "title": "The Italian Game",
+   "family": "1. e4 e5",
+   "blurb": "The oldest opening in chess. Quick development, and the bishop points straight at Black's weakest square.",
+   "side": "w",
+   "difficulty": 1,
+   "lineCount": 4,
+   "cardCount": 27,
+   "file": "italian-white.json"
+  },
+  {
+   "id": "ruy-lopez-white",
+   "title": "The Ruy Lopez",
+   "family": "1. e4 e5",
+   "blurb": "The Spanish Game. World champions have leaned on it for 150 years — slow pressure rather than a quick punch.",
+   "side": "w",
+   "difficulty": 3,
+   "lineCount": 4,
+   "cardCount": 29,
+   "file": "ruy-lopez-white.json"
+  },
+  {
+   "id": "scotch-white",
+   "title": "The Scotch Game",
+   "family": "1. e4 e5",
+   "blurb": "Break the centre open on move three. Far less theory than the Ruy Lopez, and it leads to open, tactical play.",
+   "side": "w",
+   "difficulty": 2,
+   "lineCount": 3,
+   "cardCount": 20,
+   "file": "scotch-white.json"
+  },
+  {
+   "id": "queens-gambit-white",
+   "title": "Queen's Gambit Declined",
+   "family": "1. d4 d5",
+   "blurb": "The classical way to play 1.d4. Not really a gambit — you almost always get the pawn back.",
+   "side": "w",
+   "difficulty": 2,
+   "lineCount": 3,
+   "cardCount": 19,
+   "file": "queens-gambit-white.json"
+  },
+  {
+   "id": "london-white",
+   "title": "The London System",
+   "family": "1. d4",
+   "blurb": "The same setup against almost anything Black plays. The lowest-theory way to start a serious 1.d4 repertoire.",
+   "side": "w",
+   "difficulty": 1,
+   "lineCount": 3,
+   "cardCount": 18,
+   "file": "london-white.json"
+  },
+  {
+   "id": "sicilian-najdorf-black",
+   "title": "Sicilian: Najdorf",
+   "family": "vs 1. e4",
+   "blurb": "The sharpest answer to 1.e4, and Fischer's and Kasparov's weapon of choice. You play for a win, not a draw.",
+   "side": "b",
+   "difficulty": 4,
+   "lineCount": 3,
+   "cardCount": 21,
+   "file": "sicilian-najdorf-black.json"
+  },
+  {
+   "id": "sicilian-dragon-black",
+   "title": "Sicilian: Accelerated Dragon",
+   "family": "vs 1. e4",
+   "blurb": "A Sicilian with far less theory than the Najdorf. The bishop on g7 does the work.",
+   "side": "b",
+   "difficulty": 3,
+   "lineCount": 2,
+   "cardCount": 15,
+   "file": "sicilian-dragon-black.json"
+  },
+  {
+   "id": "french-black",
+   "title": "The French Defense",
+   "family": "vs 1. e4",
+   "blurb": "Solid and strategic. You concede space early and spend the game undermining White's centre.",
+   "side": "b",
+   "difficulty": 2,
+   "lineCount": 4,
+   "cardCount": 23,
+   "file": "french-black.json"
+  },
+  {
+   "id": "caro-kann-black",
+   "title": "The Caro-Kann",
+   "family": "vs 1. e4",
+   "blurb": "As solid as the French, but the light-squared bishop gets out first. A favourite of players who hate bad positions.",
+   "side": "b",
+   "difficulty": 1,
+   "lineCount": 4,
+   "cardCount": 21,
+   "file": "caro-kann-black.json"
+  }
+ ]
+}
