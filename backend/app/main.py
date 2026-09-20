@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.auth.router import router as auth_router
 from app.db import close_db, init_db
-from app.routers import engine, games
+from app.routers import engine, games, training
 from app.settings import CORS_ORIGINS
 
 
@@ -30,6 +30,7 @@ app.add_middleware(
 app.include_router(auth_router)
 app.include_router(engine.router)
 app.include_router(games.router)
+app.include_router(training.router)
 
 logger = logging.getLogger("chess-backend")
 

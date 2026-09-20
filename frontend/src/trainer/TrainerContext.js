@@ -16,6 +16,8 @@ import { buildPosition } from "./buildPosition";
 import { bookSquares, judgeMove } from "./judgeMove";
 import { recordReview } from "./localStore";
 import { duePositions } from "./progress";
+import { flushOutbox } from "./sync";
+import { getToken } from "../api/auth";
 import {
     Mode,
     Phase,
@@ -144,6 +146,19 @@ export function TrainerProvider({ children }) {
             tone: "hint",
         }));
     }, [active, session]);
+
+    /**
+     * Catch the server up at the end of a session rather than after every
+     * move: one request instead of thirty, and a sleeping backend costs the
+     * learner nothing mid-drill. Failure is fine — the outbox keeps the
+     * reviews for next time.
+     */
+    const phase = session.phase;
+    useEffect(() => {
+        if (phase !== Phase.lineComplete && phase !== Phase.sessionComplete) return;
+        if (!getToken()) return;
+        flushOutbox().catch((err) => console.warn("review sync failed:", err));
+    }, [phase]);
 
     const start = useCallback((repertoire) => {
         send({ type: T.START, payload: { repertoire } });

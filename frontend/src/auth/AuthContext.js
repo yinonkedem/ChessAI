@@ -8,6 +8,7 @@ import {
     me,
     signup as apiSignup,
 } from "../api/auth";
+import { syncOnLogin } from "../trainer/sync";
 
 const AuthContext = createContext(null);
 
@@ -34,6 +35,12 @@ export function AuthProvider({ children }) {
     const refresh = useCallback(async () => {
         const u = await me();
         setUser(u);
+        if (u) {
+            // Fold in trainer progress from other devices, and push anything
+            // drilled while signed out. Never block sign-in on it — the
+            // trainer is local-first and works fine if this fails.
+            syncOnLogin().catch((err) => console.warn("trainer sync failed:", err));
+        }
         return u;
     }, []);
 

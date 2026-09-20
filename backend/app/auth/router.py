@@ -4,7 +4,7 @@ from fastapi import APIRouter, Depends, HTTPException, Response, status
 from fastapi.security import OAuth2PasswordRequestForm
 from pydantic import BaseModel, EmailStr, Field
 
-from app.models import Game, User, UserStats
+from app.models import Game, TrainingCard, User, UserStats
 
 from .dependencies import get_current_active_user
 from .utils import (
@@ -121,12 +121,14 @@ async def delete_account(
 ):
     """Permanently delete the signed-in user and everything owned by them.
 
-    Games are removed first so a partial failure can never leave game rows
-    pointing at a user id that no longer exists.
+    Owned documents go first, so a partial failure can never leave rows
+    pointing at a user id that no longer exists. Anything new that references
+    user_id must be added here too.
     """
     if not verify_password(body.password, current_user.password_hash):
         raise HTTPException(status_code=403, detail="Password is incorrect")
 
     await Game.find(Game.user_id == current_user.id).delete()
+    await TrainingCard.find(TrainingCard.user_id == current_user.id).delete()
     await current_user.delete()
     return Response(status_code=204)

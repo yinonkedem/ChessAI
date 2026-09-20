@@ -19,6 +19,9 @@ const EMPTY = {
     version: 1,
     cards: {},   // "<repertoireId>|<path>" -> card
     stats: { dayStreak: 0, longestStreak: 0, lastActiveDay: null, reviews: 0, correct: 0 },
+    // Reviews not yet accepted by the server. Kept so a session finished
+    // offline, or while Render's free tier is waking up, is not lost.
+    outbox: [],
 };
 
 export const cardKey = (repertoireId, path) => `${repertoireId}|${path}`;
@@ -33,9 +36,10 @@ function read() {
             version: 1,
             cards: parsed.cards ?? {},
             stats: { ...EMPTY.stats, ...(parsed.stats ?? {}) },
+            outbox: parsed.outbox ?? [],
         };
     } catch {
-        return { ...EMPTY, cards: {}, stats: { ...EMPTY.stats } };
+        return { ...EMPTY, cards: {}, stats: { ...EMPTY.stats }, outbox: [] };
     }
 }
 
@@ -79,7 +83,47 @@ export function recordReview(repertoireId, path, correct, now = Date.now()) {
             reviews: state.stats.reviews + 1,
             correct: state.stats.correct + (correct ? 1 : 0),
         },
+        outbox: [...state.outbox, { repertoire_id: repertoireId, path, correct }],
     });
+}
+
+/* ---------------- sync ---------------- */
+
+export const pendingReviews = (state = read()) => state.outbox;
+
+/** Drop the reviews the server has accepted. */
+export function clearOutbox(count, state = read()) {
+    return write({ ...state, outbox: state.outbox.slice(count) });
+}
+
+/**
+ * Fold server cards into the local store.
+ *
+ * Conflicts resolve to the HIGHER box. Two devices that both reviewed a card
+ * disagree only about how well it is known, and the generous reading is the
+ * safe one: the worst case is seeing a card slightly later than ideal, versus
+ * wiping out progress the learner actually earned.
+ */
+export function mergeServerCards(serverCards, state = read()) {
+    const cards = { ...state.cards };
+    serverCards.forEach((c) => {
+        const key = cardKey(c.repertoire_id, c.path);
+        const mine = cards[key];
+        const theirs = {
+            box: c.box,
+            due: new Date(c.due).getTime(),
+            reps: c.reps,
+            lapses: c.lapses,
+            last: null,
+        };
+        if (!mine || theirs.box > mine.box) {
+            cards[key] = theirs;
+        } else if (theirs.box === mine.box) {
+            // Same box: keep whichever is due sooner, so nothing is skipped.
+            cards[key] = theirs.due < mine.due ? theirs : mine;
+        }
+    });
+    return write({ ...state, cards });
 }
 
 /** Cards for one repertoire, keyed by path. */

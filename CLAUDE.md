@@ -91,6 +91,13 @@ python main.py     # Train from scratch
   - Body: `{"fen": "...", "depth": 1-30}`
   - Query param: `?engine=stockfish` (default) or `?engine=random`
   - Returns: `{"best_move": "e2e4", "info": {...}}`
+- `GET /training/cards`, `GET /training/due`, `POST /training/review`, `GET /training/progress`,
+  `GET /training/stats`, `DELETE /training/repertoire/{id}` — opening-trainer spaced repetition
+  (`backend/app/routers/training.py`). All require `Bearer` auth. `POST /training/review` takes a
+  **batch** and is deliberately three round trips regardless of size (one read, one
+  `bulk_write` upsert, one user update); the per-review `find_one`+`save` loop it replaced took
+  seconds against Atlas. Replaying a batch is idempotent — the unique
+  `(user_id, repertoire_id, path)` index plus the not-yet-due skip make it a no-op.
 - `POST /games`, `GET /games`, `GET /games/{id}` — Persisted game history per user (`backend/app/routers/games.py`). All require `Bearer` auth. `POST /games` atomically `$inc`s the user's `stats` sub-document (games_played + wins/losses/draws by `result`).
 
 **Engine registry:** `backend/app/engines/__init__.py` — maps engine name strings to callable functions. Adding a new engine: implement the function and add it to `ENGINE_REGISTRY`.
@@ -184,6 +191,50 @@ Self-play + MCTS training loop in `AlphaZero/alphaZero.py`. The ResNet model is 
 ---
 
 ## Audit & refactor — session log
+
+### Backend sync for the trainer (2026-09-20) — Phase 6
+
+Trainer progress now follows a user across devices, while staying local-first: every review is
+written to `localStorage` immediately and queued in an **outbox**, and the server is caught up in
+one batched request at the end of a session. Signed out, nothing changes — the trainer works
+exactly as before.
+
+**Backend:** `TrainingCard` document (first compound indexes in the codebase — the `Indexed()`
+field wrapper can't express them, so `Settings.indexes` with `pymongo.IndexModel`), a `TrainerStats`
+sub-doc on `User`, `app/training/scheduler.py`, and `app/routers/training.py`.
+
+**Frontend:** `api/training.js`, `trainer/sync.js`, plus an outbox and `mergeServerCards` in
+`localStore.js`. `syncOnLogin` pushes local work first, *then* merges — so signing in never
+overwrites what this device just did. Conflicts resolve to the **higher box**: two devices disagree
+only about how well something is known, and the worst case of the generous reading is seeing a card
+slightly late, versus destroying progress the learner earned.
+
+**The duplicated scheduler is guarded.** `backend/tests/test_scheduler_parity.py` reads
+`frontend/src/trainer/scheduler.js` and fails if `BOX_DAYS`, `MASTERED_BOX`, `MAX_BOX` or the
+relearn delay drift, and checks the JS still drops two boxes on a miss. Verified by deliberately
+changing one number and watching it fail. Run: `backend/venv/bin/python -m pytest tests -q`
+(`requirements-dev.txt` pins pytest).
+
+**Three real bugs, all found by testing rather than review:**
+1. **`update(Inc(...))` followed by `save()` silently undid the increment.** `save()` writes the
+   whole in-memory document back, and that copy still held the pre-increment counters — so
+   `trainer.reviews` stayed 0 while cards were created. Now one `update()` combining `Inc` with
+   `Set` for the streak fields.
+2. **The review endpoint was slow enough to look broken.** A `find_one` + `save` per review meant
+   ~20 sequential round trips to Atlas for a 10-move session; the client's flush was still in
+   flight seconds later and every test read half-written state. Rewritten as one read, one
+   `bulk_write`, one user update — 30 reviews now take ~1.1s.
+3. **Deleting an account didn't delete its training cards.** `DELETE /auth/me` cascaded to games
+   only. Fixed, and 47 orphans left by earlier test runs were cleaned out of the database.
+
+**Verified:** 19 Python assertions (parity + scheduler behaviour), 17 API assertions (batching,
+idempotent replay, not-due skip, per-user isolation, 401s, reset), and 16 browser assertions
+covering the full cross-device story — drill on device A, sign in on a fresh device B and find the
+progress there, drill signed out on device C and have it push on sign-in.
+
+**Note on test scripts:** two rounds of confusing failures came from my own harness modelling the
+board position in parallel with the app and drifting out of sync. The sync test now recovers the
+position by reading the app's own move list each turn.
 
 ### Review mode — clearing what's due (2026-09-20)
 
