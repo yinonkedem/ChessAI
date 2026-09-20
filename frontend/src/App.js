@@ -24,6 +24,9 @@ import { AuthProvider } from "./auth/AuthContext";
 import ProtectedRoute from "./auth/ProtectedRoute";
 import LoginPage from "./pages/LoginPage";
 import AccountPage from "./pages/AccountPage";
+import LearnPage from "./pages/LearnPage";
+import DrillPage from "./pages/DrillPage";
+import { TrainerProvider } from "./trainer/TrainerContext";
 
 import usePersistedReducer from "./hooks/usePersistedReducer";
 
@@ -80,45 +83,54 @@ export default function App() {
     return (
         <AuthProvider>
             <AppContext.Provider value={providerState}>
-                <EngineAgents />
+                {/* Wraps the Toolbar as well as the Routes: Pieces.js calls
+                    useMoveGate(), and the toolbar will want useTrainer() for a
+                    streak chip. */}
+                <TrainerProvider>
+                    <EngineAgents />
 
-                <Toolbar onNewGame={handleNewGame} />
+                    <Toolbar onNewGame={handleNewGame} />
 
-                <Routes>
-                    <Route path="/login" element={<LoginPage />} />
-                    <Route
-                        path="/"
-                        element={
-                            <ProtectedRoute>
-                                <StartScreen onStart={handleStart} />
-                            </ProtectedRoute>
-                        }
-                    />
-                    <Route
-                        path="/custom"
-                        element={
-                            <ProtectedRoute>
-                                <EditorPage />
-                            </ProtectedRoute>
-                        }
-                    />
-                    <Route
-                        path="/account"
-                        element={
-                            <ProtectedRoute>
-                                <AccountPage />
-                            </ProtectedRoute>
-                        }
-                    />
-                    <Route
-                        path="/game"
-                        element={
-                            <ProtectedRoute>
-                                <GamePage />
-                            </ProtectedRoute>
-                        }
-                    />
-                </Routes>
+                    <Routes>
+                        <Route path="/login" element={<LoginPage />} />
+                        <Route
+                            path="/"
+                            element={
+                                <ProtectedRoute>
+                                    <StartScreen onStart={handleStart} />
+                                </ProtectedRoute>
+                            }
+                        />
+                        <Route
+                            path="/custom"
+                            element={
+                                <ProtectedRoute>
+                                    <EditorPage />
+                                </ProtectedRoute>
+                            }
+                        />
+                        <Route
+                            path="/account"
+                            element={
+                                <ProtectedRoute>
+                                    <AccountPage />
+                                </ProtectedRoute>
+                            }
+                        />
+                        {/* Public on purpose — someone must be able to try
+                            a drill before signing up. */}
+                        <Route path="/learn" element={<LearnPage />} />
+                        <Route path="/learn/:repertoireId" element={<DrillPage />} />
+                        <Route
+                            path="/game"
+                            element={
+                                <ProtectedRoute>
+                                    <GamePage />
+                                </ProtectedRoute>
+                            }
+                        />
+                    </Routes>
+                </TrainerProvider>
             </AppContext.Provider>
         </AuthProvider>
     );

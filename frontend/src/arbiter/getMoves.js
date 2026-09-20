@@ -172,7 +172,18 @@ export const getPawnCaptures =  ({position,prevPosition,piece,rank,file}) => {
 
 export const getCastlingMoves = ({position,castleDirection,piece,rank,file}) => {
     const moves = []
-    
+
+    // castleDirection here is the STRING for the side to move, not the {w,b}
+    // object. Passing the object doesn't throw — it just never matches any of
+    // the checks below, so castling silently disappears. Fail loudly instead.
+    if (castleDirection && typeof castleDirection === 'object') {
+        throw new TypeError(
+            "getCastlingMoves/getValidMoves expect castleDirection as the per-side " +
+            "string ('both'|'left'|'right'|'none'); got the {w,b} object. " +
+            "Pass castleDirection[piece[0]]."
+        )
+    }
+
     if (file !== 4 || rank % 7 !== 0 || castleDirection === 'none'){
         return moves
     }

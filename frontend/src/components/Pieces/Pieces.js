@@ -21,10 +21,13 @@ import arbiter from '../../arbiter/arbiter'
 import { getNewMoveNotation } from '../../helper'
 import { Status } from '../../constants'
 import { buildDisambiguation } from './disambiguation'
+import { useMoveGate } from '../../trainer/TrainerContext'
 
 const Pieces = () => {
     const { appState, dispatch } = useAppContext();
     const { status, turn, castleDirection, position: history } = appState;
+    // null unless an opening drill is running
+    const gate = useMoveGate();
     const currentPosition = history[history.length - 1];
 
     const [selected, setSelected] = useState(null);
@@ -70,6 +73,24 @@ const Pieces = () => {
         const [piece, rank, file] = e.dataTransfer.getData("text").split(',');
 
         if (!appState.candidateMoves.find((m) => m[0] === x && m[1] === y)) {
+            dispatch(clearCandidates());
+            return;
+        }
+
+        // During an opening drill the trainer owns the board: report the
+        // attempt and stop. It judges the move and recomputes the whole
+        // position from the line prefix, so a wrong move never half-applies.
+        // Sitting above the promotion branch below also guarantees the
+        // promotion popup can never open mid-drill.
+        //
+        // INVARIANT: this runs from onDrop / onClick, never during render.
+        // That is what makes the side effect safe and StrictMode-proof.
+        if (gate) {
+            gate.onAttempt({
+                piece,
+                from: [Number(rank), Number(file)],
+                to: [x, y],
+            });
             dispatch(clearCandidates());
             return;
         }

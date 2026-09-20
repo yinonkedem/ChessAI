@@ -36,3 +36,11 @@ export const takeBack = () => {
         type: actionTypes.TAKE_BACK,
     }
 }
+
+/** Replace the whole board history at once — used by the opening trainer. */
+export const loadPositionSequence = (payload) => {
+    return {
+        type: actionTypes.LOAD_POSITION_SEQUENCE,
+        payload,
+    }
+}

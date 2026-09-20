@@ -33,8 +33,10 @@ const GameEnds = ({ onClosePopup }) => {
     useEffect(() => {
         if (savedRef.current) return;
         if (status === Status.ongoing || status === Status.promoting) return;
-        if (gameMode === GameMode.custom) return;
-        if (!user || !opponentType || opponentType === "human") return;
+        if (gameMode === GameMode.custom || gameMode === GameMode.trainer) return;
+        // "book" is the trainer's opponent; the backend Game model only accepts
+        // ai | rand | human, so posting it would 422.
+        if (!user || !opponentType || opponentType === "human" || opponentType === "book") return;
 
         const result = deriveResult(status, userColor);
         if (!result) return;
@@ -56,7 +58,10 @@ const GameEnds = ({ onClosePopup }) => {
     if (status === Status.ongoing || status === Status.promoting) return null;
 
     const newGame = () => {
-        const target = gameMode === GameMode.custom ? "/custom" : "/";
+        const target =
+            gameMode === GameMode.custom ? "/custom"
+            : gameMode === GameMode.trainer ? "/learn"
+            : "/";
         dispatch(setupNewGame());
         onClosePopup?.();
         navigate(target);

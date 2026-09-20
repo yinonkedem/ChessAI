@@ -14,6 +14,37 @@ export const reducer = (state, action) => {
             };
         }
 
+        // The opening trainer owns the board outright: instead of applying one
+        // move at a time, it recomputes the whole position history from the
+        // line prefix and loads it here. That makes rewind, replay, next-card
+        // and jump-to-ply all the same operation, and means a wrong move never
+        // half-applies (nothing to undo, no flicker).
+        case actionTypes.LOAD_POSITION_SEQUENCE: {
+            const { positions, movesList, castleDirection, lastMove, turn, userColor } =
+                action.payload;
+            return {
+                ...state,
+                position: positions,
+                movesList,
+                castleDirection,
+                turn,
+                userColor: userColor ?? state.userColor,
+                lastMove: lastMove ?? null,
+                lastMoveStack: lastMove ? [lastMove] : [],
+                candidateMoves: [],
+                promotionSquare: null,
+                status: Status.ongoing,
+                // Set here rather than via SETUP_GAME, which would also reset
+                // `turn` to 'w' and fight the position we just loaded.
+                gameMode: GameMode.trainer,
+                // No registered engine matches "book", so both agents in
+                // EngineAgents bail (useEngineAgent.js:35). isGameSetup:false
+                // is a second, independent guard.
+                opponentType: "book",
+                isGameSetup: false,
+            };
+        }
+
         case actionTypes.GENERATE_CANDIDATE_MOVES: {
             return { ...state, candidateMoves: action.payload.candidateMoves };
         }

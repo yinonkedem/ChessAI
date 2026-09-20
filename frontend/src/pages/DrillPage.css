@@ -1,0 +1,178 @@
+/* Mirrors .page--game: stacked on mobile, board + rail side by side at 768px.
+   The rail height matches the board so the two align at every breakpoint. */
+
+.page--drill {
+    align-items: center;
+}
+
+.drill-rail {
+    width: min(100%, calc(8 * var(--tile-size)));
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-3);
+    box-sizing: border-box;
+}
+
+.drill__error {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-4);
+    align-items: flex-start;
+    max-width: 40ch;
+}
+
+/* ---- header ---- */
+
+.drill-head {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2);
+    padding: var(--sp-4);
+}
+
+.drill-head__top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-2);
+}
+
+.drill-head__line {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: var(--fs-md);
+    font-weight: 800;
+    color: var(--c-primary-strong);
+}
+
+.drill-head__count {
+    margin: 0;
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    color: var(--c-ink-subtle);
+}
+
+.drill-head__streak {
+    color: var(--c-accent-strong);
+}
+
+/* ---- move dots ---- */
+
+.drill-dots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-1);
+    margin-top: var(--sp-1);
+}
+
+.drill-dots i {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--c-border-strong);
+    transition: background-color var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+
+.drill-dots i.is-good    { background: var(--c-success); }
+.drill-dots i.is-missed  { background: var(--c-accent); }
+.drill-dots i.is-current {
+    background: var(--c-primary);
+    transform: scale(1.35);
+}
+
+/* ---- feedback ---- */
+
+.drill-feedback {
+    padding: var(--sp-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-1);
+    animation: drill-feedback-in var(--dur) var(--ease-pop) both;
+}
+
+@keyframes drill-feedback-in {
+    from { opacity: 0; transform: translateY(4px); }
+    to   { opacity: 1; }
+}
+
+.drill-feedback--good    { border-color: var(--c-success); background: var(--c-success-soft); }
+.drill-feedback--bad     { border-color: var(--c-error);   background: var(--c-error-soft); }
+.drill-feedback--neutral { }
+
+.drill-feedback__title {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: var(--fs-md);
+    color: var(--c-ink);
+}
+
+.drill-feedback__body {
+    margin: 0;
+    font-size: var(--fs-sm);
+    line-height: var(--lh-body);
+    color: var(--c-ink);
+}
+
+/* ---- actions ---- */
+
+.drill-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-2);
+}
+
+.drill-actions .btn {
+    flex: 1 1 auto;
+}
+
+/* ---- move list ---- */
+
+.drill-moves {
+    list-style: none;
+    margin: 0;
+    padding: var(--sp-3);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-1) var(--sp-3);
+
+    background: var(--c-surface-sunken);
+    border-radius: var(--r-md);
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    color: var(--c-ink-muted);
+
+    max-height: 6rem;
+    overflow-y: auto;
+}
+
+.drill-moves li.is-yours {
+    color: var(--c-primary-strong);
+}
+
+.drill-moves b {
+    color: var(--c-ink-subtle);
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    /* Same contract as .page--game in App.css: stacked on mobile so the board
+       stays fully visible, board + rail side by side from 768px up. */
+    .page--drill {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .drill-rail {
+        width: 300px;
+        max-height: calc(8 * var(--tile-size));
+        overflow-y: auto;
+    }
+    .drill-moves {
+        max-height: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .drill-feedback { animation: none; }
+    .drill-dots i   { transition: none; }
+}

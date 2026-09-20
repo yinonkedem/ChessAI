@@ -18,6 +18,7 @@ const actionTypes = {
     "START_FROM_CUSTOM" : "START_FROM_CUSTOM",
     "RESET_ALL" : "RESET_ALL",
     "SET_LAST_MOVE" : "SET_LAST_MOVE",
+    "LOAD_POSITION_SEQUENCE" : "LOAD_POSITION_SEQUENCE",
 }
 
 export default actionTypes

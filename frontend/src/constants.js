@@ -9,7 +9,7 @@ export const Status = {
     insufficient: 'Game draws due to insufficient material',
 }
 
-export const GameMode = { standard: "standard", custom: "custom" };
+export const GameMode = { standard: "standard", custom: "custom", trainer: "trainer" };
 
 export const createInitGameState = () => ({
     position: [createPosition()],

@@ -185,6 +185,53 @@ Self-play + MCTS training loop in `AlphaZero/alphaZero.py`. The ResNet model is 
 
 ## Audit & refactor — session log
 
+### Opening drill loop (2026-09-20) — Phase 3 of the opening-trainer plan
+
+The first playable part of the trainer. `/learn` lists the repertoires,
+`/learn/:repertoireId` drills a line move by move. **Both routes are public** — someone has to be
+able to try a drill before signing up.
+
+**The trainer is the sole board writer.** During a drill `Pieces.js` doesn't dispatch a move at all:
+it reports the attempt through `useMoveGate()` and returns. The trainer judges it and rebuilds the
+*entire* position history from the line prefix. Consequences worth knowing:
+- A wrong move never half-applies — nothing to revert, no flicker, no take-back arithmetic.
+  The `UNDO_PLY` action the plan called for turned out to be unnecessary.
+- `movesList` entries come from the book, which is canonical. `getNewMoveNotation` emits no
+  `+`/`#`, so it is never used here.
+- Rewind, replay, next-line and jump-to-ply are all one operation: set the ply.
+
+**New files** (all under `frontend/src/trainer/`):
+`TrainerContext.js` (provider, `useTrainer`, `useMoveGate`), `trainerReducer.js` (session state
+machine), `buildLinePrefix.js`, `judgeMove.js`, `useBookAgent.js`, `openingsRepo.js`, plus
+`pages/LearnPage.{js,css}` and `pages/DrillPage.{js,css}`.
+
+**Changes to existing code are small and deliberate:**
+- `Reducer.js` gains exactly one case, `LOAD_POSITION_SEQUENCE`. It also sets
+  `gameMode: trainer`, `opponentType: "book"` and `isGameSetup: false` — doing that via `SETUP_GAME`
+  instead would have reset `turn` to `'w'` and fought the position just loaded.
+- Stockfish is muted for free: no registered engine matches `"book"`, so both agents bail at
+  `useEngineAgent.js:35`. `isGameSetup: false` is a second, independent guard.
+- `Pieces.js`: a 9-line gate after the candidate-move check and **before** the promotion branch, so
+  the promotion popup can never open mid-drill.
+- `GameEnds.js`: skips `GameMode.trainer` and `opponentType === "book"` (the backend `Game` model
+  only accepts `ai|rand|human`, so posting `"book"` would 422), and routes back to `/learn`.
+- `getCastlingMoves` now **throws** when handed the `{w,b}` object instead of the per-side string.
+  It previously just never matched, silently disabling castling.
+
+**Two traps `buildLinePrefix` has to avoid**, both called out in the plan and both real:
+- It returns the **full position history**, not the final board — `getPawnCaptures` detects en
+  passant by diffing against `prevPosition`.
+- Castling rights are tracked **incrementally** with `getCastlingDirections`, not inferred with
+  `helper.js getCastleRights`, which wrongly restores the right when a rook leaves h1 and returns.
+
+**Verified:** 163 Jest assertions (`trainer.test.js` covers the prefix builder, judging, and the
+session machine; `openings.test.js` still covers the book). Plus browser runs: a full White line
+including a deliberate wrong move, and a full Black line on the CSS-rotated board — no console
+errors, no horizontal overflow at 390 or 1280.
+
+**Not yet built:** no spaced repetition (Phase 5), no arrows (Phase 4) — the hint currently only
+raises `hintLevel` in state, nothing renders it yet. No progress is persisted anywhere.
+
 ### Opening book data pipeline (2026-09-20) — Phase 2 of the opening-trainer plan
 
 Generated book data for the trainer. **30 lines across 9 repertoires, 193 drill cards, 43 KB.**

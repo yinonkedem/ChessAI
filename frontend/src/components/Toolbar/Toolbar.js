@@ -34,6 +34,15 @@ export default function Toolbar({ onNewGame }) {
         onNewGame?.();
     };
 
+    const onLearnClick = () => {
+        if (location.pathname.startsWith("/learn")) return;
+        if (inProgress) {
+            const ok = window.confirm("Go to the openings trainer? Your current game will be lost.");
+            if (!ok) return;
+        }
+        navigate("/learn");
+    };
+
     const onEditorClick = () => {
         if (location.pathname === "/custom") return;
         if (inProgress) {
@@ -70,6 +79,14 @@ export default function Toolbar({ onNewGame }) {
                     aria-current={isOn("/") ? "page" : undefined}
                 >
                     New Game
+                </button>
+                <button
+                    type="button"
+                    className={`toolbar__btn${location.pathname.startsWith("/learn") ? " is-active" : ""}`}
+                    onClick={onLearnClick}
+                    aria-current={location.pathname.startsWith("/learn") ? "page" : undefined}
+                >
+                    Learn
                 </button>
                 <button
                     type="button"
