@@ -6,6 +6,8 @@ import { loadRepertoire } from "../trainer/openingsRepo";
 import { useTrainer } from "../trainer/TrainerContext";
 import useBookAgent from "../trainer/useBookAgent";
 import { Phase } from "../trainer/trainerReducer";
+import { cardsFor } from "../trainer/localStore";
+import { dueLabel } from "../trainer/scheduler";
 import "./DrillPage.css";
 
 /** One dot per move played on this run: green first-try, amber if it took help. */
@@ -115,6 +117,20 @@ export default function DrillPage() {
     const perfect = complete && progress.answered > 0 && progress.firstTry === progress.answered;
     const choices = repertoire.nodes[path]?.replies.length ?? 0;
 
+    // What the scheduler did with the positions just answered.
+    let nextUp = null;
+    if (complete && progress.answered > 0) {
+        const cards = cardsFor(repertoire.id);
+        const answered = Object.keys(results)
+            .map((p) => cards[p])
+            .filter(Boolean);
+        if (answered.length) {
+            const soonest = answered.reduce((a, b) => (a.due <= b.due ? a : b));
+            nextUp = `${answered.length} position${answered.length === 1 ? "" : "s"}, `
+                + `next ${dueLabel(soonest)}`;
+        }
+    }
+
     return (
         <main className="page page--drill">
             <Board />
@@ -154,6 +170,13 @@ export default function DrillPage() {
                             {opening.name && `You reached the ${opening.name}. `}
                             {progress.firstTry} of {progress.answered} first time.
                         </p>
+                        {/* Show when this material comes back. Spaced repetition
+                            is invisible unless you say what it scheduled. */}
+                        {nextUp && (
+                            <p className="drill-feedback__body muted">
+                                Scheduled: {nextUp}
+                            </p>
+                        )}
                     </div>
                 ) : (
                     <Feedback feedback={feedback} phase={phase} />

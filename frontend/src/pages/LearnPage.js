@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { loadIndex } from "../trainer/openingsRepo";
+import { catalogProgress } from "../trainer/progress";
+import { load } from "../trainer/localStore";
+import ProgressRing from "../components/ui/ProgressRing";
 import "./LearnPage.css";
 
 const SIDES = [
@@ -29,6 +32,11 @@ export default function LearnPage() {
     const [error, setError] = useState(null);
     const [side, setSide] = useState("all");
     const navigate = useNavigate();
+
+    // Read once per mount: progress only changes while drilling, and this
+    // screen is where you come back to afterwards.
+    const [progress] = useState(() => catalogProgress());
+    const [stats] = useState(() => load().stats);
 
     useEffect(() => {
         let cancelled = false;
@@ -73,6 +81,15 @@ export default function LearnPage() {
                     <p className="muted">
                         Play the book move, one position at a time. Pick a repertoire to start.
                     </p>
+                    {stats.reviews > 0 && (
+                        <p className="learn__stats">
+                            <span className="chip chip--accent">🔥 {stats.dayStreak} day streak</span>
+                            <span className="chip">{stats.reviews} moves reviewed</span>
+                            <span className="chip">
+                                {Math.round((stats.correct / stats.reviews) * 100)}% first time
+                            </span>
+                        </p>
+                    )}
                 </header>
 
                 <div className="learn__filters" role="group" aria-label="Filter by colour">
@@ -104,12 +121,36 @@ export default function LearnPage() {
                                     <Difficulty level={r.difficulty} />
                                 </div>
 
-                                <h2 className="card__title">{r.title}</h2>
-                                <p className="learn-card__family">{r.family}</p>
+                                <div className="learn-card__head">
+                                    <div>
+                                        <h2 className="card__title">{r.title}</h2>
+                                        <p className="learn-card__family">{r.family}</p>
+                                    </div>
+                                    {(progress[r.id]?.seen ?? 0) > 0 && (
+                                        /* Coverage, not mastery: mastery needs
+                                           box 4, so a fresh drill would show 0%
+                                           and look broken. Coverage moves every
+                                           session. Mastery is shown as text. */
+                                        <ProgressRing
+                                            percent={Math.round(
+                                                ((progress[r.id]?.seen ?? 0) / r.cardCount) * 100
+                                            )}
+                                            label={`${progress[r.id]?.seen ?? 0} of ${r.cardCount} positions seen`}
+                                        />
+                                    )}
+                                </div>
+
                                 <p className="card__subtitle">{r.blurb}</p>
 
                                 <p className="learn-card__meta">
                                     {r.lineCount} lines · {r.cardCount} positions
+                                    {(progress[r.id]?.mastered ?? 0) > 0 &&
+                                        ` · ${progress[r.id].mastered} mastered`}
+                                    {(progress[r.id]?.due ?? 0) > 0 && (
+                                        <span className="chip chip--error learn-card__due">
+                                            {progress[r.id].due} due
+                                        </span>
+                                    )}
                                 </p>
                             </button>
                         </li>

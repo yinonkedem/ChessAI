@@ -185,6 +185,49 @@ Self-play + MCTS training loop in `AlphaZero/alphaZero.py`. The ResNet model is 
 
 ## Audit & refactor — session log
 
+### Spaced repetition, local-first (2026-09-20) — Phase 5
+
+Progress now persists. Answers are scheduled, the catalog shows what's due, and a day streak
+accumulates — all in `localStorage`, with **no account required**.
+
+**Leitner boxes, not SM-2.** SM-2's machinery is the 0–5 quality grade driving an ease factor, and
+opening recall is *binary*: you played the book move or you didn't. Feeding a binary signal into
+SM-2 degenerates into Leitner with extra steps and a drifting ease value. Fixed intervals
+(`0/1/3/7/16/35` days) also let the UI say "due in 3 days" as a fact rather than an estimate.
+A miss drops **two** boxes rather than resetting to zero — losing everything to one slip makes long
+repertoires punishing, and two boxes already resets the interval to a day or less.
+
+**Card = one position, keyed by UCI path** — the same key the tree already uses, so a shared prefix
+like `1.e4` is one card however many lines pass through it.
+
+**New files:** `scheduler.js` (pure Leitner + day streak), `localStore.js` (persistence),
+`progress.js` (catalog/repertoire selectors), `queue.js` (in-session learning steps),
+`components/ui/ProgressRing.js`.
+
+**Two correctness rules that are easy to get wrong, both tested:**
+- **Only the first attempt at a position is graded.** Retrying until it sticks is the *learning
+  step*, not the review — grading the retry would schedule it as if you had known it.
+- **Answering something not yet due does not promote it.** Otherwise replaying a line five times in
+  an afternoon pushes everything to the top box without a day passing, and the schedule is a lie.
+  A *miss* is always recorded, though: forgetting something you were supposed to know is real
+  information whenever it happens.
+
+**A bug the browser test caught:** the "first attempt only" guard originally checked
+`session.results`, but `results` is only written on a *correct* answer — so after a miss the guard
+was still false and the retry got graded too, scoring the position twice. The marker has to be
+`session.attempts`.
+
+**A UX call:** the catalog ring shows **coverage** (positions seen), not mastery. Mastery needs box
+4, so a freshly drilled repertoire showed `0` and looked broken. Mastery is text in the meta line.
+
+**Not yet wired:** `queue.js` is written and tested but unused — it belongs to a dedicated
+"review due" mode. The current drill walks a line from the root and grades what it meets. The
+learning-step queue is what a Review button will use.
+
+**Verified:** 188 Jest assertions (35 new, covering boxes, intervals, streak rollover, the queue's
+graduation rules, corrupt/versioned storage, and early-review), plus 11 browser assertions
+including that progress survives a reload.
+
 ### Board annotation layer + hint ladder (2026-09-20) — Phase 4
 
 The Hint button finally does something. `components/Board/BoardOverlay.{js,css}` draws arrows and

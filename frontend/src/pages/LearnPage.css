@@ -104,3 +104,22 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+.learn__stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-2);
+    justify-content: center;
+    margin: var(--sp-3) 0 0;
+}
+
+.learn-card__head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--sp-3);
+}
+
+.learn-card__due {
+    margin-left: var(--sp-2);
+}

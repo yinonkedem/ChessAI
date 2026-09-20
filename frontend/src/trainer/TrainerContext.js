@@ -14,6 +14,7 @@ import { loadPositionSequence } from "../reducer/actions/move";
 import { uciToCoords } from "../utils/uciToCoords";
 import { buildPosition } from "./buildPosition";
 import { bookSquares, judgeMove } from "./judgeMove";
+import { recordReview } from "./localStore";
 import {
     Phase,
     T,
@@ -69,7 +70,20 @@ export function TrainerProvider({ children }) {
                 if (s.phase !== Phase.answering) return;
                 // A position can have several book replies; judgeMove checks
                 // membership, so any of them counts as correct.
-                send({ type: T.ATTEMPT, payload: judgeMove(s.repertoire, s.path, { from, to }) });
+                const judged = judgeMove(s.repertoire, s.path, { from, to });
+
+                // Grade only the FIRST attempt at a position. Retrying until
+                // it sticks must not schedule it as if it were known — the
+                // in-session retry is the learning step, not the review.
+                //
+                // The marker is `attempts`, NOT `results`: results is only
+                // written on a correct answer, so after a miss it is still
+                // empty and the retry would be graded a second time.
+                if (s.attempts === 0) {
+                    recordReview(s.repertoire.id, s.path, judged.verdict === "correct");
+                }
+
+                send({ type: T.ATTEMPT, payload: judged });
             },
         };
     }, [active]);
@@ -130,7 +144,14 @@ export function TrainerProvider({ children }) {
             start,
             advance: () => send({ type: T.ADVANCE }),
             hint: () => send({ type: T.HINT }),
-            skip: () => send({ type: T.SKIP }),
+            skip: () => {
+                const s = sessionRef.current;
+                // Same rule: if they already guessed, the miss is recorded.
+                if (s.phase === Phase.answering && s.attempts === 0) {
+                    recordReview(s.repertoire.id, s.path, false);
+                }
+                send({ type: T.SKIP });
+            },
             restart: () => send({ type: T.RESTART }),
             reset: () => send({ type: T.RESET }),
         }),
