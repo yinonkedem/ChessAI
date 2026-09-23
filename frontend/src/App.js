@@ -28,6 +28,7 @@ import LearnPage from "./pages/LearnPage";
 import DrillPage from "./pages/DrillPage";
 import ReviewPage from "./pages/ReviewPage";
 import ProgressPage from "./pages/ProgressPage";
+import HomePage from "./pages/HomePage";
 import { TrainerProvider } from "./trainer/TrainerContext";
 
 import usePersistedReducer from "./hooks/usePersistedReducer";
@@ -79,7 +80,7 @@ export default function App() {
 
     function handleNewGame() {
         dispatch({ type: actionTypes.RESET_ALL });
-        navigate("/");
+        navigate("/play");
     }
 
     return (
@@ -95,8 +96,11 @@ export default function App() {
 
                     <Routes>
                         <Route path="/login" element={<LoginPage />} />
+                        {/* Public: the front door leads with the trainer, and
+                            a first-time visitor must see it before any login. */}
+                        <Route path="/" element={<HomePage />} />
                         <Route
-                            path="/"
+                            path="/play"
                             element={
                                 <ProtectedRoute>
                                     <StartScreen onStart={handleStart} />

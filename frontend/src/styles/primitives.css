@@ -126,6 +126,12 @@
     font-size: var(--fs-sm);
 }
 
+.btn--lg {
+    min-height: 54px;
+    padding: 0 var(--sp-6);
+    font-size: var(--fs-lg);
+}
+
 .btn--block {
     width: 100%;
 }

@@ -122,7 +122,8 @@ python main.py     # Train from scratch
 
 **Entry & routing:** `index.js` mounts `<App/>` via `createBrowserRouter`. `App.js` wraps everything in `<AuthProvider>` and `<AppContext.Provider>`, then renders a persistent `Toolbar` plus `<EngineAgents/>`, then a `<Routes>` block:
 - `/login` → `LoginPage` (public — full-screen login/signup)
-- `/` → `StartScreen` (game setup) — **requires auth**
+- `/` → `HomePage` (public landing page that leads with the trainer; a "welcome back" card with due reviews for returning learners)
+- `/play` → `StartScreen` (game setup) — **requires auth**. Was `/` until 2026-09-23.
 - `/game` → `GamePage` (live board + control panel) — **requires auth**
 - `/custom` → `EditorPage` (custom-position editor) — **requires auth**
 
@@ -155,8 +156,8 @@ In production the frontend and backend are on different origins so CORS must sta
 
 **Toolbar** (`components/Toolbar/Toolbar.js`):
 - Sticky top bar (64 px mobile / 76 px tablet+) on every route.
-- Brand button (also routes home / new game).
-- "New Game" primary button — confirms before wiping a game in progress.
+- Brand button routes home (`/`) — never prompts, because going home doesn't touch the game.
+- "Learn" is the primary button; "Play" goes to `/play` setup and confirms before wiping a game in progress.
 - "Editor" link to `/custom` — same confirmation logic.
 - `useLocation()` adds an `is-active` class + `aria-current="page"` to whichever button matches the current route.
 - Auth area: `Log in` opens `Toolbar/AuthDialog.js` (lifted out of `StartScreen`); when logged in it shows a user chip + `Logout`.
@@ -191,6 +192,30 @@ Self-play + MCTS training loop in `AlphaZero/alphaZero.py`. The ResNet model is 
 ---
 
 ## Audit & refactor — session log
+
+### Landing page (2026-09-23)
+
+`/` used to be the auth-gated game setup, so a first-time visitor hit a login wall and never saw
+the trainer. It is now a **public `HomePage`** (`pages/HomePage.{js,css}`): hero with a static
+board showing 3.Bc4 and the book's own explanation, content counts (read from `index.json`, so they
+track the book automatically), how-it-works, the full opening list by colour, and a "just want a
+game?" card. Returning learners get a **Welcome back** card: streak, total due, and a button into the
+review for whichever repertoire has the most due.
+
+Game setup moved to **`/play`**; toolbar is now Learn (primary) · Play · Progress · Editor, and the
+brand goes home. `GameEnds`' "new game" routes to `/play`.
+
+`components/ui/MiniBoard.{js,css}` — a static board for illustrations, deliberately independent of
+`AppContext` so a picture can never touch the live game. Reuses `BoardOverlay`.
+
+**A pre-existing bug the hero exposed:** the overlay's `bo-in` keyframe ended `to { opacity: 1 }`
+with fill-mode `both`, which overrode `.bo-square`'s `opacity: 0.3` — so the Hint button's square
+marker rendered **solid amber and hid the piece it pointed at**. Dropped the `to` frame.
+
+**Verified:** 30 browser assertions (first-time vs returning vs nothing-due, every CTA's target,
+`/play` still protected with login bounce-back, a real game vs Stockfish from `/play`, overflow at 9
+widths), axe WCAG 2.1 AA 0 violations on `/` in both themes (one contrast fix: `--c-ink-subtle`
+fails on `--c-bg`, only passes on `--c-surface`).
 
 ### Progress page + accessibility pass (2026-09-20) — Phase 7
 

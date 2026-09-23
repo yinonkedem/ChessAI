@@ -52,9 +52,11 @@
     animation: bo-in var(--dur) var(--ease-pop) both;
 }
 
+/* No `to` frame on purpose: the animation ends at each mark's own opacity.
+   A `to { opacity: 1 }` held by fill-mode `both` overrode .bo-square's 0.3,
+   so a hint square rendered solid and hid the piece it was pointing at. */
 @keyframes bo-in {
     from { opacity: 0; transform: scale(0.94); transform-origin: center; }
-    to   { opacity: 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {

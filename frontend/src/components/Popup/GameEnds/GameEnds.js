@@ -61,7 +61,7 @@ const GameEnds = ({ onClosePopup }) => {
         const target =
             gameMode === GameMode.custom ? "/custom"
             : gameMode === GameMode.trainer ? "/learn"
-            : "/";
+            : "/play";
         dispatch(setupNewGame());
         onClosePopup?.();
         navigate(target);

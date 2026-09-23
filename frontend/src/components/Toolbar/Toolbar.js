@@ -26,17 +26,20 @@ export default function Toolbar({ onNewGame }) {
         appState.movesList.length > 0;
 
     const confirmIfNeeded = () => {
-        const onStartScreen = location.pathname === "/";
+        const onStartScreen = location.pathname === "/play";
         if (!onStartScreen && inProgress) {
             return window.confirm("Start a new game? Your current game will be lost.");
         }
         return true;
     };
 
-    const onHomeClick = () => {
+    const onNewGameClick = () => {
         if (!confirmIfNeeded()) return;
         onNewGame?.();
     };
+
+    // Going home leaves the game untouched — only the setup screen resets it.
+    const onHomeClick = () => navigate("/");
 
     const onLearnClick = () => {
         if (location.pathname.startsWith("/learn")) return;
@@ -69,28 +72,29 @@ export default function Toolbar({ onNewGame }) {
                 type="button"
                 className="toolbar__brand"
                 onClick={onHomeClick}
-                aria-label="Yinon Chess — start new game"
+                aria-label="Yinon Chess — home"
             >
                 <span className="toolbar__brand-mark" aria-hidden="true">♛</span>
                 <span className="toolbar__brand-text">Yinon Chess</span>
             </button>
 
             <nav className="toolbar__nav" aria-label="Primary">
+                {/* Learn leads: the trainer is what the site is for. */}
                 <button
                     type="button"
-                    className={`toolbar__btn toolbar__btn--primary${isOn("/") ? " is-active" : ""}`}
-                    onClick={onHomeClick}
-                    aria-current={isOn("/") ? "page" : undefined}
-                >
-                    New Game
-                </button>
-                <button
-                    type="button"
-                    className={`toolbar__btn${location.pathname.startsWith("/learn") ? " is-active" : ""}`}
+                    className={`toolbar__btn toolbar__btn--primary${location.pathname.startsWith("/learn") ? " is-active" : ""}`}
                     onClick={onLearnClick}
                     aria-current={location.pathname.startsWith("/learn") ? "page" : undefined}
                 >
                     Learn
+                </button>
+                <button
+                    type="button"
+                    className={`toolbar__btn${isOn("/play") ? " is-active" : ""}`}
+                    onClick={onNewGameClick}
+                    aria-current={isOn("/play") ? "page" : undefined}
+                >
+                    Play
                 </button>
                 <button
                     type="button"

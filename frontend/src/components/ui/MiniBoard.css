@@ -1,0 +1,37 @@
+.mini-board {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: var(--r-md);
+    overflow: hidden;
+    box-shadow: var(--sh-3);
+}
+
+.mini-board__sq {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+
+.mini-board__sq.is-light { background: var(--light-tile); }
+.mini-board__sq.is-dark  { background: var(--dark-tile); }
+
+.mini-board__sq img {
+    width: 88%;
+    height: 88%;
+    object-fit: contain;
+    user-select: none;
+}
+
+/* BoardOverlay is positioned for the real board's --tile-size gutter; here it
+   simply covers the grid. */
+.mini-board .board-overlay {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
