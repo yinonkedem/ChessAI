@@ -193,6 +193,20 @@ Self-play + MCTS training loop in `AlphaZero/alphaZero.py`. The ResNet model is 
 
 ## Audit & refactor — session log
 
+### Drag fix: pieces vanished mid-drag (2026-09-23)
+
+Native HTML5 drag hid the real piece (`display: none`) and relied on the browser's drag *ghost*, a
+snapshot of an element positioned by CSS `transform` (and rotated 180° on Black's board), which
+browsers often render blank. So the piece disappeared while dragging. **Replaced with pointer
+events in `Pieces.js`:** the piece stays on its square at 35% opacity and a full-opacity copy
+follows the pointer. The copy is **portalled to `<body>`**, because `position: fixed` inside the
+transformed `.board--black` would be fixed to the board, not the viewport, and outside it the copy
+is upright for both colours. A 4px threshold separates a drag from a tap, and the click that ends a
+drag is suppressed so tap-to-move still works. `Piece.js` is now purely presentational. **Drag now
+also works on touch screens**; `touch-action: none` sits on `.piece` only, so the page still scrolls
+from empty squares. Verified: 15 browser assertions (mouse as White and Black, touch via CDP,
+off-board drop cancels, tap-to-move unaffected).
+
 ### Book content expansion II + engine-checked theory (2026-09-23)
 
 **14 repertoires → 19, 55 lines → 93, 349 positions → 742, learner choices 10 → 21.**

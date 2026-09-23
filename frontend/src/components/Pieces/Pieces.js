@@ -1,6 +1,7 @@
 import './Pieces.css'
 import Piece from './Piece'
 import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { useAppContext } from '../../contexts/Context'
 import { openPromotion } from '../../reducer/actions/popup'
 import { getCastlingDirections } from '../../arbiter/getMoves'
@@ -42,6 +43,17 @@ const Pieces = () => {
     const isBlack = appState.userColor === 'black';
     const ref = useRef();
 
+    // Pointer-driven drag. The native HTML5 drag hid the real piece and relied
+    // on the browser's drag "ghost" — a snapshot of a transformed (and, for
+    // Black, 180°-rotated) element, which browsers often render blank. So the
+    // piece vanished mid-drag. Here the piece stays on its square, dimmed, and
+    // a full-opacity copy follows the pointer. Pointer events also make drag
+    // work on touch screens, which native drag never did.
+    const drag = useRef(null);          // { piece, rank, file, sx, sy, active }
+    const [ghost, setGhost] = useState(null);
+    const suppressClick = useRef(false);
+    const DRAG_THRESHOLD = 4;           // px — anything less is a tap
+
     const updateCastlingState = ({ piece, file, rank }) => {
         const direction = getCastlingDirections({ castleDirection, piece, file, rank });
         if (direction) dispatch(updateCastling(direction));
@@ -68,9 +80,7 @@ const Pieces = () => {
         return { x, y };
     };
 
-    const move = (e) => {
-        const { x, y } = calculateCoords(e);
-        const [piece, rank, file] = e.dataTransfer.getData("text").split(',');
+    const move = ({ piece, rank, file, x, y }) => {
 
         if (!appState.candidateMoves.find((m) => m[0] === x && m[1] === y)) {
             dispatch(clearCandidates());
@@ -83,7 +93,7 @@ const Pieces = () => {
         // Sitting above the promotion branch below also guarantees the
         // promotion popup can never open mid-drill.
         //
-        // INVARIANT: this runs from onDrop / onClick, never during render.
+        // INVARIANT: this runs from pointer/click handlers, never during render.
         // That is what makes the side effect safe and StrictMode-proof.
         if (gate) {
             gate.onAttempt({
@@ -149,16 +159,72 @@ const Pieces = () => {
         }
     };
 
-    const onDrop = (e) => {
-        e.preventDefault();
-        if (status !== Status.promoting) move(e);
+    const endDrag = () => {
+        drag.current = null;
+        setGhost(null);
     };
 
-    const onDragOver = (e) => {
+    const onPointerDown = (e) => {
+        if (e.button !== 0 || appState.isCustomEditor || status === Status.promoting) return;
+        const { x, y } = calculateCoords(e);
+        const piece = currentPosition[x]?.[y];
+        if (!piece || piece[0] !== turn) return;
+        // Stops text selection starting; the click that follows still fires.
         e.preventDefault();
+        drag.current = { piece, rank: x, file: y, sx: e.clientX, sy: e.clientY, active: false };
+        ref.current.setPointerCapture?.(e.pointerId);
+    };
+
+    const onPointerMove = (e) => {
+        const d = drag.current;
+        if (!d) return;
+        if (!d.active) {
+            if (Math.hypot(e.clientX - d.sx, e.clientY - d.sy) < DRAG_THRESHOLD) return;
+            d.active = true;
+            setSelected(null);
+            setLegal([]);
+            dispatch(generateCandidates({
+                candidateMoves: arbiter.getValidMoves({
+                    position: currentPosition,
+                    prevPosition: history.length > 1 ? history[history.length - 2] : null,
+                    castleDirection: castleDirection[turn],
+                    piece: d.piece,
+                    file: d.file,
+                    rank: d.rank,
+                }),
+            }));
+        }
+        const size = ref.current.getBoundingClientRect().width / 8;
+        setGhost({ piece: d.piece, rank: d.rank, file: d.file, x: e.clientX, y: e.clientY, size });
+    };
+
+    const onPointerUp = (e) => {
+        const d = drag.current;
+        endDrag();
+        if (!d?.active) return;         // a tap: let onBoardClick handle it
+        suppressClick.current = true;   // ...but not the click this release fires
+
+        const { top, left, width } = ref.current.getBoundingClientRect();
+        const inside = e.clientX >= left && e.clientX < left + width
+            && e.clientY >= top && e.clientY < top + width;
+        if (!inside) {
+            dispatch(clearCandidates());
+            return;
+        }
+        const { x, y } = calculateCoords(e);
+        move({ piece: d.piece, rank: d.rank, file: d.file, x, y });
+    };
+
+    const onPointerCancel = () => {
+        if (drag.current?.active) dispatch(clearCandidates());
+        endDrag();
     };
 
     const onBoardClick = (e) => {
+        if (suppressClick.current) {
+            suppressClick.current = false;
+            return;
+        }
         if (appState.isCustomEditor || status === Status.promoting) return;
 
         const prevPosition =
@@ -186,13 +252,7 @@ const Pieces = () => {
 
         const isLegal = legal.find((m) => m[0] === x && m[1] === y);
         if (isLegal) {
-            move({
-                dataTransfer: {
-                    getData: () => `${selected.piece},${selected.rank},${selected.file}`,
-                },
-                clientX: e.clientX,
-                clientY: e.clientY,
-            });
+            move({ piece: selected.piece, rank: selected.rank, file: selected.file, x, y });
             setSelected(null);
             setLegal([]);
             return;
@@ -207,8 +267,10 @@ const Pieces = () => {
         <div
             className='pieces'
             ref={ref}
-            onDrop={onDrop}
-            onDragOver={onDragOver}
+            onPointerDown={onPointerDown}
+            onPointerMove={onPointerMove}
+            onPointerUp={onPointerUp}
+            onPointerCancel={onPointerCancel}
             onClick={onBoardClick}
         >
             {selected && (
@@ -225,9 +287,27 @@ const Pieces = () => {
                             rank={rank}
                             file={file}
                             piece={currentPosition[rank][file]}
+                            dragging={ghost?.rank === rank && ghost?.file === file}
                         />
                         : null
                 )
+            )}
+            {/* Portalled to <body>: .board--black is transformed, and a
+                position:fixed element inside a transformed ancestor is fixed
+                to that ancestor, not the viewport. Outside it, the copy is
+                also upright for both colours without counter-rotation. */}
+            {ghost && createPortal(
+                <div
+                    className={`piece piece--ghost ${ghost.piece}`}
+                    style={{
+                        width: ghost.size,
+                        height: ghost.size,
+                        left: ghost.x - ghost.size / 2,
+                        top: ghost.y - ghost.size / 2,
+                    }}
+                    aria-hidden="true"
+                />,
+                document.body
             )}
         </div>
     );

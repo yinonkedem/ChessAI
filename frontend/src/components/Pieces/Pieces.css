@@ -206,8 +206,27 @@
 .piece.p-60 { transform: translate(600%, 700%) rotate(var(--piece-rot)); }
 .piece.p-70 { transform: translate(700%, 700%) rotate(var(--piece-rot)); }
 
-@media (hover: none) {
-    .piece {
-        -webkit-user-drag: none;
-    }
+/* ---- pointer drag ---- */
+
+/* A drag that starts on a piece must not scroll the page on touch screens.
+   Empty squares keep manipulation, so the page still scrolls from there. */
+.piece {
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* The piece left behind on its square while its copy is being dragged. */
+.piece.is-dragging {
+    opacity: 0.35;
+}
+
+/* The copy that follows the pointer. Rendered in <body>, outside the board. */
+.piece--ghost {
+    position: fixed;
+    pointer-events: none;
+    z-index: 2000;
+    cursor: grabbing;
+    filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.45));
+    transform: scale(1.08);
 }

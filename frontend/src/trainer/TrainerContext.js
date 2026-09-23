@@ -59,7 +59,7 @@ export function TrainerProvider({ children }) {
      * Handed to Pieces.js. Returns null outside a drill, so /game behaves
      * exactly as it always has.
      *
-     * INVARIANT: onAttempt is only ever called from an onDrop / onClick
+     * INVARIANT: onAttempt is only ever called from a pointer-up / click
      * handler, never during render. That is what makes this side effect safe
      * and StrictMode-proof. A future refactor that memoises the move handler
      * must preserve it.
