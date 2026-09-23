@@ -1,0 +1,1439 @@
+{
+ "id": "dragon-black",
+ "title": "Sicilian: Dragon",
+ "family": "1. e4 c5",
+ "blurb": "Fianchetto the bishop on the long diagonal and race White's attack. One of the sharpest main lines in chess.",
+ "side": "b",
+ "difficulty": 4,
+ "lines": [
+  {
+   "id": "dragon-soltis",
+   "label": "Yugoslav Attack, Soltis Variation",
+   "eco": "B78",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Old Line",
+   "path": "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6f1c4c8d7e1c1a8c8c4b3c6e5h2h4h7h5e3g5c8c5c1b1f8e8",
+   "plies": 28
+  },
+  {
+   "id": "dragon-yugoslav-kb1",
+   "label": "Yugoslav Attack, 12.Kb1",
+   "eco": "B78",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Old Line",
+   "path": "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6f1c4c8d7e1c1a8c8c4b3c6e5c1b1e5c4b3c4c8c4g2g4b7b5b2b3c4c8",
+   "plies": 30
+  },
+  {
+   "id": "dragon-yugoslav-d5",
+   "label": "Yugoslav Attack, 9.O-O-O d5",
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line",
+   "path": "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1d6d5e4d5f6d5d4c6b7c6e3d4g7d4d2d4d8b6c3a4b6c7f1c4c8f5c4b3a8d8",
+   "plies": 32
+  },
+  {
+   "id": "dragon-yugoslav-nxd4",
+   "label": "Yugoslav Attack, 9.O-O-O Nxd4",
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line",
+   "path": "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1c6d4e3d4c8e6c1b1d8c7h2h4f8c8h4h5c7a5",
+   "plies": 26
+  },
+  {
+   "id": "dragon-yugoslav-g4",
+   "label": "Yugoslav Attack, 9.g4",
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Panov Variation",
+   "path": "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6g2g4c8e6d4e6f7e6e1c1c6e5f1e2d8c8c1b1a7a6h2h4b7b5",
+   "plies": 28
+  },
+  {
+   "id": "dragon-classical",
+   "label": "Classical Variation",
+   "eco": "B74",
+   "name": "Sicilian Defense: Dragon Variation, Classical Variation, Tartakower Line",
+   "path": "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f1e2f8g7c1e3b8c6e1g1e8g8d4b3c8e6f2f4d8c8g1h1f8d8e2f3e6c4f1f2e7e5",
+   "plies": 26
+  },
+  {
+   "id": "dragon-levenfish",
+   "label": "Levenfish Attack",
+   "eco": "B71",
+   "name": "Sicilian Defense: Dragon Variation, Levenfish Variation, Main Line",
+   "path": "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f2f4b8d7d4f3f8g7f1d3e8g8e1g1d7c5d1e1c5d3c2d3b7b6",
+   "plies": 22
+  }
+ ],
+ "nodes": {
+  "": {
+   "ply": 0,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e2e4",
+     "san": "e4"
+    }
+   ]
+  },
+  "e2e4": {
+   "ply": 1,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c7c5",
+     "san": "c5",
+     "idea": "Fight for d4 from the side. You get an unbalanced game from move one."
+    }
+   ],
+   "eco": "B00",
+   "name": "King's Pawn Game"
+  },
+  "e2e4c7c5": {
+   "ply": 2,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3"
+    }
+   ],
+   "eco": "B20",
+   "name": "Sicilian Defense"
+  },
+  "e2e4c7c5g1f3": {
+   "ply": 3,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6",
+     "idea": "Keep e5 covered and open a route for the queen's bishop."
+    }
+   ],
+   "eco": "B27",
+   "name": "Sicilian Defense"
+  },
+  "e2e4c7c5g1f3d7d6": {
+   "ply": 4,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4"
+    }
+   ],
+   "eco": "B50",
+   "name": "Sicilian Defense: Modern Variations"
+  },
+  "e2e4c7c5g1f3d7d6d2d4": {
+   "ply": 5,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c5d4",
+     "san": "cxd4",
+     "idea": "Trade a flank pawn for White's centre pawn."
+    }
+   ],
+   "eco": "B50",
+   "name": "Sicilian Defense"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4": {
+   "ply": 6,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3d4",
+     "san": "Nxd4"
+    }
+   ],
+   "eco": "B50",
+   "name": "Sicilian Defense"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4": {
+   "ply": 7,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6",
+     "idea": "Develop with a threat to e4. White has to defend it."
+    }
+   ],
+   "eco": "B50",
+   "name": "Sicilian Defense"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3"
+    }
+   ],
+   "eco": "B54",
+   "name": "Sicilian Defense: Modern Variations, Main Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g7g6",
+     "san": "g6",
+     "idea": "The Dragon. The bishop is going to g7, onto the long diagonal."
+    }
+   ],
+   "eco": "B54",
+   "name": "Sicilian Defense: Modern Variations, Main Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1e3",
+     "san": "Be3"
+    },
+    {
+     "uci": "f1e2",
+     "san": "Be2"
+    },
+    {
+     "uci": "f2f4",
+     "san": "f4"
+    }
+   ],
+   "eco": "B70",
+   "name": "Sicilian Defense: Dragon Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8g7",
+     "san": "Bg7",
+     "idea": "The Dragon bishop. It bears on d4, b2, and the queenside where White's king will go."
+    }
+   ],
+   "eco": "B72",
+   "name": "Sicilian Defense: Dragon Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f2f3",
+     "san": "f3"
+    }
+   ],
+   "eco": "B72",
+   "name": "Sicilian Defense: Dragon Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle before White's pawns get going."
+    }
+   ],
+   "eco": "B75",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Early Deviations"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1d2",
+     "san": "Qd2"
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6",
+     "idea": "Develop and hit d4. Both kings will be under fire soon."
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1c4",
+     "san": "Bc4"
+    },
+    {
+     "uci": "e1c1",
+     "san": "O-O-O"
+    },
+    {
+     "uci": "g2g4",
+     "san": "g4"
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6f1c4": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8d7",
+     "san": "Bd7",
+     "idea": "Connect the rooks and prepare ...Rc8 on the half-open file."
+    }
+   ],
+   "eco": "B77",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Main Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6f1c4c8d7": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1c1",
+     "san": "O-O-O"
+    }
+   ],
+   "eco": "B77",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Main Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6f1c4c8d7e1c1": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a8c8",
+     "san": "Rc8",
+     "idea": "The rook takes the c-file, straight at White's king."
+    }
+   ],
+   "eco": "B78",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6f1c4c8d7e1c1a8c8": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c4b3",
+     "san": "Bb3"
+    }
+   ],
+   "eco": "B78",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Old Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6f1c4c8d7e1c1a8c8c4b3": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c6e5",
+     "san": "Ne5",
+     "idea": "Head for c4 to trade the dangerous bishop."
+    }
+   ],
+   "eco": "B78",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Old Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6f1c4c8d7e1c1a8c8c4b3c6e5": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h2h4",
+     "san": "h4"
+    },
+    {
+     "uci": "c1b1",
+     "san": "Kb1"
+    }
+   ],
+   "eco": "B78",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Old Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6f1c4c8d7e1c1a8c8c4b3c6e5h2h4": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h7h5",
+     "san": "h5",
+     "idea": "The Soltis Variation. Stop h5 cold and keep the h-file closed."
+    }
+   ],
+   "eco": "B78",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Old Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6f1c4c8d7e1c1a8c8c4b3c6e5h2h4h7h5": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e3g5",
+     "san": "Bg5"
+    }
+   ],
+   "eco": "B78",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Old Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6f1c4c8d7e1c1a8c8c4b3c6e5h2h4h7h5e3g5": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8c5",
+     "san": "Rc5",
+     "idea": "The rook lift. From c5 it covers g5 and d5, and it can swing to the kingside."
+    }
+   ],
+   "eco": "B78",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Old Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6f1c4c8d7e1c1a8c8c4b3c6e5h2h4h7h5e3g5c8c5": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1b1",
+     "san": "Kb1"
+    }
+   ],
+   "eco": "B78",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Old Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6f1c4c8d7e1c1a8c8c4b3c6e5h2h4h7h5e3g5c8c5c1b1": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8e8",
+     "san": "Re8",
+     "idea": "Free f8 for the bishop, so your king gets a defender if the h-file opens."
+    }
+   ],
+   "eco": "B78",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Old Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6f1c4c8d7e1c1a8c8c4b3c6e5h2h4h7h5e3g5c8c5c1b1f8e8": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "B78",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Old Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6f1c4c8d7e1c1a8c8c4b3c6e5c1b1": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e5c4",
+     "san": "Nc4",
+     "idea": "Trade off the bishop on b3. It's White's best attacker."
+    }
+   ],
+   "eco": "B78",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Old Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6f1c4c8d7e1c1a8c8c4b3c6e5c1b1e5c4": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b3c4",
+     "san": "Bxc4"
+    }
+   ],
+   "eco": "B78",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Old Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6f1c4c8d7e1c1a8c8c4b3c6e5c1b1e5c4b3c4": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8c4",
+     "san": "Rxc4",
+     "idea": "Recapture with the rook, which stays active on c4."
+    }
+   ],
+   "eco": "B78",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Old Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6f1c4c8d7e1c1a8c8c4b3c6e5c1b1e5c4b3c4c8c4": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g2g4",
+     "san": "g4"
+    }
+   ],
+   "eco": "B78",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Old Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6f1c4c8d7e1c1a8c8c4b3c6e5c1b1e5c4b3c4c8c4g2g4": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b7b5",
+     "san": "b5",
+     "idea": "Throw the b-pawn at White's king. In the Dragon, speed decides."
+    }
+   ],
+   "eco": "B78",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Old Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6f1c4c8d7e1c1a8c8c4b3c6e5c1b1e5c4b3c4c8c4g2g4b7b5": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b2b3",
+     "san": "b3"
+    }
+   ],
+   "eco": "B78",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Old Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6f1c4c8d7e1c1a8c8c4b3c6e5c1b1e5c4b3c4c8c4g2g4b7b5b2b3": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c4c8",
+     "san": "Rc8",
+     "idea": "Back off with the rook. The b-pawn and the g7 bishop still aim at the king."
+    }
+   ],
+   "eco": "B78",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Old Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6f1c4c8d7e1c1a8c8c4b3c6e5c1b1e5c4b3c4c8c4g2g4b7b5b2b3c4c8": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "B78",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Old Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d6d5",
+     "san": "d5",
+     "idea": "Strike in the centre at once. Against queenside castling, ...d5 is the thematic pawn sacrifice."
+    },
+    {
+     "uci": "c6d4",
+     "san": "Nxd4",
+     "idea": "Trade knights first. It clears the way for ...Be6 and ...Qa5."
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1d6d5": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4d5",
+     "san": "exd5"
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1d6d5e4d5": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6d5",
+     "san": "Nxd5",
+     "idea": "Recapture and open the long diagonal for your bishop."
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1d6d5e4d5f6d5": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4c6",
+     "san": "Nxc6"
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1d6d5e4d5f6d5d4c6": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b7c6",
+     "san": "bxc6",
+     "idea": "Take toward the centre. The open b-file points at White's king."
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1d6d5e4d5f6d5d4c6b7c6": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e3d4",
+     "san": "Bd4"
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1d6d5e4d5f6d5d4c6b7c6e3d4": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g7d4",
+     "san": "Bxd4",
+     "idea": "Trade the dark-squared bishops. With fewer attackers, your weak pawns matter less."
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1d6d5e4d5f6d5d4c6b7c6e3d4g7d4": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "Qxd4"
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1d6d5e4d5f6d5d4c6b7c6e3d4g7d4d2d4": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8b6",
+     "san": "Qb6",
+     "idea": "Offer the queen trade and hit b2."
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1d6d5e4d5f6d5d4c6b7c6e3d4g7d4d2d4d8b6": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c3a4",
+     "san": "Na4"
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1d6d5e4d5f6d5d4c6b7c6e3d4g7d4d2d4d8b6c3a4": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b6c7",
+     "san": "Qc7",
+     "idea": "Step off b6 before the knight takes. The queen stays aimed at the kingside."
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1d6d5e4d5f6d5d4c6b7c6e3d4g7d4d2d4d8b6c3a4b6c7": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1c4",
+     "san": "Bc4"
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1d6d5e4d5f6d5d4c6b7c6e3d4g7d4d2d4d8b6c3a4b6c7f1c4": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8f5",
+     "san": "Bf5",
+     "idea": "Develop with tempo toward c2 and b1."
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1d6d5e4d5f6d5d4c6b7c6e3d4g7d4d2d4d8b6c3a4b6c7f1c4c8f5": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c4b3",
+     "san": "Bb3"
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1d6d5e4d5f6d5d4c6b7c6e3d4g7d4d2d4d8b6c3a4b6c7f1c4c8f5c4b3": {
+   "ply": 31,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a8d8",
+     "san": "Rad8",
+     "idea": "The last piece joins, and the rook takes the d-file."
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1d6d5e4d5f6d5d4c6b7c6e3d4g7d4d2d4d8b6c3a4b6c7f1c4c8f5c4b3a8d8": {
+   "ply": 32,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1c6d4": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e3d4",
+     "san": "Bxd4"
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1c6d4e3d4": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8e6",
+     "san": "Be6",
+     "idea": "The bishop comes to e6, aiming at a2 and preparing ...Qa5."
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1c6d4e3d4c8e6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1b1",
+     "san": "Kb1"
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1c6d4e3d4c8e6c1b1": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8c7",
+     "san": "Qc7",
+     "idea": "The queen lines up on the c-file toward c3 and c2."
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1c6d4e3d4c8e6c1b1d8c7": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h2h4",
+     "san": "h4"
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1c6d4e3d4c8e6c1b1d8c7h2h4": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8c8",
+     "san": "Rfc8",
+     "idea": "Double on the c-file. The c3 knight is under heavy fire."
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1c6d4e3d4c8e6c1b1d8c7h2h4f8c8": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h4h5",
+     "san": "h5"
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1c6d4e3d4c8e6c1b1d8c7h2h4f8c8h4h5": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c7a5",
+     "san": "Qa5",
+     "idea": "The queen heads for a5, so a2 and the c3 knight come under attack. Keep an eye on the h-file."
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6e1c1c6d4e3d4c8e6c1b1d8c7h2h4f8c8h4h5c7a5": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6g2g4": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8e6",
+     "san": "Be6",
+     "idea": "Challenge the d4 knight. If White takes, you get the half-open f-file."
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Panov Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6g2g4c8e6": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4e6",
+     "san": "Nxe6"
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Panov Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6g2g4c8e6d4e6": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f7e6",
+     "san": "fxe6",
+     "idea": "Recapture toward the centre. The f-file opens for your rook."
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Panov Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6g2g4c8e6d4e6f7e6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1c1",
+     "san": "O-O-O"
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Panov Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6g2g4c8e6d4e6f7e6e1c1": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c6e5",
+     "san": "Ne5",
+     "idea": "Centralise the knight. It eyes c4 and f3."
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Panov Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6g2g4c8e6d4e6f7e6e1c1c6e5": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1e2",
+     "san": "Be2"
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Panov Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6g2g4c8e6d4e6f7e6e1c1c6e5f1e2": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8c8",
+     "san": "Qc8",
+     "idea": "The queen heads for c4 and the queenside."
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Panov Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6g2g4c8e6d4e6f7e6e1c1c6e5f1e2d8c8": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1b1",
+     "san": "Kb1"
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Panov Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6g2g4c8e6d4e6f7e6e1c1c6e5f1e2d8c8c1b1": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a7a6",
+     "san": "a6",
+     "idea": "Prepare ...b5 and start the pawn storm."
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Panov Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6g2g4c8e6d4e6f7e6e1c1c6e5f1e2d8c8c1b1a7a6": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h2h4",
+     "san": "h4"
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Panov Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6g2g4c8e6d4e6f7e6e1c1c6e5f1e2d8c8c1b1a7a6h2h4": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b7b5",
+     "san": "b5",
+     "idea": "Go. Your queenside attack has to be faster than White's h-pawn."
+    }
+   ],
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Panov Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6c1e3f8g7f2f3e8g8d1d2b8c6g2g4c8e6d4e6f7e6e1c1c6e5f1e2d8c8c1b1a7a6h2h4b7b5": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "B76",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Panov Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f1e2": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8g7",
+     "san": "Bg7",
+     "idea": "The same Dragon bishop, whatever White does."
+    }
+   ],
+   "eco": "B70",
+   "name": "Sicilian Defense: Dragon Variation, Classical Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f1e2f8g7": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1e3",
+     "san": "Be3"
+    }
+   ],
+   "eco": "B70",
+   "name": "Sicilian Defense: Dragon Variation, Classical Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f1e2f8g7c1e3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6",
+     "idea": "Develop and hit d4."
+    }
+   ],
+   "eco": "B72",
+   "name": "Sicilian Defense: Dragon Variation, Classical Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f1e2f8g7c1e3b8c6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O"
+    }
+   ],
+   "eco": "B72",
+   "name": "Sicilian Defense: Dragon Variation, Classical Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f1e2f8g7c1e3b8c6e1g1": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle. Against the Classical there's no rush."
+    }
+   ],
+   "eco": "B73",
+   "name": "Sicilian Defense: Dragon Variation, Classical Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f1e2f8g7c1e3b8c6e1g1e8g8": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4b3",
+     "san": "Nb3"
+    }
+   ],
+   "eco": "B73",
+   "name": "Sicilian Defense: Dragon Variation, Classical Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f1e2f8g7c1e3b8c6e1g1e8g8d4b3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8e6",
+     "san": "Be6",
+     "idea": "Develop with tempo, aiming at c4 and a2."
+    }
+   ],
+   "eco": "B74",
+   "name": "Sicilian Defense: Dragon Variation, Classical Variation, Normal Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f1e2f8g7c1e3b8c6e1g1e8g8d4b3c8e6": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f2f4",
+     "san": "f4"
+    }
+   ],
+   "eco": "B74",
+   "name": "Sicilian Defense: Dragon Variation, Classical Variation, Normal Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f1e2f8g7c1e3b8c6e1g1e8g8d4b3c8e6f2f4": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8c8",
+     "san": "Qc8",
+     "idea": "Watch c4 and h3, and connect the rooks."
+    }
+   ],
+   "eco": "B74",
+   "name": "Sicilian Defense: Dragon Variation, Classical Variation, Normal Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f1e2f8g7c1e3b8c6e1g1e8g8d4b3c8e6f2f4d8c8": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1h1",
+     "san": "Kh1"
+    }
+   ],
+   "eco": "B74",
+   "name": "Sicilian Defense: Dragon Variation, Classical Variation, Tartakower Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f1e2f8g7c1e3b8c6e1g1e8g8d4b3c8e6f2f4d8c8g1h1": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8d8",
+     "san": "Rd8",
+     "idea": "The rook takes the d-file, facing the d-pawn White can't easily push."
+    }
+   ],
+   "eco": "B74",
+   "name": "Sicilian Defense: Dragon Variation, Classical Variation, Tartakower Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f1e2f8g7c1e3b8c6e1g1e8g8d4b3c8e6f2f4d8c8g1h1f8d8": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e2f3",
+     "san": "Bf3"
+    }
+   ],
+   "eco": "B74",
+   "name": "Sicilian Defense: Dragon Variation, Classical Variation, Tartakower Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f1e2f8g7c1e3b8c6e1g1e8g8d4b3c8e6f2f4d8c8g1h1f8d8e2f3": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e6c4",
+     "san": "Bc4",
+     "idea": "Take the c4 square, eyeing White's f1 and e2."
+    }
+   ],
+   "eco": "B74",
+   "name": "Sicilian Defense: Dragon Variation, Classical Variation, Tartakower Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f1e2f8g7c1e3b8c6e1g1e8g8d4b3c8e6f2f4d8c8g1h1f8d8e2f3e6c4": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1f2",
+     "san": "Rf2"
+    }
+   ],
+   "eco": "B74",
+   "name": "Sicilian Defense: Dragon Variation, Classical Variation, Tartakower Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f1e2f8g7c1e3b8c6e1g1e8g8d4b3c8e6f2f4d8c8g1h1f8d8e2f3e6c4f1f2": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e7e5",
+     "san": "e5",
+     "idea": "Strike at f4 while White's pieces are tied up."
+    }
+   ],
+   "eco": "B74",
+   "name": "Sicilian Defense: Dragon Variation, Classical Variation, Tartakower Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f1e2f8g7c1e3b8c6e1g1e8g8d4b3c8e6f2f4d8c8g1h1f8d8e2f3e6c4f1f2e7e5": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "B74",
+   "name": "Sicilian Defense: Dragon Variation, Classical Variation, Tartakower Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f2f4": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8d7",
+     "san": "Nbd7",
+     "idea": "Cover e5 so White's e4–e5 push is blocked. After ...Nc6, e5 would come at once."
+    }
+   ],
+   "eco": "B71",
+   "name": "Sicilian Defense: Dragon Variation, Levenfish Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f2f4b8d7": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4f3",
+     "san": "Nf3"
+    }
+   ],
+   "eco": "B71",
+   "name": "Sicilian Defense: Dragon Variation, Levenfish Variation, Main Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f2f4b8d7d4f3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8g7",
+     "san": "Bg7",
+     "idea": "The Dragon bishop gets out anyway."
+    }
+   ],
+   "eco": "B71",
+   "name": "Sicilian Defense: Dragon Variation, Levenfish Variation, Main Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f2f4b8d7d4f3f8g7": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1d3",
+     "san": "Bd3"
+    }
+   ],
+   "eco": "B71",
+   "name": "Sicilian Defense: Dragon Variation, Levenfish Variation, Main Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f2f4b8d7d4f3f8g7f1d3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle before the centre opens."
+    }
+   ],
+   "eco": "B71",
+   "name": "Sicilian Defense: Dragon Variation, Levenfish Variation, Main Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f2f4b8d7d4f3f8g7f1d3e8g8": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O"
+    }
+   ],
+   "eco": "B71",
+   "name": "Sicilian Defense: Dragon Variation, Levenfish Variation, Main Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f2f4b8d7d4f3f8g7f1d3e8g8e1g1": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7c5",
+     "san": "Nc5",
+     "idea": "Hit the bishop on d3. Trading it takes the sting out of White's attack."
+    }
+   ],
+   "eco": "B71",
+   "name": "Sicilian Defense: Dragon Variation, Levenfish Variation, Main Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f2f4b8d7d4f3f8g7f1d3e8g8e1g1d7c5": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1e1",
+     "san": "Qe1"
+    }
+   ],
+   "eco": "B71",
+   "name": "Sicilian Defense: Dragon Variation, Levenfish Variation, Main Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f2f4b8d7d4f3f8g7f1d3e8g8e1g1d7c5d1e1": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c5d3",
+     "san": "Nxd3",
+     "idea": "Take the bishop. The bishop pair is yours."
+    }
+   ],
+   "eco": "B71",
+   "name": "Sicilian Defense: Dragon Variation, Levenfish Variation, Main Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f2f4b8d7d4f3f8g7f1d3e8g8e1g1d7c5d1e1c5d3": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c2d3",
+     "san": "cxd3"
+    }
+   ],
+   "eco": "B71",
+   "name": "Sicilian Defense: Dragon Variation, Levenfish Variation, Main Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f2f4b8d7d4f3f8g7f1d3e8g8e1g1d7c5d1e1c5d3c2d3": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b7b6",
+     "san": "b6",
+     "idea": "The last bishop heads for b7 and the long diagonal."
+    }
+   ],
+   "eco": "B71",
+   "name": "Sicilian Defense: Dragon Variation, Levenfish Variation, Main Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3g7g6f2f4b8d7d4f3f8g7f1d3e8g8e1g1d7c5d1e1c5d3c2d3b7b6": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "B71",
+   "name": "Sicilian Defense: Dragon Variation, Levenfish Variation, Main Line"
+  }
+ }
+}

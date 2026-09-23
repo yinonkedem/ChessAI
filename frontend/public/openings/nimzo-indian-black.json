@@ -37,6 +37,14 @@
    "name": "Nimzo-Indian Defense: Sämisch Variation, Capablanca Variation",
    "path": "d2d4g8f6c2c4e7e6b1c3f8b4a2a3b4c3b2c3c7c5e2e3b8c6f1d3e8g8g1e2b7b6e3e4f6e8e1g1c8a6",
    "plies": 20
+  },
+  {
+   "id": "nimzo-hubner",
+   "label": "Rubinstein, Hübner plan (4...c5)",
+   "eco": "E41",
+   "name": "Nimzo-Indian Defense: Rubinstein System, Hübner Variation",
+   "path": "d2d4g8f6c2c4e7e6b1c3f8b4e2e3c7c5f1d3b8c6g1f3b4c3b2c3d7d6e3e4e6e5d4d5c6e7f3h4h7h6f2f4e7g6",
+   "plies": 22
   }
  ],
  "nodes": {
@@ -130,18 +138,15 @@
     },
     {
      "uci": "d1c2",
-     "san": "Qc2",
-     "idea": "Castle. White has spent a tempo avoiding doubled pawns; use it."
+     "san": "Qc2"
     },
     {
      "uci": "g1f3",
-     "san": "Nf3",
-     "idea": "Fianchetto immediately — the two bishops will cover both centre colours."
+     "san": "Nf3"
     },
     {
      "uci": "a2a3",
-     "san": "a3",
-     "idea": "Take. White has spent a whole tempo to inflict doubled pawns on themselves."
+     "san": "a3"
     }
    ],
    "eco": "E20",
@@ -156,6 +161,11 @@
      "uci": "e8g8",
      "san": "O-O",
      "idea": "Castle and let White declare their plan."
+    },
+    {
+     "uci": "c7c5",
+     "san": "c5",
+     "idea": "Hit d4 right away. This is the Hübner plan: trade on c3 and lock the centre."
     }
    ],
    "eco": "E40",
@@ -353,8 +363,7 @@
    "replies": [
     {
      "uci": "a2a3",
-     "san": "a3",
-     "idea": "Trade on your terms — you were going to anyway."
+     "san": "a3"
     }
    ],
    "eco": "E32",
@@ -381,8 +390,7 @@
    "replies": [
     {
      "uci": "c2c3",
-     "san": "Qxc3",
-     "idea": "Fianchetto. Without the dark-squared bishop, the light squares are your territory."
+     "san": "Qxc3"
     }
    ],
    "eco": "E32",
@@ -409,8 +417,7 @@
    "replies": [
     {
      "uci": "c1g5",
-     "san": "Bg5",
-     "idea": "The bishop belongs on the long diagonal, staring at e4."
+     "san": "Bg5"
     }
    ],
    "eco": "E32",
@@ -437,8 +444,7 @@
    "replies": [
     {
      "uci": "f2f3",
-     "san": "f3",
-     "idea": "Ask the question before White is ready to answer it."
+     "san": "f3"
     }
    ],
    "eco": "E32",
@@ -465,8 +471,7 @@
    "replies": [
     {
      "uci": "g5h4",
-     "san": "Bh4",
-     "idea": "Strike in the centre now that White's kingside is loosened."
+     "san": "Bh4"
     }
    ],
    "eco": "E32",
@@ -493,8 +498,7 @@
    "replies": [
     {
      "uci": "e2e3",
-     "san": "e3",
-     "idea": "Complete development and prepare ...c5."
+     "san": "e3"
     }
    ],
    "eco": "E32",
@@ -544,8 +548,7 @@
    "replies": [
     {
      "uci": "c1g5",
-     "san": "Bg5",
-     "idea": "Onto the long diagonal."
+     "san": "Bg5"
     }
    ],
    "eco": "E21",
@@ -572,8 +575,7 @@
    "replies": [
     {
      "uci": "e2e3",
-     "san": "e3",
-     "idea": "Put the question to the bishop before castling."
+     "san": "e3"
     }
    ],
    "eco": "E21",
@@ -600,8 +602,7 @@
    "replies": [
     {
      "uci": "g5h4",
-     "san": "Bh4",
-     "idea": "Trade now, while it costs White a pawn structure."
+     "san": "Bh4"
     }
    ],
    "eco": "E21",
@@ -628,8 +629,7 @@
    "replies": [
     {
      "uci": "b2c3",
-     "san": "bxc3",
-     "idea": "Solid. You are heading for ...e5 and a blockade on the dark squares."
+     "san": "bxc3"
     }
    ],
    "eco": "E21",
@@ -656,8 +656,7 @@
    "replies": [
     {
      "uci": "f3d2",
-     "san": "Nd2",
-     "idea": "Support the coming ...e5."
+     "san": "Nd2"
     }
    ],
    "eco": "E21",
@@ -684,8 +683,7 @@
    "replies": [
     {
      "uci": "f2f3",
-     "san": "f3",
-     "idea": "Connect the rooks and prepare to castle either side."
+     "san": "f3"
     }
    ],
    "eco": "E21",
@@ -735,8 +733,7 @@
    "replies": [
     {
      "uci": "b2c3",
-     "san": "bxc3",
-     "idea": "Hit the base of the pawn chain at once."
+     "san": "bxc3"
     }
    ],
    "eco": "E24",
@@ -763,8 +760,7 @@
    "replies": [
     {
      "uci": "e2e3",
-     "san": "e3",
-     "idea": "Pile onto d4 — White's centre looks big but it is brittle."
+     "san": "e3"
     }
    ],
    "eco": "E24",
@@ -791,8 +787,7 @@
    "replies": [
     {
      "uci": "f1d3",
-     "san": "Bd3",
-     "idea": "Castle before the centre opens."
+     "san": "Bd3"
     }
    ],
    "eco": "E26",
@@ -819,8 +814,7 @@
    "replies": [
     {
      "uci": "g1e2",
-     "san": "Ne2",
-     "idea": "Prepare ...Ba6, trading off the bishop that defends c4."
+     "san": "Ne2"
     }
    ],
    "eco": "E29",
@@ -847,8 +841,7 @@
    "replies": [
     {
      "uci": "e3e4",
-     "san": "e4",
-     "idea": "Sidestep so the f-pawn and the dark-squared squares stay flexible."
+     "san": "e4"
     }
    ],
    "eco": "E29",
@@ -875,8 +868,7 @@
    "replies": [
     {
      "uci": "e1g1",
-     "san": "O-O",
-     "idea": "The point. Trade light-squared bishops and the c4 pawn has no defender."
+     "san": "O-O"
     }
    ],
    "eco": "E29",
@@ -904,6 +896,204 @@
    "end": true,
    "eco": "E29",
    "name": "Nimzo-Indian Defense: Sämisch Variation, Capablanca Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3c7c5": {
+   "ply": 8,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1d3",
+     "san": "Bd3"
+    }
+   ],
+   "eco": "E41",
+   "name": "Nimzo-Indian Defense: Rubinstein System"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3c7c5f1d3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6",
+     "idea": "Pile onto d4."
+    }
+   ],
+   "eco": "E41",
+   "name": "Nimzo-Indian Defense: Rubinstein System"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3c7c5f1d3b8c6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3"
+    }
+   ],
+   "eco": "E41",
+   "name": "Nimzo-Indian Defense: Rubinstein System"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3c7c5f1d3b8c6g1f3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b4c3",
+     "san": "Bxc3+",
+     "idea": "Take on c3 now that White has spent a move on Nf3. The doubled pawns are fixed."
+    }
+   ],
+   "eco": "E41",
+   "name": "Nimzo-Indian Defense: Rubinstein System"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3c7c5f1d3b8c6g1f3b4c3": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b2c3",
+     "san": "bxc3"
+    }
+   ],
+   "eco": "E41",
+   "name": "Nimzo-Indian Defense: Rubinstein System"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3c7c5f1d3b8c6g1f3b4c3b2c3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6",
+     "idea": "Pawns to d6 and then e5. Your dark-squared bishop is gone, so the pawns guard the dark squares."
+    }
+   ],
+   "eco": "E41",
+   "name": "Nimzo-Indian Defense: Rubinstein System"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3c7c5f1d3b8c6g1f3b4c3b2c3d7d6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e3e4",
+     "san": "e4"
+    }
+   ],
+   "eco": "E41",
+   "name": "Nimzo-Indian Defense: Rubinstein System, Hübner Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3c7c5f1d3b8c6g1f3b4c3b2c3d7d6e3e4": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e6e5",
+     "san": "e5",
+     "idea": "Lock the centre. White's bishop pair is blunted by the blocked pawns."
+    }
+   ],
+   "eco": "E41",
+   "name": "Nimzo-Indian Defense: Rubinstein System, Hübner Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3c7c5f1d3b8c6g1f3b4c3b2c3d7d6e3e4e6e5": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4d5",
+     "san": "d5"
+    }
+   ],
+   "eco": "E41",
+   "name": "Nimzo-Indian Defense: Rubinstein System, Hübner Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3c7c5f1d3b8c6g1f3b4c3b2c3d7d6e3e4e6e5d4d5": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c6e7",
+     "san": "Ne7",
+     "idea": "Retreat toward g6, covering f5."
+    }
+   ],
+   "eco": "E41",
+   "name": "Nimzo-Indian Defense: Rubinstein System, Hübner Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3c7c5f1d3b8c6g1f3b4c3b2c3d7d6e3e4e6e5d4d5c6e7": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3h4",
+     "san": "Nh4"
+    }
+   ],
+   "eco": "E41",
+   "name": "Nimzo-Indian Defense: Rubinstein System, Hübner Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3c7c5f1d3b8c6g1f3b4c3b2c3d7d6e3e4e6e5d4d5c6e7f3h4": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h7h6",
+     "san": "h6",
+     "idea": "Keep the knight out of g5 and prepare ...Ng6."
+    }
+   ],
+   "eco": "E41",
+   "name": "Nimzo-Indian Defense: Rubinstein System, Hübner Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3c7c5f1d3b8c6g1f3b4c3b2c3d7d6e3e4e6e5d4d5c6e7f3h4h7h6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f2f4",
+     "san": "f4"
+    }
+   ],
+   "eco": "E41",
+   "name": "Nimzo-Indian Defense: Rubinstein System, Hübner Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3c7c5f1d3b8c6g1f3b4c3b2c3d7d6e3e4e6e5d4d5c6e7f3h4h7h6f2f4": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e7g6",
+     "san": "Ng6",
+     "idea": "Challenge the h4 knight and hold f4."
+    }
+   ],
+   "eco": "E41",
+   "name": "Nimzo-Indian Defense: Rubinstein System, Hübner Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3c7c5f1d3b8c6g1f3b4c3b2c3d7d6e3e4e6e5d4d5c6e7f3h4h7h6f2f4e7g6": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "E41",
+   "name": "Nimzo-Indian Defense: Rubinstein System, Hübner Variation"
   }
  }
 }

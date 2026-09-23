@@ -37,6 +37,14 @@
    "name": "King's Indian Defense: Fianchetto Variation, Classical Main Line",
    "path": "d2d4g8f6c2c4g7g6b1c3f8g7g1f3d7d6g2g3e8g8f1g2b8d7e1g1e7e5e2e4c7c6h2h3d8b6f1e1e5d4",
    "plies": 20
+  },
+  {
+   "id": "kid-classical-na6",
+   "label": "Classical, Glek (7...Na6)",
+   "eco": "E94",
+   "name": "King's Indian Defense: Orthodox Variation, Glek Defense",
+   "path": "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8a6c1e3f6g4e3g5d8e8d4e5d6e5h2h3h7h6g5d2g4f6",
+   "plies": 24
   }
  ],
  "nodes": {
@@ -234,6 +242,11 @@
      "uci": "b8c6",
      "san": "Nc6",
      "idea": "Add a third attacker to d4 and provoke the advance."
+    },
+    {
+     "uci": "b8a6",
+     "san": "Na6",
+     "idea": "The knight goes to a6 instead of c6. From there it can reach c5, and ...exd4 stays possible."
     }
    ],
    "eco": "E94",
@@ -612,8 +625,7 @@
    "replies": [
     {
      "uci": "g2g3",
-     "san": "g3",
-     "idea": "Develop toward the centre and support the coming ...e5."
+     "san": "g3"
     }
    ],
    "eco": "E61",
@@ -640,8 +652,7 @@
    "replies": [
     {
      "uci": "f1g2",
-     "san": "Bg2",
-     "idea": "The break, now properly prepared."
+     "san": "Bg2"
     }
    ],
    "eco": "E62",
@@ -668,8 +679,7 @@
    "replies": [
     {
      "uci": "e1g1",
-     "san": "O-O",
-     "idea": "Solid. Against the fianchetto you play for ...Qb6 and queenside pressure, not a kingside attack."
+     "san": "O-O"
     }
    ],
    "eco": "E67",
@@ -696,8 +706,7 @@
    "replies": [
     {
      "uci": "e2e4",
-     "san": "e4",
-     "idea": "Hit b2 and d4 while White's bishop is committed to g2."
+     "san": "e4"
     }
    ],
    "eco": "E67",
@@ -724,8 +733,7 @@
    "replies": [
     {
      "uci": "h2h3",
-     "san": "h3",
-     "idea": "Release the tension on your terms and play against the isolated centre."
+     "san": "h3"
     }
    ],
    "eco": "E68",
@@ -780,6 +788,150 @@
    "end": true,
    "eco": "E69",
    "name": "King's Indian Defense: Fianchetto Variation, Classical Main Line"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8a6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1e3",
+     "san": "Be3"
+    }
+   ],
+   "eco": "E94",
+   "name": "King's Indian Defense: Orthodox Variation, Glek Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8a6c1e3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6g4",
+     "san": "Ng4",
+     "idea": "Hit the bishop. White doesn't want to lose it."
+    }
+   ],
+   "eco": "E94",
+   "name": "King's Indian Defense: Orthodox Variation, Glek Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8a6c1e3f6g4": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e3g5",
+     "san": "Bg5"
+    }
+   ],
+   "eco": "E94",
+   "name": "King's Indian Defense: Orthodox Variation, Glek Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8a6c1e3f6g4e3g5": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8e8",
+     "san": "Qe8",
+     "idea": "Break the pin and protect e5."
+    }
+   ],
+   "eco": "E94",
+   "name": "King's Indian Defense: Orthodox Variation, Glek Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8a6c1e3f6g4e3g5d8e8": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4e5",
+     "san": "dxe5"
+    }
+   ],
+   "eco": "E94",
+   "name": "King's Indian Defense: Orthodox Variation, Glek Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8a6c1e3f6g4e3g5d8e8d4e5": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d6e5",
+     "san": "dxe5",
+     "idea": "Recapture. The centre is fixed and c5 is ready for your knight."
+    }
+   ],
+   "eco": "E94",
+   "name": "King's Indian Defense: Orthodox Variation, Glek Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8a6c1e3f6g4e3g5d8e8d4e5d6e5": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h2h3",
+     "san": "h3"
+    }
+   ],
+   "eco": "E94",
+   "name": "King's Indian Defense: Orthodox Variation, Glek Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8a6c1e3f6g4e3g5d8e8d4e5d6e5h2h3": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h7h6",
+     "san": "h6",
+     "idea": "Kick the bishop."
+    }
+   ],
+   "eco": "E94",
+   "name": "King's Indian Defense: Orthodox Variation, Glek Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8a6c1e3f6g4e3g5d8e8d4e5d6e5h2h3h7h6": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g5d2",
+     "san": "Bd2"
+    }
+   ],
+   "eco": "E94",
+   "name": "King's Indian Defense: Orthodox Variation, Glek Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8a6c1e3f6g4e3g5d8e8d4e5d6e5h2h3h7h6g5d2": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g4f6",
+     "san": "Nf6",
+     "idea": "The knight goes back to f6, and your position is solid."
+    }
+   ],
+   "eco": "E94",
+   "name": "King's Indian Defense: Orthodox Variation, Glek Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8a6c1e3f6g4e3g5d8e8d4e5d6e5h2h3h7h6g5d2g4f6": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "E94",
+   "name": "King's Indian Defense: Orthodox Variation, Glek Defense"
   }
  }
 }

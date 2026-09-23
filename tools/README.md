@@ -38,6 +38,39 @@ The build is deliberately strict, because bad book data would show a learner a
 wrong "correct" move. It fails on an illegal move, a promotion, a duplicate
 line id, a line the learner never moves in, or more `ideas` than moves.
 
+Two more rules, both errors:
+
+- **Every learner move needs an idea.** A shared prefix only needs explaining
+  once, in any line that passes through it. The home page advertises 100%, and
+  this check is what makes that true.
+- **Ideas go on the learner's moves only.** `ideas` is index-aligned with the
+  plies, and the drill never shows an idea on an opponent move — so one there
+  is always an off-by-one. 65 of them once sat undetected.
+
+The summary table's `choices` column counts positions where the learner has
+more than one book move. That's what makes the tree more than a set of lines to
+memorise, so it's worth growing on purpose.
+
+### Checking move quality with Stockfish
+
+```bash
+backend/venv/bin/python tools/check_book.py                 # whole book, ~10 min
+backend/venv/bin/python tools/check_book.py kings-gambit    # repertoire ids containing this
+```
+
+The build proves moves are *legal*; this checks they're *good*. It grades every
+learner move against Stockfish's choice (depth 18) and flags any that give away
+more than 70cp — which is how a plausible-but-wrong move in hand-written theory
+gets caught before it's taught as "the book move". Its first run found a real
+one: the London main line taught `8.Bxd6` where `8.dxc5` wins material, because
+the d6 bishop is pinned against the queen on c7.
+
+Gambits and offbeat defences give up something by design, so a repertoire can
+raise its own bar with `"engineSlackCp"` (the King's Gambit uses 60, since 2.f4
+alone costs about a pawn by engine standards). Needs `stockfish` on `PATH` or
+`$STOCKFISH_BIN`. Opponent moves aren't graded: a dubious opponent move is still
+worth teaching the answer to.
+
 ### Naming, and why it is position-based
 
 Each line's ECO code and name come from the **deepest position in the line that

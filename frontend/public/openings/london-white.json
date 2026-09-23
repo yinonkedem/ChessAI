@@ -11,7 +11,7 @@
    "label": "Main Line",
    "eco": "D02",
    "name": "Queen's Pawn Game: London System",
-   "path": "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7g3d6c7d6f1d3e8g8e1g1b7b6d1e2c8b7f3e5",
+   "path": "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3e8g8f1d3b7b6f3e5c8b7f2f4c6e7d1f3e7f5g3f2",
    "plies": 23
   },
   {
@@ -19,16 +19,24 @@
    "label": "vs King's Indian setup",
    "eco": "A48",
    "name": "London System, with Be2",
-   "path": "d2d4g8f6c1f4g7g6e2e3f8g7g1f3e8g8f1e2d7d6h2h3",
-   "plies": 11
+   "path": "d2d4g8f6c1f4g7g6e2e3f8g7g1f3e8g8f1e2d7d6h2h3b8d7e1g1d8e8c2c4e7e5f4h2e5e4f3d2e8e7b1c3",
+   "plies": 21
   },
   {
    "id": "london-early-c5",
    "label": "vs early ...c5",
    "eco": "D00",
    "name": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit",
-   "path": "d2d4d7d5c1f4c7c5e2e3b8c6c2c3g8f6b1d2",
-   "plies": 9
+   "path": "d2d4d7d5c1f4c7c5e2e3b8c6c2c3d8b6d1b3c5c4b3c2g8f6b1d2c8g4g1f3e7e6f1e2f8e7e1g1e8g8h2h3g4h5b2b3c4b3a2b3",
+   "plies": 25
+  },
+  {
+   "id": "london-qc7-trap",
+   "label": "Punishing 7...Qc7",
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System",
+   "path": "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7d4c5d6g3h2g3e8g8f1d3e6e5e3e4",
+   "plies": 21
   }
  ],
  "nodes": {
@@ -220,6 +228,10 @@
    "mine": false,
    "replies": [
     {
+     "uci": "e8g8",
+     "san": "O-O"
+    },
+    {
      "uci": "d8c7",
      "san": "Qc7"
     }
@@ -227,76 +239,22 @@
    "eco": "D02",
    "name": "Queen's Pawn Game: London System"
   },
-  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7": {
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3e8g8": {
    "ply": 14,
-   "turn": "w",
-   "mine": true,
-   "replies": [
-    {
-     "uci": "g3d6",
-     "san": "Bxd6",
-     "idea": "Trade on your terms rather than allowing ...Bxg3 and doubled pawns."
-    }
-   ],
-   "eco": "D02",
-   "name": "Queen's Pawn Game: London System"
-  },
-  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7g3d6": {
-   "ply": 15,
-   "turn": "b",
-   "mine": false,
-   "replies": [
-    {
-     "uci": "c7d6",
-     "san": "Qxd6"
-    }
-   ],
-   "eco": "D02",
-   "name": "Queen's Pawn Game: London System"
-  },
-  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7g3d6c7d6": {
-   "ply": 16,
    "turn": "w",
    "mine": true,
    "replies": [
     {
      "uci": "f1d3",
      "san": "Bd3",
-     "idea": "Develop the bishop to its best diagonal."
+     "idea": "The bishop takes the b1–h7 diagonal toward Black's king."
     }
    ],
    "eco": "D02",
    "name": "Queen's Pawn Game: London System"
   },
-  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7g3d6c7d6f1d3": {
-   "ply": 17,
-   "turn": "b",
-   "mine": false,
-   "replies": [
-    {
-     "uci": "e8g8",
-     "san": "O-O"
-    }
-   ],
-   "eco": "D02",
-   "name": "Queen's Pawn Game: London System"
-  },
-  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7g3d6c7d6f1d3e8g8": {
-   "ply": 18,
-   "turn": "w",
-   "mine": true,
-   "replies": [
-    {
-     "uci": "e1g1",
-     "san": "O-O",
-     "idea": "Castle."
-    }
-   ],
-   "eco": "D02",
-   "name": "Queen's Pawn Game: London System"
-  },
-  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7g3d6c7d6f1d3e8g8e1g1": {
-   "ply": 19,
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3e8g8f1d3": {
+   "ply": 15,
    "turn": "b",
    "mine": false,
    "replies": [
@@ -308,22 +266,22 @@
    "eco": "D02",
    "name": "Queen's Pawn Game: London System"
   },
-  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7g3d6c7d6f1d3e8g8e1g1b7b6": {
-   "ply": 20,
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3e8g8f1d3b7b6": {
+   "ply": 16,
    "turn": "w",
    "mine": true,
    "replies": [
     {
-     "uci": "d1e2",
-     "san": "Qe2",
-     "idea": "Connect and prepare e4."
+     "uci": "f3e5",
+     "san": "Ne5",
+     "idea": "The knight jumps into e5, backed by the d4 pawn. This is the London's attacking setup."
     }
    ],
    "eco": "D02",
    "name": "Queen's Pawn Game: London System"
   },
-  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7g3d6c7d6f1d3e8g8e1g1b7b6d1e2": {
-   "ply": 21,
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3e8g8f1d3b7b6f3e5": {
+   "ply": 17,
    "turn": "b",
    "mine": false,
    "replies": [
@@ -335,21 +293,75 @@
    "eco": "D02",
    "name": "Queen's Pawn Game: London System"
   },
-  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7g3d6c7d6f1d3e8g8e1g1b7b6d1e2c8b7": {
-   "ply": 22,
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3e8g8f1d3b7b6f3e5c8b7": {
+   "ply": 18,
    "turn": "w",
    "mine": true,
    "replies": [
     {
-     "uci": "f3e5",
-     "san": "Ne5",
-     "idea": "The London knight lands on e5, supported and dominant."
+     "uci": "f2f4",
+     "san": "f4",
+     "idea": "The Stonewall: f4 supports the e5 knight so it can't be chased away."
     }
    ],
    "eco": "D02",
    "name": "Queen's Pawn Game: London System"
   },
-  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7g3d6c7d6f1d3e8g8e1g1b7b6d1e2c8b7f3e5": {
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3e8g8f1d3b7b6f3e5c8b7f2f4": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c6e7",
+     "san": "Ne7"
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3e8g8f1d3b7b6f3e5c8b7f2f4c6e7": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1f3",
+     "san": "Qf3",
+     "idea": "The queen swings toward the kingside. Qh3 and g4 are coming."
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3e8g8f1d3b7b6f3e5c8b7f2f4c6e7d1f3": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7f5",
+     "san": "Nf5"
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3e8g8f1d3b7b6f3e5c8b7f2f4c6e7d1f3e7f5": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g3f2",
+     "san": "Bf2",
+     "idea": "Keep the bishop out of the knight's reach. It can come back to h4 later."
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3e8g8f1d3b7b6f3e5c8b7f2f4c6e7d1f3e7f5g3f2": {
    "ply": 23,
    "turn": "b",
    "mine": false,
@@ -484,6 +496,141 @@
    "ply": 11,
    "turn": "b",
    "mine": false,
+   "replies": [
+    {
+     "uci": "b8d7",
+     "san": "Nbd7"
+    }
+   ],
+   "eco": "A48",
+   "name": "London System, with Be2"
+  },
+  "d2d4g8f6c1f4g7g6e2e3f8g7g1f3e8g8f1e2d7d6h2h3b8d7": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle. Black's plan is ...e5, so get the king safe first."
+    }
+   ],
+   "eco": "A48",
+   "name": "London System, with Be2"
+  },
+  "d2d4g8f6c1f4g7g6e2e3f8g7g1f3e8g8f1e2d7d6h2h3b8d7e1g1": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8e8",
+     "san": "Qe8"
+    }
+   ],
+   "eco": "A48",
+   "name": "London System, with Be2"
+  },
+  "d2d4g8f6c1f4g7g6e2e3f8g7g1f3e8g8f1e2d7d6h2h3b8d7e1g1d8e8": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c2c4",
+     "san": "c4",
+     "idea": "Grab queenside space. Your play comes on the side where Black isn't."
+    }
+   ],
+   "eco": "A48",
+   "name": "London System, with Be2"
+  },
+  "d2d4g8f6c1f4g7g6e2e3f8g7g1f3e8g8f1e2d7d6h2h3b8d7e1g1d8e8c2c4": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7e5",
+     "san": "e5"
+    }
+   ],
+   "eco": "A48",
+   "name": "London System, with Be2"
+  },
+  "d2d4g8f6c1f4g7g6e2e3f8g7g1f3e8g8f1e2d7d6h2h3b8d7e1g1d8e8c2c4e7e5": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f4h2",
+     "san": "Bh2",
+     "idea": "Keep the bishop, so it still bears on e5 from h2."
+    }
+   ],
+   "eco": "A48",
+   "name": "London System, with Be2"
+  },
+  "d2d4g8f6c1f4g7g6e2e3f8g7g1f3e8g8f1e2d7d6h2h3b8d7e1g1d8e8c2c4e7e5f4h2": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e5e4",
+     "san": "e4"
+    }
+   ],
+   "eco": "A48",
+   "name": "London System, with Be2"
+  },
+  "d2d4g8f6c1f4g7g6e2e3f8g7g1f3e8g8f1e2d7d6h2h3b8d7e1g1d8e8c2c4e7e5f4h2e5e4": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f3d2",
+     "san": "Nfd2",
+     "idea": "The knight hits e4 straight away, and can head for c4 or b3."
+    }
+   ],
+   "eco": "A48",
+   "name": "London System, with Be2"
+  },
+  "d2d4g8f6c1f4g7g6e2e3f8g7g1f3e8g8f1e2d7d6h2h3b8d7e1g1d8e8c2c4e7e5f4h2e5e4f3d2": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8e7",
+     "san": "Qe7"
+    }
+   ],
+   "eco": "A48",
+   "name": "London System, with Be2"
+  },
+  "d2d4g8f6c1f4g7g6e2e3f8g7g1f3e8g8f1e2d7d6h2h3b8d7e1g1d8e8c2c4e7e5f4h2e5e4f3d2e8e7": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "Another piece on e4. Black has to keep defending it."
+    }
+   ],
+   "eco": "A48",
+   "name": "London System, with Be2"
+  },
+  "d2d4g8f6c1f4g7g6e2e3f8g7g1f3e8g8f1e2d7d6h2h3b8d7e1g1d8e8c2c4e7e5f4h2e5e4f3d2e8e7b1c3": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "A48",
@@ -536,6 +683,60 @@
    "mine": false,
    "replies": [
     {
+     "uci": "d8b6",
+     "san": "Qb6"
+    }
+   ],
+   "eco": "D00",
+   "name": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"
+  },
+  "d2d4d7d5c1f4c7c5e2e3b8c6c2c3d8b6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1b3",
+     "san": "Qb3",
+     "idea": "Meet the queen with the queen. If Black trades, your a-pawn recaptures and the a-file opens."
+    }
+   ],
+   "eco": "D00",
+   "name": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"
+  },
+  "d2d4d7d5c1f4c7c5e2e3b8c6c2c3d8b6d1b3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c5c4",
+     "san": "c4"
+    }
+   ],
+   "eco": "D00",
+   "name": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"
+  },
+  "d2d4d7d5c1f4c7c5e2e3b8c6c2c3d8b6d1b3c5c4": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b3c2",
+     "san": "Qc2",
+     "idea": "Keep the queen on the b1–h7 diagonal. With ...c4, Black has stopped pressuring d4."
+    }
+   ],
+   "eco": "D00",
+   "name": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"
+  },
+  "d2d4d7d5c1f4c7c5e2e3b8c6c2c3d8b6d1b3c5c4b3c2": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
      "uci": "g8f6",
      "san": "Nf6"
     }
@@ -543,28 +744,294 @@
    "eco": "D00",
    "name": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"
   },
-  "d2d4d7d5c1f4c7c5e2e3b8c6c2c3g8f6": {
-   "ply": 8,
+  "d2d4d7d5c1f4c7c5e2e3b8c6c2c3d8b6d1b3c5c4b3c2g8f6": {
+   "ply": 12,
    "turn": "w",
    "mine": true,
    "replies": [
     {
      "uci": "b1d2",
      "san": "Nd2",
-     "idea": "Develop flexibly and keep the option of Ngf3."
+     "idea": "Develop and prepare e4, the break that challenges Black's centre."
     }
    ],
    "eco": "D00",
    "name": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"
   },
-  "d2d4d7d5c1f4c7c5e2e3b8c6c2c3g8f6b1d2": {
-   "ply": 9,
+  "d2d4d7d5c1f4c7c5e2e3b8c6c2c3d8b6d1b3c5c4b3c2g8f6b1d2": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8g4",
+     "san": "Bg4"
+    }
+   ],
+   "eco": "D00",
+   "name": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"
+  },
+  "d2d4d7d5c1f4c7c5e2e3b8c6c2c3d8b6d1b3c5c4b3c2g8f6b1d2c8g4": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Ngf3",
+     "idea": "Develop the other knight. Your pieces are ready to support e4 or b3."
+    }
+   ],
+   "eco": "D00",
+   "name": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"
+  },
+  "d2d4d7d5c1f4c7c5e2e3b8c6c2c3d8b6d1b3c5c4b3c2g8f6b1d2c8g4g1f3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7e6",
+     "san": "e6"
+    }
+   ],
+   "eco": "D00",
+   "name": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"
+  },
+  "d2d4d7d5c1f4c7c5e2e3b8c6c2c3d8b6d1b3c5c4b3c2g8f6b1d2c8g4g1f3e7e6": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1e2",
+     "san": "Be2",
+     "idea": "Unpin in advance: the bishop covers the f3 knight."
+    }
+   ],
+   "eco": "D00",
+   "name": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"
+  },
+  "d2d4d7d5c1f4c7c5e2e3b8c6c2c3d8b6d1b3c5c4b3c2g8f6b1d2c8g4g1f3e7e6f1e2": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8e7",
+     "san": "Be7"
+    }
+   ],
+   "eco": "D00",
+   "name": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"
+  },
+  "d2d4d7d5c1f4c7c5e2e3b8c6c2c3d8b6d1b3c5c4b3c2g8f6b1d2c8g4g1f3e7e6f1e2f8e7": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle. The fight is about when you break with b3 or e4."
+    }
+   ],
+   "eco": "D00",
+   "name": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"
+  },
+  "d2d4d7d5c1f4c7c5e2e3b8c6c2c3d8b6d1b3c5c4b3c2g8f6b1d2c8g4g1f3e7e6f1e2f8e7e1g1": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "D00",
+   "name": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"
+  },
+  "d2d4d7d5c1f4c7c5e2e3b8c6c2c3d8b6d1b3c5c4b3c2g8f6b1d2c8g4g1f3e7e6f1e2f8e7e1g1e8g8": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h2h3",
+     "san": "h3",
+     "idea": "Put the question to the bishop before starting the break."
+    }
+   ],
+   "eco": "D00",
+   "name": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"
+  },
+  "d2d4d7d5c1f4c7c5e2e3b8c6c2c3d8b6d1b3c5c4b3c2g8f6b1d2c8g4g1f3e7e6f1e2f8e7e1g1e8g8h2h3": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g4h5",
+     "san": "Bh5"
+    }
+   ],
+   "eco": "D00",
+   "name": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"
+  },
+  "d2d4d7d5c1f4c7c5e2e3b8c6c2c3d8b6d1b3c5c4b3c2g8f6b1d2c8g4g1f3e7e6f1e2f8e7e1g1e8g8h2h3g4h5": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b2b3",
+     "san": "b3",
+     "idea": "Strike at the base of Black's queenside chain."
+    }
+   ],
+   "eco": "D00",
+   "name": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"
+  },
+  "d2d4d7d5c1f4c7c5e2e3b8c6c2c3d8b6d1b3c5c4b3c2g8f6b1d2c8g4g1f3e7e6f1e2f8e7e1g1e8g8h2h3g4h5b2b3": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c4b3",
+     "san": "cxb3"
+    }
+   ],
+   "eco": "D00",
+   "name": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"
+  },
+  "d2d4d7d5c1f4c7c5e2e3b8c6c2c3d8b6d1b3c5c4b3c2g8f6b1d2c8g4g1f3e7e6f1e2f8e7e1g1e8g8h2h3g4h5b2b3c4b3": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a2b3",
+     "san": "axb3",
+     "idea": "Recapture. The a-file is open for your rook, and Black's c4 wedge is gone."
+    }
+   ],
+   "eco": "D00",
+   "name": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"
+  },
+  "d2d4d7d5c1f4c7c5e2e3b8c6c2c3d8b6d1b3c5c4b3c2g8f6b1d2c8g4g1f3e7e6f1e2f8e7e1g1e8g8h2h3g4h5b2b3c4b3a2b3": {
+   "ply": 25,
    "turn": "b",
    "mine": false,
    "replies": [],
    "end": true,
    "eco": "D00",
    "name": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d4c5",
+     "san": "dxc5",
+     "idea": "The point: the d6 bishop is pinned against the queen along the g3–c7 diagonal, so ...Bxc5 would drop the queen to Bxc7. You simply win a pawn."
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7d4c5": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d6g3",
+     "san": "Bxg3"
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7d4c5d6g3": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h2g3",
+     "san": "hxg3",
+     "idea": "Recapture toward the centre. The open h-file points at Black's king."
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7d4c5d6g3h2g3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7d4c5d6g3h2g3e8g8": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1d3",
+     "san": "Bd3",
+     "idea": "Develop toward h7. The h-file rook and this bishop both point at Black's king."
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7d4c5d6g3h2g3e8g8f1d3": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e6e5",
+     "san": "e5"
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7d4c5d6g3h2g3e8g8f1d3e6e5": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e3e4",
+     "san": "e4",
+     "idea": "Hold the centre. You're a pawn up with the safer king."
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7d4c5d6g3h2g3e8g8f1d3e6e5e3e4": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
   }
  }
 }

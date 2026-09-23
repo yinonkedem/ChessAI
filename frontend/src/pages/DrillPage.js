@@ -166,6 +166,14 @@ export default function DrillPage() {
                             <span aria-hidden="true">{perfect ? "\u2605" : "\u2713"}</span>{" "}
                             {perfect ? "Perfect line!" : "End of the line"}
                         </p>
+                        {/* This card replaces <Feedback/>, so without this the
+                            last move of every line had its idea authored but
+                            never shown. */}
+                        {feedback?.idea && (
+                            <p className="drill-feedback__body">
+                                <strong>{feedback.played}</strong>: {feedback.idea}
+                            </p>
+                        )}
                         <p className="drill-feedback__body">
                             {opening.name && `You reached the ${opening.name}. `}
                             {progress.firstTry} of {progress.answered} first time.

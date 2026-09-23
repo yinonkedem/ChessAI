@@ -9,18 +9,18 @@
   {
    "id": "accelerated-dragon-main",
    "label": "Main Line",
-   "eco": "B35",
-   "name": "Sicilian Defense: Accelerated Dragon, Modern Bc4 Variation",
-   "path": "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4e8g8",
-   "plies": 14
+   "eco": "B77",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Main Line",
+   "path": "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4e8g8c4b3d7d6f2f3c8d7d1d2c6d4e3d4b7b5h2h4a7a5a2a4b5a4c3a4",
+   "plies": 27
   },
   {
    "id": "accelerated-dragon-maroczy",
    "label": "Maroczy Bind",
    "eco": "B36",
    "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind",
-   "path": "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7",
-   "plies": 16
+   "path": "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3e8g8d4d2c8e6a1c1d8a5f2f3f8c8b2b3a7a6c3a4a5d2e1d2",
+   "plies": 29
   }
  ],
  "nodes": {
@@ -219,10 +219,185 @@
    "ply": 14,
    "turn": "w",
    "mine": false,
-   "replies": [],
-   "end": true,
+   "replies": [
+    {
+     "uci": "c4b3",
+     "san": "Bb3"
+    }
+   ],
    "eco": "B35",
    "name": "Sicilian Defense: Accelerated Dragon, Modern Bc4 Variation"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4e8g8c4b3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6",
+     "idea": "Now ...d6. It's a normal Dragon, but White's bishop has already committed to b3."
+    }
+   ],
+   "eco": "B35",
+   "name": "Sicilian Defense: Accelerated Dragon, Modern Bc4 Variation"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4e8g8c4b3d7d6": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f2f3",
+     "san": "f3"
+    }
+   ],
+   "eco": "B35",
+   "name": "Sicilian Defense: Accelerated Dragon, Modern Bc4 Variation"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4e8g8c4b3d7d6f2f3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8d7",
+     "san": "Bd7",
+     "idea": "Connect the rooks and prepare ...Rc8 and ...Nxd4."
+    }
+   ],
+   "eco": "B35",
+   "name": "Sicilian Defense: Accelerated Dragon, Modern Bc4 Variation"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4e8g8c4b3d7d6f2f3c8d7": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1d2",
+     "san": "Qd2"
+    }
+   ],
+   "eco": "B35",
+   "name": "Sicilian Defense: Accelerated Dragon, Modern Bc4 Variation"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4e8g8c4b3d7d6f2f3c8d7d1d2": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c6d4",
+     "san": "Nxd4",
+     "idea": "Trade the centre knight. It helps your queenside play run faster."
+    }
+   ],
+   "eco": "B77",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Main Line"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4e8g8c4b3d7d6f2f3c8d7d1d2c6d4": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e3d4",
+     "san": "Bxd4"
+    }
+   ],
+   "eco": "B77",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Main Line"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4e8g8c4b3d7d6f2f3c8d7d1d2c6d4e3d4": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b7b5",
+     "san": "b5",
+     "idea": "The pawn storm starts. ...a5 and ...a4 will chase the b3 bishop."
+    }
+   ],
+   "eco": "B77",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Main Line"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4e8g8c4b3d7d6f2f3c8d7d1d2c6d4e3d4b7b5": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h2h4",
+     "san": "h4"
+    }
+   ],
+   "eco": "B77",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Main Line"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4e8g8c4b3d7d6f2f3c8d7d1d2c6d4e3d4b7b5h2h4": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a7a5",
+     "san": "a5",
+     "idea": "Keep pushing. ...a4 is coming against the bishop."
+    }
+   ],
+   "eco": "B77",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Main Line"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4e8g8c4b3d7d6f2f3c8d7d1d2c6d4e3d4b7b5h2h4a7a5": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a2a4",
+     "san": "a4"
+    }
+   ],
+   "eco": "B77",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Main Line"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4e8g8c4b3d7d6f2f3c8d7d1d2c6d4e3d4b7b5h2h4a7a5a2a4": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b5a4",
+     "san": "bxa4",
+     "idea": "Take and open the b-file toward White's king."
+    }
+   ],
+   "eco": "B77",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Main Line"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4e8g8c4b3d7d6f2f3c8d7d1d2c6d4e3d4b7b5h2h4a7a5a2a4b5a4": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c3a4",
+     "san": "Nxa4"
+    }
+   ],
+   "eco": "B77",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Main Line"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4e8g8c4b3d7d6f2f3c8d7d1d2c6d4e3d4b7b5h2h4a7a5a2a4b5a4c3a4": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [],
+   "end": true,
+   "eco": "B77",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Main Line"
   },
   "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4": {
    "ply": 9,
@@ -323,6 +498,181 @@
    "ply": 16,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "c1e3",
+     "san": "Be3"
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle. Against the Maroczy Bind you play slowly and look for ...b5 or ...f5."
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3e8g8": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4d2",
+     "san": "Qd2"
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3e8g8d4d2": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8e6",
+     "san": "Be6",
+     "idea": "Hit c4. It's the pawn that holds the Bind together."
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3e8g8d4d2c8e6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a1c1",
+     "san": "Rc1"
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3e8g8d4d2c8e6a1c1": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8a5",
+     "san": "Qa5",
+     "idea": "The queen joins the attack on c4 and a2, and gets out of the rooks' way."
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3e8g8d4d2c8e6a1c1d8a5": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f2f3",
+     "san": "f3"
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3e8g8d4d2c8e6a1c1d8a5f2f3": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8c8",
+     "san": "Rfc8",
+     "idea": "Stack up on the c-file behind the queen."
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3e8g8d4d2c8e6a1c1d8a5f2f3f8c8": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b2b3",
+     "san": "b3"
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3e8g8d4d2c8e6a1c1d8a5f2f3f8c8b2b3": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a7a6",
+     "san": "a6",
+     "idea": "Prepare ...b5. That break is the real counterplay against the Bind."
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3e8g8d4d2c8e6a1c1d8a5f2f3f8c8b2b3a7a6": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c3a4",
+     "san": "Na4"
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3e8g8d4d2c8e6a1c1d8a5f2f3f8c8b2b3a7a6c3a4": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a5d2",
+     "san": "Qxd2+",
+     "idea": "Trade queens. The Bind matters less with fewer pieces left, so the endgame is fine for you."
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3e8g8d4d2c8e6a1c1d8a5f2f3f8c8b2b3a7a6c3a4a5d2": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1d2",
+     "san": "Kxd2"
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3e8g8d4d2c8e6a1c1d8a5f2f3f8c8b2b3a7a6c3a4a5d2e1d2": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "B36",

@@ -17,10 +17,10 @@
   {
    "id": "qgd-orthodox",
    "label": "Tartakower Defense",
-   "eco": "D58",
+   "eco": "D59",
    "name": "Queen's Gambit Declined: Tartakower Defense",
-   "path": "d2d4d7d5c2c4e7e6b1c3g8f6c1g5f8e7e2e3e8g8g1f3h7h6g5h4b7b6",
-   "plies": 14
+   "path": "d2d4d7d5c2c4e7e6b1c3g8f6c1g5f8e7e2e3e8g8g1f3h7h6g5h4b7b6c4d5f6d5h4e7d8e7c3d5e6d5a1c1c8e6d1a4c7c5a4a3f8c8f1e2",
+   "plies": 27
   },
   {
    "id": "qgd-tarrasch",
@@ -430,9 +430,185 @@
    "ply": 14,
    "turn": "w",
    "mine": true,
+   "replies": [
+    {
+     "uci": "c4d5",
+     "san": "cxd5",
+     "idea": "Release the tension now, before ...Bb7 and ...c5 finish Black's setup."
+    }
+   ],
+   "eco": "D58",
+   "name": "Queen's Gambit Declined: Tartakower Defense"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c1g5f8e7e2e3e8g8g1f3h7h6g5h4b7b6c4d5": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f6d5",
+     "san": "Nxd5"
+    }
+   ],
+   "eco": "D58",
+   "name": "Queen's Gambit Declined: Tartakower Defense"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c1g5f8e7e2e3e8g8g1f3h7h6g5h4b7b6c4d5f6d5": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h4e7",
+     "san": "Bxe7",
+     "idea": "Trade the dark-squared bishops rather than lose time retreating yours."
+    }
+   ],
+   "eco": "D59",
+   "name": "Queen's Gambit Declined: Tartakower Defense, Makogonov Exchange Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c1g5f8e7e2e3e8g8g1f3h7h6g5h4b7b6c4d5f6d5h4e7": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8e7",
+     "san": "Qxe7"
+    }
+   ],
+   "eco": "D59",
+   "name": "Queen's Gambit Declined: Tartakower Defense, Makogonov Exchange Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c1g5f8e7e2e3e8g8g1f3h7h6g5h4b7b6c4d5f6d5h4e7d8e7": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c3d5",
+     "san": "Nxd5",
+     "idea": "Take on d5, so Black's centre pawns become targets."
+    }
+   ],
+   "eco": "D59",
+   "name": "Queen's Gambit Declined: Tartakower Defense, Makogonov Exchange Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c1g5f8e7e2e3e8g8g1f3h7h6g5h4b7b6c4d5f6d5h4e7d8e7c3d5": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e6d5",
+     "san": "exd5"
+    }
+   ],
+   "eco": "D59",
+   "name": "Queen's Gambit Declined: Tartakower Defense, Makogonov Exchange Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c1g5f8e7e2e3e8g8g1f3h7h6g5h4b7b6c4d5f6d5h4e7d8e7c3d5e6d5": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a1c1",
+     "san": "Rc1",
+     "idea": "The rook takes the half-open c-file, against c7 now and c5 later."
+    }
+   ],
+   "eco": "D59",
+   "name": "Queen's Gambit Declined: Tartakower Defense, Makogonov Exchange Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c1g5f8e7e2e3e8g8g1f3h7h6g5h4b7b6c4d5f6d5h4e7d8e7c3d5e6d5a1c1": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8e6",
+     "san": "Be6"
+    }
+   ],
+   "eco": "D59",
+   "name": "Queen's Gambit Declined: Tartakower Defense, Makogonov Exchange Variation"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c1g5f8e7e2e3e8g8g1f3h7h6g5h4b7b6c4d5f6d5h4e7d8e7c3d5e6d5a1c1c8e6": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1a4",
+     "san": "Qa4",
+     "idea": "Pin the c-pawn. If Black pushes ...c5, they're left with hanging pawns."
+    }
+   ],
+   "eco": "D59",
+   "name": "Queen's Gambit Declined: Tartakower Defense"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c1g5f8e7e2e3e8g8g1f3h7h6g5h4b7b6c4d5f6d5h4e7d8e7c3d5e6d5a1c1c8e6d1a4": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c7c5",
+     "san": "c5"
+    }
+   ],
+   "eco": "D59",
+   "name": "Queen's Gambit Declined: Tartakower Defense"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c1g5f8e7e2e3e8g8g1f3h7h6g5h4b7b6c4d5f6d5h4e7d8e7c3d5e6d5a1c1c8e6d1a4c7c5": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a4a3",
+     "san": "Qa3",
+     "idea": "Pile onto c5. The hanging pawns will need guarding for the rest of the game."
+    }
+   ],
+   "eco": "D59",
+   "name": "Queen's Gambit Declined: Tartakower Defense"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c1g5f8e7e2e3e8g8g1f3h7h6g5h4b7b6c4d5f6d5h4e7d8e7c3d5e6d5a1c1c8e6d1a4c7c5a4a3": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8c8",
+     "san": "Rc8"
+    }
+   ],
+   "eco": "D59",
+   "name": "Queen's Gambit Declined: Tartakower Defense"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c1g5f8e7e2e3e8g8g1f3h7h6g5h4b7b6c4d5f6d5h4e7d8e7c3d5e6d5a1c1c8e6d1a4c7c5a4a3f8c8": {
+   "ply": 26,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1e2",
+     "san": "Be2",
+     "idea": "Develop and get ready to castle. Black is tied to c5 and d5."
+    }
+   ],
+   "eco": "D59",
+   "name": "Queen's Gambit Declined: Tartakower Defense"
+  },
+  "d2d4d7d5c2c4e7e6b1c3g8f6c1g5f8e7e2e3e8g8g1f3h7h6g5h4b7b6c4d5f6d5h4e7d8e7c3d5e6d5a1c1c8e6d1a4c7c5a4a3f8c8f1e2": {
+   "ply": 27,
+   "turn": "b",
+   "mine": false,
    "replies": [],
    "end": true,
-   "eco": "D58",
+   "eco": "D59",
    "name": "Queen's Gambit Declined: Tartakower Defense"
   },
   "d2d4d7d5c2c4e7e6b1c3c7c5": {

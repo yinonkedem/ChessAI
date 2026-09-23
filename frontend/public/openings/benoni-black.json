@@ -180,13 +180,11 @@
    "replies": [
     {
      "uci": "e2e4",
-     "san": "e4",
-     "idea": "Fianchetto anyway — White's f4 is aggressive but loosening."
+     "san": "e4"
     },
     {
      "uci": "g1f3",
-     "san": "Nf3",
-     "idea": "The same fianchetto, whatever White chooses."
+     "san": "Nf3"
     }
    ],
    "eco": "A60",
@@ -217,13 +215,11 @@
     },
     {
      "uci": "f2f4",
-     "san": "f4",
-     "idea": "Block with this knight, keeping the bishop and the structure intact."
+     "san": "f4"
     },
     {
      "uci": "h2h3",
-     "san": "h3",
-     "idea": "Castle."
+     "san": "h3"
     }
    ],
    "eco": "A65",
@@ -354,8 +350,7 @@
    "replies": [
     {
      "uci": "f1b5",
-     "san": "Bb5+",
-     "idea": "Castle out of the centre while White is still setting up."
+     "san": "Bb5+"
     }
    ],
    "eco": "A66",
@@ -382,8 +377,7 @@
    "replies": [
     {
      "uci": "a2a4",
-     "san": "a4",
-     "idea": "The knight heads for c7, then b5 or e8 depending on White's plan."
+     "san": "a4"
     }
    ],
    "eco": "A67",
@@ -460,8 +454,7 @@
    "replies": [
     {
      "uci": "g2g3",
-     "san": "g3",
-     "idea": "Castle."
+     "san": "g3"
     }
    ],
    "eco": "A61",
@@ -488,8 +481,7 @@
    "replies": [
     {
      "uci": "f1g2",
-     "san": "Bg2",
-     "idea": "Pressure the e-file."
+     "san": "Bg2"
     }
    ],
    "eco": "A61",
@@ -516,8 +508,7 @@
    "replies": [
     {
      "uci": "e1g1",
-     "san": "O-O",
-     "idea": "Prepare ...b5, the queenside break that justifies the whole opening."
+     "san": "O-O"
     }
    ],
    "eco": "A62",
@@ -594,8 +585,7 @@
    "replies": [
     {
      "uci": "f1d3",
-     "san": "Bd3",
-     "idea": "The Benoni gambit. Offer the pawn to rip open the queenside and the centre together."
+     "san": "Bd3"
     }
    ],
    "eco": "A65",
@@ -622,8 +612,7 @@
    "replies": [
     {
      "uci": "g1f3",
-     "san": "Nf3",
-     "idea": "Take the centre pawn back. The position is wild but the activity is real."
+     "san": "Nf3"
     }
    ],
    "eco": "A65",

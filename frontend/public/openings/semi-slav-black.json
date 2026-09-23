@@ -157,8 +157,7 @@
     },
     {
      "uci": "c1g5",
-     "san": "Bg5",
-     "idea": "Put the question to the bishop at once."
+     "san": "Bg5"
     }
    ],
    "eco": "D43",
@@ -348,8 +347,7 @@
    "replies": [
     {
      "uci": "g5f6",
-     "san": "Bxf6",
-     "idea": "Recapture with the queen. You have the bishop pair to show for the doubled-up development."
+     "san": "Bxf6"
     },
     {
      "uci": "g5h4",
@@ -380,8 +378,7 @@
    "replies": [
     {
      "uci": "e2e3",
-     "san": "e3",
-     "idea": "Develop and prepare ...e5 or ...g6."
+     "san": "e3"
     }
    ],
    "eco": "D43",
@@ -408,8 +405,7 @@
    "replies": [
     {
      "uci": "f1d3",
-     "san": "Bd3",
-     "idea": "Fianchetto, so the dark-squared bishop compensates for the trade."
+     "san": "Bd3"
     }
    ],
    "eco": "D43",
@@ -436,8 +432,7 @@
    "replies": [
     {
      "uci": "e1g1",
-     "san": "O-O",
-     "idea": "Onto the long diagonal."
+     "san": "O-O"
     }
    ],
    "eco": "D43",
@@ -464,8 +459,7 @@
    "replies": [
     {
      "uci": "e3e4",
-     "san": "e4",
-     "idea": "Take and open the position for the two bishops."
+     "san": "e4"
     }
    ],
    "eco": "D43",
@@ -632,8 +626,7 @@
    "replies": [
     {
      "uci": "e2e4",
-     "san": "e4",
-     "idea": "Defend c4 and grab queenside space."
+     "san": "e4"
     }
    ],
    "eco": "D44",
@@ -660,8 +653,7 @@
    "replies": [
     {
      "uci": "e4e5",
-     "san": "e5",
-     "idea": "Challenge the pin before White builds up."
+     "san": "e5"
     }
    ],
    "eco": "D44",
@@ -688,8 +680,7 @@
    "replies": [
     {
      "uci": "g5h4",
-     "san": "Bh4",
-     "idea": "The critical move. You invite the piece sacrifice because the compensation is manageable."
+     "san": "Bh4"
     }
    ],
    "eco": "D44",
@@ -716,8 +707,7 @@
    "replies": [
     {
      "uci": "f3g5",
-     "san": "Nxg5",
-     "idea": "Take. You are a piece up and must now survive the attack."
+     "san": "Nxg5"
     }
    ],
    "eco": "D44",

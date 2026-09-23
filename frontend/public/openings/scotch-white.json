@@ -19,8 +19,8 @@
    "label": "Mieses Variation",
    "eco": "C45",
    "name": "Scotch Game: Mieses Variation",
-   "path": "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7d1e2f6d5",
-   "plies": 14
+   "path": "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7d1e2f6d5c2c4d5b6b1c3e7e6e2e4f8b4c1d2c8a6b2b3",
+   "plies": 23
   },
   {
    "id": "scotch-gambit",
@@ -417,6 +417,128 @@
    "ply": 14,
    "turn": "w",
    "mine": true,
+   "replies": [
+    {
+     "uci": "c2c4",
+     "san": "c4",
+     "idea": "Kick the knight. It has no good square left in the centre."
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Mieses Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7d1e2f6d5c2c4": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d5b6",
+     "san": "Nb6"
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Mieses Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7d1e2f6d5c2c4d5b6": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "Develop and cover d5 and e4."
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Mieses Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7d1e2f6d5c2c4d5b6b1c3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7e6",
+     "san": "Qe6"
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Mieses Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7d1e2f6d5c2c4d5b6b1c3e7e6": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e2e4",
+     "san": "Qe4",
+     "idea": "Centralise and protect e5. The queen stays on the e-file, facing the black king."
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Mieses Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7d1e2f6d5c2c4d5b6b1c3e7e6e2e4": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8b4",
+     "san": "Bb4"
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Mieses Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7d1e2f6d5c2c4d5b6b1c3e7e6e2e4f8b4": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1d2",
+     "san": "Bd2",
+     "idea": "Break the pin. If Black takes on c3, you recapture and keep the structure."
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Mieses Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7d1e2f6d5c2c4d5b6b1c3e7e6e2e4f8b4c1d2": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8a6",
+     "san": "Ba6"
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Mieses Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7d1e2f6d5c2c4d5b6b1c3e7e6e2e4f8b4c1d2c8a6": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b2b3",
+     "san": "b3",
+     "idea": "Protect c4 from the bishop on a6. Your extra space on the kingside is the long-term plus."
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Mieses Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7d1e2f6d5c2c4d5b6b1c3e7e6e2e4f8b4c1d2c8a6b2b3": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "C45",

@@ -1,0 +1,1664 @@
+{
+ "id": "kings-gambit-white",
+ "title": "The King's Gambit",
+ "family": "1. e4 e5",
+ "blurb": "Throw the f-pawn forward on move two. The romantic opening: open lines and a fast attack, with real risk to your own king.",
+ "side": "w",
+ "difficulty": 3,
+ "lines": [
+  {
+   "id": "kg-kieseritzky",
+   "label": "Kieseritzky Gambit",
+   "eco": "C39",
+   "name": "King's Gambit Accepted: Kieseritzky Gambit, Berlin Defense, Rubinstein Variation",
+   "path": "e2e4e7e5f2f4e5f4g1f3g7g5h2h4g5g4f3e5g8f6d2d4d7d6e5d3f6e4c1f4d8e7d1e2f8g7c2c3h7h5b1d2e4d2e1d2",
+   "plies": 23
+  },
+  {
+   "id": "kg-modern-c4",
+   "label": "Abbazia Defence (Modern), 5.c4",
+   "eco": "C36",
+   "name": "King's Gambit Accepted: Abbazia Defense",
+   "path": "e2e4e7e5f2f4e5f4g1f3d7d5e4d5g8f6c2c4c7c6d2d4f8b4b1c3c6d5c1f4e8g8f1e2",
+   "plies": 17
+  },
+  {
+   "id": "kg-modern-bc4",
+   "label": "Abbazia Defence (Modern), 5.Bc4",
+   "eco": "C36",
+   "name": "King's Gambit Accepted: Abbazia Defense",
+   "path": "e2e4e7e5f2f4e5f4g1f3d7d5e4d5g8f6f1c4f6d5e1g1f8e7c4d5d8d5b1c3d5d8d2d4e8g8c1f4",
+   "plies": 19
+  },
+  {
+   "id": "kg-fischer",
+   "label": "Fischer Defence",
+   "eco": "C34",
+   "name": "King's Gambit Accepted: Fischer Defense",
+   "path": "e2e4e7e5f2f4e5f4g1f3d7d6d2d4g7g5h2h4g5g4f3g1f8h6b1c3c7c6g1e2d8f6g2g3f4g3e2g3",
+   "plies": 19
+  },
+  {
+   "id": "kg-fischer-f3",
+   "label": "Fischer Defence, 6...f3",
+   "eco": "C34",
+   "name": "King's Gambit Accepted: Fischer Defense",
+   "path": "e2e4e7e5f2f4e5f4g1f3d7d6d2d4g7g5h2h4g5g4f3g1f4f3g2f3f8e7c1e3e7h4e1d2g4f3d1f3",
+   "plies": 19
+  },
+  {
+   "id": "kg-bishops-gambit",
+   "label": "Bishop's Gambit",
+   "eco": "C33",
+   "name": "King's Gambit Accepted: Bishop's Gambit, Bogoljubow Defense",
+   "path": "e2e4e7e5f2f4e5f4f1c4g8f6b1c3c7c6c4b3d7d5e4d5c6d5d2d4f8d6g1e2e8g8e1g1",
+   "plies": 17
+  },
+  {
+   "id": "kg-falkbeer",
+   "label": "Falkbeer Countergambit",
+   "eco": "C32",
+   "name": "King's Gambit Declined: Falkbeer Countergambit, Charousek Gambit, Main Line",
+   "path": "e2e4e7e5f2f4d7d5e4d5e5e4d2d3g8f6d3e4f6e4g1f3f8c5d1e2c8f5b1c3d8e7c1e3c5e3e2e3e4c3e3e7e8e7b2c3",
+   "plies": 23
+  },
+  {
+   "id": "kg-declined-bc5",
+   "label": "King's Gambit Declined, 2...Bc5",
+   "eco": "C30",
+   "name": "King's Gambit Declined: Classical Variation",
+   "path": "e2e4e7e5f2f4f8c5g1f3d7d6b1c3g8f6f1c4b8c6d2d3c8g4c3a4c5b6a4b6a7b6c2c3e8g8e1g1",
+   "plies": 19
+  }
+ ],
+ "nodes": {
+  "": {
+   "ply": 0,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e2e4",
+     "san": "e4",
+     "idea": "Take the centre and open lines for the bishop and queen."
+    }
+   ]
+  },
+  "e2e4": {
+   "ply": 1,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7e5",
+     "san": "e5"
+    }
+   ],
+   "eco": "B00",
+   "name": "King's Pawn Game"
+  },
+  "e2e4e7e5": {
+   "ply": 2,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f2f4",
+     "san": "f4",
+     "idea": "The King's Gambit. Offer the f-pawn to deflect e5, then build a big centre with d4."
+    }
+   ],
+   "eco": "C20",
+   "name": "King's Pawn Game"
+  },
+  "e2e4e7e5f2f4": {
+   "ply": 3,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e5f4",
+     "san": "exf4"
+    },
+    {
+     "uci": "d7d5",
+     "san": "d5"
+    },
+    {
+     "uci": "f8c5",
+     "san": "Bc5"
+    }
+   ],
+   "eco": "C30",
+   "name": "King's Gambit"
+  },
+  "e2e4e7e5f2f4e5f4": {
+   "ply": 4,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3",
+     "idea": "Develop and cover h4 against ...Qh4+."
+    },
+    {
+     "uci": "f1c4",
+     "san": "Bc4",
+     "idea": "The Bishop's Gambit. Allow ...Qh4+: your king just walks to f1, and the bishop hits f7 at once."
+    }
+   ],
+   "eco": "C33",
+   "name": "King's Gambit Accepted"
+  },
+  "e2e4e7e5f2f4e5f4g1f3": {
+   "ply": 5,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g7g5",
+     "san": "g5"
+    },
+    {
+     "uci": "d7d5",
+     "san": "d5"
+    },
+    {
+     "uci": "d7d6",
+     "san": "d6"
+    }
+   ],
+   "eco": "C34",
+   "name": "King's Gambit Accepted: King's Knight's Gambit"
+  },
+  "e2e4e7e5f2f4e5f4g1f3g7g5": {
+   "ply": 6,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h2h4",
+     "san": "h4",
+     "idea": "Hit the g5 pawn before Black can support f4 with ...h6 and ...Bg7."
+    }
+   ],
+   "eco": "C34",
+   "name": "King's Gambit Accepted: King's Knight's Gambit"
+  },
+  "e2e4e7e5f2f4e5f4g1f3g7g5h2h4": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g5g4",
+     "san": "g4"
+    }
+   ],
+   "eco": "C39",
+   "name": "King's Gambit Accepted: King's Knight's Gambit"
+  },
+  "e2e4e7e5f2f4e5f4g1f3g7g5h2h4g5g4": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f3e5",
+     "san": "Ne5",
+     "idea": "The Kieseritzky. The knight goes to e5, eyeing g4 and f7."
+    }
+   ],
+   "eco": "C39",
+   "name": "King's Gambit Accepted: King's Knight's Gambit"
+  },
+  "e2e4e7e5f2f4e5f4g1f3g7g5h2h4g5g4f3e5": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "C39",
+   "name": "King's Gambit Accepted: Kieseritzky Gambit"
+  },
+  "e2e4e7e5f2f4e5f4g1f3g7g5h2h4g5g4f3e5g8f6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4",
+     "idea": "Build the centre and cover e5."
+    }
+   ],
+   "eco": "C39",
+   "name": "King's Gambit Accepted: Kieseritzky Gambit, Berlin Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3g7g5h2h4g5g4f3e5g8f6d2d4": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6"
+    }
+   ],
+   "eco": "C39",
+   "name": "King's Gambit Accepted: Kieseritzky Gambit, Berlin Defense, Rubinstein Variation"
+  },
+  "e2e4e7e5f2f4e5f4g1f3g7g5h2h4g5g4f3e5g8f6d2d4d7d6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e5d3",
+     "san": "Nd3",
+     "idea": "Retreat toward f4. The knight will help win back the f4 pawn."
+    }
+   ],
+   "eco": "C39",
+   "name": "King's Gambit Accepted: Kieseritzky Gambit, Berlin Defense, Rubinstein Variation"
+  },
+  "e2e4e7e5f2f4e5f4g1f3g7g5h2h4g5g4f3e5g8f6d2d4d7d6e5d3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f6e4",
+     "san": "Nxe4"
+    }
+   ],
+   "eco": "C39",
+   "name": "King's Gambit Accepted: Kieseritzky Gambit, Berlin Defense, Rubinstein Variation"
+  },
+  "e2e4e7e5f2f4e5f4g1f3g7g5h2h4g5g4f3e5g8f6d2d4d7d6e5d3f6e4": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1f4",
+     "san": "Bxf4",
+     "idea": "Win the pawn back. Material is level and your bishop is active."
+    }
+   ],
+   "eco": "C39",
+   "name": "King's Gambit Accepted: Kieseritzky Gambit, Berlin Defense, Rubinstein Variation"
+  },
+  "e2e4e7e5f2f4e5f4g1f3g7g5h2h4g5g4f3e5g8f6d2d4d7d6e5d3f6e4c1f4": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8e7",
+     "san": "Qe7"
+    }
+   ],
+   "eco": "C39",
+   "name": "King's Gambit Accepted: Kieseritzky Gambit, Berlin Defense, Rubinstein Variation"
+  },
+  "e2e4e7e5f2f4e5f4g1f3g7g5h2h4g5g4f3e5g8f6d2d4d7d6e5d3f6e4c1f4d8e7": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1e2",
+     "san": "Qe2",
+     "idea": "Pin the e4 knight and bring the queen onto the e-file."
+    }
+   ],
+   "eco": "C39",
+   "name": "King's Gambit Accepted: Kieseritzky Gambit, Berlin Defense, Rubinstein Variation"
+  },
+  "e2e4e7e5f2f4e5f4g1f3g7g5h2h4g5g4f3e5g8f6d2d4d7d6e5d3f6e4c1f4d8e7d1e2": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8g7",
+     "san": "Bg7"
+    }
+   ],
+   "eco": "C39",
+   "name": "King's Gambit Accepted: Kieseritzky Gambit, Berlin Defense, Rubinstein Variation"
+  },
+  "e2e4e7e5f2f4e5f4g1f3g7g5h2h4g5g4f3e5g8f6d2d4d7d6e5d3f6e4c1f4d8e7d1e2f8g7": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c2c3",
+     "san": "c3",
+     "idea": "Cover d4 and b4 and keep the centre solid."
+    }
+   ],
+   "eco": "C39",
+   "name": "King's Gambit Accepted: Kieseritzky Gambit, Berlin Defense, Rubinstein Variation"
+  },
+  "e2e4e7e5f2f4e5f4g1f3g7g5h2h4g5g4f3e5g8f6d2d4d7d6e5d3f6e4c1f4d8e7d1e2f8g7c2c3": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h7h5",
+     "san": "h5"
+    }
+   ],
+   "eco": "C39",
+   "name": "King's Gambit Accepted: Kieseritzky Gambit, Berlin Defense, Rubinstein Variation"
+  },
+  "e2e4e7e5f2f4e5f4g1f3g7g5h2h4g5g4f3e5g8f6d2d4d7d6e5d3f6e4c1f4d8e7d1e2f8g7c2c3h7h5": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1d2",
+     "san": "Nd2",
+     "idea": "Challenge the e4 knight."
+    }
+   ],
+   "eco": "C39",
+   "name": "King's Gambit Accepted: Kieseritzky Gambit, Berlin Defense, Rubinstein Variation"
+  },
+  "e2e4e7e5f2f4e5f4g1f3g7g5h2h4g5g4f3e5g8f6d2d4d7d6e5d3f6e4c1f4d8e7d1e2f8g7c2c3h7h5b1d2": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4d2",
+     "san": "Nxd2"
+    }
+   ],
+   "eco": "C39",
+   "name": "King's Gambit Accepted: Kieseritzky Gambit, Berlin Defense, Rubinstein Variation"
+  },
+  "e2e4e7e5f2f4e5f4g1f3g7g5h2h4g5g4f3e5g8f6d2d4d7d6e5d3f6e4c1f4d8e7d1e2f8g7c2c3h7h5b1d2e4d2": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1d2",
+     "san": "Kxd2",
+     "idea": "Take back with the king. With the queens facing each other down the e-file, the king is safe enough on d2."
+    }
+   ],
+   "eco": "C39",
+   "name": "King's Gambit Accepted: Kieseritzky Gambit, Berlin Defense, Rubinstein Variation"
+  },
+  "e2e4e7e5f2f4e5f4g1f3g7g5h2h4g5g4f3e5g8f6d2d4d7d6e5d3f6e4c1f4d8e7d1e2f8g7c2c3h7h5b1d2e4d2e1d2": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C39",
+   "name": "King's Gambit Accepted: Kieseritzky Gambit, Berlin Defense, Rubinstein Variation"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d5": {
+   "ply": 6,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e4d5",
+     "san": "exd5",
+     "idea": "Take. Black gives the d-pawn back to free their game quickly."
+    }
+   ],
+   "eco": "C36",
+   "name": "King's Gambit Accepted: Modern Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d5e4d5": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "C36",
+   "name": "King's Gambit Accepted: Modern Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d5e4d5g8f6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c2c4",
+     "san": "c4",
+     "idea": "Hold on to the extra d-pawn."
+    },
+    {
+     "uci": "f1c4",
+     "san": "Bc4",
+     "idea": "Develop with pressure on d5 and f7. Getting pieces out matters more than the pawn."
+    }
+   ],
+   "eco": "C36",
+   "name": "King's Gambit Accepted: Abbazia Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d5e4d5g8f6c2c4": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c7c6",
+     "san": "c6"
+    }
+   ],
+   "eco": "C36",
+   "name": "King's Gambit Accepted: Abbazia Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d5e4d5g8f6c2c4c7c6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4",
+     "idea": "Build the centre. If ...cxd5, your pawns still control the middle."
+    }
+   ],
+   "eco": "C36",
+   "name": "King's Gambit Accepted: Abbazia Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d5e4d5g8f6c2c4c7c6d2d4": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8b4",
+     "san": "Bb4+"
+    }
+   ],
+   "eco": "C36",
+   "name": "King's Gambit Accepted: Abbazia Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d5e4d5g8f6c2c4c7c6d2d4f8b4": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "Block the check and develop."
+    }
+   ],
+   "eco": "C36",
+   "name": "King's Gambit Accepted: Abbazia Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d5e4d5g8f6c2c4c7c6d2d4f8b4b1c3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c6d5",
+     "san": "cxd5"
+    }
+   ],
+   "eco": "C36",
+   "name": "King's Gambit Accepted: Abbazia Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d5e4d5g8f6c2c4c7c6d2d4f8b4b1c3c6d5": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1f4",
+     "san": "Bxf4",
+     "idea": "Win the gambit pawn back. You're level, with the freer game."
+    }
+   ],
+   "eco": "C36",
+   "name": "King's Gambit Accepted: Abbazia Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d5e4d5g8f6c2c4c7c6d2d4f8b4b1c3c6d5c1f4": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "C36",
+   "name": "King's Gambit Accepted: Abbazia Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d5e4d5g8f6c2c4c7c6d2d4f8b4b1c3c6d5c1f4e8g8": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1e2",
+     "san": "Be2",
+     "idea": "Develop and castle. Your active pieces make up for the isolated pawn."
+    }
+   ],
+   "eco": "C36",
+   "name": "King's Gambit Accepted: Abbazia Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d5e4d5g8f6c2c4c7c6d2d4f8b4b1c3c6d5c1f4e8g8f1e2": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C36",
+   "name": "King's Gambit Accepted: Abbazia Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d5e4d5g8f6f1c4": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f6d5",
+     "san": "Nxd5"
+    }
+   ],
+   "eco": "C36",
+   "name": "King's Gambit Accepted: Abbazia Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d5e4d5g8f6f1c4f6d5": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle. The f-file is half-open for your rook."
+    }
+   ],
+   "eco": "C36",
+   "name": "King's Gambit Accepted: Abbazia Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d5e4d5g8f6f1c4f6d5e1g1": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8e7",
+     "san": "Be7"
+    }
+   ],
+   "eco": "C36",
+   "name": "King's Gambit Accepted: Abbazia Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d5e4d5g8f6f1c4f6d5e1g1f8e7": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c4d5",
+     "san": "Bxd5",
+     "idea": "Trade on d5 to gain time on the queen."
+    }
+   ],
+   "eco": "C36",
+   "name": "King's Gambit Accepted: Abbazia Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d5e4d5g8f6f1c4f6d5e1g1f8e7c4d5": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8d5",
+     "san": "Qxd5"
+    }
+   ],
+   "eco": "C36",
+   "name": "King's Gambit Accepted: Abbazia Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d5e4d5g8f6f1c4f6d5e1g1f8e7c4d5d8d5": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "Develop with tempo against the queen."
+    }
+   ],
+   "eco": "C36",
+   "name": "King's Gambit Accepted: Abbazia Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d5e4d5g8f6f1c4f6d5e1g1f8e7c4d5d8d5b1c3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d5d8",
+     "san": "Qd8"
+    }
+   ],
+   "eco": "C36",
+   "name": "King's Gambit Accepted: Abbazia Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d5e4d5g8f6f1c4f6d5e1g1f8e7c4d5d8d5b1c3d5d8": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4",
+     "idea": "Take the centre. The f4 pawn is falling."
+    }
+   ],
+   "eco": "C36",
+   "name": "King's Gambit Accepted: Abbazia Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d5e4d5g8f6f1c4f6d5e1g1f8e7c4d5d8d5b1c3d5d8d2d4": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "C36",
+   "name": "King's Gambit Accepted: Abbazia Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d5e4d5g8f6f1c4f6d5e1g1f8e7c4d5d8d5b1c3d5d8d2d4e8g8": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1f4",
+     "san": "Bxf4",
+     "idea": "Win the pawn back, with a lead in development."
+    }
+   ],
+   "eco": "C36",
+   "name": "King's Gambit Accepted: Abbazia Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d5e4d5g8f6f1c4f6d5e1g1f8e7c4d5d8d5b1c3d5d8d2d4e8g8c1f4": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C36",
+   "name": "King's Gambit Accepted: Abbazia Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d6": {
+   "ply": 6,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4",
+     "idea": "Take the centre. ...d6 has taken e5 away from your knight."
+    }
+   ],
+   "eco": "C34",
+   "name": "King's Gambit Accepted: Fischer Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d6d2d4": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g7g5",
+     "san": "g5"
+    }
+   ],
+   "eco": "C34",
+   "name": "King's Gambit Accepted: Fischer Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d6d2d4g7g5": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h2h4",
+     "san": "h4",
+     "idea": "Hit g5 before Black can protect f4."
+    }
+   ],
+   "eco": "C34",
+   "name": "King's Gambit Accepted: Fischer Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d6d2d4g7g5h2h4": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g5g4",
+     "san": "g4"
+    }
+   ],
+   "eco": "C34",
+   "name": "King's Gambit Accepted: Fischer Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d6d2d4g7g5h2h4g5g4": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f3g1",
+     "san": "Ng1",
+     "idea": "Back to g1. It looks ugly, but the knight comes back out via e2."
+    }
+   ],
+   "eco": "C34",
+   "name": "King's Gambit Accepted: Fischer Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d6d2d4g7g5h2h4g5g4f3g1": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8h6",
+     "san": "Bh6"
+    },
+    {
+     "uci": "f4f3",
+     "san": "f3"
+    }
+   ],
+   "eco": "C34",
+   "name": "King's Gambit Accepted: Fischer Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d6d2d4g7g5h2h4g5g4f3g1f8h6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "Develop and cover e4 and d5."
+    }
+   ],
+   "eco": "C34",
+   "name": "King's Gambit Accepted: Fischer Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d6d2d4g7g5h2h4g5g4f3g1f8h6b1c3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c7c6",
+     "san": "c6"
+    }
+   ],
+   "eco": "C34",
+   "name": "King's Gambit Accepted: Fischer Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d6d2d4g7g5h2h4g5g4f3g1f8h6b1c3c7c6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1e2",
+     "san": "Nge2",
+     "idea": "The knight comes back out, heading for f4 or g3."
+    }
+   ],
+   "eco": "C34",
+   "name": "King's Gambit Accepted: Fischer Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d6d2d4g7g5h2h4g5g4f3g1f8h6b1c3c7c6g1e2": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8f6",
+     "san": "Qf6"
+    }
+   ],
+   "eco": "C34",
+   "name": "King's Gambit Accepted: Fischer Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d6d2d4g7g5h2h4g5g4f3g1f8h6b1c3c7c6g1e2d8f6": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g2g3",
+     "san": "g3",
+     "idea": "Break up Black's kingside pawns."
+    }
+   ],
+   "eco": "C34",
+   "name": "King's Gambit Accepted: Fischer Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d6d2d4g7g5h2h4g5g4f3g1f8h6b1c3c7c6g1e2d8f6g2g3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f4g3",
+     "san": "fxg3"
+    }
+   ],
+   "eco": "C34",
+   "name": "King's Gambit Accepted: Fischer Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d6d2d4g7g5h2h4g5g4f3g1f8h6b1c3c7c6g1e2d8f6g2g3f4g3": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e2g3",
+     "san": "Nxg3",
+     "idea": "Recapture. Your pieces are active, and Black's kingside is loose."
+    }
+   ],
+   "eco": "C34",
+   "name": "King's Gambit Accepted: Fischer Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d6d2d4g7g5h2h4g5g4f3g1f8h6b1c3c7c6g1e2d8f6g2g3f4g3e2g3": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C34",
+   "name": "King's Gambit Accepted: Fischer Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d6d2d4g7g5h2h4g5g4f3g1f4f3": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g2f3",
+     "san": "gxf3",
+     "idea": "Take. The open g-file is yours."
+    }
+   ],
+   "eco": "C34",
+   "name": "King's Gambit Accepted: Fischer Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d6d2d4g7g5h2h4g5g4f3g1f4f3g2f3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8e7",
+     "san": "Be7"
+    }
+   ],
+   "eco": "C34",
+   "name": "King's Gambit Accepted: Fischer Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d6d2d4g7g5h2h4g5g4f3g1f4f3g2f3f8e7": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1e3",
+     "san": "Be3",
+     "idea": "Develop, and let the h-pawn go. Your centre and open files matter more."
+    }
+   ],
+   "eco": "C34",
+   "name": "King's Gambit Accepted: Fischer Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d6d2d4g7g5h2h4g5g4f3g1f4f3g2f3f8e7c1e3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7h4",
+     "san": "Bxh4+"
+    }
+   ],
+   "eco": "C34",
+   "name": "King's Gambit Accepted: Fischer Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d6d2d4g7g5h2h4g5g4f3g1f4f3g2f3f8e7c1e3e7h4": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1d2",
+     "san": "Kd2",
+     "idea": "Step aside. The king is safer on d2 than on the kingside."
+    }
+   ],
+   "eco": "C34",
+   "name": "King's Gambit Accepted: Fischer Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d6d2d4g7g5h2h4g5g4f3g1f4f3g2f3f8e7c1e3e7h4e1d2": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g4f3",
+     "san": "gxf3"
+    }
+   ],
+   "eco": "C34",
+   "name": "King's Gambit Accepted: Fischer Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d6d2d4g7g5h2h4g5g4f3g1f4f3g2f3f8e7c1e3e7h4e1d2g4f3": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1f3",
+     "san": "Qxf3",
+     "idea": "Recapture. Material is level, and the open files belong to your pieces."
+    }
+   ],
+   "eco": "C34",
+   "name": "King's Gambit Accepted: Fischer Defense"
+  },
+  "e2e4e7e5f2f4e5f4g1f3d7d6d2d4g7g5h2h4g5g4f3g1f4f3g2f3f8e7c1e3e7h4e1d2g4f3d1f3": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C34",
+   "name": "King's Gambit Accepted: Fischer Defense"
+  },
+  "e2e4e7e5f2f4e5f4f1c4": {
+   "ply": 5,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "C33",
+   "name": "King's Gambit Accepted: Bishop's Gambit"
+  },
+  "e2e4e7e5f2f4e5f4f1c4g8f6": {
+   "ply": 6,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "Develop and protect e4."
+    }
+   ],
+   "eco": "C33",
+   "name": "King's Gambit Accepted: Bishop's Gambit, Cozio Defense"
+  },
+  "e2e4e7e5f2f4e5f4f1c4g8f6b1c3": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c7c6",
+     "san": "c6"
+    }
+   ],
+   "eco": "C33",
+   "name": "King's Gambit Accepted: Bishop's Gambit, Bogoljubow Variation"
+  },
+  "e2e4e7e5f2f4e5f4f1c4g8f6b1c3c7c6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c4b3",
+     "san": "Bb3",
+     "idea": "Keep the bishop on the diagonal before ...d5 hits it."
+    }
+   ],
+   "eco": "C33",
+   "name": "King's Gambit Accepted: Bishop's Gambit, Bogoljubow Defense"
+  },
+  "e2e4e7e5f2f4e5f4f1c4g8f6b1c3c7c6c4b3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d5",
+     "san": "d5"
+    }
+   ],
+   "eco": "C33",
+   "name": "King's Gambit Accepted: Bishop's Gambit, Bogoljubow Defense"
+  },
+  "e2e4e7e5f2f4e5f4f1c4g8f6b1c3c7c6c4b3d7d5": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e4d5",
+     "san": "exd5",
+     "idea": "Take. The bishop now presses on d5."
+    }
+   ],
+   "eco": "C33",
+   "name": "King's Gambit Accepted: Bishop's Gambit, Bogoljubow Defense"
+  },
+  "e2e4e7e5f2f4e5f4f1c4g8f6b1c3c7c6c4b3d7d5e4d5": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c6d5",
+     "san": "cxd5"
+    }
+   ],
+   "eco": "C33",
+   "name": "King's Gambit Accepted: Bishop's Gambit, Bogoljubow Defense"
+  },
+  "e2e4e7e5f2f4e5f4f1c4g8f6b1c3c7c6c4b3d7d5e4d5c6d5": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4",
+     "idea": "Take the centre. The f4 pawn is next."
+    }
+   ],
+   "eco": "C33",
+   "name": "King's Gambit Accepted: Bishop's Gambit, Bogoljubow Defense"
+  },
+  "e2e4e7e5f2f4e5f4f1c4g8f6b1c3c7c6c4b3d7d5e4d5c6d5d2d4": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8d6",
+     "san": "Bd6"
+    }
+   ],
+   "eco": "C33",
+   "name": "King's Gambit Accepted: Bishop's Gambit, Bogoljubow Defense"
+  },
+  "e2e4e7e5f2f4e5f4f1c4g8f6b1c3c7c6c4b3d7d5e4d5c6d5d2d4f8d6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1e2",
+     "san": "Nge2",
+     "idea": "Develop with an eye on f4."
+    }
+   ],
+   "eco": "C33",
+   "name": "King's Gambit Accepted: Bishop's Gambit, Bogoljubow Defense"
+  },
+  "e2e4e7e5f2f4e5f4f1c4g8f6b1c3c7c6c4b3d7d5e4d5c6d5d2d4f8d6g1e2": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "C33",
+   "name": "King's Gambit Accepted: Bishop's Gambit, Bogoljubow Defense"
+  },
+  "e2e4e7e5f2f4e5f4f1c4g8f6b1c3c7c6c4b3d7d5e4d5c6d5d2d4f8d6g1e2e8g8": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle. The f-file is half-open for your rook."
+    }
+   ],
+   "eco": "C33",
+   "name": "King's Gambit Accepted: Bishop's Gambit, Bogoljubow Defense"
+  },
+  "e2e4e7e5f2f4e5f4f1c4g8f6b1c3c7c6c4b3d7d5e4d5c6d5d2d4f8d6g1e2e8g8e1g1": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C33",
+   "name": "King's Gambit Accepted: Bishop's Gambit, Bogoljubow Defense"
+  },
+  "e2e4e7e5f2f4d7d5": {
+   "ply": 4,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e4d5",
+     "san": "exd5",
+     "idea": "Take. Black's counter-gambit gives up a pawn to cramp your development."
+    }
+   ],
+   "eco": "C31",
+   "name": "King's Gambit Declined: Falkbeer Countergambit"
+  },
+  "e2e4e7e5f2f4d7d5e4d5": {
+   "ply": 5,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e5e4",
+     "san": "e4"
+    }
+   ],
+   "eco": "C31",
+   "name": "King's Gambit Declined: Falkbeer Countergambit Accepted"
+  },
+  "e2e4e7e5f2f4d7d5e4d5e5e4": {
+   "ply": 6,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2d3",
+     "san": "d3",
+     "idea": "Break down the e4 wedge at once."
+    }
+   ],
+   "eco": "C31",
+   "name": "King's Gambit Declined: Falkbeer Countergambit, Staunton Line"
+  },
+  "e2e4e7e5f2f4d7d5e4d5e5e4d2d3": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "C31",
+   "name": "King's Gambit Declined: Falkbeer Countergambit, Charousek Gambit"
+  },
+  "e2e4e7e5f2f4d7d5e4d5e5e4d2d3g8f6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d3e4",
+     "san": "dxe4",
+     "idea": "Take. You're a pawn up."
+    }
+   ],
+   "eco": "C31",
+   "name": "King's Gambit Declined: Falkbeer Countergambit, Charousek Gambit"
+  },
+  "e2e4e7e5f2f4d7d5e4d5e5e4d2d3g8f6d3e4": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f6e4",
+     "san": "Nxe4"
+    }
+   ],
+   "eco": "C32",
+   "name": "King's Gambit Declined: Falkbeer Countergambit, Charousek Gambit Accepted"
+  },
+  "e2e4e7e5f2f4d7d5e4d5e5e4d2d3g8f6d3e4f6e4": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3",
+     "idea": "Develop and cover e5 and g5."
+    }
+   ],
+   "eco": "C32",
+   "name": "King's Gambit Declined: Falkbeer Countergambit, Charousek Gambit Accepted"
+  },
+  "e2e4e7e5f2f4d7d5e4d5e5e4d2d3g8f6d3e4f6e4g1f3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8c5",
+     "san": "Bc5"
+    }
+   ],
+   "eco": "C32",
+   "name": "King's Gambit Declined: Falkbeer Countergambit, Charousek Gambit Accepted"
+  },
+  "e2e4e7e5f2f4d7d5e4d5e5e4d2d3g8f6d3e4f6e4g1f3f8c5": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1e2",
+     "san": "Qe2",
+     "idea": "Pin the e4 knight."
+    }
+   ],
+   "eco": "C32",
+   "name": "King's Gambit Declined: Falkbeer Countergambit, Charousek Gambit Accepted"
+  },
+  "e2e4e7e5f2f4d7d5e4d5e5e4d2d3g8f6d3e4f6e4g1f3f8c5d1e2": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8f5",
+     "san": "Bf5"
+    }
+   ],
+   "eco": "C32",
+   "name": "King's Gambit Declined: Falkbeer Countergambit, Charousek Gambit Accepted"
+  },
+  "e2e4e7e5f2f4d7d5e4d5e5e4d2d3g8f6d3e4f6e4g1f3f8c5d1e2c8f5": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "Develop with tempo, hitting the e4 knight again."
+    }
+   ],
+   "eco": "C32",
+   "name": "King's Gambit Declined: Falkbeer Countergambit, Charousek Gambit, Main Line"
+  },
+  "e2e4e7e5f2f4d7d5e4d5e5e4d2d3g8f6d3e4f6e4g1f3f8c5d1e2c8f5b1c3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8e7",
+     "san": "Qe7"
+    }
+   ],
+   "eco": "C32",
+   "name": "King's Gambit Declined: Falkbeer Countergambit, Charousek Gambit, Main Line"
+  },
+  "e2e4e7e5f2f4d7d5e4d5e5e4d2d3g8f6d3e4f6e4g1f3f8c5d1e2c8f5b1c3d8e7": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1e3",
+     "san": "Be3",
+     "idea": "Block the bishop's diagonal toward your king."
+    }
+   ],
+   "eco": "C32",
+   "name": "King's Gambit Declined: Falkbeer Countergambit, Charousek Gambit, Main Line"
+  },
+  "e2e4e7e5f2f4d7d5e4d5e5e4d2d3g8f6d3e4f6e4g1f3f8c5d1e2c8f5b1c3d8e7c1e3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c5e3",
+     "san": "Bxe3"
+    }
+   ],
+   "eco": "C32",
+   "name": "King's Gambit Declined: Falkbeer Countergambit, Charousek Gambit, Main Line"
+  },
+  "e2e4e7e5f2f4d7d5e4d5e5e4d2d3g8f6d3e4f6e4g1f3f8c5d1e2c8f5b1c3d8e7c1e3c5e3": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e2e3",
+     "san": "Qxe3",
+     "idea": "Recapture, and keep the queens facing each other."
+    }
+   ],
+   "eco": "C32",
+   "name": "King's Gambit Declined: Falkbeer Countergambit, Charousek Gambit, Main Line"
+  },
+  "e2e4e7e5f2f4d7d5e4d5e5e4d2d3g8f6d3e4f6e4g1f3f8c5d1e2c8f5b1c3d8e7c1e3c5e3e2e3": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4c3",
+     "san": "Nxc3"
+    }
+   ],
+   "eco": "C32",
+   "name": "King's Gambit Declined: Falkbeer Countergambit, Charousek Gambit, Main Line"
+  },
+  "e2e4e7e5f2f4d7d5e4d5e5e4d2d3g8f6d3e4f6e4g1f3f8c5d1e2c8f5b1c3d8e7c1e3c5e3e2e3e4c3": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e3e7",
+     "san": "Qxe7+",
+     "idea": "Trade queens. You keep the extra pawn into the endgame."
+    }
+   ],
+   "eco": "C32",
+   "name": "King's Gambit Declined: Falkbeer Countergambit, Charousek Gambit, Main Line"
+  },
+  "e2e4e7e5f2f4d7d5e4d5e5e4d2d3g8f6d3e4f6e4g1f3f8c5d1e2c8f5b1c3d8e7c1e3c5e3e2e3e4c3e3e7": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8e7",
+     "san": "Kxe7"
+    }
+   ],
+   "eco": "C32",
+   "name": "King's Gambit Declined: Falkbeer Countergambit, Charousek Gambit, Main Line"
+  },
+  "e2e4e7e5f2f4d7d5e4d5e5e4d2d3g8f6d3e4f6e4g1f3f8c5d1e2c8f5b1c3d8e7c1e3c5e3e2e3e4c3e3e7e8e7": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b2c3",
+     "san": "bxc3",
+     "idea": "Take back. You're a healthy pawn up."
+    }
+   ],
+   "eco": "C32",
+   "name": "King's Gambit Declined: Falkbeer Countergambit, Charousek Gambit, Main Line"
+  },
+  "e2e4e7e5f2f4d7d5e4d5e5e4d2d3g8f6d3e4f6e4g1f3f8c5d1e2c8f5b1c3d8e7c1e3c5e3e2e3e4c3e3e7e8e7b2c3": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C32",
+   "name": "King's Gambit Declined: Falkbeer Countergambit, Charousek Gambit, Main Line"
+  },
+  "e2e4e7e5f2f4f8c5": {
+   "ply": 4,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3",
+     "idea": "Develop. Black's c5 bishop stops you castling for now, so get your pieces out."
+    }
+   ],
+   "eco": "C30",
+   "name": "King's Gambit Declined: Classical Variation"
+  },
+  "e2e4e7e5f2f4f8c5g1f3": {
+   "ply": 5,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6"
+    }
+   ],
+   "eco": "C30",
+   "name": "King's Gambit Declined: Classical Variation"
+  },
+  "e2e4e7e5f2f4f8c5g1f3d7d6": {
+   "ply": 6,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "Develop and cover d5 and e4."
+    }
+   ],
+   "eco": "C30",
+   "name": "King's Gambit Declined: Classical Variation"
+  },
+  "e2e4e7e5f2f4f8c5g1f3d7d6b1c3": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "C30",
+   "name": "King's Gambit Declined: Classical Variation"
+  },
+  "e2e4e7e5f2f4f8c5g1f3d7d6b1c3g8f6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1c4",
+     "san": "Bc4",
+     "idea": "The bishop mirrors Black's, hitting f7."
+    }
+   ],
+   "eco": "C30",
+   "name": "King's Gambit Declined: Classical Variation"
+  },
+  "e2e4e7e5f2f4f8c5g1f3d7d6b1c3g8f6f1c4": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6"
+    }
+   ],
+   "eco": "C30",
+   "name": "King's Gambit Declined: Classical Variation"
+  },
+  "e2e4e7e5f2f4f8c5g1f3d7d6b1c3g8f6f1c4b8c6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2d3",
+     "san": "d3",
+     "idea": "Hold e4 and open the diagonal for the c1 bishop."
+    }
+   ],
+   "eco": "C30",
+   "name": "King's Gambit Declined: Classical Variation"
+  },
+  "e2e4e7e5f2f4f8c5g1f3d7d6b1c3g8f6f1c4b8c6d2d3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8g4",
+     "san": "Bg4"
+    }
+   ],
+   "eco": "C30",
+   "name": "King's Gambit Declined: Classical Variation"
+  },
+  "e2e4e7e5f2f4f8c5g1f3d7d6b1c3g8f6f1c4b8c6d2d3c8g4": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c3a4",
+     "san": "Na4",
+     "idea": "Chase the c5 bishop. It's the piece keeping your king in the centre."
+    }
+   ],
+   "eco": "C30",
+   "name": "King's Gambit Declined: Classical Variation"
+  },
+  "e2e4e7e5f2f4f8c5g1f3d7d6b1c3g8f6f1c4b8c6d2d3c8g4c3a4": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c5b6",
+     "san": "Bb6"
+    }
+   ],
+   "eco": "C30",
+   "name": "King's Gambit Declined: Classical Variation"
+  },
+  "e2e4e7e5f2f4f8c5g1f3d7d6b1c3g8f6f1c4b8c6d2d3c8g4c3a4c5b6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a4b6",
+     "san": "Nxb6",
+     "idea": "Take the bishop. The bishop pair is yours, and you can castle."
+    }
+   ],
+   "eco": "C30",
+   "name": "King's Gambit Declined: Classical Variation"
+  },
+  "e2e4e7e5f2f4f8c5g1f3d7d6b1c3g8f6f1c4b8c6d2d3c8g4c3a4c5b6a4b6": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a7b6",
+     "san": "axb6"
+    }
+   ],
+   "eco": "C30",
+   "name": "King's Gambit Declined: Classical Variation"
+  },
+  "e2e4e7e5f2f4f8c5g1f3d7d6b1c3g8f6f1c4b8c6d2d3c8g4c3a4c5b6a4b6a7b6": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c2c3",
+     "san": "c3",
+     "idea": "Give the c4 bishop a retreat and prepare d4."
+    }
+   ],
+   "eco": "C30",
+   "name": "King's Gambit Declined: Classical Variation"
+  },
+  "e2e4e7e5f2f4f8c5g1f3d7d6b1c3g8f6f1c4b8c6d2d3c8g4c3a4c5b6a4b6a7b6c2c3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "C30",
+   "name": "King's Gambit Declined: Classical Variation"
+  },
+  "e2e4e7e5f2f4f8c5g1f3d7d6b1c3g8f6f1c4b8c6d2d3c8g4c3a4c5b6a4b6a7b6c2c3e8g8": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle. With the bishop pair and the f-file, you're comfortable."
+    }
+   ],
+   "eco": "C30",
+   "name": "King's Gambit Declined: Classical Variation"
+  },
+  "e2e4e7e5f2f4f8c5g1f3d7d6b1c3g8f6f1c4b8c6d2d3c8g4c3a4c5b6a4b6a7b6c2c3e8g8e1g1": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C30",
+   "name": "King's Gambit Declined: Classical Variation"
+  }
+ }
+}

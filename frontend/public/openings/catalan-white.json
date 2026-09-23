@@ -1,0 +1,1086 @@
+{
+ "id": "catalan-white",
+ "title": "The Catalan",
+ "family": "1. d4 d5 2. c4 e6 3. g3",
+ "blurb": "A Queen's Gambit with the bishop on g2. Quiet, lasting pressure on the long diagonal.",
+ "side": "w",
+ "difficulty": 3,
+ "lines": [
+  {
+   "id": "catalan-open-bd2",
+   "label": "Open Catalan, 10.Bd2",
+   "eco": "E05",
+   "name": "Catalan Opening: Open Defense, Classical Line",
+   "path": "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8e7e1g1e8g8d1c2a7a6c2c4b7b5c4c2c8b7c1d2b7e4c2c1b8d7d2a5",
+   "plies": 23
+  },
+  {
+   "id": "catalan-open-bf4",
+   "label": "Open Catalan, 10.Bf4",
+   "eco": "E05",
+   "name": "Catalan Opening: Open Defense, Classical Line",
+   "path": "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8e7e1g1e8g8d1c2a7a6c2c4b7b5c4c2c8b7c1f4f6d5b1c3d5f4g3f4b8d7f1d1",
+   "plies": 25
+  },
+  {
+   "id": "catalan-open-bb4",
+   "label": "Open Catalan, 5...Bb4+",
+   "eco": "E04",
+   "name": "Catalan Opening: Open Defense",
+   "path": "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8b4c1d2a7a5d1c2b4d2c2d2c7c6a2a4b7b5a4b5c6b5d2g5e8g8g5b5c8a6b5a4",
+   "plies": 25
+  },
+  {
+   "id": "catalan-closed",
+   "label": "Closed Catalan",
+   "eco": "E09",
+   "name": "Catalan Opening: Closed, Main Line",
+   "path": "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8e7g1f3e8g8e1g1b8d7d1c2c7c6b1d2b7b6e2e4c8b7b2b3a8c8c1b2d8c7a1d1",
+   "plies": 23
+  },
+  {
+   "id": "catalan-bb4-check",
+   "label": "4...Bb4+ and ...Be7",
+   "eco": "E11",
+   "name": "Bogo-Indian Defense: Retreat Variation",
+   "path": "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8b4c1d2b4e7g1f3e8g8e1g1c7c6d1c2b7b6f1d1c8b7d2f4b8d7b1c3",
+   "plies": 21
+  }
+ ],
+ "nodes": {
+  "": {
+   "ply": 0,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4",
+     "idea": "Take the centre and free the c1 bishop."
+    }
+   ]
+  },
+  "d2d4": {
+   "ply": 1,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "A40",
+   "name": "Queen's Pawn Game"
+  },
+  "d2d4g8f6": {
+   "ply": 2,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c2c4",
+     "san": "c4",
+     "idea": "Grab more space and get ready for g3."
+    }
+   ],
+   "eco": "A45",
+   "name": "Indian Defense"
+  },
+  "d2d4g8f6c2c4": {
+   "ply": 3,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7e6",
+     "san": "e6"
+    }
+   ],
+   "eco": "A50",
+   "name": "Indian Defense: Normal Variation"
+  },
+  "d2d4g8f6c2c4e7e6": {
+   "ply": 4,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g2g3",
+     "san": "g3",
+     "idea": "The Catalan. The bishop is going to g2 to press on d5 and b7."
+    }
+   ],
+   "eco": "A50",
+   "name": "Indian Defense: Normal Variation"
+  },
+  "d2d4g8f6c2c4e7e6g2g3": {
+   "ply": 5,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d5",
+     "san": "d5"
+    }
+   ],
+   "eco": "E00",
+   "name": "Catalan Opening"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5": {
+   "ply": 6,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1g2",
+     "san": "Bg2",
+     "idea": "The bishop takes the long diagonal toward b7 and the whole queenside."
+    }
+   ],
+   "eco": "E00",
+   "name": "Catalan Opening"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d5c4",
+     "san": "dxc4"
+    },
+    {
+     "uci": "f8e7",
+     "san": "Be7"
+    },
+    {
+     "uci": "f8b4",
+     "san": "Bb4+"
+    }
+   ],
+   "eco": "E01",
+   "name": "Catalan Opening: Open Defense"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3",
+     "idea": "Develop and castle first. The c4 pawn won't run away."
+    }
+   ],
+   "eco": "E02",
+   "name": "Catalan Opening: Open Defense"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8e7",
+     "san": "Be7"
+    },
+    {
+     "uci": "f8b4",
+     "san": "Bb4+"
+    }
+   ],
+   "eco": "E04",
+   "name": "Catalan Opening: Open Defense"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8e7": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle. You'll win the pawn back with the queen."
+    }
+   ],
+   "eco": "E05",
+   "name": "Catalan Opening: Open Defense, Classical Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8e7e1g1": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "E05",
+   "name": "Catalan Opening: Open Defense, Classical Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8e7e1g1e8g8": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1c2",
+     "san": "Qc2",
+     "idea": "Win back c4 with the queen."
+    }
+   ],
+   "eco": "E05",
+   "name": "Catalan Opening: Open Defense, Classical Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8e7e1g1e8g8d1c2": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a7a6",
+     "san": "a6"
+    }
+   ],
+   "eco": "E05",
+   "name": "Catalan Opening: Open Defense, Classical Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8e7e1g1e8g8d1c2a7a6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c2c4",
+     "san": "Qxc4",
+     "idea": "Take the pawn back. Material is level, and your bishop is the best piece on the board."
+    }
+   ],
+   "eco": "E05",
+   "name": "Catalan Opening: Open Defense, Classical Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8e7e1g1e8g8d1c2a7a6c2c4": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b7b5",
+     "san": "b5"
+    }
+   ],
+   "eco": "E05",
+   "name": "Catalan Opening: Open Defense, Classical Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8e7e1g1e8g8d1c2a7a6c2c4b7b5": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c4c2",
+     "san": "Qc2",
+     "idea": "Keep the queen safe while it watches c7 and e4."
+    }
+   ],
+   "eco": "E05",
+   "name": "Catalan Opening: Open Defense, Classical Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8e7e1g1e8g8d1c2a7a6c2c4b7b5c4c2": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8b7",
+     "san": "Bb7"
+    }
+   ],
+   "eco": "E05",
+   "name": "Catalan Opening: Open Defense, Classical Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8e7e1g1e8g8d1c2a7a6c2c4b7b5c4c2c8b7": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1d2",
+     "san": "Bd2",
+     "idea": "The bishop heads for a5 to tie down c7 and the queenside."
+    },
+    {
+     "uci": "c1f4",
+     "san": "Bf4",
+     "idea": "The bishop aims at c7 and fights for the dark squares on the queenside."
+    }
+   ],
+   "eco": "E05",
+   "name": "Catalan Opening: Open Defense, Classical Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8e7e1g1e8g8d1c2a7a6c2c4b7b5c4c2c8b7c1d2": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b7e4",
+     "san": "Be4"
+    }
+   ],
+   "eco": "E05",
+   "name": "Catalan Opening: Open Defense, Classical Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8e7e1g1e8g8d1c2a7a6c2c4b7b5c4c2c8b7c1d2b7e4": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c2c1",
+     "san": "Qc1",
+     "idea": "Keep the queen on the c-file, where it watches c7."
+    }
+   ],
+   "eco": "E05",
+   "name": "Catalan Opening: Open Defense, Classical Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8e7e1g1e8g8d1c2a7a6c2c4b7b5c4c2c8b7c1d2b7e4c2c1": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b8d7",
+     "san": "Nbd7"
+    }
+   ],
+   "eco": "E05",
+   "name": "Catalan Opening: Open Defense, Classical Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8e7e1g1e8g8d1c2a7a6c2c4b7b5c4c2c8b7c1d2b7e4c2c1b8d7": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2a5",
+     "san": "Ba5",
+     "idea": "The bishop lands on a5, and Black's queenside is tied down."
+    }
+   ],
+   "eco": "E05",
+   "name": "Catalan Opening: Open Defense, Classical Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8e7e1g1e8g8d1c2a7a6c2c4b7b5c4c2c8b7c1d2b7e4c2c1b8d7d2a5": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "E05",
+   "name": "Catalan Opening: Open Defense, Classical Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8e7e1g1e8g8d1c2a7a6c2c4b7b5c4c2c8b7c1f4": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f6d5",
+     "san": "Nd5"
+    }
+   ],
+   "eco": "E05",
+   "name": "Catalan Opening: Open Defense, Classical Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8e7e1g1e8g8d1c2a7a6c2c4b7b5c4c2c8b7c1f4f6d5": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "Develop, and let Black take on f4 if they want. The g-file opens for you."
+    }
+   ],
+   "eco": "E05",
+   "name": "Catalan Opening: Open Defense, Classical Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8e7e1g1e8g8d1c2a7a6c2c4b7b5c4c2c8b7c1f4f6d5b1c3": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d5f4",
+     "san": "Nxf4"
+    }
+   ],
+   "eco": "E05",
+   "name": "Catalan Opening: Open Defense, Classical Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8e7e1g1e8g8d1c2a7a6c2c4b7b5c4c2c8b7c1f4f6d5b1c3d5f4": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g3f4",
+     "san": "gxf4",
+     "idea": "Take back toward the centre. The doubled f-pawns cover e5, and the g-file is half-open."
+    }
+   ],
+   "eco": "E05",
+   "name": "Catalan Opening: Open Defense, Classical Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8e7e1g1e8g8d1c2a7a6c2c4b7b5c4c2c8b7c1f4f6d5b1c3d5f4g3f4": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b8d7",
+     "san": "Nd7"
+    }
+   ],
+   "eco": "E05",
+   "name": "Catalan Opening: Open Defense, Classical Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8e7e1g1e8g8d1c2a7a6c2c4b7b5c4c2c8b7c1f4f6d5b1c3d5f4g3f4b8d7": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1d1",
+     "san": "Rfd1",
+     "idea": "Put the rook opposite the black queen. d5 is coming."
+    }
+   ],
+   "eco": "E05",
+   "name": "Catalan Opening: Open Defense, Classical Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8e7e1g1e8g8d1c2a7a6c2c4b7b5c4c2c8b7c1f4f6d5b1c3d5f4g3f4b8d7f1d1": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "E05",
+   "name": "Catalan Opening: Open Defense, Classical Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8b4": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1d2",
+     "san": "Bd2",
+     "idea": "Block the check and offer a trade of your less useful bishop."
+    }
+   ],
+   "eco": "E04",
+   "name": "Catalan Opening: Open Defense"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8b4c1d2": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a7a5",
+     "san": "a5"
+    }
+   ],
+   "eco": "E04",
+   "name": "Catalan Opening: Open Defense"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8b4c1d2a7a5": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1c2",
+     "san": "Qc2",
+     "idea": "Hit c4 and threaten to win the pawn back."
+    }
+   ],
+   "eco": "E04",
+   "name": "Catalan Opening: Open Defense"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8b4c1d2a7a5d1c2": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b4d2",
+     "san": "Bxd2+"
+    }
+   ],
+   "eco": "E04",
+   "name": "Catalan Opening: Open Defense"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8b4c1d2a7a5d1c2b4d2": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c2d2",
+     "san": "Qxd2",
+     "idea": "Recapture with the queen. It can go to g5 or c4 from here."
+    }
+   ],
+   "eco": "E04",
+   "name": "Catalan Opening: Open Defense"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8b4c1d2a7a5d1c2b4d2c2d2": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c7c6",
+     "san": "c6"
+    }
+   ],
+   "eco": "E04",
+   "name": "Catalan Opening: Open Defense"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8b4c1d2a7a5d1c2b4d2c2d2c7c6": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a2a4",
+     "san": "a4",
+     "idea": "Hit b5 before Black can hold on to the extra pawn."
+    }
+   ],
+   "eco": "E04",
+   "name": "Catalan Opening: Open Defense"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8b4c1d2a7a5d1c2b4d2c2d2c7c6a2a4": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b7b5",
+     "san": "b5"
+    }
+   ],
+   "eco": "E04",
+   "name": "Catalan Opening: Open Defense"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8b4c1d2a7a5d1c2b4d2c2d2c7c6a2a4b7b5": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a4b5",
+     "san": "axb5",
+     "idea": "Open the a-file toward Black's queenside."
+    }
+   ],
+   "eco": "E04",
+   "name": "Catalan Opening: Open Defense"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8b4c1d2a7a5d1c2b4d2c2d2c7c6a2a4b7b5a4b5": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c6b5",
+     "san": "cxb5"
+    }
+   ],
+   "eco": "E04",
+   "name": "Catalan Opening: Open Defense"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8b4c1d2a7a5d1c2b4d2c2d2c7c6a2a4b7b5a4b5c6b5": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2g5",
+     "san": "Qg5",
+     "idea": "Fork g7 and b5."
+    }
+   ],
+   "eco": "E04",
+   "name": "Catalan Opening: Open Defense"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8b4c1d2a7a5d1c2b4d2c2d2c7c6a2a4b7b5a4b5c6b5d2g5": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "E04",
+   "name": "Catalan Opening: Open Defense"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8b4c1d2a7a5d1c2b4d2c2d2c7c6a2a4b7b5a4b5c6b5d2g5e8g8": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g5b5",
+     "san": "Qxb5",
+     "idea": "Take the pawn. Material is level, and your structure is better."
+    }
+   ],
+   "eco": "E04",
+   "name": "Catalan Opening: Open Defense"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8b4c1d2a7a5d1c2b4d2c2d2c7c6a2a4b7b5a4b5c6b5d2g5e8g8g5b5": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8a6",
+     "san": "Ba6"
+    }
+   ],
+   "eco": "E04",
+   "name": "Catalan Opening: Open Defense"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8b4c1d2a7a5d1c2b4d2c2d2c7c6a2a4b7b5a4b5c6b5d2g5e8g8g5b5c8a6": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b5a4",
+     "san": "Qa4",
+     "idea": "Step out of the bishop's attack. Material is level, and your long diagonal is still open."
+    }
+   ],
+   "eco": "E04",
+   "name": "Catalan Opening: Open Defense"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2d5c4g1f3f8b4c1d2a7a5d1c2b4d2c2d2c7c6a2a4b7b5a4b5c6b5d2g5e8g8g5b5c8a6b5a4": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "E04",
+   "name": "Catalan Opening: Open Defense"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8e7": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3",
+     "idea": "Develop and castle. Against the closed setup there's no hurry."
+    }
+   ],
+   "eco": "E01",
+   "name": "Catalan Opening: Open Defense"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8e7g1f3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "E06",
+   "name": "Catalan Opening: Closed"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8e7g1f3e8g8": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle, then work toward e4."
+    }
+   ],
+   "eco": "E06",
+   "name": "Catalan Opening: Closed"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8e7g1f3e8g8e1g1": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b8d7",
+     "san": "Nbd7"
+    }
+   ],
+   "eco": "E06",
+   "name": "Catalan Opening: Closed"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8e7g1f3e8g8e1g1b8d7": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1c2",
+     "san": "Qc2",
+     "idea": "The queen covers e4 and prepares that break."
+    }
+   ],
+   "eco": "E07",
+   "name": "Catalan Opening: Closed"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8e7g1f3e8g8e1g1b8d7d1c2": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c7c6",
+     "san": "c6"
+    }
+   ],
+   "eco": "E08",
+   "name": "Catalan Opening: Closed"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8e7g1f3e8g8e1g1b8d7d1c2c7c6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1d2",
+     "san": "Nbd2",
+     "idea": "Another piece for e4. From d2 the knight keeps the c-file open."
+    }
+   ],
+   "eco": "E08",
+   "name": "Catalan Opening: Closed"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8e7g1f3e8g8e1g1b8d7d1c2c7c6b1d2": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b7b6",
+     "san": "b6"
+    }
+   ],
+   "eco": "E09",
+   "name": "Catalan Opening: Closed, Main Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8e7g1f3e8g8e1g1b8d7d1c2c7c6b1d2b7b6": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e2e4",
+     "san": "e4",
+     "idea": "The e4 break. Your centre starts rolling."
+    }
+   ],
+   "eco": "E09",
+   "name": "Catalan Opening: Closed Variation, Traditional Variation"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8e7g1f3e8g8e1g1b8d7d1c2c7c6b1d2b7b6e2e4": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8b7",
+     "san": "Bb7"
+    }
+   ],
+   "eco": "E09",
+   "name": "Catalan Opening: Closed Variation, Traditional Variation"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8e7g1f3e8g8e1g1b8d7d1c2c7c6b1d2b7b6e2e4c8b7": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b2b3",
+     "san": "b3",
+     "idea": "Protect c4 and prepare Bb2, onto the long diagonal."
+    }
+   ],
+   "eco": "E09",
+   "name": "Catalan Opening: Closed, Main Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8e7g1f3e8g8e1g1b8d7d1c2c7c6b1d2b7b6e2e4c8b7b2b3": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a8c8",
+     "san": "Rc8"
+    }
+   ],
+   "eco": "E09",
+   "name": "Catalan Opening: Closed, Main Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8e7g1f3e8g8e1g1b8d7d1c2c7c6b1d2b7b6e2e4c8b7b2b3a8c8": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1b2",
+     "san": "Bb2",
+     "idea": "The bishop joins the long diagonal toward g7."
+    }
+   ],
+   "eco": "E09",
+   "name": "Catalan Opening: Closed, Main Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8e7g1f3e8g8e1g1b8d7d1c2c7c6b1d2b7b6e2e4c8b7b2b3a8c8c1b2": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8c7",
+     "san": "Qc7"
+    }
+   ],
+   "eco": "E09",
+   "name": "Catalan Opening: Closed, Main Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8e7g1f3e8g8e1g1b8d7d1c2c7c6b1d2b7b6e2e4c8b7b2b3a8c8c1b2d8c7": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a1d1",
+     "san": "Rad1",
+     "idea": "The rook backs up d4, ready for e5 or d5."
+    }
+   ],
+   "eco": "E09",
+   "name": "Catalan Opening: Closed, Main Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8e7g1f3e8g8e1g1b8d7d1c2c7c6b1d2b7b6e2e4c8b7b2b3a8c8c1b2d8c7a1d1": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "E09",
+   "name": "Catalan Opening: Closed, Main Line"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8b4": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1d2",
+     "san": "Bd2",
+     "idea": "Block with the bishop. Black's retreat will cost them a tempo."
+    }
+   ],
+   "eco": "E01",
+   "name": "Catalan Opening: Open Defense"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8b4c1d2": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b4e7",
+     "san": "Be7"
+    }
+   ],
+   "eco": "E01",
+   "name": "Catalan Opening: Open Defense"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8b4c1d2b4e7": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3",
+     "idea": "Develop. The d2 bishop is slightly misplaced, but Black lost a tempo too."
+    }
+   ],
+   "eco": "E01",
+   "name": "Catalan Opening: Open Defense"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8b4c1d2b4e7g1f3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "E11",
+   "name": "Bogo-Indian Defense: Retreat Variation"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8b4c1d2b4e7g1f3e8g8": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle."
+    }
+   ],
+   "eco": "E11",
+   "name": "Bogo-Indian Defense: Retreat Variation"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8b4c1d2b4e7g1f3e8g8e1g1": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c7c6",
+     "san": "c6"
+    }
+   ],
+   "eco": "E11",
+   "name": "Bogo-Indian Defense: Retreat Variation"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8b4c1d2b4e7g1f3e8g8e1g1c7c6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1c2",
+     "san": "Qc2",
+     "idea": "The queen takes c2 and gets ready for e4."
+    }
+   ],
+   "eco": "E11",
+   "name": "Bogo-Indian Defense: Retreat Variation"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8b4c1d2b4e7g1f3e8g8e1g1c7c6d1c2": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b7b6",
+     "san": "b6"
+    }
+   ],
+   "eco": "E11",
+   "name": "Bogo-Indian Defense: Retreat Variation"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8b4c1d2b4e7g1f3e8g8e1g1c7c6d1c2b7b6": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1d1",
+     "san": "Rd1",
+     "idea": "The rook goes behind the d-pawn. It'll count once the centre opens."
+    }
+   ],
+   "eco": "E11",
+   "name": "Bogo-Indian Defense: Retreat Variation"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8b4c1d2b4e7g1f3e8g8e1g1c7c6d1c2b7b6f1d1": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8b7",
+     "san": "Bb7"
+    }
+   ],
+   "eco": "E11",
+   "name": "Bogo-Indian Defense: Retreat Variation"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8b4c1d2b4e7g1f3e8g8e1g1c7c6d1c2b7b6f1d1c8b7": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2f4",
+     "san": "Bf4",
+     "idea": "Put the bishop on a better diagonal, aimed at the queenside."
+    }
+   ],
+   "eco": "E11",
+   "name": "Bogo-Indian Defense: Retreat Variation"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8b4c1d2b4e7g1f3e8g8e1g1c7c6d1c2b7b6f1d1c8b7d2f4": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b8d7",
+     "san": "Nbd7"
+    }
+   ],
+   "eco": "E11",
+   "name": "Bogo-Indian Defense: Retreat Variation"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8b4c1d2b4e7g1f3e8g8e1g1c7c6d1c2b7b6f1d1c8b7d2f4b8d7": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "Develop the last minor piece. The pressure on d5 builds."
+    }
+   ],
+   "eco": "E11",
+   "name": "Bogo-Indian Defense: Retreat Variation"
+  },
+  "d2d4g8f6c2c4e7e6g2g3d7d5f1g2f8b4c1d2b4e7g1f3e8g8e1g1c7c6d1c2b7b6f1d1c8b7d2f4b8d7b1c3": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "E11",
+   "name": "Bogo-Indian Defense: Retreat Variation"
+  }
+ }
+}

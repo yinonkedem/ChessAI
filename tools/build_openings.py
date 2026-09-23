@@ -166,6 +166,19 @@ def build_line(spec: dict, side: str, table) -> dict:
     # Pad so the frontend can index without a bounds check.
     ideas = list(ideas) + [None] * (len(ucis) - len(ideas))
 
+    # Ideas explain the LEARNER's move; the drill never shows one on an
+    # opponent move. An idea on an opponent ply is therefore always an
+    # off-by-one — 65 of them once sat undetected, each a stale copy of the
+    # text one ply later.
+    mine = set(answer_plies)
+    stray = [i for i, idea in enumerate(ideas) if idea and i not in mine]
+    if stray:
+        i = stray[0]
+        raise BuildError(
+            f"{line_id}: idea on the opponent's move {tokens[i]} (ply {i + 1}) — "
+            f"ideas explain the learner's moves only; is the array shifted by one?"
+        )
+
     return {
         "id": line_id,
         "label": spec.get("label") or name,
@@ -288,9 +301,25 @@ def main() -> int:
             nodes, conflicts = build_tree(lines, side, table)
             all_conflicts.extend(conflicts)
 
+            # Every learner move must say why it's played — the drill's whole
+            # teaching value, and the home page promises it. A shared prefix
+            # only needs explaining once, in any line that passes through it.
+            unexplained = [
+                (path, r["san"]) for path, n in nodes.items() if n["mine"]
+                for r in n["replies"] if not r.get("idea")
+            ]
+            if unexplained:
+                shown = ", ".join(f"{san} (ply {len(p) // 4 + 1})" for p, san in unexplained[:5])
+                raise BuildError(
+                    f"{rep['id']}: {len(unexplained)} learner move(s) have no idea: {shown}"
+                )
+
             # One SRS card per position the learner must answer — shared
             # prefixes collapse, so 1.e4 is one card however many lines use it.
             cards = sum(1 for n in nodes.values() if n["mine"] and n["replies"])
+            # Positions where the learner has more than one book move — what
+            # makes the tree more than a set of lines to memorise.
+            choices = sum(1 for n in nodes.values() if n["mine"] and len(n["replies"]) > 1)
 
             doc = {
                 "id": rep["id"],
@@ -325,6 +354,7 @@ def main() -> int:
                 "difficulty": doc["difficulty"],
                 "lineCount": len(lines),
                 "cardCount": cards,
+                "choiceCount": choices,
                 "nodeCount": len(nodes),
                 "file": f"{rep['id']}.json",
             })
@@ -381,13 +411,15 @@ def main() -> int:
     written = sum((OUT_DIR / f).stat().st_size for f in (p.name for p in OUT_DIR.glob("*.json")))
 
     total_nodes = sum(c["nodeCount"] for c in catalog)
-    print(f"\n{'repertoire':<28} {'side':>4} {'lines':>6} {'nodes':>6} {'cards':>6}")
-    print(f"{'-' * 28} {'-' * 4} {'-' * 6} {'-' * 6} {'-' * 6}")
+    total_choices = sum(c["choiceCount"] for c in catalog)
+    rule = f"{'-' * 28} {'-' * 4} {'-' * 6} {'-' * 6} {'-' * 6} {'-' * 7}"
+    print(f"\n{'repertoire':<28} {'side':>4} {'lines':>6} {'nodes':>6} {'cards':>6} {'choices':>7}")
+    print(rule)
     for c in catalog:
         print(f"{c['id']:<28} {c['side']:>4} {c['lineCount']:>6} "
-              f"{c['nodeCount']:>6} {c['cardCount']:>6}")
-    print(f"{'-' * 28} {'-' * 4} {'-' * 6} {'-' * 6} {'-' * 6}")
-    print(f"{'total':<28} {'':>4} {total_lines:>6} {total_nodes:>6} {total_cards:>6}")
+              f"{c['nodeCount']:>6} {c['cardCount']:>6} {c['choiceCount']:>7}")
+    print(rule)
+    print(f"{'total':<28} {'':>4} {total_lines:>6} {total_nodes:>6} {total_cards:>6} {total_choices:>7}")
     print(f"\nWrote {len(catalog) + 1} files ({written / 1024:.1f} KB) to "
           f"{OUT_DIR.relative_to(ROOT)}/")
     return 0

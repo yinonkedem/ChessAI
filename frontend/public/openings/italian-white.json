@@ -125,8 +125,7 @@
     },
     {
      "uci": "g8f6",
-     "san": "Nf6",
-     "idea": "The quiet alternative to 4.Ng5 — far less theory and a rich middlegame."
+     "san": "Nf6"
     }
    ],
    "eco": "C50",
@@ -1014,8 +1013,7 @@
    "replies": [
     {
      "uci": "f8c5",
-     "san": "Bc5",
-     "idea": "Prepare d4 in your own time."
+     "san": "Bc5"
     }
    ],
    "eco": "C55",
@@ -1042,8 +1040,7 @@
    "replies": [
     {
      "uci": "d7d6",
-     "san": "d6",
-     "idea": "Castle."
+     "san": "d6"
     }
    ],
    "eco": "C54",
@@ -1070,8 +1067,7 @@
    "replies": [
     {
      "uci": "a7a6",
-     "san": "a6",
-     "idea": "Tuck the bishop away before ...Na5 can hit it."
+     "san": "a6"
     }
    ],
    "eco": "C54",
@@ -1098,8 +1094,7 @@
    "replies": [
     {
      "uci": "c5a7",
-     "san": "Ba7",
-     "idea": "Rerouting to f1 and g3, the Italian plan."
+     "san": "Ba7"
     }
    ],
    "eco": "C54",
@@ -1126,8 +1121,7 @@
    "replies": [
     {
      "uci": "e8g8",
-     "san": "O-O",
-     "idea": "Stop ...Bg4."
+     "san": "O-O"
     }
    ],
    "eco": "C54",
@@ -1154,8 +1148,7 @@
    "replies": [
     {
      "uci": "c6e7",
-     "san": "Ne7",
-     "idea": "Support the coming d4."
+     "san": "Ne7"
     }
    ],
    "eco": "C54",

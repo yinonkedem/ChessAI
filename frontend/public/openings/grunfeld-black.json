@@ -35,8 +35,8 @@
    "label": "Fianchetto Variation",
    "eco": "D90",
    "name": "Grünfeld Defense: Three Knights Variation",
-   "path": "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7g2g3e8g8f1g2c7c6e1g1c8f5f3e5f6d7e5d7b8d7h2h3d7b6",
-   "plies": 20
+   "path": "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7g2g3e8g8f1g2c7c6e1g1c8f5f3e5b8d7e5d7d8d7c4d5c6d5c1f4f8c8d1d2f5h3g2h3d7h3",
+   "plies": 26
   }
  ],
  "nodes": {
@@ -130,8 +130,7 @@
     },
     {
      "uci": "g1f3",
-     "san": "Nf3",
-     "idea": "Castle — against a quiet fianchetto there is no rush."
+     "san": "Nf3"
     }
    ],
    "eco": "D80",
@@ -455,8 +454,7 @@
     },
     {
      "uci": "g2g3",
-     "san": "g3",
-     "idea": "Solid. Hold d5 rather than letting White dissolve it."
+     "san": "g3"
     }
    ],
    "eco": "D90",
@@ -641,8 +639,7 @@
    "replies": [
     {
      "uci": "f1g2",
-     "san": "Bg2",
-     "idea": "The bishop gets out before ...e6 would shut it in."
+     "san": "Bg2"
     }
    ],
    "eco": "D90",
@@ -669,8 +666,7 @@
    "replies": [
     {
      "uci": "e1g1",
-     "san": "O-O",
-     "idea": "Challenge the strong knight."
+     "san": "O-O"
     }
    ],
    "eco": "D90",
@@ -697,8 +693,7 @@
    "replies": [
     {
      "uci": "f3e5",
-     "san": "Ne5",
-     "idea": "Recapture toward the centre."
+     "san": "Ne5"
     }
    ],
    "eco": "D90",
@@ -710,71 +705,151 @@
    "mine": true,
    "replies": [
     {
-     "uci": "f6d7",
-     "san": "Nfd7",
-     "idea": "Challenge the strong knight at once."
+     "uci": "b8d7",
+     "san": "Nbd7",
+     "idea": "Challenge the strong knight with the other knight. The f6 knight stays on guard."
     }
    ],
    "eco": "D90",
    "name": "Grünfeld Defense: Three Knights Variation"
   },
-  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7g2g3e8g8f1g2c7c6e1g1c8f5f3e5f6d7": {
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7g2g3e8g8f1g2c7c6e1g1c8f5f3e5b8d7": {
    "ply": 16,
    "turn": "w",
    "mine": false,
    "replies": [
     {
      "uci": "e5d7",
-     "san": "Nxd7",
-     "idea": "Head for c4 or d5, the squares White's setup concedes."
+     "san": "Nxd7"
     }
    ],
    "eco": "D90",
    "name": "Grünfeld Defense: Three Knights Variation"
   },
-  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7g2g3e8g8f1g2c7c6e1g1c8f5f3e5f6d7e5d7": {
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7g2g3e8g8f1g2c7c6e1g1c8f5f3e5b8d7e5d7": {
    "ply": 17,
    "turn": "b",
    "mine": true,
    "replies": [
     {
-     "uci": "b8d7",
-     "san": "Nxd7",
-     "idea": "Recapture toward the centre."
+     "uci": "d8d7",
+     "san": "Qxd7",
+     "idea": "Recapture with the queen and connect the rooks."
     }
    ],
    "eco": "D90",
    "name": "Grünfeld Defense: Three Knights Variation"
   },
-  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7g2g3e8g8f1g2c7c6e1g1c8f5f3e5f6d7e5d7b8d7": {
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7g2g3e8g8f1g2c7c6e1g1c8f5f3e5b8d7e5d7d8d7": {
    "ply": 18,
    "turn": "w",
    "mine": false,
    "replies": [
     {
-     "uci": "h2h3",
-     "san": "h3"
+     "uci": "c4d5",
+     "san": "cxd5"
     }
    ],
    "eco": "D90",
    "name": "Grünfeld Defense: Three Knights Variation"
   },
-  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7g2g3e8g8f1g2c7c6e1g1c8f5f3e5f6d7e5d7b8d7h2h3": {
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7g2g3e8g8f1g2c7c6e1g1c8f5f3e5b8d7e5d7d8d7c4d5": {
    "ply": 19,
    "turn": "b",
    "mine": true,
    "replies": [
     {
-     "uci": "d7b6",
-     "san": "Nb6",
-     "idea": "Head for c4 or d5 — the squares White's setup has conceded."
+     "uci": "c6d5",
+     "san": "cxd5",
+     "idea": "Recapture. The pawns are symmetrical, but your pieces are more active."
     }
    ],
    "eco": "D90",
    "name": "Grünfeld Defense: Three Knights Variation"
   },
-  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7g2g3e8g8f1g2c7c6e1g1c8f5f3e5f6d7e5d7b8d7h2h3d7b6": {
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7g2g3e8g8f1g2c7c6e1g1c8f5f3e5b8d7e5d7d8d7c4d5c6d5": {
    "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1f4",
+     "san": "Bf4"
+    }
+   ],
+   "eco": "D90",
+   "name": "Grünfeld Defense: Three Knights Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7g2g3e8g8f1g2c7c6e1g1c8f5f3e5b8d7e5d7d8d7c4d5c6d5c1f4": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8c8",
+     "san": "Rfc8",
+     "idea": "The rook takes the c-file."
+    }
+   ],
+   "eco": "D90",
+   "name": "Grünfeld Defense: Three Knights Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7g2g3e8g8f1g2c7c6e1g1c8f5f3e5b8d7e5d7d8d7c4d5c6d5c1f4f8c8": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1d2",
+     "san": "Qd2"
+    }
+   ],
+   "eco": "D90",
+   "name": "Grünfeld Defense: Three Knights Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7g2g3e8g8f1g2c7c6e1g1c8f5f3e5b8d7e5d7d8d7c4d5c6d5c1f4f8c8d1d2": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f5h3",
+     "san": "Bh3",
+     "idea": "Offer to trade White's best piece, the g2 bishop."
+    }
+   ],
+   "eco": "D90",
+   "name": "Grünfeld Defense: Three Knights Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7g2g3e8g8f1g2c7c6e1g1c8f5f3e5b8d7e5d7d8d7c4d5c6d5c1f4f8c8d1d2f5h3": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g2h3",
+     "san": "Bxh3"
+    }
+   ],
+   "eco": "D90",
+   "name": "Grünfeld Defense: Three Knights Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7g2g3e8g8f1g2c7c6e1g1c8f5f3e5b8d7e5d7d8d7c4d5c6d5c1f4f8c8d1d2f5h3g2h3": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7h3",
+     "san": "Qxh3",
+     "idea": "Recapture. White's king has lost its best defender, and your queen sits right next to it."
+    }
+   ],
+   "eco": "D90",
+   "name": "Grünfeld Defense: Three Knights Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7g2g3e8g8f1g2c7c6e1g1c8f5f3e5b8d7e5d7d8d7c4d5c6d5c1f4f8c8d1d2f5h3g2h3d7h3": {
+   "ply": 26,
    "turn": "w",
    "mine": false,
    "replies": [],

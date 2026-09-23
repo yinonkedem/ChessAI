@@ -19,24 +19,24 @@
    "label": "Berlin Defense",
    "eco": "C67",
    "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense",
-   "path": "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8",
-   "plies": 16
+   "path": "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8b1c3d8e8h2h3h7h5c1f4f8e7a1d1c8e6f3g5h8h6f1e1",
+   "plies": 27
   },
   {
    "id": "ruy-exchange",
    "label": "Exchange Variation",
    "eco": "C69",
    "name": "Ruy Lopez: Exchange Variation, Gligoric Variation",
-   "path": "e2e4e7e5g1f3b8c6f1b5a7a6b5c6d7c6e1g1f7f6d2d4e5d4f3d4c6c5d4b3d8d1f1d1f8d6",
-   "plies": 18
+   "path": "e2e4e7e5g1f3b8c6f1b5a7a6b5c6d7c6e1g1f7f6d2d4e5d4f3d4c6c5d4b3d8d1f1d1f8d6b3a5b7b5c2c4g8e7c1e3f6f5b1c3",
+   "plies": 25
   },
   {
    "id": "ruy-open",
    "label": "Open Variation",
    "eco": "C80",
-   "name": "Ruy Lopez: Open, Main Line",
-   "path": "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6",
-   "plies": 16
+   "name": "Ruy Lopez: Open, Bernstein Variation",
+   "path": "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6b1d2e4c5c2c3d5d4b3e6c5e6c3d4c6d4a2a4",
+   "plies": 25
   },
   {
    "id": "ruy-delayed-exchange",
@@ -45,6 +45,14 @@
    "name": "Ruy Lopez: Morphy Defense, Bayreuth Variation",
    "path": "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6a4c6d7c6d2d3f8d6b1d2e8g8d2c4f6d7e1g1",
    "plies": 17
+  },
+  {
+   "id": "ruy-open-c3",
+   "label": "Open Variation, 9.c3",
+   "eco": "C82",
+   "name": "Ruy Lopez: Open, St. Petersburg Variation",
+   "path": "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6c2c3f8c5b1d2e8g8b3c2f7f5d2b3c5b6f3d4",
+   "plies": 25
   }
  ],
  "nodes": {
@@ -157,8 +165,7 @@
    "replies": [
     {
      "uci": "g8f6",
-     "san": "Nf6",
-     "idea": "Take now, after ...Nf6 has committed the knight. Black's doubled pawns are permanent."
+     "san": "Nf6"
     }
    ],
    "eco": "C70",
@@ -564,6 +571,155 @@
    "ply": 16,
    "turn": "w",
    "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "Develop and connect. The endgame is about your kingside pawn majority, but the pieces come first."
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8b1c3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8e8",
+     "san": "Ke8"
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8b1c3d8e8": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h2h3",
+     "san": "h3",
+     "idea": "Luft, and it keeps Black's pieces off g4."
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8b1c3d8e8h2h3": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h7h5",
+     "san": "h5"
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8b1c3d8e8h2h3h7h5": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1f4",
+     "san": "Bf4",
+     "idea": "The bishop takes the h2–b8 diagonal and supports e5, the pawn your whole plan rests on."
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8b1c3d8e8h2h3h7h5c1f4": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8e7",
+     "san": "Be7"
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8b1c3d8e8h2h3h7h5c1f4f8e7": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a1d1",
+     "san": "Rad1",
+     "idea": "The rook takes the only open file, and it covers d7, where the black king wants to go."
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8b1c3d8e8h2h3h7h5c1f4f8e7a1d1": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8e6",
+     "san": "Be6"
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8b1c3d8e8h2h3h7h5c1f4f8e7a1d1c8e6": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f3g5",
+     "san": "Ng5",
+     "idea": "Go after the bishop pair. Trading off Black's light-squared bishop takes away most of their compensation."
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8b1c3d8e8h2h3h7h5c1f4f8e7a1d1c8e6f3g5": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h8h6",
+     "san": "Rh6"
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8b1c3d8e8h2h3h7h5c1f4f8e7a1d1c8e6f3g5h8h6": {
+   "ply": 26,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1e1",
+     "san": "Rfe1",
+     "idea": "Every piece now supports e5. The kingside pawns can start advancing, slowly."
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8b1c3d8e8h2h3h7h5c1f4f8e7a1d1c8e6f3g5h8h6f1e1": {
+   "ply": 27,
+   "turn": "b",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "C67",
@@ -721,6 +877,101 @@
    "ply": 18,
    "turn": "w",
    "mine": true,
+   "replies": [
+    {
+     "uci": "b3a5",
+     "san": "Na5",
+     "idea": "Hit b7 and stop Black's queenside from untangling."
+    }
+   ],
+   "eco": "C69",
+   "name": "Ruy Lopez: Exchange Variation, Gligoric Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5c6d7c6e1g1f7f6d2d4e5d4f3d4c6c5d4b3d8d1f1d1f8d6b3a5": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b7b5",
+     "san": "b5"
+    }
+   ],
+   "eco": "C69",
+   "name": "Ruy Lopez: Exchange Variation, Gligoric Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5c6d7c6e1g1f7f6d2d4e5d4f3d4c6c5d4b3d8d1f1d1f8d6b3a5b7b5": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c2c4",
+     "san": "c4",
+     "idea": "Break up the queenside before Black's bishops get going."
+    }
+   ],
+   "eco": "C69",
+   "name": "Ruy Lopez: Exchange Variation, Gligoric Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5c6d7c6e1g1f7f6d2d4e5d4f3d4c6c5d4b3d8d1f1d1f8d6b3a5b7b5c2c4": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8e7",
+     "san": "Ne7"
+    }
+   ],
+   "eco": "C69",
+   "name": "Ruy Lopez: Exchange Variation, Gligoric Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5c6d7c6e1g1f7f6d2d4e5d4f3d4c6c5d4b3d8d1f1d1f8d6b3a5b7b5c2c4g8e7": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1e3",
+     "san": "Be3",
+     "idea": "Develop and aim at c5, Black's weakest pawn."
+    }
+   ],
+   "eco": "C69",
+   "name": "Ruy Lopez: Exchange Variation, Gligoric Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5c6d7c6e1g1f7f6d2d4e5d4f3d4c6c5d4b3d8d1f1d1f8d6b3a5b7b5c2c4g8e7c1e3": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f6f5",
+     "san": "f5"
+    }
+   ],
+   "eco": "C69",
+   "name": "Ruy Lopez: Exchange Variation, Gligoric Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5c6d7c6e1g1f7f6d2d4e5d4f3d4c6c5d4b3d8d1f1d1f8d6b3a5b7b5c2c4g8e7c1e3f6f5": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "Develop the last minor piece. In this ending your healthy kingside majority is the long-term trump."
+    }
+   ],
+   "eco": "C69",
+   "name": "Ruy Lopez: Exchange Variation, Gligoric Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5c6d7c6e1g1f7f6d2d4e5d4f3d4c6c5d4b3d8d1f1d1f8d6b3a5b7b5c2c4g8e7c1e3f6f5b1c3": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "C69",
@@ -811,10 +1062,137 @@
    "ply": 16,
    "turn": "w",
    "mine": true,
+   "replies": [
+    {
+     "uci": "b1d2",
+     "san": "Nbd2",
+     "idea": "Challenge the e4 knight right away. White wants it gone before it settles."
+    },
+    {
+     "uci": "c2c3",
+     "san": "c3",
+     "idea": "The classical move: give the bishop the c2 square and keep ...d4 under control."
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open, Main Line"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6b1d2": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4c5",
+     "san": "Nc5"
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open, Bernstein Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6b1d2e4c5": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c2c3",
+     "san": "c3",
+     "idea": "Give the bishop a retreat on c2 and make ...d4 cost Black something."
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open, Bernstein Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6b1d2e4c5c2c3": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d5d4",
+     "san": "d4"
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open, Bernstein Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6b1d2e4c5c2c3d5d4": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b3e6",
+     "san": "Bxe6",
+     "idea": "Trade the bishop that guards d5 and c4. Black's pawns get weaker the more pieces come off."
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open, Bernstein Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6b1d2e4c5c2c3d5d4b3e6": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c5e6",
+     "san": "Nxe6"
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open, Bernstein Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6b1d2e4c5c2c3d5d4b3e6c5e6": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c3d4",
+     "san": "cxd4",
+     "idea": "Take the pawn back. Black's centre is gone and your e5 pawn cramps them."
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open, Bernstein Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6b1d2e4c5c2c3d5d4b3e6c5e6c3d4": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c6d4",
+     "san": "Ncxd4"
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open, Bernstein Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6b1d2e4c5c2c3d5d4b3e6c5e6c3d4c6d4": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a2a4",
+     "san": "a4",
+     "idea": "Hit b5 at once. Black's queenside pawns are the target for the rest of the game."
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open, Bernstein Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6b1d2e4c5c2c3d5d4b3e6c5e6c3d4c6d4a2a4": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "C80",
-   "name": "Ruy Lopez: Open, Main Line"
+   "name": "Ruy Lopez: Open, Bernstein Variation"
   },
   "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6a4c6": {
    "ply": 9,
@@ -823,8 +1201,7 @@
    "replies": [
     {
      "uci": "d7c6",
-     "san": "dxc6",
-     "idea": "Solid. You are playing a long positional game, not for a quick hit."
+     "san": "dxc6"
     }
    ],
    "eco": "C77",
@@ -851,8 +1228,7 @@
    "replies": [
     {
      "uci": "f8d6",
-     "san": "Bd6",
-     "idea": "Reroute the knight toward e3 and d5."
+     "san": "Bd6"
     }
    ],
    "eco": "C77",
@@ -879,8 +1255,7 @@
    "replies": [
     {
      "uci": "e8g8",
-     "san": "O-O",
-     "idea": "The knight eyes e3 and the weak light squares."
+     "san": "O-O"
     }
    ],
    "eco": "C77",
@@ -907,8 +1282,7 @@
    "replies": [
     {
      "uci": "f6d7",
-     "san": "Nd7",
-     "idea": "Castle and start manoeuvring."
+     "san": "Nd7"
     }
    ],
    "eco": "C77",
@@ -936,6 +1310,123 @@
    "end": true,
    "eco": "C77",
    "name": "Ruy Lopez: Morphy Defense, Bayreuth Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6c2c3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8c5",
+     "san": "Bc5"
+    }
+   ],
+   "eco": "C82",
+   "name": "Ruy Lopez: Open"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6c2c3f8c5": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1d2",
+     "san": "Nbd2",
+     "idea": "Now challenge the e4 knight, with the bishop's retreat already prepared."
+    }
+   ],
+   "eco": "C82",
+   "name": "Ruy Lopez: Open, Italian Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6c2c3f8c5b1d2": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "C82",
+   "name": "Ruy Lopez: Open, St. Petersburg Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6c2c3f8c5b1d2e8g8": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b3c2",
+     "san": "Bc2",
+     "idea": "Retreat to c2, where the bishop hits e4 and later h7."
+    }
+   ],
+   "eco": "C82",
+   "name": "Ruy Lopez: Open, St. Petersburg Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6c2c3f8c5b1d2e8g8b3c2": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f7f5",
+     "san": "f5"
+    }
+   ],
+   "eco": "C82",
+   "name": "Ruy Lopez: Open, St. Petersburg Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6c2c3f8c5b1d2e8g8b3c2f7f5": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2b3",
+     "san": "Nb3",
+     "idea": "Head for d4, the blockade square in front of Black's centre pawns."
+    }
+   ],
+   "eco": "C82",
+   "name": "Ruy Lopez: Open, St. Petersburg Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6c2c3f8c5b1d2e8g8b3c2f7f5d2b3": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c5b6",
+     "san": "Bb6"
+    }
+   ],
+   "eco": "C82",
+   "name": "Ruy Lopez: Open, St. Petersburg Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6c2c3f8c5b1d2e8g8b3c2f7f5d2b3c5b6": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f3d4",
+     "san": "Nfd4",
+     "idea": "The knight lands on d4. It blockades, and it eyes e6 and c6."
+    }
+   ],
+   "eco": "C82",
+   "name": "Ruy Lopez: Open, St. Petersburg Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6c2c3f8c5b1d2e8g8b3c2f7f5d2b3c5b6f3d4": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C82",
+   "name": "Ruy Lopez: Open, St. Petersburg Variation"
   }
  }
 }

@@ -1,0 +1,1355 @@
+{
+ "id": "alekhine-black",
+ "title": "Alekhine's Defence",
+ "family": "1. e4 Nf6",
+ "blurb": "Invite White's pawns forward, then attack them. Provocative and hypermodern, and most opponents know little theory against it.",
+ "side": "b",
+ "difficulty": 3,
+ "lines": [
+  {
+   "id": "alekhine-modern-bg4",
+   "label": "Modern Variation, 4...Bg4",
+   "eco": "B05",
+   "name": "Alekhine Defense: Modern Variation, Main Line",
+   "path": "e2e4g8f6e4e5f6d5d2d4d7d6g1f3c8g4f1e2e7e6e1g1f8e7c2c4d5b6h2h3g4h5b1c3e8g8c1e3d6d5c4c5h5f3g2f3b6c8",
+   "plies": 24
+  },
+  {
+   "id": "alekhine-modern-g6",
+   "label": "Modern Variation, 4...g6",
+   "eco": "B04",
+   "name": "Alekhine Defense: Modern Variation, Alburt Variation",
+   "path": "e2e4g8f6e4e5f6d5d2d4d7d6g1f3g7g6f1c4d5b6c4b3f8g7d1e2b8c6e1g1e8g8h2h3a7a5a2a4d6e5d4e5c6d4f3d4d8d4f1e1",
+   "plies": 25
+  },
+  {
+   "id": "alekhine-exchange",
+   "label": "Exchange Variation",
+   "eco": "B03",
+   "name": "Alekhine Defense: Exchange Variation, Voronezh Variation",
+   "path": "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6e5d6c7d6b1c3g7g6c1e3f8g7a1c1e8g8b2b3e7e5d4e5d6e5d1d8f8d8c4c5b6d7",
+   "plies": 24
+  },
+  {
+   "id": "alekhine-four-pawns",
+   "label": "Four Pawns Attack",
+   "eco": "B03",
+   "name": "Alekhine Defense: Four Pawns Attack, Main Line",
+   "path": "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5f4e5b8c6c1e3c8f5b1c3e7e6g1f3f8e7d4d5e6d5c4d5c6b4f3d4f5d7e5e6f7e6d5e6d7c6",
+   "plies": 28
+  },
+  {
+   "id": "alekhine-2nc3",
+   "label": "2.Nc3, into a French",
+   "eco": "C11",
+   "name": "French Defense: Steinitz Variation, Boleslavsky Variation",
+   "path": "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6f2f4c7c5g1f3b8c6c1e3c5d4f3d4f8c5d1d2e8g8",
+   "plies": 18
+  }
+ ],
+ "nodes": {
+  "": {
+   "ply": 0,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e2e4",
+     "san": "e4"
+    }
+   ]
+  },
+  "e2e4": {
+   "ply": 1,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6",
+     "idea": "Attack e4 at once. You invite the pawn forward to make it a target."
+    }
+   ],
+   "eco": "B00",
+   "name": "King's Pawn Game"
+  },
+  "e2e4g8f6": {
+   "ply": 2,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4e5",
+     "san": "e5"
+    },
+    {
+     "uci": "b1c3",
+     "san": "Nc3"
+    }
+   ],
+   "eco": "B02",
+   "name": "Alekhine Defense"
+  },
+  "e2e4g8f6e4e5": {
+   "ply": 3,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6d5",
+     "san": "Nd5",
+     "idea": "The knight goes to d5, the best square it has."
+    }
+   ],
+   "eco": "B02",
+   "name": "Alekhine Defense"
+  },
+  "e2e4g8f6e4e5f6d5": {
+   "ply": 4,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4"
+    }
+   ],
+   "eco": "B02",
+   "name": "Alekhine Defense: Normal Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4": {
+   "ply": 5,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6",
+     "idea": "Hit e5 straight away, before White can support it."
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6": {
+   "ply": 6,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3"
+    },
+    {
+     "uci": "c2c4",
+     "san": "c4"
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3": {
+   "ply": 7,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8g4",
+     "san": "Bg4",
+     "idea": "Pin the knight that holds e5."
+    },
+    {
+     "uci": "g7g6",
+     "san": "g6",
+     "idea": "The fianchetto. The g7 bishop will hit e5 and d4."
+    }
+   ],
+   "eco": "B04",
+   "name": "Alekhine Defense: Modern Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3c8g4": {
+   "ply": 8,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1e2",
+     "san": "Be2"
+    }
+   ],
+   "eco": "B05",
+   "name": "Alekhine Defense: Modern Variation, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3c8g4f1e2": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e7e6",
+     "san": "e6",
+     "idea": "Build a solid wall with pawns on e6 and d5. It's like a French, with the bishop already outside the chain."
+    }
+   ],
+   "eco": "B05",
+   "name": "Alekhine Defense: Modern Variation, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3c8g4f1e2e7e6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O"
+    }
+   ],
+   "eco": "B05",
+   "name": "Alekhine Defense: Modern Variation, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3c8g4f1e2e7e6e1g1": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8e7",
+     "san": "Be7",
+     "idea": "Develop and get ready to castle."
+    }
+   ],
+   "eco": "B05",
+   "name": "Alekhine Defense: Modern Variation, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3c8g4f1e2e7e6e1g1f8e7": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c2c4",
+     "san": "c4"
+    }
+   ],
+   "eco": "B05",
+   "name": "Alekhine Defense: Modern Variation, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3c8g4f1e2e7e6e1g1f8e7c2c4": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d5b6",
+     "san": "Nb6",
+     "idea": "The knight steps back to b6."
+    }
+   ],
+   "eco": "B05",
+   "name": "Alekhine Defense: Modern Variation, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3c8g4f1e2e7e6e1g1f8e7c2c4d5b6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h2h3",
+     "san": "h3"
+    }
+   ],
+   "eco": "B05",
+   "name": "Alekhine Defense: Modern Variation, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3c8g4f1e2e7e6e1g1f8e7c2c4d5b6h2h3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g4h5",
+     "san": "Bh5",
+     "idea": "Keep the pin."
+    }
+   ],
+   "eco": "B05",
+   "name": "Alekhine Defense: Modern Variation, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3c8g4f1e2e7e6e1g1f8e7c2c4d5b6h2h3g4h5": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3"
+    }
+   ],
+   "eco": "B05",
+   "name": "Alekhine Defense: Modern Variation, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3c8g4f1e2e7e6e1g1f8e7c2c4d5b6h2h3g4h5b1c3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle, then go for ...d5."
+    }
+   ],
+   "eco": "B05",
+   "name": "Alekhine Defense: Modern Variation, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3c8g4f1e2e7e6e1g1f8e7c2c4d5b6h2h3g4h5b1c3e8g8": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1e3",
+     "san": "Be3"
+    }
+   ],
+   "eco": "B05",
+   "name": "Alekhine Defense: Modern Variation, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3c8g4f1e2e7e6e1g1f8e7c2c4d5b6h2h3g4h5b1c3e8g8c1e3": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d6d5",
+     "san": "d5",
+     "idea": "Close the centre with ...d5. Your light-squared bishop is outside the chain."
+    }
+   ],
+   "eco": "B05",
+   "name": "Alekhine Defense: Modern Variation, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3c8g4f1e2e7e6e1g1f8e7c2c4d5b6h2h3g4h5b1c3e8g8c1e3d6d5": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c4c5",
+     "san": "c5"
+    }
+   ],
+   "eco": "B05",
+   "name": "Alekhine Defense: Modern Variation, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3c8g4f1e2e7e6e1g1f8e7c2c4d5b6h2h3g4h5b1c3e8g8c1e3d6d5c4c5": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h5f3",
+     "san": "Bxf3",
+     "idea": "Trade the bishop to break up White's kingside."
+    }
+   ],
+   "eco": "B05",
+   "name": "Alekhine Defense: Modern Variation, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3c8g4f1e2e7e6e1g1f8e7c2c4d5b6h2h3g4h5b1c3e8g8c1e3d6d5c4c5h5f3": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g2f3",
+     "san": "gxf3"
+    }
+   ],
+   "eco": "B05",
+   "name": "Alekhine Defense: Modern Variation, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3c8g4f1e2e7e6e1g1f8e7c2c4d5b6h2h3g4h5b1c3e8g8c1e3d6d5c4c5h5f3g2f3": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b6c8",
+     "san": "Nc8",
+     "idea": "The knight heads for e7 and f5, the hole in White's kingside."
+    }
+   ],
+   "eco": "B05",
+   "name": "Alekhine Defense: Modern Variation, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3c8g4f1e2e7e6e1g1f8e7c2c4d5b6h2h3g4h5b1c3e8g8c1e3d6d5c4c5h5f3g2f3b6c8": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "B05",
+   "name": "Alekhine Defense: Modern Variation, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3g7g6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1c4",
+     "san": "Bc4"
+    }
+   ],
+   "eco": "B04",
+   "name": "Alekhine Defense: Modern Variation, Alburt Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3g7g6f1c4": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d5b6",
+     "san": "Nb6",
+     "idea": "Step back and hit the c4 bishop."
+    }
+   ],
+   "eco": "B04",
+   "name": "Alekhine Defense: Modern Variation, Alburt Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3g7g6f1c4d5b6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c4b3",
+     "san": "Bb3"
+    }
+   ],
+   "eco": "B04",
+   "name": "Alekhine Defense: Modern Variation, Alburt Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3g7g6f1c4d5b6c4b3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8g7",
+     "san": "Bg7",
+     "idea": "The bishop goes on the long diagonal against e5."
+    }
+   ],
+   "eco": "B04",
+   "name": "Alekhine Defense: Modern Variation, Alburt Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3g7g6f1c4d5b6c4b3f8g7": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1e2",
+     "san": "Qe2"
+    }
+   ],
+   "eco": "B04",
+   "name": "Alekhine Defense: Modern Variation, Alburt Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3g7g6f1c4d5b6c4b3f8g7d1e2": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6",
+     "idea": "Pile onto e5 and d4."
+    }
+   ],
+   "eco": "B04",
+   "name": "Alekhine Defense: Modern Variation, Alburt Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3g7g6f1c4d5b6c4b3f8g7d1e2b8c6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O"
+    }
+   ],
+   "eco": "B04",
+   "name": "Alekhine Defense: Modern Variation, Alburt Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3g7g6f1c4d5b6c4b3f8g7d1e2b8c6e1g1": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle, then open the centre."
+    }
+   ],
+   "eco": "B04",
+   "name": "Alekhine Defense: Modern Variation, Alburt Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3g7g6f1c4d5b6c4b3f8g7d1e2b8c6e1g1e8g8": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h2h3",
+     "san": "h3"
+    }
+   ],
+   "eco": "B04",
+   "name": "Alekhine Defense: Modern Variation, Alburt Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3g7g6f1c4d5b6c4b3f8g7d1e2b8c6e1g1e8g8h2h3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a7a5",
+     "san": "a5",
+     "idea": "Threaten ...a4 against the b3 bishop."
+    }
+   ],
+   "eco": "B04",
+   "name": "Alekhine Defense: Modern Variation, Alburt Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3g7g6f1c4d5b6c4b3f8g7d1e2b8c6e1g1e8g8h2h3a7a5": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a2a4",
+     "san": "a4"
+    }
+   ],
+   "eco": "B04",
+   "name": "Alekhine Defense: Modern Variation, Alburt Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3g7g6f1c4d5b6c4b3f8g7d1e2b8c6e1g1e8g8h2h3a7a5a2a4": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d6e5",
+     "san": "dxe5",
+     "idea": "Take on e5 so the knight gets the d4 square."
+    }
+   ],
+   "eco": "B04",
+   "name": "Alekhine Defense: Modern Variation, Alburt Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3g7g6f1c4d5b6c4b3f8g7d1e2b8c6e1g1e8g8h2h3a7a5a2a4d6e5": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4e5",
+     "san": "dxe5"
+    }
+   ],
+   "eco": "B04",
+   "name": "Alekhine Defense: Modern Variation, Alburt Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3g7g6f1c4d5b6c4b3f8g7d1e2b8c6e1g1e8g8h2h3a7a5a2a4d6e5d4e5": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c6d4",
+     "san": "Nd4",
+     "idea": "The knight lands on d4 with tempo on the queen."
+    }
+   ],
+   "eco": "B04",
+   "name": "Alekhine Defense: Modern Variation, Alburt Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3g7g6f1c4d5b6c4b3f8g7d1e2b8c6e1g1e8g8h2h3a7a5a2a4d6e5d4e5c6d4": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3d4",
+     "san": "Nxd4"
+    }
+   ],
+   "eco": "B04",
+   "name": "Alekhine Defense: Modern Variation, Alburt Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3g7g6f1c4d5b6c4b3f8g7d1e2b8c6e1g1e8g8h2h3a7a5a2a4d6e5d4e5c6d4f3d4": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8d4",
+     "san": "Qxd4",
+     "idea": "Recapture. The queen is centralised, and the e5 pawn is weak."
+    }
+   ],
+   "eco": "B04",
+   "name": "Alekhine Defense: Modern Variation, Alburt Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3g7g6f1c4d5b6c4b3f8g7d1e2b8c6e1g1e8g8h2h3a7a5a2a4d6e5d4e5c6d4f3d4d8d4": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1e1",
+     "san": "Re1"
+    }
+   ],
+   "eco": "B04",
+   "name": "Alekhine Defense: Modern Variation, Alburt Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3g7g6f1c4d5b6c4b3f8g7d1e2b8c6e1g1e8g8h2h3a7a5a2a4d6e5d4e5c6d4f3d4d8d4f1e1": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [],
+   "end": true,
+   "eco": "B04",
+   "name": "Alekhine Defense: Modern Variation, Alburt Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4": {
+   "ply": 7,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d5b6",
+     "san": "Nb6",
+     "idea": "Retreat to b6. The knight still presses on c4."
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e5d6",
+     "san": "exd6"
+    },
+    {
+     "uci": "f2f4",
+     "san": "f4"
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6e5d6": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c7d6",
+     "san": "cxd6",
+     "idea": "Take with the c-pawn. You get the half-open c-file and a central pawn majority."
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Exchange Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6e5d6c7d6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3"
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Exchange Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6e5d6c7d6b1c3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g7g6",
+     "san": "g6",
+     "idea": "Fianchetto toward d4."
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Exchange Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6e5d6c7d6b1c3g7g6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1e3",
+     "san": "Be3"
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Exchange Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6e5d6c7d6b1c3g7g6c1e3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8g7",
+     "san": "Bg7",
+     "idea": "The bishop takes the long diagonal."
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Exchange Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6e5d6c7d6b1c3g7g6c1e3f8g7": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a1c1",
+     "san": "Rc1"
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Exchange Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6e5d6c7d6b1c3g7g6c1e3f8g7a1c1": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle. The d4 pawn is your target."
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Exchange Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6e5d6c7d6b1c3g7g6c1e3f8g7a1c1e8g8": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b2b3",
+     "san": "b3"
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Exchange Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6e5d6c7d6b1c3g7g6c1e3f8g7a1c1e8g8b2b3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e7e5",
+     "san": "e5",
+     "idea": "Hit d4 right away."
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Exchange Variation, Voronezh Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6e5d6c7d6b1c3g7g6c1e3f8g7a1c1e8g8b2b3e7e5": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4e5",
+     "san": "dxe5"
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Exchange Variation, Voronezh Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6e5d6c7d6b1c3g7g6c1e3f8g7a1c1e8g8b2b3e7e5d4e5": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d6e5",
+     "san": "dxe5",
+     "idea": "Recapture. Level position, and your pieces have more room."
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Exchange Variation, Voronezh Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6e5d6c7d6b1c3g7g6c1e3f8g7a1c1e8g8b2b3e7e5d4e5d6e5": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1d8",
+     "san": "Qxd8"
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Exchange Variation, Voronezh Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6e5d6c7d6b1c3g7g6c1e3f8g7a1c1e8g8b2b3e7e5d4e5d6e5d1d8": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8d8",
+     "san": "Rxd8",
+     "idea": "Take back with the rook, straight onto the open d-file."
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Exchange Variation, Voronezh Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6e5d6c7d6b1c3g7g6c1e3f8g7a1c1e8g8b2b3e7e5d4e5d6e5d1d8f8d8": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c4c5",
+     "san": "c5"
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Exchange Variation, Voronezh Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6e5d6c7d6b1c3g7g6c1e3f8g7a1c1e8g8b2b3e7e5d4e5d6e5d1d8f8d8c4c5": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b6d7",
+     "san": "N6d7",
+     "idea": "Retreat toward c5 and e5. The knight will find a good square."
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Exchange Variation, Voronezh Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6e5d6c7d6b1c3g7g6c1e3f8g7a1c1e8g8b2b3e7e5d4e5d6e5d1d8f8d8c4c5b6d7": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "B03",
+   "name": "Alekhine Defense: Exchange Variation, Voronezh Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d6e5",
+     "san": "dxe5",
+     "idea": "Take on e5 before White supports it. The big centre is now a target."
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Four Pawns Attack"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f4e5",
+     "san": "fxe5"
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Four Pawns Attack"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5f4e5": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6",
+     "idea": "Hit d4 and e5."
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Four Pawns Attack"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5f4e5b8c6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1e3",
+     "san": "Be3"
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Four Pawns Attack"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5f4e5b8c6c1e3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8f5",
+     "san": "Bf5",
+     "idea": "The bishop gets out before ...e6 shuts it in."
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Four Pawns Attack, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5f4e5b8c6c1e3c8f5": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3"
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Four Pawns Attack, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5f4e5b8c6c1e3c8f5b1c3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e7e6",
+     "san": "e6",
+     "idea": "Close the diagonal and get ready to develop the kingside."
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Four Pawns Attack, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5f4e5b8c6c1e3c8f5b1c3e7e6": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3"
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Four Pawns Attack, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5f4e5b8c6c1e3c8f5b1c3e7e6g1f3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8e7",
+     "san": "Be7",
+     "idea": "Develop, and castle soon."
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Four Pawns Attack, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5f4e5b8c6c1e3c8f5b1c3e7e6g1f3f8e7": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4d5",
+     "san": "d5"
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Four Pawns Attack, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5f4e5b8c6c1e3c8f5b1c3e7e6g1f3f8e7d4d5": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e6d5",
+     "san": "exd5",
+     "idea": "Take on d5 so White's centre breaks up."
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Four Pawns Attack, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5f4e5b8c6c1e3c8f5b1c3e7e6g1f3f8e7d4d5e6d5": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c4d5",
+     "san": "cxd5"
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Four Pawns Attack, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5f4e5b8c6c1e3c8f5b1c3e7e6g1f3f8e7d4d5e6d5c4d5": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c6b4",
+     "san": "Nb4",
+     "idea": "The knight jumps in, eyeing d5 and c2."
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Four Pawns Attack, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5f4e5b8c6c1e3c8f5b1c3e7e6g1f3f8e7d4d5e6d5c4d5c6b4": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3d4",
+     "san": "Nd4"
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Four Pawns Attack, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5f4e5b8c6c1e3c8f5b1c3e7e6g1f3f8e7d4d5e6d5c4d5c6b4f3d4": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f5d7",
+     "san": "Bd7",
+     "idea": "Step back, covering e6."
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Four Pawns Attack, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5f4e5b8c6c1e3c8f5b1c3e7e6g1f3f8e7d4d5e6d5c4d5c6b4f3d4f5d7": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e5e6",
+     "san": "e6"
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Four Pawns Attack, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5f4e5b8c6c1e3c8f5b1c3e7e6g1f3f8e7d4d5e6d5c4d5c6b4f3d4f5d7e5e6": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f7e6",
+     "san": "fxe6",
+     "idea": "Take. The e6 pawn is weak."
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Four Pawns Attack, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5f4e5b8c6c1e3c8f5b1c3e7e6g1f3f8e7d4d5e6d5c4d5c6b4f3d4f5d7e5e6f7e6": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d5e6",
+     "san": "dxe6"
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Four Pawns Attack, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5f4e5b8c6c1e3c8f5b1c3e7e6g1f3f8e7d4d5e6d5c4d5c6b4f3d4f5d7e5e6f7e6d5e6": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7c6",
+     "san": "Bc6",
+     "idea": "The bishop takes the long diagonal, and the e6 pawn will fall."
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Four Pawns Attack, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5f4e5b8c6c1e3c8f5b1c3e7e6g1f3f8e7d4d5e6d5c4d5c6b4f3d4f5d7e5e6f7e6d5e6d7c6": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "B03",
+   "name": "Alekhine Defense: Four Pawns Attack, Main Line"
+  },
+  "e2e4g8f6b1c3": {
+   "ply": 3,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7d5",
+     "san": "d5",
+     "idea": "Hit the centre. ...d5 gives White the least."
+    }
+   ],
+   "eco": "B02",
+   "name": "Alekhine Defense"
+  },
+  "e2e4g8f6b1c3d7d5": {
+   "ply": 4,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4e5",
+     "san": "e5"
+    }
+   ],
+   "eco": "B02",
+   "name": "Alekhine Defense: Scandinavian Variation"
+  },
+  "e2e4g8f6b1c3d7d5e4e5": {
+   "ply": 5,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6d7",
+     "san": "Nfd7",
+     "idea": "Retreat to d7, where the knight supports ...c5."
+    }
+   ],
+   "eco": "B02",
+   "name": "Alekhine Defense: Scandinavian Variation"
+  },
+  "e2e4g8f6b1c3d7d5e4e5f6d7": {
+   "ply": 6,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4"
+    }
+   ],
+   "eco": "B02",
+   "name": "Alekhine Defense: Scandinavian Variation"
+  },
+  "e2e4g8f6b1c3d7d5e4e5f6d7d2d4": {
+   "ply": 7,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e7e6",
+     "san": "e6",
+     "idea": "Now it's a French, reached by a different move order."
+    }
+   ],
+   "eco": "B02",
+   "name": "Alekhine Defense: Scandinavian Variation"
+  },
+  "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f2f4",
+     "san": "f4"
+    }
+   ],
+   "eco": "B02",
+   "name": "Alekhine Defense: Scandinavian Variation"
+  },
+  "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6f2f4": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c7c5",
+     "san": "c5",
+     "idea": "Hit d4, the base of White's chain."
+    }
+   ],
+   "eco": "B02",
+   "name": "Alekhine Defense: Scandinavian Variation"
+  },
+  "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6f2f4c7c5": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3"
+    }
+   ],
+   "eco": "B02",
+   "name": "Alekhine Defense: Scandinavian Variation"
+  },
+  "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6f2f4c7c5g1f3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6",
+     "idea": "Pile onto d4."
+    }
+   ],
+   "eco": "C11",
+   "name": "French Defense: Steinitz Variation"
+  },
+  "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6f2f4c7c5g1f3b8c6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1e3",
+     "san": "Be3"
+    }
+   ],
+   "eco": "C11",
+   "name": "French Defense: Steinitz Variation"
+  },
+  "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6f2f4c7c5g1f3b8c6c1e3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c5d4",
+     "san": "cxd4",
+     "idea": "Trade on d4 and open the c-file."
+    }
+   ],
+   "eco": "C11",
+   "name": "French Defense: Steinitz Variation, Boleslavsky Variation"
+  },
+  "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6f2f4c7c5g1f3b8c6c1e3c5d4": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3d4",
+     "san": "Nxd4"
+    }
+   ],
+   "eco": "C11",
+   "name": "French Defense: Steinitz Variation, Boleslavsky Variation"
+  },
+  "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6f2f4c7c5g1f3b8c6c1e3c5d4f3d4": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8c5",
+     "san": "Bc5",
+     "idea": "Pin the d4 knight against White's bishop."
+    }
+   ],
+   "eco": "C11",
+   "name": "French Defense: Steinitz Variation, Boleslavsky Variation"
+  },
+  "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6f2f4c7c5g1f3b8c6c1e3c5d4f3d4f8c5": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1d2",
+     "san": "Qd2"
+    }
+   ],
+   "eco": "C11",
+   "name": "French Defense: Steinitz Variation, Boleslavsky Variation"
+  },
+  "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6f2f4c7c5g1f3b8c6c1e3c5d4f3d4f8c5d1d2": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle. Your pieces are active, and White's centre is under fire."
+    }
+   ],
+   "eco": "C11",
+   "name": "French Defense: Steinitz Variation, Boleslavsky Variation"
+  },
+  "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6f2f4c7c5g1f3b8c6c1e3c5d4f3d4f8c5d1d2e8g8": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C11",
+   "name": "French Defense: Steinitz Variation, Boleslavsky Variation"
+  }
+ }
+}

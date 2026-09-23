@@ -160,6 +160,8 @@ export default function HomePage() {
                             <dt>Positions to learn</dt>
                             <dd>{totals.cards}</dd>
                         </div>
+                        {/* Not computed: tools/build_openings.py fails the
+                            build if any learner move lacks an idea. */}
                         <div>
                             <dt>Moves explained</dt>
                             <dd>100%</dd>

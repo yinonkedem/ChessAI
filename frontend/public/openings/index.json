@@ -11,6 +11,7 @@
    "difficulty": 1,
    "lineCount": 5,
    "cardCount": 40,
+   "choiceCount": 2,
    "nodeCount": 84,
    "file": "italian-white.json"
   },
@@ -21,9 +22,10 @@
    "blurb": "The Spanish Game. World champions have leaned on it for 150 years — slow pressure rather than a quick punch.",
    "side": "w",
    "difficulty": 3,
-   "lineCount": 5,
-   "cardCount": 30,
-   "nodeCount": 66,
+   "lineCount": 6,
+   "cardCount": 49,
+   "choiceCount": 3,
+   "nodeCount": 102,
    "file": "ruy-lopez-white.json"
   },
   {
@@ -34,8 +36,9 @@
    "side": "w",
    "difficulty": 2,
    "lineCount": 3,
-   "cardCount": 21,
-   "nodeCount": 44,
+   "cardCount": 26,
+   "choiceCount": 1,
+   "nodeCount": 53,
    "file": "scotch-white.json"
   },
   {
@@ -46,8 +49,9 @@
    "side": "w",
    "difficulty": 2,
    "lineCount": 3,
-   "cardCount": 22,
-   "nodeCount": 46,
+   "cardCount": 29,
+   "choiceCount": 1,
+   "nodeCount": 59,
    "file": "queens-gambit-white.json"
   },
   {
@@ -57,10 +61,50 @@
    "blurb": "The same setup against almost anything Black plays. The lowest-theory way to start a serious 1.d4 repertoire.",
    "side": "w",
    "difficulty": 1,
-   "lineCount": 3,
-   "cardCount": 20,
-   "nodeCount": 40,
+   "lineCount": 4,
+   "cardCount": 37,
+   "choiceCount": 0,
+   "nodeCount": 74,
    "file": "london-white.json"
+  },
+  {
+   "id": "english-white",
+   "title": "The English Opening",
+   "family": "1. c4",
+   "blurb": "Start on the flank and take the centre later. Flexible, positional, and far less theory than 1.e4.",
+   "side": "w",
+   "difficulty": 2,
+   "lineCount": 6,
+   "cardCount": 59,
+   "choiceCount": 1,
+   "nodeCount": 119,
+   "file": "english-white.json"
+  },
+  {
+   "id": "catalan-white",
+   "title": "The Catalan",
+   "family": "1. d4 d5 2. c4 e6 3. g3",
+   "blurb": "A Queen's Gambit with the bishop on g2. Quiet, lasting pressure on the long diagonal.",
+   "side": "w",
+   "difficulty": 3,
+   "lineCount": 5,
+   "cardCount": 38,
+   "choiceCount": 1,
+   "nodeCount": 77,
+   "file": "catalan-white.json"
+  },
+  {
+   "id": "kings-gambit-white",
+   "title": "The King's Gambit",
+   "family": "1. e4 e5",
+   "blurb": "Throw the f-pawn forward on move two. The romantic opening: open lines and a fast attack, with real risk to your own king.",
+   "side": "w",
+   "difficulty": 3,
+   "lineCount": 8,
+   "cardCount": 58,
+   "choiceCount": 2,
+   "nodeCount": 118,
+   "file": "kings-gambit-white.json"
   },
   {
    "id": "sicilian-najdorf-black",
@@ -70,8 +114,9 @@
    "side": "b",
    "difficulty": 4,
    "lineCount": 4,
-   "cardCount": 19,
-   "nodeCount": 40,
+   "cardCount": 32,
+   "choiceCount": 1,
+   "nodeCount": 66,
    "file": "sicilian-najdorf-black.json"
   },
   {
@@ -82,9 +127,23 @@
    "side": "b",
    "difficulty": 3,
    "lineCount": 2,
-   "cardCount": 11,
-   "nodeCount": 23,
+   "cardCount": 23,
+   "choiceCount": 0,
+   "nodeCount": 49,
    "file": "sicilian-dragon-black.json"
+  },
+  {
+   "id": "dragon-black",
+   "title": "Sicilian: Dragon",
+   "family": "1. e4 c5",
+   "blurb": "Fianchetto the bishop on the long diagonal and race White's attack. One of the sharpest main lines in chess.",
+   "side": "b",
+   "difficulty": 4,
+   "lineCount": 7,
+   "cardCount": 50,
+   "choiceCount": 1,
+   "nodeCount": 102,
+   "file": "dragon-black.json"
   },
   {
    "id": "french-black",
@@ -93,9 +152,10 @@
    "blurb": "Solid and strategic. You concede space early and spend the game undermining White's centre.",
    "side": "b",
    "difficulty": 2,
-   "lineCount": 5,
-   "cardCount": 27,
-   "nodeCount": 57,
+   "lineCount": 7,
+   "cardCount": 58,
+   "choiceCount": 2,
+   "nodeCount": 120,
    "file": "french-black.json"
   },
   {
@@ -105,10 +165,24 @@
    "blurb": "As solid as the French, but the light-squared bishop gets out first. A favourite of players who hate bad positions.",
    "side": "b",
    "difficulty": 1,
-   "lineCount": 5,
-   "cardCount": 25,
-   "nodeCount": 52,
+   "lineCount": 6,
+   "cardCount": 47,
+   "choiceCount": 2,
+   "nodeCount": 97,
    "file": "caro-kann-black.json"
+  },
+  {
+   "id": "alekhine-black",
+   "title": "Alekhine's Defence",
+   "family": "1. e4 Nf6",
+   "blurb": "Invite White's pawns forward, then attack them. Provocative and hypermodern, and most opponents know little theory against it.",
+   "side": "b",
+   "difficulty": 3,
+   "lineCount": 5,
+   "cardCount": 47,
+   "choiceCount": 1,
+   "nodeCount": 97,
+   "file": "alekhine-black.json"
   },
   {
    "id": "kings-indian-black",
@@ -117,9 +191,10 @@
    "blurb": "Hand White the centre, then blow it up. The sharpest way to play for a win with Black against 1.d4.",
    "side": "b",
    "difficulty": 4,
-   "lineCount": 4,
-   "cardCount": 27,
-   "nodeCount": 55,
+   "lineCount": 5,
+   "cardCount": 32,
+   "choiceCount": 1,
+   "nodeCount": 66,
    "file": "kings-indian-black.json"
   },
   {
@@ -129,9 +204,10 @@
    "blurb": "Pin the knight, trade it for the bishop, and play against the damaged pawns. The most respected answer to 1.d4.",
    "side": "b",
    "difficulty": 3,
-   "lineCount": 4,
-   "cardCount": 31,
-   "nodeCount": 63,
+   "lineCount": 5,
+   "cardCount": 38,
+   "choiceCount": 1,
+   "nodeCount": 78,
    "file": "nimzo-indian-black.json"
   },
   {
@@ -142,8 +218,9 @@
    "side": "b",
    "difficulty": 4,
    "lineCount": 4,
-   "cardCount": 27,
-   "nodeCount": 55,
+   "cardCount": 30,
+   "choiceCount": 0,
+   "nodeCount": 61,
    "file": "grunfeld-black.json"
   },
   {
@@ -155,6 +232,7 @@
    "difficulty": 4,
    "lineCount": 4,
    "cardCount": 26,
+   "choiceCount": 1,
    "nodeCount": 54,
    "file": "semi-slav-black.json"
   },
@@ -167,6 +245,7 @@
    "difficulty": 4,
    "lineCount": 4,
    "cardCount": 23,
+   "choiceCount": 0,
    "nodeCount": 47,
    "file": "benoni-black.json"
   }

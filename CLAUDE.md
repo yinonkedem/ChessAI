@@ -193,6 +193,35 @@ Self-play + MCTS training loop in `AlphaZero/alphaZero.py`. The ResNet model is 
 
 ## Audit & refactor — session log
 
+### Book content expansion II + engine-checked theory (2026-09-23)
+
+**14 repertoires → 19, 55 lines → 93, 349 positions → 742, learner choices 10 → 21.**
+New: **Sicilian Dragon** (the real one; the old "Dragon" is the Accelerated), **English**,
+**Catalan**, **King's Gambit**, **Alekhine**. Deepened 19 short lines (French, Caro-Kann, Ruy,
+Najdorf, Accelerated Dragon, QGD, Scotch) from 10–16 plies to 20–30, and added 7 lines that give the
+learner a choice (e.g. 9.Nbd2/9.c3 in the Open Ruy, 5...Qb6/5...Bd7 in the French Advance).
+
+**New: `tools/check_book.py`** grades every learner move against Stockfish (depth 18, flags >70cp
+loss; per-repertoire `engineSlackCp` for gambits). Every new line was graded before it went in, and
+that caught a dozen of my own errors, including a bishop that just hung to Qxf5, a knight retreat
+that dropped a piece, and an illegal ...Nc6 where no knight could reach it. On the **existing** book
+its first run found real teaching errors:
+- **London main line taught 8.Bxd6**, when 8.dxc5 wins material (the d6 bishop is pinned against the
+  queen on c7 by the g3 bishop). Rewritten, plus a new line that *teaches* the punishment.
+- **Grünfeld Fianchetto taught 8...Nfd7** (−105cp). Now 8...Nbd7.
+
+**Two new build errors** in `build_openings.py`: every learner move must have an idea (backs the
+home page's "100% explained"), and an idea on an **opponent** ply is rejected. The second one
+exposed **65 stale ideas** in 12 lines, each an off-by-one copy of the next ply's text. They were
+never displayed (the drill only shows learner-move ideas), so they were dead data, now removed.
+
+**A UI bug the browser drills found:** the **last move of every line** had its idea authored but
+never shown. `DrillPage`'s completion card replaces `<Feedback/>`. Now the completion card shows it.
+
+**Verified:** build clean with no label warnings, 236 Jest assertions (every one of 1,523 tree
+positions legal per the app's own arbiter), 32 full browser drills across 8 repertoires (every
+explanation shown, both board orientations, no console errors), and the full Stockfish pass.
+
 ### Landing page (2026-09-23)
 
 `/` used to be the auth-gated game setup, so a first-time visitor hit a login wall and never saw

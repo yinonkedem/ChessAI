@@ -17,18 +17,18 @@
   {
    "id": "najdorf-main-bg5",
    "label": "Main Line (6. Bg5)",
-   "eco": "B98",
-   "name": "Sicilian Defense: Najdorf Variation",
-   "path": "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1g5e7e6f2f4f8e7",
-   "plies": 14
+   "eco": "B99",
+   "name": "Sicilian Defense: Najdorf Variation, Main Line",
+   "path": "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1g5e7e6f2f4f8e7d1f3d8c7e1c1b8d7g2g4b7b5g5f6d7f6g4g5f6d7f4f5d7c5f5f6g7f6g5f6e7f8",
+   "plies": 30
   },
   {
    "id": "najdorf-be2",
    "label": "Classical (6. Be2)",
    "eco": "B92",
-   "name": "Sicilian Defense: Najdorf Variation, Opocensky Variation",
-   "path": "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6f1e2e7e5d4b3f8e7",
-   "plies": 14
+   "name": "Sicilian Defense: Najdorf Variation, Opocensky Variation, Traditional Line",
+   "path": "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6f1e2e7e5d4b3f8e7e1g1e8g8c1e3c8e6d1d2b8d7a2a4a8c8a4a5d8c7",
+   "plies": 24
   },
   {
    "id": "najdorf-scheveningen",
@@ -402,10 +402,226 @@
    "ply": 14,
    "turn": "w",
    "mine": false,
-   "replies": [],
-   "end": true,
+   "replies": [
+    {
+     "uci": "d1f3",
+     "san": "Qf3"
+    }
+   ],
    "eco": "B98",
    "name": "Sicilian Defense: Najdorf Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1g5e7e6f2f4f8e7d1f3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8c7",
+     "san": "Qc7",
+     "idea": "The queen goes to c7, its usual square in the Najdorf, and watches e5."
+    }
+   ],
+   "eco": "B98",
+   "name": "Sicilian Defense: Najdorf Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1g5e7e6f2f4f8e7d1f3d8c7": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1c1",
+     "san": "O-O-O"
+    }
+   ],
+   "eco": "B98",
+   "name": "Sicilian Defense: Najdorf Variation, Traditional Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1g5e7e6f2f4f8e7d1f3d8c7e1c1": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8d7",
+     "san": "Nbd7",
+     "idea": "Develop toward c5 and e5, and keep f6 protected."
+    }
+   ],
+   "eco": "B98",
+   "name": "Sicilian Defense: Najdorf Variation, Traditional Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1g5e7e6f2f4f8e7d1f3d8c7e1c1b8d7": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g2g4",
+     "san": "g4"
+    }
+   ],
+   "eco": "B99",
+   "name": "Sicilian Defense: Najdorf Variation, Main Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1g5e7e6f2f4f8e7d1f3d8c7e1c1b8d7g2g4": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b7b5",
+     "san": "b5",
+     "idea": "The race begins. Your queenside pawns go forward as fast as White's kingside ones."
+    }
+   ],
+   "eco": "B99",
+   "name": "Sicilian Defense: Najdorf Variation, Main Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1g5e7e6f2f4f8e7d1f3d8c7e1c1b8d7g2g4b7b5": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g5f6",
+     "san": "Bxf6"
+    }
+   ],
+   "eco": "B99",
+   "name": "Sicilian Defense: Najdorf Variation, Main Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1g5e7e6f2f4f8e7d1f3d8c7e1c1b8d7g2g4b7b5g5f6": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7f6",
+     "san": "Nxf6",
+     "idea": "Recapture with the knight so your structure stays intact."
+    }
+   ],
+   "eco": "B99",
+   "name": "Sicilian Defense: Najdorf Variation, Main Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1g5e7e6f2f4f8e7d1f3d8c7e1c1b8d7g2g4b7b5g5f6d7f6": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g4g5",
+     "san": "g5"
+    }
+   ],
+   "eco": "B99",
+   "name": "Sicilian Defense: Najdorf Variation, Main Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1g5e7e6f2f4f8e7d1f3d8c7e1c1b8d7g2g4b7b5g5f6d7f6g4g5": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6d7",
+     "san": "Nd7",
+     "idea": "The knight heads for c5, where it hits e4 and helps the queenside attack."
+    }
+   ],
+   "eco": "B99",
+   "name": "Sicilian Defense: Najdorf Variation, Main Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1g5e7e6f2f4f8e7d1f3d8c7e1c1b8d7g2g4b7b5g5f6d7f6g4g5f6d7": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f4f5",
+     "san": "f5"
+    }
+   ],
+   "eco": "B99",
+   "name": "Sicilian Defense: Najdorf Variation, Main Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1g5e7e6f2f4f8e7d1f3d8c7e1c1b8d7g2g4b7b5g5f6d7f6g4g5f6d7f4f5": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7c5",
+     "san": "Nc5",
+     "idea": "Hit e4 and bring the knight into the attack."
+    }
+   ],
+   "eco": "B99",
+   "name": "Sicilian Defense: Najdorf Variation, Main Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1g5e7e6f2f4f8e7d1f3d8c7e1c1b8d7g2g4b7b5g5f6d7f6g4g5f6d7f4f5d7c5": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f5f6",
+     "san": "f6"
+    }
+   ],
+   "eco": "B99",
+   "name": "Sicilian Defense: Najdorf Variation, Main Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1g5e7e6f2f4f8e7d1f3d8c7e1c1b8d7g2g4b7b5g5f6d7f6g4g5f6d7f4f5d7c5f5f6": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g7f6",
+     "san": "gxf6",
+     "idea": "Take. Leaving the pawn on f6 would lock your bishop out."
+    }
+   ],
+   "eco": "B99",
+   "name": "Sicilian Defense: Najdorf Variation, Main Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1g5e7e6f2f4f8e7d1f3d8c7e1c1b8d7g2g4b7b5g5f6d7f6g4g5f6d7f4f5d7c5f5f6g7f6": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g5f6",
+     "san": "gxf6"
+    }
+   ],
+   "eco": "B99",
+   "name": "Sicilian Defense: Najdorf Variation, Main Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1g5e7e6f2f4f8e7d1f3d8c7e1c1b8d7g2g4b7b5g5f6d7f6g4g5f6d7f4f5d7c5f5f6g7f6g5f6": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e7f8",
+     "san": "Bf8",
+     "idea": "The bishop goes back to f8, the only safe square. It can come out again later."
+    }
+   ],
+   "eco": "B99",
+   "name": "Sicilian Defense: Najdorf Variation, Main Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1g5e7e6f2f4f8e7d1f3d8c7e1c1b8d7g2g4b7b5g5f6d7f6g4g5f6d7f4f5d7c5f5f6g7f6g5f6e7f8": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "B99",
+   "name": "Sicilian Defense: Najdorf Variation, Main Line"
   },
   "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6f1e2": {
    "ply": 11,
@@ -452,10 +668,145 @@
    "ply": 14,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O"
+    }
+   ],
+   "eco": "B92",
+   "name": "Sicilian Defense: Najdorf Variation, Opocensky Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6f1e2e7e5d4b3f8e7e1g1": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle. In the ...e5 structure your king is safe, and the d5 square is what matters."
+    }
+   ],
+   "eco": "B92",
+   "name": "Sicilian Defense: Najdorf Variation, Opocensky Variation"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6f1e2e7e5d4b3f8e7e1g1e8g8": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1e3",
+     "san": "Be3"
+    }
+   ],
+   "eco": "B92",
+   "name": "Sicilian Defense: Najdorf Variation, Opocensky Variation, Traditional Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6f1e2e7e5d4b3f8e7e1g1e8g8c1e3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8e6",
+     "san": "Be6",
+     "idea": "The bishop covers d5. Controlling that square is the whole plan behind the Najdorf's ...e5."
+    }
+   ],
+   "eco": "B92",
+   "name": "Sicilian Defense: Najdorf Variation, Opocensky Variation, Traditional Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6f1e2e7e5d4b3f8e7e1g1e8g8c1e3c8e6": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1d2",
+     "san": "Qd2"
+    }
+   ],
+   "eco": "B92",
+   "name": "Sicilian Defense: Najdorf Variation, Opocensky Variation, Traditional Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6f1e2e7e5d4b3f8e7e1g1e8g8c1e3c8e6d1d2": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8d7",
+     "san": "Nbd7",
+     "idea": "Develop toward c5 and f6, keeping ...d5 in mind."
+    }
+   ],
+   "eco": "B92",
+   "name": "Sicilian Defense: Najdorf Variation, Opocensky Variation, Traditional Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6f1e2e7e5d4b3f8e7e1g1e8g8c1e3c8e6d1d2b8d7": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a2a4",
+     "san": "a4"
+    }
+   ],
+   "eco": "B92",
+   "name": "Sicilian Defense: Najdorf Variation, Opocensky Variation, Traditional Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6f1e2e7e5d4b3f8e7e1g1e8g8c1e3c8e6d1d2b8d7a2a4": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a8c8",
+     "san": "Rc8",
+     "idea": "The rook takes the c-file, where your counterplay will come."
+    }
+   ],
+   "eco": "B92",
+   "name": "Sicilian Defense: Najdorf Variation, Opocensky Variation, Traditional Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6f1e2e7e5d4b3f8e7e1g1e8g8c1e3c8e6d1d2b8d7a2a4a8c8": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a4a5",
+     "san": "a5"
+    }
+   ],
+   "eco": "B92",
+   "name": "Sicilian Defense: Najdorf Variation, Opocensky Variation, Traditional Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6f1e2e7e5d4b3f8e7e1g1e8g8c1e3c8e6d1d2b8d7a2a4a8c8a4a5": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8c7",
+     "san": "Qc7",
+     "idea": "Connect the rooks and pressure c2 down the c-file."
+    }
+   ],
+   "eco": "B92",
+   "name": "Sicilian Defense: Najdorf Variation, Opocensky Variation, Traditional Line"
+  },
+  "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6f1e2e7e5d4b3f8e7e1g1e8g8c1e3c8e6d1d2b8d7a2a4a8c8a4a5d8c7": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "B92",
-   "name": "Sicilian Defense: Najdorf Variation, Opocensky Variation"
+   "name": "Sicilian Defense: Najdorf Variation, Opocensky Variation, Traditional Line"
   },
   "e2e4c7c5g1f3d7d6d2d4c5d4f3d4g8f6b1c3a7a6c1e3e7e6": {
    "ply": 12,
