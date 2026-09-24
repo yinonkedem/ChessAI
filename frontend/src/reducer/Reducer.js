@@ -148,7 +148,24 @@ export const reducer = (state, action) => {
         }
 
         case actionTypes.TAKE_BACK: {
-            const wantSteps = state.opponentType === "human" ? 1 : 2;
+            // Against a human, always undo one ply. Against an engine, undo
+            // one ply if it hasn't answered yet — state.turn already flipped
+            // to the engine's colour the moment the human moved, so this is
+            // true for as long as its reply is still in flight — which just
+            // un-plays the pending human move and leaves it human again;
+            // any in-flight engine request self-discards in useEngineAgent
+            // (its captured position no longer matches state.position).
+            // Once the engine HAS answered, undo the pair (its reply plus
+            // the move it answered) so the human lands back at their own
+            // turn to retry, rather than facing a position the engine
+            // already moved from.
+            let wantSteps;
+            if (state.opponentType === "human") {
+                wantSteps = 1;
+            } else {
+                const aiColor = state.userColor === "white" ? "b" : "w";
+                wantSteps = state.turn === aiColor ? 1 : 2;
+            }
             const steps = Math.min(wantSteps, state.movesList.length);
 
             if (steps === 0) return state;

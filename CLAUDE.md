@@ -193,6 +193,29 @@ Self-play + MCTS training loop in `AlphaZero/alphaZero.py`. The ResNet model is 
 
 ## Audit & refactor — session log
 
+### Take Back stopping the AI (2026-09-24)
+
+**Bug:** at a high engine depth, clicking Take Back right after moving (before the AI's reply
+landed) removed **two** plies instead of one, and — since the second ply didn't exist yet — it
+instead deleted the **previous, already-completed** exchange. Worse, the corrupted state could land
+on "the AI's turn" while `useEngineAgent`'s `isBusy` guard was still true for the now-stale in-flight
+request; when that request resolved it correctly discarded itself (position no longer matched), but
+nothing re-fired the effect afterward, so **the AI never moved again**.
+
+**Root cause:** `TAKE_BACK` hardcoded "2 plies for a non-human opponent," which is only correct once
+the engine has actually answered (then undoing the pair returns you to your own turn to retry). It
+was wrong for the case where the engine's reply is still in flight — there, only your one pending
+move should come off. `Reducer.js` now branches on `state.turn`: if it already equals the engine's
+colour (its reply hasn't landed), undo 1 ply; otherwise undo the pair as before. Every take-back now
+provably ends back on the human's turn, so the "AI needs to move but isBusy is stuck" state can no
+longer arise from this action.
+
+**Verified:** `reducer/Reducer.test.js` (6 assertions, both branches, both user colours, and a swept
+check across ply counts that take-back never ends on the engine's turn), plus a browser repro against
+the confirmed pre-fix bundle (delayed the engine response via route interception to make the race
+reliable) showing the exact reported corruption and AI silence, then the same script clean against
+the fix — 7/7 — and the ordinary "engine already replied" retry flow re-verified unchanged (2/2).
+
 ### Attacks & traps, and master-game depth (2026-09-24)
 
 **35 repertoires, 164 lines, 1,639 positions** (from 19 / 93 / 742).
