@@ -4,12 +4,15 @@ import path from "path";
 import { buildPosition, legalMovesAt } from "./buildPosition";
 import { bookSquares, coordsToUci, judgeMove } from "./judgeMove";
 import { isEnd, isMine, nodeAt, pathMoves, repliesAt } from "./book";
+import { uciToCoords } from "../utils/uciToCoords";
 import {
+    Mode,
     Phase,
     T,
     currentOpening,
     initialTrainerState,
     runProgress,
+    sessionAnnotations,
     trainerReducer,
 } from "./trainerReducer";
 
@@ -310,6 +313,101 @@ describe("trainerReducer", () => {
         const s = trainerReducer(playBook(start()), { type: T.RESTART });
         expect(s.path).toBe("");
         expect(s.runs).toBe(1);
+    });
+});
+
+/**
+ * A learner clicking "Show me" got a permanent, stale reveal arrow: T.SKIP
+ * plays the move and draws it, but the book's own reply then lands via
+ * T.ADVANCE — which deliberately leaves `feedback` untouched (see its
+ * comment in trainerReducer.js) — so nothing ever told the board the
+ * revealed move was a ply behind the real position. Reported directly:
+ * "when i click show me the computer make the move but put arrow on the
+ * screen and mark the piece that he moves. the arrow needs to disappear."
+ */
+describe("sessionAnnotations", () => {
+    const start = (rep = italian) =>
+        trainerReducer(initialTrainerState, { type: T.START, payload: { repertoire: rep } });
+
+    const playBook = (s, which = 0) => {
+        const o = bookSquares(s.repertoire, s.path)[which];
+        return trainerReducer(s, {
+            type: T.ATTEMPT,
+            payload: judgeMove(s.repertoire, s.path, { from: o.from, to: o.to }),
+        });
+    };
+
+    it("shows nothing before any hint or skip", () => {
+        expect(sessionAnnotations(start())).toEqual([]);
+    });
+
+    it("hint level 1 marks the piece's square, deduped by origin", () => {
+        const s = trainerReducer(start(), { type: T.HINT });
+        const anns = sessionAnnotations(s);
+        expect(anns.length).toBeGreaterThan(0);
+        expect(anns.every((a) => a.type === "square" && a.tone === "hint")).toBe(true);
+    });
+
+    it("hint level 2 draws an arrow for every book move here", () => {
+        let s = trainerReducer(start(), { type: T.HINT });
+        s = trainerReducer(s, { type: T.HINT });
+        const anns = sessionAnnotations(s);
+        expect(anns).toHaveLength(bookSquares(italian, "").length);
+        expect(anns.every((a) => a.type === "arrow" && a.tone === "hint")).toBe(true);
+    });
+
+    it("Show me draws the revealed move while the book's reply is pending", () => {
+        const s = trainerReducer(start(), { type: T.SKIP });
+        expect(s.phase).toBe(Phase.reply); // this line has more moves left
+        const [from, to] = uciToCoords(s.feedback.playedUci);
+        expect(sessionAnnotations(s)).toEqual([{ type: "arrow", from, to, tone: "good" }]);
+    });
+
+    it("BUG FIX: the revealed-move arrow clears once the book's reply lands", () => {
+        let s = trainerReducer(start(), { type: T.SKIP });
+        expect(sessionAnnotations(s)).toHaveLength(1); // showing, correctly, so far
+
+        s = trainerReducer(s, {
+            type: T.ADVANCE,
+            payload: { reply: repliesAt(s.repertoire, s.path)[0] },
+        });
+        expect(s.phase).not.toBe(Phase.reply);
+        // The bug, made concrete: `feedback` is STILL the stale "skipped"
+        // entry from before (T.ADVANCE never touches it) — the fix has to
+        // come from sessionAnnotations reading `phase`, not from the
+        // reducer clearing feedback for it.
+        expect(s.feedback.verdict).toBe("skipped");
+        expect(sessionAnnotations(s)).toEqual([]);
+    });
+
+    it("Show me on the last move of a line leaves the arrow up (nothing more will happen)", () => {
+        const s = {
+            ...start(),
+            phase: Phase.lineComplete,
+            feedback: { verdict: "skipped", played: "e4", playedUci: "e2e4", idea: null, alternatives: 0 },
+        };
+        const [from, to] = uciToCoords("e2e4");
+        expect(sessionAnnotations(s)).toEqual([{ type: "arrow", from, to, tone: "good" }]);
+    });
+
+    it("a normal correct move draws nothing (only hints/reveals do)", () => {
+        expect(sessionAnnotations(playBook(start()))).toEqual([]);
+    });
+
+    it("review mode's reveal arrow clears once NEXT_CARD moves on", () => {
+        const reviewStart = trainerReducer(initialTrainerState, {
+            type: T.START_REVIEW,
+            payload: { repertoire: italian, paths: [""] },
+        });
+        expect(reviewStart.mode).toBe(Mode.review);
+
+        const answered = playBook(reviewStart);
+        expect(answered.phase).toBe(Phase.reveal);
+        expect(sessionAnnotations(answered)).toHaveLength(1);
+
+        const after = trainerReducer(answered, { type: T.NEXT_CARD });
+        expect(after.phase).not.toBe(Phase.reveal);
+        expect(sessionAnnotations(after)).toEqual([]);
     });
 });
 

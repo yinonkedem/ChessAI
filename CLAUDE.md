@@ -193,6 +193,36 @@ Self-play + MCTS training loop in `AlphaZero/alphaZero.py`. The ResNet model is 
 
 ## Audit & refactor — session log
 
+### "Show me" leaving a stale arrow on the board (2026-09-24)
+
+**Bug, reported directly:** "when i click show me the computer make the move but put arrow on the
+screen and mark the piece that he moves. the arrow needs to disapeare." Clicking Show Me (SKIP)
+reveals the correct move with a green arrow, which is right — but the book's own reply then plays
+450ms later via `T.ADVANCE`, and the arrow stayed up through that and into the learner's next turn.
+
+**Root cause:** the reveal arrow was gated only on `feedback.verdict === "skipped"`, and `T.ADVANCE`
+deliberately leaves `feedback` untouched (so the "the book plays X" text card stays up while the
+reply plays) — so nothing ever told the annotation it was pointing at a position a ply behind the
+real one. The review-mode reveal arrow right above it in the same function already had the right
+pattern (scoped to `Phase.reveal`, so `NEXT_CARD` clears it automatically); the skip branch was
+just missing the equivalent phase check.
+
+**Fix:** scoped the reveal arrow to `phase === Phase.reply` (still waiting for the reply) or
+`phase === Phase.lineComplete` (that was the last move in the line, so nothing more happens and the
+arrow can just stay). Also extracted the whole annotations computation out of `TrainerContext.js`'s
+inline `useMemo` into `sessionAnnotations(state)`, a pure function now living next to the other
+selectors in `trainerReducer.js` — it was previously only reachable through the browser.
+
+**Verified:** 8 new `trainer.test.js` assertions (hint levels unaffected, the arrow present during
+`Phase.reply`, gone the instant `T.ADVANCE` lands — asserted while `feedback.verdict` is still
+literally `"skipped"`, proving the fix comes from reading `phase` and not from the reducer being
+changed to clear `feedback` — the reveal persisting through `Phase.lineComplete`, and the review-mode
+reveal arrow, untouched by this fix, still clearing on `NEXT_CARD`). Confirmed against the actual
+pre-fix bundle (recompiled dev server, verified via a compiled-in marker string) that this exact test
+fails there with the reported symptom, then passes clean on the fix. A live browser run through
+`/learn/italian-white` matches: 1 arrow while the reply is pending, 0 once it lands, plies both
+recorded.
+
 ### Material score during a game (2026-09-24, revised same day)
 
 Added a live score: capturing a piece earns its standard value (pawn 1, knight/bishop 3, rook 5,

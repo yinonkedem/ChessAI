@@ -1,4 +1,5 @@
 import { chooseReply, describe, isEnd, isMine, pathMoves } from "./book";
+import { bookSquares } from "./judgeMove";
 import {
     answer as answerQueue,
     createQueue,
@@ -7,6 +8,7 @@ import {
     remaining,
     summarise,
 } from "./queue";
+import { uciToCoords } from "../utils/uciToCoords";
 
 /**
  * Drill-session state, keyed on the UCI path through the opening tree.
@@ -207,6 +209,13 @@ export function trainerReducer(state, action) {
             return {
                 ...state,
                 path: nextPath,
+                // `feedback` deliberately carries over untouched: the text
+                // card from the move just answered (or revealed via "Show
+                // me") stays up as the opponent's reply plays, right up
+                // until the learner's next attempt/hint/skip overwrites it.
+                // sessionAnnotations() below is what has to compensate for
+                // this by scoping the "Show me" arrow to Phase.reply, so it
+                // still clears the instant the reply lands.
                 phase: phaseAt(state.repertoire, nextPath),
             };
         }
@@ -291,4 +300,65 @@ export function runProgress(state) {
         answered: mine.length,
         firstTry: mine.filter((p) => state.results[p].firstTry).length,
     };
+}
+
+/**
+ * What the board should draw. Pure function of session state, so it can
+ * never drift out of sync with the position it describes and is unit
+ * tested directly rather than only through the browser.
+ *
+ * The hint ladder is deliberately two-stage: level 1 says WHICH piece,
+ * level 2 says where it goes. Being nudged is more useful than being told.
+ */
+export function sessionAnnotations(state) {
+    if (!state.repertoire) return [];
+    const { hintLevel, feedback, phase, path, repertoire } = state;
+
+    // Review reveal: always show what the right move was, especially after
+    // a miss — that is the moment the learner is paying attention. Scoped to
+    // Phase.reveal, so it clears itself the instant NEXT_CARD fires.
+    if (state.mode === Mode.review && phase === Phase.reveal && feedback?.playedUci) {
+        const [from, to] = uciToCoords(feedback.playedUci);
+        return [{ type: "arrow", from, to, tone: feedback.verdict === "correct" ? "good" : "bad" }];
+    }
+
+    // After "Show me", draw the move the book actually played — but only
+    // for as long as that move is still the newest thing on the board:
+    // Phase.reply, while the opponent's reply is still pending, or
+    // Phase.lineComplete, if that was the last move in the line and nothing
+    // more will happen. Once the opponent's reply actually lands (ADVANCE
+    // moves the phase on to Phase.answering), this position is a ply behind
+    // the real one and the arrow has to go with it — T.ADVANCE deliberately
+    // leaves `feedback` untouched (see its comment), so nothing else clears
+    // this on its own.
+    if (
+        (phase === Phase.reply || phase === Phase.lineComplete) &&
+        feedback?.verdict === "skipped" &&
+        feedback.playedUci
+    ) {
+        const [from, to] = uciToCoords(feedback.playedUci);
+        return [{ type: "arrow", from, to, tone: "good" }];
+    }
+
+    if (phase !== Phase.answering || hintLevel === 0) return [];
+
+    const options = bookSquares(repertoire, path);
+    if (hintLevel === 1) {
+        // Just the piece. Dedupe: two book moves may share an origin.
+        const seen = new Set();
+        return options
+            .filter((o) => {
+                const k = String(o.from);
+                if (seen.has(k)) return false;
+                seen.add(k);
+                return true;
+            })
+            .map((o) => ({ type: "square", square: o.from, tone: "hint" }));
+    }
+    return options.map((o) => ({
+        type: "arrow",
+        from: o.from,
+        to: o.to,
+        tone: "hint",
+    }));
 }
