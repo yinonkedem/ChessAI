@@ -1,0 +1,53 @@
+.score-board {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--sp-2);
+    /* Always first, above the moves list and buttons, on every breakpoint —
+       unlike .moves-list, which reorders itself at 768px. */
+    order: -1;
+}
+
+.score-board__side {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-2);
+    padding: var(--sp-1) var(--sp-3);
+    border-radius: var(--r-pill);
+    background: var(--c-surface-sunken);
+    border: 1px solid var(--c-border);
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    color: var(--c-ink-muted);
+}
+
+.score-board__side strong {
+    color: var(--c-ink);
+    font-size: var(--fs-md);
+    font-weight: 800;
+}
+
+/* A side currently down material — tinted rather than left the same as a
+   gain, so "the score went down" reads at a glance. --c-error-ink is
+   verified for contrast on --c-error-soft, not --c-surface-sunken (this
+   chip's background); re-checked here (axe, both themes) rather than
+   assumed. */
+.score-board__side strong.is-down {
+    color: var(--c-error-ink);
+}
+
+.score-board__swatch {
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+.score-board__side--white .score-board__swatch {
+    background: var(--c-piece-white);
+    border: 1px solid var(--c-border-strong);
+}
+
+.score-board__side--black .score-board__swatch {
+    background: var(--c-piece-black);
+}

@@ -1,15 +1,27 @@
 import { GameMode, Status, createInitGameState } from "../constants";
 import actionTypes from "./actionTypes";
-import { createEmptyPosition, getCastleRights, isInsufficientMaterial } from "../helper";
+import { createEmptyPosition, getCastleRights, isInsufficientMaterial, scoreForMove } from "../helper";
 
 export const reducer = (state, action) => {
 
     switch (action.type) {
         case actionTypes.NEW_MOVE: {
+            // CustomEditor.js dispatches this same action for free piece
+            // placement while setting up a position — never a real chess
+            // move, so it's never scored.
+            const delta = state.isCustomEditor
+                ? { w: 0, b: 0 }
+                : scoreForMove({
+                    prevPosition: state.position[state.position.length - 1],
+                    newPosition: action.payload.newPosition,
+                    mover: state.turn,
+                });
+
             return {
                 ...state,
                 position: [...state.position, action.payload.newPosition],
                 movesList: [...state.movesList, action.payload.newMove],
+                scoreLog: [...state.scoreLog, delta],
                 turn: state.turn === 'w' ? 'b' : 'w',
             };
         }
@@ -31,6 +43,10 @@ export const reducer = (state, action) => {
                 userColor: userColor ?? state.userColor,
                 lastMove: lastMove ?? null,
                 lastMoveStack: lastMove ? [lastMove] : [],
+                // The trainer never dispatches NEW_MOVE (it replaces the whole
+                // history here instead), so it's never scored — reset for
+                // hygiene in case a scored game preceded it.
+                scoreLog: [],
                 candidateMoves: [],
                 promotionSquare: null,
                 status: Status.ongoing,
@@ -141,6 +157,7 @@ export const reducer = (state, action) => {
                 movesList: [],
                 lastMove: null,
                 lastMoveStack: [],
+                scoreLog: [],
                 candidateMoves: [],
                 castleDirection,
                 status,
@@ -173,6 +190,9 @@ export const reducer = (state, action) => {
             const position = state.position.slice(0, -steps);
             const movesList = state.movesList.slice(0, -steps);
             const lastMoveStack = state.lastMoveStack.slice(0, -steps);
+            // Pushed 1:1 with movesList in NEW_MOVE, so undoing a capturing
+            // or promoting move undoes the points it earned too.
+            const scoreLog = state.scoreLog.slice(0, -steps);
 
             const turn =
                 steps % 2 === 0
@@ -186,6 +206,7 @@ export const reducer = (state, action) => {
                 turn,
                 lastMoveStack,
                 lastMove: lastMoveStack.at(-1) ?? null,
+                scoreLog,
                 candidateMoves: [],
                 promotionSquare: null,
                 status: Status.ongoing,

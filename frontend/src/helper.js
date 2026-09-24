@@ -119,3 +119,60 @@ export const isInsufficientMaterial = (board) => {
 
     return okSide(pieces.w) && okSide(pieces.b);
 };
+
+// Standard material values. No entry for 'k' — it can be neither captured
+// nor promoted to.
+export const PIECE_VALUES = { p: 1, n: 3, b: 3, r: 5, q: 9 };
+
+const countOf = (position, code) =>
+    position.reduce((n, row) => n + row.filter((sq) => sq === code).length, 0);
+
+/**
+ * The score change a single move causes for EACH colour, as { w, b } deltas
+ * (either can be nonzero on the same move). Capturing a piece earns the
+ * mover its value and costs the other side the same, so losing a piece
+ * visibly brings that side's own score down rather than only ever raising
+ * the capturer's — the two numbers are a live material balance, not two
+ * independent up-only tallies. Promoting only ever gains for the mover: you
+ * haven't lost anything by turning your own pawn into a queen.
+ *
+ * Diffed only between the position right before and right after THIS move
+ * (never against the game's starting position), which is what keeps it
+ * correct without any special cases:
+ *   - a normal capture is the enemy piece's code simply missing afterward;
+ *   - en passant looks the same way in a count diff, even though the
+ *     captured pawn isn't on the destination square (arbiter/move.js
+ *     removes it from the board either way);
+ *   - a promotion is the mover having one more of a piece type than a
+ *     moment ago — including a capturing promotion, which scores both.
+ * Diffing against the game's start instead would double as a running
+ * material count, but a piece captured earlier and then replaced by a later
+ * promotion of the same type would silently cancel out and under-count.
+ */
+export const scoreForMove = ({ prevPosition, newPosition, mover }) => {
+    const enemy = mover === "w" ? "b" : "w";
+    const delta = { w: 0, b: 0 };
+
+    for (const type of Object.keys(PIECE_VALUES)) {
+        const captured = countOf(prevPosition, enemy + type) - countOf(newPosition, enemy + type);
+        if (captured > 0) {
+            const value = PIECE_VALUES[type] * captured;
+            delta[mover] += value; // capturing earns the piece's value
+            delta[enemy] -= value; // losing it costs the other side the same
+        }
+
+        if (type === "p") continue; // nothing promotes into a pawn
+        const promoted = countOf(newPosition, mover + type) - countOf(prevPosition, mover + type);
+        if (promoted > 0) delta[mover] += PIECE_VALUES[type] * promoted;
+    }
+
+    return delta;
+};
+
+/** Running total per colour from the per-ply log TAKE_BACK slices in step
+ *  with movesList, so undoing a move undoes its score too. */
+export const getScores = (scoreLog) =>
+    scoreLog.reduce(
+        (totals, delta) => ({ w: totals.w + delta.w, b: totals.b + delta.b }),
+        { w: 0, b: 0 }
+    );

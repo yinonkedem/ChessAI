@@ -20,6 +20,10 @@ export const createInitGameState = () => ({
     movesList: [],
     lastMove: null,
     lastMoveStack: [],
+    // One entry per ply in movesList: { mover: 'w'|'b', points }. Kept as a
+    // log rather than a running total so TAKE_BACK can slice it in lockstep
+    // and undo a capture's or promotion's points along with the move.
+    scoreLog: [],
     userColor: "white",
     isGameSetup: false,
     engineDepth: 15,

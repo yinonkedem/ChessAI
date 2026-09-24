@@ -1,6 +1,7 @@
 import { reducer } from "./Reducer";
 import actionTypes from "./actionTypes";
 import { createInitGameState, Status } from "../constants";
+import { createEmptyPosition, getScores } from "../helper";
 
 /**
  * TAKE_BACK against an engine opponent has to know whether the engine has
@@ -12,14 +13,21 @@ import { createInitGameState, Status } from "../constants";
  * itself with nothing to re-trigger the effect. See CLAUDE.md.
  */
 
-// Positions/moves are opaque to TAKE_BACK — it only slices the arrays — so
-// plain markers stand in for real board state.
+// Move labels are opaque to TAKE_BACK — it only slices the arrays — but
+// NEW_MOVE now also scores each ply, which reads `newPosition` as a real
+// 8x8 board. An empty board throughout keeps every ply's diff at 0 points,
+// which is all these ply-counting tests care about.
 function stateAfterPlies(opponentType, plies) {
-    let state = { ...createInitGameState(), opponentType, isGameSetup: true };
+    let state = {
+        ...createInitGameState(),
+        position: [createEmptyPosition()],
+        opponentType,
+        isGameSetup: true,
+    };
     for (let i = 0; i < plies; i++) {
         state = reducer(state, {
             type: actionTypes.NEW_MOVE,
-            payload: { newPosition: `pos${i + 1}`, newMove: `move${i + 1}` },
+            payload: { newPosition: createEmptyPosition(), newMove: `move${i + 1}` },
         });
     }
     return state;
@@ -83,11 +91,17 @@ describe("TAKE_BACK vs an engine opponent", () => {
         // userColor "black" means the engine (white) moves first. move1 is
         // its opening; move2 is the human's reply; now it's the engine's
         // turn again and its answer to move2 hasn't landed yet.
-        let state = { ...createInitGameState(), opponentType: "ai", userColor: "black", isGameSetup: true };
+        let state = {
+            ...createInitGameState(),
+            position: [createEmptyPosition()],
+            opponentType: "ai",
+            userColor: "black",
+            isGameSetup: true,
+        };
         for (const newMove of ["move1", "move2"]) {
             state = reducer(state, {
                 type: actionTypes.NEW_MOVE,
-                payload: { newPosition: newMove, newMove },
+                payload: { newPosition: createEmptyPosition(), newMove },
             });
         }
         expect(state.turn).toBe("w"); // the engine's colour — its move is pending
@@ -105,5 +119,81 @@ describe("TAKE_BACK vs a human opponent", () => {
         const after = takeBack(state);
         expect(after.movesList).toEqual(["move1", "move2"]);
         expect(after.turn).toBe(state.turn === "w" ? "b" : "w");
+    });
+});
+
+describe("NEW_MOVE scoring", () => {
+    function board(placements) {
+        const b = createEmptyPosition();
+        for (const [rank, file, code] of placements) b[rank][file] = code;
+        return b;
+    }
+
+    test("a capturing move raises the mover's score and lowers the captured side's by the same amount", () => {
+        let state = {
+            ...createInitGameState(),
+            position: [board([[0, 0, "wp"], [0, 1, "bn"]])],
+            opponentType: "ai",
+            isGameSetup: true,
+            turn: "w",
+        };
+        state = reducer(state, {
+            type: actionTypes.NEW_MOVE,
+            payload: { newPosition: board([[0, 1, "wp"]]), newMove: "Nxb1" },
+        });
+        expect(state.scoreLog).toEqual([{ w: 3, b: -3 }]);
+        expect(getScores(state.scoreLog)).toEqual({ w: 3, b: -3 });
+    });
+
+    test("a quiet move logs a zero delta, not nothing", () => {
+        let state = {
+            ...createInitGameState(),
+            position: [createEmptyPosition()],
+            opponentType: "human",
+            isGameSetup: true,
+        };
+        state = reducer(state, {
+            type: actionTypes.NEW_MOVE,
+            payload: { newPosition: createEmptyPosition(), newMove: "e4" },
+        });
+        expect(state.scoreLog).toEqual([{ w: 0, b: 0 }]);
+    });
+
+    test("CustomEditor's free piece placement is never scored", () => {
+        // CustomEditor.js dispatches this same NEW_MOVE action to place
+        // pieces while isCustomEditor is true — a board that would look
+        // like a capture to scoreForMove must still score 0 here.
+        let state = {
+            ...createInitGameState(),
+            position: [board([[0, 0, "wp"], [0, 1, "bn"]])],
+            isCustomEditor: true,
+            turn: "w",
+        };
+        state = reducer(state, {
+            type: actionTypes.NEW_MOVE,
+            payload: { newPosition: board([[0, 1, "wq"]]), newMove: "" },
+        });
+        expect(state.scoreLog).toEqual([{ w: 0, b: 0 }]);
+    });
+
+    test("TAKE_BACK undoes a capture's score swing for both sides along with the move", () => {
+        let state = {
+            ...createInitGameState(),
+            position: [board([[0, 0, "wp"], [0, 1, "bn"]])],
+            opponentType: "ai",
+            isGameSetup: true,
+            turn: "w",
+        };
+        state = reducer(state, {
+            type: actionTypes.NEW_MOVE,
+            payload: { newPosition: board([[0, 1, "wp"]]), newMove: "Nxb1" },
+        });
+        expect(getScores(state.scoreLog)).toEqual({ w: 3, b: -3 });
+
+        // The engine hasn't replied yet (turn is now 'b'), so this undoes
+        // exactly the capturing move.
+        state = takeBack(state);
+        expect(state.scoreLog).toEqual([]);
+        expect(getScores(state.scoreLog)).toEqual({ w: 0, b: 0 });
     });
 });

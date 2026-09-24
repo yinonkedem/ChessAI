@@ -13,6 +13,7 @@ import Board from "./components/Board/Board";
 
 import Control from "./components/Control/Control";
 import MovesList from "./components/Control/bits/MovesList";
+import ScoreBoard from "./components/Control/bits/ScoreBoard";
 import TakeBack from "./components/Control/bits/TakeBack";
 import HintButton from "./components/Control/bits/HintButton";
 import EngineDepth from "./components/Control/bits/EngineDepth";
@@ -38,6 +39,7 @@ function GamePage() {
         <main className="page page--game">
             <Board />
             <Control>
+                <ScoreBoard />
                 <MovesList />
                 <TakeBack />
                 <EngineDepth />
@@ -59,7 +61,11 @@ export default function App() {
     const [appState, dispatch] = usePersistedReducer(
         reducer,
         createInitGameState,
-        "chess-state-v3"
+        // v3 -> v4: createInitGameState() gained `scoreLog`. usePersistedReducer
+        // loads cached state as-is with no merge, so an old v3 entry would
+        // load without it and crash on the next move's `[...state.scoreLog]`.
+        // Bumping the key discards stale state cleanly instead.
+        "chess-state-v4"
     );
     const navigate = useNavigate();
 

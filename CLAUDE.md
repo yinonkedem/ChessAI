@@ -193,6 +193,59 @@ Self-play + MCTS training loop in `AlphaZero/alphaZero.py`. The ResNet model is 
 
 ## Audit & refactor — session log
 
+### Material score during a game (2026-09-24, revised same day)
+
+Added a live score: capturing a piece earns its standard value (pawn 1, knight/bishop 3, rook 5,
+queen 9) — **and costs the other side the same amount**, so losing a piece visibly brings that
+side's own score down rather than only ever raising the capturer's. Promoting a pawn earns the new
+piece's value for the mover only (you haven't lost anything by turning your own pawn into a queen),
+so a capturing promotion raises the mover by both amounts but only costs the other side the
+captured piece's value (e.g. capturing a rook while promoting to a queen: mover +14, other side −5).
+Shown as a `ScoreBoard` chip pair ("White N" / "Black N", labelled by colour rather than
+"You"/"Opponent" so it also reads correctly in human-vs-human) above the move list on `/game`; a
+side currently down material gets its number tinted with `--c-error-ink` rather than left looking
+the same as a gain, verified with axe against the chip's actual background rather than assumed from
+the token's other documented use.
+
+**First shipped as gain-only** (capturing only ever raised the capturer's score, the captured side's
+was untouched) and the user caught it immediately: "when piece is eated the score needs to down."
+Revised the same session — `scoreForMove` now returns a `{w, b}` delta pair instead of a single
+number for the mover, and `scoreLog` entries are that pair directly (no `mover` field needed, since
+a capture can now touch both colours in one ply).
+
+**Computed by diffing the board, not by intercepting moves.** Every real move — human, engine, or a
+promotion — already converges on the single `NEW_MOVE` reducer case (`Pieces.js`, `useEngineAgent.js`
+and `PromotionBox.js` all dispatch it), so scoring lives entirely in `Reducer.js` + a new
+`scoreForMove` helper, with zero changes to any of those three files. It counts each piece type
+before and after *this one move only*: an enemy piece missing afterward is a capture (this also
+covers en passant for free — the captured pawn is simply gone from the board either way, regardless
+of which square it was actually removed from); the mover having one more of some piece type than a
+moment ago is a promotion. Diffing against the single prior position, rather than against the game's
+start, is what keeps it correct — a running total from the start would silently under-count a piece
+captured earlier and then replaced by a later promotion of the same type.
+
+**`CustomEditor.js` also dispatches `NEW_MOVE`** (free piece placement while setting up a position),
+so the reducer explicitly skips scoring when `state.isCustomEditor` is true — otherwise placing or
+erasing pieces during setup would register as arbitrary captures.
+
+**Score reverts on Take Back.** Rather than a running total, state stores `scoreLog`: one
+`{mover, points}` entry per ply, pushed in `NEW_MOVE` and sliced in lockstep with `movesList` in
+`TAKE_BACK`. Undoing a capturing or promoting move undoes its points with it; the displayed total is
+summed from the log on render (`getScores`), so there's a single source of truth.
+
+**`createInitGameState()` gained a field** (`scoreLog: []`), and `usePersistedReducer` loads a cached
+entry as-is with no merge — an existing `chess-state-v3` localStorage entry would load without
+`scoreLog` and crash on the next move's `[...state.scoreLog]`. Bumped the key to `chess-state-v4`
+(same pattern as the two prior bumps for `engineDepth`/`hintThinkMs`) to discard it cleanly instead.
+
+**Verified:** `helper.test.js` (10 assertions: quiet moves, castling, a plain capture, en passant, a
+promotion with and without a simultaneous capture, and that the losing side never scores), 4 new
+`Reducer.test.js` cases (capture scoring keyed to `state.turn`, quiet moves logging 0 rather than
+nothing, the CustomEditor guard, and Take Back reverting a capture's points), a Human-vs-Human
+browser run from two custom positions (a plain pawn capture, and a rook-capturing promotion to
+queen — 14 points — then Take Back reverting it to 0-0), and axe at 0 violations on `/game` in both
+themes.
+
 ### Take Back stopping the AI (2026-09-24)
 
 **Bug:** at a high engine depth, clicking Take Back right after moving (before the AI's reply
