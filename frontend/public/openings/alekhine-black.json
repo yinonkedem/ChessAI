@@ -11,40 +11,40 @@
    "label": "Modern Variation, 4...Bg4",
    "eco": "B05",
    "name": "Alekhine Defense: Modern Variation, Main Line",
-   "path": "e2e4g8f6e4e5f6d5d2d4d7d6g1f3c8g4f1e2e7e6e1g1f8e7c2c4d5b6h2h3g4h5b1c3e8g8c1e3d6d5c4c5h5f3g2f3b6c8",
-   "plies": 24
+   "path": "e2e4g8f6e4e5f6d5d2d4d7d6g1f3c8g4f1e2e7e6e1g1f8e7c2c4d5b6h2h3g4h5b1c3e8g8c1e3d6d5c4c5h5f3g2f3b6c8f3f4b8c6b2b4",
+   "plies": 27
   },
   {
    "id": "alekhine-modern-g6",
    "label": "Modern Variation, 4...g6",
    "eco": "B04",
    "name": "Alekhine Defense: Modern Variation, Alburt Variation",
-   "path": "e2e4g8f6e4e5f6d5d2d4d7d6g1f3g7g6f1c4d5b6c4b3f8g7d1e2b8c6e1g1e8g8h2h3a7a5a2a4d6e5d4e5c6d4f3d4d8d4f1e1",
-   "plies": 25
+   "path": "e2e4g8f6e4e5f6d5d2d4d7d6g1f3g7g6f1c4d5b6c4b3f8g7d1e2b8c6e1g1e8g8h2h3a7a5a2a4d6e5d4e5c6d4f3d4d8d4f1e1c8e6",
+   "plies": 26
   },
   {
    "id": "alekhine-exchange",
    "label": "Exchange Variation",
    "eco": "B03",
    "name": "Alekhine Defense: Exchange Variation, Voronezh Variation",
-   "path": "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6e5d6c7d6b1c3g7g6c1e3f8g7a1c1e8g8b2b3e7e5d4e5d6e5d1d8f8d8c4c5b6d7",
-   "plies": 24
+   "path": "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6e5d6c7d6b1c3g7g6c1e3f8g7a1c1e8g8b2b3e7e5d4e5d6e5d1d8f8d8c4c5b6d7f1c4b8c6g1f3h7h6c3e4c6a5c4e2",
+   "plies": 31
   },
   {
    "id": "alekhine-four-pawns",
    "label": "Four Pawns Attack",
    "eco": "B03",
    "name": "Alekhine Defense: Four Pawns Attack, Main Line",
-   "path": "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5f4e5b8c6c1e3c8f5b1c3e7e6g1f3f8e7d4d5e6d5c4d5c6b4f3d4f5d7e5e6f7e6d5e6d7c6",
-   "plies": 28
+   "path": "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5f4e5b8c6c1e3c8f5b1c3e7e6g1f3f8e7d4d5e6d5c4d5c6b4f3d4f5d7e5e6f7e6d5e6d7c6d1g4e7h4g2g3c6h1e1c1",
+   "plies": 33
   },
   {
    "id": "alekhine-2nc3",
    "label": "2.Nc3, into a French",
    "eco": "C11",
    "name": "French Defense: Steinitz Variation, Boleslavsky Variation",
-   "path": "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6f2f4c7c5g1f3b8c6c1e3c5d4f3d4f8c5d1d2e8g8",
-   "plies": 18
+   "path": "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6f2f4c7c5g1f3b8c6c1e3c5d4f3d4f8c5d1d2e8g8e1c1a7a6d4b3c5b4f1d3b7b5g2g4c8b7h1g1a8c8g1g3g7g6",
+   "plies": 30
   }
  ],
  "nodes": {
@@ -387,6 +387,46 @@
    "ply": 24,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "f3f4",
+     "san": "f4"
+    }
+   ],
+   "eco": "B05",
+   "name": "Alekhine Defense: Modern Variation, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3c8g4f1e2e7e6e1g1f8e7c2c4d5b6h2h3g4h5b1c3e8g8c1e3d6d5c4c5h5f3g2f3b6c8f3f4": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6",
+     "idea": "Bring the last knight in, pressing on d4 and e5."
+    }
+   ],
+   "eco": "B05",
+   "name": "Alekhine Defense: Modern Variation, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3c8g4f1e2e7e6e1g1f8e7c2c4d5b6h2h3g4h5b1c3e8g8c1e3d6d5c4c5h5f3g2f3b6c8f3f4b8c6": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b2b4",
+     "san": "b4"
+    }
+   ],
+   "eco": "B05",
+   "name": "Alekhine Defense: Modern Variation, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3c8g4f1e2e7e6e1g1f8e7c2c4d5b6h2h3g4h5b1c3e8g8c1e3d6d5c4c5h5f3g2f3b6c8f3f4b8c6b2b4": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "B05",
@@ -625,6 +665,20 @@
    "ply": 25,
    "turn": "b",
    "mine": true,
+   "replies": [
+    {
+     "uci": "c8e6",
+     "san": "Be6",
+     "idea": "Develop with tempo on the b3 bishop."
+    }
+   ],
+   "eco": "B04",
+   "name": "Alekhine Defense: Modern Variation, Alburt Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6g1f3g7g6f1c4d5b6c4b3f8g7d1e2b8c6e1g1e8g8h2h3a7a5a2a4d6e5d4e5c6d4f3d4d8d4f1e1c8e6": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "B04",
@@ -868,6 +922,100 @@
    "ply": 24,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "f1c4",
+     "san": "Bc4"
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Exchange Variation, Voronezh Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6e5d6c7d6b1c3g7g6c1e3f8g7a1c1e8g8b2b3e7e5d4e5d6e5d1d8f8d8c4c5b6d7f1c4": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6",
+     "idea": "Develop and hit d4 and e5."
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Exchange Variation, Voronezh Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6e5d6c7d6b1c3g7g6c1e3f8g7a1c1e8g8b2b3e7e5d4e5d6e5d1d8f8d8c4c5b6d7f1c4b8c6": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3"
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Exchange Variation, Voronezh Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6e5d6c7d6b1c3g7g6c1e3f8g7a1c1e8g8b2b3e7e5d4e5d6e5d1d8f8d8c4c5b6d7f1c4b8c6g1f3": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h7h6",
+     "san": "h6",
+     "idea": "Keep White's pieces off g5."
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Exchange Variation, Voronezh Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6e5d6c7d6b1c3g7g6c1e3f8g7a1c1e8g8b2b3e7e5d4e5d6e5d1d8f8d8c4c5b6d7f1c4b8c6g1f3h7h6": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c3e4",
+     "san": "Ne4"
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Exchange Variation, Voronezh Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6e5d6c7d6b1c3g7g6c1e3f8g7a1c1e8g8b2b3e7e5d4e5d6e5d1d8f8d8c4c5b6d7f1c4b8c6g1f3h7h6c3e4": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c6a5",
+     "san": "Na5",
+     "idea": "Hit the c4 bishop and the b3 pawn."
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Exchange Variation, Voronezh Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6e5d6c7d6b1c3g7g6c1e3f8g7a1c1e8g8b2b3e7e5d4e5d6e5d1d8f8d8c4c5b6d7f1c4b8c6g1f3h7h6c3e4c6a5": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c4e2",
+     "san": "Be2"
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Exchange Variation, Voronezh Variation"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6e5d6c7d6b1c3g7g6c1e3f8g7a1c1e8g8b2b3e7e5d4e5d6e5d1d8f8d8c4c5b6d7f1c4b8c6g1f3h7h6c3e4c6a5c4e2": {
+   "ply": 31,
+   "turn": "b",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "B03",
@@ -1134,6 +1282,73 @@
    "ply": 28,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "d1g4",
+     "san": "Qg4"
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Four Pawns Attack, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5f4e5b8c6c1e3c8f5b1c3e7e6g1f3f8e7d4d5e6d5c4d5c6b4f3d4f5d7e5e6f7e6d5e6d7c6d1g4": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e7h4",
+     "san": "Bh4+",
+     "idea": "Check, forcing a weakening pawn move."
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Four Pawns Attack, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5f4e5b8c6c1e3c8f5b1c3e7e6g1f3f8e7d4d5e6d5c4d5c6b4f3d4f5d7e5e6f7e6d5e6d7c6d1g4e7h4": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g2g3",
+     "san": "g3"
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Four Pawns Attack, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5f4e5b8c6c1e3c8f5b1c3e7e6g1f3f8e7d4d5e6d5c4d5c6b4f3d4f5d7e5e6f7e6d5e6d7c6d1g4e7h4g2g3": {
+   "ply": 31,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c6h1",
+     "san": "Bxh1",
+     "idea": "Take the rook. You're the exchange up."
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Four Pawns Attack, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5f4e5b8c6c1e3c8f5b1c3e7e6g1f3f8e7d4d5e6d5c4d5c6b4f3d4f5d7e5e6f7e6d5e6d7c6d1g4e7h4g2g3c6h1": {
+   "ply": 32,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1c1",
+     "san": "O-O-O"
+    }
+   ],
+   "eco": "B03",
+   "name": "Alekhine Defense: Four Pawns Attack, Main Line"
+  },
+  "e2e4g8f6e4e5f6d5d2d4d7d6c2c4d5b6f2f4d6e5f4e5b8c6c1e3c8f5b1c3e7e6g1f3f8e7d4d5e6d5c4d5c6b4f3d4f5d7e5e6f7e6d5e6d7c6d1g4e7h4g2g3c6h1e1c1": {
+   "ply": 33,
+   "turn": "b",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "B03",
@@ -1344,6 +1559,168 @@
   },
   "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6f2f4c7c5g1f3b8c6c1e3c5d4f3d4f8c5d1d2e8g8": {
    "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1c1",
+     "san": "O-O-O"
+    }
+   ],
+   "eco": "C11",
+   "name": "French Defense: Steinitz Variation, Boleslavsky Variation"
+  },
+  "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6f2f4c7c5g1f3b8c6c1e3c5d4f3d4f8c5d1d2e8g8e1c1": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a7a6",
+     "san": "a6",
+     "idea": "Prepare ...b5 and a queenside pawn storm."
+    }
+   ],
+   "eco": "C11",
+   "name": "French Defense: Steinitz Variation, Boleslavsky Variation"
+  },
+  "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6f2f4c7c5g1f3b8c6c1e3c5d4f3d4f8c5d1d2e8g8e1c1a7a6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4b3",
+     "san": "Nb3"
+    }
+   ],
+   "eco": "C11",
+   "name": "French Defense: Steinitz Variation, Boleslavsky Variation"
+  },
+  "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6f2f4c7c5g1f3b8c6c1e3c5d4f3d4f8c5d1d2e8g8e1c1a7a6d4b3": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c5b4",
+     "san": "Bb4",
+     "idea": "Pin the c3 knight."
+    }
+   ],
+   "eco": "C11",
+   "name": "French Defense: Steinitz Variation, Boleslavsky Variation"
+  },
+  "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6f2f4c7c5g1f3b8c6c1e3c5d4f3d4f8c5d1d2e8g8e1c1a7a6d4b3c5b4": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1d3",
+     "san": "Bd3"
+    }
+   ],
+   "eco": "C11",
+   "name": "French Defense: Steinitz Variation, Boleslavsky Variation"
+  },
+  "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6f2f4c7c5g1f3b8c6c1e3c5d4f3d4f8c5d1d2e8g8e1c1a7a6d4b3c5b4f1d3": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b7b5",
+     "san": "b5",
+     "idea": "The pawns go forward. White's king is on the queenside too."
+    }
+   ],
+   "eco": "C11",
+   "name": "French Defense: Steinitz Variation, Boleslavsky Variation"
+  },
+  "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6f2f4c7c5g1f3b8c6c1e3c5d4f3d4f8c5d1d2e8g8e1c1a7a6d4b3c5b4f1d3b7b5": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g2g4",
+     "san": "g4"
+    }
+   ],
+   "eco": "C11",
+   "name": "French Defense: Steinitz Variation, Boleslavsky Variation"
+  },
+  "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6f2f4c7c5g1f3b8c6c1e3c5d4f3d4f8c5d1d2e8g8e1c1a7a6d4b3c5b4f1d3b7b5g2g4": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8b7",
+     "san": "Bb7",
+     "idea": "Develop the bishop behind the pawns."
+    }
+   ],
+   "eco": "C11",
+   "name": "French Defense: Steinitz Variation, Boleslavsky Variation"
+  },
+  "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6f2f4c7c5g1f3b8c6c1e3c5d4f3d4f8c5d1d2e8g8e1c1a7a6d4b3c5b4f1d3b7b5g2g4c8b7": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h1g1",
+     "san": "Rhg1"
+    }
+   ],
+   "eco": "C11",
+   "name": "French Defense: Steinitz Variation, Boleslavsky Variation"
+  },
+  "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6f2f4c7c5g1f3b8c6c1e3c5d4f3d4f8c5d1d2e8g8e1c1a7a6d4b3c5b4f1d3b7b5g2g4c8b7h1g1": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a8c8",
+     "san": "Rc8",
+     "idea": "The rook takes the c-file, aimed at White's king."
+    }
+   ],
+   "eco": "C11",
+   "name": "French Defense: Steinitz Variation, Boleslavsky Variation"
+  },
+  "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6f2f4c7c5g1f3b8c6c1e3c5d4f3d4f8c5d1d2e8g8e1c1a7a6d4b3c5b4f1d3b7b5g2g4c8b7h1g1a8c8": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1g3",
+     "san": "Rg3"
+    }
+   ],
+   "eco": "C11",
+   "name": "French Defense: Steinitz Variation, Boleslavsky Variation"
+  },
+  "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6f2f4c7c5g1f3b8c6c1e3c5d4f3d4f8c5d1d2e8g8e1c1a7a6d4b3c5b4f1d3b7b5g2g4c8b7h1g1a8c8g1g3": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g7g6",
+     "san": "g6",
+     "idea": "Close the g-file before White's rooks use it."
+    }
+   ],
+   "eco": "C11",
+   "name": "French Defense: Steinitz Variation, Boleslavsky Variation"
+  },
+  "e2e4g8f6b1c3d7d5e4e5f6d7d2d4e7e6f2f4c7c5g1f3b8c6c1e3c5d4f3d4f8c5d1d2e8g8e1c1a7a6d4b3c5b4f1d3b7b5g2g4c8b7h1g1a8c8g1g3g7g6": {
+   "ply": 30,
    "turn": "w",
    "mine": false,
    "replies": [],

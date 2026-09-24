@@ -1,0 +1,887 @@
+{
+ "id": "budapest-black",
+ "title": "The Budapest Gambit",
+ "family": "1. d4 Nf6 2. c4 e5",
+ "blurb": "Hit 1.d4 with an early pawn sacrifice. Quick piece play, and a famous mating trap.",
+ "side": "b",
+ "difficulty": 2,
+ "lines": [
+  {
+   "id": "bu-trap-kieninger",
+   "label": "Trap: 8.axb4?? Nd3#",
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation",
+   "path": "d2d4g8f6c2c4e7e5d4e5f6g4c1f4b8c6g1f3f8b4b1d2d8e7a2a3g4e5a3b4e5d3",
+   "plies": 16
+  },
+  {
+   "id": "bu-main-bf4",
+   "label": "Rubinstein, 4.Bf4",
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation",
+   "path": "d2d4g8f6c2c4e7e5d4e5f6g4c1f4b8c6g1f3f8b4b1d2d8e7e2e3g4e5f3e5c6e5f1e2e8g8e1g1d7d6d2b3b7b6a2a3b4c5b3c5b6c5b2b4",
+   "plies": 27
+  },
+  {
+   "id": "bu-nf3-bc5",
+   "label": "Adler, 4.Nf3",
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Adler Variation",
+   "path": "d2d4g8f6c2c4e7e5d4e5f6g4g1f3f8c5e2e3b8c6f1e2g4e5f3e5c6e5e1g1e8g8b1c3d7d6b2b3f8e8c1b2c8f5c3a4c5b6a4b6",
+   "plies": 25
+  },
+  {
+   "id": "bu-e4",
+   "label": "Alekhine, 4.e4",
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Alekhine Variation, Abonyi Variation",
+   "path": "d2d4g8f6c2c4e7e5d4e5f6g4e2e4g4e5f2f4e5c6c1e3f8b4b1c3b4c3b2c3d8e7f1d3b8a6",
+   "plies": 18
+  }
+ ],
+ "nodes": {
+  "": {
+   "ply": 0,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4"
+    }
+   ]
+  },
+  "d2d4": {
+   "ply": 1,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6",
+     "idea": "Develop and control e4."
+    }
+   ],
+   "eco": "A40",
+   "name": "Queen's Pawn Game"
+  },
+  "d2d4g8f6": {
+   "ply": 2,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c2c4",
+     "san": "c4"
+    }
+   ],
+   "eco": "A45",
+   "name": "Indian Defense"
+  },
+  "d2d4g8f6c2c4": {
+   "ply": 3,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e7e5",
+     "san": "e5",
+     "idea": "The Budapest: offer the e-pawn to get your pieces out fast."
+    }
+   ],
+   "eco": "A50",
+   "name": "Indian Defense: Normal Variation"
+  },
+  "d2d4g8f6c2c4e7e5": {
+   "ply": 4,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4e5",
+     "san": "dxe5"
+    }
+   ],
+   "eco": "A51",
+   "name": "Indian Defense: Budapest Gambit"
+  },
+  "d2d4g8f6c2c4e7e5d4e5": {
+   "ply": 5,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6g4",
+     "san": "Ng4",
+     "idea": "Go after the e5 pawn."
+    }
+   ],
+   "eco": "A51",
+   "name": "Indian Defense: Budapest Gambit Accepted"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4": {
+   "ply": 6,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1f4",
+     "san": "Bf4"
+    },
+    {
+     "uci": "g1f3",
+     "san": "Nf3"
+    },
+    {
+     "uci": "e2e4",
+     "san": "e4"
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4c1f4": {
+   "ply": 7,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6",
+     "idea": "Add a second attacker to e5."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4c1f4b8c6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3"
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4c1f4b8c6g1f3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8b4",
+     "san": "Bb4+",
+     "idea": "Check, pinning the knight that will block."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4c1f4b8c6g1f3f8b4": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b1d2",
+     "san": "Nbd2"
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4c1f4b8c6g1f3f8b4b1d2": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8e7",
+     "san": "Qe7",
+     "idea": "The queen joins the attack on e5."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4c1f4b8c6g1f3f8b4b1d2d8e7": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a2a3",
+     "san": "a3"
+    },
+    {
+     "uci": "e2e3",
+     "san": "e3"
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4c1f4b8c6g1f3f8b4b1d2d8e7a2a3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g4e5",
+     "san": "Ngxe5",
+     "idea": "Take the pawn back and ignore the attack on your bishop."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4c1f4b8c6g1f3f8b4b1d2d8e7a2a3g4e5": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a3b4",
+     "san": "axb4"
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4c1f4b8c6g1f3f8b4b1d2d8e7a2a3g4e5a3b4": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e5d3",
+     "san": "Nd3#",
+     "idea": "Smothered mate. The king is boxed in by its own pieces."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4c1f4b8c6g1f3f8b4b1d2d8e7a2a3g4e5a3b4e5d3": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4c1f4b8c6g1f3f8b4b1d2d8e7e2e3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g4e5",
+     "san": "Ngxe5",
+     "idea": "Win the pawn back. Material is level."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4c1f4b8c6g1f3f8b4b1d2d8e7e2e3g4e5": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3e5",
+     "san": "Nxe5"
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4c1f4b8c6g1f3f8b4b1d2d8e7e2e3g4e5f3e5": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c6e5",
+     "san": "Nxe5",
+     "idea": "Recapture. Your knight is superb on e5."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4c1f4b8c6g1f3f8b4b1d2d8e7e2e3g4e5f3e5c6e5": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1e2",
+     "san": "Be2"
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4c1f4b8c6g1f3f8b4b1d2d8e7e2e3g4e5f3e5c6e5f1e2": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4c1f4b8c6g1f3f8b4b1d2d8e7e2e3g4e5f3e5c6e5f1e2e8g8": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O"
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4c1f4b8c6g1f3f8b4b1d2d8e7e2e3g4e5f3e5c6e5f1e2e8g8e1g1": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6",
+     "idea": "Support the e5 knight."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4c1f4b8c6g1f3f8b4b1d2d8e7e2e3g4e5f3e5c6e5f1e2e8g8e1g1d7d6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d2b3",
+     "san": "Nb3"
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4c1f4b8c6g1f3f8b4b1d2d8e7e2e3g4e5f3e5c6e5f1e2e8g8e1g1d7d6d2b3": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b7b6",
+     "san": "b6",
+     "idea": "Cover c5 and prepare ...Bb7. You're comfortable."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4c1f4b8c6g1f3f8b4b1d2d8e7e2e3g4e5f3e5c6e5f1e2e8g8e1g1d7d6d2b3b7b6": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a2a3",
+     "san": "a3"
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4c1f4b8c6g1f3f8b4b1d2d8e7e2e3g4e5f3e5c6e5f1e2e8g8e1g1d7d6d2b3b7b6a2a3": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b4c5",
+     "san": "Bc5",
+     "idea": "Retreat the bishop, hitting a3 and e3."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4c1f4b8c6g1f3f8b4b1d2d8e7e2e3g4e5f3e5c6e5f1e2e8g8e1g1d7d6d2b3b7b6a2a3b4c5": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b3c5",
+     "san": "Nxc5"
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4c1f4b8c6g1f3f8b4b1d2d8e7e2e3g4e5f3e5c6e5f1e2e8g8e1g1d7d6d2b3b7b6a2a3b4c5b3c5": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b6c5",
+     "san": "bxc5",
+     "idea": "Recapture toward the centre."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4c1f4b8c6g1f3f8b4b1d2d8e7e2e3g4e5f3e5c6e5f1e2e8g8e1g1d7d6d2b3b7b6a2a3b4c5b3c5b6c5": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b2b4",
+     "san": "b4"
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4c1f4b8c6g1f3f8b4b1d2d8e7e2e3g4e5f3e5c6e5f1e2e8g8e1g1d7d6d2b3b7b6a2a3b4c5b3c5b6c5b2b4": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [],
+   "end": true,
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4g1f3": {
+   "ply": 7,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8c5",
+     "san": "Bc5",
+     "idea": "Aim at f2 and develop."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Adler Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4g1f3f8c5": {
+   "ply": 8,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e2e3",
+     "san": "e3"
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Adler Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4g1f3f8c5e2e3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6",
+     "idea": "Add another attacker to e5."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Adler Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4g1f3f8c5e2e3b8c6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1e2",
+     "san": "Be2"
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Adler Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4g1f3f8c5e2e3b8c6f1e2": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g4e5",
+     "san": "Ngxe5",
+     "idea": "Take the pawn back."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Adler Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4g1f3f8c5e2e3b8c6f1e2g4e5": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3e5",
+     "san": "Nxe5"
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Adler Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4g1f3f8c5e2e3b8c6f1e2g4e5f3e5": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c6e5",
+     "san": "Nxe5",
+     "idea": "Recapture. Material level and a strong knight on e5."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Adler Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4g1f3f8c5e2e3b8c6f1e2g4e5f3e5c6e5": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O"
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Adler Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4g1f3f8c5e2e3b8c6f1e2g4e5f3e5c6e5e1g1": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Adler Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4g1f3f8c5e2e3b8c6f1e2g4e5f3e5c6e5e1g1e8g8": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3"
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Adler Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4g1f3f8c5e2e3b8c6f1e2g4e5f3e5c6e5e1g1e8g8b1c3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6",
+     "idea": "Support the knight."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Adler Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4g1f3f8c5e2e3b8c6f1e2g4e5f3e5c6e5e1g1e8g8b1c3d7d6": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b2b3",
+     "san": "b3"
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Adler Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4g1f3f8c5e2e3b8c6f1e2g4e5f3e5c6e5e1g1e8g8b1c3d7d6b2b3": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8e8",
+     "san": "Re8",
+     "idea": "The rook takes the e-file, ready for ...Rh6 ideas later."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Adler Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4g1f3f8c5e2e3b8c6f1e2g4e5f3e5c6e5e1g1e8g8b1c3d7d6b2b3f8e8": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1b2",
+     "san": "Bb2"
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Adler Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4g1f3f8c5e2e3b8c6f1e2g4e5f3e5c6e5e1g1e8g8b1c3d7d6b2b3f8e8c1b2": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8f5",
+     "san": "Bf5",
+     "idea": "Develop the bishop."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Adler Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4g1f3f8c5e2e3b8c6f1e2g4e5f3e5c6e5e1g1e8g8b1c3d7d6b2b3f8e8c1b2c8f5": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c3a4",
+     "san": "Na4"
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Adler Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4g1f3f8c5e2e3b8c6f1e2g4e5f3e5c6e5e1g1e8g8b1c3d7d6b2b3f8e8c1b2c8f5c3a4": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c5b6",
+     "san": "Bb6",
+     "idea": "Retreat, hitting e3."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Adler Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4g1f3f8c5e2e3b8c6f1e2g4e5f3e5c6e5e1g1e8g8b1c3d7d6b2b3f8e8c1b2c8f5c3a4c5b6": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a4b6",
+     "san": "Nxb6"
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Adler Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4g1f3f8c5e2e3b8c6f1e2g4e5f3e5c6e5e1g1e8g8b1c3d7d6b2b3f8e8c1b2c8f5c3a4c5b6a4b6": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [],
+   "end": true,
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Adler Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4e2e4": {
+   "ply": 7,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g4e5",
+     "san": "Nxe5",
+     "idea": "Take the pawn back at once."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Alekhine Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4e2e4g4e5": {
+   "ply": 8,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f2f4",
+     "san": "f4"
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Alekhine Variation, Abonyi Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4e2e4g4e5f2f4": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e5c6",
+     "san": "Nec6",
+     "idea": "Retreat to c6, keeping an eye on d4."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Alekhine Variation, Abonyi Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4e2e4g4e5f2f4e5c6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1e3",
+     "san": "Be3"
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Alekhine Variation, Abonyi Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4e2e4g4e5f2f4e5c6c1e3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8b4",
+     "san": "Bb4+",
+     "idea": "Check, and prepare to double White's pawns."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Alekhine Variation, Abonyi Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4e2e4g4e5f2f4e5c6c1e3f8b4": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3"
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Alekhine Variation, Abonyi Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4e2e4g4e5f2f4e5c6c1e3f8b4b1c3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b4c3",
+     "san": "Bxc3+",
+     "idea": "Take. White's queenside pawns are doubled."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Alekhine Variation, Abonyi Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4e2e4g4e5f2f4e5c6c1e3f8b4b1c3b4c3": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b2c3",
+     "san": "bxc3"
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Alekhine Variation, Abonyi Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4e2e4g4e5f2f4e5c6c1e3f8b4b1c3b4c3b2c3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8e7",
+     "san": "Qe7",
+     "idea": "Hit e4 and c5."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Alekhine Variation, Abonyi Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4e2e4g4e5f2f4e5c6c1e3f8b4b1c3b4c3b2c3d8e7": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1d3",
+     "san": "Bd3"
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Alekhine Variation, Abonyi Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4e2e4g4e5f2f4e5c6c1e3f8b4b1c3b4c3b2c3d8e7f1d3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8a6",
+     "san": "Na6",
+     "idea": "The knight heads for c5, blockading the weak pawns."
+    }
+   ],
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Alekhine Variation, Abonyi Variation"
+  },
+  "d2d4g8f6c2c4e7e5d4e5f6g4e2e4g4e5f2f4e5c6c1e3f8b4b1c3b4c3b2c3d8e7f1d3b8a6": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "A52",
+   "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Alekhine Variation, Abonyi Variation"
+  }
+ }
+}

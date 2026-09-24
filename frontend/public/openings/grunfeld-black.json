@@ -11,24 +11,24 @@
    "label": "Exchange Variation",
    "eco": "D85",
    "name": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation",
-   "path": "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7g1f3c7c5a1b1e8g8f1e2c5d4c3d4d8a5",
-   "plies": 20
+   "path": "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7g1f3c7c5a1b1e8g8f1e2c5d4c3d4d8a5c1d2a5a2e1g1c8g4d2g5h7h6g5e3b8c6d4d5g4f3e2f3c6e5b1b7a7a5f3e2e5c4e3f4a5a4b7e7g6g5",
+   "plies": 40
   },
   {
    "id": "grunfeld-bc4",
    "label": "Exchange, Classical Bc4",
-   "eco": "D86",
-   "name": "Grünfeld Defense: Exchange Variation, Classical Variation",
-   "path": "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7f1c4c7c5g1e2b8c6c1e3e8g8e1g1c8g4",
-   "plies": 20
+   "eco": "D89",
+   "name": "Grünfeld Defense: Exchange Variation, Sokolsky Variation",
+   "path": "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7f1c4c7c5g1e2b8c6c1e3e8g8e1g1c8g4f2f3c6a5c4d3c5d4c3d4g4e6d4d5g7a1d1a1f7f6e3h6f8e8g1h1a8c8e2f4e6d7e4e5a5c4e5e6d7a4",
+   "plies": 40
   },
   {
    "id": "grunfeld-russian",
    "label": "Russian System",
    "eco": "D97",
    "name": "Grünfeld Defense: Russian Variation, Hungarian Variation",
-   "path": "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7d1b3d5c4b3c4e8g8e2e4a7a6f1e2b7b5c4b3c7c5d4c5c8b7",
-   "plies": 20
+   "path": "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7d1b3d5c4b3c4e8g8e2e4a7a6f1e2b7b5c4b3c7c5d4c5c8b7e4e5f6d7c1e3e7e6e1g1d8c7a1d1d7e5f3e5g7e5f2f4e5g7a2a4b5a4c3a4b8c6e2f3a8b8e3f2",
+   "plies": 39
   },
   {
    "id": "grunfeld-fianchetto",
@@ -320,6 +320,276 @@
    "ply": 20,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "c1d2",
+     "san": "Bd2"
+    }
+   ],
+   "eco": "D85",
+   "name": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7g1f3c7c5a1b1e8g8f1e2c5d4c3d4d8a5c1d2": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a5a2",
+     "san": "Qxa2",
+     "idea": "Grab the a2 pawn. It's the main line."
+    }
+   ],
+   "eco": "D85",
+   "name": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7g1f3c7c5a1b1e8g8f1e2c5d4c3d4d8a5c1d2a5a2": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O"
+    }
+   ],
+   "eco": "D85",
+   "name": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7g1f3c7c5a1b1e8g8f1e2c5d4c3d4d8a5c1d2a5a2e1g1": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8g4",
+     "san": "Bg4",
+     "idea": "Pin the knight and pressure d4."
+    }
+   ],
+   "eco": "D85",
+   "name": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7g1f3c7c5a1b1e8g8f1e2c5d4c3d4d8a5c1d2a5a2e1g1c8g4": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d2g5",
+     "san": "Bg5"
+    }
+   ],
+   "eco": "D85",
+   "name": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7g1f3c7c5a1b1e8g8f1e2c5d4c3d4d8a5c1d2a5a2e1g1c8g4d2g5": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h7h6",
+     "san": "h6",
+     "idea": "Put the question to the bishop."
+    }
+   ],
+   "eco": "D85",
+   "name": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7g1f3c7c5a1b1e8g8f1e2c5d4c3d4d8a5c1d2a5a2e1g1c8g4d2g5h7h6": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g5e3",
+     "san": "Be3"
+    }
+   ],
+   "eco": "D85",
+   "name": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7g1f3c7c5a1b1e8g8f1e2c5d4c3d4d8a5c1d2a5a2e1g1c8g4d2g5h7h6g5e3": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6",
+     "idea": "Develop with pressure on d4."
+    }
+   ],
+   "eco": "D85",
+   "name": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7g1f3c7c5a1b1e8g8f1e2c5d4c3d4d8a5c1d2a5a2e1g1c8g4d2g5h7h6g5e3b8c6": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4d5",
+     "san": "d5"
+    }
+   ],
+   "eco": "D85",
+   "name": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7g1f3c7c5a1b1e8g8f1e2c5d4c3d4d8a5c1d2a5a2e1g1c8g4d2g5h7h6g5e3b8c6d4d5": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g4f3",
+     "san": "Bxf3",
+     "idea": "Take the knight. The e5 square is yours."
+    }
+   ],
+   "eco": "D85",
+   "name": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7g1f3c7c5a1b1e8g8f1e2c5d4c3d4d8a5c1d2a5a2e1g1c8g4d2g5h7h6g5e3b8c6d4d5g4f3": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e2f3",
+     "san": "Bxf3"
+    }
+   ],
+   "eco": "D85",
+   "name": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7g1f3c7c5a1b1e8g8f1e2c5d4c3d4d8a5c1d2a5a2e1g1c8g4d2g5h7h6g5e3b8c6d4d5g4f3e2f3": {
+   "ply": 31,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c6e5",
+     "san": "Ne5",
+     "idea": "Centralise the knight, hitting the f3 bishop."
+    }
+   ],
+   "eco": "D85",
+   "name": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7g1f3c7c5a1b1e8g8f1e2c5d4c3d4d8a5c1d2a5a2e1g1c8g4d2g5h7h6g5e3b8c6d4d5g4f3e2f3c6e5": {
+   "ply": 32,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b1b7",
+     "san": "Rxb7"
+    }
+   ],
+   "eco": "D85",
+   "name": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7g1f3c7c5a1b1e8g8f1e2c5d4c3d4d8a5c1d2a5a2e1g1c8g4d2g5h7h6g5e3b8c6d4d5g4f3e2f3c6e5b1b7": {
+   "ply": 33,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a7a5",
+     "san": "a5",
+     "idea": "The passed a-pawn starts running."
+    }
+   ],
+   "eco": "D85",
+   "name": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7g1f3c7c5a1b1e8g8f1e2c5d4c3d4d8a5c1d2a5a2e1g1c8g4d2g5h7h6g5e3b8c6d4d5g4f3e2f3c6e5b1b7a7a5": {
+   "ply": 34,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3e2",
+     "san": "Be2"
+    }
+   ],
+   "eco": "D85",
+   "name": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7g1f3c7c5a1b1e8g8f1e2c5d4c3d4d8a5c1d2a5a2e1g1c8g4d2g5h7h6g5e3b8c6d4d5g4f3e2f3c6e5b1b7a7a5f3e2": {
+   "ply": 35,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e5c4",
+     "san": "Nc4",
+     "idea": "Hit the e3 bishop."
+    }
+   ],
+   "eco": "D85",
+   "name": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7g1f3c7c5a1b1e8g8f1e2c5d4c3d4d8a5c1d2a5a2e1g1c8g4d2g5h7h6g5e3b8c6d4d5g4f3e2f3c6e5b1b7a7a5f3e2e5c4": {
+   "ply": 36,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e3f4",
+     "san": "Bf4"
+    }
+   ],
+   "eco": "D85",
+   "name": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7g1f3c7c5a1b1e8g8f1e2c5d4c3d4d8a5c1d2a5a2e1g1c8g4d2g5h7h6g5e3b8c6d4d5g4f3e2f3c6e5b1b7a7a5f3e2e5c4e3f4": {
+   "ply": 37,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a5a4",
+     "san": "a4",
+     "idea": "Keep pushing the a-pawn."
+    }
+   ],
+   "eco": "D85",
+   "name": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7g1f3c7c5a1b1e8g8f1e2c5d4c3d4d8a5c1d2a5a2e1g1c8g4d2g5h7h6g5e3b8c6d4d5g4f3e2f3c6e5b1b7a7a5f3e2e5c4e3f4a5a4": {
+   "ply": 38,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b7e7",
+     "san": "Rxe7"
+    }
+   ],
+   "eco": "D85",
+   "name": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7g1f3c7c5a1b1e8g8f1e2c5d4c3d4d8a5c1d2a5a2e1g1c8g4d2g5h7h6g5e3b8c6d4d5g4f3e2f3c6e5b1b7a7a5f3e2e5c4e3f4a5a4b7e7": {
+   "ply": 39,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g6g5",
+     "san": "g5",
+     "idea": "Kick the bishop."
+    }
+   ],
+   "eco": "D85",
+   "name": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7g1f3c7c5a1b1e8g8f1e2c5d4c3d4d8a5c1d2a5a2e1g1c8g4d2g5h7h6g5e3b8c6d4d5g4f3e2f3c6e5b1b7a7a5f3e2e5c4e3f4a5a4b7e7g6g5": {
+   "ply": 40,
+   "turn": "w",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "D85",
@@ -424,10 +694,280 @@
    "ply": 20,
    "turn": "w",
    "mine": false,
-   "replies": [],
-   "end": true,
+   "replies": [
+    {
+     "uci": "f2f3",
+     "san": "f3"
+    }
+   ],
    "eco": "D86",
    "name": "Grünfeld Defense: Exchange Variation, Classical Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7f1c4c7c5g1e2b8c6c1e3e8g8e1g1c8g4f2f3": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c6a5",
+     "san": "Na5",
+     "idea": "Hit the c4 bishop."
+    }
+   ],
+   "eco": "D86",
+   "name": "Grünfeld Defense: Exchange Variation, Classical Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7f1c4c7c5g1e2b8c6c1e3e8g8e1g1c8g4f2f3c6a5": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c4d3",
+     "san": "Bd3"
+    }
+   ],
+   "eco": "D86",
+   "name": "Grünfeld Defense: Exchange Variation, Classical Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7f1c4c7c5g1e2b8c6c1e3e8g8e1g1c8g4f2f3c6a5c4d3": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c5d4",
+     "san": "cxd4",
+     "idea": "Trade on d4."
+    }
+   ],
+   "eco": "D86",
+   "name": "Grünfeld Defense: Exchange Variation, Classical Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7f1c4c7c5g1e2b8c6c1e3e8g8e1g1c8g4f2f3c6a5c4d3c5d4": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c3d4",
+     "san": "cxd4"
+    }
+   ],
+   "eco": "D86",
+   "name": "Grünfeld Defense: Exchange Variation, Classical Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7f1c4c7c5g1e2b8c6c1e3e8g8e1g1c8g4f2f3c6a5c4d3c5d4c3d4": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g4e6",
+     "san": "Be6",
+     "idea": "Retreat to e6, hitting a2."
+    }
+   ],
+   "eco": "D86",
+   "name": "Grünfeld Defense: Exchange Variation, Classical Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7f1c4c7c5g1e2b8c6c1e3e8g8e1g1c8g4f2f3c6a5c4d3c5d4c3d4g4e6": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4d5",
+     "san": "d5"
+    }
+   ],
+   "eco": "D89",
+   "name": "Grünfeld Defense: Exchange Variation, Spassky Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7f1c4c7c5g1e2b8c6c1e3e8g8e1g1c8g4f2f3c6a5c4d3c5d4c3d4g4e6d4d5": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g7a1",
+     "san": "Bxa1",
+     "idea": "Take the rook. The exchange sacrifice is White's, and you take it."
+    }
+   ],
+   "eco": "D89",
+   "name": "Grünfeld Defense: Exchange Variation, Sokolsky Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7f1c4c7c5g1e2b8c6c1e3e8g8e1g1c8g4f2f3c6a5c4d3c5d4c3d4g4e6d4d5g7a1": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1a1",
+     "san": "Qxa1"
+    }
+   ],
+   "eco": "D89",
+   "name": "Grünfeld Defense: Exchange Variation, Sokolsky Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7f1c4c7c5g1e2b8c6c1e3e8g8e1g1c8g4f2f3c6a5c4d3c5d4c3d4g4e6d4d5g7a1d1a1": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f7f6",
+     "san": "f6",
+     "idea": "Shut the long diagonal before White's queen and bishop use it."
+    }
+   ],
+   "eco": "D89",
+   "name": "Grünfeld Defense: Exchange Variation, Sokolsky Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7f1c4c7c5g1e2b8c6c1e3e8g8e1g1c8g4f2f3c6a5c4d3c5d4c3d4g4e6d4d5g7a1d1a1f7f6": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e3h6",
+     "san": "Bh6"
+    }
+   ],
+   "eco": "D89",
+   "name": "Grünfeld Defense: Exchange Variation, Sokolsky Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7f1c4c7c5g1e2b8c6c1e3e8g8e1g1c8g4f2f3c6a5c4d3c5d4c3d4g4e6d4d5g7a1d1a1f7f6e3h6": {
+   "ply": 31,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8e8",
+     "san": "Re8",
+     "idea": "Step out of the pin on the f8 rook."
+    }
+   ],
+   "eco": "D89",
+   "name": "Grünfeld Defense: Exchange Variation, Sokolsky Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7f1c4c7c5g1e2b8c6c1e3e8g8e1g1c8g4f2f3c6a5c4d3c5d4c3d4g4e6d4d5g7a1d1a1f7f6e3h6f8e8": {
+   "ply": 32,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1h1",
+     "san": "Kh1"
+    }
+   ],
+   "eco": "D89",
+   "name": "Grünfeld Defense: Exchange Variation, Sokolsky Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7f1c4c7c5g1e2b8c6c1e3e8g8e1g1c8g4f2f3c6a5c4d3c5d4c3d4g4e6d4d5g7a1d1a1f7f6e3h6f8e8g1h1": {
+   "ply": 33,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a8c8",
+     "san": "Rc8",
+     "idea": "The rook takes the c-file."
+    }
+   ],
+   "eco": "D89",
+   "name": "Grünfeld Defense: Exchange Variation, Sokolsky Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7f1c4c7c5g1e2b8c6c1e3e8g8e1g1c8g4f2f3c6a5c4d3c5d4c3d4g4e6d4d5g7a1d1a1f7f6e3h6f8e8g1h1a8c8": {
+   "ply": 34,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e2f4",
+     "san": "Nf4"
+    }
+   ],
+   "eco": "D89",
+   "name": "Grünfeld Defense: Exchange Variation, Sokolsky Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7f1c4c7c5g1e2b8c6c1e3e8g8e1g1c8g4f2f3c6a5c4d3c5d4c3d4g4e6d4d5g7a1d1a1f7f6e3h6f8e8g1h1a8c8e2f4": {
+   "ply": 35,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e6d7",
+     "san": "Bd7",
+     "idea": "Reroute the bishop to the queenside."
+    }
+   ],
+   "eco": "D89",
+   "name": "Grünfeld Defense: Exchange Variation, Sokolsky Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7f1c4c7c5g1e2b8c6c1e3e8g8e1g1c8g4f2f3c6a5c4d3c5d4c3d4g4e6d4d5g7a1d1a1f7f6e3h6f8e8g1h1a8c8e2f4e6d7": {
+   "ply": 36,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4e5",
+     "san": "e5"
+    }
+   ],
+   "eco": "D89",
+   "name": "Grünfeld Defense: Exchange Variation, Sokolsky Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7f1c4c7c5g1e2b8c6c1e3e8g8e1g1c8g4f2f3c6a5c4d3c5d4c3d4g4e6d4d5g7a1d1a1f7f6e3h6f8e8g1h1a8c8e2f4e6d7e4e5": {
+   "ply": 37,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a5c4",
+     "san": "Nc4",
+     "idea": "Hit e5 from c4."
+    }
+   ],
+   "eco": "D89",
+   "name": "Grünfeld Defense: Exchange Variation, Sokolsky Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7f1c4c7c5g1e2b8c6c1e3e8g8e1g1c8g4f2f3c6a5c4d3c5d4c3d4g4e6d4d5g7a1d1a1f7f6e3h6f8e8g1h1a8c8e2f4e6d7e4e5a5c4": {
+   "ply": 38,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e5e6",
+     "san": "e6"
+    }
+   ],
+   "eco": "D89",
+   "name": "Grünfeld Defense: Exchange Variation, Sokolsky Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7f1c4c7c5g1e2b8c6c1e3e8g8e1g1c8g4f2f3c6a5c4d3c5d4c3d4g4e6d4d5g7a1d1a1f7f6e3h6f8e8g1h1a8c8e2f4e6d7e4e5a5c4e5e6": {
+   "ply": 39,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7a4",
+     "san": "Ba4",
+     "idea": "The bishop goes to a4, out of the way of the e6 pawn."
+    }
+   ],
+   "eco": "D89",
+   "name": "Grünfeld Defense: Exchange Variation, Sokolsky Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5c4d5f6d5e2e4d5c3b2c3f8g7f1c4c7c5g1e2b8c6c1e3e8g8e1g1c8g4f2f3c6a5c4d3c5d4c3d4g4e6d4d5g7a1d1a1f7f6e3h6f8e8g1h1a8c8e2f4e6d7e4e5a5c4e5e6d7a4": {
+   "ply": 40,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "D89",
+   "name": "Grünfeld Defense: Exchange Variation, Sokolsky Variation"
   },
   "d2d4g8f6c2c4g7g6b1c3d7d5g1f3": {
    "ply": 7,
@@ -613,6 +1153,262 @@
    "ply": 20,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "e4e5",
+     "san": "e5"
+    }
+   ],
+   "eco": "D97",
+   "name": "Grünfeld Defense: Russian Variation, Hungarian Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7d1b3d5c4b3c4e8g8e2e4a7a6f1e2b7b5c4b3c7c5d4c5c8b7e4e5": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6d7",
+     "san": "Nfd7",
+     "idea": "Retreat, hitting e5 and c5."
+    }
+   ],
+   "eco": "D97",
+   "name": "Grünfeld Defense: Russian Variation, Hungarian Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7d1b3d5c4b3c4e8g8e2e4a7a6f1e2b7b5c4b3c7c5d4c5c8b7e4e5f6d7": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1e3",
+     "san": "Be3"
+    }
+   ],
+   "eco": "D97",
+   "name": "Grünfeld Defense: Russian Variation, Hungarian Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7d1b3d5c4b3c4e8g8e2e4a7a6f1e2b7b5c4b3c7c5d4c5c8b7e4e5f6d7c1e3": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e7e6",
+     "san": "e6",
+     "idea": "Close the diagonal to f7 and prepare ...Qc7."
+    }
+   ],
+   "eco": "D97",
+   "name": "Grünfeld Defense: Russian Variation, Hungarian Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7d1b3d5c4b3c4e8g8e2e4a7a6f1e2b7b5c4b3c7c5d4c5c8b7e4e5f6d7c1e3e7e6": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O"
+    }
+   ],
+   "eco": "D97",
+   "name": "Grünfeld Defense: Russian Variation, Hungarian Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7d1b3d5c4b3c4e8g8e2e4a7a6f1e2b7b5c4b3c7c5d4c5c8b7e4e5f6d7c1e3e7e6e1g1": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8c7",
+     "san": "Qc7",
+     "idea": "Pile onto e5 and c5."
+    }
+   ],
+   "eco": "D97",
+   "name": "Grünfeld Defense: Russian Variation, Hungarian Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7d1b3d5c4b3c4e8g8e2e4a7a6f1e2b7b5c4b3c7c5d4c5c8b7e4e5f6d7c1e3e7e6e1g1d8c7": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a1d1",
+     "san": "Rad1"
+    }
+   ],
+   "eco": "D97",
+   "name": "Grünfeld Defense: Russian Variation, Hungarian Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7d1b3d5c4b3c4e8g8e2e4a7a6f1e2b7b5c4b3c7c5d4c5c8b7e4e5f6d7c1e3e7e6e1g1d8c7a1d1": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7e5",
+     "san": "Nxe5",
+     "idea": "Take the pawn."
+    }
+   ],
+   "eco": "D97",
+   "name": "Grünfeld Defense: Russian Variation, Hungarian Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7d1b3d5c4b3c4e8g8e2e4a7a6f1e2b7b5c4b3c7c5d4c5c8b7e4e5f6d7c1e3e7e6e1g1d8c7a1d1d7e5": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3e5",
+     "san": "Nxe5"
+    }
+   ],
+   "eco": "D97",
+   "name": "Grünfeld Defense: Russian Variation, Hungarian Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7d1b3d5c4b3c4e8g8e2e4a7a6f1e2b7b5c4b3c7c5d4c5c8b7e4e5f6d7c1e3e7e6e1g1d8c7a1d1d7e5f3e5": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g7e5",
+     "san": "Bxe5",
+     "idea": "Recapture. Your bishop dominates the long diagonal."
+    }
+   ],
+   "eco": "D97",
+   "name": "Grünfeld Defense: Russian Variation, Hungarian Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7d1b3d5c4b3c4e8g8e2e4a7a6f1e2b7b5c4b3c7c5d4c5c8b7e4e5f6d7c1e3e7e6e1g1d8c7a1d1d7e5f3e5g7e5": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f2f4",
+     "san": "f4"
+    }
+   ],
+   "eco": "D97",
+   "name": "Grünfeld Defense: Russian Variation, Hungarian Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7d1b3d5c4b3c4e8g8e2e4a7a6f1e2b7b5c4b3c7c5d4c5c8b7e4e5f6d7c1e3e7e6e1g1d8c7a1d1d7e5f3e5g7e5f2f4": {
+   "ply": 31,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e5g7",
+     "san": "Bg7",
+     "idea": "Retreat to g7, still hitting c3."
+    }
+   ],
+   "eco": "D97",
+   "name": "Grünfeld Defense: Russian Variation, Hungarian Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7d1b3d5c4b3c4e8g8e2e4a7a6f1e2b7b5c4b3c7c5d4c5c8b7e4e5f6d7c1e3e7e6e1g1d8c7a1d1d7e5f3e5g7e5f2f4e5g7": {
+   "ply": 32,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a2a4",
+     "san": "a4"
+    }
+   ],
+   "eco": "D97",
+   "name": "Grünfeld Defense: Russian Variation, Hungarian Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7d1b3d5c4b3c4e8g8e2e4a7a6f1e2b7b5c4b3c7c5d4c5c8b7e4e5f6d7c1e3e7e6e1g1d8c7a1d1d7e5f3e5g7e5f2f4e5g7a2a4": {
+   "ply": 33,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b5a4",
+     "san": "bxa4",
+     "idea": "Take, hitting the queen."
+    }
+   ],
+   "eco": "D97",
+   "name": "Grünfeld Defense: Russian Variation, Hungarian Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7d1b3d5c4b3c4e8g8e2e4a7a6f1e2b7b5c4b3c7c5d4c5c8b7e4e5f6d7c1e3e7e6e1g1d8c7a1d1d7e5f3e5g7e5f2f4e5g7a2a4b5a4": {
+   "ply": 34,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c3a4",
+     "san": "Nxa4"
+    }
+   ],
+   "eco": "D97",
+   "name": "Grünfeld Defense: Russian Variation, Hungarian Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7d1b3d5c4b3c4e8g8e2e4a7a6f1e2b7b5c4b3c7c5d4c5c8b7e4e5f6d7c1e3e7e6e1g1d8c7a1d1d7e5f3e5g7e5f2f4e5g7a2a4b5a4c3a4": {
+   "ply": 35,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6",
+     "idea": "Develop the last knight."
+    }
+   ],
+   "eco": "D97",
+   "name": "Grünfeld Defense: Russian Variation, Hungarian Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7d1b3d5c4b3c4e8g8e2e4a7a6f1e2b7b5c4b3c7c5d4c5c8b7e4e5f6d7c1e3e7e6e1g1d8c7a1d1d7e5f3e5g7e5f2f4e5g7a2a4b5a4c3a4b8c6": {
+   "ply": 36,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e2f3",
+     "san": "Bf3"
+    }
+   ],
+   "eco": "D97",
+   "name": "Grünfeld Defense: Russian Variation, Hungarian Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7d1b3d5c4b3c4e8g8e2e4a7a6f1e2b7b5c4b3c7c5d4c5c8b7e4e5f6d7c1e3e7e6e1g1d8c7a1d1d7e5f3e5g7e5f2f4e5g7a2a4b5a4c3a4b8c6e2f3": {
+   "ply": 37,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a8b8",
+     "san": "Rab8",
+     "idea": "The rook takes the b-file, facing White's queen."
+    }
+   ],
+   "eco": "D97",
+   "name": "Grünfeld Defense: Russian Variation, Hungarian Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7d1b3d5c4b3c4e8g8e2e4a7a6f1e2b7b5c4b3c7c5d4c5c8b7e4e5f6d7c1e3e7e6e1g1d8c7a1d1d7e5f3e5g7e5f2f4e5g7a2a4b5a4c3a4b8c6e2f3a8b8": {
+   "ply": 38,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e3f2",
+     "san": "Bf2"
+    }
+   ],
+   "eco": "D97",
+   "name": "Grünfeld Defense: Russian Variation, Hungarian Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3d7d5g1f3f8g7d1b3d5c4b3c4e8g8e2e4a7a6f1e2b7b5c4b3c7c5d4c5c8b7e4e5f6d7c1e3e7e6e1g1d8c7a1d1d7e5f3e5g7e5f2f4e5g7a2a4b5a4c3a4b8c6e2f3a8b8e3f2": {
+   "ply": 39,
+   "turn": "b",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "D97",

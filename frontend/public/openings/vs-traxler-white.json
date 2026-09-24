@@ -1,0 +1,360 @@
+{
+ "id": "vs-traxler-white",
+ "title": "Facing the Traxler",
+ "family": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 Bc5",
+ "blurb": "Skip the knight grab. 5.Bxf7+ takes a clean pawn and leaves Black's king stranded.",
+ "side": "w",
+ "difficulty": 2,
+ "lines": [
+  {
+   "id": "vtr-bd5",
+   "label": "5.Bxf7+ Ke7 6.Bd5",
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Traxler Counterattack, Bishop Sacrifice Line",
+   "path": "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f8c5c4f7e8e7f7d5h8f8e1g1d7d6c2c3c8g4g5f3",
+   "plies": 17
+  },
+  {
+   "id": "vtr-bb3",
+   "label": "5.Bxf7+ Ke7 6.Bb3",
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Traxler Counterattack, Bishop Sacrifice Line",
+   "path": "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f8c5c4f7e8e7f7b3h8f8e1g1d7d6b1c3h7h6g5h7",
+   "plies": 17
+  }
+ ],
+ "nodes": {
+  "": {
+   "ply": 0,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e2e4",
+     "san": "e4",
+     "idea": "Take the centre."
+    }
+   ]
+  },
+  "e2e4": {
+   "ply": 1,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7e5",
+     "san": "e5"
+    }
+   ],
+   "eco": "B00",
+   "name": "King's Pawn Game"
+  },
+  "e2e4e7e5": {
+   "ply": 2,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3",
+     "idea": "Develop and attack e5."
+    }
+   ],
+   "eco": "C20",
+   "name": "King's Pawn Game"
+  },
+  "e2e4e7e5g1f3": {
+   "ply": 3,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6"
+    }
+   ],
+   "eco": "C40",
+   "name": "King's Knight Opening"
+  },
+  "e2e4e7e5g1f3b8c6": {
+   "ply": 4,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1c4",
+     "san": "Bc4",
+     "idea": "The Italian bishop, aimed at f7."
+    }
+   ],
+   "eco": "C44",
+   "name": "King's Knight Opening: Normal Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1c4": {
+   "ply": 5,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "C50",
+   "name": "Italian Game"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6": {
+   "ply": 6,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f3g5",
+     "san": "Ng5",
+     "idea": "Attack f7 with two pieces."
+    }
+   ],
+   "eco": "C55",
+   "name": "Italian Game: Two Knights Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8c5",
+     "san": "Bc5"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Knight Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f8c5": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c4f7",
+     "san": "Bxf7+",
+     "idea": "Take on f7 with check. Safer than 5.Nxf7, which walks into ...Bxf2+."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Traxler Counterattack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f8c5c4f7": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8e7",
+     "san": "Ke7"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Traxler Counterattack, Bishop Sacrifice Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f8c5c4f7e8e7": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f7d5",
+     "san": "Bd5",
+     "idea": "Centralise the bishop, where it hits c6 and b7."
+    },
+    {
+     "uci": "f7b3",
+     "san": "Bb3",
+     "idea": "Retreat to safety. The bishop still eyes f7."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Traxler Counterattack, Bishop Sacrifice Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f8c5c4f7e8e7f7d5": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h8f8",
+     "san": "Rf8"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Traxler Counterattack, Bishop Sacrifice Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f8c5c4f7e8e7f7d5h8f8": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle. Your king is safe and Black's isn't."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Traxler Counterattack, Bishop Sacrifice Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f8c5c4f7e8e7f7d5h8f8e1g1": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Traxler Counterattack, Bishop Sacrifice Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f8c5c4f7e8e7f7d5h8f8e1g1d7d6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c2c3",
+     "san": "c3",
+     "idea": "Prepare d4, and give the bishop a retreat."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Traxler Counterattack, Bishop Sacrifice Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f8c5c4f7e8e7f7d5h8f8e1g1d7d6c2c3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8g4",
+     "san": "Bg4"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Traxler Counterattack, Bishop Sacrifice Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f8c5c4f7e8e7f7d5h8f8e1g1d7d6c2c3c8g4": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g5f3",
+     "san": "Nf3",
+     "idea": "Retreat the knight, covering d4 and h4. You stay a clean pawn up."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Traxler Counterattack, Bishop Sacrifice Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f8c5c4f7e8e7f7d5h8f8e1g1d7d6c2c3c8g4g5f3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Traxler Counterattack, Bishop Sacrifice Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f8c5c4f7e8e7f7b3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h8f8",
+     "san": "Rf8"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Traxler Counterattack, Bishop Sacrifice Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f8c5c4f7e8e7f7b3h8f8": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Traxler Counterattack, Bishop Sacrifice Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f8c5c4f7e8e7f7b3h8f8e1g1": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Traxler Counterattack, Bishop Sacrifice Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f8c5c4f7e8e7f7b3h8f8e1g1d7d6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "Develop toward d5."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Traxler Counterattack, Bishop Sacrifice Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f8c5c4f7e8e7f7b3h8f8e1g1d7d6b1c3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h7h6",
+     "san": "h6"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Traxler Counterattack, Bishop Sacrifice Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f8c5c4f7e8e7f7b3h8f8e1g1d7d6b1c3h7h6": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g5h7",
+     "san": "Nh7",
+     "idea": "Hit the f8 rook. The knight escapes with tempo."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Traxler Counterattack, Bishop Sacrifice Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f8c5c4f7e8e7f7b3h8f8e1g1d7d6b1c3h7h6g5h7": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Traxler Counterattack, Bishop Sacrifice Line"
+  }
+ }
+}

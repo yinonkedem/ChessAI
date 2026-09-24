@@ -10,41 +10,41 @@
    "id": "kid-mar-del-plata",
    "label": "Classical, Mar del Plata",
    "eco": "E98",
-   "name": "King's Indian Defense: Orthodox Variation, Classical System, Neo-Classical Line",
-   "path": "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7f3e1f6d7c1e3f7f5",
-   "plies": 20
+   "name": "King's Indian Defense: Orthodox Variation, Classical System, Kozul Gambit",
+   "path": "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7f3e1f6d7c1e3f7f5f2f3f5f4e3f2g6g5a1c1e7g6c4c5d7c5b2b4c5a6e1d3h7h5c3b5b7b6f2e1d8d7a2a4g7f6e1d2",
+   "plies": 39
   },
   {
    "id": "kid-petrosian",
    "label": "Classical, Petrosian",
    "eco": "E92",
    "name": "King's Indian Defense: Petrosian Variation, Stein Defense",
-   "path": "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6g5h4b8a6f3d2d8e8",
-   "plies": 20
+   "path": "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6g5h4b8a6f3d2d8e8e1g1f6h7a2a3c8d7b2b3h6h5f2f3g7h6a1b1h6e3g1h1e3c5d1c1f7f5e4f5g6f5f3f4e5e4",
+   "plies": 38
   },
   {
    "id": "kid-samisch",
    "label": "Sämisch Variation",
    "eco": "E87",
    "name": "King's Indian Defense: Sämisch Variation, Closed Variation",
-   "path": "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6f2f3e8g8c1e3e7e5d4d5f6h5d1d2f7f5e1c1b8d7f1d3d7c5",
-   "plies": 20
+   "path": "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6f2f3e8g8c1e3e7e5d4d5f6h5d1d2f7f5e1c1b8d7f1d3d7c5d3c2a7a6g1e2b7b5b2b4",
+   "plies": 25
   },
   {
    "id": "kid-fianchetto",
    "label": "Fianchetto Variation",
    "eco": "E69",
    "name": "King's Indian Defense: Fianchetto Variation, Classical Main Line",
-   "path": "d2d4g8f6c2c4g7g6b1c3f8g7g1f3d7d6g2g3e8g8f1g2b8d7e1g1e7e5e2e4c7c6h2h3d8b6f1e1e5d4",
-   "plies": 20
+   "path": "d2d4g8f6c2c4g7g6b1c3f8g7g1f3d7d6g2g3e8g8f1g2b8d7e1g1e7e5e2e4c7c6h2h3d8b6f1e1e5d4f3d4f8e8d4c2d7c5b2b4c5e6c1e3b6c7",
+   "plies": 28
   },
   {
    "id": "kid-classical-na6",
    "label": "Classical, Glek (7...Na6)",
    "eco": "E94",
    "name": "King's Indian Defense: Orthodox Variation, Glek Defense",
-   "path": "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8a6c1e3f6g4e3g5d8e8d4e5d6e5h2h3h7h6g5d2g4f6",
-   "plies": 24
+   "path": "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8a6c1e3f6g4e3g5d8e8d4e5d6e5h2h3h7h6g5d2g4f6d2e3e8e7c3d5e7d8d5f6d8f6c4c5a6b8b2b4b8c6",
+   "plies": 34
   }
  ],
  "nodes": {
@@ -337,10 +337,266 @@
    "ply": 20,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "f2f3",
+     "san": "f3"
+    }
+   ],
+   "eco": "E98",
+   "name": "King's Indian Defense: Orthodox Variation, Classical System, Neo-Classical Line"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7f3e1f6d7c1e3f7f5f2f3": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f5f4",
+     "san": "f4",
+     "idea": "Lock the kingside and gain space. The pawn storm starts."
+    }
+   ],
+   "eco": "E98",
+   "name": "King's Indian Defense: Orthodox Variation, Classical System, Neo-Classical Line"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7f3e1f6d7c1e3f7f5f2f3f5f4": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e3f2",
+     "san": "Bf2"
+    }
+   ],
+   "eco": "E98",
+   "name": "King's Indian Defense: Orthodox Variation, Classical System, Neo-Classical Line"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7f3e1f6d7c1e3f7f5f2f3f5f4e3f2": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g6g5",
+     "san": "g5",
+     "idea": "Keep going. ...g4 is the lever against White's king."
+    }
+   ],
+   "eco": "E98",
+   "name": "King's Indian Defense: Orthodox Variation, Classical System, Neo-Classical Line"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7f3e1f6d7c1e3f7f5f2f3f5f4e3f2g6g5": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a1c1",
+     "san": "Rc1"
+    }
+   ],
+   "eco": "E98",
+   "name": "King's Indian Defense: Orthodox Variation, Classical System, Neo-Classical Line"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7f3e1f6d7c1e3f7f5f2f3f5f4e3f2g6g5a1c1": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e7g6",
+     "san": "Ng6",
+     "idea": "The knight goes to g6, ready for ...h5 and ...g4."
+    }
+   ],
+   "eco": "E98",
+   "name": "King's Indian Defense: Orthodox Variation, Classical System, Neo-Classical Line"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7f3e1f6d7c1e3f7f5f2f3f5f4e3f2g6g5a1c1e7g6": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c4c5",
+     "san": "c5"
+    }
+   ],
+   "eco": "E98",
+   "name": "King's Indian Defense: Orthodox Variation, Classical System, Neo-Classical Line"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7f3e1f6d7c1e3f7f5f2f3f5f4e3f2g6g5a1c1e7g6c4c5": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7c5",
+     "san": "Nxc5",
+     "idea": "Take. White gives the pawn up to open the c-file."
+    }
+   ],
+   "eco": "E98",
+   "name": "King's Indian Defense: Orthodox Variation, Classical System, Kozul Gambit"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7f3e1f6d7c1e3f7f5f2f3f5f4e3f2g6g5a1c1e7g6c4c5d7c5": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b2b4",
+     "san": "b4"
+    }
+   ],
+   "eco": "E98",
+   "name": "King's Indian Defense: Orthodox Variation, Classical System, Kozul Gambit"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7f3e1f6d7c1e3f7f5f2f3f5f4e3f2g6g5a1c1e7g6c4c5d7c5b2b4": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c5a6",
+     "san": "Na6",
+     "idea": "Retreat, hitting b4."
+    }
+   ],
+   "eco": "E98",
+   "name": "King's Indian Defense: Orthodox Variation, Classical System, Kozul Gambit"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7f3e1f6d7c1e3f7f5f2f3f5f4e3f2g6g5a1c1e7g6c4c5d7c5b2b4c5a6": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1d3",
+     "san": "Nd3"
+    }
+   ],
+   "eco": "E98",
+   "name": "King's Indian Defense: Orthodox Variation, Classical System, Kozul Gambit"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7f3e1f6d7c1e3f7f5f2f3f5f4e3f2g6g5a1c1e7g6c4c5d7c5b2b4c5a6e1d3": {
+   "ply": 31,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h7h5",
+     "san": "h5",
+     "idea": "Support ...g4, the break that opens White's king."
+    }
+   ],
+   "eco": "E98",
+   "name": "King's Indian Defense: Orthodox Variation, Classical System, Kozul Gambit"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7f3e1f6d7c1e3f7f5f2f3f5f4e3f2g6g5a1c1e7g6c4c5d7c5b2b4c5a6e1d3h7h5": {
+   "ply": 32,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c3b5",
+     "san": "Nb5"
+    }
+   ],
+   "eco": "E98",
+   "name": "King's Indian Defense: Orthodox Variation, Classical System, Kozul Gambit"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7f3e1f6d7c1e3f7f5f2f3f5f4e3f2g6g5a1c1e7g6c4c5d7c5b2b4c5a6e1d3h7h5c3b5": {
+   "ply": 33,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b7b6",
+     "san": "b6",
+     "idea": "Cover c7 and a7 against the knight."
+    }
+   ],
+   "eco": "E98",
+   "name": "King's Indian Defense: Orthodox Variation, Classical System, Kozul Gambit"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7f3e1f6d7c1e3f7f5f2f3f5f4e3f2g6g5a1c1e7g6c4c5d7c5b2b4c5a6e1d3h7h5c3b5b7b6": {
+   "ply": 34,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f2e1",
+     "san": "Be1"
+    }
+   ],
+   "eco": "E98",
+   "name": "King's Indian Defense: Orthodox Variation, Classical System, Kozul Gambit"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7f3e1f6d7c1e3f7f5f2f3f5f4e3f2g6g5a1c1e7g6c4c5d7c5b2b4c5a6e1d3h7h5c3b5b7b6f2e1": {
+   "ply": 35,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8d7",
+     "san": "Qd7",
+     "idea": "Cover c7 and prepare ...Rf7."
+    }
+   ],
+   "eco": "E98",
+   "name": "King's Indian Defense: Orthodox Variation, Classical System, Kozul Gambit"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7f3e1f6d7c1e3f7f5f2f3f5f4e3f2g6g5a1c1e7g6c4c5d7c5b2b4c5a6e1d3h7h5c3b5b7b6f2e1d8d7": {
+   "ply": 36,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a2a4",
+     "san": "a4"
+    }
+   ],
+   "eco": "E98",
+   "name": "King's Indian Defense: Orthodox Variation, Classical System, Kozul Gambit"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7f3e1f6d7c1e3f7f5f2f3f5f4e3f2g6g5a1c1e7g6c4c5d7c5b2b4c5a6e1d3h7h5c3b5b7b6f2e1d8d7a2a4": {
+   "ply": 37,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g7f6",
+     "san": "Bf6",
+     "idea": "The bishop heads for d8, defending the queenside."
+    }
+   ],
+   "eco": "E98",
+   "name": "King's Indian Defense: Orthodox Variation, Classical System, Kozul Gambit"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7f3e1f6d7c1e3f7f5f2f3f5f4e3f2g6g5a1c1e7g6c4c5d7c5b2b4c5a6e1d3h7h5c3b5b7b6f2e1d8d7a2a4g7f6": {
+   "ply": 38,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1d2",
+     "san": "Bd2"
+    }
+   ],
+   "eco": "E98",
+   "name": "King's Indian Defense: Orthodox Variation, Classical System, Kozul Gambit"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8c6d4d5c6e7f3e1f6d7c1e3f7f5f2f3f5f4e3f2g6g5a1c1e7g6c4c5d7c5b2b4c5a6e1d3h7h5c3b5b7b6f2e1d8d7a2a4g7f6e1d2": {
+   "ply": 39,
+   "turn": "b",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "E98",
-   "name": "King's Indian Defense: Orthodox Variation, Classical System, Neo-Classical Line"
+   "name": "King's Indian Defense: Orthodox Variation, Classical System, Kozul Gambit"
   },
   "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5": {
    "ply": 13,
@@ -439,6 +695,249 @@
   },
   "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6g5h4b8a6f3d2d8e8": {
    "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O"
+    }
+   ],
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation, Stein Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6g5h4b8a6f3d2d8e8e1g1": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6h7",
+     "san": "Nh7",
+     "idea": "Unpin and prepare ...f5."
+    }
+   ],
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation, Stein Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6g5h4b8a6f3d2d8e8e1g1f6h7": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a2a3",
+     "san": "a3"
+    }
+   ],
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation, Stein Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6g5h4b8a6f3d2d8e8e1g1f6h7a2a3": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8d7",
+     "san": "Bd7",
+     "idea": "Develop and connect the rooks."
+    }
+   ],
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation, Stein Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6g5h4b8a6f3d2d8e8e1g1f6h7a2a3c8d7": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b2b3",
+     "san": "b3"
+    }
+   ],
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation, Stein Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6g5h4b8a6f3d2d8e8e1g1f6h7a2a3c8d7b2b3": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h6h5",
+     "san": "h5",
+     "idea": "Take space on the kingside and keep the h4 bishop out."
+    }
+   ],
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation, Stein Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6g5h4b8a6f3d2d8e8e1g1f6h7a2a3c8d7b2b3h6h5": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f2f3",
+     "san": "f3"
+    }
+   ],
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation, Stein Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6g5h4b8a6f3d2d8e8e1g1f6h7a2a3c8d7b2b3h6h5f2f3": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g7h6",
+     "san": "Bh6",
+     "idea": "Trade the bad bishop, or put it on e3."
+    }
+   ],
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation, Stein Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6g5h4b8a6f3d2d8e8e1g1f6h7a2a3c8d7b2b3h6h5f2f3g7h6": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a1b1",
+     "san": "Rb1"
+    }
+   ],
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation, Stein Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6g5h4b8a6f3d2d8e8e1g1f6h7a2a3c8d7b2b3h6h5f2f3g7h6a1b1": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h6e3",
+     "san": "Be3+",
+     "idea": "Check, and put the bishop on the powerful e3 square."
+    }
+   ],
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation, Stein Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6g5h4b8a6f3d2d8e8e1g1f6h7a2a3c8d7b2b3h6h5f2f3g7h6a1b1h6e3": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1h1",
+     "san": "Kh1"
+    }
+   ],
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation, Stein Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6g5h4b8a6f3d2d8e8e1g1f6h7a2a3c8d7b2b3h6h5f2f3g7h6a1b1h6e3g1h1": {
+   "ply": 31,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e3c5",
+     "san": "Bc5",
+     "idea": "Step back, hitting a3."
+    }
+   ],
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation, Stein Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6g5h4b8a6f3d2d8e8e1g1f6h7a2a3c8d7b2b3h6h5f2f3g7h6a1b1h6e3g1h1e3c5": {
+   "ply": 32,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1c1",
+     "san": "Qc1"
+    }
+   ],
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation, Stein Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6g5h4b8a6f3d2d8e8e1g1f6h7a2a3c8d7b2b3h6h5f2f3g7h6a1b1h6e3g1h1e3c5d1c1": {
+   "ply": 33,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f7f5",
+     "san": "f5",
+     "idea": "The ...f5 break, opening lines toward White's king."
+    }
+   ],
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation, Stein Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6g5h4b8a6f3d2d8e8e1g1f6h7a2a3c8d7b2b3h6h5f2f3g7h6a1b1h6e3g1h1e3c5d1c1f7f5": {
+   "ply": 34,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4f5",
+     "san": "exf5"
+    }
+   ],
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation, Stein Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6g5h4b8a6f3d2d8e8e1g1f6h7a2a3c8d7b2b3h6h5f2f3g7h6a1b1h6e3g1h1e3c5d1c1f7f5e4f5": {
+   "ply": 35,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g6f5",
+     "san": "gxf5",
+     "idea": "Recapture with the g-pawn, keeping control of e4."
+    }
+   ],
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation, Stein Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6g5h4b8a6f3d2d8e8e1g1f6h7a2a3c8d7b2b3h6h5f2f3g7h6a1b1h6e3g1h1e3c5d1c1f7f5e4f5g6f5": {
+   "ply": 36,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3f4",
+     "san": "f4"
+    }
+   ],
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation, Stein Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6g5h4b8a6f3d2d8e8e1g1f6h7a2a3c8d7b2b3h6h5f2f3g7h6a1b1h6e3g1h1e3c5d1c1f7f5e4f5g6f5f3f4": {
+   "ply": 37,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e5e4",
+     "san": "e4",
+     "idea": "Push past, taking d3 and f3 away from White."
+    }
+   ],
+   "eco": "E92",
+   "name": "King's Indian Defense: Petrosian Variation, Stein Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5d4d5a7a5c1g5h7h6g5h4b8a6f3d2d8e8e1g1f6h7a2a3c8d7b2b3h6h5f2f3g7h6a1b1h6e3g1h1e3c5d1c1f7f5e4f5g6f5f3f4e5e4": {
+   "ply": 38,
    "turn": "w",
    "mine": false,
    "replies": [],
@@ -599,6 +1098,73 @@
    "ply": 20,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "d3c2",
+     "san": "Bc2"
+    }
+   ],
+   "eco": "E87",
+   "name": "King's Indian Defense: Sämisch Variation, Closed Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6f2f3e8g8c1e3e7e5d4d5f6h5d1d2f7f5e1c1b8d7f1d3d7c5d3c2": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a7a6",
+     "san": "a6",
+     "idea": "Prepare ...b5."
+    }
+   ],
+   "eco": "E87",
+   "name": "King's Indian Defense: Sämisch Variation, Closed Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6f2f3e8g8c1e3e7e5d4d5f6h5d1d2f7f5e1c1b8d7f1d3d7c5d3c2a7a6": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1e2",
+     "san": "Nge2"
+    }
+   ],
+   "eco": "E87",
+   "name": "King's Indian Defense: Sämisch Variation, Closed Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6f2f3e8g8c1e3e7e5d4d5f6h5d1d2f7f5e1c1b8d7f1d3d7c5d3c2a7a6g1e2": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b7b5",
+     "san": "b5",
+     "idea": "Break at the queenside with ...b5."
+    }
+   ],
+   "eco": "E87",
+   "name": "King's Indian Defense: Sämisch Variation, Closed Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6f2f3e8g8c1e3e7e5d4d5f6h5d1d2f7f5e1c1b8d7f1d3d7c5d3c2a7a6g1e2b7b5": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b2b4",
+     "san": "b4"
+    }
+   ],
+   "eco": "E87",
+   "name": "King's Indian Defense: Sämisch Variation, Closed Variation"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6f2f3e8g8c1e3e7e5d4d5f6h5d1d2f7f5e1c1b8d7f1d3d7c5d3c2a7a6g1e2b7b5b2b4": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "E87",
@@ -784,6 +1350,114 @@
    "ply": 20,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "f3d4",
+     "san": "Nxd4"
+    }
+   ],
+   "eco": "E69",
+   "name": "King's Indian Defense: Fianchetto Variation, Classical Main Line"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7g1f3d7d6g2g3e8g8f1g2b8d7e1g1e7e5e2e4c7c6h2h3d8b6f1e1e5d4f3d4": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8e8",
+     "san": "Re8",
+     "idea": "The rook takes the e-file, hitting e4."
+    }
+   ],
+   "eco": "E69",
+   "name": "King's Indian Defense: Fianchetto Variation, Classical Main Line"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7g1f3d7d6g2g3e8g8f1g2b8d7e1g1e7e5e2e4c7c6h2h3d8b6f1e1e5d4f3d4f8e8": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4c2",
+     "san": "Nc2"
+    }
+   ],
+   "eco": "E69",
+   "name": "King's Indian Defense: Fianchetto Variation, Classical Main Line"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7g1f3d7d6g2g3e8g8f1g2b8d7e1g1e7e5e2e4c7c6h2h3d8b6f1e1e5d4f3d4f8e8d4c2": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7c5",
+     "san": "Nc5",
+     "idea": "The knight hits e4 again."
+    }
+   ],
+   "eco": "E69",
+   "name": "King's Indian Defense: Fianchetto Variation, Classical Main Line"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7g1f3d7d6g2g3e8g8f1g2b8d7e1g1e7e5e2e4c7c6h2h3d8b6f1e1e5d4f3d4f8e8d4c2d7c5": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b2b4",
+     "san": "b4"
+    }
+   ],
+   "eco": "E69",
+   "name": "King's Indian Defense: Fianchetto Variation, Classical Main Line"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7g1f3d7d6g2g3e8g8f1g2b8d7e1g1e7e5e2e4c7c6h2h3d8b6f1e1e5d4f3d4f8e8d4c2d7c5b2b4": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c5e6",
+     "san": "Ne6",
+     "idea": "Retreat to e6, eyeing d4 and f4."
+    }
+   ],
+   "eco": "E69",
+   "name": "King's Indian Defense: Fianchetto Variation, Classical Main Line"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7g1f3d7d6g2g3e8g8f1g2b8d7e1g1e7e5e2e4c7c6h2h3d8b6f1e1e5d4f3d4f8e8d4c2d7c5b2b4c5e6": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1e3",
+     "san": "Be3"
+    }
+   ],
+   "eco": "E69",
+   "name": "King's Indian Defense: Fianchetto Variation, Classical Main Line"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7g1f3d7d6g2g3e8g8f1g2b8d7e1g1e7e5e2e4c7c6h2h3d8b6f1e1e5d4f3d4f8e8d4c2d7c5b2b4c5e6c1e3": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b6c7",
+     "san": "Qc7",
+     "idea": "The queen steps back and covers the c-file."
+    }
+   ],
+   "eco": "E69",
+   "name": "King's Indian Defense: Fianchetto Variation, Classical Main Line"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7g1f3d7d6g2g3e8g8f1g2b8d7e1g1e7e5e2e4c7c6h2h3d8b6f1e1e5d4f3d4f8e8d4c2d7c5b2b4c5e6c1e3b6c7": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "E69",
@@ -926,6 +1600,141 @@
   },
   "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8a6c1e3f6g4e3g5d8e8d4e5d6e5h2h3h7h6g5d2g4f6": {
    "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d2e3",
+     "san": "Be3"
+    }
+   ],
+   "eco": "E94",
+   "name": "King's Indian Defense: Orthodox Variation, Glek Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8a6c1e3f6g4e3g5d8e8d4e5d6e5h2h3h7h6g5d2g4f6d2e3": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8e7",
+     "san": "Qe7",
+     "idea": "Put the queen on e7, protecting e5 and c5."
+    }
+   ],
+   "eco": "E94",
+   "name": "King's Indian Defense: Orthodox Variation, Glek Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8a6c1e3f6g4e3g5d8e8d4e5d6e5h2h3h7h6g5d2g4f6d2e3e8e7": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c3d5",
+     "san": "Nd5"
+    }
+   ],
+   "eco": "E94",
+   "name": "King's Indian Defense: Orthodox Variation, Glek Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8a6c1e3f6g4e3g5d8e8d4e5d6e5h2h3h7h6g5d2g4f6d2e3e8e7c3d5": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e7d8",
+     "san": "Qd8",
+     "idea": "Hit the d5 knight."
+    }
+   ],
+   "eco": "E94",
+   "name": "King's Indian Defense: Orthodox Variation, Glek Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8a6c1e3f6g4e3g5d8e8d4e5d6e5h2h3h7h6g5d2g4f6d2e3e8e7c3d5e7d8": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d5f6",
+     "san": "Nxf6+"
+    }
+   ],
+   "eco": "E94",
+   "name": "King's Indian Defense: Orthodox Variation, Glek Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8a6c1e3f6g4e3g5d8e8d4e5d6e5h2h3h7h6g5d2g4f6d2e3e8e7c3d5e7d8d5f6": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8f6",
+     "san": "Qxf6",
+     "idea": "Recapture. The queen eyes f3 and the long diagonal."
+    }
+   ],
+   "eco": "E94",
+   "name": "King's Indian Defense: Orthodox Variation, Glek Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8a6c1e3f6g4e3g5d8e8d4e5d6e5h2h3h7h6g5d2g4f6d2e3e8e7c3d5e7d8d5f6d8f6": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c4c5",
+     "san": "c5"
+    }
+   ],
+   "eco": "E94",
+   "name": "King's Indian Defense: Orthodox Variation, Glek Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8a6c1e3f6g4e3g5d8e8d4e5d6e5h2h3h7h6g5d2g4f6d2e3e8e7c3d5e7d8d5f6d8f6c4c5": {
+   "ply": 31,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a6b8",
+     "san": "Nb8",
+     "idea": "The knight reroutes via b8 to c6."
+    }
+   ],
+   "eco": "E94",
+   "name": "King's Indian Defense: Orthodox Variation, Glek Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8a6c1e3f6g4e3g5d8e8d4e5d6e5h2h3h7h6g5d2g4f6d2e3e8e7c3d5e7d8d5f6d8f6c4c5a6b8": {
+   "ply": 32,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b2b4",
+     "san": "b4"
+    }
+   ],
+   "eco": "E94",
+   "name": "King's Indian Defense: Orthodox Variation, Glek Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8a6c1e3f6g4e3g5d8e8d4e5d6e5h2h3h7h6g5d2g4f6d2e3e8e7c3d5e7d8d5f6d8f6c4c5a6b8b2b4": {
+   "ply": 33,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6",
+     "idea": "The knight comes to c6, hitting b4 and d4."
+    }
+   ],
+   "eco": "E94",
+   "name": "King's Indian Defense: Orthodox Variation, Glek Defense"
+  },
+  "d2d4g8f6c2c4g7g6b1c3f8g7e2e4d7d6g1f3e8g8f1e2e7e5e1g1b8a6c1e3f6g4e3g5d8e8d4e5d6e5h2h3h7h6g5d2g4f6d2e3e8e7c3d5e7d8d5f6d8f6c4c5a6b8b2b4b8c6": {
+   "ply": 34,
    "turn": "w",
    "mine": false,
    "replies": [],

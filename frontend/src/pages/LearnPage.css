@@ -138,3 +138,29 @@
 .learn-card__review {
     width: 100%;
 }
+
+.learn-card__chips {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: var(--sp-1);
+}
+
+.learn-card__cat--attack {
+    background: var(--c-error-soft);
+    color: var(--c-error-ink);
+    border-color: transparent;
+}
+
+.learn-card__cat--defence {
+    background: var(--c-info-soft);
+    color: var(--c-ink);
+    border-color: transparent;
+}
+
+.learn-card__pair {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+    min-height: 40px;
+    padding-block: var(--sp-2);
+}

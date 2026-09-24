@@ -11,8 +11,8 @@
    "label": "Classical Variation",
    "eco": "B19",
    "name": "Caro-Kann Defense: Classical Variation, Spassky Variation",
-   "path": "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3d1d3e7e6c1f4g8f6",
-   "plies": 22
+   "path": "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3d1d3e7e6c1f4g8f6e1c1f8e7c1b1e8g8g3e4f6e4d3e4d7f6e4e2d8d5f3e5d5e4e2e4f6e4h1e1e4f6g2g4f8d8",
+   "plies": 40
   },
   {
    "id": "caro-advance",
@@ -27,32 +27,32 @@
    "label": "Exchange Variation",
    "eco": "B13",
    "name": "Caro-Kann Defense: Exchange Variation, Rubinstein Variation",
-   "path": "e2e4c7c6d2d4d7d5e4d5c6d5f1d3b8c6c2c3g8f6c1f4c8g4d1b3d8d7b1d2e7e6g1f3g4f3d2f3f8d6f4d6d7d6e1g1e8g8",
-   "plies": 24
+   "path": "e2e4c7c6d2d4d7d5e4d5c6d5f1d3b8c6c2c3g8f6c1f4c8g4d1b3d8d7b1d2e7e6g1f3g4f3d2f3f8d6f4d6d7d6e1g1e8g8a1e1d6c7b3c2g7g6c2d2g8g7",
+   "plies": 30
   },
   {
    "id": "caro-panov",
    "label": "Panov Attack",
    "eco": "B14",
    "name": "Caro-Kann Defense: Panov Attack",
-   "path": "e2e4c7c6d2d4d7d5e4d5c6d5c2c4g8f6b1c3e7e6g1f3f8e7c4d5f6d5f1d3b8c6e1g1e8g8f1e1e7f6d3e4c6e7",
-   "plies": 22
+   "path": "e2e4c7c6d2d4d7d5e4d5c6d5c2c4g8f6b1c3e7e6g1f3f8e7c4d5f6d5f1d3b8c6e1g1e8g8f1e1e7f6d3e4c6e7d1d3g7g6c1h6f6g7h6g7g8g7a1c1",
+   "plies": 29
   },
   {
    "id": "caro-karpov",
    "label": "Karpov Variation (4...Nd7)",
    "eco": "B17",
    "name": "Caro-Kann Defense: Karpov Variation, Modern Main Line",
-   "path": "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5g8f6f1d3e7e6g1f3f8d6d1e2h7h6g5e4f6e4e2e4d7f6",
-   "plies": 20
+   "path": "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5g8f6f1d3e7e6g1f3f8d6d1e2h7h6g5e4f6e4e2e4d7f6e4e2d8c7c1d2b7b6e1c1c8b7f3e5e8c8f2f4c8b8c1b1c6c5",
+   "plies": 32
   },
   {
    "id": "caro-advance-nd7",
    "label": "Advance Variation, 5...Nd7",
    "eco": "B12",
    "name": "Caro-Kann Defense: Advance Variation, Short Variation",
-   "path": "e2e4c7c6d2d4d7d5e4e5c8f5g1f3e7e6f1e2b8d7e1g1f5g6b1d2g8h6d2b3h6f5c1d2f8e7",
-   "plies": 18
+   "path": "e2e4c7c6d2d4d7d5e4e5c8f5g1f3e7e6f1e2b8d7e1g1f5g6b1d2g8h6d2b3h6f5c1d2f8e7g2g4f5h4f3h4e7h4f2f4f7f5e5f6",
+   "plies": 25
   }
  ],
  "nodes": {
@@ -366,6 +366,249 @@
   },
   "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3d1d3e7e6c1f4g8f6": {
    "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1c1",
+     "san": "O-O-O"
+    }
+   ],
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3d1d3e7e6c1f4g8f6e1c1": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8e7",
+     "san": "Be7",
+     "idea": "Develop and get ready to castle."
+    }
+   ],
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3d1d3e7e6c1f4g8f6e1c1f8e7": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1b1",
+     "san": "Kb1"
+    }
+   ],
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3d1d3e7e6c1f4g8f6e1c1f8e7c1b1": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle kingside. White's h5 pawn cramps you, but your king is safe."
+    }
+   ],
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3d1d3e7e6c1f4g8f6e1c1f8e7c1b1e8g8": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g3e4",
+     "san": "Ne4"
+    }
+   ],
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3d1d3e7e6c1f4g8f6e1c1f8e7c1b1e8g8g3e4": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6e4",
+     "san": "Nxe4",
+     "idea": "Trade knights, easing the cramp."
+    }
+   ],
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3d1d3e7e6c1f4g8f6e1c1f8e7c1b1e8g8g3e4f6e4": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d3e4",
+     "san": "Qxe4"
+    }
+   ],
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3d1d3e7e6c1f4g8f6e1c1f8e7c1b1e8g8g3e4f6e4d3e4": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7f6",
+     "san": "Nf6",
+     "idea": "Bring the knight back to f6, hitting the queen and h5."
+    }
+   ],
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3d1d3e7e6c1f4g8f6e1c1f8e7c1b1e8g8g3e4f6e4d3e4d7f6": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4e2",
+     "san": "Qe2"
+    }
+   ],
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3d1d3e7e6c1f4g8f6e1c1f8e7c1b1e8g8g3e4f6e4d3e4d7f6e4e2": {
+   "ply": 31,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8d5",
+     "san": "Qd5",
+     "idea": "Centralise the queen, hitting a2 and h5."
+    }
+   ],
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3d1d3e7e6c1f4g8f6e1c1f8e7c1b1e8g8g3e4f6e4d3e4d7f6e4e2d8d5": {
+   "ply": 32,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3e5",
+     "san": "Ne5"
+    }
+   ],
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3d1d3e7e6c1f4g8f6e1c1f8e7c1b1e8g8g3e4f6e4d3e4d7f6e4e2d8d5f3e5": {
+   "ply": 33,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d5e4",
+     "san": "Qe4",
+     "idea": "Offer the queen trade on e4."
+    }
+   ],
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3d1d3e7e6c1f4g8f6e1c1f8e7c1b1e8g8g3e4f6e4d3e4d7f6e4e2d8d5f3e5d5e4": {
+   "ply": 34,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e2e4",
+     "san": "Qxe4"
+    }
+   ],
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3d1d3e7e6c1f4g8f6e1c1f8e7c1b1e8g8g3e4f6e4d3e4d7f6e4e2d8d5f3e5d5e4e2e4": {
+   "ply": 35,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6e4",
+     "san": "Nxe4",
+     "idea": "Recapture with the knight. The endgame is fine for you."
+    }
+   ],
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3d1d3e7e6c1f4g8f6e1c1f8e7c1b1e8g8g3e4f6e4d3e4d7f6e4e2d8d5f3e5d5e4e2e4f6e4": {
+   "ply": 36,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h1e1",
+     "san": "Rhe1"
+    }
+   ],
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3d1d3e7e6c1f4g8f6e1c1f8e7c1b1e8g8g3e4f6e4d3e4d7f6e4e2d8d5f3e5d5e4e2e4f6e4h1e1": {
+   "ply": 37,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e4f6",
+     "san": "Nf6",
+     "idea": "Retreat, hitting the h5 pawn."
+    }
+   ],
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3d1d3e7e6c1f4g8f6e1c1f8e7c1b1e8g8g3e4f6e4d3e4d7f6e4e2d8d5f3e5d5e4e2e4f6e4h1e1e4f6": {
+   "ply": 38,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g2g4",
+     "san": "g4"
+    }
+   ],
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3d1d3e7e6c1f4g8f6e1c1f8e7c1b1e8g8g3e4f6e4d3e4d7f6e4e2d8d5f3e5d5e4e2e4f6e4h1e1e4f6g2g4": {
+   "ply": 39,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8d8",
+     "san": "Rfd8",
+     "idea": "The rook takes the d-file, pressing on d4."
+    }
+   ],
+   "eco": "B19",
+   "name": "Caro-Kann Defense: Classical Variation, Spassky Variation"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4c8f5e4g3f5g6h2h4h7h6g1f3b8d7h4h5g6h7f1d3h7d3d1d3e7e6c1f4g8f6e1c1f8e7c1b1e8g8g3e4f6e4d3e4d7f6e4e2d8d5f3e5d5e4e2e4f6e4h1e1e4f6g2g4f8d8": {
+   "ply": 40,
    "turn": "w",
    "mine": false,
    "replies": [],
@@ -855,6 +1098,87 @@
    "ply": 24,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "a1e1",
+     "san": "Rae1"
+    }
+   ],
+   "eco": "B13",
+   "name": "Caro-Kann Defense: Exchange Variation, Rubinstein Variation"
+  },
+  "e2e4c7c6d2d4d7d5e4d5c6d5f1d3b8c6c2c3g8f6c1f4c8g4d1b3d8d7b1d2e7e6g1f3g4f3d2f3f8d6f4d6d7d6e1g1e8g8a1e1": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d6c7",
+     "san": "Qc7",
+     "idea": "Line up the queen against h2."
+    }
+   ],
+   "eco": "B13",
+   "name": "Caro-Kann Defense: Exchange Variation, Rubinstein Variation"
+  },
+  "e2e4c7c6d2d4d7d5e4d5c6d5f1d3b8c6c2c3g8f6c1f4c8g4d1b3d8d7b1d2e7e6g1f3g4f3d2f3f8d6f4d6d7d6e1g1e8g8a1e1d6c7": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b3c2",
+     "san": "Qc2"
+    }
+   ],
+   "eco": "B13",
+   "name": "Caro-Kann Defense: Exchange Variation, Rubinstein Variation"
+  },
+  "e2e4c7c6d2d4d7d5e4d5c6d5f1d3b8c6c2c3g8f6c1f4c8g4d1b3d8d7b1d2e7e6g1f3g4f3d2f3f8d6f4d6d7d6e1g1e8g8a1e1d6c7b3c2": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g7g6",
+     "san": "g6",
+     "idea": "Keep the queen out of h7 and prepare ...Rab8."
+    }
+   ],
+   "eco": "B13",
+   "name": "Caro-Kann Defense: Exchange Variation, Rubinstein Variation"
+  },
+  "e2e4c7c6d2d4d7d5e4d5c6d5f1d3b8c6c2c3g8f6c1f4c8g4d1b3d8d7b1d2e7e6g1f3g4f3d2f3f8d6f4d6d7d6e1g1e8g8a1e1d6c7b3c2g7g6": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c2d2",
+     "san": "Qd2"
+    }
+   ],
+   "eco": "B13",
+   "name": "Caro-Kann Defense: Exchange Variation, Rubinstein Variation"
+  },
+  "e2e4c7c6d2d4d7d5e4d5c6d5f1d3b8c6c2c3g8f6c1f4c8g4d1b3d8d7b1d2e7e6g1f3g4f3d2f3f8d6f4d6d7d6e1g1e8g8a1e1d6c7b3c2g7g6c2d2": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g8g7",
+     "san": "Kg7",
+     "idea": "Tuck the king away on g7."
+    }
+   ],
+   "eco": "B13",
+   "name": "Caro-Kann Defense: Exchange Variation, Rubinstein Variation"
+  },
+  "e2e4c7c6d2d4d7d5e4d5c6d5f1d3b8c6c2c3g8f6c1f4c8g4d1b3d8d7b1d2e7e6g1f3g4f3d2f3f8d6f4d6d7d6e1g1e8g8a1e1d6c7b3c2g7g6c2d2g8g7": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "B13",
@@ -1067,6 +1391,100 @@
    "ply": 22,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "d1d3",
+     "san": "Qd3"
+    }
+   ],
+   "eco": "B14",
+   "name": "Caro-Kann Defense: Panov Attack"
+  },
+  "e2e4c7c6d2d4d7d5e4d5c6d5c2c4g8f6b1c3e7e6g1f3f8e7c4d5f6d5f1d3b8c6e1g1e8g8f1e1e7f6d3e4c6e7d1d3": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g7g6",
+     "san": "g6",
+     "idea": "Take f5 and h5 away from White's pieces."
+    }
+   ],
+   "eco": "B14",
+   "name": "Caro-Kann Defense: Panov Attack"
+  },
+  "e2e4c7c6d2d4d7d5e4d5c6d5c2c4g8f6b1c3e7e6g1f3f8e7c4d5f6d5f1d3b8c6e1g1e8g8f1e1e7f6d3e4c6e7d1d3g7g6": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1h6",
+     "san": "Bh6"
+    }
+   ],
+   "eco": "B14",
+   "name": "Caro-Kann Defense: Panov Attack"
+  },
+  "e2e4c7c6d2d4d7d5e4d5c6d5c2c4g8f6b1c3e7e6g1f3f8e7c4d5f6d5f1d3b8c6e1g1e8g8f1e1e7f6d3e4c6e7d1d3g7g6c1h6": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6g7",
+     "san": "Bg7",
+     "idea": "Offer the bishop trade to take the sting out of Bh6."
+    }
+   ],
+   "eco": "B14",
+   "name": "Caro-Kann Defense: Panov Attack"
+  },
+  "e2e4c7c6d2d4d7d5e4d5c6d5c2c4g8f6b1c3e7e6g1f3f8e7c4d5f6d5f1d3b8c6e1g1e8g8f1e1e7f6d3e4c6e7d1d3g7g6c1h6f6g7": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h6g7",
+     "san": "Bxg7"
+    }
+   ],
+   "eco": "B14",
+   "name": "Caro-Kann Defense: Panov Attack"
+  },
+  "e2e4c7c6d2d4d7d5e4d5c6d5c2c4g8f6b1c3e7e6g1f3f8e7c4d5f6d5f1d3b8c6e1g1e8g8f1e1e7f6d3e4c6e7d1d3g7g6c1h6f6g7h6g7": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g8g7",
+     "san": "Kxg7",
+     "idea": "Take back with the king. Your dark squares are covered."
+    }
+   ],
+   "eco": "B14",
+   "name": "Caro-Kann Defense: Panov Attack"
+  },
+  "e2e4c7c6d2d4d7d5e4d5c6d5c2c4g8f6b1c3e7e6g1f3f8e7c4d5f6d5f1d3b8c6e1g1e8g8f1e1e7f6d3e4c6e7d1d3g7g6c1h6f6g7h6g7g8g7": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a1c1",
+     "san": "Rac1"
+    }
+   ],
+   "eco": "B14",
+   "name": "Caro-Kann Defense: Panov Attack"
+  },
+  "e2e4c7c6d2d4d7d5e4d5c6d5c2c4g8f6b1c3e7e6g1f3f8e7c4d5f6d5f1d3b8c6e1g1e8g8f1e1e7f6d3e4c6e7d1d3g7g6c1h6f6g7h6g7g8g7a1c1": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "B14",
@@ -1238,6 +1656,168 @@
    "ply": 20,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "e4e2",
+     "san": "Qe2"
+    }
+   ],
+   "eco": "B17",
+   "name": "Caro-Kann Defense: Karpov Variation, Modern Main Line"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5g8f6f1d3e7e6g1f3f8d6d1e2h7h6g5e4f6e4e2e4d7f6e4e2": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8c7",
+     "san": "Qc7",
+     "idea": "The queen takes c7, eyeing h2 and f4."
+    }
+   ],
+   "eco": "B17",
+   "name": "Caro-Kann Defense: Karpov Variation, Modern Main Line"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5g8f6f1d3e7e6g1f3f8d6d1e2h7h6g5e4f6e4e2e4d7f6e4e2d8c7": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1d2",
+     "san": "Bd2"
+    }
+   ],
+   "eco": "B17",
+   "name": "Caro-Kann Defense: Karpov Variation, Modern Main Line"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5g8f6f1d3e7e6g1f3f8d6d1e2h7h6g5e4f6e4e2e4d7f6e4e2d8c7c1d2": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b7b6",
+     "san": "b6",
+     "idea": "Prepare ...Bb7 and ...c5."
+    }
+   ],
+   "eco": "B17",
+   "name": "Caro-Kann Defense: Karpov Variation, Modern Main Line"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5g8f6f1d3e7e6g1f3f8d6d1e2h7h6g5e4f6e4e2e4d7f6e4e2d8c7c1d2b7b6": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1c1",
+     "san": "O-O-O"
+    }
+   ],
+   "eco": "B17",
+   "name": "Caro-Kann Defense: Karpov Variation, Modern Main Line"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5g8f6f1d3e7e6g1f3f8d6d1e2h7h6g5e4f6e4e2e4d7f6e4e2d8c7c1d2b7b6e1c1": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8b7",
+     "san": "Bb7",
+     "idea": "The bishop takes the long diagonal."
+    }
+   ],
+   "eco": "B17",
+   "name": "Caro-Kann Defense: Karpov Variation, Modern Main Line"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5g8f6f1d3e7e6g1f3f8d6d1e2h7h6g5e4f6e4e2e4d7f6e4e2d8c7c1d2b7b6e1c1c8b7": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3e5",
+     "san": "Ne5"
+    }
+   ],
+   "eco": "B17",
+   "name": "Caro-Kann Defense: Karpov Variation, Modern Main Line"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5g8f6f1d3e7e6g1f3f8d6d1e2h7h6g5e4f6e4e2e4d7f6e4e2d8c7c1d2b7b6e1c1c8b7f3e5": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8c8",
+     "san": "O-O-O",
+     "idea": "Castle long. The kingside pawns stay safe from a storm."
+    }
+   ],
+   "eco": "B17",
+   "name": "Caro-Kann Defense: Karpov Variation, Modern Main Line"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5g8f6f1d3e7e6g1f3f8d6d1e2h7h6g5e4f6e4e2e4d7f6e4e2d8c7c1d2b7b6e1c1c8b7f3e5e8c8": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f2f4",
+     "san": "f4"
+    }
+   ],
+   "eco": "B17",
+   "name": "Caro-Kann Defense: Karpov Variation, Modern Main Line"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5g8f6f1d3e7e6g1f3f8d6d1e2h7h6g5e4f6e4e2e4d7f6e4e2d8c7c1d2b7b6e1c1c8b7f3e5e8c8f2f4": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8b8",
+     "san": "Kb8",
+     "idea": "Tuck the king into the corner."
+    }
+   ],
+   "eco": "B17",
+   "name": "Caro-Kann Defense: Karpov Variation, Modern Main Line"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5g8f6f1d3e7e6g1f3f8d6d1e2h7h6g5e4f6e4e2e4d7f6e4e2d8c7c1d2b7b6e1c1c8b7f3e5e8c8f2f4c8b8": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1b1",
+     "san": "Kb1"
+    }
+   ],
+   "eco": "B17",
+   "name": "Caro-Kann Defense: Karpov Variation, Modern Main Line"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5g8f6f1d3e7e6g1f3f8d6d1e2h7h6g5e4f6e4e2e4d7f6e4e2d8c7c1d2b7b6e1c1c8b7f3e5e8c8f2f4c8b8c1b1": {
+   "ply": 31,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c6c5",
+     "san": "c5",
+     "idea": "Strike at d4. The centre opens on your terms."
+    }
+   ],
+   "eco": "B17",
+   "name": "Caro-Kann Defense: Karpov Variation, Modern Main Line"
+  },
+  "e2e4c7c6d2d4d7d5b1c3d5e4c3e4b8d7e4g5g8f6f1d3e7e6g1f3f8d6d1e2h7h6g5e4f6e4e2e4d7f6e4e2d8c7c1d2b7b6e1c1c8b7f3e5e8c8f2f4c8b8c1b1c6c5": {
+   "ply": 32,
+   "turn": "w",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "B17",
@@ -1355,6 +1935,100 @@
    "ply": 18,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "g2g4",
+     "san": "g4"
+    }
+   ],
+   "eco": "B12",
+   "name": "Caro-Kann Defense: Advance Variation, Short Variation"
+  },
+  "e2e4c7c6d2d4d7d5e4e5c8f5g1f3e7e6f1e2b8d7e1g1f5g6b1d2g8h6d2b3h6f5c1d2f8e7g2g4": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f5h4",
+     "san": "Nh4",
+     "idea": "The knight jumps to h4 to trade off White's f3 knight."
+    }
+   ],
+   "eco": "B12",
+   "name": "Caro-Kann Defense: Advance Variation, Short Variation"
+  },
+  "e2e4c7c6d2d4d7d5e4e5c8f5g1f3e7e6f1e2b8d7e1g1f5g6b1d2g8h6d2b3h6f5c1d2f8e7g2g4f5h4": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3h4",
+     "san": "Nxh4"
+    }
+   ],
+   "eco": "B12",
+   "name": "Caro-Kann Defense: Advance Variation, Short Variation"
+  },
+  "e2e4c7c6d2d4d7d5e4e5c8f5g1f3e7e6f1e2b8d7e1g1f5g6b1d2g8h6d2b3h6f5c1d2f8e7g2g4f5h4f3h4": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e7h4",
+     "san": "Bxh4",
+     "idea": "Recapture. The bishop eyes f2 from h4."
+    }
+   ],
+   "eco": "B12",
+   "name": "Caro-Kann Defense: Advance Variation, Short Variation"
+  },
+  "e2e4c7c6d2d4d7d5e4e5c8f5g1f3e7e6f1e2b8d7e1g1f5g6b1d2g8h6d2b3h6f5c1d2f8e7g2g4f5h4f3h4e7h4": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f2f4",
+     "san": "f4"
+    }
+   ],
+   "eco": "B12",
+   "name": "Caro-Kann Defense: Advance Variation, Short Variation"
+  },
+  "e2e4c7c6d2d4d7d5e4e5c8f5g1f3e7e6f1e2b8d7e1g1f5g6b1d2g8h6d2b3h6f5c1d2f8e7g2g4f5h4f3h4e7h4f2f4": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f7f5",
+     "san": "f5",
+     "idea": "Stop f5 and hit the g4 pawn."
+    }
+   ],
+   "eco": "B12",
+   "name": "Caro-Kann Defense: Advance Variation, Short Variation"
+  },
+  "e2e4c7c6d2d4d7d5e4e5c8f5g1f3e7e6f1e2b8d7e1g1f5g6b1d2g8h6d2b3h6f5c1d2f8e7g2g4f5h4f3h4e7h4f2f4f7f5": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e5f6",
+     "san": "exf6"
+    }
+   ],
+   "eco": "B12",
+   "name": "Caro-Kann Defense: Advance Variation, Short Variation"
+  },
+  "e2e4c7c6d2d4d7d5e4e5c8f5g1f3e7e6f1e2b8d7e1g1f5g6b1d2g8h6d2b3h6f5c1d2f8e7g2g4f5h4f3h4e7h4f2f4f7f5e5f6": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "B12",

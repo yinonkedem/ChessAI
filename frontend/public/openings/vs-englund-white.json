@@ -1,0 +1,732 @@
+{
+ "id": "vs-englund-white",
+ "title": "Beating the Englund",
+ "family": "1. d4 e5",
+ "blurb": "Take the pawn, and after ...Qxb2 play Nc3, not Bc3. That's the whole secret.",
+ "side": "w",
+ "difficulty": 1,
+ "lines": [
+  {
+   "id": "ven-nc3",
+   "label": "4.Bf4 Qb4+ 5.Bd2 Qxb2 6.Nc3!",
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line",
+   "path": "d2d4e7e5d4e5b8c6g1f3d8e7c1f4e7b4f4d2b4b2b1c3f8b4a1b1b2a3c3d5b4a5e2e4g8e7f1e2",
+   "plies": 19
+  },
+  {
+   "id": "ven-4nc3",
+   "label": "4.Nc3",
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line",
+   "path": "d2d4e7e5d4e5b8c6g1f3d8e7b1c3c6e5c3d5e5f3g2f3e7d8c1f4d7d6d1d2g8f6f4g5f8e7d5e7d8e7e1c1c8e6",
+   "plies": 22
+  },
+  {
+   "id": "ven-d6",
+   "label": "vs 3...d6",
+   "eco": "A40",
+   "name": "Englund Gambit",
+   "path": "d2d4e7e5d4e5b8c6g1f3d7d6e5d6f8d6b1c3g8f6c1g5c8e6e2e3d8e7f1b5e8c8b5c6b7c6d1e2c8b7e1g1",
+   "plies": 21
+  }
+ ],
+ "nodes": {
+  "": {
+   "ply": 0,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4",
+     "idea": "Take the centre."
+    }
+   ]
+  },
+  "d2d4": {
+   "ply": 1,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7e5",
+     "san": "e5"
+    }
+   ],
+   "eco": "A40",
+   "name": "Queen's Pawn Game"
+  },
+  "d2d4e7e5": {
+   "ply": 2,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d4e5",
+     "san": "dxe5",
+     "idea": "Take the pawn. It's free."
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit"
+  },
+  "d2d4e7e5d4e5": {
+   "ply": 3,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6"
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit"
+  },
+  "d2d4e7e5d4e5b8c6": {
+   "ply": 4,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3",
+     "idea": "Develop and protect e5."
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit"
+  },
+  "d2d4e7e5d4e5b8c6g1f3": {
+   "ply": 5,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8e7",
+     "san": "Qe7"
+    },
+    {
+     "uci": "d7d6",
+     "san": "d6"
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7": {
+   "ply": 6,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1f4",
+     "san": "Bf4",
+     "idea": "Protect e5 again."
+    },
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "Develop and let the pawn go. You'll gain time on the queen."
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7c1f4": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7b4",
+     "san": "Qb4+"
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7c1f4e7b4": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f4d2",
+     "san": "Bd2",
+     "idea": "Block the check."
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7c1f4e7b4f4d2": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b4b2",
+     "san": "Qxb2"
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7c1f4e7b4f4d2b4b2": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "The right move. Not 6.Bc3??, which runs into ...Bb4 and ...Qc1 mate."
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7c1f4e7b4f4d2b4b2b1c3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8b4",
+     "san": "Bb4"
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7c1f4e7b4f4d2b4b2b1c3f8b4": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a1b1",
+     "san": "Rb1",
+     "idea": "Kick the queen."
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7c1f4e7b4f4d2b4b2b1c3f8b4a1b1": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b2a3",
+     "san": "Qa3"
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7c1f4e7b4f4d2b4b2b1c3f8b4a1b1b2a3": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c3d5",
+     "san": "Nd5",
+     "idea": "Hit c7 and b4."
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7c1f4e7b4f4d2b4b2b1c3f8b4a1b1b2a3c3d5": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b4a5",
+     "san": "Ba5"
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7c1f4e7b4f4d2b4b2b1c3f8b4a1b1b2a3c3d5b4a5": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e2e4",
+     "san": "e4",
+     "idea": "Open the f1 bishop. You're well ahead in development."
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7c1f4e7b4f4d2b4b2b1c3f8b4a1b1b2a3c3d5b4a5e2e4": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8e7",
+     "san": "Nge7"
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7c1f4e7b4f4d2b4b2b1c3f8b4a1b1b2a3c3d5b4a5e2e4g8e7": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1e2",
+     "san": "Be2",
+     "idea": "Develop calmly and get ready to castle. You're far ahead."
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7c1f4e7b4f4d2b4b2b1c3f8b4a1b1b2a3c3d5b4a5e2e4g8e7f1e2": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7b1c3": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c6e5",
+     "san": "Nxe5"
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7b1c3c6e5": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c3d5",
+     "san": "Nd5",
+     "idea": "Kick the queen and hit c7."
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7b1c3c6e5c3d5": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e5f3",
+     "san": "Nxf3+"
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7b1c3c6e5c3d5e5f3": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g2f3",
+     "san": "gxf3",
+     "idea": "Recapture. The g-file opens for your rook."
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7b1c3c6e5c3d5e5f3g2f3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7d8",
+     "san": "Qd8"
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7b1c3c6e5c3d5e5f3g2f3e7d8": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1f4",
+     "san": "Bf4",
+     "idea": "Develop toward c7."
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7b1c3c6e5c3d5e5f3g2f3e7d8c1f4": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6"
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7b1c3c6e5c3d5e5f3g2f3e7d8c1f4d7d6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1d2",
+     "san": "Qd2",
+     "idea": "Connect, and get ready to castle long. Black is badly behind in development."
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7b1c3c6e5c3d5e5f3g2f3e7d8c1f4d7d6d1d2": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7b1c3c6e5c3d5e5f3g2f3e7d8c1f4d7d6d1d2g8f6": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f4g5",
+     "san": "Bg5",
+     "idea": "Pin the f6 knight."
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7b1c3c6e5c3d5e5f3g2f3e7d8c1f4d7d6d1d2g8f6f4g5": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8e7",
+     "san": "Be7"
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7b1c3c6e5c3d5e5f3g2f3e7d8c1f4d7d6d1d2g8f6f4g5f8e7": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d5e7",
+     "san": "Nxe7",
+     "idea": "Take the bishop."
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7b1c3c6e5c3d5e5f3g2f3e7d8c1f4d7d6d1d2g8f6f4g5f8e7d5e7": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8e7",
+     "san": "Qxe7"
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7b1c3c6e5c3d5e5f3g2f3e7d8c1f4d7d6d1d2g8f6f4g5f8e7d5e7d8e7": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1c1",
+     "san": "O-O-O",
+     "idea": "Castle long."
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7b1c3c6e5c3d5e5f3g2f3e7d8c1f4d7d6d1d2g8f6f4g5f8e7d5e7d8e7e1c1": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8e6",
+     "san": "Be6"
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d8e7b1c3c6e5c3d5e5f3g2f3e7d8c1f4d7d6d1d2g8f6f4g5f8e7d5e7d8e7e1c1c8e6": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [],
+   "end": true,
+   "eco": "A40",
+   "name": "Englund Gambit: Main Line"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d7d6": {
+   "ply": 6,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e5d6",
+     "san": "exd6",
+     "idea": "Take. You're a clean pawn up."
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d7d6e5d6": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8d6",
+     "san": "Bxd6"
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d7d6e5d6f8d6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "Develop."
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d7d6e5d6f8d6b1c3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d7d6e5d6f8d6b1c3g8f6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1g5",
+     "san": "Bg5",
+     "idea": "Pin the knight."
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d7d6e5d6f8d6b1c3g8f6c1g5": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8e6",
+     "san": "Be6"
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d7d6e5d6f8d6b1c3g8f6c1g5c8e6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e2e3",
+     "san": "e3",
+     "idea": "Develop. Black has some activity but no real compensation."
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d7d6e5d6f8d6b1c3g8f6c1g5c8e6e2e3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8e7",
+     "san": "Qe7"
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d7d6e5d6f8d6b1c3g8f6c1g5c8e6e2e3d8e7": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1b5",
+     "san": "Bb5",
+     "idea": "Pin the c6 knight."
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d7d6e5d6f8d6b1c3g8f6c1g5c8e6e2e3d8e7f1b5": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8c8",
+     "san": "O-O-O"
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d7d6e5d6f8d6b1c3g8f6c1g5c8e6e2e3d8e7f1b5e8c8": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b5c6",
+     "san": "Bxc6",
+     "idea": "Take on c6, doubling Black's pawns."
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d7d6e5d6f8d6b1c3g8f6c1g5c8e6e2e3d8e7f1b5e8c8b5c6": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b7c6",
+     "san": "bxc6"
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d7d6e5d6f8d6b1c3g8f6c1g5c8e6e2e3d8e7f1b5e8c8b5c6b7c6": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1e2",
+     "san": "Qe2",
+     "idea": "Develop the queen and prepare to castle."
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d7d6e5d6f8d6b1c3g8f6c1g5c8e6e2e3d8e7f1b5e8c8b5c6b7c6d1e2": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8b7",
+     "san": "Kb7"
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d7d6e5d6f8d6b1c3g8f6c1g5c8e6e2e3d8e7f1b5e8c8b5c6b7c6d1e2c8b7": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle."
+    }
+   ],
+   "eco": "A40",
+   "name": "Englund Gambit"
+  },
+  "d2d4e7e5d4e5b8c6g1f3d7d6e5d6f8d6b1c3g8f6c1g5c8e6e2e3d8e7f1b5e8c8b5c6b7c6d1e2c8b7e1g1": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "A40",
+   "name": "Englund Gambit"
+  }
+ }
+}

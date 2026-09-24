@@ -71,6 +71,42 @@ alone costs about a pawn by engine standards). Needs `stockfish` on `PATH` or
 `$STOCKFISH_BIN`. Opponent moves aren't graded: a dubious opponent move is still
 worth teaching the answer to.
 
+### Deepening lines from real games
+
+```bash
+backend/venv/bin/python tools/extend_lines.py --out /tmp/proposals.json                  # master games
+backend/venv/bin/python tools/extend_lines.py --db lichess --min-games 100 --max-plies 30 --out /tmp/p2.json
+```
+
+Extends each line from its last position by following the **most-played move**
+in the Lichess opening explorer, for both sides, until the position has fewer
+than `--min-games` games or the line reaches `--max-plies`. `masters` (OTB 2200+)
+is the default and is what "theory" means; `lichess` (2000+ online) fills in
+lines masters rarely reach, such as the King's Gambit or the traps. Every
+learner move is graded by Stockfish as it goes: if the most-played move fails,
+the next most-played one that passes is used, and if none does, the extension
+stops. Popular isn't the same as good.
+
+It only **proposes** — a JSON of extended move lists plus engine context for
+each new learner move. Ideas are still written by hand, and the build still
+refuses a learner move without one. Also worth doing by hand: read where each
+extension *ends*. A line where every move passes can still drift into a bad
+position for the learner; trim those rather than teach them.
+
+Needs `LICHESS_TOKEN` in `backend/.env` (a token with **no scopes**, from
+lichess.org/account/oauth/token). Responses are cached in
+`tools/.explorer-cache.json` (gitignored). Lines with `"noExtend": true` —
+traps, which end on their point — are skipped.
+
+### Attack / defence pairs
+
+A repertoire can set `"category": "attack"` or `"defence"` plus
+`"counterpart": "<id>"`. The build requires the pair to link both ways, from
+opposite colours, and the Learn page shows them together under
+*Attacks & traps*. Trap lines put the opponent's mistake in the book as an
+opponent move, so the learner practises punishing it; they're labelled
+`Trap: ...` with `labelOk`.
+
 ### Naming, and why it is position-based
 
 Each line's ECO code and name come from the **deepest position in the line that

@@ -193,6 +193,44 @@ Self-play + MCTS training loop in `AlphaZero/alphaZero.py`. The ResNet model is 
 
 ## Audit & refactor — session log
 
+### Attacks & traps, and master-game depth (2026-09-24)
+
+**35 repertoires, 164 lines, 1,639 positions** (from 19 / 93 / 742).
+
+**16 new repertoires in attack/defence pairs.** Attacks: Fried Liver, Danish, Smith-Morra, Vienna
+Gambit (White); Stafford, Traxler, Budapest, Englund (Black). Each has a matching defence repertoire
+for the other colour. Trap lines put the beginner's losing reply in the book as the *opponent's*
+move, so the learner drills the punishment: the Kieninger trap, the Englund's ...Qc1#, the
+Stafford's 6.Bg5?? Nxe4!, the Siberian trap, and others. `category` and `counterpart` go through the
+build into `index.json`, and the build checks the links are two-way and from opposite colours. The
+Learn page gains an **Attacks & traps** filter (each attack followed by its defence, with a link
+between them), and the home page lists the pairs.
+
+**Honesty about unsound gambits.** The Stafford and Englund cost over a pawn by engine standards;
+their repertoires carry `engineSlackCp` and a "when White knows it" line that shows the refutation.
+Stockfish rejected about 20 of my draft moves along the way, including the Stafford's famous
+...h5 (only works if White takes; objectively −5) and 10.h3 in the Smith-Morra, which walks into
+...Nxf2.
+
+**Deeper lines from real games: `tools/extend_lines.py`.** Extends each line along the most-played
+move in the Lichess explorer, grading every learner move with Stockfish (a popular move that fails
+is skipped). Two passes: masters (OTB 2200+), 68 lines and about 700 plies; then Lichess 2000+,
+capped at 30 plies, 63 lines, for tails masters rarely reach. 466 new learner moves, each with a
+hand-written idea. **Five extensions were trimmed or dropped** because every move passed but the
+line *ended* somewhere bad for the learner (e.g. the London Stonewall at −0.9). Needs
+`LICHESS_TOKEN` in `backend/.env` (no scopes). Responses are cached in `tools/.explorer-cache.json`,
+which is gitignored.
+
+**Checkmate in a drill works:** a mating book move ends the line with the idea shown ("Bg4#:
+Checkmate…"), and no game-over popup fires.
+
+**Verified:** build clean, 364 Jest assertions (every tree position legal per the app's arbiter),
+the full Stockfish pass (1,687 learner moves at depth 18; its 10 flags, mostly borderline
+0.7–1.0 pawn losses, were fixed by switching to the engine's move, except the Frankenstein-Dracula's
+5...Nc6, where engines flip between it and ...Be7 with depth, so `vs-vienna-black` carries a 10cp
+allowance), 40 browser drills across 8 of the new repertoires including
+mate lines, and axe at 0 violations on the Learn and home pages in both themes.
+
 ### Drag fix: pieces vanished mid-drag (2026-09-23)
 
 Native HTML5 drag hid the real piece (`display: none`) and relied on the browser's drag *ghost*, a

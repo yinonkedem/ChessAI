@@ -11,32 +11,32 @@
    "label": "Meran Variation",
    "eco": "D47",
    "name": "Semi-Slav Defense: Meran Variation, Wade Variation",
-   "path": "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1a7a6e3e4c6c5",
-   "plies": 20
+   "path": "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1a7a6e3e4c6c5d4d5d8c7d5e6f7e6d3c2f8d6f3g5d7f8f2f4e8c8d1e2h7h6g5f3d6f4e4e5b7f3e2f3f4e5f3a8c8d7",
+   "plies": 40
   },
   {
    "id": "semislav-moscow",
    "label": "Moscow Variation",
    "eco": "D43",
    "name": "Semi-Slav Defense: Moscow Variation",
-   "path": "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5f6d8f6e2e3b8d7f1d3g7g6e1g1f8g7e3e4d5e4",
-   "plies": 20
+   "path": "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5f6d8f6e2e3b8d7f1d3g7g6e1g1f8g7e3e4d5e4c3e4f6e7c4c5e8g8e4d6b7b6",
+   "plies": 26
   },
   {
    "id": "semislav-anti-moscow",
    "label": "Anti-Moscow Gambit",
    "eco": "D43",
    "name": "Semi-Slav Defense: Anti-Moscow Gambit",
-   "path": "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7e1g1b8d7",
-   "plies": 20
+   "path": "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7e1g1b8d7f3e5f8g7e5d7f6d7g3d6a7a6a2a4b5b4d6b4d8b6b4a3b6d4d1c2c6c5a1d1d4e5e2c4e5c7c3e2g7e5",
+   "plies": 40
   },
   {
    "id": "semislav-botvinnik",
    "label": "Botvinnik Variation",
    "eco": "D44",
-   "name": "Semi-Slav Defense: Botvinnik Variation",
-   "path": "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5h6g5h4g5b8d7",
-   "plies": 20
+   "name": "Semi-Slav Defense: Botvinnik Variation, Lilienthal Variation",
+   "path": "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5h6g5h4g5b8d7g2g3c8b7f1g2d8b6e5f6e8c8e1g1c6c5d4d5b5b4c3a4b6b5a2a3d7b8a3b4c5b4d1g4b7d5f1c1b8c6",
+   "plies": 40
   }
  ],
  "nodes": {
@@ -316,6 +316,276 @@
    "ply": 20,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "d4d5",
+     "san": "d5"
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation, Wade Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1a7a6e3e4c6c5d4d5": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8c7",
+     "san": "Qc7",
+     "idea": "The queen takes c7, eyeing h2."
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation, Wade Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1a7a6e3e4c6c5d4d5d8c7": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d5e6",
+     "san": "dxe6"
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation, Wade Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1a7a6e3e4c6c5d4d5d8c7d5e6": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f7e6",
+     "san": "fxe6",
+     "idea": "Recapture toward the centre. The f-file opens."
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation, Wade Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1a7a6e3e4c6c5d4d5d8c7d5e6f7e6": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d3c2",
+     "san": "Bc2"
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation, Wade Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1a7a6e3e4c6c5d4d5d8c7d5e6f7e6d3c2": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8d6",
+     "san": "Bd6",
+     "idea": "Develop, aiming at h2."
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation, Wade Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1a7a6e3e4c6c5d4d5d8c7d5e6f7e6d3c2f8d6": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3g5",
+     "san": "Ng5"
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation, Wade Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1a7a6e3e4c6c5d4d5d8c7d5e6f7e6d3c2f8d6f3g5": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7f8",
+     "san": "Nf8",
+     "idea": "Cover h7 and e6."
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation, Wade Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1a7a6e3e4c6c5d4d5d8c7d5e6f7e6d3c2f8d6f3g5d7f8": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f2f4",
+     "san": "f4"
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation, Wade Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1a7a6e3e4c6c5d4d5d8c7d5e6f7e6d3c2f8d6f3g5d7f8f2f4": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8c8",
+     "san": "O-O-O",
+     "idea": "Castle long, away from White's kingside play."
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation, Wade Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1a7a6e3e4c6c5d4d5d8c7d5e6f7e6d3c2f8d6f3g5d7f8f2f4e8c8": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1e2",
+     "san": "Qe2"
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation, Wade Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1a7a6e3e4c6c5d4d5d8c7d5e6f7e6d3c2f8d6f3g5d7f8f2f4e8c8d1e2": {
+   "ply": 31,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h7h6",
+     "san": "h6",
+     "idea": "Kick the g5 knight."
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation, Wade Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1a7a6e3e4c6c5d4d5d8c7d5e6f7e6d3c2f8d6f3g5d7f8f2f4e8c8d1e2h7h6": {
+   "ply": 32,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g5f3",
+     "san": "Nf3"
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation, Wade Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1a7a6e3e4c6c5d4d5d8c7d5e6f7e6d3c2f8d6f3g5d7f8f2f4e8c8d1e2h7h6g5f3": {
+   "ply": 33,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d6f4",
+     "san": "Bxf4",
+     "idea": "Take the pawn."
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation, Wade Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1a7a6e3e4c6c5d4d5d8c7d5e6f7e6d3c2f8d6f3g5d7f8f2f4e8c8d1e2h7h6g5f3d6f4": {
+   "ply": 34,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4e5",
+     "san": "e5"
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation, Wade Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1a7a6e3e4c6c5d4d5d8c7d5e6f7e6d3c2f8d6f3g5d7f8f2f4e8c8d1e2h7h6g5f3d6f4e4e5": {
+   "ply": 35,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b7f3",
+     "san": "Bxf3",
+     "idea": "Take the knight, hitting the queen."
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation, Wade Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1a7a6e3e4c6c5d4d5d8c7d5e6f7e6d3c2f8d6f3g5d7f8f2f4e8c8d1e2h7h6g5f3d6f4e4e5b7f3": {
+   "ply": 36,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e2f3",
+     "san": "Qxf3"
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation, Wade Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1a7a6e3e4c6c5d4d5d8c7d5e6f7e6d3c2f8d6f3g5d7f8f2f4e8c8d1e2h7h6g5f3d6f4e4e5b7f3e2f3": {
+   "ply": 37,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f4e5",
+     "san": "Bxe5",
+     "idea": "Recapture the e5 pawn."
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation, Wade Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1a7a6e3e4c6c5d4d5d8c7d5e6f7e6d3c2f8d6f3g5d7f8f2f4e8c8d1e2h7h6g5f3d6f4e4e5b7f3e2f3f4e5": {
+   "ply": 38,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3a8",
+     "san": "Qa8+"
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation, Wade Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1a7a6e3e4c6c5d4d5d8c7d5e6f7e6d3c2f8d6f3g5d7f8f2f4e8c8d1e2h7h6g5f3d6f4e4e5b7f3e2f3f4e5f3a8": {
+   "ply": 39,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8d7",
+     "san": "Kd7",
+     "idea": "Step out of check. The king is safe enough on d7."
+    }
+   ],
+   "eco": "D47",
+   "name": "Semi-Slav Defense: Meran Variation, Wade Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6e2e3b8d7f1d3d5c4d3c4b7b5c4d3c8b7e1g1a7a6e3e4c6c5d4d5d8c7d5e6f7e6d3c2f8d6f3g5d7f8f2f4e8c8d1e2h7h6g5f3d6f4e4e5b7f3e2f3f4e5f3a8c8d7": {
+   "ply": 40,
+   "turn": "w",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "D47",
@@ -483,6 +753,87 @@
    "ply": 20,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "c3e4",
+     "san": "Nxe4"
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Moscow Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5f6d8f6e2e3b8d7f1d3g7g6e1g1f8g7e3e4d5e4c3e4": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6e7",
+     "san": "Qe7",
+     "idea": "Step off the diagonal and cover e5 and d6."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Moscow Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5f6d8f6e2e3b8d7f1d3g7g6e1g1f8g7e3e4d5e4c3e4f6e7": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c4c5",
+     "san": "c5"
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Moscow Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5f6d8f6e2e3b8d7f1d3g7g6e1g1f8g7e3e4d5e4c3e4f6e7c4c5": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Moscow Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5f6d8f6e2e3b8d7f1d3g7g6e1g1f8g7e3e4d5e4c3e4f6e7c4c5e8g8": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4d6",
+     "san": "Nd6"
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Moscow Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5f6d8f6e2e3b8d7f1d3g7g6e1g1f8g7e3e4d5e4c3e4f6e7c4c5e8g8e4d6": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b7b6",
+     "san": "b6",
+     "idea": "Challenge c5 and free your queenside."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Moscow Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5f6d8f6e2e3b8d7f1d3g7g6e1g1f8g7e3e4d5e4c3e4f6e7c4c5e8g8e4d6b7b6": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "D43",
@@ -612,6 +963,276 @@
   },
   "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7e1g1b8d7": {
    "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3e5",
+     "san": "Ne5"
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7e1g1b8d7f3e5": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8g7",
+     "san": "Bg7",
+     "idea": "Develop the bishop on the long diagonal."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7e1g1b8d7f3e5f8g7": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e5d7",
+     "san": "Nxd7"
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7e1g1b8d7f3e5f8g7e5d7": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6d7",
+     "san": "Nxd7",
+     "idea": "Recapture."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7e1g1b8d7f3e5f8g7e5d7f6d7": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g3d6",
+     "san": "Bd6"
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7e1g1b8d7f3e5f8g7e5d7f6d7g3d6": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a7a6",
+     "san": "a6",
+     "idea": "Stop Nb5 and support ...b4 or ...c5."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7e1g1b8d7f3e5f8g7e5d7f6d7g3d6a7a6": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a2a4",
+     "san": "a4"
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7e1g1b8d7f3e5f8g7e5d7f6d7g3d6a7a6a2a4": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b5b4",
+     "san": "b4",
+     "idea": "Kick the c3 knight."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7e1g1b8d7f3e5f8g7e5d7f6d7g3d6a7a6a2a4b5b4": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d6b4",
+     "san": "Bxb4"
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7e1g1b8d7f3e5f8g7e5d7f6d7g3d6a7a6a2a4b5b4d6b4": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8b6",
+     "san": "Qb6",
+     "idea": "Hit the bishop and d4."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7e1g1b8d7f3e5f8g7e5d7f6d7g3d6a7a6a2a4b5b4d6b4d8b6": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b4a3",
+     "san": "Ba3"
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7e1g1b8d7f3e5f8g7e5d7f6d7g3d6a7a6a2a4b5b4d6b4d8b6b4a3": {
+   "ply": 31,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b6d4",
+     "san": "Qxd4",
+     "idea": "Take the d4 pawn."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7e1g1b8d7f3e5f8g7e5d7f6d7g3d6a7a6a2a4b5b4d6b4d8b6b4a3b6d4": {
+   "ply": 32,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1c2",
+     "san": "Qc2"
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7e1g1b8d7f3e5f8g7e5d7f6d7g3d6a7a6a2a4b5b4d6b4d8b6b4a3b6d4d1c2": {
+   "ply": 33,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c6c5",
+     "san": "c5",
+     "idea": "Break with ...c5, freeing your position."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7e1g1b8d7f3e5f8g7e5d7f6d7g3d6a7a6a2a4b5b4d6b4d8b6b4a3b6d4d1c2c6c5": {
+   "ply": 34,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a1d1",
+     "san": "Rad1"
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7e1g1b8d7f3e5f8g7e5d7f6d7g3d6a7a6a2a4b5b4d6b4d8b6b4a3b6d4d1c2c6c5a1d1": {
+   "ply": 35,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d4e5",
+     "san": "Qe5",
+     "idea": "Centralise the queen, eyeing h2."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7e1g1b8d7f3e5f8g7e5d7f6d7g3d6a7a6a2a4b5b4d6b4d8b6b4a3b6d4d1c2c6c5a1d1d4e5": {
+   "ply": 36,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e2c4",
+     "san": "Bxc4"
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7e1g1b8d7f3e5f8g7e5d7f6d7g3d6a7a6a2a4b5b4d6b4d8b6b4a3b6d4d1c2c6c5a1d1d4e5e2c4": {
+   "ply": 37,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e5c7",
+     "san": "Qc7",
+     "idea": "Back to c7, lined up against h2."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7e1g1b8d7f3e5f8g7e5d7f6d7g3d6a7a6a2a4b5b4d6b4d8b6b4a3b6d4d1c2c6c5a1d1d4e5e2c4e5c7": {
+   "ply": 38,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c3e2",
+     "san": "Ne2"
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7e1g1b8d7f3e5f8g7e5d7f6d7g3d6a7a6a2a4b5b4d6b4d8b6b4a3b6d4d1c2c6c5a1d1d4e5e2c4e5c7c3e2": {
+   "ply": 39,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g7e5",
+     "san": "Be5",
+     "idea": "The bishop aims at h2 and b2."
+    }
+   ],
+   "eco": "D43",
+   "name": "Semi-Slav Defense: Anti-Moscow Gambit"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5h7h6g5h4d5c4e2e4g7g5h4g3b7b5f1e2c8b7e1g1b8d7f3e5f8g7e5d7f6d7g3d6a7a6a2a4b5b4d6b4d8b6b4a3b6d4d1c2c6c5a1d1d4e5e2c4e5c7c3e2g7e5": {
+   "ply": 40,
    "turn": "w",
    "mine": false,
    "replies": [],
@@ -758,10 +1379,280 @@
    "ply": 20,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "g2g3",
+     "san": "g3"
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5h6g5h4g5b8d7g2g3": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8b7",
+     "san": "Bb7",
+     "idea": "Develop the bishop on the long diagonal."
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation, Lilienthal Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5h6g5h4g5b8d7g2g3c8b7": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1g2",
+     "san": "Bg2"
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation, Lilienthal Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5h6g5h4g5b8d7g2g3c8b7f1g2": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8b6",
+     "san": "Qb6",
+     "idea": "The queen hits d4."
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation, Lilienthal Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5h6g5h4g5b8d7g2g3c8b7f1g2d8b6": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e5f6",
+     "san": "exf6"
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation, Lilienthal Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5h6g5h4g5b8d7g2g3c8b7f1g2d8b6e5f6": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8c8",
+     "san": "O-O-O",
+     "idea": "Castle long. Your king is safest on the queenside."
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation, Lilienthal Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5h6g5h4g5b8d7g2g3c8b7f1g2d8b6e5f6e8c8": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O"
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation, Lilienthal Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5h6g5h4g5b8d7g2g3c8b7f1g2d8b6e5f6e8c8e1g1": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c6c5",
+     "san": "c5",
+     "idea": "Strike at d4."
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation, Lilienthal Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5h6g5h4g5b8d7g2g3c8b7f1g2d8b6e5f6e8c8e1g1c6c5": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4d5",
+     "san": "d5"
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation, Lilienthal Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5h6g5h4g5b8d7g2g3c8b7f1g2d8b6e5f6e8c8e1g1c6c5d4d5": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b5b4",
+     "san": "b4",
+     "idea": "Kick the c3 knight."
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation, Lilienthal Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5h6g5h4g5b8d7g2g3c8b7f1g2d8b6e5f6e8c8e1g1c6c5d4d5b5b4": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c3a4",
+     "san": "Na4"
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation, Lilienthal Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5h6g5h4g5b8d7g2g3c8b7f1g2d8b6e5f6e8c8e1g1c6c5d4d5b5b4c3a4": {
+   "ply": 31,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b6b5",
+     "san": "Qb5",
+     "idea": "Hit the a4 knight."
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation, Lilienthal Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5h6g5h4g5b8d7g2g3c8b7f1g2d8b6e5f6e8c8e1g1c6c5d4d5b5b4c3a4b6b5": {
+   "ply": 32,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a2a3",
+     "san": "a3"
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation, Lilienthal Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5h6g5h4g5b8d7g2g3c8b7f1g2d8b6e5f6e8c8e1g1c6c5d4d5b5b4c3a4b6b5a2a3": {
+   "ply": 33,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7b8",
+     "san": "Nb8",
+     "idea": "Reroute the knight to c6."
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation, Lilienthal Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5h6g5h4g5b8d7g2g3c8b7f1g2d8b6e5f6e8c8e1g1c6c5d4d5b5b4c3a4b6b5a2a3d7b8": {
+   "ply": 34,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a3b4",
+     "san": "axb4"
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation, Lilienthal Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5h6g5h4g5b8d7g2g3c8b7f1g2d8b6e5f6e8c8e1g1c6c5d4d5b5b4c3a4b6b5a2a3d7b8a3b4": {
+   "ply": 35,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c5b4",
+     "san": "cxb4",
+     "idea": "Recapture."
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation, Lilienthal Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5h6g5h4g5b8d7g2g3c8b7f1g2d8b6e5f6e8c8e1g1c6c5d4d5b5b4c3a4b6b5a2a3d7b8a3b4c5b4": {
+   "ply": 36,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1g4",
+     "san": "Qg4"
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation, Lilienthal Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5h6g5h4g5b8d7g2g3c8b7f1g2d8b6e5f6e8c8e1g1c6c5d4d5b5b4c3a4b6b5a2a3d7b8a3b4c5b4d1g4": {
+   "ply": 37,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b7d5",
+     "san": "Bxd5",
+     "idea": "Take the d5 pawn, hitting g2."
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation, Lilienthal Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5h6g5h4g5b8d7g2g3c8b7f1g2d8b6e5f6e8c8e1g1c6c5d4d5b5b4c3a4b6b5a2a3d7b8a3b4c5b4d1g4b7d5": {
+   "ply": 38,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1c1",
+     "san": "Rfc1"
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation, Lilienthal Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5h6g5h4g5b8d7g2g3c8b7f1g2d8b6e5f6e8c8e1g1c6c5d4d5b5b4c3a4b6b5a2a3d7b8a3b4c5b4d1g4b7d5f1c1": {
+   "ply": 39,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6",
+     "idea": "Develop the knight. You're a piece up, and consolidating."
+    }
+   ],
+   "eco": "D44",
+   "name": "Semi-Slav Defense: Botvinnik Variation, Lilienthal Variation"
+  },
+  "d2d4d7d5c2c4c7c6g1f3g8f6b1c3e7e6c1g5d5c4e2e4b7b5e4e5h7h6g5h4g7g5f3g5h6g5h4g5b8d7g2g3c8b7f1g2d8b6e5f6e8c8e1g1c6c5d4d5b5b4c3a4b6b5a2a3d7b8a3b4c5b4d1g4b7d5f1c1b8c6": {
+   "ply": 40,
+   "turn": "w",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "D44",
-   "name": "Semi-Slav Defense: Botvinnik Variation"
+   "name": "Semi-Slav Defense: Botvinnik Variation, Lilienthal Variation"
   }
  }
 }

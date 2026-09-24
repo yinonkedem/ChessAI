@@ -7,11 +7,18 @@ import { load } from "../trainer/localStore";
 import ProgressRing from "../components/ui/ProgressRing";
 import "./LearnPage.css";
 
-const SIDES = [
-    { key: "all", label: "Everything" },
-    { key: "w", label: "As White" },
-    { key: "b", label: "As Black" },
+const FILTERS = [
+    { key: "all", label: "Everything", test: () => true },
+    { key: "w", label: "As White", test: (r) => r.side === "w" },
+    { key: "b", label: "As Black", test: (r) => r.side === "b" },
+    // Attacks and their matching defences, ordered so each pair is adjacent.
+    { key: "traps", label: "Attacks & traps", test: (r) => !!r.category },
 ];
+
+const CATEGORY = {
+    attack: { chip: "Attack", link: "Learn to defend it" },
+    defence: { chip: "Defence", link: "Learn the attack" },
+};
 
 function Difficulty({ level }) {
     return (
@@ -30,7 +37,7 @@ function Difficulty({ level }) {
 export default function LearnPage() {
     const [index, setIndex] = useState(null);
     const [error, setError] = useState(null);
-    const [side, setSide] = useState("all");
+    const [filter, setFilter] = useState("all");
     const navigate = useNavigate();
 
     // Read once per mount: progress only changes while drilling, and this
@@ -68,10 +75,16 @@ export default function LearnPage() {
         );
     }
 
-    const shown =
-        side === "all"
-            ? index.repertoires
-            : index.repertoires.filter((r) => r.side === side);
+    const active = FILTERS.find((f) => f.key === filter) ?? FILTERS[0];
+    const titles = Object.fromEntries(index.repertoires.map((r) => [r.id, r.title]));
+    let shown = index.repertoires.filter(active.test);
+    if (filter === "traps") {
+        // Each attack immediately followed by the defence against it.
+        const byId = Object.fromEntries(shown.map((r) => [r.id, r]));
+        shown = shown
+            .filter((r) => r.category === "attack")
+            .flatMap((r) => [r, byId[r.counterpart]].filter(Boolean));
+    }
 
     return (
         <main className="page page--learn">
@@ -92,16 +105,16 @@ export default function LearnPage() {
                     )}
                 </header>
 
-                <div className="learn__filters" role="group" aria-label="Filter by colour">
-                    {SIDES.map((s) => (
+                <div className="learn__filters" role="group" aria-label="Filter openings">
+                    {FILTERS.map((f) => (
                         <button
-                            key={s.key}
+                            key={f.key}
                             type="button"
-                            className={`btn btn--sm${side === s.key ? " is-active" : ""}`}
-                            onClick={() => setSide(s.key)}
-                            aria-pressed={side === s.key}
+                            className={`btn btn--sm${filter === f.key ? " is-active" : ""}`}
+                            onClick={() => setFilter(f.key)}
+                            aria-pressed={filter === f.key}
                         >
-                            {s.label}
+                            {f.label}
                         </button>
                     ))}
                 </div>
@@ -115,8 +128,15 @@ export default function LearnPage() {
                                 onClick={() => navigate(`/learn/${r.id}`)}
                             >
                                 <div className="learn-card__top">
-                                    <span className={`chip chip--${r.side === "w" ? "accent" : "primary"}`}>
-                                        {r.side === "w" ? "White" : "Black"}
+                                    <span className="learn-card__chips">
+                                        <span className={`chip chip--${r.side === "w" ? "accent" : "primary"}`}>
+                                            {r.side === "w" ? "White" : "Black"}
+                                        </span>
+                                        {r.category && (
+                                            <span className={`chip learn-card__cat learn-card__cat--${r.category}`}>
+                                                {CATEGORY[r.category].chip}
+                                            </span>
+                                        )}
                                     </span>
                                     <Difficulty level={r.difficulty} />
                                 </div>
@@ -164,6 +184,18 @@ export default function LearnPage() {
                                     onClick={() => navigate(`/learn/${r.id}/review`)}
                                 >
                                     Review {progress[r.id].due} due →
+                                </button>
+                            )}
+
+                            {/* Every attack pairs with the repertoire that
+                                defends against it, and vice versa. */}
+                            {r.counterpart && titles[r.counterpart] && (
+                                <button
+                                    type="button"
+                                    className="btn btn--ghost btn--sm learn-card__pair"
+                                    onClick={() => navigate(`/learn/${r.counterpart}`)}
+                                >
+                                    {CATEGORY[r.category].link}: {titles[r.counterpart]} →
                                 </button>
                             )}
                         </li>

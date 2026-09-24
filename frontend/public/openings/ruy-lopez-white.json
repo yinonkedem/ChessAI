@@ -11,16 +11,16 @@
    "label": "Closed, Morphy Defense",
    "eco": "C99",
    "name": "Ruy Lopez: Closed, Chigorin Defense, Panov System",
-   "path": "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3c6a5b3c2c7c5d2d4d8c7b1d2c5d4c3d4a5c6",
-   "plies": 26
+   "path": "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3c6a5b3c2c7c5d2d4d8c7b1d2c5d4c3d4a5c6d2b3a6a5c1e3a5a4b3d2c8d7a1c1c7b7d1e2f8e8c2d3a8b8d4e5c6e5",
+   "plies": 40
   },
   {
    "id": "ruy-berlin",
    "label": "Berlin Defense",
    "eco": "C67",
    "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense",
-   "path": "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8b1c3d8e8h2h3h7h5c1f4f8e7a1d1c8e6f3g5h8h6f1e1",
-   "plies": 27
+   "path": "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8b1c3d8e8h2h3h7h5c1f4f8e7a1d1c8e6f3g5h8h6f1e1e7b4g2g4h5g4h3g4f5e7g5e6h6e6e1e3e7g6f4g3",
+   "plies": 37
   },
   {
    "id": "ruy-exchange",
@@ -35,24 +35,24 @@
    "label": "Open Variation",
    "eco": "C80",
    "name": "Ruy Lopez: Open, Bernstein Variation",
-   "path": "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6b1d2e4c5c2c3d5d4b3e6c5e6c3d4c6d4a2a4",
-   "plies": 25
+   "path": "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6b1d2e4c5c2c3d5d4b3e6c5e6c3d4c6d4a2a4f8b4a4b5d4b5d1a4c7c5d2c4e8g8c1e3a8b8a4d1d8c8c4d6",
+   "plies": 37
   },
   {
    "id": "ruy-delayed-exchange",
    "label": "Delayed Exchange (Bayreuth)",
    "eco": "C77",
    "name": "Ruy Lopez: Morphy Defense, Bayreuth Variation",
-   "path": "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6a4c6d7c6d2d3f8d6b1d2e8g8d2c4f6d7e1g1",
-   "plies": 17
+   "path": "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6a4c6d7c6d2d3f8d6b1d2e8g8d2c4f6d7e1g1f8e8b2b3",
+   "plies": 19
   },
   {
    "id": "ruy-open-c3",
    "label": "Open Variation, 9.c3",
    "eco": "C82",
    "name": "Ruy Lopez: Open, St. Petersburg Variation",
-   "path": "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6c2c3f8c5b1d2e8g8b3c2f7f5d2b3c5b6f3d4",
-   "plies": 25
+   "path": "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6c2c3f8c5b1d2e8g8b3c2f7f5d2b3c5b6f3d4c6d4b3d4b6d4c3d4f5f4",
+   "plies": 30
   }
  ],
  "nodes": {
@@ -427,6 +427,195 @@
    "ply": 26,
    "turn": "w",
    "mine": true,
+   "replies": [
+    {
+     "uci": "d2b3",
+     "san": "Nb3",
+     "idea": "The knight goes to b3, eyeing a5 and c5."
+    }
+   ],
+   "eco": "C99",
+   "name": "Ruy Lopez: Closed, Chigorin Defense, Panov System"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3c6a5b3c2c7c5d2d4d8c7b1d2c5d4c3d4a5c6d2b3": {
+   "ply": 27,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a6a5",
+     "san": "a5"
+    }
+   ],
+   "eco": "C99",
+   "name": "Ruy Lopez: Closed, Chigorin Defense, Panov System"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3c6a5b3c2c7c5d2d4d8c7b1d2c5d4c3d4a5c6d2b3a6a5": {
+   "ply": 28,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1e3",
+     "san": "Be3",
+     "idea": "Develop and protect d4."
+    }
+   ],
+   "eco": "C99",
+   "name": "Ruy Lopez: Closed, Chigorin Defense, Panov System"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3c6a5b3c2c7c5d2d4d8c7b1d2c5d4c3d4a5c6d2b3a6a5c1e3": {
+   "ply": 29,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a5a4",
+     "san": "a4"
+    }
+   ],
+   "eco": "C99",
+   "name": "Ruy Lopez: Closed, Chigorin Defense, Panov System"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3c6a5b3c2c7c5d2d4d8c7b1d2c5d4c3d4a5c6d2b3a6a5c1e3a5a4": {
+   "ply": 30,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b3d2",
+     "san": "Nbd2",
+     "idea": "Back to d2. After ...a4, b3 is no longer a good square for the knight."
+    }
+   ],
+   "eco": "C99",
+   "name": "Ruy Lopez: Closed, Chigorin Defense, Panov System"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3c6a5b3c2c7c5d2d4d8c7b1d2c5d4c3d4a5c6d2b3a6a5c1e3a5a4b3d2": {
+   "ply": 31,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8d7",
+     "san": "Bd7"
+    }
+   ],
+   "eco": "C99",
+   "name": "Ruy Lopez: Closed, Chigorin Defense, Panov System"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3c6a5b3c2c7c5d2d4d8c7b1d2c5d4c3d4a5c6d2b3a6a5c1e3a5a4b3d2c8d7": {
+   "ply": 32,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a1c1",
+     "san": "Rc1",
+     "idea": "The rook takes the open c-file."
+    }
+   ],
+   "eco": "C99",
+   "name": "Ruy Lopez: Closed, Chigorin Defense, Panov System"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3c6a5b3c2c7c5d2d4d8c7b1d2c5d4c3d4a5c6d2b3a6a5c1e3a5a4b3d2c8d7a1c1": {
+   "ply": 33,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c7b7",
+     "san": "Qb7"
+    }
+   ],
+   "eco": "C99",
+   "name": "Ruy Lopez: Closed, Chigorin Defense, Panov System"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3c6a5b3c2c7c5d2d4d8c7b1d2c5d4c3d4a5c6d2b3a6a5c1e3a5a4b3d2c8d7a1c1c7b7": {
+   "ply": 34,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1e2",
+     "san": "Qe2",
+     "idea": "The queen covers the second rank and attacks b5."
+    }
+   ],
+   "eco": "C99",
+   "name": "Ruy Lopez: Closed, Chigorin Defense, Panov System"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3c6a5b3c2c7c5d2d4d8c7b1d2c5d4c3d4a5c6d2b3a6a5c1e3a5a4b3d2c8d7a1c1c7b7d1e2": {
+   "ply": 35,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8e8",
+     "san": "Rfe8"
+    }
+   ],
+   "eco": "C99",
+   "name": "Ruy Lopez: Closed, Chigorin Defense, Panov System"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3c6a5b3c2c7c5d2d4d8c7b1d2c5d4c3d4a5c6d2b3a6a5c1e3a5a4b3d2c8d7a1c1c7b7d1e2f8e8": {
+   "ply": 36,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c2d3",
+     "san": "Bd3",
+     "idea": "The bishop comes to d3, adding pressure on b5."
+    }
+   ],
+   "eco": "C99",
+   "name": "Ruy Lopez: Closed, Chigorin Defense, Panov System"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3c6a5b3c2c7c5d2d4d8c7b1d2c5d4c3d4a5c6d2b3a6a5c1e3a5a4b3d2c8d7a1c1c7b7d1e2f8e8c2d3": {
+   "ply": 37,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a8b8",
+     "san": "Rab8"
+    }
+   ],
+   "eco": "C99",
+   "name": "Ruy Lopez: Closed, Chigorin Defense, Panov System"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3c6a5b3c2c7c5d2d4d8c7b1d2c5d4c3d4a5c6d2b3a6a5c1e3a5a4b3d2c8d7a1c1c7b7d1e2f8e8c2d3a8b8": {
+   "ply": 38,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d4e5",
+     "san": "dxe5",
+     "idea": "Release the tension now that your pieces are ready for the open centre."
+    }
+   ],
+   "eco": "C99",
+   "name": "Ruy Lopez: Closed, Chigorin Defense, Panov System"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3c6a5b3c2c7c5d2d4d8c7b1d2c5d4c3d4a5c6d2b3a6a5c1e3a5a4b3d2c8d7a1c1c7b7d1e2f8e8c2d3a8b8d4e5": {
+   "ply": 39,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c6e5",
+     "san": "Nxe5"
+    }
+   ],
+   "eco": "C99",
+   "name": "Ruy Lopez: Closed, Chigorin Defense, Panov System"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f8e7f1e1b7b5a4b3d7d6c2c3e8g8h2h3c6a5b3c2c7c5d2d4d8c7b1d2c5d4c3d4a5c6d2b3a6a5c1e3a5a4b3d2c8d7a1c1c7b7d1e2f8e8c2d3a8b8d4e5c6e5": {
+   "ply": 40,
+   "turn": "w",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "C99",
@@ -718,6 +907,141 @@
   },
   "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8b1c3d8e8h2h3h7h5c1f4f8e7a1d1c8e6f3g5h8h6f1e1": {
    "ply": 27,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7b4",
+     "san": "Bb4"
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8b1c3d8e8h2h3h7h5c1f4f8e7a1d1c8e6f3g5h8h6f1e1e7b4": {
+   "ply": 28,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g2g4",
+     "san": "g4",
+     "idea": "Start the kingside advance. Your majority is what wins Berlin endgames."
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8b1c3d8e8h2h3h7h5c1f4f8e7a1d1c8e6f3g5h8h6f1e1e7b4g2g4": {
+   "ply": 29,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h5g4",
+     "san": "hxg4"
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8b1c3d8e8h2h3h7h5c1f4f8e7a1d1c8e6f3g5h8h6f1e1e7b4g2g4h5g4": {
+   "ply": 30,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h3g4",
+     "san": "hxg4",
+     "idea": "Recapture, and keep the pressure on the f5 knight."
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8b1c3d8e8h2h3h7h5c1f4f8e7a1d1c8e6f3g5h8h6f1e1e7b4g2g4h5g4h3g4": {
+   "ply": 31,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f5e7",
+     "san": "Ne7"
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8b1c3d8e8h2h3h7h5c1f4f8e7a1d1c8e6f3g5h8h6f1e1e7b4g2g4h5g4h3g4f5e7": {
+   "ply": 32,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g5e6",
+     "san": "Nxe6",
+     "idea": "Take the bishop. Black's pawns get worse with every trade."
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8b1c3d8e8h2h3h7h5c1f4f8e7a1d1c8e6f3g5h8h6f1e1e7b4g2g4h5g4h3g4f5e7g5e6": {
+   "ply": 33,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h6e6",
+     "san": "Rxe6"
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8b1c3d8e8h2h3h7h5c1f4f8e7a1d1c8e6f3g5h8h6f1e1e7b4g2g4h5g4h3g4f5e7g5e6h6e6": {
+   "ply": 34,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1e3",
+     "san": "Re3",
+     "idea": "Lift the rook to e3, ready to swing to the d- or f-file."
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8b1c3d8e8h2h3h7h5c1f4f8e7a1d1c8e6f3g5h8h6f1e1e7b4g2g4h5g4h3g4f5e7g5e6h6e6e1e3": {
+   "ply": 35,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7g6",
+     "san": "Ng6"
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8b1c3d8e8h2h3h7h5c1f4f8e7a1d1c8e6f3g5h8h6f1e1e7b4g2g4h5g4h3g4f5e7g5e6h6e6e1e3e7g6": {
+   "ply": 36,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f4g3",
+     "san": "Bg3",
+     "idea": "Keep the bishop, and let it cover the f2 and h2 squares from g3."
+    }
+   ],
+   "eco": "C67",
+   "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1b5g8f6e1g1f6e4d2d4e4d6b5c6d7c6d4e5d6f5d1d8e8d8b1c3d8e8h2h3h7h5c1f4f8e7a1d1c8e6f3g5h8h6f1e1e7b4g2g4h5g4h3g4f5e7g5e6h6e6e1e3e7g6f4g3": {
+   "ply": 37,
    "turn": "b",
    "mine": false,
    "replies": [],
@@ -1189,6 +1513,168 @@
    "ply": 25,
    "turn": "b",
    "mine": false,
+   "replies": [
+    {
+     "uci": "f8b4",
+     "san": "Bb4"
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open, Bernstein Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6b1d2e4c5c2c3d5d4b3e6c5e6c3d4c6d4a2a4f8b4": {
+   "ply": 26,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a4b5",
+     "san": "axb5",
+     "idea": "Open the a-file toward Black's queenside."
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open, Bernstein Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6b1d2e4c5c2c3d5d4b3e6c5e6c3d4c6d4a2a4f8b4a4b5": {
+   "ply": 27,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4b5",
+     "san": "Nxb5"
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open, Bernstein Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6b1d2e4c5c2c3d5d4b3e6c5e6c3d4c6d4a2a4f8b4a4b5d4b5": {
+   "ply": 28,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1a4",
+     "san": "Qa4",
+     "idea": "Pin the knight and hit the bishop on b4."
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open, Bernstein Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6b1d2e4c5c2c3d5d4b3e6c5e6c3d4c6d4a2a4f8b4a4b5d4b5d1a4": {
+   "ply": 29,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c7c5",
+     "san": "c5"
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open, Bernstein Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6b1d2e4c5c2c3d5d4b3e6c5e6c3d4c6d4a2a4f8b4a4b5d4b5d1a4c7c5": {
+   "ply": 30,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2c4",
+     "san": "Nc4",
+     "idea": "The knight joins the fight for d6 and b6."
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open, Bernstein Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6b1d2e4c5c2c3d5d4b3e6c5e6c3d4c6d4a2a4f8b4a4b5d4b5d1a4c7c5d2c4": {
+   "ply": 31,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open, Bernstein Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6b1d2e4c5c2c3d5d4b3e6c5e6c3d4c6d4a2a4f8b4a4b5d4b5d1a4c7c5d2c4e8g8": {
+   "ply": 32,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1e3",
+     "san": "Be3",
+     "idea": "Develop, hitting the c5 pawn."
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open, Bernstein Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6b1d2e4c5c2c3d5d4b3e6c5e6c3d4c6d4a2a4f8b4a4b5d4b5d1a4c7c5d2c4e8g8c1e3": {
+   "ply": 33,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a8b8",
+     "san": "Rb8"
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open, Bernstein Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6b1d2e4c5c2c3d5d4b3e6c5e6c3d4c6d4a2a4f8b4a4b5d4b5d1a4c7c5d2c4e8g8c1e3a8b8": {
+   "ply": 34,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a4d1",
+     "san": "Qd1",
+     "idea": "Back to d1, facing Black's queen down the d-file."
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open, Bernstein Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6b1d2e4c5c2c3d5d4b3e6c5e6c3d4c6d4a2a4f8b4a4b5d4b5d1a4c7c5d2c4e8g8c1e3a8b8a4d1": {
+   "ply": 35,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8c8",
+     "san": "Qc8"
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open, Bernstein Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6b1d2e4c5c2c3d5d4b3e6c5e6c3d4c6d4a2a4f8b4a4b5d4b5d1a4c7c5d2c4e8g8c1e3a8b8a4d1d8c8": {
+   "ply": 36,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c4d6",
+     "san": "Nd6",
+     "idea": "The knight lands on d6, hitting the queen, the knight on b5 and f7."
+    }
+   ],
+   "eco": "C80",
+   "name": "Ruy Lopez: Open, Bernstein Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6b1d2e4c5c2c3d5d4b3e6c5e6c3d4c6d4a2a4f8b4a4b5d4b5d1a4c7c5d2c4e8g8c1e3a8b8a4d1d8c8c4d6": {
+   "ply": 37,
+   "turn": "b",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "C80",
@@ -1304,6 +1790,33 @@
   },
   "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6a4c6d7c6d2d3f8d6b1d2e8g8d2c4f6d7e1g1": {
    "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8e8",
+     "san": "Re8"
+    }
+   ],
+   "eco": "C77",
+   "name": "Ruy Lopez: Morphy Defense, Bayreuth Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6a4c6d7c6d2d3f8d6b1d2e8g8d2c4f6d7e1g1f8e8": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b2b3",
+     "san": "b3",
+     "idea": "Protect the knight on c4 and prepare Bb2."
+    }
+   ],
+   "eco": "C77",
+   "name": "Ruy Lopez: Morphy Defense, Bayreuth Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6a4c6d7c6d2d3f8d6b1d2e8g8d2c4f6d7e1g1f8e8b2b3": {
+   "ply": 19,
    "turn": "b",
    "mine": false,
    "replies": [],
@@ -1423,6 +1936,73 @@
    "ply": 25,
    "turn": "b",
    "mine": false,
+   "replies": [
+    {
+     "uci": "c6d4",
+     "san": "Nxd4"
+    }
+   ],
+   "eco": "C82",
+   "name": "Ruy Lopez: Open, St. Petersburg Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6c2c3f8c5b1d2e8g8b3c2f7f5d2b3c5b6f3d4c6d4": {
+   "ply": 26,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b3d4",
+     "san": "Nxd4",
+     "idea": "Recapture, and the knight lands on d4."
+    }
+   ],
+   "eco": "C82",
+   "name": "Ruy Lopez: Open, St. Petersburg Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6c2c3f8c5b1d2e8g8b3c2f7f5d2b3c5b6f3d4c6d4b3d4": {
+   "ply": 27,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b6d4",
+     "san": "Bxd4"
+    }
+   ],
+   "eco": "C82",
+   "name": "Ruy Lopez: Open, St. Petersburg Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6c2c3f8c5b1d2e8g8b3c2f7f5d2b3c5b6f3d4c6d4b3d4b6d4": {
+   "ply": 28,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c3d4",
+     "san": "cxd4",
+     "idea": "Take back toward the centre. Black's bishop is gone and d4 is solid."
+    }
+   ],
+   "eco": "C82",
+   "name": "Ruy Lopez: Open, St. Petersburg Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6c2c3f8c5b1d2e8g8b3c2f7f5d2b3c5b6f3d4c6d4b3d4b6d4c3d4": {
+   "ply": 29,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f5f4",
+     "san": "f4"
+    }
+   ],
+   "eco": "C82",
+   "name": "Ruy Lopez: Open, St. Petersburg Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1b5a7a6b5a4g8f6e1g1f6e4d2d4b7b5a4b3d7d5d4e5c8e6c2c3f8c5b1d2e8g8b3c2f7f5d2b3c5b6f3d4c6d4b3d4b6d4c3d4f5f4": {
+   "ply": 30,
+   "turn": "w",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "C82",

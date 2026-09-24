@@ -11,16 +11,16 @@
    "label": "Main Line",
    "eco": "D02",
    "name": "Queen's Pawn Game: London System",
-   "path": "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3e8g8f1d3b7b6f3e5c8b7f2f4c6e7d1f3e7f5g3f2",
-   "plies": 23
+   "path": "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3e8g8f1d3b7b6f3e5c8b7f2f4c6e7d1f3e7f5g3f2d6e7e1g1",
+   "plies": 25
   },
   {
    "id": "london-vs-kid",
    "label": "vs King's Indian setup",
    "eco": "A48",
    "name": "London System, with Be2",
-   "path": "d2d4g8f6c1f4g7g6e2e3f8g7g1f3e8g8f1e2d7d6h2h3b8d7e1g1d8e8c2c4e7e5f4h2e5e4f3d2e8e7b1c3",
-   "plies": 21
+   "path": "d2d4g8f6c1f4g7g6e2e3f8g7g1f3e8g8f1e2d7d6h2h3b8d7e1g1d8e8c2c4e7e5f4h2e5e4f3d2e8e7b1c3f8e8b2b4d7f8c4c5d6d5",
+   "plies": 26
   },
   {
    "id": "london-early-c5",
@@ -35,8 +35,8 @@
    "label": "Punishing 7...Qc7",
    "eco": "D02",
    "name": "Queen's Pawn Game: London System",
-   "path": "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7d4c5d6g3h2g3e8g8f1d3e6e5e3e4",
-   "plies": 21
+   "path": "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7d4c5d6g3h2g3e8g8f1d3e6e5e3e4c8g4e4d5e5e4d2e4f6e4d3e4f8e8",
+   "plies": 28
   }
  ],
  "nodes": {
@@ -365,6 +365,33 @@
    "ply": 23,
    "turn": "b",
    "mine": false,
+   "replies": [
+    {
+     "uci": "d6e7",
+     "san": "Be7"
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3e8g8f1d3b7b6f3e5c8b7f2f4c6e7d1f3e7f5g3f2d6e7": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle. The kingside pawns can advance later."
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3e8g8f1d3b7b6f3e5c8b7f2f4c6e7d1f3e7f5g3f2d6e7e1g1": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "D02",
@@ -631,6 +658,73 @@
    "ply": 21,
    "turn": "b",
    "mine": false,
+   "replies": [
+    {
+     "uci": "f8e8",
+     "san": "Re8"
+    }
+   ],
+   "eco": "A48",
+   "name": "London System, with Be2"
+  },
+  "d2d4g8f6c1f4g7g6e2e3f8g7g1f3e8g8f1e2d7d6h2h3b8d7e1g1d8e8c2c4e7e5f4h2e5e4f3d2e8e7b1c3f8e8": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b2b4",
+     "san": "b4",
+     "idea": "Grab more queenside space."
+    }
+   ],
+   "eco": "A48",
+   "name": "London System, with Be2"
+  },
+  "d2d4g8f6c1f4g7g6e2e3f8g7g1f3e8g8f1e2d7d6h2h3b8d7e1g1d8e8c2c4e7e5f4h2e5e4f3d2e8e7b1c3f8e8b2b4": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7f8",
+     "san": "Nf8"
+    }
+   ],
+   "eco": "A48",
+   "name": "London System, with Be2"
+  },
+  "d2d4g8f6c1f4g7g6e2e3f8g7g1f3e8g8f1e2d7d6h2h3b8d7e1g1d8e8c2c4e7e5f4h2e5e4f3d2e8e7b1c3f8e8b2b4d7f8": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c4c5",
+     "san": "c5",
+     "idea": "Push on. c5 attacks d6 and cramps Black's queenside."
+    }
+   ],
+   "eco": "A48",
+   "name": "London System, with Be2"
+  },
+  "d2d4g8f6c1f4g7g6e2e3f8g7g1f3e8g8f1e2d7d6h2h3b8d7e1g1d8e8c2c4e7e5f4h2e5e4f3d2e8e7b1c3f8e8b2b4d7f8c4c5": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d6d5",
+     "san": "d5"
+    }
+   ],
+   "eco": "A48",
+   "name": "London System, with Be2"
+  },
+  "d2d4g8f6c1f4g7g6e2e3f8g7g1f3e8g8f1e2d7d6h2h3b8d7e1g1d8e8c2c4e7e5f4h2e5e4f3d2e8e7b1c3f8e8b2b4d7f8c4c5d6d5": {
+   "ply": 26,
+   "turn": "w",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "A48",
@@ -1028,6 +1122,100 @@
    "ply": 21,
    "turn": "b",
    "mine": false,
+   "replies": [
+    {
+     "uci": "c8g4",
+     "san": "Bg4"
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7d4c5d6g3h2g3e8g8f1d3e6e5e3e4c8g4": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e4d5",
+     "san": "exd5",
+     "idea": "Take the pawn. You're two pawns up now."
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7d4c5d6g3h2g3e8g8f1d3e6e5e3e4c8g4e4d5": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e5e4",
+     "san": "e4"
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7d4c5d6g3h2g3e8g8f1d3e6e5e3e4c8g4e4d5e5e4": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2e4",
+     "san": "Nxe4",
+     "idea": "Take the e4 pawn too."
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7d4c5d6g3h2g3e8g8f1d3e6e5e3e4c8g4e4d5e5e4d2e4": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f6e4",
+     "san": "Nxe4"
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7d4c5d6g3h2g3e8g8f1d3e6e5e3e4c8g4e4d5e5e4d2e4f6e4": {
+   "ply": 26,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d3e4",
+     "san": "Bxe4",
+     "idea": "Recapture. The bishop eyes h7."
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7d4c5d6g3h2g3e8g8f1d3e6e5e3e4c8g4e4d5e5e4d2e4f6e4d3e4": {
+   "ply": 27,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8e8",
+     "san": "Rfe8"
+    }
+   ],
+   "eco": "D02",
+   "name": "Queen's Pawn Game: London System"
+  },
+  "d2d4d7d5c1f4g8f6e2e3e7e6g1f3c7c5c2c3b8c6b1d2f8d6f4g3d8c7d4c5d6g3h2g3e8g8f1d3e6e5e3e4c8g4e4d5e5e4d2e4f6e4d3e4f8e8": {
+   "ply": 28,
+   "turn": "w",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "D02",

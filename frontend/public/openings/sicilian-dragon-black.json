@@ -11,16 +11,16 @@
    "label": "Main Line",
    "eco": "B77",
    "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Main Line",
-   "path": "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4e8g8c4b3d7d6f2f3c8d7d1d2c6d4e3d4b7b5h2h4a7a5a2a4b5a4c3a4",
-   "plies": 27
+   "path": "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4e8g8c4b3d7d6f2f3c8d7d1d2c6d4e3d4b7b5h2h4a7a5a2a4b5a4c3a4d7e6a4b6a8a6b6d5e6d5e4d5d8c7",
+   "plies": 34
   },
   {
    "id": "accelerated-dragon-maroczy",
    "label": "Maroczy Bind",
    "eco": "B36",
    "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind",
-   "path": "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3e8g8d4d2c8e6a1c1d8a5f2f3f8c8b2b3a7a6c3a4a5d2e1d2",
-   "plies": 29
+   "path": "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3e8g8d4d2c8e6a1c1d8a5f2f3f8c8b2b3a7a6c3a4a5d2e1d2f6d7g2g4f7f5e4f5g6f5h2h3c8f8f3f4a8d8a4c3d6d5",
+   "plies": 40
   }
  ],
  "nodes": {
@@ -394,6 +394,101 @@
    "ply": 27,
    "turn": "b",
    "mine": true,
+   "replies": [
+    {
+     "uci": "d7e6",
+     "san": "Be6",
+     "idea": "Challenge the b3 bishop."
+    }
+   ],
+   "eco": "B77",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Main Line"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4e8g8c4b3d7d6f2f3c8d7d1d2c6d4e3d4b7b5h2h4a7a5a2a4b5a4c3a4d7e6": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a4b6",
+     "san": "Nb6"
+    }
+   ],
+   "eco": "B77",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Main Line"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4e8g8c4b3d7d6f2f3c8d7d1d2c6d4e3d4b7b5h2h4a7a5a2a4b5a4c3a4d7e6a4b6": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a8a6",
+     "san": "Ra6",
+     "idea": "Kick the b6 knight."
+    }
+   ],
+   "eco": "B77",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Main Line"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4e8g8c4b3d7d6f2f3c8d7d1d2c6d4e3d4b7b5h2h4a7a5a2a4b5a4c3a4d7e6a4b6a8a6": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b6d5",
+     "san": "Nd5"
+    }
+   ],
+   "eco": "B77",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Main Line"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4e8g8c4b3d7d6f2f3c8d7d1d2c6d4e3d4b7b5h2h4a7a5a2a4b5a4c3a4d7e6a4b6a8a6b6d5": {
+   "ply": 31,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e6d5",
+     "san": "Bxd5",
+     "idea": "Take the knight. White's e-pawn gets pulled to d5."
+    }
+   ],
+   "eco": "B77",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Main Line"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4e8g8c4b3d7d6f2f3c8d7d1d2c6d4e3d4b7b5h2h4a7a5a2a4b5a4c3a4d7e6a4b6a8a6b6d5e6d5": {
+   "ply": 32,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4d5",
+     "san": "exd5"
+    }
+   ],
+   "eco": "B77",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Main Line"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4e8g8c4b3d7d6f2f3c8d7d1d2c6d4e3d4b7b5h2h4a7a5a2a4b5a4c3a4d7e6a4b6a8a6b6d5e6d5e4d5": {
+   "ply": 33,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8c7",
+     "san": "Qc7",
+     "idea": "Line up the queen against c2. Your play is on the c-file."
+    }
+   ],
+   "eco": "B77",
+   "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Main Line"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6b1c3f8g7c1e3g8f6f1c4e8g8c4b3d7d6f2f3c8d7d1d2c6d4e3d4b7b5h2h4a7a5a2a4b5a4c3a4d7e6a4b6a8a6b6d5e6d5e4d5d8c7": {
+   "ply": 34,
+   "turn": "w",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "B77",
@@ -673,6 +768,155 @@
    "ply": 29,
    "turn": "b",
    "mine": true,
+   "replies": [
+    {
+     "uci": "f6d7",
+     "san": "Nd7",
+     "idea": "Reroute the knight to c5 or e5 now that queens are off."
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3e8g8d4d2c8e6a1c1d8a5f2f3f8c8b2b3a7a6c3a4a5d2e1d2f6d7": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g2g4",
+     "san": "g4"
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3e8g8d4d2c8e6a1c1d8a5f2f3f8c8b2b3a7a6c3a4a5d2e1d2f6d7g2g4": {
+   "ply": 31,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f7f5",
+     "san": "f5",
+     "idea": "Break with ...f5, the other freeing move against the Bind."
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3e8g8d4d2c8e6a1c1d8a5f2f3f8c8b2b3a7a6c3a4a5d2e1d2f6d7g2g4f7f5": {
+   "ply": 32,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4f5",
+     "san": "exf5"
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3e8g8d4d2c8e6a1c1d8a5f2f3f8c8b2b3a7a6c3a4a5d2e1d2f6d7g2g4f7f5e4f5": {
+   "ply": 33,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g6f5",
+     "san": "gxf5",
+     "idea": "Recapture, and hit g4."
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3e8g8d4d2c8e6a1c1d8a5f2f3f8c8b2b3a7a6c3a4a5d2e1d2f6d7g2g4f7f5e4f5g6f5": {
+   "ply": 34,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h2h3",
+     "san": "h3"
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3e8g8d4d2c8e6a1c1d8a5f2f3f8c8b2b3a7a6c3a4a5d2e1d2f6d7g2g4f7f5e4f5g6f5h2h3": {
+   "ply": 35,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8f8",
+     "san": "Rf8",
+     "idea": "The rook swings to the f-file."
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3e8g8d4d2c8e6a1c1d8a5f2f3f8c8b2b3a7a6c3a4a5d2e1d2f6d7g2g4f7f5e4f5g6f5h2h3c8f8": {
+   "ply": 36,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3f4",
+     "san": "f4"
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3e8g8d4d2c8e6a1c1d8a5f2f3f8c8b2b3a7a6c3a4a5d2e1d2f6d7g2g4f7f5e4f5g6f5h2h3c8f8f3f4": {
+   "ply": 37,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a8d8",
+     "san": "Rad8",
+     "idea": "Bring the other rook to the d-file, supporting ...d5."
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3e8g8d4d2c8e6a1c1d8a5f2f3f8c8b2b3a7a6c3a4a5d2e1d2f6d7g2g4f7f5e4f5g6f5h2h3c8f8f3f4a8d8": {
+   "ply": 38,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a4c3",
+     "san": "Nc3"
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3e8g8d4d2c8e6a1c1d8a5f2f3f8c8b2b3a7a6c3a4a5d2e1d2f6d7g2g4f7f5e4f5g6f5h2h3c8f8f3f4a8d8a4c3": {
+   "ply": 39,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d6d5",
+     "san": "d5",
+     "idea": "The ...d5 break. The Bind is gone."
+    }
+   ],
+   "eco": "B36",
+   "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind"
+  },
+  "e2e4c7c5g1f3b8c6d2d4c5d4f3d4g7g6c2c4g8f6b1c3d7d6f1e2c6d4d1d4f8g7c1e3e8g8d4d2c8e6a1c1d8a5f2f3f8c8b2b3a7a6c3a4a5d2e1d2f6d7g2g4f7f5e4f5g6f5h2h3c8f8f3f4a8d8a4c3d6d5": {
+   "ply": 40,
+   "turn": "w",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "B36",

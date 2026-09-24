@@ -11,56 +11,56 @@
    "label": "Winawer Variation",
    "eco": "C18",
    "name": "French Defense: Winawer Variation, Poisoned Pawn Variation, Main Line",
-   "path": "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4d8c7g4g7h8g8g7h7c5d4g1e2b8c6f2f4c8d7",
-   "plies": 22
+   "path": "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4d8c7g4g7h8g8g7h7c5d4g1e2b8c6f2f4c8d7h7d3d4c3d3c3e7f5a1b1d5d4c3d3e8c8h1g1c6a5g2g4d7a4c2c4f5e7",
+   "plies": 36
   },
   {
    "id": "french-classical",
    "label": "Classical Variation",
    "eco": "C14",
    "name": "French Defense: Classical Variation, Steinitz Variation",
-   "path": "e2e4e7e6d2d4d7d5b1c3g8f6c1g5f8e7e4e5f6d7g5e7d8e7f2f4a7a6g1f3c7c5d1d2b8c6d4c5d7c5f1d3b7b5e1g1e8g8",
-   "plies": 24
+   "path": "e2e4e7e6d2d4d7d5b1c3g8f6c1g5f8e7e4e5f6d7g5e7d8e7f2f4a7a6g1f3c7c5d1d2b8c6d4c5d7c5f1d3b7b5e1g1e8g8c3e2c8b7e2d4c6d4",
+   "plies": 28
   },
   {
    "id": "french-tarrasch",
    "label": "Tarrasch Variation",
    "eco": "C06",
    "name": "French Defense: Tarrasch Variation, Closed Variation, Main Line",
-   "path": "e2e4e7e6d2d4d7d5b1d2g8f6e4e5f6d7f1d3c7c5c2c3b8c6g1e2c5d4c3d4f7f6e5f6d7f6d2f3f8d6e1g1d8c7e2c3a7a6c1g5e8g8",
-   "plies": 26
+   "path": "e2e4e7e6d2d4d7d5b1d2g8f6e4e5f6d7f1d3c7c5c2c3b8c6g1e2c5d4c3d4f7f6e5f6d7f6d2f3f8d6e1g1d8c7e2c3a7a6c1g5e8g8g5h4f6h5a1c1g7g6c3a4c8d7",
+   "plies": 32
   },
   {
    "id": "french-advance",
    "label": "Advance Variation",
    "eco": "C02",
    "name": "French Defense: Advance Variation, Main Line",
-   "path": "e2e4e7e6d2d4d7d5e4e5c7c5c2c3b8c6g1f3d8b6a2a3c5c4b1d2c6a5a1b1c8d7f1e2g8e7e1g1e7f5",
-   "plies": 20
+   "path": "e2e4e7e6d2d4d7d5e4e5c7c5c2c3b8c6g1f3d8b6a2a3c5c4b1d2c6a5a1b1c8d7f1e2g8e7e1g1e7f5g2g4f5e7b2b4",
+   "plies": 23
   },
   {
    "id": "french-rubinstein",
    "label": "Rubinstein Variation (3...dxe4)",
    "eco": "C10",
    "name": "French Defense: Rubinstein Variation, Blackburne Defense",
-   "path": "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7g1f3g8f6e4f6d7f6f1d3c7c5d4c5f8c5e1g1e8g8",
-   "plies": 18
+   "path": "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7g1f3g8f6e4f6d7f6f1d3c7c5d4c5f8c5e1g1e8g8c1g5b7b6d1e2c8b7a1d1d8c7g5f6g7f6d3e4f8d8e4b7c7b7",
+   "plies": 30
   },
   {
    "id": "french-advance-be2",
    "label": "Advance Variation, 6.Be2",
    "eco": "C02",
    "name": "French Defense: Advance Variation, Paulsen Attack",
-   "path": "e2e4e7e6d2d4d7d5e4e5c7c5c2c3b8c6g1f3d8b6f1e2c5d4c3d4g8h6b1c3h6f5c3a4b6a5c1d2f8b4d2c3b7b5a2a3b4c3a4c3b5b4",
-   "plies": 26
+   "path": "e2e4e7e6d2d4d7d5e4e5c7c5c2c3b8c6g1f3d8b6f1e2c5d4c3d4g8h6b1c3h6f5c3a4b6a5c1d2f8b4d2c3b7b5a2a3b4c3a4c3b5b4a3b4a5b4e2b5c8d7b5c6d7c6d1d2e8g8",
+   "plies": 34
   },
   {
    "id": "french-advance-euwe",
    "label": "Advance Variation, 5...Bd7",
    "eco": "C02",
    "name": "French Defense: Advance Variation, Euwe Variation",
-   "path": "e2e4e7e6d2d4d7d5e4e5c7c5c2c3b8c6g1f3c8d7f1e2g8e7b1a3c5d4c3d4e7f5a3c2d8b6e1g1a8c8",
-   "plies": 20
+   "path": "e2e4e7e6d2d4d7d5e4e5c7c5c2c3b8c6g1f3c8d7f1e2g8e7b1a3c5d4c3d4e7f5a3c2d8b6e1g1a8c8g1h1c6a5g2g4",
+   "plies": 23
   }
  ],
  "nodes": {
@@ -381,6 +381,195 @@
    "ply": 22,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "h7d3",
+     "san": "Qd3"
+    }
+   ],
+   "eco": "C18",
+   "name": "French Defense: Winawer Variation, Poisoned Pawn Variation, Main Line"
+  },
+  "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4d8c7g4g7h8g8g7h7c5d4g1e2b8c6f2f4c8d7h7d3": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d4c3",
+     "san": "dxc3",
+     "idea": "Take on c3. White has to spend a tempo recapturing."
+    }
+   ],
+   "eco": "C18",
+   "name": "French Defense: Winawer Variation, Poisoned Pawn Variation, Main Line"
+  },
+  "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4d8c7g4g7h8g8g7h7c5d4g1e2b8c6f2f4c8d7h7d3d4c3": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d3c3",
+     "san": "Qxc3"
+    }
+   ],
+   "eco": "C18",
+   "name": "French Defense: Winawer Variation, Poisoned Pawn Variation, Main Line"
+  },
+  "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4d8c7g4g7h8g8g7h7c5d4g1e2b8c6f2f4c8d7h7d3d4c3d3c3": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e7f5",
+     "san": "Nf5",
+     "idea": "The knight goes to f5, hitting d4 and eyeing h4."
+    }
+   ],
+   "eco": "C18",
+   "name": "French Defense: Winawer Variation, Poisoned Pawn Variation, Main Line"
+  },
+  "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4d8c7g4g7h8g8g7h7c5d4g1e2b8c6f2f4c8d7h7d3d4c3d3c3e7f5": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a1b1",
+     "san": "Rb1"
+    }
+   ],
+   "eco": "C18",
+   "name": "French Defense: Winawer Variation, Poisoned Pawn Variation, Main Line"
+  },
+  "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4d8c7g4g7h8g8g7h7c5d4g1e2b8c6f2f4c8d7h7d3d4c3d3c3e7f5a1b1": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d5d4",
+     "san": "d4",
+     "idea": "Push past the queen. The d4 pawn cramps White's pieces."
+    }
+   ],
+   "eco": "C18",
+   "name": "French Defense: Winawer Variation, Poisoned Pawn Variation, Main Line"
+  },
+  "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4d8c7g4g7h8g8g7h7c5d4g1e2b8c6f2f4c8d7h7d3d4c3d3c3e7f5a1b1d5d4": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c3d3",
+     "san": "Qd3"
+    }
+   ],
+   "eco": "C18",
+   "name": "French Defense: Winawer Variation, Poisoned Pawn Variation, Main Line"
+  },
+  "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4d8c7g4g7h8g8g7h7c5d4g1e2b8c6f2f4c8d7h7d3d4c3d3c3e7f5a1b1d5d4c3d3": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8c8",
+     "san": "O-O-O",
+     "idea": "Castle long. Your king is safer on the queenside."
+    }
+   ],
+   "eco": "C18",
+   "name": "French Defense: Winawer Variation, Poisoned Pawn Variation, Main Line"
+  },
+  "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4d8c7g4g7h8g8g7h7c5d4g1e2b8c6f2f4c8d7h7d3d4c3d3c3e7f5a1b1d5d4c3d3e8c8": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h1g1",
+     "san": "Rg1"
+    }
+   ],
+   "eco": "C18",
+   "name": "French Defense: Winawer Variation, Poisoned Pawn Variation, Main Line"
+  },
+  "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4d8c7g4g7h8g8g7h7c5d4g1e2b8c6f2f4c8d7h7d3d4c3d3c3e7f5a1b1d5d4c3d3e8c8h1g1": {
+   "ply": 31,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c6a5",
+     "san": "Na5",
+     "idea": "Head for c4 with the knight."
+    }
+   ],
+   "eco": "C18",
+   "name": "French Defense: Winawer Variation, Poisoned Pawn Variation, Main Line"
+  },
+  "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4d8c7g4g7h8g8g7h7c5d4g1e2b8c6f2f4c8d7h7d3d4c3d3c3e7f5a1b1d5d4c3d3e8c8h1g1c6a5": {
+   "ply": 32,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g2g4",
+     "san": "g4"
+    }
+   ],
+   "eco": "C18",
+   "name": "French Defense: Winawer Variation, Poisoned Pawn Variation, Main Line"
+  },
+  "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4d8c7g4g7h8g8g7h7c5d4g1e2b8c6f2f4c8d7h7d3d4c3d3c3e7f5a1b1d5d4c3d3e8c8h1g1c6a5g2g4": {
+   "ply": 33,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7a4",
+     "san": "Ba4",
+     "idea": "Hit c2 and stop White's pawns."
+    }
+   ],
+   "eco": "C18",
+   "name": "French Defense: Winawer Variation, Poisoned Pawn Variation, Main Line"
+  },
+  "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4d8c7g4g7h8g8g7h7c5d4g1e2b8c6f2f4c8d7h7d3d4c3d3c3e7f5a1b1d5d4c3d3e8c8h1g1c6a5g2g4d7a4": {
+   "ply": 34,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c2c4",
+     "san": "c4"
+    }
+   ],
+   "eco": "C18",
+   "name": "French Defense: Winawer Variation, Poisoned Pawn Variation, Main Line"
+  },
+  "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4d8c7g4g7h8g8g7h7c5d4g1e2b8c6f2f4c8d7h7d3d4c3d3c3e7f5a1b1d5d4c3d3e8c8h1g1c6a5g2g4d7a4c2c4": {
+   "ply": 35,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f5e7",
+     "san": "Ne7",
+     "idea": "Pull the knight back to e7, heading for d5 or c6."
+    }
+   ],
+   "eco": "C18",
+   "name": "French Defense: Winawer Variation, Poisoned Pawn Variation, Main Line"
+  },
+  "e2e4e7e6d2d4d7d5b1c3f8b4e4e5c7c5a2a3b4c3b2c3g8e7d1g4d8c7g4g7h8g8g7h7c5d4g1e2b8c6f2f4c8d7h7d3d4c3d3c3e7f5a1b1d5d4c3d3e8c8h1g1c6a5g2g4d7a4c2c4f5e7": {
+   "ply": 36,
+   "turn": "w",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "C18",
@@ -631,6 +820,60 @@
   },
   "e2e4e7e6d2d4d7d5b1c3g8f6c1g5f8e7e4e5f6d7g5e7d8e7f2f4a7a6g1f3c7c5d1d2b8c6d4c5d7c5f1d3b7b5e1g1e8g8": {
    "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c3e2",
+     "san": "Ne2"
+    }
+   ],
+   "eco": "C14",
+   "name": "French Defense: Classical Variation, Steinitz Variation"
+  },
+  "e2e4e7e6d2d4d7d5b1c3g8f6c1g5f8e7e4e5f6d7g5e7d8e7f2f4a7a6g1f3c7c5d1d2b8c6d4c5d7c5f1d3b7b5e1g1e8g8c3e2": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8b7",
+     "san": "Bb7",
+     "idea": "Develop the bishop on the long diagonal."
+    }
+   ],
+   "eco": "C14",
+   "name": "French Defense: Classical Variation, Steinitz Variation"
+  },
+  "e2e4e7e6d2d4d7d5b1c3g8f6c1g5f8e7e4e5f6d7g5e7d8e7f2f4a7a6g1f3c7c5d1d2b8c6d4c5d7c5f1d3b7b5e1g1e8g8c3e2c8b7": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e2d4",
+     "san": "Ned4"
+    }
+   ],
+   "eco": "C14",
+   "name": "French Defense: Classical Variation, Steinitz Variation"
+  },
+  "e2e4e7e6d2d4d7d5b1c3g8f6c1g5f8e7e4e5f6d7g5e7d8e7f2f4a7a6g1f3c7c5d1d2b8c6d4c5d7c5f1d3b7b5e1g1e8g8c3e2c8b7e2d4": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c6d4",
+     "san": "Nxd4",
+     "idea": "Trade on d4."
+    }
+   ],
+   "eco": "C14",
+   "name": "French Defense: Classical Variation, Steinitz Variation"
+  },
+  "e2e4e7e6d2d4d7d5b1c3g8f6c1g5f8e7e4e5f6d7g5e7d8e7f2f4a7a6g1f3c7c5d1d2b8c6d4c5d7c5f1d3b7b5e1g1e8g8c3e2c8b7e2d4c6d4": {
+   "ply": 28,
    "turn": "w",
    "mine": false,
    "replies": [],
@@ -926,6 +1169,87 @@
    "ply": 26,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "g5h4",
+     "san": "Bh4"
+    }
+   ],
+   "eco": "C06",
+   "name": "French Defense: Tarrasch Variation, Closed Variation, Main Line"
+  },
+  "e2e4e7e6d2d4d7d5b1d2g8f6e4e5f6d7f1d3c7c5c2c3b8c6g1e2c5d4c3d4f7f6e5f6d7f6d2f3f8d6e1g1d8c7e2c3a7a6c1g5e8g8g5h4": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6h5",
+     "san": "Nh5",
+     "idea": "Jump to h5, hitting the h4 bishop and eyeing f4."
+    }
+   ],
+   "eco": "C06",
+   "name": "French Defense: Tarrasch Variation, Closed Variation, Main Line"
+  },
+  "e2e4e7e6d2d4d7d5b1d2g8f6e4e5f6d7f1d3c7c5c2c3b8c6g1e2c5d4c3d4f7f6e5f6d7f6d2f3f8d6e1g1d8c7e2c3a7a6c1g5e8g8g5h4f6h5": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a1c1",
+     "san": "Rc1"
+    }
+   ],
+   "eco": "C06",
+   "name": "French Defense: Tarrasch Variation, Closed Variation, Main Line"
+  },
+  "e2e4e7e6d2d4d7d5b1d2g8f6e4e5f6d7f1d3c7c5c2c3b8c6g1e2c5d4c3d4f7f6e5f6d7f6d2f3f8d6e1g1d8c7e2c3a7a6c1g5e8g8g5h4f6h5a1c1": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g7g6",
+     "san": "g6",
+     "idea": "Protect the h5 knight and make room for the king."
+    }
+   ],
+   "eco": "C06",
+   "name": "French Defense: Tarrasch Variation, Closed Variation, Main Line"
+  },
+  "e2e4e7e6d2d4d7d5b1d2g8f6e4e5f6d7f1d3c7c5c2c3b8c6g1e2c5d4c3d4f7f6e5f6d7f6d2f3f8d6e1g1d8c7e2c3a7a6c1g5e8g8g5h4f6h5a1c1g7g6": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c3a4",
+     "san": "Na4"
+    }
+   ],
+   "eco": "C06",
+   "name": "French Defense: Tarrasch Variation, Closed Variation, Main Line"
+  },
+  "e2e4e7e6d2d4d7d5b1d2g8f6e4e5f6d7f1d3c7c5c2c3b8c6g1e2c5d4c3d4f7f6e5f6d7f6d2f3f8d6e1g1d8c7e2c3a7a6c1g5e8g8g5h4f6h5a1c1g7g6c3a4": {
+   "ply": 31,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8d7",
+     "san": "Bd7",
+     "idea": "Develop the last piece and connect the rooks."
+    }
+   ],
+   "eco": "C06",
+   "name": "French Defense: Tarrasch Variation, Closed Variation, Main Line"
+  },
+  "e2e4e7e6d2d4d7d5b1d2g8f6e4e5f6d7f1d3c7c5c2c3b8c6g1e2c5d4c3d4f7f6e5f6d7f6d2f3f8d6e1g1d8c7e2c3a7a6c1g5e8g8g5h4f6h5a1c1g7g6c3a4c8d7": {
+   "ply": 32,
+   "turn": "w",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "C06",
@@ -1147,6 +1471,46 @@
    "ply": 20,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "g2g4",
+     "san": "g4"
+    }
+   ],
+   "eco": "C02",
+   "name": "French Defense: Advance Variation, Main Line"
+  },
+  "e2e4e7e6d2d4d7d5e4e5c7c5c2c3b8c6g1f3d8b6a2a3c5c4b1d2c6a5a1b1c8d7f1e2g8e7e1g1e7f5g2g4": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f5e7",
+     "san": "Ne7",
+     "idea": "Retreat to e7, heading for g6 or c6."
+    }
+   ],
+   "eco": "C02",
+   "name": "French Defense: Advance Variation, Main Line"
+  },
+  "e2e4e7e6d2d4d7d5e4e5c7c5c2c3b8c6g1f3d8b6a2a3c5c4b1d2c6a5a1b1c8d7f1e2g8e7e1g1e7f5g2g4f5e7": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b2b4",
+     "san": "b4"
+    }
+   ],
+   "eco": "C02",
+   "name": "French Defense: Advance Variation, Main Line"
+  },
+  "e2e4e7e6d2d4d7d5e4e5c7c5c2c3b8c6g1f3d8b6a2a3c5c4b1d2c6a5a1b1c8d7f1e2g8e7e1g1e7f5g2g4f5e7b2b4": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "C02",
@@ -1316,6 +1680,168 @@
   },
   "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7g1f3g8f6e4f6d7f6f1d3c7c5d4c5f8c5e1g1e8g8": {
    "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1g5",
+     "san": "Bg5"
+    }
+   ],
+   "eco": "C10",
+   "name": "French Defense: Rubinstein Variation, Blackburne Defense"
+  },
+  "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7g1f3g8f6e4f6d7f6f1d3c7c5d4c5f8c5e1g1e8g8c1g5": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b7b6",
+     "san": "b6",
+     "idea": "Prepare ...Bb7 on the long diagonal."
+    }
+   ],
+   "eco": "C10",
+   "name": "French Defense: Rubinstein Variation, Blackburne Defense"
+  },
+  "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7g1f3g8f6e4f6d7f6f1d3c7c5d4c5f8c5e1g1e8g8c1g5b7b6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1e2",
+     "san": "Qe2"
+    }
+   ],
+   "eco": "C10",
+   "name": "French Defense: Rubinstein Variation, Blackburne Defense"
+  },
+  "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7g1f3g8f6e4f6d7f6f1d3c7c5d4c5f8c5e1g1e8g8c1g5b7b6d1e2": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8b7",
+     "san": "Bb7",
+     "idea": "The bishop takes the long diagonal, aimed at f3 and g2."
+    }
+   ],
+   "eco": "C10",
+   "name": "French Defense: Rubinstein Variation, Blackburne Defense"
+  },
+  "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7g1f3g8f6e4f6d7f6f1d3c7c5d4c5f8c5e1g1e8g8c1g5b7b6d1e2c8b7": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a1d1",
+     "san": "Rad1"
+    }
+   ],
+   "eco": "C10",
+   "name": "French Defense: Rubinstein Variation, Blackburne Defense"
+  },
+  "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7g1f3g8f6e4f6d7f6f1d3c7c5d4c5f8c5e1g1e8g8c1g5b7b6d1e2c8b7a1d1": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8c7",
+     "san": "Qc7",
+     "idea": "The queen goes to c7, lined up with the bishop against h2."
+    }
+   ],
+   "eco": "C10",
+   "name": "French Defense: Rubinstein Variation, Blackburne Defense"
+  },
+  "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7g1f3g8f6e4f6d7f6f1d3c7c5d4c5f8c5e1g1e8g8c1g5b7b6d1e2c8b7a1d1d8c7": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g5f6",
+     "san": "Bxf6"
+    }
+   ],
+   "eco": "C10",
+   "name": "French Defense: Rubinstein Variation, Blackburne Defense"
+  },
+  "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7g1f3g8f6e4f6d7f6f1d3c7c5d4c5f8c5e1g1e8g8c1g5b7b6d1e2c8b7a1d1d8c7g5f6": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g7f6",
+     "san": "gxf6",
+     "idea": "Recapture toward the centre. The g-file opens for your rook."
+    }
+   ],
+   "eco": "C10",
+   "name": "French Defense: Rubinstein Variation, Blackburne Defense"
+  },
+  "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7g1f3g8f6e4f6d7f6f1d3c7c5d4c5f8c5e1g1e8g8c1g5b7b6d1e2c8b7a1d1d8c7g5f6g7f6": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d3e4",
+     "san": "Be4"
+    }
+   ],
+   "eco": "C10",
+   "name": "French Defense: Rubinstein Variation, Blackburne Defense"
+  },
+  "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7g1f3g8f6e4f6d7f6f1d3c7c5d4c5f8c5e1g1e8g8c1g5b7b6d1e2c8b7a1d1d8c7g5f6g7f6d3e4": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8d8",
+     "san": "Rfd8",
+     "idea": "Put the rook on the d-file, opposite White's rook."
+    }
+   ],
+   "eco": "C10",
+   "name": "French Defense: Rubinstein Variation, Blackburne Defense"
+  },
+  "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7g1f3g8f6e4f6d7f6f1d3c7c5d4c5f8c5e1g1e8g8c1g5b7b6d1e2c8b7a1d1d8c7g5f6g7f6d3e4f8d8": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4b7",
+     "san": "Bxb7"
+    }
+   ],
+   "eco": "C10",
+   "name": "French Defense: Rubinstein Variation, Blackburne Defense"
+  },
+  "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7g1f3g8f6e4f6d7f6f1d3c7c5d4c5f8c5e1g1e8g8c1g5b7b6d1e2c8b7a1d1d8c7g5f6g7f6d3e4f8d8e4b7": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c7b7",
+     "san": "Qxb7",
+     "idea": "Recapture. Your queen is on the long diagonal."
+    }
+   ],
+   "eco": "C10",
+   "name": "French Defense: Rubinstein Variation, Blackburne Defense"
+  },
+  "e2e4e7e6d2d4d7d5b1c3d5e4c3e4b8d7g1f3g8f6e4f6d7f6f1d3c7c5d4c5f8c5e1g1e8g8c1g5b7b6d1e2c8b7a1d1d8c7g5f6g7f6d3e4f8d8e4b7c7b7": {
+   "ply": 30,
    "turn": "w",
    "mine": false,
    "replies": [],
@@ -1530,6 +2056,114 @@
    "ply": 26,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "a3b4",
+     "san": "axb4"
+    }
+   ],
+   "eco": "C02",
+   "name": "French Defense: Advance Variation, Paulsen Attack"
+  },
+  "e2e4e7e6d2d4d7d5e4e5c7c5c2c3b8c6g1f3d8b6f1e2c5d4c3d4g8h6b1c3h6f5c3a4b6a5c1d2f8b4d2c3b7b5a2a3b4c3a4c3b5b4a3b4": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a5b4",
+     "san": "Qxb4",
+     "idea": "Take back, hitting b2, c3 and d4."
+    }
+   ],
+   "eco": "C02",
+   "name": "French Defense: Advance Variation, Paulsen Attack"
+  },
+  "e2e4e7e6d2d4d7d5e4e5c7c5c2c3b8c6g1f3d8b6f1e2c5d4c3d4g8h6b1c3h6f5c3a4b6a5c1d2f8b4d2c3b7b5a2a3b4c3a4c3b5b4a3b4a5b4": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e2b5",
+     "san": "Bb5"
+    }
+   ],
+   "eco": "C02",
+   "name": "French Defense: Advance Variation, Paulsen Attack"
+  },
+  "e2e4e7e6d2d4d7d5e4e5c7c5c2c3b8c6g1f3d8b6f1e2c5d4c3d4g8h6b1c3h6f5c3a4b6a5c1d2f8b4d2c3b7b5a2a3b4c3a4c3b5b4a3b4a5b4e2b5": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8d7",
+     "san": "Bd7",
+     "idea": "Break the pin on c6."
+    }
+   ],
+   "eco": "C02",
+   "name": "French Defense: Advance Variation, Paulsen Attack"
+  },
+  "e2e4e7e6d2d4d7d5e4e5c7c5c2c3b8c6g1f3d8b6f1e2c5d4c3d4g8h6b1c3h6f5c3a4b6a5c1d2f8b4d2c3b7b5a2a3b4c3a4c3b5b4a3b4a5b4e2b5c8d7": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b5c6",
+     "san": "Bxc6"
+    }
+   ],
+   "eco": "C02",
+   "name": "French Defense: Advance Variation, Paulsen Attack"
+  },
+  "e2e4e7e6d2d4d7d5e4e5c7c5c2c3b8c6g1f3d8b6f1e2c5d4c3d4g8h6b1c3h6f5c3a4b6a5c1d2f8b4d2c3b7b5a2a3b4c3a4c3b5b4a3b4a5b4e2b5c8d7b5c6": {
+   "ply": 31,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7c6",
+     "san": "Bxc6",
+     "idea": "Recapture. Your light-squared bishop is out of the chain."
+    }
+   ],
+   "eco": "C02",
+   "name": "French Defense: Advance Variation, Paulsen Attack"
+  },
+  "e2e4e7e6d2d4d7d5e4e5c7c5c2c3b8c6g1f3d8b6f1e2c5d4c3d4g8h6b1c3h6f5c3a4b6a5c1d2f8b4d2c3b7b5a2a3b4c3a4c3b5b4a3b4a5b4e2b5c8d7b5c6d7c6": {
+   "ply": 32,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1d2",
+     "san": "Qd2"
+    }
+   ],
+   "eco": "C02",
+   "name": "French Defense: Advance Variation, Paulsen Attack"
+  },
+  "e2e4e7e6d2d4d7d5e4e5c7c5c2c3b8c6g1f3d8b6f1e2c5d4c3d4g8h6b1c3h6f5c3a4b6a5c1d2f8b4d2c3b7b5a2a3b4c3a4c3b5b4a3b4a5b4e2b5c8d7b5c6d7c6d1d2": {
+   "ply": 33,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle. The position is solid and your pieces are active."
+    }
+   ],
+   "eco": "C02",
+   "name": "French Defense: Advance Variation, Paulsen Attack"
+  },
+  "e2e4e7e6d2d4d7d5e4e5c7c5c2c3b8c6g1f3d8b6f1e2c5d4c3d4g8h6b1c3h6f5c3a4b6a5c1d2f8b4d2c3b7b5a2a3b4c3a4c3b5b4a3b4a5b4e2b5c8d7b5c6d7c6d1d2e8g8": {
+   "ply": 34,
+   "turn": "w",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "C02",
@@ -1674,6 +2308,46 @@
    "ply": 20,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "g1h1",
+     "san": "Kh1"
+    }
+   ],
+   "eco": "C02",
+   "name": "French Defense: Advance Variation, Euwe Variation"
+  },
+  "e2e4e7e6d2d4d7d5e4e5c7c5c2c3b8c6g1f3c8d7f1e2g8e7b1a3c5d4c3d4e7f5a3c2d8b6e1g1a8c8g1h1": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c6a5",
+     "san": "Na5",
+     "idea": "The knight heads for c4, the square your queenside play needs."
+    }
+   ],
+   "eco": "C02",
+   "name": "French Defense: Advance Variation, Euwe Variation"
+  },
+  "e2e4e7e6d2d4d7d5e4e5c7c5c2c3b8c6g1f3c8d7f1e2g8e7b1a3c5d4c3d4e7f5a3c2d8b6e1g1a8c8g1h1c6a5": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g2g4",
+     "san": "g4"
+    }
+   ],
+   "eco": "C02",
+   "name": "French Defense: Advance Variation, Euwe Variation"
+  },
+  "e2e4e7e6d2d4d7d5e4e5c7c5c2c3b8c6g1f3c8d7f1e2g8e7b1a3c5d4c3d4e7f5a3c2d8b6e1g1a8c8g1h1c6a5g2g4": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "C02",

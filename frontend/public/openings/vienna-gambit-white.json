@@ -1,0 +1,794 @@
+{
+ "id": "vienna-gambit-white",
+ "title": "The Vienna Gambit",
+ "family": "1. e4 e5 2. Nc3",
+ "blurb": "A sounder cousin of the King's Gambit: develop the knight first, then strike with f4.",
+ "side": "w",
+ "difficulty": 2,
+ "lines": [
+  {
+   "id": "vg-main-be7",
+   "label": "Vienna Gambit, 5...Be7",
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Breyer Variation",
+   "path": "e2e4e7e5b1c3g8f6f2f4d7d5f4e5f6e4g1f3f8e7d2d4e8g8f1d3f7f5e5f6e7f6e1g1b8c6c3e4d5e4d3e4c6d4c2c3",
+   "plies": 23
+  },
+  {
+   "id": "vg-bg4",
+   "label": "Vienna Gambit, 5...Bg4",
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Kaufmann Variation",
+   "path": "e2e4e7e5b1c3g8f6f2f4d7d5f4e5f6e4g1f3c8g4d1e2e4c3d2c3c7c6c1f4b8d7e1c1",
+   "plies": 17
+  },
+  {
+   "id": "vg-exf4",
+   "label": "Vienna Gambit, 3...exf4",
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit",
+   "path": "e2e4e7e5b1c3g8f6f2f4e5f4e4e5f6g8g1f3d7d6d2d4d6e5d1e2f8b4e2e5d8e7e5e7g8e7c1f4",
+   "plies": 19
+  },
+  {
+   "id": "vg-trap-qe7",
+   "label": "Trap: 4...Qe7?",
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit",
+   "path": "e2e4e7e5b1c3g8f6f2f4e5f4e4e5d8e7d1e2f6g8g1f3d7d6c3d5e7d8e5d6c8e6d5c7",
+   "plies": 17
+  }
+ ],
+ "nodes": {
+  "": {
+   "ply": 0,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e2e4",
+     "san": "e4",
+     "idea": "Take the centre."
+    }
+   ]
+  },
+  "e2e4": {
+   "ply": 1,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7e5",
+     "san": "e5"
+    }
+   ],
+   "eco": "B00",
+   "name": "King's Pawn Game"
+  },
+  "e2e4e7e5": {
+   "ply": 2,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "Develop, and keep the f-pawn free to advance."
+    }
+   ],
+   "eco": "C20",
+   "name": "King's Pawn Game"
+  },
+  "e2e4e7e5b1c3": {
+   "ply": 3,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "C25",
+   "name": "Vienna Game"
+  },
+  "e2e4e7e5b1c3g8f6": {
+   "ply": 4,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f2f4",
+     "san": "f4",
+     "idea": "The Vienna Gambit. Strike at e5 with the f-pawn."
+    }
+   ],
+   "eco": "C26",
+   "name": "Vienna Game: Falkbeer Variation"
+  },
+  "e2e4e7e5b1c3g8f6f2f4": {
+   "ply": 5,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d5",
+     "san": "d5"
+    },
+    {
+     "uci": "e5f4",
+     "san": "exf4"
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit"
+  },
+  "e2e4e7e5b1c3g8f6f2f4d7d5": {
+   "ply": 6,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f4e5",
+     "san": "fxe5",
+     "idea": "Take, and gain space with the pawn on e5."
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Main Line"
+  },
+  "e2e4e7e5b1c3g8f6f2f4d7d5f4e5": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f6e4",
+     "san": "Nxe4"
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Main Line"
+  },
+  "e2e4e7e5b1c3g8f6f2f4d7d5f4e5f6e4": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3",
+     "idea": "Develop and support e5."
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Main Line"
+  },
+  "e2e4e7e5b1c3g8f6f2f4d7d5f4e5f6e4g1f3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8e7",
+     "san": "Be7"
+    },
+    {
+     "uci": "c8g4",
+     "san": "Bg4"
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Main Line"
+  },
+  "e2e4e7e5b1c3g8f6f2f4d7d5f4e5f6e4g1f3f8e7": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4",
+     "idea": "Build the centre behind the e5 pawn."
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Breyer Variation"
+  },
+  "e2e4e7e5b1c3g8f6f2f4d7d5f4e5f6e4g1f3f8e7d2d4": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Breyer Variation"
+  },
+  "e2e4e7e5b1c3g8f6f2f4d7d5f4e5f6e4g1f3f8e7d2d4e8g8": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1d3",
+     "san": "Bd3",
+     "idea": "Develop toward the kingside and challenge the e4 knight."
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Breyer Variation"
+  },
+  "e2e4e7e5b1c3g8f6f2f4d7d5f4e5f6e4g1f3f8e7d2d4e8g8f1d3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f7f5",
+     "san": "f5"
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Breyer Variation"
+  },
+  "e2e4e7e5b1c3g8f6f2f4d7d5f4e5f6e4g1f3f8e7d2d4e8g8f1d3f7f5": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e5f6",
+     "san": "exf6",
+     "idea": "Take en passant. The f-file opens for your rook."
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Breyer Variation"
+  },
+  "e2e4e7e5b1c3g8f6f2f4d7d5f4e5f6e4g1f3f8e7d2d4e8g8f1d3f7f5e5f6": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7f6",
+     "san": "Bxf6"
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Breyer Variation"
+  },
+  "e2e4e7e5b1c3g8f6f2f4d7d5f4e5f6e4g1f3f8e7d2d4e8g8f1d3f7f5e5f6e7f6": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle, with the rook already on the half-open f-file."
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Breyer Variation"
+  },
+  "e2e4e7e5b1c3g8f6f2f4d7d5f4e5f6e4g1f3f8e7d2d4e8g8f1d3f7f5e5f6e7f6e1g1": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6"
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Breyer Variation"
+  },
+  "e2e4e7e5b1c3g8f6f2f4d7d5f4e5f6e4g1f3f8e7d2d4e8g8f1d3f7f5e5f6e7f6e1g1b8c6": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c3e4",
+     "san": "Nxe4",
+     "idea": "Trade off the strong e4 knight."
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Breyer Variation"
+  },
+  "e2e4e7e5b1c3g8f6f2f4d7d5f4e5f6e4g1f3f8e7d2d4e8g8f1d3f7f5e5f6e7f6e1g1b8c6c3e4": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d5e4",
+     "san": "dxe4"
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Breyer Variation"
+  },
+  "e2e4e7e5b1c3g8f6f2f4d7d5f4e5f6e4g1f3f8e7d2d4e8g8f1d3f7f5e5f6e7f6e1g1b8c6c3e4d5e4": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d3e4",
+     "san": "Bxe4",
+     "idea": "Take back. Your bishop is aimed at h7."
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Breyer Variation"
+  },
+  "e2e4e7e5b1c3g8f6f2f4d7d5f4e5f6e4g1f3f8e7d2d4e8g8f1d3f7f5e5f6e7f6e1g1b8c6c3e4d5e4d3e4": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c6d4",
+     "san": "Nxd4"
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Breyer Variation"
+  },
+  "e2e4e7e5b1c3g8f6f2f4d7d5f4e5f6e4g1f3f8e7d2d4e8g8f1d3f7f5e5f6e7f6e1g1b8c6c3e4d5e4d3e4c6d4": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c2c3",
+     "san": "c3",
+     "idea": "Kick the d4 knight."
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Breyer Variation"
+  },
+  "e2e4e7e5b1c3g8f6f2f4d7d5f4e5f6e4g1f3f8e7d2d4e8g8f1d3f7f5e5f6e7f6e1g1b8c6c3e4d5e4d3e4c6d4c2c3": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Breyer Variation"
+  },
+  "e2e4e7e5b1c3g8f6f2f4d7d5f4e5f6e4g1f3c8g4": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1e2",
+     "san": "Qe2",
+     "idea": "Challenge the e4 knight and break the pin on the f3 knight."
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Main Line"
+  },
+  "e2e4e7e5b1c3g8f6f2f4d7d5f4e5f6e4g1f3c8g4d1e2": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4c3",
+     "san": "Nxc3"
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Kaufmann Variation"
+  },
+  "e2e4e7e5b1c3g8f6f2f4d7d5f4e5f6e4g1f3c8g4d1e2e4c3": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2c3",
+     "san": "dxc3",
+     "idea": "Take toward the centre. The d-file opens for your rook."
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Kaufmann Variation"
+  },
+  "e2e4e7e5b1c3g8f6f2f4d7d5f4e5f6e4g1f3c8g4d1e2e4c3d2c3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c7c6",
+     "san": "c6"
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Kaufmann Variation"
+  },
+  "e2e4e7e5b1c3g8f6f2f4d7d5f4e5f6e4g1f3c8g4d1e2e4c3d2c3c7c6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1f4",
+     "san": "Bf4",
+     "idea": "Develop and protect e5."
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Kaufmann Variation"
+  },
+  "e2e4e7e5b1c3g8f6f2f4d7d5f4e5f6e4g1f3c8g4d1e2e4c3d2c3c7c6c1f4": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b8d7",
+     "san": "Nd7"
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Kaufmann Variation"
+  },
+  "e2e4e7e5b1c3g8f6f2f4d7d5f4e5f6e4g1f3c8g4d1e2e4c3d2c3c7c6c1f4b8d7": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1c1",
+     "san": "O-O-O",
+     "idea": "Castle long. The rook lands on the d-file, facing Black's queen."
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Kaufmann Variation"
+  },
+  "e2e4e7e5b1c3g8f6f2f4d7d5f4e5f6e4g1f3c8g4d1e2e4c3d2c3c7c6c1f4b8d7e1c1": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit, Kaufmann Variation"
+  },
+  "e2e4e7e5b1c3g8f6f2f4e5f4": {
+   "ply": 6,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e4e5",
+     "san": "e5",
+     "idea": "Kick the knight. It has to go back to g8."
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit"
+  },
+  "e2e4e7e5b1c3g8f6f2f4e5f4e4e5": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f6g8",
+     "san": "Ng8"
+    },
+    {
+     "uci": "d8e7",
+     "san": "Qe7"
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit"
+  },
+  "e2e4e7e5b1c3g8f6f2f4e5f4e4e5f6g8": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3",
+     "idea": "Develop and cover the h4 square."
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit"
+  },
+  "e2e4e7e5b1c3g8f6f2f4e5f4e4e5f6g8g1f3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6"
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit"
+  },
+  "e2e4e7e5b1c3g8f6f2f4e5f4e4e5f6g8g1f3d7d6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4",
+     "idea": "Build the centre."
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit"
+  },
+  "e2e4e7e5b1c3g8f6f2f4e5f4e4e5f6g8g1f3d7d6d2d4": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d6e5",
+     "san": "dxe5"
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit"
+  },
+  "e2e4e7e5b1c3g8f6f2f4e5f4e4e5f6g8g1f3d7d6d2d4d6e5": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1e2",
+     "san": "Qe2",
+     "idea": "Pin the e5 pawn and get ready to take it back."
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit"
+  },
+  "e2e4e7e5b1c3g8f6f2f4e5f4e4e5f6g8g1f3d7d6d2d4d6e5d1e2": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8b4",
+     "san": "Bb4"
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit"
+  },
+  "e2e4e7e5b1c3g8f6f2f4e5f4e4e5f6g8g1f3d7d6d2d4d6e5d1e2f8b4": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e2e5",
+     "san": "Qxe5+",
+     "idea": "Take back with check."
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit"
+  },
+  "e2e4e7e5b1c3g8f6f2f4e5f4e4e5f6g8g1f3d7d6d2d4d6e5d1e2f8b4e2e5": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8e7",
+     "san": "Qe7"
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit"
+  },
+  "e2e4e7e5b1c3g8f6f2f4e5f4e4e5f6g8g1f3d7d6d2d4d6e5d1e2f8b4e2e5d8e7": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e5e7",
+     "san": "Qxe7+",
+     "idea": "Trade queens."
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit"
+  },
+  "e2e4e7e5b1c3g8f6f2f4e5f4e4e5f6g8g1f3d7d6d2d4d6e5d1e2f8b4e2e5d8e7e5e7": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8e7",
+     "san": "Nxe7"
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit"
+  },
+  "e2e4e7e5b1c3g8f6f2f4e5f4e4e5f6g8g1f3d7d6d2d4d6e5d1e2f8b4e2e5d8e7e5e7g8e7": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1f4",
+     "san": "Bxf4",
+     "idea": "Win the f4 pawn back. Your development is better."
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit"
+  },
+  "e2e4e7e5b1c3g8f6f2f4e5f4e4e5f6g8g1f3d7d6d2d4d6e5d1e2f8b4e2e5d8e7e5e7g8e7c1f4": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit"
+  },
+  "e2e4e7e5b1c3g8f6f2f4e5f4e4e5d8e7": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1e2",
+     "san": "Qe2",
+     "idea": "Block the pin on e5 and kick the knight back."
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit"
+  },
+  "e2e4e7e5b1c3g8f6f2f4e5f4e4e5d8e7d1e2": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f6g8",
+     "san": "Ng8"
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit"
+  },
+  "e2e4e7e5b1c3g8f6f2f4e5f4e4e5d8e7d1e2f6g8": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3",
+     "idea": "Develop and hold e5."
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit"
+  },
+  "e2e4e7e5b1c3g8f6f2f4e5f4e4e5d8e7d1e2f6g8g1f3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6"
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit"
+  },
+  "e2e4e7e5b1c3g8f6f2f4e5f4e4e5d8e7d1e2f6g8g1f3d7d6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c3d5",
+     "san": "Nd5",
+     "idea": "Kick the queen, and aim at c7 and f4."
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit"
+  },
+  "e2e4e7e5b1c3g8f6f2f4e5f4e4e5d8e7d1e2f6g8g1f3d7d6c3d5": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7d8",
+     "san": "Qd8"
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit"
+  },
+  "e2e4e7e5b1c3g8f6f2f4e5f4e4e5d8e7d1e2f6g8g1f3d7d6c3d5e7d8": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e5d6",
+     "san": "exd6+",
+     "idea": "Take with discovered check from the queen on e2."
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit"
+  },
+  "e2e4e7e5b1c3g8f6f2f4e5f4e4e5d8e7d1e2f6g8g1f3d7d6c3d5e7d8e5d6": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8e6",
+     "san": "Be6"
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit"
+  },
+  "e2e4e7e5b1c3g8f6f2f4e5f4e4e5d8e7d1e2f6g8g1f3d7d6c3d5e7d8e5d6c8e6": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d5c7",
+     "san": "Nxc7+",
+     "idea": "Fork the king and the a8 rook. You win material."
+    }
+   ],
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit"
+  },
+  "e2e4e7e5b1c3g8f6f2f4e5f4e4e5d8e7d1e2f6g8g1f3d7d6c3d5e7d8e5d6c8e6d5c7": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C29",
+   "name": "Vienna Game: Vienna Gambit"
+  }
+ }
+}

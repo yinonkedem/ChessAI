@@ -1,0 +1,1289 @@
+{
+ "id": "danish-white",
+ "title": "The Danish Gambit",
+ "family": "1. e4 e5 2. d4 exd4 3. c3",
+ "blurb": "Give up two pawns in three moves for two bishops raking the black king. Fast and dangerous.",
+ "side": "w",
+ "difficulty": 2,
+ "lines": [
+  {
+   "id": "da-main-d5",
+   "label": "Accepted, 5...d5",
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense",
+   "path": "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7d1d8f8b4d8d2b4d2b1d2c8e6g1f3h7h6f3e5f7e8",
+   "plies": 24
+  },
+  {
+   "id": "da-trap-qg5",
+   "label": "Trap: 5...Qg5?",
+   "eco": "C21",
+   "name": "Danish Gambit Accepted",
+   "path": "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d8g5g1f3g5g2h1g1g2h3c4f7e8f7f3g5",
+   "plies": 17
+  },
+  {
+   "id": "da-nc6",
+   "label": "Accepted, 5...Nc6",
+   "eco": "C21",
+   "name": "Danish Gambit Accepted",
+   "path": "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2b8c6g1f3f8b4b1c3g8f6e1g1e8g8e4e5f6e8c3d5d7d6",
+   "plies": 20
+  },
+  {
+   "id": "da-d6",
+   "label": "Accepted, 5...d6",
+   "eco": "C21",
+   "name": "Danish Gambit Accepted",
+   "path": "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d6d1b3d8d7b1c3b8c6c3d5",
+   "plies": 15
+  },
+  {
+   "id": "da-trap-nxe4",
+   "label": "Trap: 7...Nxe4?",
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Copenhagen Defense",
+   "path": "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2f8b4b1c3g8f6g1e2f6e4e1g1e4c3e2c3b4c3b2c3e8g8d1g4",
+   "plies": 21
+  },
+  {
+   "id": "da-declined-d5",
+   "label": "Declined, 3...d5",
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense",
+   "path": "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8e7b1c3d5a5f1d3e8g8e1g1c8g4h2h3",
+   "plies": 19
+  },
+  {
+   "id": "da-bc4-nf6",
+   "label": "Accepted, 4...Nf6",
+   "eco": "C21",
+   "name": "Danish Gambit Accepted",
+   "path": "e2e4e7e5d2d4e5d4c2c3d4c3f1c4g8f6b1c3f8b4e4e5d7d5e5f6d5c4d1d8e8d8f6g7h8g8c1g5d8e8e1c1b8c6",
+   "plies": 22
+  }
+ ],
+ "nodes": {
+  "": {
+   "ply": 0,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e2e4",
+     "san": "e4",
+     "idea": "Take the centre and open lines for the queen and bishop."
+    }
+   ]
+  },
+  "e2e4": {
+   "ply": 1,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7e5",
+     "san": "e5"
+    }
+   ],
+   "eco": "B00",
+   "name": "King's Pawn Game"
+  },
+  "e2e4e7e5": {
+   "ply": 2,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4",
+     "idea": "Challenge e5 at once."
+    }
+   ],
+   "eco": "C20",
+   "name": "King's Pawn Game"
+  },
+  "e2e4e7e5d2d4": {
+   "ply": 3,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e5d4",
+     "san": "exd4"
+    }
+   ],
+   "eco": "C20",
+   "name": "Center Game"
+  },
+  "e2e4e7e5d2d4e5d4": {
+   "ply": 4,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c2c3",
+     "san": "c3",
+     "idea": "The Danish: offer a pawn so you can develop faster."
+    }
+   ],
+   "eco": "C21",
+   "name": "Center Game Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3": {
+   "ply": 5,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4c3",
+     "san": "dxc3"
+    },
+    {
+     "uci": "d7d5",
+     "san": "d5"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3": {
+   "ply": 6,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1c4",
+     "san": "Bc4",
+     "idea": "Offer the second pawn. Both bishops will aim at Black's king."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c3b2",
+     "san": "cxb2"
+    },
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1b2",
+     "san": "Bxb2",
+     "idea": "Take back with the bishop. It's on the long diagonal, aimed at g7."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d5",
+     "san": "d5"
+    },
+    {
+     "uci": "d8g5",
+     "san": "Qg5"
+    },
+    {
+     "uci": "b8c6",
+     "san": "Nc6"
+    },
+    {
+     "uci": "d7d6",
+     "san": "d6"
+    },
+    {
+     "uci": "f8b4",
+     "san": "Bb4+"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c4d5",
+     "san": "Bxd5",
+     "idea": "Take on d5. The bishop hits f7 and b7."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d5f7",
+     "san": "Bxf7+",
+     "idea": "Take on f7 with check, so Black can't keep the queens on."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8f7",
+     "san": "Kxf7"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1d8",
+     "san": "Qxd8",
+     "idea": "Trade queens. Black gets the bishop pair back, but the game is level."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7d1d8": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8b4",
+     "san": "Bb4+"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7d1d8f8b4": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8d2",
+     "san": "Qd2",
+     "idea": "Block the check with the queen and offer the trade."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7d1d8f8b4d8d2": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b4d2",
+     "san": "Bxd2+"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7d1d8f8b4d8d2b4d2": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1d2",
+     "san": "Nxd2",
+     "idea": "Recapture with the knight, developing it."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7d1d8f8b4d8d2b4d2b1d2": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8e6",
+     "san": "Be6"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7d1d8f8b4d8d2b4d2b1d2c8e6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Ngf3",
+     "idea": "Develop the other knight. A level endgame, and you know it better."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7d1d8f8b4d8d2b4d2b1d2c8e6g1f3": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h7h6",
+     "san": "h6"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7d1d8f8b4d8d2b4d2b1d2c8e6g1f3h7h6": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f3e5",
+     "san": "Ne5+",
+     "idea": "Check, and the knight is strong on e5."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7d1d8f8b4d8d2b4d2b1d2c8e6g1f3h7h6f3e5": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f7e8",
+     "san": "Ke8"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7d1d8f8b4d8d2b4d2b1d2c8e6g1f3h7h6f3e5f7e8": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [],
+   "end": true,
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d8g5": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3",
+     "idea": "Develop with tempo. Let the queen take on g2 if it wants."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d8g5g1f3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g5g2",
+     "san": "Qxg2"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d8g5g1f3g5g2": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h1g1",
+     "san": "Rg1",
+     "idea": "Chase the queen. The g-file is now open toward Black's king."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d8g5g1f3g5g2h1g1": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g2h3",
+     "san": "Qh3"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d8g5g1f3g5g2h1g1g2h3": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c4f7",
+     "san": "Bxf7+",
+     "idea": "The point: take on f7 with check."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d8g5g1f3g5g2h1g1g2h3c4f7": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8f7",
+     "san": "Kxf7"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d8g5g1f3g5g2h1g1g2h3c4f7e8f7": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f3g5",
+     "san": "Ng5+",
+     "idea": "Fork the king and the queen. You win the queen."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d8g5g1f3g5g2h1g1g2h3c4f7e8f7f3g5": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2b8c6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3",
+     "idea": "Develop and cover e5."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2b8c6g1f3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8b4",
+     "san": "Bb4+"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2b8c6g1f3f8b4": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "Block the check with a piece, not the queen."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2b8c6g1f3f8b4b1c3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2b8c6g1f3f8b4b1c3g8f6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle, then open the centre."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2b8c6g1f3f8b4b1c3g8f6e1g1": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2b8c6g1f3f8b4b1c3g8f6e1g1e8g8": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e4e5",
+     "san": "e5",
+     "idea": "Kick the knight away from the kingside."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2b8c6g1f3f8b4b1c3g8f6e1g1e8g8e4e5": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f6e8",
+     "san": "Ne8"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2b8c6g1f3f8b4b1c3g8f6e1g1e8g8e4e5f6e8": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c3d5",
+     "san": "Nd5",
+     "idea": "The knight hits the b4 bishop and eyes f6. Your pieces swarm the centre."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2b8c6g1f3f8b4b1c3g8f6e1g1e8g8e4e5f6e8c3d5": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2b8c6g1f3f8b4b1c3g8f6e1g1e8g8e4e5f6e8c3d5d7d6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [],
+   "end": true,
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1b3",
+     "san": "Qb3",
+     "idea": "Double up on f7 with queen and bishop."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d6d1b3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8d7",
+     "san": "Qd7"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d6d1b3d8d7": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "Develop with tempo toward d5."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d6d1b3d8d7b1c3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d6d1b3d8d7b1c3b8c6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c3d5",
+     "san": "Nd5",
+     "idea": "The knight joins the attack on c7 and f6, and the long diagonal is open for your bishop."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d6d1b3d8d7b1c3b8c6c3d5": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2f8b4": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "Block with the knight. You're happy to develop with tempo."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Copenhagen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2f8b4b1c3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Copenhagen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2f8b4b1c3g8f6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1e2",
+     "san": "Nge2",
+     "idea": "Develop, keeping the f-pawn free. Let Black grab e4."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Copenhagen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2f8b4b1c3g8f6g1e2": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f6e4",
+     "san": "Nxe4"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Copenhagen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2f8b4b1c3g8f6g1e2f6e4": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle. Black's pieces are about to come off, and yours will be aimed at g7."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Copenhagen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2f8b4b1c3g8f6g1e2f6e4e1g1": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4c3",
+     "san": "Nxc3"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Copenhagen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2f8b4b1c3g8f6g1e2f6e4e1g1e4c3": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e2c3",
+     "san": "Nxc3",
+     "idea": "Recapture. The long diagonal stays open."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Copenhagen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2f8b4b1c3g8f6g1e2f6e4e1g1e4c3e2c3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b4c3",
+     "san": "Bxc3"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Copenhagen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2f8b4b1c3g8f6g1e2f6e4e1g1e4c3e2c3b4c3": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b2c3",
+     "san": "Bxc3",
+     "idea": "Recapture. Both bishops now point at Black's king."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Copenhagen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2f8b4b1c3g8f6g1e2f6e4e1g1e4c3e2c3b4c3b2c3": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Copenhagen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2f8b4b1c3g8f6g1e2f6e4e1g1e4c3e2c3b4c3b2c3e8g8": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1g4",
+     "san": "Qg4",
+     "idea": "Threaten Qxg7 mate. The two bishops have nothing to stop them."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Copenhagen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2f8b4b1c3g8f6g1e2f6e4e1g1e4c3e2c3b4c3b2c3e8g8d1g4": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Copenhagen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5": {
+   "ply": 6,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e4d5",
+     "san": "exd5",
+     "idea": "Take. The Danish becomes a quiet open game."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8d5",
+     "san": "Qxd5"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c3d4",
+     "san": "cxd4",
+     "idea": "Take back. You have the only centre pawn."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3",
+     "idea": "Develop and cover d4."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8e7",
+     "san": "Be7"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8e7": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "Develop with tempo on the queen."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8e7b1c3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d5a5",
+     "san": "Qa5"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8e7b1c3d5a5": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1d3",
+     "san": "Bd3",
+     "idea": "Develop, aiming at h7. Your isolated d-pawn gives your pieces room."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8e7b1c3d5a5f1d3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8e7b1c3d5a5f1d3e8g8": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8e7b1c3d5a5f1d3e8g8e1g1": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8g4",
+     "san": "Bg4"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8e7b1c3d5a5f1d3e8g8e1g1c8g4": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h2h3",
+     "san": "h3",
+     "idea": "Put the question to the bishop."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8e7b1c3d5a5f1d3e8g8e1g1c8g4h2h3": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4g8f6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nxc3",
+     "idea": "Take back with the knight. One pawn down for a big lead in development."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4g8f6b1c3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8b4",
+     "san": "Bb4"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4g8f6b1c3f8b4": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e4e5",
+     "san": "e5",
+     "idea": "Kick the knight before Black can castle."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4g8f6b1c3f8b4e4e5": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d5",
+     "san": "d5"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4g8f6b1c3f8b4e4e5d7d5": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e5f6",
+     "san": "exf6",
+     "idea": "Take the knight. The bishop on c4 is hanging, but so is Black's kingside."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4g8f6b1c3f8b4e4e5d7d5e5f6": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d5c4",
+     "san": "dxc4"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4g8f6b1c3f8b4e4e5d7d5e5f6d5c4": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1d8",
+     "san": "Qxd8+",
+     "idea": "Trade queens with check first."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4g8f6b1c3f8b4e4e5d7d5e5f6d5c4d1d8": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8d8",
+     "san": "Kxd8"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4g8f6b1c3f8b4e4e5d7d5e5f6d5c4d1d8e8d8": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6g7",
+     "san": "fxg7",
+     "idea": "Take on g7. Black's structure is a wreck."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4g8f6b1c3f8b4e4e5d7d5e5f6d5c4d1d8e8d8f6g7": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h8g8",
+     "san": "Rg8"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4g8f6b1c3f8b4e4e5d7d5e5f6d5c4d1d8e8d8f6g7h8g8": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1g5",
+     "san": "Bg5+",
+     "idea": "Check with the bishop."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4g8f6b1c3f8b4e4e5d7d5e5f6d5c4d1d8e8d8f6g7h8g8c1g5": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8e8",
+     "san": "Ke8"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4g8f6b1c3f8b4e4e5d7d5e5f6d5c4d1d8e8d8f6g7h8g8c1g5d8e8": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1c1",
+     "san": "O-O-O",
+     "idea": "Castle long, with the rook straight onto the d-file."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4g8f6b1c3f8b4e4e5d7d5e5f6d5c4d1d8e8d8f6g7h8g8c1g5d8e8e1c1": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4g8f6b1c3f8b4e4e5d7d5e5f6d5c4d1d8e8d8f6g7h8g8c1g5d8e8e1c1b8c6": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [],
+   "end": true,
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  }
+ }
+}

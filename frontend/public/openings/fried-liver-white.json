@@ -1,0 +1,1201 @@
+{
+ "id": "fried-liver-white",
+ "title": "The Fried Liver Attack",
+ "family": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5",
+ "blurb": "Two pieces aim at f7 on move four. One slip and Black's king is dragged into the open.",
+ "side": "w",
+ "difficulty": 2,
+ "lines": [
+  {
+   "id": "fl-nxf7",
+   "label": "Fried Liver, 6.Nxf7!",
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Fried Liver Attack",
+   "path": "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5g5f7e8f7d1f3f7e6b1c3c6b4e1g1c7c6d2d4d8f6f3e2e6d7d4e5f6g6a2a3",
+   "plies": 25
+  },
+  {
+   "id": "fl-lolli",
+   "label": "Lolli Attack, 6.d4",
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Lolli Attack",
+   "path": "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5d2d4e5d4e1g1f8e7g5f7e8f7d1f3f7e6f1e1",
+   "plies": 19
+  },
+  {
+   "id": "fl-trap-ke8",
+   "label": "Trap: 7...Ke8?",
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Fried Liver Attack",
+   "path": "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5g5f7e8f7d1f3f7e8c4d5d8e7d5c6b7c6f3c6",
+   "plies": 19
+  },
+  {
+   "id": "fl-trap-h6",
+   "label": "Trap: 4...h6?",
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Knight Attack",
+   "path": "e2e4e7e5g1f3b8c6f1c4g8f6f3g5h7h6g5f7d8e7f7h8d7d5e4d5c6d4c2c3c8f5c3d4",
+   "plies": 17
+  },
+  {
+   "id": "fl-nxe4",
+   "label": "Two Knights, 4...Nxe4",
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Ponziani-Steinitz Gambit",
+   "path": "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f6e4c4f7e8e7d2d4h7h6g5e4e7f7d4d5c6d4c2c3d4f5d1f3d7d6",
+   "plies": 20
+  },
+  {
+   "id": "fl-correct-na5",
+   "label": "When Black defends: 5...Na5",
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense",
+   "path": "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5f8d6d2d4e4d3e5d3d8c7h2h3e8g8e1g1c8f5b1c3a8d8",
+   "plies": 30
+  }
+ ],
+ "nodes": {
+  "": {
+   "ply": 0,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e2e4",
+     "san": "e4",
+     "idea": "Take the centre and open lines for the queen and the f1 bishop."
+    }
+   ]
+  },
+  "e2e4": {
+   "ply": 1,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7e5",
+     "san": "e5"
+    }
+   ],
+   "eco": "B00",
+   "name": "King's Pawn Game"
+  },
+  "e2e4e7e5": {
+   "ply": 2,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3",
+     "idea": "Develop with a threat to e5."
+    }
+   ],
+   "eco": "C20",
+   "name": "King's Pawn Game"
+  },
+  "e2e4e7e5g1f3": {
+   "ply": 3,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6"
+    }
+   ],
+   "eco": "C40",
+   "name": "King's Knight Opening"
+  },
+  "e2e4e7e5g1f3b8c6": {
+   "ply": 4,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1c4",
+     "san": "Bc4",
+     "idea": "The Italian bishop, aimed straight at f7, the one square only the king defends."
+    }
+   ],
+   "eco": "C44",
+   "name": "King's Knight Opening: Normal Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1c4": {
+   "ply": 5,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "C50",
+   "name": "Italian Game"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6": {
+   "ply": 6,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f3g5",
+     "san": "Ng5",
+     "idea": "Now both the knight and the bishop hit f7. Black must do something right now."
+    }
+   ],
+   "eco": "C55",
+   "name": "Italian Game: Two Knights Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d5",
+     "san": "d5"
+    },
+    {
+     "uci": "h7h6",
+     "san": "h6"
+    },
+    {
+     "uci": "f6e4",
+     "san": "Nxe4"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Knight Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e4d5",
+     "san": "exd5",
+     "idea": "Take. Black's natural recapture, ...Nxd5, is exactly what you're hoping for."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Knight Attack, Normal Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f6d5",
+     "san": "Nxd5"
+    },
+    {
+     "uci": "c6a5",
+     "san": "Na5"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Knight Attack, Normal Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g5f7",
+     "san": "Nxf7",
+     "idea": "The Fried Liver: sacrifice the knight to drag the king out."
+    },
+    {
+     "uci": "d2d4",
+     "san": "d4",
+     "idea": "The Lolli: open the centre first and sacrifice later. Engines rate it even higher than 6.Nxf7."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Knight Attack, Normal Variation"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5g5f7": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8f7",
+     "san": "Kxf7"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Fried Liver Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5g5f7e8f7": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1f3",
+     "san": "Qf3+",
+     "idea": "Check, and attack the pinned knight on d5 a second time."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Fried Liver Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5g5f7e8f7d1f3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f7e6",
+     "san": "Ke6"
+    },
+    {
+     "uci": "f7e8",
+     "san": "Ke8"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Fried Liver Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5g5f7e8f7d1f3f7e6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "Hit d5 a third time. The king on e6 can't get out of the way of your pieces."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Fried Liver Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5g5f7e8f7d1f3f7e6b1c3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c6b4",
+     "san": "Ncb4"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Fried Liver Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5g5f7e8f7d1f3f7e6b1c3c6b4": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle and bring the rook to e1. You're a piece down, but Black's king has no shelter."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Fried Liver Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5g5f7e8f7d1f3f7e6b1c3c6b4e1g1": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c7c6",
+     "san": "c6"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Fried Liver Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5g5f7e8f7d1f3f7e6b1c3c6b4e1g1c7c6": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4",
+     "idea": "Open the centre. Every line that opens runs toward the black king."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Fried Liver Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5g5f7e8f7d1f3f7e6b1c3c6b4e1g1c7c6d2d4": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8f6",
+     "san": "Qf6"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Fried Liver Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5g5f7e8f7d1f3f7e6b1c3c6b4e1g1c7c6d2d4d8f6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f3e2",
+     "san": "Qe2",
+     "idea": "Pin the e5 pawn against the king and keep the queen active."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Fried Liver Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5g5f7e8f7d1f3f7e6b1c3c6b4e1g1c7c6d2d4d8f6f3e2": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e6d7",
+     "san": "Kd7"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Fried Liver Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5g5f7e8f7d1f3f7e6b1c3c6b4e1g1c7c6d2d4d8f6f3e2e6d7": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d4e5",
+     "san": "dxe5",
+     "idea": "Take, hitting the queen."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Fried Liver Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5g5f7e8f7d1f3f7e6b1c3c6b4e1g1c7c6d2d4d8f6f3e2e6d7d4e5": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f6g6",
+     "san": "Qg6"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Fried Liver Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5g5f7e8f7d1f3f7e6b1c3c6b4e1g1c7c6d2d4d8f6f3e2e6d7d4e5f6g6": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a2a3",
+     "san": "a3",
+     "idea": "Kick the b4 knight."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Fried Liver Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5g5f7e8f7d1f3f7e6b1c3c6b4e1g1c7c6d2d4d8f6f3e2e6d7d4e5f6g6a2a3": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Fried Liver Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5d2d4": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e5d4",
+     "san": "exd4"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Lolli Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5d2d4e5d4": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle, and get the rook ready for the e-file."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Lolli Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5d2d4e5d4e1g1": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8e7",
+     "san": "Be7"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Lolli Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5d2d4e5d4e1g1f8e7": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g5f7",
+     "san": "Nxf7",
+     "idea": "Now the knight sacrifice, with your rook already on the way."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Lolli Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5d2d4e5d4e1g1f8e7g5f7": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8f7",
+     "san": "Kxf7"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Lolli Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5d2d4e5d4e1g1f8e7g5f7e8f7": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1f3",
+     "san": "Qf3+",
+     "idea": "Check, and hit the d5 knight."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Lolli Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5d2d4e5d4e1g1f8e7g5f7e8f7d1f3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f7e6",
+     "san": "Ke6"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Lolli Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5d2d4e5d4e1g1f8e7g5f7e8f7d1f3f7e6": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1e1",
+     "san": "Re1+",
+     "idea": "Check on the e-file straight away. The king has no safe square left."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Lolli Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5d2d4e5d4e1g1f8e7g5f7e8f7d1f3f7e6f1e1": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Lolli Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5g5f7e8f7d1f3f7e8": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c4d5",
+     "san": "Bxd5",
+     "idea": "Take the pinned knight. The king went back to e8, so d5 has no defenders."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Fried Liver Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5g5f7e8f7d1f3f7e8c4d5": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8e7",
+     "san": "Qe7"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Fried Liver Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5g5f7e8f7d1f3f7e8c4d5d8e7": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d5c6",
+     "san": "Bxc6+",
+     "idea": "Take the other knight, with check."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Fried Liver Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5g5f7e8f7d1f3f7e8c4d5d8e7d5c6": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b7c6",
+     "san": "bxc6"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Fried Liver Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5g5f7e8f7d1f3f7e8c4d5d8e7d5c6b7c6": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f3c6",
+     "san": "Qxc6+",
+     "idea": "Fork the king and the a8 rook. You're winning material."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Fried Liver Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5f6d5g5f7e8f7d1f3f7e8c4d5d8e7d5c6b7c6f3c6": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Fried Liver Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5h7h6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g5f7",
+     "san": "Nxf7",
+     "idea": "Punish ...h6 at once: the knight forks the queen and the h8 rook."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Knight Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5h7h6g5f7": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8e7",
+     "san": "Qe7"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Knight Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5h7h6g5f7d8e7": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f7h8",
+     "san": "Nxh8",
+     "idea": "Take the rook. You're a full exchange up."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Knight Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5h7h6g5f7d8e7f7h8": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d5",
+     "san": "d5"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Knight Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5h7h6g5f7d8e7f7h8d7d5": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e4d5",
+     "san": "exd5",
+     "idea": "Take the pawn. The bishop is covered."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Knight Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5h7h6g5f7d8e7f7h8d7d5e4d5": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c6d4",
+     "san": "Nd4"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Knight Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5h7h6g5f7d8e7f7h8d7d5e4d5c6d4": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c2c3",
+     "san": "c3",
+     "idea": "Kick the knight before it reaches c2."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Knight Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5h7h6g5f7d8e7f7h8d7d5e4d5c6d4c2c3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8f5",
+     "san": "Bf5"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Knight Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5h7h6g5f7d8e7f7h8d7d5e4d5c6d4c2c3c8f5": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c3d4",
+     "san": "cxd4",
+     "idea": "Take the knight too. You're simply winning."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Knight Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5h7h6g5f7d8e7f7h8d7d5e4d5c6d4c2c3c8f5c3d4": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Knight Attack"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f6e4": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c4f7",
+     "san": "Bxf7+",
+     "idea": "Check first. The king can't castle any more and has to walk."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Ponziani-Steinitz Gambit"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f6e4c4f7": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8e7",
+     "san": "Ke7"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Ponziani-Steinitz Gambit"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f6e4c4f7e8e7": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4",
+     "idea": "Open the centre while the black king is stuck on e7."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Ponziani-Steinitz Gambit"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f6e4c4f7e8e7d2d4": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h7h6",
+     "san": "h6"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Ponziani-Steinitz Gambit"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f6e4c4f7e8e7d2d4h7h6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g5e4",
+     "san": "Nxe4",
+     "idea": "Take the knight. The material is level, and Black's king is exposed."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Ponziani-Steinitz Gambit"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f6e4c4f7e8e7d2d4h7h6g5e4": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7f7",
+     "san": "Kxf7"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Ponziani-Steinitz Gambit"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f6e4c4f7e8e7d2d4h7h6g5e4e7f7": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d4d5",
+     "san": "d5",
+     "idea": "Kick the c6 knight. Black's king is in the open and the pieces are undeveloped."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Ponziani-Steinitz Gambit"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f6e4c4f7e8e7d2d4h7h6g5e4e7f7d4d5": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c6d4",
+     "san": "Nd4"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Ponziani-Steinitz Gambit"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f6e4c4f7e8e7d2d4h7h6g5e4e7f7d4d5c6d4": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c2c3",
+     "san": "c3",
+     "idea": "Kick the knight."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Ponziani-Steinitz Gambit"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f6e4c4f7e8e7d2d4h7h6g5e4e7f7d4d5c6d4c2c3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4f5",
+     "san": "Nf5"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Ponziani-Steinitz Gambit"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f6e4c4f7e8e7d2d4h7h6g5e4e7f7d4d5c6d4c2c3d4f5": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1f3",
+     "san": "Qf3",
+     "idea": "Hit the f5 knight. Black's king is still exposed."
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Ponziani-Steinitz Gambit"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f6e4c4f7e8e7d2d4h7h6g5e4e7f7d4d5c6d4c2c3d4f5d1f3": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6"
+    }
+   ],
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Ponziani-Steinitz Gambit"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5f6e4c4f7e8e7d2d4h7h6g5e4e7f7d4d5c6d4c2c3d4f5d1f3d7d6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [],
+   "end": true,
+   "eco": "C57",
+   "name": "Italian Game: Two Knights Defense, Ponziani-Steinitz Gambit"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c4b5",
+     "san": "Bb5+",
+     "idea": "Check, keeping the extra pawn a bit longer."
+    }
+   ],
+   "eco": "C58",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c7c6",
+     "san": "c6"
+    }
+   ],
+   "eco": "C58",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Bishop Check Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d5c6",
+     "san": "dxc6",
+     "idea": "Take. You're a pawn up; Black gets fast development in return."
+    }
+   ],
+   "eco": "C58",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Bishop Check Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b7c6",
+     "san": "bxc6"
+    }
+   ],
+   "eco": "C58",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Bishop Check Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b5e2",
+     "san": "Be2",
+     "idea": "Retreat and keep the pawn. The attack is over: now it's about consolidating."
+    }
+   ],
+   "eco": "C58",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Bishop Check Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h7h6",
+     "san": "h6"
+    }
+   ],
+   "eco": "C58",
+   "name": "Italian Game: Two Knights Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g5f3",
+     "san": "Nf3",
+     "idea": "Back to safety. The knight has done its job on g5."
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e5e4",
+     "san": "e4"
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f3e5",
+     "san": "Ne5",
+     "idea": "The best square: the knight blocks the e-file and supports the extra pawn."
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8d6",
+     "san": "Bd6"
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5f8d6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4",
+     "idea": "Challenge the e4 pawn and offer to give the pawn back for freedom."
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5f8d6d2d4": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4d3",
+     "san": "exd3"
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5f8d6d2d4e4d3": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e5d3",
+     "san": "Nxd3",
+     "idea": "Recapture. Material is level, and your structure is sounder."
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5f8d6d2d4e4d3e5d3": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8c7",
+     "san": "Qc7"
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5f8d6d2d4e4d3e5d3d8c7": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h2h3",
+     "san": "h3",
+     "idea": "Take g4 away from Black's bishop before castling."
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5f8d6d2d4e4d3e5d3d8c7h2h3": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5f8d6d2d4e4d3e5d3d8c7h2h3e8g8": {
+   "ply": 26,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle. You've survived Black's initiative with the healthier pawns."
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5f8d6d2d4e4d3e5d3d8c7h2h3e8g8e1g1": {
+   "ply": 27,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8f5",
+     "san": "Bf5"
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5f8d6d2d4e4d3e5d3d8c7h2h3e8g8e1g1c8f5": {
+   "ply": 28,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "Develop the last knight."
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5f8d6d2d4e4d3e5d3d8c7h2h3e8g8e1g1c8f5b1c3": {
+   "ply": 29,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a8d8",
+     "san": "Rad8"
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5f8d6d2d4e4d3e5d3d8c7h2h3e8g8e1g1c8f5b1c3a8d8": {
+   "ply": 30,
+   "turn": "w",
+   "mine": true,
+   "replies": [],
+   "end": true,
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  }
+ }
+}

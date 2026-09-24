@@ -220,6 +220,36 @@
     white-space: nowrap;
 }
 
+.home-traps__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: var(--sp-5);
+}
+
+.home-traps__pair {
+    border-bottom: 1px solid var(--c-border);
+}
+
+.home-traps__pair .home-side__link {
+    border-bottom: 0;
+}
+
+.home-traps__defence {
+    font-weight: 600;
+    color: var(--c-ink-muted);
+    padding-left: var(--sp-5);
+}
+
+@media (min-width: 620px) {
+    .home-traps {
+        grid-column: 1 / -1;
+    }
+
+    .home-traps__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 .home-play {
     display: flex;
     flex-direction: column;

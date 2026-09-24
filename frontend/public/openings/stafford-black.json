@@ -1,0 +1,707 @@
+{
+ "id": "stafford-black",
+ "title": "The Stafford Gambit",
+ "family": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6",
+ "blurb": "Objectively unsound, but packed with traps. Most players who haven't seen it lose quickly.",
+ "side": "b",
+ "difficulty": 2,
+ "lines": [
+  {
+   "id": "st-trap-bg5",
+   "label": "Trap: 6.Bg5?? Nxe4!",
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted",
+   "path": "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6d2d3f8c5c1g5f6e4g5d8c5f2e1e2c8g4",
+   "plies": 16
+  },
+  {
+   "id": "st-trap-d4",
+   "label": "Trap: 5.e5 Ne4 6.d4? Qh4!",
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted",
+   "path": "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6e4e5f6e4d2d4d8h4g2g3e4g3f2g3h4e4d1e2e4h1",
+   "plies": 18
+  },
+  {
+   "id": "st-trap-d3",
+   "label": "Trap: 5.e5 Ne4 6.d3? Bc5!",
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted",
+   "path": "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6e4e5f6e4d2d3f8c5d3e4c5f2e1e2c8g4",
+   "plies": 16
+  },
+  {
+   "id": "st-trap-h3",
+   "label": "Trap: 8.h3? Bxf2+!",
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted",
+   "path": "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6b1c3f8c5f1c4f6g4e1g1d8h4h2h3c5f2",
+   "plies": 16
+  },
+  {
+   "id": "st-refuted",
+   "label": "When White knows it: 5.d3",
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted",
+   "path": "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6d2d3f8c5f1e2h7h5c2c3f6g4d3d4d8h4g2g3h4f6",
+   "plies": 18
+  }
+ ],
+ "nodes": {
+  "": {
+   "ply": 0,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e2e4",
+     "san": "e4"
+    }
+   ]
+  },
+  "e2e4": {
+   "ply": 1,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e7e5",
+     "san": "e5",
+     "idea": "Meet the centre pawn with your own."
+    }
+   ],
+   "eco": "B00",
+   "name": "King's Pawn Game"
+  },
+  "e2e4e7e5": {
+   "ply": 2,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3"
+    }
+   ],
+   "eco": "C20",
+   "name": "King's Pawn Game"
+  },
+  "e2e4e7e5g1f3": {
+   "ply": 3,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6",
+     "idea": "The Petrov move, but you're heading for the Stafford."
+    }
+   ],
+   "eco": "C40",
+   "name": "King's Knight Opening"
+  },
+  "e2e4e7e5g1f3g8f6": {
+   "ply": 4,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3e5",
+     "san": "Nxe5"
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense"
+  },
+  "e2e4e7e5g1f3g8f6f3e5": {
+   "ply": 5,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6",
+     "idea": "The Stafford Gambit: give up the e-pawn for fast development and traps."
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6": {
+   "ply": 6,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e5c6",
+     "san": "Nxc6"
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6": {
+   "ply": 7,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7c6",
+     "san": "dxc6",
+     "idea": "Recapture toward the centre. The d-file and the c8 bishop's diagonal open."
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d2d3",
+     "san": "d3"
+    },
+    {
+     "uci": "e4e5",
+     "san": "e5"
+    },
+    {
+     "uci": "b1c3",
+     "san": "Nc3"
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6d2d3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8c5",
+     "san": "Bc5",
+     "idea": "The bishop aims at f2, the weak point next to White's king."
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6d2d3f8c5": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1g5",
+     "san": "Bg5"
+    },
+    {
+     "uci": "f1e2",
+     "san": "Be2"
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6d2d3f8c5c1g5": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6e4",
+     "san": "Nxe4",
+     "idea": "The famous trap. Give up the queen, because ...Bxf2+ and ...Bg4 is mate."
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6d2d3f8c5c1g5f6e4": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g5d8",
+     "san": "Bxd8"
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6d2d3f8c5c1g5f6e4g5d8": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c5f2",
+     "san": "Bxf2+",
+     "idea": "Check. The king has only one square."
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6d2d3f8c5c1g5f6e4g5d8c5f2": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1e2",
+     "san": "Ke2"
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6d2d3f8c5c1g5f6e4g5d8c5f2e1e2": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8g4",
+     "san": "Bg4#",
+     "idea": "Checkmate. Every flight square is covered."
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6d2d3f8c5c1g5f6e4g5d8c5f2e1e2c8g4": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6e4e5": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6e4",
+     "san": "Ne4",
+     "idea": "Jump into e4, where the knight eyes f2."
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6e4e5f6e4": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4"
+    },
+    {
+     "uci": "d2d3",
+     "san": "d3"
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6e4e5f6e4d2d4": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8h4",
+     "san": "Qh4",
+     "idea": "Hit f2 twice. White's natural 7.g3 walks into a knight sacrifice."
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6e4e5f6e4d2d4d8h4": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g2g3",
+     "san": "g3"
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6e4e5f6e4d2d4d8h4g2g3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e4g3",
+     "san": "Nxg3",
+     "idea": "Take on g3. If White takes back, the h1 rook falls."
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6e4e5f6e4d2d4d8h4g2g3e4g3": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f2g3",
+     "san": "fxg3"
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6e4e5f6e4d2d4d8h4g2g3e4g3f2g3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h4e4",
+     "san": "Qe4+",
+     "idea": "Check, forking the king and the h1 rook."
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6e4e5f6e4d2d4d8h4g2g3e4g3f2g3h4e4": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1e2",
+     "san": "Qe2"
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6e4e5f6e4d2d4d8h4g2g3e4g3f2g3h4e4d1e2": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e4h1",
+     "san": "Qxh1",
+     "idea": "Take the rook. You're material up."
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6e4e5f6e4d2d4d8h4g2g3e4g3f2g3h4e4d1e2e4h1": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6e4e5f6e4d2d3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8c5",
+     "san": "Bc5",
+     "idea": "Ignore the attack on your knight. Aim at f2 instead."
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6e4e5f6e4d2d3f8c5": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d3e4",
+     "san": "dxe4"
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6e4e5f6e4d2d3f8c5d3e4": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c5f2",
+     "san": "Bxf2+",
+     "idea": "Check. The king has to walk into the open."
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6e4e5f6e4d2d3f8c5d3e4c5f2": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1e2",
+     "san": "Ke2"
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6e4e5f6e4d2d3f8c5d3e4c5f2e1e2": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8g4",
+     "san": "Bg4+",
+     "idea": "Check again, and this time the queen on d1 falls."
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6e4e5f6e4d2d3f8c5d3e4c5f2e1e2c8g4": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6b1c3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8c5",
+     "san": "Bc5",
+     "idea": "Same idea against 5.Nc3: the bishop aims at f2."
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6b1c3f8c5": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1c4",
+     "san": "Bc4"
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6b1c3f8c5f1c4": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6g4",
+     "san": "Ng4",
+     "idea": "The knight heads for g4 and f2."
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6b1c3f8c5f1c4f6g4": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O"
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6b1c3f8c5f1c4f6g4e1g1": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8h4",
+     "san": "Qh4",
+     "idea": "Bring the queen. The threat is ...Qxh2 mate."
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6b1c3f8c5f1c4f6g4e1g1d8h4": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h2h3",
+     "san": "h3"
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6b1c3f8c5f1c4f6g4e1g1d8h4h2h3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c5f2",
+     "san": "Bxf2+",
+     "idea": "Don't retreat: sacrifice on f2. White's kingside falls apart."
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6b1c3f8c5f1c4f6g4e1g1d8h4h2h3c5f2": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6d2d3f8c5f1e2": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h7h5",
+     "san": "h5",
+     "idea": "Support ...Ng4 and prepare ...h4."
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6d2d3f8c5f1e2h7h5": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c2c3",
+     "san": "c3"
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6d2d3f8c5f1e2h7h5c2c3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6g4",
+     "san": "Ng4",
+     "idea": "Keep going for f2."
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6d2d3f8c5f1e2h7h5c2c3f6g4": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d3d4",
+     "san": "d4"
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6d2d3f8c5f1e2h7h5c2c3f6g4d3d4": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8h4",
+     "san": "Qh4",
+     "idea": "Add the queen to the attack on f2."
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6d2d3f8c5f1e2h7h5c2c3f6g4d3d4d8h4": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g2g3",
+     "san": "g3"
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6d2d3f8c5f1e2h7h5c2c3f6g4d3d4d8h4g2g3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h4f6",
+     "san": "Qf6",
+     "idea": "Retreat and keep pressure on f2. Honestly, you're a pawn down with little to show for it. That's why the traps matter."
+    }
+   ],
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  },
+  "e2e4e7e5g1f3g8f6f3e5b8c6e5c6d7c6d2d3f8c5f1e2h7h5c2c3f6g4d3d4d8h4g2g3h4f6": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C42",
+   "name": "Petrov's Defense: Stafford Gambit Accepted"
+  }
+ }
+}

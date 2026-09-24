@@ -356,6 +356,11 @@ def main() -> int:
                 "cardCount": cards,
                 "choiceCount": choices,
                 "nodeCount": len(nodes),
+                # "attack" (gambits and trap-laden weapons) or "defence" (how
+                # to meet one); absent for ordinary repertoires. Each pairs
+                # with its `counterpart` so the catalog can link them.
+                **({"category": rep["category"]} if rep.get("category") else {}),
+                **({"counterpart": rep["counterpart"]} if rep.get("counterpart") else {}),
                 "file": f"{rep['id']}.json",
             })
 
@@ -364,6 +369,23 @@ def main() -> int:
             for line_id, san, path in all_conflicts[:10]:
                 print(f"    {line_id}: {san} after {path}")
             print("    The first authored wording wins. Make them agree, or drop one.")
+
+        # Attack/defence pairs must point at each other, from opposite colours:
+        # a dangling or one-way link would send the learner to a missing page.
+        by_id = {c["id"]: c for c in catalog}
+        for c in catalog:
+            cat, other = c.get("category"), c.get("counterpart")
+            if bool(cat) != bool(other):
+                raise BuildError(f"{c['id']}: 'category' and 'counterpart' go together")
+            if not other:
+                continue
+            if cat not in ("attack", "defence"):
+                raise BuildError(f"{c['id']}: category must be 'attack' or 'defence', got {cat!r}")
+            twin = by_id.get(other)
+            if not twin or twin.get("counterpart") != c["id"]:
+                raise BuildError(f"{c['id']}: counterpart {other!r} doesn't link back")
+            if twin["side"] == c["side"] or twin.get("category") == cat:
+                raise BuildError(f"{c['id']}: counterpart {other!r} must be the other colour and category")
 
         dupes = [i for i, n in seen_ids.items() if n > 1]
         if dupes:

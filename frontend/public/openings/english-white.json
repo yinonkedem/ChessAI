@@ -11,8 +11,8 @@
    "label": "Four Knights, 4...d5",
    "eco": "A29",
    "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6",
-   "path": "c2c4e7e5b1c3g8f6g1f3b8c6g2g3d7d5c4d5f6d5f1g2d5b6e1g1f8e7d2d3e8g8a2a3c8e6b2b4a7a5b4b5c6d4f3d2",
-   "plies": 23
+   "path": "c2c4e7e5b1c3g8f6g1f3b8c6g2g3d7d5c4d5f6d5f1g2d5b6e1g1f8e7d2d3e8g8a2a3c8e6b2b4a7a5b4b5c6d4f3d2c7c6b5c6d4c6a1b1a5a4d2c4b6c4d3c4e6c4d1d8c6d8f1d1e7c5",
+   "plies": 36
   },
   {
    "id": "english-four-knights-bb4",
@@ -27,32 +27,32 @@
    "label": "vs 1...e5, 3.g3",
    "eco": "A29",
    "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6",
-   "path": "c2c4e7e5b1c3g8f6g2g3d7d5c4d5f6d5f1g2d5b6g1f3b8c6e1g1f8e7a2a3e8g8b2b4c8e6d2d3f7f6a1b1",
-   "plies": 21
+   "path": "c2c4e7e5b1c3g8f6g2g3d7d5c4d5f6d5f1g2d5b6g1f3b8c6e1g1f8e7a2a3e8g8b2b4c8e6d2d3f7f6a1b1a7a5b4b5c6d4f3d2d8c8e2e3d4f5d1c2f8d8c1b2f5d6a3a4d6f7c3e4b6d5b1c1c8d7d3d4d5b4",
+   "plies": 40
   },
   {
    "id": "english-symmetrical",
    "label": "Symmetrical Variation",
    "eco": "A39",
    "name": "English Opening: Symmetrical Variation, Mecking Variation",
-   "path": "c2c4c7c5b1c3b8c6g2g3g7g6f1g2f8g7g1f3g8f6e1g1e8g8d2d4c5d4f3d4c6d4d1d4d7d6d4d3a7a6c1d2a8b8a1c1",
-   "plies": 23
+   "path": "c2c4c7c5b1c3b8c6g2g3g7g6f1g2f8g7g1f3g8f6e1g1e8g8d2d4c5d4f3d4c6d4d1d4d7d6d4d3a7a6c1d2a8b8a1c1c8f5e2e4f5d7h2h3",
+   "plies": 27
   },
   {
    "id": "english-botvinnik",
    "label": "vs King's Indian setup (Botvinnik System)",
    "eco": "A16",
    "name": "English Opening: Anglo-Indian Defense, Queen's Knight Variation",
-   "path": "c2c4g8f6b1c3g7g6g2g3f8g7f1g2e8g8e2e4d7d6g1e2e7e5e1g1c7c6d2d3b8d7h2h3a7a6c1e3b7b5d1d2",
-   "plies": 21
+   "path": "c2c4g8f6b1c3g7g6g2g3f8g7f1g2e8g8e2e4d7d6g1e2e7e5e1g1c7c6d2d3b8d7h2h3a7a6c1e3b7b5d1d2a8b8b2b3b5b4",
+   "plies": 24
   },
   {
    "id": "english-into-qgd",
    "label": "vs 1...e6, into the QGD Exchange",
    "eco": "D35",
    "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation",
-   "path": "c2c4e7e6b1c3d7d5d2d4g8f6c4d5e6d5c1g5f8e7e2e3e8g8f1d3b8d7d1c2f8e8g1e2d7f8e1g1c7c6f2f3",
-   "plies": 21
+   "path": "c2c4e7e6b1c3d7d5d2d4g8f6c4d5e6d5c1g5f8e7e2e3e8g8f1d3b8d7d1c2f8e8g1e2d7f8e1g1c7c6f2f3c8e6a1d1a8c8g1h1f8g6a2a3f6d7",
+   "plies": 28
   }
  ],
  "nodes": {
@@ -390,6 +390,181 @@
    "ply": 23,
    "turn": "b",
    "mine": false,
+   "replies": [
+    {
+     "uci": "c7c6",
+     "san": "c6"
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g1f3b8c6g2g3d7d5c4d5f6d5f1g2d5b6e1g1f8e7d2d3e8g8a2a3c8e6b2b4a7a5b4b5c6d4f3d2c7c6": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b5c6",
+     "san": "bxc6",
+     "idea": "Take, and open the b-file for your rook."
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g1f3b8c6g2g3d7d5c4d5f6d5f1g2d5b6e1g1f8e7d2d3e8g8a2a3c8e6b2b4a7a5b4b5c6d4f3d2c7c6b5c6": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4c6",
+     "san": "Nxc6"
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g1f3b8c6g2g3d7d5c4d5f6d5f1g2d5b6e1g1f8e7d2d3e8g8a2a3c8e6b2b4a7a5b4b5c6d4f3d2c7c6b5c6d4c6": {
+   "ply": 26,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a1b1",
+     "san": "Rb1",
+     "idea": "The rook takes the half-open b-file, hitting the b6 knight."
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g1f3b8c6g2g3d7d5c4d5f6d5f1g2d5b6e1g1f8e7d2d3e8g8a2a3c8e6b2b4a7a5b4b5c6d4f3d2c7c6b5c6d4c6a1b1": {
+   "ply": 27,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a5a4",
+     "san": "a4"
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g1f3b8c6g2g3d7d5c4d5f6d5f1g2d5b6e1g1f8e7d2d3e8g8a2a3c8e6b2b4a7a5b4b5c6d4f3d2c7c6b5c6d4c6a1b1a5a4": {
+   "ply": 28,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2c4",
+     "san": "Nc4",
+     "idea": "The knight jumps to c4, hitting b6 and e5."
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g1f3b8c6g2g3d7d5c4d5f6d5f1g2d5b6e1g1f8e7d2d3e8g8a2a3c8e6b2b4a7a5b4b5c6d4f3d2c7c6b5c6d4c6a1b1a5a4d2c4": {
+   "ply": 29,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b6c4",
+     "san": "Nxc4"
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g1f3b8c6g2g3d7d5c4d5f6d5f1g2d5b6e1g1f8e7d2d3e8g8a2a3c8e6b2b4a7a5b4b5c6d4f3d2c7c6b5c6d4c6a1b1a5a4d2c4b6c4": {
+   "ply": 30,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d3c4",
+     "san": "dxc4",
+     "idea": "Recapture toward the centre."
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g1f3b8c6g2g3d7d5c4d5f6d5f1g2d5b6e1g1f8e7d2d3e8g8a2a3c8e6b2b4a7a5b4b5c6d4f3d2c7c6b5c6d4c6a1b1a5a4d2c4b6c4d3c4": {
+   "ply": 31,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e6c4",
+     "san": "Bxc4"
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g1f3b8c6g2g3d7d5c4d5f6d5f1g2d5b6e1g1f8e7d2d3e8g8a2a3c8e6b2b4a7a5b4b5c6d4f3d2c7c6b5c6d4c6a1b1a5a4d2c4b6c4d3c4e6c4": {
+   "ply": 32,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1d8",
+     "san": "Qxd8",
+     "idea": "Trade queens. The endgame is balanced."
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g1f3b8c6g2g3d7d5c4d5f6d5f1g2d5b6e1g1f8e7d2d3e8g8a2a3c8e6b2b4a7a5b4b5c6d4f3d2c7c6b5c6d4c6a1b1a5a4d2c4b6c4d3c4e6c4d1d8": {
+   "ply": 33,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c6d8",
+     "san": "Nxd8"
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g1f3b8c6g2g3d7d5c4d5f6d5f1g2d5b6e1g1f8e7d2d3e8g8a2a3c8e6b2b4a7a5b4b5c6d4f3d2c7c6b5c6d4c6a1b1a5a4d2c4b6c4d3c4e6c4d1d8c6d8": {
+   "ply": 34,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1d1",
+     "san": "Rd1",
+     "idea": "The rook takes the open d-file."
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g1f3b8c6g2g3d7d5c4d5f6d5f1g2d5b6e1g1f8e7d2d3e8g8a2a3c8e6b2b4a7a5b4b5c6d4f3d2c7c6b5c6d4c6a1b1a5a4d2c4b6c4d3c4e6c4d1d8c6d8f1d1": {
+   "ply": 35,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7c5",
+     "san": "Bc5"
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g1f3b8c6g2g3d7d5c4d5f6d5f1g2d5b6e1g1f8e7d2d3e8g8a2a3c8e6b2b4a7a5b4b5c6d4f3d2c7c6b5c6d4c6a1b1a5a4d2c4b6c4d3c4e6c4d1d8c6d8f1d1e7c5": {
+   "ply": 36,
+   "turn": "w",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "A29",
@@ -827,6 +1002,262 @@
    "ply": 21,
    "turn": "b",
    "mine": false,
+   "replies": [
+    {
+     "uci": "a7a5",
+     "san": "a5"
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g2g3d7d5c4d5f6d5f1g2d5b6g1f3b8c6e1g1f8e7a2a3e8g8b2b4c8e6d2d3f7f6a1b1a7a5": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b4b5",
+     "san": "b5",
+     "idea": "Kick the knight away from c6."
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g2g3d7d5c4d5f6d5f1g2d5b6g1f3b8c6e1g1f8e7a2a3e8g8b2b4c8e6d2d3f7f6a1b1a7a5b4b5": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c6d4",
+     "san": "Nd4"
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g2g3d7d5c4d5f6d5f1g2d5b6g1f3b8c6e1g1f8e7a2a3e8g8b2b4c8e6d2d3f7f6a1b1a7a5b4b5c6d4": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f3d2",
+     "san": "Nd2",
+     "idea": "Step out of the knight's reach, and head for c4 or e4."
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g2g3d7d5c4d5f6d5f1g2d5b6g1f3b8c6e1g1f8e7a2a3e8g8b2b4c8e6d2d3f7f6a1b1a7a5b4b5c6d4f3d2": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8c8",
+     "san": "Qc8"
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g2g3d7d5c4d5f6d5f1g2d5b6g1f3b8c6e1g1f8e7a2a3e8g8b2b4c8e6d2d3f7f6a1b1a7a5b4b5c6d4f3d2d8c8": {
+   "ply": 26,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e2e3",
+     "san": "e3",
+     "idea": "Kick the knight from d4."
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g2g3d7d5c4d5f6d5f1g2d5b6g1f3b8c6e1g1f8e7a2a3e8g8b2b4c8e6d2d3f7f6a1b1a7a5b4b5c6d4f3d2d8c8e2e3": {
+   "ply": 27,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4f5",
+     "san": "Nf5"
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g2g3d7d5c4d5f6d5f1g2d5b6g1f3b8c6e1g1f8e7a2a3e8g8b2b4c8e6d2d3f7f6a1b1a7a5b4b5c6d4f3d2d8c8e2e3d4f5": {
+   "ply": 28,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1c2",
+     "san": "Qc2",
+     "idea": "The queen covers c4 and e4."
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g2g3d7d5c4d5f6d5f1g2d5b6g1f3b8c6e1g1f8e7a2a3e8g8b2b4c8e6d2d3f7f6a1b1a7a5b4b5c6d4f3d2d8c8e2e3d4f5d1c2": {
+   "ply": 29,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8d8",
+     "san": "Rd8"
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g2g3d7d5c4d5f6d5f1g2d5b6g1f3b8c6e1g1f8e7a2a3e8g8b2b4c8e6d2d3f7f6a1b1a7a5b4b5c6d4f3d2d8c8e2e3d4f5d1c2f8d8": {
+   "ply": 30,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1b2",
+     "san": "Bb2",
+     "idea": "The bishop joins the long diagonal."
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g2g3d7d5c4d5f6d5f1g2d5b6g1f3b8c6e1g1f8e7a2a3e8g8b2b4c8e6d2d3f7f6a1b1a7a5b4b5c6d4f3d2d8c8e2e3d4f5d1c2f8d8c1b2": {
+   "ply": 31,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f5d6",
+     "san": "Nd6"
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g2g3d7d5c4d5f6d5f1g2d5b6g1f3b8c6e1g1f8e7a2a3e8g8b2b4c8e6d2d3f7f6a1b1a7a5b4b5c6d4f3d2d8c8e2e3d4f5d1c2f8d8c1b2f5d6": {
+   "ply": 32,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a3a4",
+     "san": "a4",
+     "idea": "Grab space on the queenside."
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g2g3d7d5c4d5f6d5f1g2d5b6g1f3b8c6e1g1f8e7a2a3e8g8b2b4c8e6d2d3f7f6a1b1a7a5b4b5c6d4f3d2d8c8e2e3d4f5d1c2f8d8c1b2f5d6a3a4": {
+   "ply": 33,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d6f7",
+     "san": "Nf7"
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g2g3d7d5c4d5f6d5f1g2d5b6g1f3b8c6e1g1f8e7a2a3e8g8b2b4c8e6d2d3f7f6a1b1a7a5b4b5c6d4f3d2d8c8e2e3d4f5d1c2f8d8c1b2f5d6a3a4d6f7": {
+   "ply": 34,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c3e4",
+     "san": "Nce4",
+     "idea": "Centralise the knight, eyeing f6 and d6."
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g2g3d7d5c4d5f6d5f1g2d5b6g1f3b8c6e1g1f8e7a2a3e8g8b2b4c8e6d2d3f7f6a1b1a7a5b4b5c6d4f3d2d8c8e2e3d4f5d1c2f8d8c1b2f5d6a3a4d6f7c3e4": {
+   "ply": 35,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b6d5",
+     "san": "Nd5"
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g2g3d7d5c4d5f6d5f1g2d5b6g1f3b8c6e1g1f8e7a2a3e8g8b2b4c8e6d2d3f7f6a1b1a7a5b4b5c6d4f3d2d8c8e2e3d4f5d1c2f8d8c1b2f5d6a3a4d6f7c3e4b6d5": {
+   "ply": 36,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c1",
+     "san": "Rbc1",
+     "idea": "The rook takes the c-file."
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g2g3d7d5c4d5f6d5f1g2d5b6g1f3b8c6e1g1f8e7a2a3e8g8b2b4c8e6d2d3f7f6a1b1a7a5b4b5c6d4f3d2d8c8e2e3d4f5d1c2f8d8c1b2f5d6a3a4d6f7c3e4b6d5b1c1": {
+   "ply": 37,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8d7",
+     "san": "Qd7"
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g2g3d7d5c4d5f6d5f1g2d5b6g1f3b8c6e1g1f8e7a2a3e8g8b2b4c8e6d2d3f7f6a1b1a7a5b4b5c6d4f3d2d8c8e2e3d4f5d1c2f8d8c1b2f5d6a3a4d6f7c3e4b6d5b1c1c8d7": {
+   "ply": 38,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d3d4",
+     "san": "d4",
+     "idea": "Strike in the centre with every piece ready."
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g2g3d7d5c4d5f6d5f1g2d5b6g1f3b8c6e1g1f8e7a2a3e8g8b2b4c8e6d2d3f7f6a1b1a7a5b4b5c6d4f3d2d8c8e2e3d4f5d1c2f8d8c1b2f5d6a3a4d6f7c3e4b6d5b1c1c8d7d3d4": {
+   "ply": 39,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d5b4",
+     "san": "Nb4"
+    }
+   ],
+   "eco": "A29",
+   "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6"
+  },
+  "c2c4e7e5b1c3g8f6g2g3d7d5c4d5f6d5f1g2d5b6g1f3b8c6e1g1f8e7a2a3e8g8b2b4c8e6d2d3f7f6a1b1a7a5b4b5c6d4f3d2d8c8e2e3d4f5d1c2f8d8c1b2f5d6a3a4d6f7c3e4b6d5b1c1c8d7d3d4d5b4": {
+   "ply": 40,
+   "turn": "w",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "A29",
@@ -1120,6 +1551,60 @@
    "ply": 23,
    "turn": "b",
    "mine": false,
+   "replies": [
+    {
+     "uci": "c8f5",
+     "san": "Bf5"
+    }
+   ],
+   "eco": "A39",
+   "name": "English Opening: Symmetrical Variation, Mecking Variation"
+  },
+  "c2c4c7c5b1c3b8c6g2g3g7g6f1g2f8g7g1f3g8f6e1g1e8g8d2d4c5d4f3d4c6d4d1d4d7d6d4d3a7a6c1d2a8b8a1c1c8f5": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e2e4",
+     "san": "e4",
+     "idea": "Grab the centre with tempo on the bishop."
+    }
+   ],
+   "eco": "A39",
+   "name": "English Opening: Symmetrical Variation, Mecking Variation"
+  },
+  "c2c4c7c5b1c3b8c6g2g3g7g6f1g2f8g7g1f3g8f6e1g1e8g8d2d4c5d4f3d4c6d4d1d4d7d6d4d3a7a6c1d2a8b8a1c1c8f5e2e4": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f5d7",
+     "san": "Bd7"
+    }
+   ],
+   "eco": "A39",
+   "name": "English Opening: Symmetrical Variation, Mecking Variation"
+  },
+  "c2c4c7c5b1c3b8c6g2g3g7g6f1g2f8g7g1f3g8f6e1g1e8g8d2d4c5d4f3d4c6d4d1d4d7d6d4d3a7a6c1d2a8b8a1c1c8f5e2e4f5d7": {
+   "ply": 26,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h2h3",
+     "san": "h3",
+     "idea": "Keep Black's pieces out of g4."
+    }
+   ],
+   "eco": "A39",
+   "name": "English Opening: Symmetrical Variation, Mecking Variation"
+  },
+  "c2c4c7c5b1c3b8c6g2g3g7g6f1g2f8g7g1f3g8f6e1g1e8g8d2d4c5d4f3d4c6d4d1d4d7d6d4d3a7a6c1d2a8b8a1c1c8f5e2e4f5d7h2h3": {
+   "ply": 27,
+   "turn": "b",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "A39",
@@ -1386,6 +1871,46 @@
    "ply": 21,
    "turn": "b",
    "mine": false,
+   "replies": [
+    {
+     "uci": "a8b8",
+     "san": "Rb8"
+    }
+   ],
+   "eco": "A16",
+   "name": "English Opening: Anglo-Indian Defense, Queen's Knight Variation"
+  },
+  "c2c4g8f6b1c3g7g6g2g3f8g7f1g2e8g8e2e4d7d6g1e2e7e5e1g1c7c6d2d3b8d7h2h3a7a6c1e3b7b5d1d2a8b8": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b2b3",
+     "san": "b3",
+     "idea": "Hold the queenside and keep c4 protected."
+    }
+   ],
+   "eco": "A16",
+   "name": "English Opening: Anglo-Indian Defense, Queen's Knight Variation"
+  },
+  "c2c4g8f6b1c3g7g6g2g3f8g7f1g2e8g8e2e4d7d6g1e2e7e5e1g1c7c6d2d3b8d7h2h3a7a6c1e3b7b5d1d2a8b8b2b3": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b5b4",
+     "san": "b4"
+    }
+   ],
+   "eco": "A16",
+   "name": "English Opening: Anglo-Indian Defense, Queen's Knight Variation"
+  },
+  "c2c4g8f6b1c3g7g6g2g3f8g7f1g2e8g8e2e4d7d6g1e2e7e5e1g1c7c6d2d3b8d7h2h3a7a6c1e3b7b5d1d2a8b8b2b3b5b4": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "A16",
@@ -1652,6 +2177,100 @@
    "ply": 21,
    "turn": "b",
    "mine": false,
+   "replies": [
+    {
+     "uci": "c8e6",
+     "san": "Be6"
+    }
+   ],
+   "eco": "D35",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation"
+  },
+  "c2c4e7e6b1c3d7d5d2d4g8f6c4d5e6d5c1g5f8e7e2e3e8g8f1d3b8d7d1c2f8e8g1e2d7f8e1g1c7c6f2f3c8e6": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a1d1",
+     "san": "Rad1",
+     "idea": "The rook goes behind the d-pawn, getting ready for e4."
+    }
+   ],
+   "eco": "D35",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation"
+  },
+  "c2c4e7e6b1c3d7d5d2d4g8f6c4d5e6d5c1g5f8e7e2e3e8g8f1d3b8d7d1c2f8e8g1e2d7f8e1g1c7c6f2f3c8e6a1d1": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a8c8",
+     "san": "Rc8"
+    }
+   ],
+   "eco": "D35",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation"
+  },
+  "c2c4e7e6b1c3d7d5d2d4g8f6c4d5e6d5c1g5f8e7e2e3e8g8f1d3b8d7d1c2f8e8g1e2d7f8e1g1c7c6f2f3c8e6a1d1a8c8": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1h1",
+     "san": "Kh1",
+     "idea": "Tuck the king away before the centre opens."
+    }
+   ],
+   "eco": "D35",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation"
+  },
+  "c2c4e7e6b1c3d7d5d2d4g8f6c4d5e6d5c1g5f8e7e2e3e8g8f1d3b8d7d1c2f8e8g1e2d7f8e1g1c7c6f2f3c8e6a1d1a8c8g1h1": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8g6",
+     "san": "Ng6"
+    }
+   ],
+   "eco": "D35",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation"
+  },
+  "c2c4e7e6b1c3d7d5d2d4g8f6c4d5e6d5c1g5f8e7e2e3e8g8f1d3b8d7d1c2f8e8g1e2d7f8e1g1c7c6f2f3c8e6a1d1a8c8g1h1f8g6": {
+   "ply": 26,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a2a3",
+     "san": "a3",
+     "idea": "Take b4 away from Black's pieces."
+    }
+   ],
+   "eco": "D35",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation"
+  },
+  "c2c4e7e6b1c3d7d5d2d4g8f6c4d5e6d5c1g5f8e7e2e3e8g8f1d3b8d7d1c2f8e8g1e2d7f8e1g1c7c6f2f3c8e6a1d1a8c8g1h1f8g6a2a3": {
+   "ply": 27,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f6d7",
+     "san": "Nd7"
+    }
+   ],
+   "eco": "D35",
+   "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation"
+  },
+  "c2c4e7e6b1c3d7d5d2d4g8f6c4d5e6d5c1g5f8e7e2e3e8g8f1d3b8d7d1c2f8e8g1e2d7f8e1g1c7c6f2f3c8e6a1d1a8c8g1h1f8g6a2a3f6d7": {
+   "ply": 28,
+   "turn": "w",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "D35",

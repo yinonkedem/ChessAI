@@ -11,40 +11,40 @@
    "label": "Giuoco Piano",
    "eco": "C54",
    "name": "Italian Game: Classical Variation, Greco Gambit, Traditional Line",
-   "path": "e2e4e7e5g1f3b8c6f1c4f8c5c2c3g8f6d2d4e5d4c3d4c5b4c1d2b4d2b1d2d7d5e4d5f6d5d1b3c6e7e1g1e8g8",
-   "plies": 22
+   "path": "e2e4e7e5g1f3b8c6f1c4f8c5c2c3g8f6d2d4e5d4c3d4c5b4c1d2b4d2b1d2d7d5e4d5f6d5d1b3c6e7e1g1e8g8f1e1c7c6d2e4d5b6c4d3c8e6",
+   "plies": 28
   },
   {
    "id": "italian-giuoco-pianissimo",
    "label": "Giuoco Pianissimo",
    "eco": "C54",
    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
-   "path": "e2e4e7e5g1f3b8c6f1c4f8c5d2d3g8f6c2c3d7d6e1g1a7a6f1e1c5a7b1d2e8g8h2h3c6e7d2f1e7g6f1g3",
-   "plies": 21
+   "path": "e2e4e7e5g1f3b8c6f1c4f8c5d2d3g8f6c2c3d7d6e1g1a7a6f1e1c5a7b1d2e8g8h2h3c6e7d2f1e7g6f1g3c7c6d3d4",
+   "plies": 23
   },
   {
    "id": "italian-two-knights",
    "label": "Two Knights Defense",
    "eco": "C59",
    "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense",
-   "path": "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5f8d6d2d4e4d3e5d3",
-   "plies": 23
+   "path": "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5f8d6d2d4e4d3e5d3d8c7b2b3e8g8c1b2f6e4b1c3",
+   "plies": 29
   },
   {
    "id": "italian-evans-gambit",
    "label": "Evans Gambit",
    "eco": "C52",
    "name": "Italian Game: Evans Gambit, Mieses Defense",
-   "path": "e2e4e7e5g1f3b8c6f1c4f8c5b2b4c5b4c2c3b4a5d2d4e5d4e1g1g8e7c3d4d7d5e4d5e7d5c1a3c8e6c4b5",
-   "plies": 21
+   "path": "e2e4e7e5g1f3b8c6f1c4f8c5b2b4c5b4c2c3b4a5d2d4e5d4e1g1g8e7c3d4d7d5e4d5e7d5c1a3c8e6c4b5a5b4",
+   "plies": 22
   },
   {
    "id": "italian-scotch-gambit-transposition",
    "label": "Giuoco Pianissimo via 3...Nf6",
    "eco": "C54",
    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
-   "path": "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1a7a6c4b3c5a7b1d2e8g8h2h3c6e7f1e1",
-   "plies": 19
+   "path": "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1a7a6c4b3c5a7b1d2e8g8h2h3c6e7f1e1e7g6d2f1h7h6f1g3f8e8d3d4c8e6b3c2c7c6c1e3d8c7d1d2a8d8a1d1",
+   "plies": 33
   }
  ],
  "nodes": {
@@ -361,6 +361,87 @@
    "ply": 22,
    "turn": "w",
    "mine": true,
+   "replies": [
+    {
+     "uci": "f1e1",
+     "san": "Rfe1",
+     "idea": "The other rook goes to the e-file too, lined up against the knight on e7."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Greco Gambit, Traditional Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5c2c3g8f6d2d4e5d4c3d4c5b4c1d2b4d2b1d2d7d5e4d5f6d5d1b3c6e7e1g1e8g8f1e1": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c7c6",
+     "san": "c6"
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Greco Gambit, Traditional Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5c2c3g8f6d2d4e5d4c3d4c5b4c1d2b4d2b1d2d7d5e4d5f6d5d1b3c6e7e1g1e8g8f1e1c7c6": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2e4",
+     "san": "Ne4",
+     "idea": "Centralise the knight. From e4 it eyes c5, d6 and f6."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Greco Gambit, Traditional Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5c2c3g8f6d2d4e5d4c3d4c5b4c1d2b4d2b1d2d7d5e4d5f6d5d1b3c6e7e1g1e8g8f1e1c7c6d2e4": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d5b6",
+     "san": "Nb6"
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Greco Gambit, Traditional Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5c2c3g8f6d2d4e5d4c3d4c5b4c1d2b4d2b1d2d7d5e4d5f6d5d1b3c6e7e1g1e8g8f1e1c7c6d2e4d5b6": {
+   "ply": 26,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c4d3",
+     "san": "Bd3",
+     "idea": "Put the bishop on the b1–h7 diagonal, aimed at Black's king. The d5 square is well covered."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Greco Gambit, Traditional Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5c2c3g8f6d2d4e5d4c3d4c5b4c1d2b4d2b1d2d7d5e4d5f6d5d1b3c6e7e1g1e8g8f1e1c7c6d2e4d5b6c4d3": {
+   "ply": 27,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8e6",
+     "san": "Be6"
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Greco Gambit, Traditional Line"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5c2c3g8f6d2d4e5d4c3d4c5b4c1d2b4d2b1d2d7d5e4d5f6d5d1b3c6e7e1g1e8g8f1e1c7c6d2e4d5b6c4d3c8e6": {
+   "ply": 28,
+   "turn": "w",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "C54",
@@ -557,6 +638,33 @@
   },
   "e2e4e7e5g1f3b8c6f1c4f8c5d2d3g8f6c2c3d7d6e1g1a7a6f1e1c5a7b1d2e8g8h2h3c6e7d2f1e7g6f1g3": {
    "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c7c6",
+     "san": "c6"
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5d2d3g8f6c2c3d7d6e1g1a7a6f1e1c5a7b1d2e8g8h2h3c6e7d2f1e7g6f1g3c7c6": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d3d4",
+     "san": "d4",
+     "idea": "Now the d4 break, with the knight already on g3."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5d2d3g8f6c2c3d7d6e1g1a7a6f1e1c5a7b1d2e8g8h2h3c6e7d2f1e7g6f1g3c7c6d3d4": {
+   "ply": 23,
    "turn": "b",
    "mine": false,
    "replies": [],
@@ -803,6 +911,87 @@
    "ply": 23,
    "turn": "b",
    "mine": false,
+   "replies": [
+    {
+     "uci": "d8c7",
+     "san": "Qc7"
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5f8d6d2d4e4d3e5d3d8c7": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b2b3",
+     "san": "b3",
+     "idea": "Prepare Bb2, putting the bishop on the long diagonal."
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5f8d6d2d4e4d3e5d3d8c7b2b3": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5f8d6d2d4e4d3e5d3d8c7b2b3e8g8": {
+   "ply": 26,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1b2",
+     "san": "Bb2",
+     "idea": "The bishop takes the long diagonal toward g7 and Black's king."
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5f8d6d2d4e4d3e5d3d8c7b2b3e8g8c1b2": {
+   "ply": 27,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f6e4",
+     "san": "Ne4"
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5f8d6d2d4e4d3e5d3d8c7b2b3e8g8c1b2f6e4": {
+   "ply": 28,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "Develop the last piece and challenge the e4 knight."
+    }
+   ],
+   "eco": "C59",
+   "name": "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6f3g5d7d5e4d5c6a5c4b5c7c6d5c6b7c6b5e2h7h6g5f3e5e4f3e5f8d6d2d4e4d3e5d3d8c7b2b3e8g8c1b2f6e4b1c3": {
+   "ply": 29,
+   "turn": "b",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "C59",
@@ -1001,6 +1190,19 @@
    "ply": 21,
    "turn": "b",
    "mine": false,
+   "replies": [
+    {
+     "uci": "a5b4",
+     "san": "Bb4"
+    }
+   ],
+   "eco": "C52",
+   "name": "Italian Game: Evans Gambit, Mieses Defense"
+  },
+  "e2e4e7e5g1f3b8c6f1c4f8c5b2b4c5b4c2c3b4a5d2d4e5d4e1g1g8e7c3d4d7d5e4d5e7d5c1a3c8e6c4b5a5b4": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "C52",
@@ -1170,6 +1372,195 @@
   },
   "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1a7a6c4b3c5a7b1d2e8g8h2h3c6e7f1e1": {
    "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7g6",
+     "san": "Ng6"
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1a7a6c4b3c5a7b1d2e8g8h2h3c6e7f1e1e7g6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2f1",
+     "san": "Nf1",
+     "idea": "The knight continues to f1, on its way to g3."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1a7a6c4b3c5a7b1d2e8g8h2h3c6e7f1e1e7g6d2f1": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h7h6",
+     "san": "h6"
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1a7a6c4b3c5a7b1d2e8g8h2h3c6e7f1e1e7g6d2f1h7h6": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1g3",
+     "san": "Ng3",
+     "idea": "The knight lands on g3, eyeing f5 and h5."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1a7a6c4b3c5a7b1d2e8g8h2h3c6e7f1e1e7g6d2f1h7h6f1g3": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8e8",
+     "san": "Re8"
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1a7a6c4b3c5a7b1d2e8g8h2h3c6e7f1e1e7g6d2f1h7h6f1g3f8e8": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d3d4",
+     "san": "d4",
+     "idea": "Now the d4 break, with every piece supporting it."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1a7a6c4b3c5a7b1d2e8g8h2h3c6e7f1e1e7g6d2f1h7h6f1g3f8e8d3d4": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8e6",
+     "san": "Be6"
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1a7a6c4b3c5a7b1d2e8g8h2h3c6e7f1e1e7g6d2f1h7h6f1g3f8e8d3d4c8e6": {
+   "ply": 26,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b3c2",
+     "san": "Bc2",
+     "idea": "Keep the bishop on the b1–h7 diagonal, out of reach of ...Bxb3."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1a7a6c4b3c5a7b1d2e8g8h2h3c6e7f1e1e7g6d2f1h7h6f1g3f8e8d3d4c8e6b3c2": {
+   "ply": 27,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c7c6",
+     "san": "c6"
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1a7a6c4b3c5a7b1d2e8g8h2h3c6e7f1e1e7g6d2f1h7h6f1g3f8e8d3d4c8e6b3c2c7c6": {
+   "ply": 28,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1e3",
+     "san": "Be3",
+     "idea": "Develop the last minor piece and bring pressure onto h6."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1a7a6c4b3c5a7b1d2e8g8h2h3c6e7f1e1e7g6d2f1h7h6f1g3f8e8d3d4c8e6b3c2c7c6c1e3": {
+   "ply": 29,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8c7",
+     "san": "Qc7"
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1a7a6c4b3c5a7b1d2e8g8h2h3c6e7f1e1e7g6d2f1h7h6f1g3f8e8d3d4c8e6b3c2c7c6c1e3d8c7": {
+   "ply": 30,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1d2",
+     "san": "Qd2",
+     "idea": "Connect the rooks, lined up with the bishop against h6."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1a7a6c4b3c5a7b1d2e8g8h2h3c6e7f1e1e7g6d2f1h7h6f1g3f8e8d3d4c8e6b3c2c7c6c1e3d8c7d1d2": {
+   "ply": 31,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a8d8",
+     "san": "Rad8"
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1a7a6c4b3c5a7b1d2e8g8h2h3c6e7f1e1e7g6d2f1h7h6f1g3f8e8d3d4c8e6b3c2c7c6c1e3d8c7d1d2a8d8": {
+   "ply": 32,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a1d1",
+     "san": "Rad1",
+     "idea": "The rook joins the d-file. Every piece is in play."
+    }
+   ],
+   "eco": "C54",
+   "name": "Italian Game: Classical Variation, Giuoco Pianissimo"
+  },
+  "e2e4e7e5g1f3b8c6f1c4g8f6d2d3f8c5c2c3d7d6e1g1a7a6c4b3c5a7b1d2e8g8h2h3c6e7f1e1e7g6d2f1h7h6f1g3f8e8d3d4c8e6b3c2c7c6c1e3d8c7d1d2a8d8a1d1": {
+   "ply": 33,
    "turn": "b",
    "mine": false,
    "replies": [],

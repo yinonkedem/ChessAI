@@ -1,0 +1,1815 @@
+{
+ "id": "smith-morra-white",
+ "title": "The Smith-Morra Gambit",
+ "family": "1. e4 c5 2. d4 cxd4 3. c3",
+ "blurb": "Answer the Sicilian with a pawn sacrifice. Open files, fast development, and traps on every move.",
+ "side": "w",
+ "difficulty": 2,
+ "lines": [
+  {
+   "id": "sm-classical",
+   "label": "Accepted, Classical",
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Scheveningen Formation",
+   "path": "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4e7e6e1g1g8f6d1e2f8e7f1d1e6e5h2h3e8g8c1e3c8e6c4e6f7e6e2c4d8d7f3g5c6d8a1c1h7h6",
+   "plies": 30
+  },
+  {
+   "id": "sm-trap-e5",
+   "label": "Trap: 7.e5! dxe5?",
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted",
+   "path": "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4g8f6e4e5d6e5d1d8e8d8f3g5d8e8c4f7",
+   "plies": 19
+  },
+  {
+   "id": "sm-trap-bxf7",
+   "label": "Trap: 5...Nf6? 6.e5!",
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted",
+   "path": "e2e4c7c5d2d4c5d4c2c3d4c3b1c3d7d6f1c4g8f6e4e5d6e5c4f7e8f7d1d8",
+   "plies": 15
+  },
+  {
+   "id": "sm-siberian-avoid",
+   "label": "vs the Siberian: 10.Nb5",
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Siberian Variation, Siberian Trap",
+   "path": "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4d8c7e1g1g8f6d1e2f6g4f1d1f8c5c3b5c7b8h2h3g4e5f3e5c6e5c1f4",
+   "plies": 25
+  },
+  {
+   "id": "sm-a6-nge7",
+   "label": "Accepted, ...a6 and ...Nge7",
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Paulsen Formation",
+   "path": "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4a7a6e1g1g8e7c1g5f7f6g5e3e7g6c4b3f8e7c3a4b7b5e3b6b5a4b6d8e7d8b3a4e8g8",
+   "plies": 28
+  },
+  {
+   "id": "sm-declined-nf6",
+   "label": "Declined, 3...Nf6",
+   "eco": "B22",
+   "name": "Sicilian Defense: Alapin Variation, Smith-Morra Declined",
+   "path": "e2e4c7c5d2d4c5d4c2c3g8f6e4e5f6d5c3d4d7d6g1f3b8c6f1c4d5b6c4b5d6e5f3e5c8d7e5d7d8d7b1c3e7e6e1g1f8e7d1g4e8g8b5c6b7c6c1h6e7f6",
+   "plies": 30
+  },
+  {
+   "id": "sm-declined-d3",
+   "label": "Declined, 3...d3",
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation",
+   "path": "e2e4c7c5d2d4c5d4c2c3d4d3f1d3b8c6g1f3d7d6e1g1g8f6c3c4g7g6b1c3f8g7h2h3e8g8c1e3a7a6a1c1c8d7b2b3a8c8d3b1d8a5c3d5f6d5e4d5c6e5",
+   "plies": 30
+  }
+ ],
+ "nodes": {
+  "": {
+   "ply": 0,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e2e4",
+     "san": "e4",
+     "idea": "Take the centre."
+    }
+   ]
+  },
+  "e2e4": {
+   "ply": 1,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c7c5",
+     "san": "c5"
+    }
+   ],
+   "eco": "B00",
+   "name": "King's Pawn Game"
+  },
+  "e2e4c7c5": {
+   "ply": 2,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4",
+     "idea": "Challenge the Sicilian's c5 pawn at once."
+    }
+   ],
+   "eco": "B20",
+   "name": "Sicilian Defense"
+  },
+  "e2e4c7c5d2d4": {
+   "ply": 3,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c5d4",
+     "san": "cxd4"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit"
+  },
+  "e2e4c7c5d2d4c5d4": {
+   "ply": 4,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c2c3",
+     "san": "c3",
+     "idea": "The Smith-Morra: offer a pawn for fast development and open files."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit"
+  },
+  "e2e4c7c5d2d4c5d4c2c3": {
+   "ply": 5,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4c3",
+     "san": "dxc3"
+    },
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    },
+    {
+     "uci": "d4d3",
+     "san": "d3"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3": {
+   "ply": 6,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nxc3",
+     "idea": "Recapture with the knight. You're a pawn down, but already developing."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6"
+    },
+    {
+     "uci": "d7d6",
+     "san": "d6"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3",
+     "idea": "Develop and cover d4 and e5."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6"
+    },
+    {
+     "uci": "e7e6",
+     "san": "e6"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1c4",
+     "san": "Bc4",
+     "idea": "The bishop aims at f7 and the weak e6 square."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7e6",
+     "san": "e6"
+    },
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4e7e6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle. Next, the rooks go to d1 and c1, the files you opened."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Scheveningen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4e7e6e1g1": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Scheveningen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4e7e6e1g1g8f6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1e2",
+     "san": "Qe2",
+     "idea": "The queen clears d1 for the rook and supports e5."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Scheveningen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4e7e6e1g1g8f6d1e2": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8e7",
+     "san": "Be7"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Scheveningen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4e7e6e1g1g8f6d1e2f8e7": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1d1",
+     "san": "Rd1",
+     "idea": "The rook takes the open d-file, straight at the d6 pawn."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Scheveningen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4e7e6e1g1g8f6d1e2f8e7f1d1": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e6e5",
+     "san": "e5"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Scheveningen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4e7e6e1g1g8f6d1e2f8e7f1d1e6e5": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h2h3",
+     "san": "h3",
+     "idea": "Take g4 away from Black's pieces before putting the bishop on e3."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Scheveningen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4e7e6e1g1g8f6d1e2f8e7f1d1e6e5h2h3": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Scheveningen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4e7e6e1g1g8f6d1e2f8e7f1d1e6e5h2h3e8g8": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1e3",
+     "san": "Be3",
+     "idea": "Develop and cover c5 and the queenside."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Scheveningen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4e7e6e1g1g8f6d1e2f8e7f1d1e6e5h2h3e8g8c1e3": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8e6",
+     "san": "Be6"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Scheveningen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4e7e6e1g1g8f6d1e2f8e7f1d1e6e5h2h3e8g8c1e3c8e6": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c4e6",
+     "san": "Bxe6",
+     "idea": "Trade the bishops. Black's e6 pawn is weak."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Scheveningen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4e7e6e1g1g8f6d1e2f8e7f1d1e6e5h2h3e8g8c1e3c8e6c4e6": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f7e6",
+     "san": "fxe6"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Scheveningen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4e7e6e1g1g8f6d1e2f8e7f1d1e6e5h2h3e8g8c1e3c8e6c4e6f7e6": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e2c4",
+     "san": "Qc4",
+     "idea": "The queen hits e6 and c6."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Scheveningen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4e7e6e1g1g8f6d1e2f8e7f1d1e6e5h2h3e8g8c1e3c8e6c4e6f7e6e2c4": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8d7",
+     "san": "Qd7"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Scheveningen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4e7e6e1g1g8f6d1e2f8e7f1d1e6e5h2h3e8g8c1e3c8e6c4e6f7e6e2c4d8d7": {
+   "ply": 26,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f3g5",
+     "san": "Ng5",
+     "idea": "Hit the weak e6 pawn again."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Scheveningen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4e7e6e1g1g8f6d1e2f8e7f1d1e6e5h2h3e8g8c1e3c8e6c4e6f7e6e2c4d8d7f3g5": {
+   "ply": 27,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c6d8",
+     "san": "Nd8"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Scheveningen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4e7e6e1g1g8f6d1e2f8e7f1d1e6e5h2h3e8g8c1e3c8e6c4e6f7e6e2c4d8d7f3g5c6d8": {
+   "ply": 28,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a1c1",
+     "san": "Rac1",
+     "idea": "The rook takes the c-file."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Scheveningen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4e7e6e1g1g8f6d1e2f8e7f1d1e6e5h2h3e8g8c1e3c8e6c4e6f7e6e2c4d8d7f3g5c6d8a1c1": {
+   "ply": 29,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h7h6",
+     "san": "h6"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Scheveningen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4e7e6e1g1g8f6d1e2f8e7f1d1e6e5h2h3e8g8c1e3c8e6c4e6f7e6e2c4d8d7f3g5c6d8a1c1h7h6": {
+   "ply": 30,
+   "turn": "w",
+   "mine": true,
+   "replies": [],
+   "end": true,
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Scheveningen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4g8f6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e4e5",
+     "san": "e5",
+     "idea": "Push at once. If ...dxe5, the queens come off and f7 and c7 both fall apart."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4g8f6e4e5": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d6e5",
+     "san": "dxe5"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4g8f6e4e5d6e5": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1d8",
+     "san": "Qxd8+",
+     "idea": "Trade queens with check. Black's king has to recapture."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4g8f6e4e5d6e5d1d8": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8d8",
+     "san": "Kxd8"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4g8f6e4e5d6e5d1d8e8d8": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f3g5",
+     "san": "Ng5",
+     "idea": "Hit f7 twice."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4g8f6e4e5d6e5d1d8e8d8f3g5": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8e8",
+     "san": "Ke8"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4g8f6e4e5d6e5d1d8e8d8f3g5d8e8": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c4f7",
+     "san": "Bxf7+",
+     "idea": "Take on f7 with check. The king can't take back, and you win material."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3d7d6f1c4g8f6e4e5d6e5d1d8e8d8f3g5d8e8c4f7": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3d7d6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1c4",
+     "san": "Bc4",
+     "idea": "Aim at f7 before Black gets organised."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3d7d6f1c4": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3d7d6f1c4g8f6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e4e5",
+     "san": "e5",
+     "idea": "Kick the knight. If ...dxe5, the d-file opens onto Black's queen."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3d7d6f1c4g8f6e4e5": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d6e5",
+     "san": "dxe5"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3d7d6f1c4g8f6e4e5d6e5": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c4f7",
+     "san": "Bxf7+",
+     "idea": "The point: take on f7 with check, deflecting the king."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3d7d6f1c4g8f6e4e5d6e5c4f7": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8f7",
+     "san": "Kxf7"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3d7d6f1c4g8f6e4e5d6e5c4f7e8f7": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1d8",
+     "san": "Qxd8",
+     "idea": "Take the queen, which the d-file left undefended."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3d7d6f1c4g8f6e4e5d6e5c4f7e8f7d1d8": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1c4",
+     "san": "Bc4",
+     "idea": "Develop toward f7 and e6."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8c7",
+     "san": "Qc7"
+    },
+    {
+     "uci": "a7a6",
+     "san": "a6"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4d8c7": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Siberian Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4d8c7e1g1": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Siberian Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4d8c7e1g1g8f6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1e2",
+     "san": "Qe2",
+     "idea": "Prepare the rook for d1."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Siberian Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4d8c7e1g1g8f6d1e2": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f6g4",
+     "san": "Ng4"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Siberian Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4d8c7e1g1g8f6d1e2f6g4": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1d1",
+     "san": "Rd1",
+     "idea": "Put the rook on the d-file. Don't play h3 yet: after 9.h3?? Nd4!, 10.Nxd4 runs into ...Qh2 mate."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Siberian Variation, Siberian Trap"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4d8c7e1g1g8f6d1e2f6g4f1d1": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8c5",
+     "san": "Bc5"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Siberian Variation, Siberian Trap"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4d8c7e1g1g8f6d1e2f6g4f1d1f8c5": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c3b5",
+     "san": "Nb5",
+     "idea": "Kick the queen off the b8–h2 diagonal first, so ...Qh2 stops being a threat."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Siberian Variation, Siberian Trap"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4d8c7e1g1g8f6d1e2f6g4f1d1f8c5c3b5": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c7b8",
+     "san": "Qb8"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Siberian Variation, Siberian Trap"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4d8c7e1g1g8f6d1e2f6g4f1d1f8c5c3b5c7b8": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h2h3",
+     "san": "h3",
+     "idea": "Now h3 is safe. The knight has to move."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Siberian Variation, Siberian Trap"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4d8c7e1g1g8f6d1e2f6g4f1d1f8c5c3b5c7b8h2h3": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g4e5",
+     "san": "Nge5"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Siberian Variation, Siberian Trap"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4d8c7e1g1g8f6d1e2f6g4f1d1f8c5c3b5c7b8h2h3g4e5": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f3e5",
+     "san": "Nxe5",
+     "idea": "Trade the active knight."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Siberian Variation, Siberian Trap"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4d8c7e1g1g8f6d1e2f6g4f1d1f8c5c3b5c7b8h2h3g4e5f3e5": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c6e5",
+     "san": "Nxe5"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Siberian Variation, Siberian Trap"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4d8c7e1g1g8f6d1e2f6g4f1d1f8c5c3b5c7b8h2h3g4e5f3e5c6e5": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1f4",
+     "san": "Bf4",
+     "idea": "Hit the e5 knight and the b8 queen behind it."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Siberian Variation, Siberian Trap"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4d8c7e1g1g8f6d1e2f6g4f1d1f8c5c3b5c7b8h2h3g4e5f3e5c6e5c1f4": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Siberian Variation, Siberian Trap"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4a7a6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle. Your pieces are ready; now pick a target."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Paulsen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4a7a6e1g1": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8e7",
+     "san": "Nge7"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Paulsen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4a7a6e1g1g8e7": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1g5",
+     "san": "Bg5",
+     "idea": "Pin the e7 knight and provoke a weakness."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Paulsen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4a7a6e1g1g8e7c1g5": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f7f6",
+     "san": "f6"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Paulsen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4a7a6e1g1g8e7c1g5f7f6": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g5e3",
+     "san": "Be3",
+     "idea": "Retreat, having made Black weaken e6 with ...f6."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Paulsen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4a7a6e1g1g8e7c1g5f7f6g5e3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7g6",
+     "san": "Ng6"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Paulsen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4a7a6e1g1g8e7c1g5f7f6g5e3e7g6": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c4b3",
+     "san": "Bb3",
+     "idea": "Tuck the bishop away from ...b5 while it stays aimed at e6."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Paulsen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4a7a6e1g1g8e7c1g5f7f6g5e3e7g6c4b3": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8e7",
+     "san": "Be7"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Paulsen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4a7a6e1g1g8e7c1g5f7f6g5e3e7g6c4b3f8e7": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c3a4",
+     "san": "Na4",
+     "idea": "Head for b6, hitting the queen."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Paulsen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4a7a6e1g1g8e7c1g5f7f6g5e3e7g6c4b3f8e7c3a4": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b7b5",
+     "san": "b5"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Paulsen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4a7a6e1g1g8e7c1g5f7f6g5e3e7g6c4b3f8e7c3a4b7b5": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e3b6",
+     "san": "Bb6",
+     "idea": "Hit the queen. If ...bxa4, you take the queen."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Paulsen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4a7a6e1g1g8e7c1g5f7f6g5e3e7g6c4b3f8e7c3a4b7b5e3b6": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b5a4",
+     "san": "bxa4"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Paulsen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4a7a6e1g1g8e7c1g5f7f6g5e3e7g6c4b3f8e7c3a4b7b5e3b6b5a4": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b6d8",
+     "san": "Bxd8",
+     "idea": "Take the queen."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Paulsen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4a7a6e1g1g8e7c1g5f7f6g5e3e7g6c4b3f8e7c3a4b7b5e3b6b5a4b6d8": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7d8",
+     "san": "Bxd8"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Paulsen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4a7a6e1g1g8e7c1g5f7f6g5e3e7g6c4b3f8e7c3a4b7b5e3b6b5a4b6d8e7d8": {
+   "ply": 26,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b3a4",
+     "san": "Bxa4",
+     "idea": "Recapture. You're winning."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Paulsen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4a7a6e1g1g8e7c1g5f7f6g5e3e7g6c4b3f8e7c3a4b7b5e3b6b5a4b6d8e7d8b3a4": {
+   "ply": 27,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Paulsen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4c3b1c3b8c6g1f3e7e6f1c4a7a6e1g1g8e7c1g5f7f6g5e3e7g6c4b3f8e7c3a4b7b5e3b6b5a4b6d8e7d8b3a4e8g8": {
+   "ply": 28,
+   "turn": "w",
+   "mine": true,
+   "replies": [],
+   "end": true,
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Paulsen Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3g8f6": {
+   "ply": 6,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e4e5",
+     "san": "e5",
+     "idea": "Kick the knight with tempo."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Alapin Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3g8f6e4e5": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f6d5",
+     "san": "Nd5"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Alapin Formation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3g8f6e4e5f6d5": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c3d4",
+     "san": "cxd4",
+     "idea": "Take back. You have the centre and no gambit pawn to worry about."
+    }
+   ],
+   "eco": "B22",
+   "name": "Sicilian Defense: Alapin Variation, Smith-Morra Declined"
+  },
+  "e2e4c7c5d2d4c5d4c2c3g8f6e4e5f6d5c3d4": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6"
+    }
+   ],
+   "eco": "B22",
+   "name": "Sicilian Defense: Alapin Variation, Smith-Morra Declined"
+  },
+  "e2e4c7c5d2d4c5d4c2c3g8f6e4e5f6d5c3d4d7d6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3",
+     "idea": "Develop and support e5."
+    }
+   ],
+   "eco": "B22",
+   "name": "Sicilian Defense: Alapin Variation, Smith-Morra Declined"
+  },
+  "e2e4c7c5d2d4c5d4c2c3g8f6e4e5f6d5c3d4d7d6g1f3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6"
+    }
+   ],
+   "eco": "B22",
+   "name": "Sicilian Defense: Alapin Variation, Smith-Morra Declined"
+  },
+  "e2e4c7c5d2d4c5d4c2c3g8f6e4e5f6d5c3d4d7d6g1f3b8c6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1c4",
+     "san": "Bc4",
+     "idea": "Develop and hit the d5 knight."
+    }
+   ],
+   "eco": "B22",
+   "name": "Sicilian Defense: Alapin Variation, Smith-Morra Declined"
+  },
+  "e2e4c7c5d2d4c5d4c2c3g8f6e4e5f6d5c3d4d7d6g1f3b8c6f1c4": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d5b6",
+     "san": "Nb6"
+    }
+   ],
+   "eco": "B22",
+   "name": "Sicilian Defense: Alapin Variation, Smith-Morra Declined"
+  },
+  "e2e4c7c5d2d4c5d4c2c3g8f6e4e5f6d5c3d4d7d6g1f3b8c6f1c4d5b6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c4b5",
+     "san": "Bb5",
+     "idea": "Pin the c6 knight."
+    }
+   ],
+   "eco": "B22",
+   "name": "Sicilian Defense: Alapin Variation, Smith-Morra Declined"
+  },
+  "e2e4c7c5d2d4c5d4c2c3g8f6e4e5f6d5c3d4d7d6g1f3b8c6f1c4d5b6c4b5": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d6e5",
+     "san": "dxe5"
+    }
+   ],
+   "eco": "B22",
+   "name": "Sicilian Defense: Alapin Variation, Smith-Morra Declined"
+  },
+  "e2e4c7c5d2d4c5d4c2c3g8f6e4e5f6d5c3d4d7d6g1f3b8c6f1c4d5b6c4b5d6e5": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f3e5",
+     "san": "Nxe5",
+     "idea": "Recapture with the knight, which is strong on e5."
+    }
+   ],
+   "eco": "B22",
+   "name": "Sicilian Defense: Alapin Variation, Smith-Morra Declined"
+  },
+  "e2e4c7c5d2d4c5d4c2c3g8f6e4e5f6d5c3d4d7d6g1f3b8c6f1c4d5b6c4b5d6e5f3e5": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8d7",
+     "san": "Bd7"
+    }
+   ],
+   "eco": "B22",
+   "name": "Sicilian Defense: Alapin Variation, Smith-Morra Declined"
+  },
+  "e2e4c7c5d2d4c5d4c2c3g8f6e4e5f6d5c3d4d7d6g1f3b8c6f1c4d5b6c4b5d6e5f3e5c8d7": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e5d7",
+     "san": "Nxd7",
+     "idea": "Take the bishop and damage Black's development."
+    }
+   ],
+   "eco": "B22",
+   "name": "Sicilian Defense: Alapin Variation, Smith-Morra Declined"
+  },
+  "e2e4c7c5d2d4c5d4c2c3g8f6e4e5f6d5c3d4d7d6g1f3b8c6f1c4d5b6c4b5d6e5f3e5c8d7e5d7": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8d7",
+     "san": "Qxd7"
+    }
+   ],
+   "eco": "B22",
+   "name": "Sicilian Defense: Alapin Variation, Smith-Morra Declined"
+  },
+  "e2e4c7c5d2d4c5d4c2c3g8f6e4e5f6d5c3d4d7d6g1f3b8c6f1c4d5b6c4b5d6e5f3e5c8d7e5d7d8d7": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "Develop. You have the freer game."
+    }
+   ],
+   "eco": "B22",
+   "name": "Sicilian Defense: Alapin Variation, Smith-Morra Declined"
+  },
+  "e2e4c7c5d2d4c5d4c2c3g8f6e4e5f6d5c3d4d7d6g1f3b8c6f1c4d5b6c4b5d6e5f3e5c8d7e5d7d8d7b1c3": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7e6",
+     "san": "e6"
+    }
+   ],
+   "eco": "B22",
+   "name": "Sicilian Defense: Alapin Variation, Smith-Morra Declined"
+  },
+  "e2e4c7c5d2d4c5d4c2c3g8f6e4e5f6d5c3d4d7d6g1f3b8c6f1c4d5b6c4b5d6e5f3e5c8d7e5d7d8d7b1c3e7e6": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle."
+    }
+   ],
+   "eco": "B22",
+   "name": "Sicilian Defense: Alapin Variation, Smith-Morra Declined"
+  },
+  "e2e4c7c5d2d4c5d4c2c3g8f6e4e5f6d5c3d4d7d6g1f3b8c6f1c4d5b6c4b5d6e5f3e5c8d7e5d7d8d7b1c3e7e6e1g1": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8e7",
+     "san": "Be7"
+    }
+   ],
+   "eco": "B22",
+   "name": "Sicilian Defense: Alapin Variation, Smith-Morra Declined"
+  },
+  "e2e4c7c5d2d4c5d4c2c3g8f6e4e5f6d5c3d4d7d6g1f3b8c6f1c4d5b6c4b5d6e5f3e5c8d7e5d7d8d7b1c3e7e6e1g1f8e7": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1g4",
+     "san": "Qg4",
+     "idea": "The queen hits g7 and e6."
+    }
+   ],
+   "eco": "B22",
+   "name": "Sicilian Defense: Alapin Variation, Smith-Morra Declined"
+  },
+  "e2e4c7c5d2d4c5d4c2c3g8f6e4e5f6d5c3d4d7d6g1f3b8c6f1c4d5b6c4b5d6e5f3e5c8d7e5d7d8d7b1c3e7e6e1g1f8e7d1g4": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "B22",
+   "name": "Sicilian Defense: Alapin Variation, Smith-Morra Declined"
+  },
+  "e2e4c7c5d2d4c5d4c2c3g8f6e4e5f6d5c3d4d7d6g1f3b8c6f1c4d5b6c4b5d6e5f3e5c8d7e5d7d8d7b1c3e7e6e1g1f8e7d1g4e8g8": {
+   "ply": 26,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b5c6",
+     "san": "Bxc6",
+     "idea": "Take on c6, wrecking Black's queenside pawns."
+    }
+   ],
+   "eco": "B22",
+   "name": "Sicilian Defense: Alapin Variation, Smith-Morra Declined"
+  },
+  "e2e4c7c5d2d4c5d4c2c3g8f6e4e5f6d5c3d4d7d6g1f3b8c6f1c4d5b6c4b5d6e5f3e5c8d7e5d7d8d7b1c3e7e6e1g1f8e7d1g4e8g8b5c6": {
+   "ply": 27,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b7c6",
+     "san": "bxc6"
+    }
+   ],
+   "eco": "B22",
+   "name": "Sicilian Defense: Alapin Variation, Smith-Morra Declined"
+  },
+  "e2e4c7c5d2d4c5d4c2c3g8f6e4e5f6d5c3d4d7d6g1f3b8c6f1c4d5b6c4b5d6e5f3e5c8d7e5d7d8d7b1c3e7e6e1g1f8e7d1g4e8g8b5c6b7c6": {
+   "ply": 28,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1h6",
+     "san": "Bh6",
+     "idea": "Hit g7 again."
+    }
+   ],
+   "eco": "B22",
+   "name": "Sicilian Defense: Alapin Variation, Smith-Morra Declined"
+  },
+  "e2e4c7c5d2d4c5d4c2c3g8f6e4e5f6d5c3d4d7d6g1f3b8c6f1c4d5b6c4b5d6e5f3e5c8d7e5d7d8d7b1c3e7e6e1g1f8e7d1g4e8g8b5c6b7c6c1h6": {
+   "ply": 29,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e7f6",
+     "san": "Bf6"
+    }
+   ],
+   "eco": "B22",
+   "name": "Sicilian Defense: Alapin Variation, Smith-Morra Declined"
+  },
+  "e2e4c7c5d2d4c5d4c2c3g8f6e4e5f6d5c3d4d7d6g1f3b8c6f1c4d5b6c4b5d6e5f3e5c8d7e5d7d8d7b1c3e7e6e1g1f8e7d1g4e8g8b5c6b7c6c1h6e7f6": {
+   "ply": 30,
+   "turn": "w",
+   "mine": true,
+   "replies": [],
+   "end": true,
+   "eco": "B22",
+   "name": "Sicilian Defense: Alapin Variation, Smith-Morra Declined"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4d3": {
+   "ply": 6,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1d3",
+     "san": "Bxd3",
+     "idea": "Take the pawn with a developing move."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4d3f1d3": {
+   "ply": 7,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4d3f1d3b8c6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3",
+     "idea": "Develop and prepare to castle."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4d3f1d3b8c6g1f3": {
+   "ply": 9,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4d3f1d3b8c6g1f3d7d6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O",
+     "idea": "Castle."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4d3f1d3b8c6g1f3d7d6e1g1": {
+   "ply": 11,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4d3f1d3b8c6g1f3d7d6e1g1g8f6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c3c4",
+     "san": "c4",
+     "idea": "A Maroczy-style bind: c4 and e4 take away d5."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4d3f1d3b8c6g1f3d7d6e1g1g8f6c3c4": {
+   "ply": 13,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g7g6",
+     "san": "g6"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4d3f1d3b8c6g1f3d7d6e1g1g8f6c3c4g7g6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3",
+     "idea": "Develop and cover d5."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4d3f1d3b8c6g1f3d7d6e1g1g8f6c3c4g7g6b1c3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f8g7",
+     "san": "Bg7"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4d3f1d3b8c6g1f3d7d6e1g1g8f6c3c4g7g6b1c3f8g7": {
+   "ply": 16,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h2h3",
+     "san": "h3",
+     "idea": "Keep Black's bishop off g4."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4d3f1d3b8c6g1f3d7d6e1g1g8f6c3c4g7g6b1c3f8g7h2h3": {
+   "ply": 17,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4d3f1d3b8c6g1f3d7d6e1g1g8f6c3c4g7g6b1c3f8g7h2h3e8g8": {
+   "ply": 18,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c1e3",
+     "san": "Be3",
+     "idea": "Develop, hitting a7."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4d3f1d3b8c6g1f3d7d6e1g1g8f6c3c4g7g6b1c3f8g7h2h3e8g8c1e3": {
+   "ply": 19,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a7a6",
+     "san": "a6"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4d3f1d3b8c6g1f3d7d6e1g1g8f6c3c4g7g6b1c3f8g7h2h3e8g8c1e3a7a6": {
+   "ply": 20,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a1c1",
+     "san": "Rc1",
+     "idea": "The rook takes the c-file."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4d3f1d3b8c6g1f3d7d6e1g1g8f6c3c4g7g6b1c3f8g7h2h3e8g8c1e3a7a6a1c1": {
+   "ply": 21,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c8d7",
+     "san": "Bd7"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4d3f1d3b8c6g1f3d7d6e1g1g8f6c3c4g7g6b1c3f8g7h2h3e8g8c1e3a7a6a1c1c8d7": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b2b3",
+     "san": "b3",
+     "idea": "Protect c4 and prepare Bb1."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4d3f1d3b8c6g1f3d7d6e1g1g8f6c3c4g7g6b1c3f8g7h2h3e8g8c1e3a7a6a1c1c8d7b2b3": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a8c8",
+     "san": "Rc8"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4d3f1d3b8c6g1f3d7d6e1g1g8f6c3c4g7g6b1c3f8g7h2h3e8g8c1e3a7a6a1c1c8d7b2b3a8c8": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d3b1",
+     "san": "Bb1",
+     "idea": "Tuck the bishop back, keeping it on the b1–h7 diagonal."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4d3f1d3b8c6g1f3d7d6e1g1g8f6c3c4g7g6b1c3f8g7h2h3e8g8c1e3a7a6a1c1c8d7b2b3a8c8d3b1": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8a5",
+     "san": "Qa5"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4d3f1d3b8c6g1f3d7d6e1g1g8f6c3c4g7g6b1c3f8g7h2h3e8g8c1e3a7a6a1c1c8d7b2b3a8c8d3b1d8a5": {
+   "ply": 26,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c3d5",
+     "san": "Nd5",
+     "idea": "Jump into d5."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4d3f1d3b8c6g1f3d7d6e1g1g8f6c3c4g7g6b1c3f8g7h2h3e8g8c1e3a7a6a1c1c8d7b2b3a8c8d3b1d8a5c3d5": {
+   "ply": 27,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f6d5",
+     "san": "Nxd5"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4d3f1d3b8c6g1f3d7d6e1g1g8f6c3c4g7g6b1c3f8g7h2h3e8g8c1e3a7a6a1c1c8d7b2b3a8c8d3b1d8a5c3d5f6d5": {
+   "ply": 28,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e4d5",
+     "san": "exd5",
+     "idea": "Recapture, gaining space."
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4d3f1d3b8c6g1f3d7d6e1g1g8f6c3c4g7g6b1c3f8g7h2h3e8g8c1e3a7a6a1c1c8d7b2b3a8c8d3b1d8a5c3d5f6d5e4d5": {
+   "ply": 29,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c6e5",
+     "san": "Ne5"
+    }
+   ],
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"
+  },
+  "e2e4c7c5d2d4c5d4c2c3d4d3f1d3b8c6g1f3d7d6e1g1g8f6c3c4g7g6b1c3f8g7h2h3e8g8c1e3a7a6a1c1c8d7b2b3a8c8d3b1d8a5c3d5f6d5e4d5c6e5": {
+   "ply": 30,
+   "turn": "w",
+   "mine": true,
+   "replies": [],
+   "end": true,
+   "eco": "B21",
+   "name": "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"
+  }
+ }
+}

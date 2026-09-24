@@ -25,3 +25,6 @@ checkpoints/
 *.pem
 *.key
 aws-keys.txt
+
+# Lichess explorer response cache (tools/extend_lines.py)
+tools/.explorer-cache.json

@@ -11,7 +11,7 @@
    "label": "Classical Variation",
    "eco": "C45",
    "name": "Scotch Game: Classical Variation",
-   "path": "e2e4e7e5g1f3b8c6d2d4e5d4f3d4f8c5c1e3d8f6c2c3g8e7f1c4c6e5c4e2f6g6e1g1d7d6b1d2a7a6g1h1",
+   "path": "e2e4e7e5g1f3b8c6d2d4e5d4f3d4f8c5c1e3d8f6c2c3g8e7f1c4c6e5c4e2f6g6e1g1d7d6b1d2a7a6f2f4",
    "plies": 21
   },
   {
@@ -19,16 +19,16 @@
    "label": "Mieses Variation",
    "eco": "C45",
    "name": "Scotch Game: Mieses Variation",
-   "path": "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7d1e2f6d5c2c4d5b6b1c3e7e6e2e4f8b4c1d2c8a6b2b3",
-   "plies": 23
+   "path": "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7d1e2f6d5c2c4d5b6b1c3e7e6e2e4f8b4c1d2c8a6b2b3b4c3d2c3d7d5e4h4d5c4f1e2b6d5e2c4g7g5h4d4",
+   "plies": 33
   },
   {
    "id": "scotch-gambit",
    "label": "Scotch Gambit",
    "eco": "C56",
    "name": "Italian Game: Scotch Gambit, Max Lange Attack",
-   "path": "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4f3d4f8c5c1e3c8d7b5c6b7c6e1g1e8g8f2f3",
-   "plies": 21
+   "path": "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4f3d4f8c5c1e3c8d7b5c6b7c6e1g1e8g8f2f3e4g5f3f4g5e4b1d2e4d2d1d2f7f6d4b3c5b6e3c5f6e5",
+   "plies": 32
   }
  ],
  "nodes": {
@@ -315,15 +315,15 @@
    "mine": true,
    "replies": [
     {
-     "uci": "g1h1",
-     "san": "Kh1",
-     "idea": "Sidestep the g1-a7 diagonal before opening the f-file."
+     "uci": "f2f4",
+     "san": "f4",
+     "idea": "Push f4, hitting e5 and grabbing kingside space."
     }
    ],
    "eco": "C45",
    "name": "Scotch Game: Classical Variation"
   },
-  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4f8c5c1e3d8f6c2c3g8e7f1c4c6e5c4e2f6g6e1g1d7d6b1d2a7a6g1h1": {
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4f8c5c1e3d8f6c2c3g8e7f1c4c6e5c4e2f6g6e1g1d7d6b1d2a7a6f2f4": {
    "ply": 21,
    "turn": "b",
    "mine": false,
@@ -539,6 +539,141 @@
    "ply": 23,
    "turn": "b",
    "mine": false,
+   "replies": [
+    {
+     "uci": "b4c3",
+     "san": "Bxc3"
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Mieses Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7d1e2f6d5c2c4d5b6b1c3e7e6e2e4f8b4c1d2c8a6b2b3b4c3": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d2c3",
+     "san": "Bxc3",
+     "idea": "Take back. Your dark-squared bishop stays and hits g7."
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Mieses Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7d1e2f6d5c2c4d5b6b1c3e7e6e2e4f8b4c1d2c8a6b2b3b4c3d2c3": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d7d5",
+     "san": "d5"
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Mieses Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7d1e2f6d5c2c4d5b6b1c3e7e6e2e4f8b4c1d2c8a6b2b3b4c3d2c3d7d5": {
+   "ply": 26,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e4h4",
+     "san": "Qh4",
+     "idea": "The queen swings to h4, aimed at the kingside and the h7 pawn."
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Mieses Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7d1e2f6d5c2c4d5b6b1c3e7e6e2e4f8b4c1d2c8a6b2b3b4c3d2c3d7d5e4h4": {
+   "ply": 27,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d5c4",
+     "san": "dxc4"
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Mieses Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7d1e2f6d5c2c4d5b6b1c3e7e6e2e4f8b4c1d2c8a6b2b3b4c3d2c3d7d5e4h4d5c4": {
+   "ply": 28,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f1e2",
+     "san": "Be2",
+     "idea": "Develop and get ready to take back on c4."
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Mieses Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7d1e2f6d5c2c4d5b6b1c3e7e6e2e4f8b4c1d2c8a6b2b3b4c3d2c3d7d5e4h4d5c4f1e2": {
+   "ply": 29,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b6d5",
+     "san": "Nd5"
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Mieses Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7d1e2f6d5c2c4d5b6b1c3e7e6e2e4f8b4c1d2c8a6b2b3b4c3d2c3d7d5e4h4d5c4f1e2b6d5": {
+   "ply": 30,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e2c4",
+     "san": "Bxc4",
+     "idea": "Take the pawn. Material is level and the bishop hits d5."
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Mieses Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7d1e2f6d5c2c4d5b6b1c3e7e6e2e4f8b4c1d2c8a6b2b3b4c3d2c3d7d5e4h4d5c4f1e2b6d5e2c4": {
+   "ply": 31,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g7g5",
+     "san": "g5"
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Mieses Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7d1e2f6d5c2c4d5b6b1c3e7e6e2e4f8b4c1d2c8a6b2b3b4c3d2c3d7d5e4h4d5c4f1e2b6d5e2c4g7g5": {
+   "ply": 32,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h4d4",
+     "san": "Qd4",
+     "idea": "Centralise the queen, hitting d5 and a7."
+    }
+   ],
+   "eco": "C45",
+   "name": "Scotch Game: Mieses Variation"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f3d4g8f6d4c6b7c6e4e5d8e7d1e2f6d5c2c4d5b6b1c3e7e6e2e4f8b4c1d2c8a6b2b3b4c3d2c3d7d5e4h4d5c4f1e2b6d5e2c4g7g5h4d4": {
+   "ply": 33,
+   "turn": "b",
+   "mine": false,
    "replies": [],
    "end": true,
    "eco": "C45",
@@ -737,6 +872,154 @@
    "ply": 21,
    "turn": "b",
    "mine": false,
+   "replies": [
+    {
+     "uci": "e4g5",
+     "san": "Ng5"
+    }
+   ],
+   "eco": "C56",
+   "name": "Italian Game: Scotch Gambit, Max Lange Attack"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4f3d4f8c5c1e3c8d7b5c6b7c6e1g1e8g8f2f3e4g5": {
+   "ply": 22,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f3f4",
+     "san": "f4",
+     "idea": "Kick the knight away from g5 and grab space."
+    }
+   ],
+   "eco": "C56",
+   "name": "Italian Game: Scotch Gambit, Max Lange Attack"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4f3d4f8c5c1e3c8d7b5c6b7c6e1g1e8g8f2f3e4g5f3f4": {
+   "ply": 23,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g5e4",
+     "san": "Ne4"
+    }
+   ],
+   "eco": "C56",
+   "name": "Italian Game: Scotch Gambit, Max Lange Attack"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4f3d4f8c5c1e3c8d7b5c6b7c6e1g1e8g8f2f3e4g5f3f4g5e4": {
+   "ply": 24,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b1d2",
+     "san": "Nd2",
+     "idea": "Challenge the knight on e4."
+    }
+   ],
+   "eco": "C56",
+   "name": "Italian Game: Scotch Gambit, Max Lange Attack"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4f3d4f8c5c1e3c8d7b5c6b7c6e1g1e8g8f2f3e4g5f3f4g5e4b1d2": {
+   "ply": 25,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4d2",
+     "san": "Nxd2"
+    }
+   ],
+   "eco": "C56",
+   "name": "Italian Game: Scotch Gambit, Max Lange Attack"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4f3d4f8c5c1e3c8d7b5c6b7c6e1g1e8g8f2f3e4g5f3f4g5e4b1d2e4d2": {
+   "ply": 26,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d1d2",
+     "san": "Qxd2",
+     "idea": "Recapture, keeping the bishop pair."
+    }
+   ],
+   "eco": "C56",
+   "name": "Italian Game: Scotch Gambit, Max Lange Attack"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4f3d4f8c5c1e3c8d7b5c6b7c6e1g1e8g8f2f3e4g5f3f4g5e4b1d2e4d2d1d2": {
+   "ply": 27,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f7f6",
+     "san": "f6"
+    }
+   ],
+   "eco": "C56",
+   "name": "Italian Game: Scotch Gambit, Max Lange Attack"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4f3d4f8c5c1e3c8d7b5c6b7c6e1g1e8g8f2f3e4g5f3f4g5e4b1d2e4d2d1d2f7f6": {
+   "ply": 28,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d4b3",
+     "san": "Nb3",
+     "idea": "Hit the c5 bishop."
+    }
+   ],
+   "eco": "C56",
+   "name": "Italian Game: Scotch Gambit, Max Lange Attack"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4f3d4f8c5c1e3c8d7b5c6b7c6e1g1e8g8f2f3e4g5f3f4g5e4b1d2e4d2d1d2f7f6d4b3": {
+   "ply": 29,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c5b6",
+     "san": "Bb6"
+    }
+   ],
+   "eco": "C56",
+   "name": "Italian Game: Scotch Gambit, Max Lange Attack"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4f3d4f8c5c1e3c8d7b5c6b7c6e1g1e8g8f2f3e4g5f3f4g5e4b1d2e4d2d1d2f7f6d4b3c5b6": {
+   "ply": 30,
+   "turn": "w",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e3c5",
+     "san": "Bc5",
+     "idea": "Offer the bishop trade and hit the f8 rook."
+    }
+   ],
+   "eco": "C56",
+   "name": "Italian Game: Scotch Gambit, Max Lange Attack"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4f3d4f8c5c1e3c8d7b5c6b7c6e1g1e8g8f2f3e4g5f3f4g5e4b1d2e4d2d1d2f7f6d4b3c5b6e3c5": {
+   "ply": 31,
+   "turn": "b",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f6e5",
+     "san": "fxe5"
+    }
+   ],
+   "eco": "C56",
+   "name": "Italian Game: Scotch Gambit, Max Lange Attack"
+  },
+  "e2e4e7e5g1f3b8c6d2d4e5d4f1c4g8f6e4e5d7d5c4b5f6e4f3d4f8c5c1e3c8d7b5c6b7c6e1g1e8g8f2f3e4g5f3f4g5e4b1d2e4d2d1d2f7f6d4b3c5b6e3c5f6e5": {
+   "ply": 32,
+   "turn": "w",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "C56",

@@ -9,34 +9,34 @@
   {
    "id": "benoni-classical",
    "label": "Classical Variation",
-   "eco": "A78",
+   "eco": "A79",
    "name": "Benoni Defense: Classical Variation, Czerniak Defense",
-   "path": "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3f8g7f1e2e8g8e1g1f8e8f3d2b8a6",
-   "plies": 20
+   "path": "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3f8g7f1e2e8g8e1g1f8e8f3d2b8a6f2f3a6c7a2a4b7b6d2c4c8a6c1g5h7h6g5e3a6c4e2c4a7a6d1d2g8h7a1b1d8d7",
+   "plies": 36
   },
   {
    "id": "benoni-taimanov",
    "label": "Taimanov Attack",
    "eco": "A67",
    "name": "Benoni Defense: Taimanov Variation",
-   "path": "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8g1f3b8a6",
-   "plies": 20
+   "path": "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8g1f3b8a6e1g1a6b4f1e1a7a6b5f1f8e8h2h3f7f5c1d2f5e4c3e4d7f6e4f6g7f6d1b3e8e1a1e1c8f5g2g4f5d7",
+   "plies": 40
   },
   {
    "id": "benoni-fianchetto",
    "label": "Fianchetto Variation",
-   "eco": "A62",
-   "name": "Benoni Defense: Fianchetto Variation",
-   "path": "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1f8e8f3d2a7a6",
-   "plies": 20
+   "eco": "A64",
+   "name": "Benoni Defense: Fianchetto Variation, Hastings Defense, Main Line",
+   "path": "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1f8e8f3d2a7a6a2a4b8d7h2h3a8b8d2c4d7e5c4a3f6h5e2e4c8d7a4a5d8a5g3g4h5f6f2f4e5g4h3g4f6g4f4f5h7h5",
+   "plies": 40
   },
   {
    "id": "benoni-modern-main",
    "label": "Modern Main Line",
    "eco": "A65",
    "name": "Benoni Defense: King's Pawn Line",
-   "path": "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8g1f3b7b5d3b5f6e4",
-   "plies": 20
+   "path": "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8g1f3b7b5d3b5f6e4c3e4d8a5f3d2a5b5e4d6b5a6d2c4b8d7e1g1d7e5d6c8a8c8c4e5g7e5f1e1f8e8c1g5a6d6",
+   "plies": 38
   }
  ],
  "nodes": {
@@ -324,9 +324,225 @@
    "ply": 20,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "f2f3",
+     "san": "f3"
+    }
+   ],
+   "eco": "A78",
+   "name": "Benoni Defense: Classical Variation, Czerniak Defense"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3f8g7f1e2e8g8e1g1f8e8f3d2b8a6f2f3": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a6c7",
+     "san": "Nc7",
+     "idea": "The knight heads to c7, hitting d5 and preparing ...b5."
+    }
+   ],
+   "eco": "A79",
+   "name": "Benoni Defense: Classical Variation, Czerniak Defense"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3f8g7f1e2e8g8e1g1f8e8f3d2b8a6f2f3a6c7": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a2a4",
+     "san": "a4"
+    }
+   ],
+   "eco": "A79",
+   "name": "Benoni Defense: Classical Variation, Czerniak Defense"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3f8g7f1e2e8g8e1g1f8e8f3d2b8a6f2f3a6c7a2a4": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b7b6",
+     "san": "b6",
+     "idea": "Support ...Ba6."
+    }
+   ],
+   "eco": "A79",
+   "name": "Benoni Defense: Classical Variation, Czerniak Defense"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3f8g7f1e2e8g8e1g1f8e8f3d2b8a6f2f3a6c7a2a4b7b6": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d2c4",
+     "san": "Nc4"
+    }
+   ],
+   "eco": "A79",
+   "name": "Benoni Defense: Classical Variation, Czerniak Defense"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3f8g7f1e2e8g8e1g1f8e8f3d2b8a6f2f3a6c7a2a4b7b6d2c4": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8a6",
+     "san": "Ba6",
+     "idea": "Challenge the strong c4 knight."
+    }
+   ],
+   "eco": "A79",
+   "name": "Benoni Defense: Classical Variation, Czerniak Defense"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3f8g7f1e2e8g8e1g1f8e8f3d2b8a6f2f3a6c7a2a4b7b6d2c4c8a6": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1g5",
+     "san": "Bg5"
+    }
+   ],
+   "eco": "A79",
+   "name": "Benoni Defense: Classical Variation, Czerniak Defense"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3f8g7f1e2e8g8e1g1f8e8f3d2b8a6f2f3a6c7a2a4b7b6d2c4c8a6c1g5": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h7h6",
+     "san": "h6",
+     "idea": "Kick the bishop."
+    }
+   ],
+   "eco": "A79",
+   "name": "Benoni Defense: Classical Variation, Czerniak Defense"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3f8g7f1e2e8g8e1g1f8e8f3d2b8a6f2f3a6c7a2a4b7b6d2c4c8a6c1g5h7h6": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g5e3",
+     "san": "Be3"
+    }
+   ],
+   "eco": "A79",
+   "name": "Benoni Defense: Classical Variation, Czerniak Defense"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3f8g7f1e2e8g8e1g1f8e8f3d2b8a6f2f3a6c7a2a4b7b6d2c4c8a6c1g5h7h6g5e3": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a6c4",
+     "san": "Bxc4",
+     "idea": "Take the knight. It was White's best piece."
+    }
+   ],
+   "eco": "A79",
+   "name": "Benoni Defense: Classical Variation, Czerniak Defense"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3f8g7f1e2e8g8e1g1f8e8f3d2b8a6f2f3a6c7a2a4b7b6d2c4c8a6c1g5h7h6g5e3a6c4": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e2c4",
+     "san": "Bxc4"
+    }
+   ],
+   "eco": "A79",
+   "name": "Benoni Defense: Classical Variation, Czerniak Defense"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3f8g7f1e2e8g8e1g1f8e8f3d2b8a6f2f3a6c7a2a4b7b6d2c4c8a6c1g5h7h6g5e3a6c4e2c4": {
+   "ply": 31,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a7a6",
+     "san": "a6",
+     "idea": "Prepare ...b5."
+    }
+   ],
+   "eco": "A79",
+   "name": "Benoni Defense: Classical Variation, Czerniak Defense"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3f8g7f1e2e8g8e1g1f8e8f3d2b8a6f2f3a6c7a2a4b7b6d2c4c8a6c1g5h7h6g5e3a6c4e2c4a7a6": {
+   "ply": 32,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1d2",
+     "san": "Qd2"
+    }
+   ],
+   "eco": "A79",
+   "name": "Benoni Defense: Classical Variation, Czerniak Defense"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3f8g7f1e2e8g8e1g1f8e8f3d2b8a6f2f3a6c7a2a4b7b6d2c4c8a6c1g5h7h6g5e3a6c4e2c4a7a6d1d2": {
+   "ply": 33,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g8h7",
+     "san": "Kh7",
+     "idea": "Tuck the king into the corner."
+    }
+   ],
+   "eco": "A79",
+   "name": "Benoni Defense: Classical Variation, Czerniak Defense"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3f8g7f1e2e8g8e1g1f8e8f3d2b8a6f2f3a6c7a2a4b7b6d2c4c8a6c1g5h7h6g5e3a6c4e2c4a7a6d1d2g8h7": {
+   "ply": 34,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a1b1",
+     "san": "Rab1"
+    }
+   ],
+   "eco": "A79",
+   "name": "Benoni Defense: Classical Variation, Czerniak Defense"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3f8g7f1e2e8g8e1g1f8e8f3d2b8a6f2f3a6c7a2a4b7b6d2c4c8a6c1g5h7h6g5e3a6c4e2c4a7a6d1d2g8h7a1b1": {
+   "ply": 35,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8d7",
+     "san": "Qd7",
+     "idea": "The queen covers the queenside and hits a4."
+    }
+   ],
+   "eco": "A79",
+   "name": "Benoni Defense: Classical Variation, Czerniak Defense"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6g1f3f8g7f1e2e8g8e1g1f8e8f3d2b8a6f2f3a6c7a2a4b7b6d2c4c8a6c1g5h7h6g5e3a6c4e2c4a7a6d1d2g8h7a1b1d8d7": {
+   "ply": 36,
+   "turn": "w",
+   "mine": false,
    "replies": [],
    "end": true,
-   "eco": "A78",
+   "eco": "A79",
    "name": "Benoni Defense: Classical Variation, Czerniak Defense"
   },
   "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4": {
@@ -426,6 +642,276 @@
   },
   "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8g1f3b8a6": {
    "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O"
+    }
+   ],
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8g1f3b8a6e1g1": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a6b4",
+     "san": "Nb4",
+     "idea": "The knight lands on b4, hitting d5."
+    }
+   ],
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8g1f3b8a6e1g1a6b4": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1e1",
+     "san": "Re1"
+    }
+   ],
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8g1f3b8a6e1g1a6b4f1e1": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a7a6",
+     "san": "a6",
+     "idea": "Hit the bishop."
+    }
+   ],
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8g1f3b8a6e1g1a6b4f1e1a7a6": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b5f1",
+     "san": "Bf1"
+    }
+   ],
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8g1f3b8a6e1g1a6b4f1e1a7a6b5f1": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8e8",
+     "san": "Re8",
+     "idea": "The rook takes the e-file, hitting e4."
+    }
+   ],
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8g1f3b8a6e1g1a6b4f1e1a7a6b5f1f8e8": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h2h3",
+     "san": "h3"
+    }
+   ],
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8g1f3b8a6e1g1a6b4f1e1a7a6b5f1f8e8h2h3": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f7f5",
+     "san": "f5",
+     "idea": "Strike at e4 with the f-pawn."
+    }
+   ],
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8g1f3b8a6e1g1a6b4f1e1a7a6b5f1f8e8h2h3f7f5": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1d2",
+     "san": "Bd2"
+    }
+   ],
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8g1f3b8a6e1g1a6b4f1e1a7a6b5f1f8e8h2h3f7f5c1d2": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f5e4",
+     "san": "fxe4",
+     "idea": "Take the pawn."
+    }
+   ],
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8g1f3b8a6e1g1a6b4f1e1a7a6b5f1f8e8h2h3f7f5c1d2f5e4": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c3e4",
+     "san": "Nxe4"
+    }
+   ],
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8g1f3b8a6e1g1a6b4f1e1a7a6b5f1f8e8h2h3f7f5c1d2f5e4c3e4": {
+   "ply": 31,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7f6",
+     "san": "Nf6",
+     "idea": "Challenge the e4 knight and hit d5."
+    }
+   ],
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8g1f3b8a6e1g1a6b4f1e1a7a6b5f1f8e8h2h3f7f5c1d2f5e4c3e4d7f6": {
+   "ply": 32,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4f6",
+     "san": "Nxf6+"
+    }
+   ],
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8g1f3b8a6e1g1a6b4f1e1a7a6b5f1f8e8h2h3f7f5c1d2f5e4c3e4d7f6e4f6": {
+   "ply": 33,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g7f6",
+     "san": "Bxf6",
+     "idea": "Recapture. The bishop hits b2."
+    }
+   ],
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8g1f3b8a6e1g1a6b4f1e1a7a6b5f1f8e8h2h3f7f5c1d2f5e4c3e4d7f6e4f6g7f6": {
+   "ply": 34,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1b3",
+     "san": "Qb3"
+    }
+   ],
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8g1f3b8a6e1g1a6b4f1e1a7a6b5f1f8e8h2h3f7f5c1d2f5e4c3e4d7f6e4f6g7f6d1b3": {
+   "ply": 35,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8e1",
+     "san": "Rxe1",
+     "idea": "Trade rooks on e1."
+    }
+   ],
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8g1f3b8a6e1g1a6b4f1e1a7a6b5f1f8e8h2h3f7f5c1d2f5e4c3e4d7f6e4f6g7f6d1b3e8e1": {
+   "ply": 36,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a1e1",
+     "san": "Rxe1"
+    }
+   ],
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8g1f3b8a6e1g1a6b4f1e1a7a6b5f1f8e8h2h3f7f5c1d2f5e4c3e4d7f6e4f6g7f6d1b3e8e1a1e1": {
+   "ply": 37,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8f5",
+     "san": "Bf5",
+     "idea": "Develop with tempo on h3."
+    }
+   ],
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8g1f3b8a6e1g1a6b4f1e1a7a6b5f1f8e8h2h3f7f5c1d2f5e4c3e4d7f6e4f6g7f6d1b3e8e1a1e1c8f5": {
+   "ply": 38,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g2g4",
+     "san": "g4"
+    }
+   ],
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8g1f3b8a6e1g1a6b4f1e1a7a6b5f1f8e8h2h3f7f5c1d2f5e4c3e4d7f6e4f6g7f6d1b3e8e1a1e1c8f5g2g4": {
+   "ply": 39,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f5d7",
+     "san": "Bd7",
+     "idea": "Retreat, hitting a4 and g4."
+    }
+   ],
+   "eco": "A67",
+   "name": "Benoni Defense: Taimanov Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6f2f4f8g7f1b5f6d7a2a4e8g8g1f3b8a6e1g1a6b4f1e1a7a6b5f1f8e8h2h3f7f5c1d2f5e4c3e4d7f6e4f6g7f6d1b3e8e1a1e1c8f5g2g4f5d7": {
+   "ply": 40,
    "turn": "w",
    "mine": false,
    "replies": [],
@@ -559,10 +1045,280 @@
    "ply": 20,
    "turn": "w",
    "mine": false,
-   "replies": [],
-   "end": true,
+   "replies": [
+    {
+     "uci": "a2a4",
+     "san": "a4"
+    }
+   ],
    "eco": "A62",
    "name": "Benoni Defense: Fianchetto Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1f8e8f3d2a7a6a2a4": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8d7",
+     "san": "Nbd7",
+     "idea": "Develop toward e5 and c5."
+    }
+   ],
+   "eco": "A62",
+   "name": "Benoni Defense: Fianchetto Variation"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1f8e8f3d2a7a6a2a4b8d7": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h2h3",
+     "san": "h3"
+    }
+   ],
+   "eco": "A64",
+   "name": "Benoni Defense: Fianchetto Variation, Hastings Defense, Main Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1f8e8f3d2a7a6a2a4b8d7h2h3": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a8b8",
+     "san": "Rb8",
+     "idea": "Support ...b5, the queenside break."
+    }
+   ],
+   "eco": "A64",
+   "name": "Benoni Defense: Fianchetto Variation, Hastings Defense, Main Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1f8e8f3d2a7a6a2a4b8d7h2h3a8b8": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d2c4",
+     "san": "Nc4"
+    }
+   ],
+   "eco": "A64",
+   "name": "Benoni Defense: Fianchetto Variation, Hastings Defense, Main Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1f8e8f3d2a7a6a2a4b8d7h2h3a8b8d2c4": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7e5",
+     "san": "Ne5",
+     "idea": "Challenge the c4 knight from e5."
+    }
+   ],
+   "eco": "A64",
+   "name": "Benoni Defense: Fianchetto Variation, Hastings Defense, Main Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1f8e8f3d2a7a6a2a4b8d7h2h3a8b8d2c4d7e5": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c4a3",
+     "san": "Na3"
+    }
+   ],
+   "eco": "A64",
+   "name": "Benoni Defense: Fianchetto Variation, Hastings Defense, Main Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1f8e8f3d2a7a6a2a4b8d7h2h3a8b8d2c4d7e5c4a3": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6h5",
+     "san": "Nh5",
+     "idea": "Jump to h5, hitting g3 and eyeing f4."
+    }
+   ],
+   "eco": "A64",
+   "name": "Benoni Defense: Fianchetto Variation, Hastings Defense, Main Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1f8e8f3d2a7a6a2a4b8d7h2h3a8b8d2c4d7e5c4a3f6h5": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e2e4",
+     "san": "e4"
+    }
+   ],
+   "eco": "A64",
+   "name": "Benoni Defense: Fianchetto Variation, Hastings Defense, Main Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1f8e8f3d2a7a6a2a4b8d7h2h3a8b8d2c4d7e5c4a3f6h5e2e4": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8d7",
+     "san": "Bd7",
+     "idea": "Develop, hitting a4."
+    }
+   ],
+   "eco": "A64",
+   "name": "Benoni Defense: Fianchetto Variation, Hastings Defense, Main Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1f8e8f3d2a7a6a2a4b8d7h2h3a8b8d2c4d7e5c4a3f6h5e2e4c8d7": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a4a5",
+     "san": "a5"
+    }
+   ],
+   "eco": "A64",
+   "name": "Benoni Defense: Fianchetto Variation, Hastings Defense, Main Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1f8e8f3d2a7a6a2a4b8d7h2h3a8b8d2c4d7e5c4a3f6h5e2e4c8d7a4a5": {
+   "ply": 31,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8a5",
+     "san": "Qxa5",
+     "idea": "Take the a5 pawn."
+    }
+   ],
+   "eco": "A64",
+   "name": "Benoni Defense: Fianchetto Variation, Hastings Defense, Main Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1f8e8f3d2a7a6a2a4b8d7h2h3a8b8d2c4d7e5c4a3f6h5e2e4c8d7a4a5d8a5": {
+   "ply": 32,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g3g4",
+     "san": "g4"
+    }
+   ],
+   "eco": "A64",
+   "name": "Benoni Defense: Fianchetto Variation, Hastings Defense, Main Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1f8e8f3d2a7a6a2a4b8d7h2h3a8b8d2c4d7e5c4a3f6h5e2e4c8d7a4a5d8a5g3g4": {
+   "ply": 33,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h5f6",
+     "san": "Nf6",
+     "idea": "Back to f6, hitting e4, g4 and d5."
+    }
+   ],
+   "eco": "A64",
+   "name": "Benoni Defense: Fianchetto Variation, Hastings Defense, Main Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1f8e8f3d2a7a6a2a4b8d7h2h3a8b8d2c4d7e5c4a3f6h5e2e4c8d7a4a5d8a5g3g4h5f6": {
+   "ply": 34,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f2f4",
+     "san": "f4"
+    }
+   ],
+   "eco": "A64",
+   "name": "Benoni Defense: Fianchetto Variation, Hastings Defense, Main Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1f8e8f3d2a7a6a2a4b8d7h2h3a8b8d2c4d7e5c4a3f6h5e2e4c8d7a4a5d8a5g3g4h5f6f2f4": {
+   "ply": 35,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e5g4",
+     "san": "Nexg4",
+     "idea": "Sacrifice the knight on g4 to rip open White's king."
+    }
+   ],
+   "eco": "A64",
+   "name": "Benoni Defense: Fianchetto Variation, Hastings Defense, Main Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1f8e8f3d2a7a6a2a4b8d7h2h3a8b8d2c4d7e5c4a3f6h5e2e4c8d7a4a5d8a5g3g4h5f6f2f4e5g4": {
+   "ply": 36,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h3g4",
+     "san": "hxg4"
+    }
+   ],
+   "eco": "A64",
+   "name": "Benoni Defense: Fianchetto Variation, Hastings Defense, Main Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1f8e8f3d2a7a6a2a4b8d7h2h3a8b8d2c4d7e5c4a3f6h5e2e4c8d7a4a5d8a5g3g4h5f6f2f4e5g4h3g4": {
+   "ply": 37,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6g4",
+     "san": "Nxg4",
+     "idea": "Recapture. Two pawns and an attack for the piece."
+    }
+   ],
+   "eco": "A64",
+   "name": "Benoni Defense: Fianchetto Variation, Hastings Defense, Main Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1f8e8f3d2a7a6a2a4b8d7h2h3a8b8d2c4d7e5c4a3f6h5e2e4c8d7a4a5d8a5g3g4h5f6f2f4e5g4h3g4f6g4": {
+   "ply": 38,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f4f5",
+     "san": "f5"
+    }
+   ],
+   "eco": "A64",
+   "name": "Benoni Defense: Fianchetto Variation, Hastings Defense, Main Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1f8e8f3d2a7a6a2a4b8d7h2h3a8b8d2c4d7e5c4a3f6h5e2e4c8d7a4a5d8a5g3g4h5f6f2f4e5g4h3g4f6g4f4f5": {
+   "ply": 39,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h7h5",
+     "san": "h5",
+     "idea": "Support the g4 knight."
+    }
+   ],
+   "eco": "A64",
+   "name": "Benoni Defense: Fianchetto Variation, Hastings Defense, Main Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6g1f3g7g6g2g3f8g7f1g2e8g8e1g1f8e8f3d2a7a6a2a4b8d7h2h3a8b8d2c4d7e5c4a3f6h5e2e4c8d7a4a5d8a5g3g4h5f6f2f4e5g4h3g4f6g4f4f5h7h5": {
+   "ply": 40,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "A64",
+   "name": "Benoni Defense: Fianchetto Variation, Hastings Defense, Main Line"
   },
   "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3": {
    "ply": 13,
@@ -661,6 +1417,249 @@
   },
   "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8g1f3b7b5d3b5f6e4": {
    "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c3e4",
+     "san": "Nxe4"
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8g1f3b7b5d3b5f6e4c3e4": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8a5",
+     "san": "Qa5+",
+     "idea": "Check, winning the piece back."
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8g1f3b7b5d3b5f6e4c3e4d8a5": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3d2",
+     "san": "Nfd2"
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8g1f3b7b5d3b5f6e4c3e4d8a5f3d2": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a5b5",
+     "san": "Qxb5",
+     "idea": "Take the bishop."
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8g1f3b7b5d3b5f6e4c3e4d8a5f3d2a5b5": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4d6",
+     "san": "Nxd6"
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8g1f3b7b5d3b5f6e4c3e4d8a5f3d2a5b5e4d6": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b5a6",
+     "san": "Qa6",
+     "idea": "Retreat, hitting a2 and d6."
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8g1f3b7b5d3b5f6e4c3e4d8a5f3d2a5b5e4d6b5a6": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d2c4",
+     "san": "N2c4"
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8g1f3b7b5d3b5f6e4c3e4d8a5f3d2a5b5e4d6b5a6d2c4": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8d7",
+     "san": "Nd7",
+     "idea": "Develop toward e5."
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8g1f3b7b5d3b5f6e4c3e4d8a5f3d2a5b5e4d6b5a6d2c4b8d7": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O"
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8g1f3b7b5d3b5f6e4c3e4d8a5f3d2a5b5e4d6b5a6d2c4b8d7e1g1": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7e5",
+     "san": "Ne5",
+     "idea": "Hit the c4 knight."
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8g1f3b7b5d3b5f6e4c3e4d8a5f3d2a5b5e4d6b5a6d2c4b8d7e1g1d7e5": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d6c8",
+     "san": "Nxc8"
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8g1f3b7b5d3b5f6e4c3e4d8a5f3d2a5b5e4d6b5a6d2c4b8d7e1g1d7e5d6c8": {
+   "ply": 31,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a8c8",
+     "san": "Raxc8",
+     "idea": "Recapture."
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8g1f3b7b5d3b5f6e4c3e4d8a5f3d2a5b5e4d6b5a6d2c4b8d7e1g1d7e5d6c8a8c8": {
+   "ply": 32,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c4e5",
+     "san": "Nxe5"
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8g1f3b7b5d3b5f6e4c3e4d8a5f3d2a5b5e4d6b5a6d2c4b8d7e1g1d7e5d6c8a8c8c4e5": {
+   "ply": 33,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g7e5",
+     "san": "Bxe5",
+     "idea": "Recapture. The bishop is strong on e5."
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8g1f3b7b5d3b5f6e4c3e4d8a5f3d2a5b5e4d6b5a6d2c4b8d7e1g1d7e5d6c8a8c8c4e5g7e5": {
+   "ply": 34,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1e1",
+     "san": "Re1"
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8g1f3b7b5d3b5f6e4c3e4d8a5f3d2a5b5e4d6b5a6d2c4b8d7e1g1d7e5d6c8a8c8c4e5g7e5f1e1": {
+   "ply": 35,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8e8",
+     "san": "Rfe8",
+     "idea": "Bring the rook to the e-file."
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8g1f3b7b5d3b5f6e4c3e4d8a5f3d2a5b5e4d6b5a6d2c4b8d7e1g1d7e5d6c8a8c8c4e5g7e5f1e1f8e8": {
+   "ply": 36,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1g5",
+     "san": "Bg5"
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8g1f3b7b5d3b5f6e4c3e4d8a5f3d2a5b5e4d6b5a6d2c4b8d7e1g1d7e5d6c8a8c8c4e5g7e5f1e1f8e8c1g5": {
+   "ply": 37,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a6d6",
+     "san": "Qd6",
+     "idea": "Hit d5."
+    }
+   ],
+   "eco": "A65",
+   "name": "Benoni Defense: King's Pawn Line"
+  },
+  "d2d4g8f6c2c4c7c5d4d5e7e6b1c3e6d5c4d5d7d6e2e4g7g6h2h3f8g7f1d3e8g8g1f3b7b5d3b5f6e4c3e4d8a5f3d2a5b5e4d6b5a6d2c4b8d7e1g1d7e5d6c8a8c8c4e5g7e5f1e1f8e8c1g5a6d6": {
+   "ply": 38,
    "turn": "w",
    "mine": false,
    "replies": [],

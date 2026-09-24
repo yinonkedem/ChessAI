@@ -11,40 +11,40 @@
    "label": "Rubinstein, 4.e3",
    "eco": "E59",
    "name": "Nimzo-Indian Defense: Normal Variation, Bernstein Defense",
-   "path": "d2d4g8f6c2c4e7e6b1c3f8b4e2e3e8g8f1d3d7d5g1f3c7c5e1g1b8c6a2a3b4c3b2c3d5c4d3c4d8c7",
-   "plies": 20
+   "path": "d2d4g8f6c2c4e7e6b1c3f8b4e2e3e8g8f1d3d7d5g1f3c7c5e1g1b8c6a2a3b4c3b2c3d5c4d3c4d8c7c1b2e6e5h2h3c8f5d1e2a8d8c4b5e5e4f3d2f5g6a3a4",
+   "plies": 31
   },
   {
    "id": "nimzo-classical",
    "label": "Classical, 4.Qc2",
    "eco": "E32",
    "name": "Nimzo-Indian Defense: Classical Variation, Keres Defense",
-   "path": "d2d4g8f6c2c4e7e6b1c3f8b4d1c2e8g8a2a3b4c3c2c3b7b6c1g5c8b7f2f3h7h6g5h4d7d5e2e3b8d7",
-   "plies": 20
+   "path": "d2d4g8f6c2c4e7e6b1c3f8b4d1c2e8g8a2a3b4c3c2c3b7b6c1g5c8b7f2f3h7h6g5h4d7d5e2e3b8d7c4d5f6d5h4d8d5c3d8h4c3d5h4f2c7c5e3e4d5e7g1e2f7f5e4f5e7f5d4c5d7c5e2c3a8d8a1d1d8d1",
+   "plies": 40
   },
   {
    "id": "nimzo-kasparov",
    "label": "Kasparov Variation, 4.Nf3",
    "eco": "E21",
    "name": "Nimzo-Indian Defense: Three Knights Variation",
-   "path": "d2d4g8f6c2c4e7e6b1c3f8b4g1f3b7b6c1g5c8b7e2e3h7h6g5h4b4c3b2c3d7d6f3d2b8d7f2f3d8e7",
-   "plies": 20
+   "path": "d2d4g8f6c2c4e7e6b1c3f8b4g1f3b7b6c1g5c8b7e2e3h7h6g5h4b4c3b2c3d7d6f3d2b8d7f2f3d8e7f1d3e6e5e3e4d7f8d2f1",
+   "plies": 25
   },
   {
    "id": "nimzo-samisch",
    "label": "Sämisch Variation, 4.a3",
    "eco": "E29",
    "name": "Nimzo-Indian Defense: Sämisch Variation, Capablanca Variation",
-   "path": "d2d4g8f6c2c4e7e6b1c3f8b4a2a3b4c3b2c3c7c5e2e3b8c6f1d3e8g8g1e2b7b6e3e4f6e8e1g1c8a6",
-   "plies": 20
+   "path": "d2d4g8f6c2c4e7e6b1c3f8b4a2a3b4c3b2c3c7c5e2e3b8c6f1d3e8g8g1e2b7b6e3e4f6e8e1g1c8a6f2f4f7f5e4f5e6f5d4c5b6c5c1e3d7d6e2g3g7g6f1e1",
+   "plies": 31
   },
   {
    "id": "nimzo-hubner",
    "label": "Rubinstein, Hübner plan (4...c5)",
    "eco": "E41",
    "name": "Nimzo-Indian Defense: Rubinstein System, Hübner Variation",
-   "path": "d2d4g8f6c2c4e7e6b1c3f8b4e2e3c7c5f1d3b8c6g1f3b4c3b2c3d7d6e3e4e6e5d4d5c6e7f3h4h7h6f2f4e7g6",
-   "plies": 22
+   "path": "d2d4g8f6c2c4e7e6b1c3f8b4e2e3c7c5f1d3b8c6g1f3b4c3b2c3d7d6e3e4e6e5d4d5c6e7f3h4h7h6f2f4e7g6h4g6f7g6e1g1e8g8f4f5b7b5",
+   "plies": 28
   }
  ],
  "nodes": {
@@ -337,6 +337,154 @@
    "ply": 20,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "c1b2",
+     "san": "Bb2"
+    }
+   ],
+   "eco": "E59",
+   "name": "Nimzo-Indian Defense: Normal Variation, Bernstein Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3e8g8f1d3d7d5g1f3c7c5e1g1b8c6a2a3b4c3b2c3d5c4d3c4d8c7c1b2": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e6e5",
+     "san": "e5",
+     "idea": "The ...e5 break. Strike in the centre."
+    }
+   ],
+   "eco": "E59",
+   "name": "Nimzo-Indian Defense: Normal Variation, Bernstein Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3e8g8f1d3d7d5g1f3c7c5e1g1b8c6a2a3b4c3b2c3d5c4d3c4d8c7c1b2e6e5": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h2h3",
+     "san": "h3"
+    }
+   ],
+   "eco": "E59",
+   "name": "Nimzo-Indian Defense: Normal Variation, Bernstein Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3e8g8f1d3d7d5g1f3c7c5e1g1b8c6a2a3b4c3b2c3d5c4d3c4d8c7c1b2e6e5h2h3": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8f5",
+     "san": "Bf5",
+     "idea": "Develop with tempo, hitting h3."
+    }
+   ],
+   "eco": "E59",
+   "name": "Nimzo-Indian Defense: Normal Variation, Bernstein Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3e8g8f1d3d7d5g1f3c7c5e1g1b8c6a2a3b4c3b2c3d5c4d3c4d8c7c1b2e6e5h2h3c8f5": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1e2",
+     "san": "Qe2"
+    }
+   ],
+   "eco": "E59",
+   "name": "Nimzo-Indian Defense: Normal Variation, Bernstein Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3e8g8f1d3d7d5g1f3c7c5e1g1b8c6a2a3b4c3b2c3d5c4d3c4d8c7c1b2e6e5h2h3c8f5d1e2": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a8d8",
+     "san": "Rad8",
+     "idea": "The rook takes the d-file, facing d4."
+    }
+   ],
+   "eco": "E59",
+   "name": "Nimzo-Indian Defense: Normal Variation, Bernstein Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3e8g8f1d3d7d5g1f3c7c5e1g1b8c6a2a3b4c3b2c3d5c4d3c4d8c7c1b2e6e5h2h3c8f5d1e2a8d8": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c4b5",
+     "san": "Bb5"
+    }
+   ],
+   "eco": "E59",
+   "name": "Nimzo-Indian Defense: Normal Variation, Bernstein Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3e8g8f1d3d7d5g1f3c7c5e1g1b8c6a2a3b4c3b2c3d5c4d3c4d8c7c1b2e6e5h2h3c8f5d1e2a8d8c4b5": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e5e4",
+     "san": "e4",
+     "idea": "Kick the knight and gain space."
+    }
+   ],
+   "eco": "E59",
+   "name": "Nimzo-Indian Defense: Normal Variation, Bernstein Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3e8g8f1d3d7d5g1f3c7c5e1g1b8c6a2a3b4c3b2c3d5c4d3c4d8c7c1b2e6e5h2h3c8f5d1e2a8d8c4b5e5e4": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3d2",
+     "san": "Nd2"
+    }
+   ],
+   "eco": "E59",
+   "name": "Nimzo-Indian Defense: Normal Variation, Bernstein Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3e8g8f1d3d7d5g1f3c7c5e1g1b8c6a2a3b4c3b2c3d5c4d3c4d8c7c1b2e6e5h2h3c8f5d1e2a8d8c4b5e5e4f3d2": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f5g6",
+     "san": "Bg6",
+     "idea": "Keep the bishop on the diagonal, safe from Nd2 ideas."
+    }
+   ],
+   "eco": "E59",
+   "name": "Nimzo-Indian Defense: Normal Variation, Bernstein Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3e8g8f1d3d7d5g1f3c7c5e1g1b8c6a2a3b4c3b2c3d5c4d3c4d8c7c1b2e6e5h2h3c8f5d1e2a8d8c4b5e5e4f3d2f5g6": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a3a4",
+     "san": "a4"
+    }
+   ],
+   "eco": "E59",
+   "name": "Nimzo-Indian Defense: Normal Variation, Bernstein Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3e8g8f1d3d7d5g1f3c7c5e1g1b8c6a2a3b4c3b2c3d5c4d3c4d8c7c1b2e6e5h2h3c8f5d1e2a8d8c4b5e5e4f3d2f5g6a3a4": {
+   "ply": 31,
+   "turn": "b",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "E59",
@@ -520,6 +668,276 @@
   },
   "d2d4g8f6c2c4e7e6b1c3f8b4d1c2e8g8a2a3b4c3c2c3b7b6c1g5c8b7f2f3h7h6g5h4d7d5e2e3b8d7": {
    "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c4d5",
+     "san": "cxd5"
+    }
+   ],
+   "eco": "E32",
+   "name": "Nimzo-Indian Defense: Classical Variation, Keres Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4d1c2e8g8a2a3b4c3c2c3b7b6c1g5c8b7f2f3h7h6g5h4d7d5e2e3b8d7c4d5": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6d5",
+     "san": "Nxd5",
+     "idea": "Recapture with the knight, hitting the queen."
+    }
+   ],
+   "eco": "E32",
+   "name": "Nimzo-Indian Defense: Classical Variation, Keres Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4d1c2e8g8a2a3b4c3c2c3b7b6c1g5c8b7f2f3h7h6g5h4d7d5e2e3b8d7c4d5f6d5": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h4d8",
+     "san": "Bxd8"
+    }
+   ],
+   "eco": "E32",
+   "name": "Nimzo-Indian Defense: Classical Variation, Keres Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4d1c2e8g8a2a3b4c3c2c3b7b6c1g5c8b7f2f3h7h6g5h4d7d5e2e3b8d7c4d5f6d5h4d8": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d5c3",
+     "san": "Nxc3",
+     "idea": "Take the queen back. Material is level."
+    }
+   ],
+   "eco": "E32",
+   "name": "Nimzo-Indian Defense: Classical Variation, Keres Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4d1c2e8g8a2a3b4c3c2c3b7b6c1g5c8b7f2f3h7h6g5h4d7d5e2e3b8d7c4d5f6d5h4d8d5c3": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8h4",
+     "san": "Bh4"
+    }
+   ],
+   "eco": "E32",
+   "name": "Nimzo-Indian Defense: Classical Variation, Keres Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4d1c2e8g8a2a3b4c3c2c3b7b6c1g5c8b7f2f3h7h6g5h4d7d5e2e3b8d7c4d5f6d5h4d8d5c3d8h4": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c3d5",
+     "san": "Nd5",
+     "idea": "The knight returns to d5, hitting e3."
+    }
+   ],
+   "eco": "E32",
+   "name": "Nimzo-Indian Defense: Classical Variation, Keres Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4d1c2e8g8a2a3b4c3c2c3b7b6c1g5c8b7f2f3h7h6g5h4d7d5e2e3b8d7c4d5f6d5h4d8d5c3d8h4c3d5": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h4f2",
+     "san": "Bf2"
+    }
+   ],
+   "eco": "E32",
+   "name": "Nimzo-Indian Defense: Classical Variation, Keres Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4d1c2e8g8a2a3b4c3c2c3b7b6c1g5c8b7f2f3h7h6g5h4d7d5e2e3b8d7c4d5f6d5h4d8d5c3d8h4c3d5h4f2": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c7c5",
+     "san": "c5",
+     "idea": "Strike at d4."
+    }
+   ],
+   "eco": "E32",
+   "name": "Nimzo-Indian Defense: Classical Variation, Keres Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4d1c2e8g8a2a3b4c3c2c3b7b6c1g5c8b7f2f3h7h6g5h4d7d5e2e3b8d7c4d5f6d5h4d8d5c3d8h4c3d5h4f2c7c5": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e3e4",
+     "san": "e4"
+    }
+   ],
+   "eco": "E32",
+   "name": "Nimzo-Indian Defense: Classical Variation, Keres Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4d1c2e8g8a2a3b4c3c2c3b7b6c1g5c8b7f2f3h7h6g5h4d7d5e2e3b8d7c4d5f6d5h4d8d5c3d8h4c3d5h4f2c7c5e3e4": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d5e7",
+     "san": "Ne7",
+     "idea": "Retreat, eyeing f5 and d5."
+    }
+   ],
+   "eco": "E32",
+   "name": "Nimzo-Indian Defense: Classical Variation, Keres Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4d1c2e8g8a2a3b4c3c2c3b7b6c1g5c8b7f2f3h7h6g5h4d7d5e2e3b8d7c4d5f6d5h4d8d5c3d8h4c3d5h4f2c7c5e3e4d5e7": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1e2",
+     "san": "Ne2"
+    }
+   ],
+   "eco": "E32",
+   "name": "Nimzo-Indian Defense: Classical Variation, Keres Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4d1c2e8g8a2a3b4c3c2c3b7b6c1g5c8b7f2f3h7h6g5h4d7d5e2e3b8d7c4d5f6d5h4d8d5c3d8h4c3d5h4f2c7c5e3e4d5e7g1e2": {
+   "ply": 31,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f7f5",
+     "san": "f5",
+     "idea": "Break with ...f5, opening lines."
+    }
+   ],
+   "eco": "E32",
+   "name": "Nimzo-Indian Defense: Classical Variation, Keres Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4d1c2e8g8a2a3b4c3c2c3b7b6c1g5c8b7f2f3h7h6g5h4d7d5e2e3b8d7c4d5f6d5h4d8d5c3d8h4c3d5h4f2c7c5e3e4d5e7g1e2f7f5": {
+   "ply": 32,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4f5",
+     "san": "exf5"
+    }
+   ],
+   "eco": "E32",
+   "name": "Nimzo-Indian Defense: Classical Variation, Keres Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4d1c2e8g8a2a3b4c3c2c3b7b6c1g5c8b7f2f3h7h6g5h4d7d5e2e3b8d7c4d5f6d5h4d8d5c3d8h4c3d5h4f2c7c5e3e4d5e7g1e2f7f5e4f5": {
+   "ply": 33,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e7f5",
+     "san": "Nxf5",
+     "idea": "Recapture, hitting d4."
+    }
+   ],
+   "eco": "E32",
+   "name": "Nimzo-Indian Defense: Classical Variation, Keres Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4d1c2e8g8a2a3b4c3c2c3b7b6c1g5c8b7f2f3h7h6g5h4d7d5e2e3b8d7c4d5f6d5h4d8d5c3d8h4c3d5h4f2c7c5e3e4d5e7g1e2f7f5e4f5e7f5": {
+   "ply": 34,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4c5",
+     "san": "dxc5"
+    }
+   ],
+   "eco": "E32",
+   "name": "Nimzo-Indian Defense: Classical Variation, Keres Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4d1c2e8g8a2a3b4c3c2c3b7b6c1g5c8b7f2f3h7h6g5h4d7d5e2e3b8d7c4d5f6d5h4d8d5c3d8h4c3d5h4f2c7c5e3e4d5e7g1e2f7f5e4f5e7f5d4c5": {
+   "ply": 35,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7c5",
+     "san": "Nxc5",
+     "idea": "Take the pawn back. Level material."
+    }
+   ],
+   "eco": "E32",
+   "name": "Nimzo-Indian Defense: Classical Variation, Keres Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4d1c2e8g8a2a3b4c3c2c3b7b6c1g5c8b7f2f3h7h6g5h4d7d5e2e3b8d7c4d5f6d5h4d8d5c3d8h4c3d5h4f2c7c5e3e4d5e7g1e2f7f5e4f5e7f5d4c5d7c5": {
+   "ply": 36,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e2c3",
+     "san": "Nc3"
+    }
+   ],
+   "eco": "E32",
+   "name": "Nimzo-Indian Defense: Classical Variation, Keres Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4d1c2e8g8a2a3b4c3c2c3b7b6c1g5c8b7f2f3h7h6g5h4d7d5e2e3b8d7c4d5f6d5h4d8d5c3d8h4c3d5h4f2c7c5e3e4d5e7g1e2f7f5e4f5e7f5d4c5d7c5e2c3": {
+   "ply": 37,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "a8d8",
+     "san": "Rad8",
+     "idea": "The rook takes the d-file."
+    }
+   ],
+   "eco": "E32",
+   "name": "Nimzo-Indian Defense: Classical Variation, Keres Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4d1c2e8g8a2a3b4c3c2c3b7b6c1g5c8b7f2f3h7h6g5h4d7d5e2e3b8d7c4d5f6d5h4d8d5c3d8h4c3d5h4f2c7c5e3e4d5e7g1e2f7f5e4f5e7f5d4c5d7c5e2c3a8d8": {
+   "ply": 38,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "a1d1",
+     "san": "Rd1"
+    }
+   ],
+   "eco": "E32",
+   "name": "Nimzo-Indian Defense: Classical Variation, Keres Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4d1c2e8g8a2a3b4c3c2c3b7b6c1g5c8b7f2f3h7h6g5h4d7d5e2e3b8d7c4d5f6d5h4d8d5c3d8h4c3d5h4f2c7c5e3e4d5e7g1e2f7f5e4f5e7f5d4c5d7c5e2c3a8d8a1d1": {
+   "ply": 39,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8d1",
+     "san": "Rxd1+",
+     "idea": "Trade rooks with check. The endgame is equal."
+    }
+   ],
+   "eco": "E32",
+   "name": "Nimzo-Indian Defense: Classical Variation, Keres Defense"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4d1c2e8g8a2a3b4c3c2c3b7b6c1g5c8b7f2f3h7h6g5h4d7d5e2e3b8d7c4d5f6d5h4d8d5c3d8h4c3d5h4f2c7c5e3e4d5e7g1e2f7f5e4f5e7f5d4c5d7c5e2c3a8d8a1d1d8d1": {
+   "ply": 40,
    "turn": "w",
    "mine": false,
    "replies": [],
@@ -707,6 +1125,73 @@
    "ply": 20,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "f1d3",
+     "san": "Bd3"
+    }
+   ],
+   "eco": "E21",
+   "name": "Nimzo-Indian Defense: Three Knights Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4g1f3b7b6c1g5c8b7e2e3h7h6g5h4b4c3b2c3d7d6f3d2b8d7f2f3d8e7f1d3": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e6e5",
+     "san": "e5",
+     "idea": "The ...e5 break, gaining space on the dark squares."
+    }
+   ],
+   "eco": "E21",
+   "name": "Nimzo-Indian Defense: Three Knights Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4g1f3b7b6c1g5c8b7e2e3h7h6g5h4b4c3b2c3d7d6f3d2b8d7f2f3d8e7f1d3e6e5": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e3e4",
+     "san": "e4"
+    }
+   ],
+   "eco": "E21",
+   "name": "Nimzo-Indian Defense: Three Knights Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4g1f3b7b6c1g5c8b7e2e3h7h6g5h4b4c3b2c3d7d6f3d2b8d7f2f3d8e7f1d3e6e5e3e4": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7f8",
+     "san": "Nf8",
+     "idea": "Reroute the knight via f8 to g6."
+    }
+   ],
+   "eco": "E21",
+   "name": "Nimzo-Indian Defense: Three Knights Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4g1f3b7b6c1g5c8b7e2e3h7h6g5h4b4c3b2c3d7d6f3d2b8d7f2f3d8e7f1d3e6e5e3e4d7f8": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d2f1",
+     "san": "Nf1"
+    }
+   ],
+   "eco": "E21",
+   "name": "Nimzo-Indian Defense: Three Knights Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4g1f3b7b6c1g5c8b7e2e3h7h6g5h4b4c3b2c3d7d6f3d2b8d7f2f3d8e7f1d3e6e5e3e4d7f8d2f1": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "E21",
@@ -892,6 +1377,154 @@
    "ply": 20,
    "turn": "w",
    "mine": false,
+   "replies": [
+    {
+     "uci": "f2f4",
+     "san": "f4"
+    }
+   ],
+   "eco": "E29",
+   "name": "Nimzo-Indian Defense: Sämisch Variation, Capablanca Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4a2a3b4c3b2c3c7c5e2e3b8c6f1d3e8g8g1e2b7b6e3e4f6e8e1g1c8a6f2f4": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f7f5",
+     "san": "f5",
+     "idea": "Meet f4 with ...f5 and block the kingside."
+    }
+   ],
+   "eco": "E29",
+   "name": "Nimzo-Indian Defense: Sämisch Variation, Capablanca Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4a2a3b4c3b2c3c7c5e2e3b8c6f1d3e8g8g1e2b7b6e3e4f6e8e1g1c8a6f2f4f7f5": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4f5",
+     "san": "exf5"
+    }
+   ],
+   "eco": "E29",
+   "name": "Nimzo-Indian Defense: Sämisch Variation, Capablanca Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4a2a3b4c3b2c3c7c5e2e3b8c6f1d3e8g8g1e2b7b6e3e4f6e8e1g1c8a6f2f4f7f5e4f5": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e6f5",
+     "san": "exf5",
+     "idea": "Recapture, keeping the light squares under control."
+    }
+   ],
+   "eco": "E29",
+   "name": "Nimzo-Indian Defense: Sämisch Variation, Capablanca Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4a2a3b4c3b2c3c7c5e2e3b8c6f1d3e8g8g1e2b7b6e3e4f6e8e1g1c8a6f2f4f7f5e4f5e6f5": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4c5",
+     "san": "dxc5"
+    }
+   ],
+   "eco": "E29",
+   "name": "Nimzo-Indian Defense: Sämisch Variation, Capablanca Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4a2a3b4c3b2c3c7c5e2e3b8c6f1d3e8g8g1e2b7b6e3e4f6e8e1g1c8a6f2f4f7f5e4f5e6f5d4c5": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b6c5",
+     "san": "bxc5",
+     "idea": "Recapture. The c4 pawn is still weak."
+    }
+   ],
+   "eco": "E29",
+   "name": "Nimzo-Indian Defense: Sämisch Variation, Capablanca Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4a2a3b4c3b2c3c7c5e2e3b8c6f1d3e8g8g1e2b7b6e3e4f6e8e1g1c8a6f2f4f7f5e4f5e6f5d4c5b6c5": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1e3",
+     "san": "Be3"
+    }
+   ],
+   "eco": "E29",
+   "name": "Nimzo-Indian Defense: Sämisch Variation, Capablanca Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4a2a3b4c3b2c3c7c5e2e3b8c6f1d3e8g8g1e2b7b6e3e4f6e8e1g1c8a6f2f4f7f5e4f5e6f5d4c5b6c5c1e3": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6",
+     "idea": "Support the centre and open the c8 bishop's diagonal."
+    }
+   ],
+   "eco": "E29",
+   "name": "Nimzo-Indian Defense: Sämisch Variation, Capablanca Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4a2a3b4c3b2c3c7c5e2e3b8c6f1d3e8g8g1e2b7b6e3e4f6e8e1g1c8a6f2f4f7f5e4f5e6f5d4c5b6c5c1e3d7d6": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e2g3",
+     "san": "Ng3"
+    }
+   ],
+   "eco": "E29",
+   "name": "Nimzo-Indian Defense: Sämisch Variation, Capablanca Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4a2a3b4c3b2c3c7c5e2e3b8c6f1d3e8g8g1e2b7b6e3e4f6e8e1g1c8a6f2f4f7f5e4f5e6f5d4c5b6c5c1e3d7d6e2g3": {
+   "ply": 29,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g7g6",
+     "san": "g6",
+     "idea": "Take f5 and h5 away from White's pieces."
+    }
+   ],
+   "eco": "E29",
+   "name": "Nimzo-Indian Defense: Sämisch Variation, Capablanca Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4a2a3b4c3b2c3c7c5e2e3b8c6f1d3e8g8g1e2b7b6e3e4f6e8e1g1c8a6f2f4f7f5e4f5e6f5d4c5b6c5c1e3d7d6e2g3g7g6": {
+   "ply": 30,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1e1",
+     "san": "Re1"
+    }
+   ],
+   "eco": "E29",
+   "name": "Nimzo-Indian Defense: Sämisch Variation, Capablanca Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4a2a3b4c3b2c3c7c5e2e3b8c6f1d3e8g8g1e2b7b6e3e4f6e8e1g1c8a6f2f4f7f5e4f5e6f5d4c5b6c5c1e3d7d6e2g3g7g6f1e1": {
+   "ply": 31,
+   "turn": "b",
+   "mine": true,
    "replies": [],
    "end": true,
    "eco": "E29",
@@ -1088,6 +1721,87 @@
   },
   "d2d4g8f6c2c4e7e6b1c3f8b4e2e3c7c5f1d3b8c6g1f3b4c3b2c3d7d6e3e4e6e5d4d5c6e7f3h4h7h6f2f4e7g6": {
    "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h4g6",
+     "san": "Nxg6"
+    }
+   ],
+   "eco": "E41",
+   "name": "Nimzo-Indian Defense: Rubinstein System, Hübner Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3c7c5f1d3b8c6g1f3b4c3b2c3d7d6e3e4e6e5d4d5c6e7f3h4h7h6f2f4e7g6h4g6": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f7g6",
+     "san": "fxg6",
+     "idea": "Take back toward the centre. The f-file opens."
+    }
+   ],
+   "eco": "E41",
+   "name": "Nimzo-Indian Defense: Rubinstein System, Hübner Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3c7c5f1d3b8c6g1f3b4c3b2c3d7d6e3e4e6e5d4d5c6e7f3h4h7h6f2f4e7g6h4g6f7g6": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O"
+    }
+   ],
+   "eco": "E41",
+   "name": "Nimzo-Indian Defense: Rubinstein System, Hübner Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3c7c5f1d3b8c6g1f3b4c3b2c3d7d6e3e4e6e5d4d5c6e7f3h4h7h6f2f4e7g6h4g6f7g6e1g1": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle."
+    }
+   ],
+   "eco": "E41",
+   "name": "Nimzo-Indian Defense: Rubinstein System, Hübner Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3c7c5f1d3b8c6g1f3b4c3b2c3d7d6e3e4e6e5d4d5c6e7f3h4h7h6f2f4e7g6h4g6f7g6e1g1e8g8": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f4f5",
+     "san": "f5"
+    }
+   ],
+   "eco": "E41",
+   "name": "Nimzo-Indian Defense: Rubinstein System, Hübner Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3c7c5f1d3b8c6g1f3b4c3b2c3d7d6e3e4e6e5d4d5c6e7f3h4h7h6f2f4e7g6h4g6f7g6e1g1e8g8f4f5": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b7b5",
+     "san": "b5",
+     "idea": "Don't take on f5: hit c4 instead. Your queenside play is faster."
+    }
+   ],
+   "eco": "E41",
+   "name": "Nimzo-Indian Defense: Rubinstein System, Hübner Variation"
+  },
+  "d2d4g8f6c2c4e7e6b1c3f8b4e2e3c7c5f1d3b8c6g1f3b4c3b2c3d7d6e3e4e6e5d4d5c6e7f3h4h7h6f2f4e7g6h4g6f7g6e1g1e8g8f4f5b7b5": {
+   "ply": 28,
    "turn": "w",
    "mine": false,
    "replies": [],

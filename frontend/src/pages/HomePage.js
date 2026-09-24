@@ -194,7 +194,7 @@ export default function HomePage() {
                                     <h3 className="card__title">{label}</h3>
                                     <ul className="home-side__list">
                                         {repertoires
-                                            .filter((r) => r.side === side)
+                                            .filter((r) => r.side === side && !r.category)
                                             .map((r) => (
                                                 <li key={r.id}>
                                                     <Link to={`/learn/${r.id}`} className="home-side__link">
@@ -208,6 +208,39 @@ export default function HomePage() {
                                     </ul>
                                 </div>
                             ))}
+                        </div>
+
+                        <div className="card home-side home-traps">
+                            <h3 className="card__title">Attacks &amp; traps</h3>
+                            <p className="card__subtitle">
+                                Aggressive openings that beginners often fail to meet. Each one
+                                comes with a second repertoire that teaches the defence.
+                            </p>
+                            <ul className="home-side__list home-traps__list">
+                                {repertoires
+                                    .filter((r) => r.category === "attack")
+                                    .map((r) => (
+                                        <li key={r.id} className="home-traps__pair">
+                                            <Link to={`/learn/${r.id}`} className="home-side__link">
+                                                <span>{r.title}</span>
+                                                <span className="home-side__meta">
+                                                    {r.side === "w" ? "White" : "Black"}
+                                                </span>
+                                            </Link>
+                                            {titles[r.counterpart] && (
+                                                <Link
+                                                    to={`/learn/${r.counterpart}`}
+                                                    className="home-side__link home-traps__defence"
+                                                >
+                                                    <span>🛡 {titles[r.counterpart]}</span>
+                                                    <span className="home-side__meta">
+                                                        {r.side === "w" ? "Black" : "White"}
+                                                    </span>
+                                                </Link>
+                                            )}
+                                        </li>
+                                    ))}
+                            </ul>
                         </div>
                     </section>
                 )}

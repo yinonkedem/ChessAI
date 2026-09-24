@@ -1,0 +1,1144 @@
+{
+ "id": "vs-danish-black",
+ "title": "Facing the Danish",
+ "family": "1. e4 e5 2. d4 exd4 3. c3",
+ "blurb": "Decline with ...d5, or take the pawns and give one back at the right moment.",
+ "side": "b",
+ "difficulty": 2,
+ "lines": [
+  {
+   "id": "vda-declined",
+   "label": "Decline with 3...d5",
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense",
+   "path": "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8b4b1c3e8g8f1e2f6e4c1d2b4c3b2c3e4d2d1d2b8c6e1g1c8g4c3c4d5h5d4d5c6e5",
+   "plies": 28
+  },
+  {
+   "id": "vda-schlechter",
+   "label": "Accept, then 5...d5!",
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense",
+   "path": "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7d1d8f8b4d8d2b4d2b1d2h8e8g1f3f7g8e4e5b8c6e1g1f6d5f1e1",
+   "plies": 27
+  },
+  {
+   "id": "vda-exd5",
+   "label": "Accept, 6.exd5",
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense",
+   "path": "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5e4d5g8f6b1c3f8d6g1f3e8g8e1g1c8g4h2h3g4h5d1d3b8d7c3e4",
+   "plies": 23
+  },
+  {
+   "id": "vda-goring",
+   "label": "vs 4.Nxc3 (Göring)",
+   "eco": "C21",
+   "name": "Danish Gambit Accepted",
+   "path": "e2e4e7e5d2d4e5d4c2c3d4c3b1c3b8c6f1c4d7d6g1f3c8e6c4e6f7e6d1b3d8c8f3g5c6d8f2f4f8e7e1g1g8f6f4f5e8g8",
+   "plies": 24
+  }
+ ],
+ "nodes": {
+  "": {
+   "ply": 0,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e2e4",
+     "san": "e4"
+    }
+   ]
+  },
+  "e2e4": {
+   "ply": 1,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e7e5",
+     "san": "e5",
+     "idea": "Meet the centre pawn with your own."
+    }
+   ],
+   "eco": "B00",
+   "name": "King's Pawn Game"
+  },
+  "e2e4e7e5": {
+   "ply": 2,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d2d4",
+     "san": "d4"
+    }
+   ],
+   "eco": "C20",
+   "name": "King's Pawn Game"
+  },
+  "e2e4e7e5d2d4": {
+   "ply": 3,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e5d4",
+     "san": "exd4",
+     "idea": "Take the pawn."
+    }
+   ],
+   "eco": "C20",
+   "name": "Center Game"
+  },
+  "e2e4e7e5d2d4e5d4": {
+   "ply": 4,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c2c3",
+     "san": "c3"
+    }
+   ],
+   "eco": "C21",
+   "name": "Center Game Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3": {
+   "ply": 5,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7d5",
+     "san": "d5",
+     "idea": "The simplest answer: return the pawn at once and free your game."
+    },
+    {
+     "uci": "d4c3",
+     "san": "dxc3",
+     "idea": "Take the second pawn too."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5": {
+   "ply": 6,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4d5",
+     "san": "exd5"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5": {
+   "ply": 7,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8d5",
+     "san": "Qxd5",
+     "idea": "Recapture with the queen. No gambit, just an open game."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5": {
+   "ply": 8,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c3d4",
+     "san": "cxd4"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6",
+     "idea": "Develop."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8b4",
+     "san": "Bb4+",
+     "idea": "Check, then castle quickly."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8b4": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8b4b1c3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8b4b1c3e8g8": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1e2",
+     "san": "Be2"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8b4b1c3e8g8f1e2": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6e4",
+     "san": "Ne4",
+     "idea": "Jump into e4 and challenge the pinned knight."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8b4b1c3e8g8f1e2f6e4": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1d2",
+     "san": "Bd2"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8b4b1c3e8g8f1e2f6e4c1d2": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b4c3",
+     "san": "Bxc3",
+     "idea": "Trade first, doubling White's pawns."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8b4b1c3e8g8f1e2f6e4c1d2b4c3": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b2c3",
+     "san": "bxc3"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8b4b1c3e8g8f1e2f6e4c1d2b4c3b2c3": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e4d2",
+     "san": "Nxd2",
+     "idea": "Take the bishop pair back."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8b4b1c3e8g8f1e2f6e4c1d2b4c3b2c3e4d2": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1d2",
+     "san": "Qxd2"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8b4b1c3e8g8f1e2f6e4c1d2b4c3b2c3e4d2d1d2": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6",
+     "idea": "Develop and press on the isolated d4 pawn."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8b4b1c3e8g8f1e2f6e4c1d2b4c3b2c3e4d2d1d2b8c6": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8b4b1c3e8g8f1e2f6e4c1d2b4c3b2c3e4d2d1d2b8c6e1g1": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8g4",
+     "san": "Bg4",
+     "idea": "Pin the knight."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8b4b1c3e8g8f1e2f6e4c1d2b4c3b2c3e4d2d1d2b8c6e1g1c8g4": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c3c4",
+     "san": "c4"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8b4b1c3e8g8f1e2f6e4c1d2b4c3b2c3e4d2d1d2b8c6e1g1c8g4c3c4": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d5h5",
+     "san": "Qh5",
+     "idea": "The queen goes to h5, eyeing h2."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8b4b1c3e8g8f1e2f6e4c1d2b4c3b2c3e4d2d1d2b8c6e1g1c8g4c3c4d5h5": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d4d5",
+     "san": "d5"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8b4b1c3e8g8f1e2f6e4c1d2b4c3b2c3e4d2d1d2b8c6e1g1c8g4c3c4d5h5d4d5": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c6e5",
+     "san": "Ne5",
+     "idea": "Hit the f3 knight and c4."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d7d5e4d5d8d5c3d4g8f6g1f3f8b4b1c3e8g8f1e2f6e4c1d2b4c3b2c3e4d2d1d2b8c6e1g1c8g4c3c4d5h5d4d5c6e5": {
+   "ply": 28,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C21",
+   "name": "Danish Gambit Declined: Sörensen Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3": {
+   "ply": 6,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1c4",
+     "san": "Bc4"
+    },
+    {
+     "uci": "b1c3",
+     "san": "Nxc3"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4": {
+   "ply": 7,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c3b2",
+     "san": "cxb2",
+     "idea": "And the third. Now give one back at once."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2": {
+   "ply": 8,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c1b2",
+     "san": "Bxb2"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7d5",
+     "san": "d5",
+     "idea": "The key move: return a pawn to kill White's attack."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c4d5",
+     "san": "Bxd5"
+    },
+    {
+     "uci": "e4d5",
+     "san": "exd5"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6",
+     "idea": "Develop with tempo on the bishop."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d5f7",
+     "san": "Bxf7+"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8f7",
+     "san": "Kxf7",
+     "idea": "Take the bishop. The queens are coming off."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1d8",
+     "san": "Qxd8"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7d1d8": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8b4",
+     "san": "Bb4+",
+     "idea": "Check first, then recapture on d8 later."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7d1d8f8b4": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d8d2",
+     "san": "Qd2"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7d1d8f8b4d8d2": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b4d2",
+     "san": "Bxd2+",
+     "idea": "Trade."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7d1d8f8b4d8d2b4d2": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b1d2",
+     "san": "Nxd2"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7d1d8f8b4d8d2b4d2b1d2": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "h8e8",
+     "san": "Re8",
+     "idea": "The rook takes the e-file, hitting e4."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7d1d8f8b4d8d2b4d2b1d2h8e8": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Ngf3"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7d1d8f8b4d8d2b4d2b1d2h8e8g1f3": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f7g8",
+     "san": "Kg8",
+     "idea": "Tuck the king away. You're a pawn up in the endgame."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7d1d8f8b4d8d2b4d2b1d2h8e8g1f3f7g8": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e4e5",
+     "san": "e5"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7d1d8f8b4d8d2b4d2b1d2h8e8g1f3f7g8e4e5": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6",
+     "idea": "Develop, hitting e5."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7d1d8f8b4d8d2b4d2b1d2h8e8g1f3f7g8e4e5b8c6": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7d1d8f8b4d8d2b4d2b1d2h8e8g1f3f7g8e4e5b8c6e1g1": {
+   "ply": 25,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f6d5",
+     "san": "Nd5",
+     "idea": "Centralise the knight."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7d1d8f8b4d8d2b4d2b1d2h8e8g1f3f7g8e4e5b8c6e1g1f6d5": {
+   "ply": 26,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1e1",
+     "san": "Rfe1"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5c4d5g8f6d5f7e8f7d1d8f8b4d8d2b4d2b1d2h8e8g1f3f7g8e4e5b8c6e1g1f6d5f1e1": {
+   "ply": 27,
+   "turn": "b",
+   "mine": true,
+   "replies": [],
+   "end": true,
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5e4d5": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6",
+     "idea": "Develop and attack the d5 pawn."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5e4d5g8f6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "b1c3",
+     "san": "Nc3"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5e4d5g8f6b1c3": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8d6",
+     "san": "Bd6",
+     "idea": "Develop, aiming at h2."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5e4d5g8f6b1c3f8d6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5e4d5g8f6b1c3f8d6g1f3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5e4d5g8f6b1c3f8d6g1f3e8g8": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5e4d5g8f6b1c3f8d6g1f3e8g8e1g1": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8g4",
+     "san": "Bg4",
+     "idea": "Pin the knight. You're a pawn up with a safe king."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5e4d5g8f6b1c3f8d6g1f3e8g8e1g1c8g4": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "h2h3",
+     "san": "h3"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5e4d5g8f6b1c3f8d6g1f3e8g8e1g1c8g4h2h3": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g4h5",
+     "san": "Bh5",
+     "idea": "Keep the pin."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5e4d5g8f6b1c3f8d6g1f3e8g8e1g1c8g4h2h3g4h5": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1d3",
+     "san": "Qd3"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5e4d5g8f6b1c3f8d6g1f3e8g8e1g1c8g4h2h3g4h5d1d3": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8d7",
+     "san": "Nbd7",
+     "idea": "Develop the last minor piece."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5e4d5g8f6b1c3f8d6g1f3e8g8e1g1c8g4h2h3g4h5d1d3b8d7": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c3e4",
+     "san": "Ne4"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3f1c4c3b2c1b2d7d5e4d5g8f6b1c3f8d6g1f3e8g8e1g1c8g4h2h3g4h5d1d3b8d7c3e4": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [],
+   "end": true,
+   "eco": "C21",
+   "name": "Danish Gambit Accepted: Schlechter Defense"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3b1c3": {
+   "ply": 7,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "b8c6",
+     "san": "Nc6",
+     "idea": "Develop and cover d4 and e5."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3b1c3b8c6": {
+   "ply": 8,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f1c4",
+     "san": "Bc4"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3b1c3b8c6f1c4": {
+   "ply": 9,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d7d6",
+     "san": "d6",
+     "idea": "Open the c8 bishop and cover e5."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3b1c3b8c6f1c4d7d6": {
+   "ply": 10,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "g1f3",
+     "san": "Nf3"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3b1c3b8c6f1c4d7d6g1f3": {
+   "ply": 11,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c8e6",
+     "san": "Be6",
+     "idea": "Challenge White's best bishop."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3b1c3b8c6f1c4d7d6g1f3c8e6": {
+   "ply": 12,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "c4e6",
+     "san": "Bxe6"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3b1c3b8c6f1c4d7d6g1f3c8e6c4e6": {
+   "ply": 13,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f7e6",
+     "san": "fxe6",
+     "idea": "Recapture. The e6 pawn covers d5 and f5."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3b1c3b8c6f1c4d7d6g1f3c8e6c4e6f7e6": {
+   "ply": 14,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "d1b3",
+     "san": "Qb3"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3b1c3b8c6f1c4d7d6g1f3c8e6c4e6f7e6d1b3": {
+   "ply": 15,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "d8c8",
+     "san": "Qc8",
+     "idea": "Defend b7 and e6."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3b1c3b8c6f1c4d7d6g1f3c8e6c4e6f7e6d1b3d8c8": {
+   "ply": 16,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f3g5",
+     "san": "Ng5"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3b1c3b8c6f1c4d7d6g1f3c8e6c4e6f7e6d1b3d8c8f3g5": {
+   "ply": 17,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "c6d8",
+     "san": "Nd8",
+     "idea": "Cover f7 and e6 with the knight."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3b1c3b8c6f1c4d7d6g1f3c8e6c4e6f7e6d1b3d8c8f3g5c6d8": {
+   "ply": 18,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f2f4",
+     "san": "f4"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3b1c3b8c6f1c4d7d6g1f3c8e6c4e6f7e6d1b3d8c8f3g5c6d8f2f4": {
+   "ply": 19,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "f8e7",
+     "san": "Be7",
+     "idea": "Develop and get ready to castle. You're a pawn up."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3b1c3b8c6f1c4d7d6g1f3c8e6c4e6f7e6d1b3d8c8f3g5c6d8f2f4f8e7": {
+   "ply": 20,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "e1g1",
+     "san": "O-O"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3b1c3b8c6f1c4d7d6g1f3c8e6c4e6f7e6d1b3d8c8f3g5c6d8f2f4f8e7e1g1": {
+   "ply": 21,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "g8f6",
+     "san": "Nf6",
+     "idea": "Develop, hitting e4."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3b1c3b8c6f1c4d7d6g1f3c8e6c4e6f7e6d1b3d8c8f3g5c6d8f2f4f8e7e1g1g8f6": {
+   "ply": 22,
+   "turn": "w",
+   "mine": false,
+   "replies": [
+    {
+     "uci": "f4f5",
+     "san": "f5"
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3b1c3b8c6f1c4d7d6g1f3c8e6c4e6f7e6d1b3d8c8f3g5c6d8f2f4f8e7e1g1g8f6f4f5": {
+   "ply": 23,
+   "turn": "b",
+   "mine": true,
+   "replies": [
+    {
+     "uci": "e8g8",
+     "san": "O-O",
+     "idea": "Castle."
+    }
+   ],
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  },
+  "e2e4e7e5d2d4e5d4c2c3d4c3b1c3b8c6f1c4d7d6g1f3c8e6c4e6f7e6d1b3d8c8f3g5c6d8f2f4f8e7e1g1g8f6f4f5e8g8": {
+   "ply": 24,
+   "turn": "w",
+   "mine": false,
+   "replies": [],
+   "end": true,
+   "eco": "C21",
+   "name": "Danish Gambit Accepted"
+  }
+ }
+}
